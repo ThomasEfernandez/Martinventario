@@ -1,0 +1,38 @@
+
+
+.contenedor-nav{
+    display:flex;
+    justify-content: center;
+    background: linear-gradient( #7c5fff, #7bedfe);
+    
+}
+
+.navegador{
+    background: none;
+    
+}
+
+.lista-navegador{
+list-style: none;
+display: flex;
+background: none;
+
+}
+.item-nav{
+    
+    margin: 5px;
+    background:none;
+    padding: 15px;
+    border-radius: 7px;
+    
+}
+
+
+.item-nav:hover{
+   box-shadow: 3px 3px 3px 3px rgb(107, 107, 107);
+}
+a{
+    background:none;
+    text-decoration: none;
+    color:white;
+}

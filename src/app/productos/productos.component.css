@@ -1,0 +1,24 @@
+.contenedor {
+    display: flex;
+    justify-content: center;
+
+}
+
+.listaProductos{
+
+    padding: 50px;
+    background: blueviolet;
+    border-radius: 10px;
+   
+}
+
+.h3Prod{
+    background-color: blueviolet;
+}
+
+.item{
+    list-style: none;
+     background-color: blueviolet;
+     color: white;
+
+}

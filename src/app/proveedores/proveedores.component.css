@@ -1,0 +1,21 @@
+.contenedor-Proveedores{
+    display: flex;
+    justify-content: center;
+}
+
+
+.listaProveedores{
+    background-color: rgb(210, 188, 230);
+    padding: 50px;
+}
+
+.proveedorLi{
+    list-style: none;
+    color: white;
+    background-color: rgb(210, 188, 230);
+
+}
+.h3prov{
+    background-color: rgb(210, 188, 230);
+
+}
