@@ -4,12 +4,14 @@ import { Cajeros } from '../interfaces/Cajeros.interface';
 import { Component } from '@angular/core';
 import { ProductosComponent } from '../productos/productos.component';
 import { VentasComponent } from '../ventas/ventas.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-cajeros',
   standalone: true,
   imports: [ProductosComponent,
-            VentasComponent
+            VentasComponent,
+            RouterModule
   ],
   templateUrl: './cajeros.component.html',
   styleUrl: './cajeros.component.css'

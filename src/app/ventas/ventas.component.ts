@@ -2,11 +2,14 @@ import { Ventas } from './../interfaces/Ventas.interface';
 
 import { Component } from '@angular/core';
 import { ProductosComponent } from '../productos/productos.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-ventas',
   standalone: true,
-  imports: [ProductosComponent],
+  imports: [ProductosComponent,
+            RouterModule
+  ],
   templateUrl: './ventas.component.html',
   styleUrl: './ventas.component.css'
 })
