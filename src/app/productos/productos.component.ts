@@ -39,9 +39,27 @@ traerProducto (id:number){
 
 }
 
-//modificar cantidad
+modificarCantidad(id:number, nuevaCantidad:number) {
+  const producto = this.arrayProductos.find(element => element.id === id) ;
 
-//modificar precio venta
+  if ( producto ) {
+    producto.cantidad = nuevaCantidad ;
+    return nuevaCantidad ;
+  } else {
+    console.log("Producto no encontrado") ; //Prueba
+    return -1 ;
+  }
+}
+
+modificarPrecioVenta (id:number, precioNuevo:number) {
+  const producto = this.arrayProductos.find(element => element.id === id) ;
+
+  if ( producto ) {
+    producto.precioVenta = precioNuevo ;
+  } else {
+    console.log("Producto no encontrado") ; //Prueba
+  }
+}
 
 }
 
