@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Ventas } from './../interfaces/Ventas.interface';
 import { Cajeros } from '../interfaces/Cajeros.interface';
+
+import { Component } from '@angular/core';
 import { ProductosComponent } from '../productos/productos.component';
 import { VentasComponent } from '../ventas/ventas.component';
-import { elementAt } from 'rxjs';
 
 @Component({
   selector: 'app-cajeros',
@@ -15,6 +16,11 @@ import { elementAt } from 'rxjs';
 })
 export class CajerosComponent {
   listaCajeros: Set<Cajeros> = new Set<Cajeros>() ;
+  listaventas: VentasComponent ; //referencia
+
+  constructor() {
+    this.listaventas = new VentasComponent() ;
+  }
 
   agregarCajero ( nuevoCajero:Cajeros ) {
     this.listaCajeros.add(nuevoCajero) ;
@@ -94,9 +100,14 @@ export class CajerosComponent {
     return encontrado ;
   }
 
-  //registrar venta
+  registrarVenta ( venta: Ventas ) {
+    this.listaventas.generarVenta(venta) ;
+    console.log("Venta registrada: ", venta) //prueba
+  }
 
-  //visualizar ventas
+  visualizarVentas() {
+
+  }
 
 
 
