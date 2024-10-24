@@ -8,6 +8,7 @@ import { NavbarComponent } from "../navbar/navbar.component";
   templateUrl: './proveedores.component.html',
   styleUrl: './proveedores.component.css'
 })
+
 export class ProveedoresComponent {
 
 }
