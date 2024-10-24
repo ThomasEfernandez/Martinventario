@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Etiquetas } from '../interfaces/Etiquetas.interface';
 
 @Component({
   selector: 'app-etiquetas',
@@ -11,6 +12,3 @@ export class EtiquetasComponent {
 
 }
 
-export class Etiquetas {
-
-}

@@ -13,5 +13,12 @@ import { VentasComponent } from '../ventas/ventas.component';
   styleUrl: './cajeros.component.css'
 })
 export class CajerosComponent {
+  listaCajeros: Set<Cajeros> = new Set<Cajeros>() ;
+
+  //registrar venta
+
+  //visualizar ventas
+
+
 
 }

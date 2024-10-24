@@ -19,16 +19,15 @@ arrayProductos:Productos[]=[]
 
 
 
-
 agregarProducto (productito:Productos){
   this.arrayProductos.push(productito);
 }
+
 eliminarPoducto (id:number){
-
-const eliminar = this.arrayProductos.findIndex(element=>element.id===id);
-this.arrayProductos.splice(eliminar,1);
-
+  const eliminar = this.arrayProductos.findIndex(element=>element.id===id);
+  this.arrayProductos.splice(eliminar,1);
 }
+
 traerProducto (id:number){
  if (this.arrayProductos.findIndex(element=>element.id===id)){
     return this.arrayProductos.find(element=>element.id===id)
@@ -36,9 +35,13 @@ traerProducto (id:number){
       return -1;
      }
 
-     
+
 
 }
+
+//modificar cantidad
+
+//modificar precio venta
 
 }
 

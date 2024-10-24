@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { EtiquetasComponent } from '../etiquetas/etiquetas.component';
+import { Categorias } from '../interfaces/Categorias.interface';
 
 @Component({
   selector: 'app-categorias',

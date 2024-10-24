@@ -7,7 +7,6 @@ export interface Productos{
     cantidad:number,
     precioVenta:number,
     precioCompra:number
-
 }
 
 
