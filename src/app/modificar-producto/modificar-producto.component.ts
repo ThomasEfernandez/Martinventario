@@ -3,12 +3,12 @@ import { NavbarComponent } from "../navbar/navbar.component";
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-proveedores',
+  selector: 'app-modificar-producto',
   standalone: true,
   imports: [NavbarComponent,RouterModule],
-  templateUrl: './proveedores.component.html',
-  styleUrl: './proveedores.component.css'
+  templateUrl: './modificar-producto.component.html',
+  styleUrl: './modificar-producto.component.css'
 })
-export class ProveedoresComponent {
+export class ModificarProductoComponent {
 
 }

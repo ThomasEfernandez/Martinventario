@@ -3,7 +3,8 @@
 .contenedor-nav{
     display:flex;
     justify-content: center;
-    background: linear-gradient( #7c5fff, #7bedfe);
+    background: linear-gradient( #ff0000, #fe7b7b);
+    padding: 5px;
     
 }
 
@@ -23,13 +24,13 @@ background: none;
     margin: 5px;
     background:none;
     padding: 15px;
-    border-radius: 7px;
+    border-radius: 50px;
     
 }
 
 
 .item-nav:hover{
-   box-shadow: 3px 3px 3px 3px rgb(107, 107, 107);
+   box-shadow: 3px 3px 3px 3px rgb(120, 41, 41);
 }
 a{
     background:none;

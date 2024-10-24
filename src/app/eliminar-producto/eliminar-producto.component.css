@@ -1,0 +1,46 @@
+
+.contenedor{
+    width: 100%;
+}
+.formulario-eliminacion {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(167, 96, 96);
+}
+
+.label-eliminacion{
+    background: none;
+    color: white;
+    font-size: large;
+    
+}
+
+.in-eliminacion{
+    background:none;
+    background-color: rgb(167, 96, 96);
+}
+
+
+.boton-eliminacion{
+    margin-top: 1rem;
+    padding: 5px;
+    width: 95%;
+    background-color: rgb(205, 131, 131);
+    border: none;
+    font-size: large;
+    color:rgb(250, 250, 250);
+    transition: border-radius 0.3s;
+    box-shadow: 1px 1px 1px rgb(189, 189, 189);
+}
+.boton-eliminacion:hover{
+    box-shadow: 3px 3px 3px grey;
+    border-radius: 10px;
+}
+.encabezado{
+    background:none;
+    color:rgb(250, 250, 250);
+    font-size: x-large;
+}
