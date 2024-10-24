@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { Etiquetas } from '../interfaces/Etiquetas.interface';
 
 @Component({
   selector: 'app-etiquetas',

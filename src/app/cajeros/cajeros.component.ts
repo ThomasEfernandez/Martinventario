@@ -2,6 +2,7 @@ import { Ventas } from './../interfaces/Ventas.interface';
 import { Cajeros } from '../interfaces/Cajeros.interface';
 
 import { Component } from '@angular/core';
+import { VentasComponent } from '../ventas/ventas.component';
 
 @Component({
   selector: 'app-cajeros',
