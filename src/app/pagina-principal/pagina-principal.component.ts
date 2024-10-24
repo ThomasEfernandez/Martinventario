@@ -6,7 +6,8 @@ import { NavbarComponent } from "../navbar/navbar.component";
 @Component({
   selector: 'app-pagina-principal',
   standalone: true,
-  imports: [RegistrarseComponent, NavbarComponent],
+  imports: [RegistrarseComponent,
+            NavbarComponent],
   templateUrl: './pagina-principal.component.html',
   styleUrl: './pagina-principal.component.css'
 })

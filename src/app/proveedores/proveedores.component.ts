@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Proveedores } from '../interfaces/Porveedores.interface';
 
 import { Component } from '@angular/core';
@@ -7,7 +8,8 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-proveedores',
   standalone: true,
-  imports: [NavbarComponent,
+  imports: [CommonModule,
+            NavbarComponent,
             RouterModule
   ],
   templateUrl: './proveedores.component.html',
@@ -16,6 +18,7 @@ import { RouterModule } from '@angular/router';
 
 export class ProveedoresComponent {
   listaProveedores: Set<Proveedores> = new Set<Proveedores>() ;
+
 
   agregarProveedor (nuevoProveedor:Proveedores) {
     this.listaProveedores.add(nuevoProveedor) ;

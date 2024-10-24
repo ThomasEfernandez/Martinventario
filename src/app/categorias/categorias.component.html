@@ -1,1 +1,9 @@
-<p>categorias works!</p>
+<app-navbar></app-navbar>
+<div class="contenedor-categorias">
+  <div class="grid-contenedor">
+    <ul class="listadoCategorias">
+      <li *ngFor="let itemCategoria of categoriaArray" class="item">{{itemCategoria.id}} - {{itemCategoria.nombre}} -
+        {{itemCategoria.descripcion}} </li>
+    </ul>
+  </div>
+</div>
