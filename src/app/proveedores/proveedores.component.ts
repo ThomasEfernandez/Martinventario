@@ -8,10 +8,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-proveedores',
   standalone: true,
-  imports: [CommonModule,
-            NavbarComponent,
-            RouterModule
-  ],
+  imports: [NavbarComponent],
   templateUrl: './proveedores.component.html',
   styleUrl: './proveedores.component.css'
 })

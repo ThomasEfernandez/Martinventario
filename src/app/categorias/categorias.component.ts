@@ -1,15 +1,11 @@
 import { Component } from '@angular/core';
-import { Categorias } from '../interfaces/Categorias.interface';
-import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { NavbarComponent } from '../navbar/navbar.component';
+import { EtiquetasComponent } from '../etiquetas/etiquetas.component';
+
 
 @Component({
   selector: 'app-categorias',
   standalone: true,
-  imports: [CommonModule,
-            RouterModule,
-            NavbarComponent],
+  imports: [],
   templateUrl: './categorias.component.html',
   styleUrl: './categorias.component.css'
 })
