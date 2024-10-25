@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RegistrarseComponent } from "../registrarse/registrarse.component";
 import { NavbarComponent } from "../navbar/navbar.component";
+import { RouterModule } from '@angular/router';
 
 
 @Component({

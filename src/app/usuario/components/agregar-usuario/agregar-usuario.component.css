@@ -15,6 +15,7 @@ label {
     background-color: #ffffff;
 }
 input {
+    width: 95%;
     margin: 1%;
     padding: 1%;
     background-color: #eeeeee;
@@ -26,7 +27,7 @@ button {
     justify-self: right;
     margin: 1%;
     padding: 1.5% 2%;
-    border: 1px solid #222222; 
+    border: 1px solid #222222;
     border-radius: 3px;
     background-color: #0088ff;
 }
