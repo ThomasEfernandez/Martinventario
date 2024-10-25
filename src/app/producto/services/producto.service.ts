@@ -28,5 +28,10 @@ putProducto (id:number, producto:Productos):Observable<Productos>{
 
 }
 
+deleteProducto (id:number, producto:Productos):Observable<Productos>{
+
+  return this.http.delete<Productos>(`${this.url}/${id}`);
+
+}
 
 }

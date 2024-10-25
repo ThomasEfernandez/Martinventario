@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import {RouterOutlet } from '@angular/router';
 import { SupermercadosComponent } from "./supermercados/supermercados.component";
-import { BrowserModule } from '@angular/platform-browser';
 import { ProveedoresComponent } from './proveedores/proveedores.component';
 import { ProductosComponent } from './producto/component/productos/productos.component';
 import { CategoriasComponent } from "./categorias/categorias.component";
