@@ -3,7 +3,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { SupermercadosComponent } from "./supermercados/supermercados.component";
 import { BrowserModule } from '@angular/platform-browser';
 import { ProveedoresComponent } from './proveedores/proveedores.component';
-import { ProductosComponent } from './productos/productos.component';
+import { ProductosComponent } from './producto/component/productos/productos.component';
 import { CategoriasComponent } from "./categorias/categorias.component";
 import { EtiquetasComponent } from "./etiquetas/etiquetas.component";
 import { PaginaPrincipalComponent } from "./pagina-principal/pagina-principal.component";
