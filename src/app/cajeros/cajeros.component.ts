@@ -41,24 +41,6 @@ export class CajerosComponent {
     }
   }
 
-  eliminarCajeroPorUsuario (usuario: string) {
-    let eliminarCajero: Cajeros | undefined ;
-
-    this.listaCajeros.forEach(element => {
-      if ( element.usuario === usuario ) {
-        element.estado = false ;
-        eliminarCajero = element ;
-      }
-    }) ;
-
-    if ( eliminarCajero ) {
-      this.listaCajeros.delete(eliminarCajero) ;
-      console.log(`Cajero con nombre: ${{usuario}} fue eliminado.`) ; //prueba
-    } else {
-      console.log(`Cajero con nombre: ${{usuario}} no encontrado.`) ; //prueba
-    }
-  }
-
   buscarCajeroPorId (id:number) {
     let encontrado: Cajeros | undefined ;
 
@@ -73,25 +55,6 @@ export class CajerosComponent {
       console.log("Cajero encontrado: ", encontrado) ;
     } else {
       console.log(`Cajero con id ${{id}} no encontrado`) ;
-    }
-
-    return encontrado ;
-  }
-
-  buscarCajeroPorUsuario (usuario:string) {
-    let encontrado: Cajeros | undefined ;
-
-    this.listaCajeros.forEach((element)=>{
-      if ( element.usuario === usuario ) {
-        encontrado = element ;
-      }
-    })
-
-    //codigo de prueba
-    if ( encontrado ) {
-      console.log("Cajero encontrado: ", encontrado) ;
-    } else {
-      console.log(`Cajero con usuario: ${{usuario}} no encontrado`) ;
     }
 
     return encontrado ;
