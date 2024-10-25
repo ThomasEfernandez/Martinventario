@@ -1,6 +1,6 @@
 import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Usuario } from '../../../interfaces/Usuario.interface';
+import { Usuario } from '../../interfaces/Usuario.interface';
 
 @Component({
   selector: 'app-agregar-usuario',
