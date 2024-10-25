@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-peticiones',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './peticiones.component.html',
   styleUrl: './peticiones.component.css'
 })

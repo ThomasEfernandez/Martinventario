@@ -1,4 +1,3 @@
-
 export interface Productos{
     id:number,
     nombreProducto:string,

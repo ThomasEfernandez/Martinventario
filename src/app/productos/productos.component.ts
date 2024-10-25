@@ -16,76 +16,32 @@ import { RouterModule } from '@angular/router';
 })
 export class ProductosComponent {
 // crear funcionalidades (abm)
-arrayProductos:Productos[]=[{
-  id:1,
-  nombreProducto:"galletitas",
-  codigo:1,
-  marca:"Oreo",
-  cantidad:20,
-  precioVenta:2100,
-  precioCompra:1500
-}
-];
+arrayProductos:Productos[]=[]
 
 
-//ALTA
-//AgregarProducto al arreglo de productos
+
+
 agregarProducto (productito:Productos){
   this.arrayProductos.push(productito);
 }
-
-
-//BAJA
-//Eliminar Producto por id en el arreglo
 eliminarPoducto (id:number){
 
 const eliminar = this.arrayProductos.findIndex(element=>element.id===id);
 this.arrayProductos.splice(eliminar,1);
 
 }
-
-
-
-
-
-///MODIFICACIÓN
-//busca el producto por id y si lo encuentra lo retorna
 traerProducto (id:number){
-  if (this.arrayProductos.findIndex(element=>element.id===id)){
-     return this.arrayProductos.find(element=>element.id===id)
-      }else{
-       return -1;
-      }
- 
-      
- 
- }
-//Se le envia el producto y se le disminuye una unidad
-modificarCantidad (producto:Productos){
+ if (this.arrayProductos.findIndex(element=>element.id===id)){
+    return this.arrayProductos.find(element=>element.id===id)
+     }else{
+      return -1;
+     }
 
-  if (producto.cantidad<5){
-
-    console.log('Llamar al proveedor');
-    
-  }else if (producto.cantidad>0){
-    producto.cantidad=producto.cantidad-1;
-  }else{
-    console.log('No hay mas stock de este producto.');
-    
-  }
 
 
 }
-modificarPrecioVenta (producto:Productos,nuevoPrecio:number){
-producto.precioVenta = nuevoPrecio;
-}
-//
-modificarPrecioCompra (producto:Productos,nuevoPrecio:number){
-  producto.precioCompra = nuevoPrecio;
-}
-//
-modificarNombre (producto:Productos,nombre:string){
-producto.nombreProducto = nombre;
-}
 
 }
+
+
+

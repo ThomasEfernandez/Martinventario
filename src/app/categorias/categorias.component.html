@@ -1,1 +1,17 @@
-<p>categorias works!</p>
+<app-navbar></app-navbar>
+<div class="contenedro-pagina">
+  <button class="boton-menu" (click)="estadoMenu()">Menu</button>
+
+  <div class="opciones-menu" *ngIf="menuActivo">
+    <div class="opcion-boton"><button>Agregar</button></div>
+    <div class="opcion-boton"><button>Eliminar</button></div>
+  </div>
+
+  <div class="grid-categorias">
+    <div class="categoria-item">Categoría 1</div>
+    <div class="categoria-item">Categoría 2</div>
+    <div class="categoria-item">Categoría 3</div>
+    <div class="categoria-item">Categoría 4</div>
+  </div>
+
+</div>
