@@ -22,6 +22,11 @@ export class EtiquetasComponent {
     this.categoriaArray = Array.from(this.listadoEtiquetas) ;
   }
 
+  //Alterar estado menu
+  estadoMenu() {
+    this.menuActivo = !this.menuActivo ;
+  }
+
 
   agregarEtiqueta(categoria: Etiquetas) {
     this.listadoEtiquetas.add(categoria) ;
