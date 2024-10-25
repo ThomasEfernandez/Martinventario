@@ -1,0 +1,28 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "usuario": "admin",
+      "contrasena": "admin"
+    },
+    {
+      "id": "2",
+      "usuario": "agustin",
+      "contrasena": "1234"
+    },
+    {
+      "id": 0,
+      "usuario": "asda",
+      "contrasena": "asdasd"
+    },
+    {
+      "id": 0,
+      "usuario": "1234",
+      "contrasena": "1234"
+    }
+  ],
+  "productos": [],
+  "proovedores": [],
+  "etiquetas": [],
+  "categorias": []
+}
