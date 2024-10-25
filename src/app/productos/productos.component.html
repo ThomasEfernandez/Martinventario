@@ -1,13 +1,12 @@
 <app-navbar></app-navbar>
+
 <div class="contenedor">
-    <ul class="listaProductos">
-        <li class="item"><h3 class="h3Prod">Productos</h3></li>
-        <li class="item">producto 1</li>
-        <li class="item">producto 1</li>
-        <li class="item">producto 1</li>
-        <li class="item">producto 1</li>
-    
-        <li *ngFor="let producto of arrayProductos">{{producto.nombreProducto}}</li>
-    
-    </ul>
+    <div class="funcionalidades">
+        <h1 class="encabezado">Productos</h1>
+        <h2 class="h2prod">Elija la operacion que desea realizar</h2>
+        <button routerLink="/agregarProducto" class="boton">AGREGAR PRODUCTO</button>
+        <button routerLink="/modificarProducto"  class="boton">MODIFICAR PRODUCTO</button>
+        <button routerLink="/eliminarProducto"  class="boton">ELIMINAR PRODUCTO</button>
+    </div>
 </div>
+

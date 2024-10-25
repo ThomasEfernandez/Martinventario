@@ -7,7 +7,7 @@ import { ProductosComponent } from './productos/productos.component';
 import { CategoriasComponent } from "./categorias/categorias.component";
 import { EtiquetasComponent } from "./etiquetas/etiquetas.component";
 import { PaginaPrincipalComponent } from "./pagina-principal/pagina-principal.component";
-import { AgregarUsuarioComponent } from "./agregar-usuario/agregar-usuario.component";
+import { AgregarUsuarioComponent } from './usuario/components/agregar-usuario/agregar-usuario.component';
 
 
 @Component({
@@ -15,7 +15,7 @@ import { AgregarUsuarioComponent } from "./agregar-usuario/agregar-usuario.compo
   standalone: true,
 
   imports: [RouterOutlet, SupermercadosComponent, ProveedoresComponent, ProductosComponent, CategoriasComponent,
-    EtiquetasComponent, PaginaPrincipalComponent, RouterOutlet, AgregarUsuarioComponent], //acá importamos los componentes
+    EtiquetasComponent, PaginaPrincipalComponent,RouterOutlet, AgregarUsuarioComponent], //acá importamos los componentes
 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

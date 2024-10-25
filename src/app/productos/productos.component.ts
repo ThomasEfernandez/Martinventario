@@ -4,12 +4,13 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { elementAt } from 'rxjs';
 import { NavbarComponent } from "../navbar/navbar.component";
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-productos',
   standalone: true,
-  imports: [CommonModule, NavbarComponent],
+  imports: [CommonModule, NavbarComponent,RouterModule],
   templateUrl: './productos.component.html',
   styleUrl: './productos.component.css'
 })
@@ -36,7 +37,7 @@ traerProducto (id:number){
       return -1;
      }
 
-     
+
 
 }
 
