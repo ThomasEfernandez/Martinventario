@@ -1,4 +1,4 @@
-import { Productos } from '../../../interfaces/Productos.interface';
+import { Productos } from '../interfaces/Productos.interface';
 
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
