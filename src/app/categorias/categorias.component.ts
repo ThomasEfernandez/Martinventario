@@ -14,6 +14,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
 })
 
 export class CategoriasComponent {
+  menuActivo: boolean = false ;
   listadoCategorias: Set<Categorias> = new Set<Categorias>() ;
 
   //convierto el set en array para unicamente la visualizacion
@@ -23,6 +24,11 @@ export class CategoriasComponent {
   }
   actualizarArray() {
     this.categoriaArray = Array.from(this.listadoCategorias) ;
+  }
+
+  //Alterar estado menu
+  estadoMenu() {
+    this.menuActivo = !this.menuActivo ;
   }
 
   agregarCategoria(categoria: Categorias) {
@@ -35,22 +41,6 @@ export class CategoriasComponent {
 
     this.listadoCategorias.forEach( element => {
       if ( element.id === id ) {
-        eliminar = element ;
-      }
-    })
-
-    if ( eliminar ) {
-      this.listadoCategorias.delete(eliminar) ;
-    }
-
-    this.actualizarArray() ;
-  }
-
-  eliminarCategoriaPorNombre ( nombre: string ) {
-    let eliminar: Categorias | undefined ;
-
-    this.listadoCategorias.forEach( element => {
-      if ( element.nombre === nombre ) {
         eliminar = element ;
       }
     })
@@ -85,5 +75,7 @@ export class CategoriasComponent {
 
     return encontrado ;
   }
+
+
 
 }

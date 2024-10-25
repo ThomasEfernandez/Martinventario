@@ -1,9 +1,17 @@
 <app-navbar></app-navbar>
-<div class="contenedor-categorias">
-  <div class="grid-contenedor">
-    <ul class="listadoCategorias">
-      <li *ngFor="let itemCategoria of categoriaArray" class="item">{{itemCategoria.id}} - {{itemCategoria.nombre}} -
-        {{itemCategoria.descripcion}} </li>
-    </ul>
+<div class="contenedro-pagina">
+  <button class="boton-menu" (click)="estadoMenu()">Menu</button>
+
+  <div class="opciones-menu" *ngIf="menuActivo">
+    <div class="opcion-boton"><button>Agregar</button></div>
+    <div class="opcion-boton"><button>Eliminar</button></div>
   </div>
+
+  <div class="grid-categorias">
+    <div class="categoria-item">Categoría 1</div>
+    <div class="categoria-item">Categoría 2</div>
+    <div class="categoria-item">Categoría 3</div>
+    <div class="categoria-item">Categoría 4</div>
+  </div>
+
 </div>

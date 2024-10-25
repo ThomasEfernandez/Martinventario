@@ -1,2 +1,80 @@
 
+.contenedor-pagina {
+  display: grid;
+  grid-template-rows: auto 1fr; /*organizar menu y lista*/
+  grid-gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.boton-menu {
+  padding: 10px 20px;
+  background-color: #ff6666;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.boton-menu:hover {
+  background-color: #ff3333;
+}
+
+.menu-opciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.boton-opcion {
+  padding: 10px;
+  background-color: #ff6666;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-opcion:hover {
+  background-color: #ff3333;
+}
+
+.grid-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.categoria-item {
+  background: none;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.categoria-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+  .menu-opciones {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-categorias {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
 
