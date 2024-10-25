@@ -41,6 +41,7 @@ eliminarPoducto (id:number){
 
 const eliminar = this.arrayProductos.findIndex(element=>element.id===id);
 this.arrayProductos.splice(eliminar,1);
+
 }
 
 
