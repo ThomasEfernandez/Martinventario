@@ -1,6 +1,6 @@
 import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Usuario } from '../../interfaces/Usuario.interface';
+import { Usuario } from '../../interfaces/usuario.interface';
 import { UsuarioService } from '../../services/usuario.service';
 
 @Component({
@@ -20,7 +20,8 @@ export class AgregarUsuarioComponent {
     {
       id: [0],
       usuario: ['', [Validators.required, Validators.minLength(4)]],
-      contrasena: ['', [Validators.required, Validators.minLength(4)]]
+      contrasena: ['', [Validators.required, Validators.minLength(4)]],
+      tipo: ['']
     }
   )
 

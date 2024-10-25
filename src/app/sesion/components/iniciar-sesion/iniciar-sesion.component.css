@@ -14,7 +14,7 @@ label {
     margin: 1%;
     background-color: #ffffff;
 }
-input, select {
+input {
     width: 100%;
     margin: 1% 0 3%;
     padding: 1%;
@@ -30,6 +30,7 @@ button {
     border: 1px solid #222222;
     border-radius: 3px;
     background-color: #0099ff;
+    cursor: pointer;
 }
 .error {
     background-color: #ffffff;
