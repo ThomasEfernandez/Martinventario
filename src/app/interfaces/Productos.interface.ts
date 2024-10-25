@@ -1,4 +1,3 @@
-
 export interface Productos{
     id:number,
     nombreProducto:string,
@@ -8,5 +7,3 @@ export interface Productos{
     precioVenta:number,
     precioCompra:number
 }
-
-

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Repositores } from '../interfaces/Repositores.interface';
-import { elementAt } from 'rxjs';
 
 @Component({
   selector: 'app-repositores',
@@ -24,10 +23,6 @@ export class RepositoresComponent {
         element.estado=false;
       }
     });
-  }
-
-  visualizarRepositor = () => {
-
   }
 }
 
