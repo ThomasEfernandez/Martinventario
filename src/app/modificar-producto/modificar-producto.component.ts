@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from "../navbar/navbar.component";
+import { NavbarComponent } from "../nav/components/navbar/navbar.component";
 import { RouterModule } from '@angular/router';
 
 @Component({

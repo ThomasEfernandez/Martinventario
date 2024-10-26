@@ -1,0 +1,26 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "usuario": "admin",
+      "contrasena": "admin",
+      "tipo": "admin"
+    },
+    {
+      "id": "2",
+      "usuario": "agustin",
+      "contrasena": "1234",
+      "tipo": "repositor"
+    },
+    {
+      "id": "3",
+      "usuario": "thomas",
+      "contrasena": "1234",
+      "tipo": "cajero"
+    }
+  ],
+  "productos": [],
+  "proovedores": [],
+  "etiquetas": [],
+  "categorias": []
+}

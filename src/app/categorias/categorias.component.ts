@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Categorias } from '../interfaces/Categorias.interface';
-import { NavbarComponent } from '../navbar/navbar.component';
+import { NavbarComponent } from '../nav/components/navbar/navbar.component';
 
 
 @Component({
