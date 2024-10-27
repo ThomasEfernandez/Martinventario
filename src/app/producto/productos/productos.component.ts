@@ -2,7 +2,7 @@ import { Productos } from '../interfaces/Productos.interface';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { elementAt } from 'rxjs';
-import { NavbarComponent } from "../../../nav/components/navbar/navbar.component";
+import { NavbarComponent } from "../../nav/components/navbar/navbar.component";
 import { RouterModule } from '@angular/router';
 
 @Component({

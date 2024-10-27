@@ -1,7 +1,7 @@
 import { Ventas } from './../interfaces/Ventas.interface';
 
 import { Component } from '@angular/core';
-import { ProductosComponent } from '../producto/component/productos/productos.component';
+import { ProductosComponent } from '../producto/productos/productos.component';
 import { RouterModule } from '@angular/router';
 
 @Component({

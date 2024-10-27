@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { AgregarProductoComponent } from './producto/component/agregar-producto/agregar-producto.component';
+import { AgregarProductoComponent } from './producto/components/agregar-producto/agregar-producto.component';
 import { Routes} from '@angular/router';
 import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
-import { ProductosComponent } from './producto/component/productos/productos.component';
+import { ProductosComponent } from './producto/productos/productos.component';
 import { ProveedoresComponent } from './proveedores/proveedores.component';
 import { CategoriasComponent } from './categorias/categorias.component';
-import { ModificarProductoComponent } from './producto/component/modificar-producto/modificar-producto.component';
-import { EliminarProductoComponent } from './producto/component/eliminar-producto/eliminar-producto.component';
+import { ModificarProductoComponent } from './producto/components/modificar-producto/modificar-producto.component';
+import { EliminarProductoComponent } from './producto/components/eliminar-producto/eliminar-producto.component';
 
 
 export const routes: Routes = [

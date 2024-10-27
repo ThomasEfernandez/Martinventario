@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { Productos } from '../component/interfaces/Productos.interface';
+import { Productos } from '../interfaces/Productos.interface';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
