@@ -11,3 +11,4 @@ import { NavbarComponent } from "../nav/components/navbar/navbar.component";
 export class AgregarProductoComponent {
 
 }
+
