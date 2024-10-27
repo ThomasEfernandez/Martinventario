@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { Productos } from '../interfaces/Productos.interface';
+import { Producto } from '../interfaces/producto.interface';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
@@ -7,31 +7,25 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductoService {
-http= inject(HttpClient)
-url='http://localhost:50411/productos'
-
-//  get
-getProducto ():Observable<Productos[]>{
-
-  return this.http.get<Productos[]>(this.url)
-}
-// post 
-postProducto (producto:Productos):Observable<Productos>{
-
-  return this.http.post<Productos>(this.url,producto);
-}
+  
+  http= inject(HttpClient)
+  url='http://localhost:50411/productos'
 
 
-putProducto (id:number, producto:Productos):Observable<Productos>{
+  getProducto ():Observable<Producto[]>{
+    return this.http.get<Producto[]>(this.url)
+  }
 
-  return this.http.put<Productos>(`${this.url}/${id}`,producto);
+  postProducto (producto:Producto):Observable<Producto>{
+    return this.http.post<Producto>(this.url,producto);
+  }
 
-}
+  putProducto (id:number, producto:Producto):Observable<Producto>{
+    return this.http.put<Producto>(`${this.url}/${id}`,producto);
+  }
 
-deleteProducto (id:number, producto:Productos):Observable<Productos>{
-
-  return this.http.delete<Productos>(`${this.url}/${id}`);
-
-}
+  deleteProducto (id:number, producto:Producto):Observable<Producto>{
+    return this.http.delete<Producto>(`${this.url}/${id}`);
+  }
 
 }

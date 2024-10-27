@@ -1,4 +1,4 @@
-import { Productos } from '../interfaces/Productos.interface';
+import { Producto } from '../interfaces/producto.interface';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { elementAt } from 'rxjs';
@@ -14,9 +14,9 @@ import { RouterModule } from '@angular/router';
 })
 export class ProductosComponent {
   // crear funcionalidades (abm)
-  arrayProductos:Productos[]=[]
+  arrayProductos:Producto[]=[]
 
-  agregarProducto (productito:Productos){
+  agregarProducto (productito:Producto){
     this.arrayProductos.push(productito);
   }
   eliminarPoducto (id:number){

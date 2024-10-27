@@ -1,5 +1,5 @@
 import { Cajeros } from "./Cajeros.interface";
-import { Productos } from "../producto/interfaces/Productos.interface";
+import { Productos } from "../producto/interfaces/producto.interface";
 
 export interface Ventas {
   id: number ,

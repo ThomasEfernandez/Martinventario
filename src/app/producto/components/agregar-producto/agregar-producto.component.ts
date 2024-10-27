@@ -1,4 +1,4 @@
-import { Productos } from '../../interfaces/Productos.interface';
+import { Producto } from '../../interfaces/producto.interface';
 import { Component, EventEmitter, inject,Output } from '@angular/core';
 import { NavbarComponent } from "../../../nav/components/navbar/navbar.component";
 import { FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
@@ -15,9 +15,9 @@ import { ProductoService } from '../../services/producto.service';
 export class AgregarProductoComponent {
 
   @Output()
-  emitirProducto: EventEmitter<Productos> = new EventEmitter();
+  emitirProducto: EventEmitter<Producto> = new EventEmitter();
 
-  producto:Productos={
+  producto:Producto={
     id:0,
     nombreProducto:'',
     codigo:0,
@@ -48,7 +48,7 @@ export class AgregarProductoComponent {
     this.emitirProducto.emit(this.producto);
   }
 
-  addProductoServer (producto:Productos){
+  addProductoServer (producto:Producto){
     this.productoService.postProducto(producto).subscribe()
   }
 
