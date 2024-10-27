@@ -1,9 +1,9 @@
 export interface Producto {
     id:number,
     nombreProducto:string,
-    codigo:number,
     marca:string,
+    proveedor: string,
     cantidad:number,
-    precioVenta:number,
-    precioCompra:number
+    precioCompra:number,
+    precioVenta:number
 }

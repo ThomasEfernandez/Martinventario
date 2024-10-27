@@ -1,23 +1,3 @@
-/* .contenedor-nav {
-    display:flex;
-    justify-content: right;
-    background-color: #fbcb5b;
-}
-.lista-navegador {
-    list-style: none;
-    display: flex;
-}
-.item-nav {
-    border-radius: 50px;
-}
-.item-nav:hover {
-    box-shadow: 3px 3px 3px 3px rgb(120, 41, 41);
-}
-a {
-    text-decoration: none;
-    color:white;
-} */
-
 * {
     margin: 0;
     padding: 0;
@@ -68,5 +48,5 @@ h1 {
     transition: background-color 0.3s;
 }
 .navbar ul li a:hover {
-    background-color: #ddd;
+    background-color: #dddddd;
 }

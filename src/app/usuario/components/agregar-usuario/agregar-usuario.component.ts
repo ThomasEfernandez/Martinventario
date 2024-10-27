@@ -31,10 +31,10 @@ export class AgregarUsuarioComponent {
     if(this.formulario.invalid) return;
     const usuario = this.formulario.getRawValue();
     this.emitirUsuario.emit(usuario);
-    this.agregarApi(usuario);
+    this.agregarUsuarioService(usuario);
   }
 
-  agregarApi(usuario: Usuario) {
+  agregarUsuarioService(usuario: Usuario) {
     this.usuarioService.postUsuario(usuario).subscribe({
       // next: (usuario: Usuario) => {
       //   alert('Usuario ingresado... $usuario.usuario');

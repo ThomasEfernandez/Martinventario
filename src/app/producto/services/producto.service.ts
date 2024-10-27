@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class ProductoService {
   
   http= inject(HttpClient)
-  url='http://localhost:50411/productos'
+  url='http://localhost:3000/productos'
 
 
   getProducto ():Observable<Producto[]>{
