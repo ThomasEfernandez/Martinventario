@@ -19,8 +19,149 @@
       "tipo": "cajero"
     }
   ],
-  "productos": [],
-  "proovedores": [],
-  "etiquetas": [],
-  "categorias": []
+  "productos": [
+    {
+      "id": "1",
+      "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "marca": "Pepitos",
+      "proveedor": "Proveedor 1",
+      "cantidad": "10",
+      "precioCompra": "1000",
+      "precioVenta": "1500",
+      "categoria": "1",
+      "etiquetas": [
+        "1"
+      ]
+    },
+    {
+      "id": "2",
+      "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
+      "marca": "Sprite",
+      "proveedor": "Proveedor 1",
+      "cantidad": "6",
+      "precioCompra": "2000",
+      "precioVenta": "2500",
+      "categoria": "2",
+      "etiquetas": [
+        "2"
+      ]
+    },
+    {
+      "id": "3",
+      "nombreProducto": "Crema de avellanas Nutella 350 g.",
+      "marca": "Nutella",
+      "proveedor": "Proveedor 1",
+      "cantidad": "5",
+      "precioCompra": "5800",
+      "precioVenta": "7000",
+      "categorias": "1",
+      "etiquetas": [
+        "3"
+      ]
+    },
+    {
+      "id": "4",
+      "nombreProducto": "Consola playstation 5v Sony 1tb edición standard",
+      "marca": "Sony",
+      "proveedor": "Proveedor 2",
+      "cantidad": "2",
+      "precioCompra": "1000000",
+      "precioVenta": "1500000",
+      "categorias": "1",
+      "etiquetas": [
+        "4",
+        "5"
+      ]
+    },
+    {
+      "id": "5",
+      "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
+      "marca": "Dove",
+      "proveedor": "Proveedor 3",
+      "cantidad": "5",
+      "precioCompra": "4000",
+      "precioVenta": "5700",
+      "categorias": "3",
+      "etiquetas": [
+        "3"
+      ]
+    }
+  ],
+  "proovedores": [
+    {
+      "id": "1",
+      "razonSocial": "Proveedor 1",
+      "cuit": "11111",
+      "email": "proveedor1@gmail.com",
+      "telefono": "2231111111"
+    },
+    {
+      "id": "2",
+      "razonSocial": "Proveedor 2",
+      "cuit": "22222",
+      "email": "proveedor2@gmail.com",
+      "telefono": "2232222222"
+    },
+    {
+      "id": "3",
+      "razonSocial": "Proveedor 3",
+      "cuit": "33333",
+      "email": "proveedor3@gmail.com",
+      "telefono": "2233333333"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "1",
+      "nombreCategoria": "alimentos"
+    },
+    {
+      "id": "2",
+      "nombreCategoria": "bebidas"
+    },
+    {
+      "id": "3",
+      "nombreCategoria": "higiene"
+    },
+    {
+      "id": "4",
+      "nombreCategoria": "limpieza"
+    },
+    {
+      "id": "5",
+      "nombreCategoria": "hogar"
+    }
+  ],
+  "etiquetas": [
+    {
+      "id": "1",
+      "nombreEtiqueta": "galletitasDulces",
+      "idCategoria": "1"
+    },
+    {
+      "id": "2",
+      "nombreEtiqueta": "gaseosas",
+      "idCategoria": "2"
+    },
+    {
+      "id": "3",
+      "nombreEtiqueta": "dulces",
+      "idCategoria": "1"
+    },
+    {
+      "id": "4",
+      "nombreEtiqueta": "electrodomesticos",
+      "idCategoria": "5"
+    },
+    {
+      "id": "5",
+      "nombreEtiqueta": "juegos",
+      "idCategoria": "5"
+    },
+    {
+      "id": "6",
+      "nombreEtiqueta": "shampoos",
+      "idCategoria": "3"
+    }
+  ]
 }

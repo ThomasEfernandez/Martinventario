@@ -4,11 +4,12 @@ import { UsuarioService } from '../../../usuario/services/usuario.service';
 import { Usuario } from '../../../usuario/interfaces/usuario.interface';
 import { Sesion } from '../../interfaces/sesion.interface';
 import { Router, RouterModule } from '@angular/router';
+import { NavbarInicioSesionComponent } from "../../../nav/components/navbar-inicio-sesion/navbar-inicio-sesion.component";
 
 @Component({
   selector: 'app-iniciar-sesion',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterModule],
+  imports: [ReactiveFormsModule, RouterModule, NavbarInicioSesionComponent],
   templateUrl: './iniciar-sesion.component.html',
   styleUrl: './iniciar-sesion.component.css'
 })

@@ -4,12 +4,12 @@
         type="text"
         formControlName="usuario"
     />
-    @if(formulario.controls['usuario'].getError('required') && formulario.controls['contrasena'].touched) {
+    @if(formulario.controls['usuario'].getError('required') && formulario.controls['usuario'].touched) {
         <div class="error">
             Campo requerido
         </div>
     }
-    @if(formulario.controls['contrasena'].getError('minlength') && formulario.controls['contrasena'].touched) {
+    @if(formulario.controls['usuario'].getError('minlength') && formulario.controls['usuario'].touched) {
         <div class="error">
             Requiere 4 caracteres
         </div>
