@@ -7,8 +7,6 @@ import { NavbarVistaAdminComponent } from '../../../nav/components/navbar-admin/
   standalone: true,
   imports: [NavbarComponent, NavbarVistaAdminComponent],
   templateUrl: './pagina-principal-admin.component.html',
-  styleUrl: './pagina-principal-admin.component.css'
+  styleUrl: './pagina-principal-admin.component.css',
 })
-export class PaginaPrincipalAdminComponent {
-
-}
+export class PaginaPrincipalAdminComponent {}

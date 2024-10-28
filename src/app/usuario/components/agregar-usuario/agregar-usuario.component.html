@@ -1,38 +1,26 @@
 <form [formGroup]="formulario" (ngSubmit)="agregarUsuario()">
-    <label for="">Usuario</label>
-    <input 
-        type="text"
-        formControlName="usuario"
-    />
-    @if(formulario.controls['usuario'].getError('required') && formulario.controls['usuario'].touched) {
-        <div class="error">
-            Campo requerido
-        </div>
-    }
-    @if(formulario.controls['usuario'].getError('minlength') && formulario.controls['usuario'].touched) {
-        <div class="error">
-            Requiere 4 caracteres
-        </div>
-    }
-    <label for="">Contraseña</label>
-    <input 
-        type="text"
-        formControlName="contrasena"
-    />
-    @if(formulario.controls['contrasena'].getError('required') && formulario.controls['contrasena'].touched) {
-        <div class="error">
-            Campo requerido
-        </div>
-    }
-    @if(formulario.controls['contrasena'].getError('minlength') && formulario.controls['contrasena'].touched) {
-        <div class="error">
-            Requiere 4 caracteres
-        </div>
-    }
-    <label for="">Tipo</label>
-    <select>
-        <option value="repositor">Repositor</option>
-        <option value="cajero">Cajero</option>
-    </select>
-    <button>Crear usuario</button>
+  <label for="">Usuario</label>
+  <input type="text" formControlName="usuario" />
+  @if(formulario.controls['usuario'].getError('required') &&
+  formulario.controls['usuario'].touched) {
+  <div class="error">Campo requerido</div>
+  } @if(formulario.controls['usuario'].getError('minlength') &&
+  formulario.controls['usuario'].touched) {
+  <div class="error">Requiere 4 caracteres</div>
+  }
+  <label for="">Contraseña</label>
+  <input type="text" formControlName="contrasena" />
+  @if(formulario.controls['contrasena'].getError('required') &&
+  formulario.controls['contrasena'].touched) {
+  <div class="error">Campo requerido</div>
+  } @if(formulario.controls['contrasena'].getError('minlength') &&
+  formulario.controls['contrasena'].touched) {
+  <div class="error">Requiere 4 caracteres</div>
+  }
+  <label for="">Tipo</label>
+  <select>
+    <option value="repositor">Repositor</option>
+    <option value="cajero">Cajero</option>
+  </select>
+  <button>Crear usuario</button>
 </form>

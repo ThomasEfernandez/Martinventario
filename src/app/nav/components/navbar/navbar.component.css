@@ -1,52 +1,52 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #fbcb5b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fbcb5b;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 #container {
-    display: flex;
-    align-items: center;
-    padding: 1%;
+  display: flex;
+  align-items: center;
+  padding: 1%;
 }
 img {
-    width: 50px;
-    height: auto;
-    margin-right: 5%;
+  width: 50px;
+  height: auto;
+  margin-right: 5%;
 }
 h1 {
-    display: inline-block;
-    color: #222222;
+  display: inline-block;
+  color: #222222;
 }
 .navbar {
-    flex: 1;
-    display: flex;
-    justify-content: right;
+  flex: 1;
+  display: flex;
+  justify-content: right;
 }
 .navbar ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 .navbar ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 .navbar ul li a {
-    text-decoration: none;
-    color: #222222;
-    font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+  text-decoration: none;
+  color: #222222;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 .navbar ul li a:hover {
-    background-color: #dddddd;
+  background-color: #dddddd;
 }

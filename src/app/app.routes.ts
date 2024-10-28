@@ -5,31 +5,29 @@ import { ModificarProductoComponent } from './producto/components/modificar-prod
 import { EliminarProductoComponent } from './producto/components/eliminar-producto/eliminar-producto.component';
 
 export const routes: Routes = [
-
   {
-    path:'',
-    component: IniciarSesionComponent
+    path: '',
+    component: IniciarSesionComponent,
   },
   // {
   //   path:'',
   //   component: PaginaPrincipalComponent
   // },
   {
-    path:'agregarProducto',
-    component:AgregarProductoComponent
+    path: 'agregarProducto',
+    component: AgregarProductoComponent,
   },
   {
-    path:'modificarProducto',
-    component: ModificarProductoComponent
+    path: 'modificarProducto',
+    component: ModificarProductoComponent,
   },
   {
-    path:'eliminarProducto',
-    component: EliminarProductoComponent
+    path: 'eliminarProducto',
+    component: EliminarProductoComponent,
   },
   {
-    path:'**',
-    redirectTo:'',
-    pathMatch:'full'
-  }
-
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
 ];

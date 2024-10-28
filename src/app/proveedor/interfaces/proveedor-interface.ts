@@ -1,2 +1,1 @@
-export interface Proveedor {
-}
+export interface Proveedor {}

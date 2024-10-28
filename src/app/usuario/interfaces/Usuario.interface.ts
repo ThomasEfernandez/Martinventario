@@ -1,6 +1,6 @@
 export interface Usuario {
-    id: number,
-    usuario: string,
-    contrasena: string,
-    tipo: string
+  id: number;
+  usuario: string;
+  contrasena: string;
+  tipo: string;
 }

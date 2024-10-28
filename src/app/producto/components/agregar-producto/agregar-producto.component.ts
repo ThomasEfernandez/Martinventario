@@ -1,7 +1,7 @@
 // import { Producto } from '../../interfaces/producto.interface';
-import { Component, EventEmitter, inject,Output } from '@angular/core';
-import { NavbarComponent } from "../../../nav/components/navbar/navbar.component";
-import { FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { NavbarComponent } from '../../../nav/components/navbar/navbar.component';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 // import { ProductoService } from '../../services/producto.service';
 import { Producto } from '../../interfaces/producto.interface';
@@ -12,39 +12,36 @@ import { ProductoService } from '../../services/producto.service';
   standalone: true,
   imports: [NavbarComponent, ReactiveFormsModule, RouterModule],
   templateUrl: './agregar-producto.component.html',
-  styleUrl: './agregar-producto.component.css'
+  styleUrl: './agregar-producto.component.css',
 })
 export class AgregarProductoComponent {
-
   @Output()
   emitirProducto: EventEmitter<Producto> = new EventEmitter();
 
-  producto:Producto = {
+  producto: Producto = {
     id: 0,
     nombreProducto: '',
     marca: '',
     cantidad: 0,
     proveedor: '',
     precioVenta: 0,
-    precioCompra: 0
-  }
+    precioCompra: 0,
+  };
 
   fb = inject(FormBuilder);
 
-  productoService = inject (ProductoService);
+  productoService = inject(ProductoService);
 
-  formulario = this.fb.nonNullable.group(
-    {
-      nombreProducto: ['',Validators.required],
-      marca: ['',Validators.required],
-      proveedor: ['', Validators.required],
-      cantidad: ['',Validators.required],
-      precioCompra: ['',Validators.required],
-      precioVenta: ['',Validators.required],
-      categoria: ['' , Validators.required],
-      etiquetas: [[''] , Validators.required]
-    }
-  )
+  formulario = this.fb.nonNullable.group({
+    nombreProducto: ['', Validators.required],
+    marca: ['', Validators.required],
+    proveedor: ['', Validators.required],
+    cantidad: ['', Validators.required],
+    precioCompra: ['', Validators.required],
+    precioVenta: ['', Validators.required],
+    categoria: ['', Validators.required],
+    etiquetas: [[''], Validators.required],
+  });
 
   agregarProducto() {
     if (this.formulario.invalid) return;
@@ -60,7 +57,7 @@ export class AgregarProductoComponent {
   //ES PARA MOSTRAR UN MENU DEPLEGABLE CON LAS CATEGORIAS Y DESPUES UNA PARA LAS ETIQUETAS
 
   // router = inject(Router);
-  
+
   // listaCategorias = Categoria[] = [];
 
   // categoriaService = inject(CategoriaService);
@@ -82,4 +79,3 @@ export class AgregarProductoComponent {
   //   )
   // }
 }
-

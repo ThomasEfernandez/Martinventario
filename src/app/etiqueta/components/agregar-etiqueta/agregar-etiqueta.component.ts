@@ -5,9 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './agregar-etiqueta.component.html',
-  styleUrl: './agregar-etiqueta.component.css'
+  styleUrl: './agregar-etiqueta.component.css',
 })
-export class AgregarEtiquetaComponent {
-
-
-}
+export class AgregarEtiquetaComponent {}

@@ -29,9 +29,7 @@
       "precioCompra": "1000",
       "precioVenta": "1500",
       "categoria": "1",
-      "etiquetas": [
-        "1"
-      ]
+      "etiquetas": ["1"]
     },
     {
       "id": "2",
@@ -42,9 +40,7 @@
       "precioCompra": "2000",
       "precioVenta": "2500",
       "categoria": "2",
-      "etiquetas": [
-        "2"
-      ]
+      "etiquetas": ["2"]
     },
     {
       "id": "3",
@@ -55,9 +51,7 @@
       "precioCompra": "5800",
       "precioVenta": "7000",
       "categorias": "1",
-      "etiquetas": [
-        "3"
-      ]
+      "etiquetas": ["3"]
     },
     {
       "id": "4",
@@ -68,10 +62,7 @@
       "precioCompra": "1000000",
       "precioVenta": "1500000",
       "categorias": "1",
-      "etiquetas": [
-        "4",
-        "5"
-      ]
+      "etiquetas": ["4", "5"]
     },
     {
       "id": "5",
@@ -82,9 +73,7 @@
       "precioCompra": "4000",
       "precioVenta": "5700",
       "categorias": "3",
-      "etiquetas": [
-        "3"
-      ]
+      "etiquetas": ["3"]
     }
   ],
   "proovedores": [
@@ -169,7 +158,7 @@
       "id": "1",
       "total": "2500",
       "fecha": "Sun Oct 27 2024 22:27:44 GMT-0300 (hora estándar de Argentina)",
-      "cajero":"1",
+      "cajero": "1",
       "productos": [
         {
           "id": "1",
@@ -180,9 +169,7 @@
           "precioCompra": "1000",
           "precioVenta": "1500",
           "categoria": "1",
-          "etiquetas": [
-            "1"
-          ]
+          "etiquetas": ["1"]
         }
       ]
     }

@@ -8,17 +8,17 @@ import { VentasComponent } from '../../../venta/components/ventas/ventas.compone
   standalone: true,
   imports: [VentasComponent],
   templateUrl: './cajeros.component.html',
-  styleUrl: './cajeros.component.css'
+  styleUrl: './cajeros.component.css',
 })
 export class CajerosComponent {
-  listaCajeros: Set<Cajero> = new Set<Cajero>() ;
-  listaventas: VentasComponent ; //referencia
+  listaCajeros: Set<Cajero> = new Set<Cajero>();
+  listaventas: VentasComponent; //referencia
 
   constructor() {
-    this.listaventas = new VentasComponent() ;
+    this.listaventas = new VentasComponent();
   }
 
- /* agregarCajero ( nuevoCajero:Cajeros ) {
+  /* agregarCajero ( nuevoCajero:Cajeros ) {
     this.listaCajeros.add(nuevoCajero) ;
   }
 
@@ -69,5 +69,4 @@ export class CajerosComponent {
   }
 
 */
-
 }

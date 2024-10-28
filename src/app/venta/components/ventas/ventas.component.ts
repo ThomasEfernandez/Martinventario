@@ -1,55 +1,50 @@
-import { Ventas } from '../../interfaces/Ventas.interface';
+import { Venta } from '../../interfaces/venta.interface';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ProductosComponent } from '../../../producto/productos/productos.component';
 
 @Component({
   selector: 'app-ventas',
   standalone: true,
-  imports: [ProductosComponent,RouterModule],
+  imports: [RouterModule],
   templateUrl: './ventas.component.html',
-  styleUrl: './ventas.component.css'
+  styleUrl: './ventas.component.css',
 })
 export class VentasComponent {
-  mapaVentas: Map<number, Ventas> = new Map() ;
+  mapaVentas: Map<number, Venta> = new Map();
 
-  generarVenta( venta:Ventas ) {
-    this.mapaVentas.set(venta.id, venta) ;
+  generarVenta(venta: Venta) {
+    this.mapaVentas.set(venta.id, venta);
   }
 
-  eliminarVentaPorId ( id:number ) {
-    if ( this.mapaVentas.has(id) ) {
-      this.mapaVentas.delete(id) ;
+  eliminarVentaPorId(id: number) {
+    if (this.mapaVentas.has(id)) {
+      this.mapaVentas.delete(id);
     } else {
-      console.log(`Venta con id ${{id}} no encontrada.`) ; //prueba
+      console.log(`Venta con id ${{ id }} no encontrada.`); //prueba
     }
   }
 
-  buscarVentaPorId (id: number) {
-    const encontrado: Ventas[] = [] //array vacio, donde se almacena venta encontrada
+  buscarVentaPorId(id: number) {
+    const encontrado: Venta[] = []; //array vacio, donde se almacena venta encontrada
 
-    this.mapaVentas.forEach(element => {
-      if ( element.id === id ) {
-        encontrado.push(element) ;
+    this.mapaVentas.forEach((element) => {
+      if (element.id === id) {
+        encontrado.push(element);
       }
-    }) ;
+    });
 
-    return encontrado ;
+    return encontrado;
   }
 
-  buscarVentaPorCajeroId (cajeroId: number) {
-    const encontrado: Ventas[] = [] //array vacio, donde se almacena venta encontrada
+  buscarVentaPorCajeroId(cajeroId: number) {
+    const encontrado: Venta[] = []; //array vacio, donde se almacena venta encontrada
 
-    this.mapaVentas.forEach(element => {
-      if ( element.id === cajeroId ) {
-        encontrado.push(element) ;
+    this.mapaVentas.forEach((element) => {
+      if (element.id === cajeroId) {
+        encontrado.push(element);
       }
-    }) ;
+    });
 
-    return encontrado ;
+    return encontrado;
   }
-
-
-
-
 }

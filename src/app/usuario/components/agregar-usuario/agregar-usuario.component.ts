@@ -7,27 +7,25 @@ import { UsuarioService } from '../../services/usuario.service';
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './agregar-usuario.component.html',
-  styleUrl: './agregar-usuario.component.css'
+  styleUrl: './agregar-usuario.component.css',
 })
 export class AgregarUsuarioComponent {
   @Output()
-  emitirUsuario= new EventEmitter<Usuario>();
+  emitirUsuario = new EventEmitter<Usuario>();
 
   fb = inject(FormBuilder);
 
-  formulario = this.fb.nonNullable.group(
-    {
-      id: [0],
-      usuario: ['', [Validators.required, Validators.minLength(4)]],
-      contrasena: ['', [Validators.required, Validators.minLength(4)]],
-      tipo: ['']
-    }
-  )
+  formulario = this.fb.nonNullable.group({
+    id: [0],
+    usuario: ['', [Validators.required, Validators.minLength(4)]],
+    contrasena: ['', [Validators.required, Validators.minLength(4)]],
+    tipo: [''],
+  });
 
   usuarioService = inject(UsuarioService);
 
   agregarUsuario() {
-    if(this.formulario.invalid) return;
+    if (this.formulario.invalid) return;
     const usuario = this.formulario.getRawValue();
     this.emitirUsuario.emit(usuario);
     this.agregarUsuarioService(usuario);
@@ -40,7 +38,7 @@ export class AgregarUsuarioComponent {
       // },
       error: (err: Error) => {
         console.log(err.message);
-      }
-    })
+      },
+    });
   }
 }
