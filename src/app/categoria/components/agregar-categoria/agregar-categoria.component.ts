@@ -1,12 +1,12 @@
 import { Component, EventEmitter, inject, Output } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Categoria } from '../../interfaces/categoria-inteface';
 import { CategoriaService } from '../../services/categoria.service';
 
 @Component({
   selector: 'app-agregar-categoria',
   standalone: true,
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './agregar-categoria.component.html',
   styleUrl: './agregar-categoria.component.css',
 })
@@ -19,8 +19,8 @@ export class AgregarCategoriaComponent {
 
   formulario = this.fb.nonNullable.group({
     id: [0],
-    nombre: ['', Validators.required],
-    etiquetas: [], //error al llamar un array, asi funciona pero, esta bien?
+    nombreCategoria: ['', Validators.required],
+    etiquetas: [[]],
   });
 
   agregarCategoria() {

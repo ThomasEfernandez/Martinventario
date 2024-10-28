@@ -8,30 +8,25 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [],
   templateUrl: './listar-productos.component.html',
-  styleUrl: './listar-productos.component.css'
+  styleUrl: './listar-productos.component.css',
 })
 export class ListarProductosComponent {
   router = inject(Router);
-
   listaProductos: Producto[] = [];
-
-  productoService = inject(ProductoService)
+  productoService = inject(ProductoService);
 
   ngOnInit(): void {
     this.listar();
   }
 
   listar() {
-    this.productoService.getProducto().subscribe(
-      {
-        next: (productos: Producto[]) => {
-          this.listaProductos = productos
-        },
-        error: (err: Error) => {
-          console.log(err.message)
-        }
-      }
-    )
+    this.productoService.getProducto().subscribe({
+      next: (productos: Producto[]) => {
+        this.listaProductos = productos;
+      },
+      error: (err: Error) => {
+        console.log(err.message);
+      },
+    });
   }
-  
 }

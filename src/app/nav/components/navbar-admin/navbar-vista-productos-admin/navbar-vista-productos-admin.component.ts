@@ -6,8 +6,6 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './navbar-vista-productos-admin.component.html',
-  styleUrl: './navbar-vista-productos-admin.component.css'
+  styleUrl: './navbar-vista-productos-admin.component.css',
 })
-export class NavbarVistaProductosAdminComponent {
-
-}
+export class NavbarVistaProductosAdminComponent {}

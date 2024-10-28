@@ -29,9 +29,7 @@
       "precioCompra": "1000",
       "precioVenta": "1500",
       "categoria": "1",
-      "etiquetas": [
-        "1"
-      ]
+      "etiquetas": ["1"]
     },
     {
       "id": "2",
@@ -42,9 +40,7 @@
       "precioCompra": "2000",
       "precioVenta": "2500",
       "categoria": "2",
-      "etiquetas": [
-        "2"
-      ]
+      "etiquetas": ["2"]
     },
     {
       "id": "3",
@@ -55,9 +51,7 @@
       "precioCompra": "5800",
       "precioVenta": "7000",
       "categorias": "1",
-      "etiquetas": [
-        "3"
-      ]
+      "etiquetas": ["3"]
     },
     {
       "id": "4",
@@ -68,10 +62,7 @@
       "precioCompra": "1000000",
       "precioVenta": "1500000",
       "categorias": "1",
-      "etiquetas": [
-        "4",
-        "5"
-      ]
+      "etiquetas": ["4", "5"]
     },
     {
       "id": "5",
@@ -82,9 +73,7 @@
       "precioCompra": "4000",
       "precioVenta": "5700",
       "categorias": "3",
-      "etiquetas": [
-        "3"
-      ]
+      "etiquetas": ["3"]
     }
   ],
   "proovedores": [
@@ -113,55 +102,61 @@
   "categorias": [
     {
       "id": "1",
-      "nombreCategoria": "alimentos"
+      "nombreCategoria": "alimentos",
+      "etiquetas": [
+        {
+          "id": "1",
+          "nombreEtiqueta": "galletitasDulces"
+        },
+        {
+          "id": "3",
+          "nombreEtiqueta": "dulces"
+        }
+      ]
     },
     {
       "id": "2",
-      "nombreCategoria": "bebidas"
+      "nombreCategoria": "bebidas",
+      "etiquetas": [
+        {
+          "id": "2",
+          "nombreEtiqueta": "gaseosas"
+        }
+      ]
     },
     {
       "id": "3",
-      "nombreCategoria": "higiene"
+      "nombreCategoria": "higiene",
+      "etiquetas": [
+        {
+          "id": "6",
+          "nombreEtiqueta": "shampoos"
+        }
+      ]
     },
     {
       "id": "4",
-      "nombreCategoria": "limpieza"
+      "nombreCategoria": "limpieza",
+      "etiquetas": []
     },
     {
       "id": "5",
-      "nombreCategoria": "hogar"
-    }
-  ],
-  "etiquetas": [
-    {
-      "id": "1",
-      "nombreEtiqueta": "galletitasDulces",
-      "idCategoria": "1"
-    },
-    {
-      "id": "2",
-      "nombreEtiqueta": "gaseosas",
-      "idCategoria": "2"
-    },
-    {
-      "id": "3",
-      "nombreEtiqueta": "dulces",
-      "idCategoria": "1"
-    },
-    {
-      "id": "4",
-      "nombreEtiqueta": "electrodomesticos",
-      "idCategoria": "5"
-    },
-    {
-      "id": "5",
-      "nombreEtiqueta": "juegos",
-      "idCategoria": "5"
+      "nombreCategoria": "hogar",
+      "etiquetas": [
+        {
+          "id": "4",
+          "nombreEtiqueta": "electrodomesticos"
+        },
+        {
+          "id": "5",
+          "nombreEtiqueta": "juegos"
+        }
+      ]
     },
     {
       "id": "6",
-      "nombreEtiqueta": "shampoos",
-      "idCategoria": "3"
+      "nombreCategoria": "Mascotas",
+      "etiquetas": []
     }
   ],
   "ventas": [
@@ -169,7 +164,7 @@
       "id": "1",
       "total": "2500",
       "fecha": "Sun Oct 27 2024 22:27:44 GMT-0300 (hora estándar de Argentina)",
-      "cajero":"1",
+      "cajero": "1",
       "productos": [
         {
           "id": "1",
@@ -180,9 +175,7 @@
           "precioCompra": "1000",
           "precioVenta": "1500",
           "categoria": "1",
-          "etiquetas": [
-            "1"
-          ]
+          "etiquetas": ["1"]
         }
       ]
     }

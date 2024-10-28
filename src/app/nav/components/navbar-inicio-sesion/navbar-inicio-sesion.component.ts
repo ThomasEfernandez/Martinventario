@@ -6,8 +6,6 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule],
   templateUrl: './navbar-inicio-sesion.component.html',
-  styleUrl: './navbar-inicio-sesion.component.css'
+  styleUrl: './navbar-inicio-sesion.component.css',
 })
-export class NavbarInicioSesionComponent {
-
-}
+export class NavbarInicioSesionComponent {}

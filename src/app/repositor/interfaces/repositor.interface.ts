@@ -1,2 +1,1 @@
-export interface Repositor {
-}
+export interface Repositor {}

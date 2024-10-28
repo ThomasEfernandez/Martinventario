@@ -1,24 +1,24 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Ventas } from '../interfaces/Ventas.interface';
+import { Venta } from '../interfaces/venta.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class VentaService {
-  http = inject(HttpClient)
-  urlBase = "http://localhost:3000/ventas"
+  http = inject(HttpClient);
+  urlBase = 'http://localhost:3000/ventas';
 
-  postVenta(aux:Ventas):Observable<Ventas>{
-    return this.http.post<Ventas>(this.urlBase,aux);
+  postVenta(aux: Venta): Observable<Venta> {
+    return this.http.post<Venta>(this.urlBase, aux);
   }
 
-  getVenta():Observable<Ventas[]>{
-    return this.http.get<Ventas[]>(this.urlBase);
+  getVenta(): Observable<Venta[]> {
+    return this.http.get<Venta[]>(this.urlBase);
   }
 
-  getVentaById(id:number):Observable<Ventas>{
-    return this.http.get<Ventas>(`${this.urlBase}/${id}`)
+  getVentaById(id: number): Observable<Venta> {
+    return this.http.get<Venta>(`${this.urlBase}/${id}`);
   }
 }

@@ -8,27 +8,25 @@ import { EtiquetaService } from '../../services/etiqueta.service';
   standalone: true,
   imports: [],
   templateUrl: './listar-etiquetas.component.html',
-  styleUrl: './listar-etiquetas.component.css'
+  styleUrl: './listar-etiquetas.component.css',
 })
 export class ListarEtiquetasComponent {
-  router = inject(Router) ;
-  listaEtiquetas: Etiqueta[] = [] ;
-  etiquetaService = inject(EtiquetaService) ;
+  router = inject(Router);
+  listaEtiquetas: Etiqueta[] = [];
+  etiquetaService = inject(EtiquetaService);
 
-  ngOnInit(): void{
-    this.listar() ;
+  ngOnInit(): void {
+    this.listar();
   }
 
   listar() {
-    this.etiquetaService.getEtiquetas().subscribe(
-      {
-        next: (etiqueta: Etiqueta[] ) => {
-          this.listaEtiquetas = etiqueta ;
-        } ,
-        error: (err: Error) => {
-          console.log(err.message) ;
-        }
-      }
-    )
+    this.etiquetaService.getEtiquetas().subscribe({
+      next: (etiqueta: Etiqueta[]) => {
+        this.listaEtiquetas = etiqueta;
+      },
+      error: (err: Error) => {
+        console.log(err.message);
+      },
+    });
   }
 }
