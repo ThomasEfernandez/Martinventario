@@ -1,15 +1,7 @@
 import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-<<<<<<< HEAD
-import { Usuario } from '../../interfaces/Usuario.interface';
-<<<<<<<< HEAD:src/app/Usuario/agregar-usuario/agregar-usuario.component.ts
-========
-=======
 import { Usuario } from '../../interfaces/usuario.interface';
->>>>>>> eb125865500f28808408540d1e90d29127142bbb
 import { UsuarioService } from '../../services/usuario.service';
->>>>>>>> 6ee5caf88638451d5f42e13d47040e2dd936a44d:src/app/usuario/components/agregar-usuario/agregar-usuario.component.ts
-
 @Component({
   selector: 'app-agregar-usuario',
   standalone: true,

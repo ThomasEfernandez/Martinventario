@@ -1,11 +1,7 @@
 import { Ventas } from '../../interfaces/Ventas.interface';
 import { Component } from '@angular/core';
-<<<<<<< HEAD:src/app/venta/components/ventas/ventas.component.ts
-=======
-import { ProductosComponent } from '../producto/productos/productos.component';
->>>>>>> eb125865500f28808408540d1e90d29127142bbb:src/app/ventas/ventas.component.ts
 import { RouterModule } from '@angular/router';
-import { ProductosComponent } from '../../../productos/productos.component';
+import { ProductosComponent } from '../../../producto/productos/productos.component';
 
 @Component({
   selector: 'app-ventas',

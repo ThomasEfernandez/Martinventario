@@ -1,4 +1,4 @@
-export interface Cajeros {
+export interface Cajero {
   id: number ,
   usuario: string ,
   contrasena: string ,
