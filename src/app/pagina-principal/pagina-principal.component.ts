@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-pagina-principal',
   standalone: true,
-  imports: [NavbarComponent],
+  imports: [NavbarComponent,RouterModule],
   templateUrl: './pagina-principal.component.html',
   styleUrl: './pagina-principal.component.css'
 })

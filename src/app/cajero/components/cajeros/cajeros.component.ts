@@ -1,13 +1,12 @@
-import { Ventas } from './../interfaces/Ventas.interface';
-import { Cajeros } from '../interfaces/Cajeros.interface';
-
+import { Ventas } from '../../../venta/interfaces/Ventas.interface';
+import { Cajeros } from '../../interfaces/Cajeros.interface';
 import { Component } from '@angular/core';
-import { VentasComponent } from '../ventas/ventas.component';
+import { VentasComponent } from '../../../venta/components/ventas/ventas.component';
 
 @Component({
   selector: 'app-cajeros',
   standalone: true,
-  imports: [],
+  imports: [VentasComponent],
   templateUrl: './cajeros.component.html',
   styleUrl: './cajeros.component.css'
 })
