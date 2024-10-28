@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
+import { Etiqueta } from '../../interfaces/etiqueta.interface';
+import { EtiquetaService } from '../../services/etiqueta.service';
 
 @Component({
   selector: 'app-listar-etiquetas',
@@ -8,5 +11,24 @@ import { Component } from '@angular/core';
   styleUrl: './listar-etiquetas.component.css'
 })
 export class ListarEtiquetasComponent {
+  router = inject(Router) ;
+  listaEtiquetas: Etiqueta[] = [] ;
+  etiquetaService = inject(EtiquetaService) ;
 
+  ngOnInit(): void{
+    this.listar() ;
+  }
+
+  listar() {
+    this.etiquetaService.getEtiquetas().subscribe(
+      {
+        next: (etiqueta: Etiqueta[] ) => {
+          this.listaEtiquetas = etiqueta ;
+        } ,
+        error: (err: Error) => {
+          console.log(err.message) ;
+        }
+      }
+    )
+  }
 }
