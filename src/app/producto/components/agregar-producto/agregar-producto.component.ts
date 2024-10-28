@@ -18,27 +18,28 @@ export class AgregarProductoComponent {
   @Output()
   emitirProducto: EventEmitter<Producto> = new EventEmitter();
 
-  producto: Producto = {
-    id: 0,
-    nombreProducto: '',
-    marca: '',
-    cantidad: 0,
-    proveedor: '',
-    precioVenta: 0,
-    precioCompra: 0,
-  };
+  // producto: Producto = {
+  //   id: 0,
+  //   nombreProducto: '',
+  //   marca: '',
+  //   cantidad: 0,
+  //   proveedor: '',
+  //   precioVenta: 0,
+  //   precioCompra: 0,
+  // };
 
   fb = inject(FormBuilder);
 
   productoService = inject(ProductoService);
 
   formulario = this.fb.nonNullable.group({
+    id: [0],
     nombreProducto: ['', Validators.required],
     marca: ['', Validators.required],
     proveedor: ['', Validators.required],
-    cantidad: ['', Validators.required],
-    precioCompra: ['', Validators.required],
-    precioVenta: ['', Validators.required],
+    cantidad: [0, Validators.required],
+    precioCompra: [0, Validators.required],
+    precioVenta: [0, Validators.required],
     categoria: ['', Validators.required],
     etiquetas: [[''], Validators.required],
   });
@@ -46,12 +47,16 @@ export class AgregarProductoComponent {
   agregarProducto() {
     if (this.formulario.invalid) return;
     const producto = this.formulario.getRawValue();
-    this.agregarProductoService(this.producto);
-    this.emitirProducto.emit(this.producto);
+    this.emitirProducto.emit(producto);
+    this.agregarProductoService(producto);
   }
 
   agregarProductoService(producto: Producto) {
-    this.productoService.postProducto(producto).subscribe();
+    this.productoService.postProducto(producto).subscribe({
+      error: (err: Error) => {
+        console.log(err.message);
+      },
+    });
   }
 
   //ES PARA MOSTRAR UN MENU DEPLEGABLE CON LAS CATEGORIAS Y DESPUES UNA PARA LAS ETIQUETAS

@@ -33,9 +33,6 @@ export class AgregarUsuarioComponent {
 
   agregarUsuarioService(usuario: Usuario) {
     this.usuarioService.postUsuario(usuario).subscribe({
-      // next: (usuario: Usuario) => {
-      //   alert('Usuario ingresado... $usuario.usuario');
-      // },
       error: (err: Error) => {
         console.log(err.message);
       },

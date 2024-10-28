@@ -1,4 +1,4 @@
-import { Ventas } from './../../../venta/interfaces/Ventas.interface';
+import { Venta } from './../../../venta/interfaces/venta.interface';
 import { Component, EventEmitter, inject, Output } from '@angular/core';
 import {
   FormBuilder,
@@ -17,7 +17,7 @@ import { VentaService } from '../../../venta/services/venta.service';
 })
 export class RealizarVentaCajeroComponent {
   @Output()
-  emitirVenta: EventEmitter<Ventas> = new EventEmitter();
+  emitirVenta: EventEmitter<Venta> = new EventEmitter();
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
     id: [0, Validators.required],
@@ -37,7 +37,7 @@ export class RealizarVentaCajeroComponent {
     this.emitirVenta.emit(venta);
     this.agregarVentaService(venta);
   }
-  agregarVentaService(venta: Ventas) {
+  agregarVentaService(venta: Venta) {
     this.ventasService.postVenta(venta).subscribe();
   }
 }

@@ -12,9 +12,7 @@ import { Router } from '@angular/router';
 })
 export class ListarProductosComponent {
   router = inject(Router);
-
   listaProductos: Producto[] = [];
-
   productoService = inject(ProductoService);
 
   ngOnInit(): void {
