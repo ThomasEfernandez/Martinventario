@@ -102,55 +102,61 @@
   "categorias": [
     {
       "id": "1",
-      "nombreCategoria": "alimentos"
+      "nombreCategoria": "alimentos",
+      "etiquetas": [
+        {
+          "id": "1",
+          "nombreEtiqueta": "galletitasDulces"
+        },
+        {
+          "id": "3",
+          "nombreEtiqueta": "dulces"
+        }
+      ]
     },
     {
       "id": "2",
-      "nombreCategoria": "bebidas"
+      "nombreCategoria": "bebidas",
+      "etiquetas": [
+        {
+          "id": "2",
+          "nombreEtiqueta": "gaseosas"
+        }
+      ]
     },
     {
       "id": "3",
-      "nombreCategoria": "higiene"
+      "nombreCategoria": "higiene",
+      "etiquetas": [
+        {
+          "id": "6",
+          "nombreEtiqueta": "shampoos"
+        }
+      ]
     },
     {
       "id": "4",
-      "nombreCategoria": "limpieza"
+      "nombreCategoria": "limpieza",
+      "etiquetas": []
     },
     {
       "id": "5",
-      "nombreCategoria": "hogar"
-    }
-  ],
-  "etiquetas": [
-    {
-      "id": "1",
-      "nombreEtiqueta": "galletitasDulces",
-      "idCategoria": "1"
-    },
-    {
-      "id": "2",
-      "nombreEtiqueta": "gaseosas",
-      "idCategoria": "2"
-    },
-    {
-      "id": "3",
-      "nombreEtiqueta": "dulces",
-      "idCategoria": "1"
-    },
-    {
-      "id": "4",
-      "nombreEtiqueta": "electrodomesticos",
-      "idCategoria": "5"
-    },
-    {
-      "id": "5",
-      "nombreEtiqueta": "juegos",
-      "idCategoria": "5"
+      "nombreCategoria": "hogar",
+      "etiquetas": [
+        {
+          "id": "4",
+          "nombreEtiqueta": "electrodomesticos"
+        },
+        {
+          "id": "5",
+          "nombreEtiqueta": "juegos"
+        }
+      ]
     },
     {
       "id": "6",
-      "nombreEtiqueta": "shampoos",
-      "idCategoria": "3"
+      "nombreCategoria": "Mascotas",
+      "etiquetas": []
     }
   ],
   "ventas": [

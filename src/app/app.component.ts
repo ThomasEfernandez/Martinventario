@@ -6,6 +6,8 @@ import { IniciarSesionComponent } from './pagina-inicio-sesion/components/inicia
 import { PaginaPrincipalAdminComponent } from './pagina-admin/components/pagina-principal-admin/pagina-principal-admin.component';
 import { PaginaProductosAdminComponent } from './pagina-admin/components/pagina-productos-admin/pagina-productos-admin.component';
 import { RealizarVentaCajeroComponent } from './cajero/components/realizar-venta-cajero/realizar-venta-cajero.component';
+import { AgregarCategoriaComponent } from './categoria/components/agregar-categoria/agregar-categoria.component';
+import { AgregarEtiquetaComponent } from './etiqueta/components/agregar-etiqueta/agregar-etiqueta.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +20,8 @@ import { RealizarVentaCajeroComponent } from './cajero/components/realizar-venta
     PaginaPrincipalAdminComponent,
     PaginaProductosAdminComponent,
     RealizarVentaCajeroComponent,
+    AgregarCategoriaComponent,
+    AgregarEtiquetaComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

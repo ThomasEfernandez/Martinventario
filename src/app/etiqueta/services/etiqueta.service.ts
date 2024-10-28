@@ -8,7 +8,7 @@ import { Etiqueta } from './../interfaces/etiqueta.interface';
 })
 export class EtiquetaService {
   http = inject(HttpClient);
-  url = 'http://localhost:3000/etiquetas';
+  url = 'http://localhost:3000/categorias/etiquetas';
 
   getEtiquetas(): Observable<Etiqueta[]> {
     return this.http.get<Etiqueta[]>(this.url);
