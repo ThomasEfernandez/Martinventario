@@ -3,6 +3,7 @@ import { IniciarSesionComponent } from './pagina-inicio-sesion/components/inicia
 import { AgregarProductoComponent } from './producto/components/agregar-producto/agregar-producto.component';
 import { ModificarProductoComponent } from './producto/components/modificar-producto/modificar-producto.component';
 import { EliminarProductoComponent } from './producto/components/eliminar-producto/eliminar-producto.component';
+import { AgregarProveedorComponent } from './proveedor/components/agregar-proveedor/agregar-proveedor.component';
 
 export const routes: Routes = [
 
@@ -14,6 +15,9 @@ export const routes: Routes = [
   //   path:'',
   //   component: PaginaPrincipalComponent
   // },
+  { path: 'proveedores',
+    component: AgregarProveedorComponent
+  },
   {
     path:'agregarProducto',
     component:AgregarProductoComponent

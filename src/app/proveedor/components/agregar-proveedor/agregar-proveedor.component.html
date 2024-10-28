@@ -1,1 +1,34 @@
-<p>agregar-proveedor works!</p>
+<h2>Agregar Proveedor</h2>
+<form [formGroup]="formulario" (ngSubmit)="agregarProveedor()">
+  <label for="nombre">Nombre:</label>
+  <input id="nombre" formControlName="nombre" type="text" />
+  <div *ngIf="proveedorForm.get('nombre')?.invalid && proveedorForm.get('nombre')?.touched">
+    <small>El nombre es obligatorio.</small>
+  </div>
+
+  <label for="apellido">Apellido:</label>
+  <input id="apellido" formControlName="apellido" type="text" />
+  <div *ngIf="proveedorForm.get('apellido')?.invalid && proveedorForm.get('apellido')?.touched">
+    <small>El apellido es obligatorio.</small>
+  </div>
+
+  <label for="razonSocial">Razón Social:</label>
+  <input id="razonSocial" formControlName="razonSocial" type="text" />
+  <div *ngIf="proveedorForm.get('razonSocial')?.invalid && proveedorForm.get('razonSocial')?.touched">
+    <small>La razón social es obligatoria.</small>
+  </div>
+
+  <label for="email">Email:</label>
+  <input id="email" formControlName="email" type="email" />
+  <div *ngIf="proveedorForm.get('email')?.invalid && proveedorForm.get('email')?.touched">
+    <small>Introduce un email válido.</small>
+  </div>
+
+  <label for="cuit">CUIT:</label>
+  <input id="cuit" formControlName="cuit" type="text" />
+  <div *ngIf="proveedorForm.get('cuit')?.invalid && proveedorForm.get('cuit')?.touched">
+    <small>El CUIT es obligatorio y debe tener 11 dígitos.</small>
+  </div>
+
+  <button type="submit" [disabled]="formulario.invalid">Agregar Proveedor</button>
+</form>

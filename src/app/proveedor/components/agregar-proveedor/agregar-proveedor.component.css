@@ -1,0 +1,46 @@
+/* Fondo general */
+body {
+  background-color: #ffffff; /* Blanco */
+  color: #000000; /* Negro para el texto */
+  font-family: Arial, sans-serif;
+}
+
+/* Botones y enlaces */
+button, a {
+  background-color: #FFD700; /* Amarillo */
+  color: #000000; /* Texto negro para contraste */
+  border: 1px solid #000000; /* Borde negro */
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+button:hover, a:hover {
+  background-color: #FFC300; /* Amarillo más oscuro */
+  cursor: pointer;
+}
+
+/* Formularios */
+input, select, textarea {
+  background-color: #f7f7f7; /* Fondo gris claro */
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* Cabeceras */
+h1, h2, h3 {
+  color: #FFD700; /* Amarillo */
+}
+
+/* Tarjetas o secciones */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
