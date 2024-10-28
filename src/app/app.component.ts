@@ -7,6 +7,7 @@ import { PaginaPrincipalAdminComponent } from "./pagina-admin/components/pagina-
 import { PaginaProductosAdminComponent } from "./pagina-admin/components/pagina-productos-admin/pagina-productos-admin.component";
 import { RealizarVentaCajeroComponent } from "./cajero/components/realizar-venta-cajero/realizar-venta-cajero.component";
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
