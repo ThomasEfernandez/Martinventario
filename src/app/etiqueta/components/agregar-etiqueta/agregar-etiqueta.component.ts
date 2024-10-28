@@ -32,10 +32,6 @@ export class AgregarEtiquetaComponent {
   }
 
   agregarEtiquetaService(etiqueta: Etiqueta) {
-    this.etiquetaService.postEtiqueta(etiqueta).subscribe({
-      error: (err: Error) => {
-        console.log(err.message);
-      },
-    });
+    this.etiquetaService.postEtiqueta(etiqueta).subscribe();
   }
 }
