@@ -1,0 +1,125 @@
+<!-- <div class="contenedor-volver">
+  <button routerLink="/productos" class="boton">VOLVER</button>
+</div>
+<div class="contenedor-formulario">
+    <form class="formulario" [formGroup]="formulario" (ngSubmit)="agregarProducto()">
+        <h3>Agregar Producto</h3>
+        <label for="marca">Marca</label>
+        <input class="in-formulario" type="text"#marca formControlName="marca" >
+        @if (formulario.controls['marca'].getError('required')&& formulario.controls['marca'].touched){
+          <div class="error">
+              Campo requerido
+          </div>
+        }
+      <label class="label-Form" for="nombre">Nombre</label>
+        <input  class="in-formulario"   type="text" #nombre  formControlName="nombreProducto">
+        @if (formulario.controls['nombreProducto'].getError('required')&& formulario.controls['marca'].touched){
+          <div class="error">
+              Campo requerido
+          </div>
+        }
+        <label class="label-Form"  for="precioCompra">Precio de compra</label>
+        <input  class="in-formulario" type="text"#precioCompra  formControlName="precioCompra">
+        @if (formulario.controls['precioCompra'].getError('required')&& formulario.controls['marca'].touched){
+          <div class="error">
+              Campo requerido
+          </div>
+        }
+        <label class="label-Form"  for="precioVenta">Precio de venta</label>
+        <input  class="in-formulario" type="text"#precioVenta formControlName="precioVenta">
+        @if (formulario.controls['precioVenta'].getError('required')&& formulario.controls['marca'].touched){
+          <div class="error">
+              Campo requerido
+          </div>
+        }
+        <label  class="label-Form" for="cantidad">Cantidad</label>
+        <input class="in-formulario"  type="number" #cantidad formControlName="cantidad">
+        @if (formulario.controls['cantidad'].getError('required')&& formulario.controls['marca'].touched){
+          <div class="error">
+              Campo requerido
+          </div>
+        } 
+      <button class="botonAgregar">agregar</button>
+    </form>
+</div> -->
+
+
+<form [formGroup]="formulario" (ngSubmit)="agregarProducto()">
+    <div class="columna">
+        <label for="">Producto</label>
+        <input type="text" formControlName="nombreProducto" />
+        @if(formulario.controls['nombreProducto'].getError('required') && formulario.controls['nombreProducto'].touched){
+            <div class="error">
+                Campo requerido.
+            </div>
+        }
+        <label for="">Marca</label>
+        <input type="text" formControlName="marca" />
+        @if(formulario.controls['marca'].getError('required') && formulario.controls['marca'].touched){
+            <div class="error">
+                Campo requerido.
+            </div>
+        }
+        <label for="">Precio de compra</label>
+        <input type="number" formControlName="precioCompra" />
+        @if(formulario.controls['precioCompra'].getError('required') && formulario.controls['precioCompra'].touched){
+            <div class="error">
+                Campo requerido.
+            </div>
+        }
+        <label for="">Categoría</label>
+        <select size="0">
+            <!-- @for (categoria of listaCategorias; track $index) {
+                <option value="{{ categoria.nombreCategoria }}">{{ categoria.nombreCategoria }}</option>
+            } -->
+            <option disabled selected>Selecciona una categoría</option>
+            <option value="alimentos">Alimentos</option>
+            <option value="bebidas">Bebidas</option>
+            <option value="higiene">Higiene</option>
+            <option value="limpieza">Limpieza</option>
+            <option value="hogar">Hogar</option>
+        </select>
+    </div>
+    <div class="columna">
+        <label for="">Cantidad</label>
+        <input type="number" formControlName="cantidad" />
+        @if(formulario.controls['cantidad'].getError('required') && formulario.controls['cantidad'].touched){
+            <div class="error">
+                Campo requerido.
+            </div>
+        }
+        <label for="">Proveedor</label>
+        <select size="0">
+            <!-- @for (categoria of listaCategorias; track $index) {
+                <option value="{{ categoria.nombreCategoria }}">{{ categoria.nombreCategoria }}</option>
+            } -->
+            <option disabled selected>Selecciona un proveedor</option>
+            <option value="Proveedor 1">Proveedor 1</option>
+            <option value="Proveedor 2">Proovedor 2</option>
+            <option value="Proveedor 3">Proveedor 3</option>
+        </select>
+        <label for="">Precio de venta</label>
+        <input type="number" formControlName="precioVenta"/>
+        @if(formulario.controls['precioVenta'].getError('required') && formulario.controls['precioVenta'].touched){
+            <div class="error">
+                Campo requerido.
+            </div>
+        }
+        <label for="">Etiquetas</label>
+        <select size="0">
+            <!-- @for (etiqueta of listaEtiquetas; track $index) {
+                <option value="{{ etiquetas.nombreEtiqueta }}">{{ etiqueta.nombreEtiqueta }}</option>
+            } -->
+            <option disabled selected>Selecciona una etiqueta</option>
+            <option value="galletitasDulces">Galletitas dulces</option>
+            <option value="gaseosas">Gaseosas</option>
+            <option value="dulces">Dulces</option>
+            <option value="electrodomesticos">Electrodomésticos</option>
+            <option value="juegos">Juegos</option>
+            <option value="shampoos">Shmapoos</option>
+        </select>
+    </div>
+    <div class="boton">
+        <button>Agregar producto</button>
+    </div>
+</form>
