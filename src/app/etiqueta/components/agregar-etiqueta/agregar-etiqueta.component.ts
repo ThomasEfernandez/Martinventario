@@ -9,39 +9,40 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [ReactiveFormsModule, RouterModule],
   templateUrl: './agregar-etiqueta.component.html',
-  styleUrl: './agregar-etiqueta.component.css'
+  styleUrl: './agregar-etiqueta.component.css',
 })
 export class AgregarEtiquetaComponent {
   @Output()
-  emitirEtiqueta: EventEmitter<Etiqueta> = new EventEmitter() ;
+  emitirEtiqueta: EventEmitter<Etiqueta> = new EventEmitter();
 
   // etiqueta: Etiqueta = {
   //   id: 0,
   //   nombre: '',
   // }
 
-  fb = inject(FormBuilder) ;
+  fb = inject(FormBuilder);
 
-  etiquetaService = inject(EtiquetaService) ;
+  etiquetaService = inject(EtiquetaService);
 
-  formulario = this.fb.nonNullable.group(
-    {
-      id: [0],
-      nombre: ['', [Validators.required]]
-    }
-  )
+  formulario = this.fb.nonNullable.group({
+    id: [0],
+    nombre: ['', [Validators.required]],
+  });
 
   agregarEtiqueta() {
-    if ( this.formulario.invalid ) return ;
+    if (this.formulario.invalid) return;
 
-    const etiqueta = this.formulario.getRawValue() ;
+    const etiqueta = this.formulario.getRawValue();
 
-    this.emitirEtiqueta.emit(etiqueta) ;
-    this.agregarEtiquetaService(etiqueta) ;
+    this.emitirEtiqueta.emit(etiqueta);
+    this.agregarEtiquetaService(etiqueta);
   }
 
   agregarEtiquetaService(etiqueta: Etiqueta) {
-    this.etiquetaService.postEtiqueta(etiqueta).subscribe() ;
+    this.etiquetaService.postEtiqueta(etiqueta).subscribe({
+      error: (err: Error) => {
+        console.log(err.message);
+      },
+    });
   }
-
 }
