@@ -60,7 +60,7 @@ export class AgregarProductoComponent {
   //ES PARA MOSTRAR UN MENU DEPLEGABLE CON LAS CATEGORIAS Y DESPUES UNA PARA LAS ETIQUETAS
 
   // router = inject(Router);
-  
+
   // listaCategorias = Categoria[] = [];
 
   // categoriaService = inject(CategoriaService);
