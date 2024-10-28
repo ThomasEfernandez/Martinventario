@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { IniciarSesionComponent } from './pagina-inicio-sesion/components/iniciar-sesion/iniciar-sesion.component';
 import { AgregarProductoComponent } from './producto/components/agregar-producto/agregar-producto.component';
-import { ProductosComponent } from './producto/productos/productos.component';
 import { ProveedoresComponent } from './proveedores/proveedores.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { ModificarProductoComponent } from './producto/components/modificar-producto/modificar-producto.component';
@@ -17,10 +16,6 @@ export const routes: Routes = [
   //   path:'', 
   //   component: PaginaPrincipalComponent
   // },
-  {
-    path:'productos',
-    component:ProductosComponent
-  },
   {
     path:'proveedores',
     component:ProveedoresComponent

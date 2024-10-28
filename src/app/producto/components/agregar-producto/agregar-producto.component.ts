@@ -1,8 +1,10 @@
-import { Producto } from '../../interfaces/producto.interface';
+// import { Producto } from '../../interfaces/producto.interface';
 import { Component, EventEmitter, inject,Output } from '@angular/core';
 import { NavbarComponent } from "../../../nav/components/navbar/navbar.component";
 import { FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
+// import { ProductoService } from '../../services/producto.service';
+import { Producto } from '../../interfaces/producto.interface';
 import { ProductoService } from '../../services/producto.service';
 
 @Component({
