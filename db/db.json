@@ -163,5 +163,28 @@
       "nombreEtiqueta": "shampoos",
       "idCategoria": "3"
     }
+  ],
+  "ventas": [
+    {
+      "id": "1",
+      "total": "2500",
+      "fecha": "Sun Oct 27 2024 22:27:44 GMT-0300 (hora estándar de Argentina)",
+      "cajero":"1",
+      "productos": [
+        {
+          "id": "1",
+          "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
+          "marca": "Pepitos",
+          "proveedor": "Proveedor 1",
+          "cantidad": "10",
+          "precioCompra": "1000",
+          "precioVenta": "1500",
+          "categoria": "1",
+          "etiquetas": [
+            "1"
+          ]
+        }
+      ]
+    }
   ]
 }

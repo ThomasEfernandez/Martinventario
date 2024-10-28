@@ -14,7 +14,7 @@ export class UsuarioService {
   getUsuarios(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(this.url);
   }
-  
+
   postUsuario(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>(this.url, usuario);
   }
@@ -32,6 +32,6 @@ export class UsuarioService {
   }
 
   constructor() {
-    
+
   }
 }

@@ -1,5 +1,5 @@
 import { Ventas } from '../../../venta/interfaces/Ventas.interface';
-import { Cajeros } from '../../interfaces/Cajeros.interface';
+import { Cajero } from '../../interfaces/cajero.interface';
 import { Component } from '@angular/core';
 import { VentasComponent } from '../../../venta/components/ventas/ventas.component';
 
@@ -11,14 +11,14 @@ import { VentasComponent } from '../../../venta/components/ventas/ventas.compone
   styleUrl: './cajeros.component.css'
 })
 export class CajerosComponent {
-  listaCajeros: Set<Cajeros> = new Set<Cajeros>() ;
+  listaCajeros: Set<Cajero> = new Set<Cajero>() ;
   listaventas: VentasComponent ; //referencia
 
   constructor() {
     this.listaventas = new VentasComponent() ;
   }
 
-  agregarCajero ( nuevoCajero:Cajeros ) {
+ /* agregarCajero ( nuevoCajero:Cajeros ) {
     this.listaCajeros.add(nuevoCajero) ;
   }
 
@@ -68,6 +68,6 @@ export class CajerosComponent {
 
   }
 
-
+*/
 
 }
