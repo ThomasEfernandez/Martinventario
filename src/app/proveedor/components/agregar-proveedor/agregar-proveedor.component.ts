@@ -4,6 +4,7 @@ import { ProveedorService } from '../../services/proveedor.service';
 import { Proveedor } from '../../interfaces/proveedor-interface';
 import { NavbarComponent } from "../../../nav/components/navbar/navbar.component";
 import { Router, RouterModule } from '@angular/router';
+import { ProveedorMenuComponent } from '../proveedor-menu/proveedor-menu.component';
 
 @Component({
   selector: 'app-agregar-proveedor',

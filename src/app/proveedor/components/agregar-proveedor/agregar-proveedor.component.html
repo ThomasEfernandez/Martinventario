@@ -1,34 +1,41 @@
-<h2>Agregar Proveedor</h2>
-<form [formGroup]="formulario" (ngSubmit)="agregarProveedor()">
-  <label for="nombre">Nombre:</label>
-  <input id="nombre" formControlName="nombre" type="text" />
-  <div *ngIf="proveedorForm.get('nombre')?.invalid && proveedorForm.get('nombre')?.touched">
-    <small>El nombre es obligatorio.</small>
-  </div>
+<div class="form-container">
+  <h2>Registrar Proveedor</h2>
+  <form [formGroup]="formulario" (ngSubmit)="agregarProveedor()">
+    <div class="columna">
+      <label for="nombre">Nombre</label>
+      <input type="text" formControlName="nombreProveedor" id="nombre" />
+      @if(formulario.controls['nombre'].getError('required') && formulario.controls['nombre'].touched){
+        <div class="error">Campo requerido.</div>
+      }
 
-  <label for="apellido">Apellido:</label>
-  <input id="apellido" formControlName="apellido" type="text" />
-  <div *ngIf="proveedorForm.get('apellido')?.invalid && proveedorForm.get('apellido')?.touched">
-    <small>El apellido es obligatorio.</small>
-  </div>
+      <label for="apellido">Apellido</label>
+      <input type="text" formControlName="apellidoProveedor" id="apellido" />
+      @if(formulario.controls['apellido'].getError('required') && formulario.controls['apellido'].touched){
+        <div class="error">Campo requerido.</div>
+      }
 
-  <label for="razonSocial">Razón Social:</label>
-  <input id="razonSocial" formControlName="razonSocial" type="text" />
-  <div *ngIf="proveedorForm.get('razonSocial')?.invalid && proveedorForm.get('razonSocial')?.touched">
-    <small>La razón social es obligatoria.</small>
-  </div>
+      <label for="razonSocial">Razon Social</label>
+      <input type="text" formControlName="razonSocial" id="razonSocial" />
+      @if(formulario.controls['razonSocial'].getError('required') && formulario.controls['razonSocial'].touched){
+        <div class="error">Campo requerido.</div>
+      }
 
-  <label for="email">Email:</label>
-  <input id="email" formControlName="email" type="email" />
-  <div *ngIf="proveedorForm.get('email')?.invalid && proveedorForm.get('email')?.touched">
-    <small>Introduce un email válido.</small>
-  </div>
+      <label for="email">Email</label>
+      <input type="text" formControlName="email" id="email" />
+      @if(formulario.controls['email'].getError('required') && formulario.controls['email'].touched){
+        <div class="error">Campo requerido.</div>
+      }
 
-  <label for="cuit">CUIT:</label>
-  <input id="cuit" formControlName="cuit" type="text" />
-  <div *ngIf="proveedorForm.get('cuit')?.invalid && proveedorForm.get('cuit')?.touched">
-    <small>El CUIT es obligatorio y debe tener 11 dígitos.</small>
-  </div>
+      <label for="cuit">CUIT</label>
+      <input type="text" formControlName="cuit" id="cuit" />
+      @if(formulario.controls['cuit'].getError('required') && formulario.controls['cuit'].touched){
+        <div class="error">Campo requerido.</div>
+      }
+    </div>
 
-  <button type="submit" [disabled]="formulario.invalid">Agregar Proveedor</button>
-</form>
+    <div class="boton">
+      <button type="submit">Registrar Proveedor</button>
+    </div>
+  </form>
+</div>
+
