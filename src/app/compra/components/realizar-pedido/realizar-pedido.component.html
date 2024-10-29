@@ -3,21 +3,23 @@
     <div class="contenedor">
         <label for="">Id </label>
         <input type="number" formControlName="id">
-        @if (formulario.controls['id'].getError('required')&& formulario.controls['id'].touched){
-            <div class="menErr"> Debe elegir el id de un producto</div>
 
-        }
     </div>
+    @if (formulario.controls['id'].getError('required')&& formulario.controls['id'].touched){
+        <div class="menErr"> Debe elegir el id de un producto</div>
+
+    }
 
      <div class="contenedor">
         <label for="">Cantidad </label>
         <input type="number" formControlName="cantidad">
-        @if (formulario.controls['cantidad'].getError('required')&& formulario.controls['cantidad'].touched){
-            <div class="menErr"> Debe decidir cuantos pedir</div>
-
-        }
+     
 
      </div>
+     @if (formulario.controls['cantidad'].getError('required')&& formulario.controls['cantidad'].touched){
+        <div class="menErr"> Debe decidir cuantos pedir</div>
+
+    }
         <button>pedir</button>
     </form>
 </div>
