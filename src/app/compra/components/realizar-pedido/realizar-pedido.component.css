@@ -1,0 +1,44 @@
+div{
+    display: flex;
+    justify-content: center;
+    }
+    label{
+        color: white;
+        margin-right: 1rem;
+    }
+    input{
+        color: white;
+        margin-right: 1rem;
+        background: transparent ;
+        margin-bottom: 1rem;
+        border-color: #0074c2;
+        border-radius: 15px;
+        padding: 3px;
+        
+    }
+    form{
+        display: flex;
+        padding: 5px;
+        background: #0099ff;
+        
+    }
+    
+    button{
+        border: none;
+        color: white;
+        background-color:  #0074c2;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    button:hover{
+        box-shadow: 1px 1px 1px 1px rgb(30, 30, 30);
+    }
+    
+    .contenedor{
+        
+        margin: 1rem;
+    }
+    
+    .menErr{
+        color: white;
+    }

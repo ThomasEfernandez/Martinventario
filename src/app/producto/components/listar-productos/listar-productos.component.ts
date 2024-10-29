@@ -20,7 +20,7 @@ export class ListarProductosComponent {
   }
 
   listar() {
-    this.productoService.getProducto().subscribe({
+    this.productoService.getProductos().subscribe({
       next: (productos: Producto[]) => {
         this.listaProductos = productos;
       },
