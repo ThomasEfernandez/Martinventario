@@ -10,10 +10,13 @@ export class ProductoService {
   http = inject(HttpClient);
   url = 'http://localhost:3000/productos';
 
-  getProducto(): Observable<Producto[]> {
+  getProductos(): Observable<Producto[]> {
     return this.http.get<Producto[]>(this.url);
   }
 
+  getProductoById (id:number):Observable<Producto>{
+    return this.http.get<Producto>(`${this.url}/${id}`);
+  }
   postProducto(producto: Producto): Observable<Producto> {
     return this.http.post<Producto>(this.url, producto);
   }

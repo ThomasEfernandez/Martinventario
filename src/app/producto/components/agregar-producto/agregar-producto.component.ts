@@ -18,16 +18,6 @@ export class AgregarProductoComponent {
   @Output()
   emitirProducto: EventEmitter<Producto> = new EventEmitter();
 
-  // producto: Producto = {
-  //   id: 0,
-  //   nombreProducto: '',
-  //   marca: '',
-  //   cantidad: 0,
-  //   proveedor: '',
-  //   precioVenta: 0,
-  //   precioCompra: 0,
-  // };
-
   fb = inject(FormBuilder);
 
   productoService = inject(ProductoService);
