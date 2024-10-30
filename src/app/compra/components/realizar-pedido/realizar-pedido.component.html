@@ -1,25 +1,24 @@
-    <div class="contenedorForm">
-    <form action="" [formGroup]="formulario" (ngSubmit)="agregarCompraService()">
+<div class="contenedorForm">
+  <form action="" [formGroup]="formulario" (ngSubmit)="realizarCompra()">
     <div class="contenedor">
-        <label for="">Id </label>
-        <input type="number" formControlName="id">
-
+      <label for="">Id Producto</label>
+      <input type="number" formControlName="idProducto" />
     </div>
-    @if (formulario.controls['id'].getError('required')&& formulario.controls['id'].touched){
-        <div class="menErr"> Debe elegir el id de un producto</div>
+    @if (formulario.controls['idProducto'].getError('required')&&
+    formulario.controls['idProducto'].touched){
+    <div class="menErr">Debe elegir el id de un producto</div>
 
     }
 
-     <div class="contenedor">
-        <label for="">Cantidad </label>
-        <input type="number" formControlName="cantidad">
-     
-
-     </div>
-     @if (formulario.controls['cantidad'].getError('required')&& formulario.controls['cantidad'].touched){
-        <div class="menErr"> Debe decidir cuantos pedir</div>
+    <div class="contenedor">
+      <label for="">Cantidad </label>
+      <input type="number" formControlName="cantidad" />
+    </div>
+    @if (formulario.controls['cantidad'].getError('required')&&
+    formulario.controls['cantidad'].touched){
+    <div class="menErr">Debe decidir cuantos pedir</div>
 
     }
-        <button>pedir</button>
-    </form>
+    <button>pedir</button>
+  </form>
 </div>
