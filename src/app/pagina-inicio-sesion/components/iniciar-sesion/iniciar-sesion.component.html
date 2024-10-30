@@ -1,14 +1,8 @@
 <app-navbar-inicio-sesion></app-navbar-inicio-sesion>
 <form [formGroup]="formulario" (ngSubmit)="iniciarSesion()">
-    <label for="">Usuario</label>
-    <input 
-        type="text"
-        formControlName="usuario"
-    />
-    <label for="">Contraseña</label>
-    <input 
-        type="password"
-        formControlName="contrasena"
-    />
-    <button>Iniciar sesión</button>
+  <label for="">Usuario</label>
+  <input type="text" formControlName="usuario" />
+  <label for="">Contraseña</label>
+  <input type="password" formControlName="contrasena" />
+  <button>Iniciar sesión</button>
 </form>

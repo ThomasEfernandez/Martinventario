@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './agregar-repositor.component.html',
-  styleUrl: './agregar-repositor.component.css'
+  styleUrl: './agregar-repositor.component.css',
 })
-export class AgregarRepositorComponent {
-
-}
+export class AgregarRepositorComponent {}

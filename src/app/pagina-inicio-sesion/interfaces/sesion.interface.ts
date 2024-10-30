@@ -1,4 +1,4 @@
 export interface Sesion {
-    usuario: string,
-    contrasena: string
+  usuario: string;
+  contrasena: string;
 }

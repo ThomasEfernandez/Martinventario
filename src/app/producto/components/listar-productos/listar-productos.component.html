@@ -1,26 +1,26 @@
 <div>
-    <table>
-        <thead>
-            <th>Id</th>
-            <th>Producto</th>
-            <th>Marca</th>
-            <th>Cantidad</th>
-            <th>Proveedor</th>
-            <th>Precio compra</th>
-            <th>Precio venta</th>
-        </thead>
-        <tbody>
-            @for(producto of listaProductos; track $index) {
-                <tr>
-                    <td>{{ producto.id }}</td>
-                    <td>{{ producto.nombreProducto }}</td>
-                    <td>{{ producto.marca }}</td>
-                    <td>{{ producto.cantidad }}</td>
-                    <td>{{ producto.proveedor }}</td>
-                    <td>{{ producto.precioCompra }}</td>
-                    <td>{{ producto.precioVenta }}</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+  <table>
+    <thead>
+      <th>Id</th>
+      <th>Producto</th>
+      <th>Marca</th>
+      <th>Cantidad</th>
+      <th>Proveedor</th>
+      <th>Precio compra</th>
+      <th>Precio venta</th>
+    </thead>
+    <tbody>
+      @for(producto of listaProductos; track $index) {
+      <tr>
+        <td>{{ producto.id }}</td>
+        <td>{{ producto.nombreProducto }}</td>
+        <td>{{ producto.marca }}</td>
+        <td>{{ producto.cantidad }}</td>
+        <td>{{ producto.proveedor }}</td>
+        <td>{{ producto.precioCompra }}</td>
+        <td>{{ producto.precioVenta }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
 </div>
