@@ -1,29 +1,29 @@
 import { Component } from '@angular/core';
 import { AgregarProveedorComponent } from '../agregar-proveedor/agregar-proveedor.component';
 import { CommonModule } from '@angular/common';
+import { ListarProveedorComponent } from '../listar-proveedores/listar-proveedores.component';
 
 @Component({
   selector: 'app-proveedor-menu',
   standalone: true,
   templateUrl: './proveedor-menu.component.html',
   styleUrls: ['./proveedor-menu.component.css'],
-  imports: [AgregarProveedorComponent, CommonModule]
+  imports: [AgregarProveedorComponent, CommonModule, ListarProveedorComponent]
 })
 
 export class ProveedorMenuComponent {
   opcionSeleccionada: string | null = null;
-  mostrarMenu: boolean = true; // Inicializa en true para mostrar el menú desde el principio
+  mostrarMenu: boolean = true;
 
-  // Método para seleccionar una opción
+
   seleccionarOpcion(opcion: string): void{
     console.log('Opción seleccionada:', opcion);
-    this.opcionSeleccionada = opcion; // Asigna la opción seleccionada
-    this.mostrarMenu = false; // Oculta el menú al seleccionar
+    this.opcionSeleccionada = opcion;
+    this.mostrarMenu = false;
   }
 
-  // Método para volver a mostrar el menú
   volverAMenu(): void {
-    this.opcionSeleccionada = null; // Resetea la opción seleccionada
-    this.mostrarMenu = true; // Muestra el menú
+    this.opcionSeleccionada = null;
+    this.mostrarMenu = true;
   }
 }

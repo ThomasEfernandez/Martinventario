@@ -1,1 +1,25 @@
-<p>listar-proveedores works!</p>
+<div class="listar-proveedor-container">
+  <h2>Listado de Proveedores</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Razón Social</th>
+        <th>Email</th>
+        <th>CUIT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let proveedor of proveedores">
+        <td>{{ proveedor.nombre }}</td>
+        <td>{{ proveedor.apellido }}</td>
+        <td>{{ proveedor.razonSocial }}</td>
+        <td>{{ proveedor.email }}</td>
+        <td>{{ proveedor.cuit }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

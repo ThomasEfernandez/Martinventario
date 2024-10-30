@@ -3,34 +3,34 @@
   <form [formGroup]="formulario" (ngSubmit)="agregarProveedor()">
     <div class="columna">
       <label for="nombre">Nombre</label>
-      <input type="text" formControlName="nombreProveedor" id="nombre" />
-      @if(formulario.controls['nombre'].getError('required') && formulario.controls['nombre'].touched){
-        <div class="error">Campo requerido.</div>
-      }
+      <input type="text" formControlName="nombre" id="nombre" />
+      <div *ngIf="formulario.controls['nombre'].hasError('required') && formulario.controls['nombre'].touched" class="error">
+        Campo requerido.
+      </div>
 
       <label for="apellido">Apellido</label>
-      <input type="text" formControlName="apellidoProveedor" id="apellido" />
-      @if(formulario.controls['apellido'].getError('required') && formulario.controls['apellido'].touched){
-        <div class="error">Campo requerido.</div>
-      }
+      <input type="text" formControlName="apellido" id="apellido" />
+      <div *ngIf="formulario.controls['apellido'].hasError('required') && formulario.controls['apellido'].touched" class="error">
+        Campo requerido.
+      </div>
 
-      <label for="razonSocial">Razon Social</label>
+      <label for="razonSocial">Razón Social</label>
       <input type="text" formControlName="razonSocial" id="razonSocial" />
-      @if(formulario.controls['razonSocial'].getError('required') && formulario.controls['razonSocial'].touched){
-        <div class="error">Campo requerido.</div>
-      }
+      <div *ngIf="formulario.controls['razonSocial'].hasError('required') && formulario.controls['razonSocial'].touched" class="error">
+        Campo requerido.
+      </div>
 
       <label for="email">Email</label>
       <input type="text" formControlName="email" id="email" />
-      @if(formulario.controls['email'].getError('required') && formulario.controls['email'].touched){
-        <div class="error">Campo requerido.</div>
-      }
+      <div *ngIf="formulario.controls['email'].hasError('required') && formulario.controls['email'].touched" class="error">
+        Campo requerido.
+      </div>
 
       <label for="cuit">CUIT</label>
       <input type="text" formControlName="cuit" id="cuit" />
-      @if(formulario.controls['cuit'].getError('required') && formulario.controls['cuit'].touched){
-        <div class="error">Campo requerido.</div>
-      }
+      <div *ngIf="formulario.controls['cuit'].hasError('required') && formulario.controls['cuit'].touched" class="error">
+        Campo requerido.
+      </div>
     </div>
 
     <div class="boton">
@@ -38,4 +38,3 @@
     </div>
   </form>
 </div>
-

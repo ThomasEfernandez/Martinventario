@@ -7,7 +7,7 @@ import { Proveedor } from '../interfaces/proveedor-interface';
   providedIn: 'root'
 })
 export class ProveedorService {
-  private url = 'http://localhost:4200/proveedores';
+  private url = 'http://localhost:3000/proveedores';
 
   constructor(private http: HttpClient) {}
 

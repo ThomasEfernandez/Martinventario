@@ -1,54 +1,49 @@
-import { Component, EventEmitter, inject,Output } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ProveedorService } from '../../services/proveedor.service';
 import { Proveedor } from '../../interfaces/proveedor-interface';
 import { NavbarComponent } from "../../../nav/components/navbar/navbar.component";
 import { Router, RouterModule } from '@angular/router';
-import { ProveedorMenuComponent } from '../proveedor-menu/proveedor-menu.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-agregar-proveedor',
   standalone: true,
-  imports: [NavbarComponent, ReactiveFormsModule, RouterModule],
+  imports: [NavbarComponent, ReactiveFormsModule, RouterModule, CommonModule],
   templateUrl: './agregar-proveedor.component.html',
-  styleUrl: './agregar-proveedor.component.css'
+  styleUrls: ['./agregar-proveedor.component.css']
 })
 
 export class AgregarProveedorComponent {
-
   @Output()
   emitirProveedor: EventEmitter<Proveedor> = new EventEmitter();
 
-  proveedor:Proveedor = {
-    nombre: '',
-    apellido: '',
-    razonSocial: '',
-    email: '',
-    cuit: ''
-  }
-
   fb = inject(FormBuilder);
+  proveedorService = inject(ProveedorService);
 
-  proveedorService = inject (ProveedorService);
-
-  formulario = this.fb.nonNullable.group(
-    {
-      nombre: ['',Validators.required],
-      apellido: ['',Validators.required],
-      razonSocial: ['', Validators.required],
-      email: ['',Validators.required, Validators.email],
-      cuit: ['',Validators.required]
-    }
-  )
+  formulario = this.fb.nonNullable.group({
+    nombre: ['', Validators.required],
+    apellido: ['', Validators.required],
+    razonSocial: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    cuit: ['', Validators.required]
+  });
 
   agregarProveedor() {
-    if (this.formulario.invalid) return;
+    if (this.formulario.invalid) {
+      this.formulario.markAllAsTouched();
+      return;
+    }
+
     const proveedor = this.formulario.getRawValue();
-    this.agregarProveedorService(this.proveedor);
-    this.emitirProveedor.emit(this.proveedor);
+    this.agregarProveedorService(proveedor);
+    this.emitirProveedor.emit(proveedor);
   }
 
-  agregarProveedorService(producto: Proveedor) {
-    this.proveedorService.agregarProveedor(producto).subscribe();
+  agregarProveedorService(proveedor: Proveedor) {
+    this.proveedorService.agregarProveedor(proveedor).subscribe(
+      response => console.log('Proveedor agregado:', response),
+      error => console.error('Error al agregar proveedor:', error)
+    );
   }
 }

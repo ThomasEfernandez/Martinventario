@@ -1,24 +1,26 @@
 <div class="proveedor-menu">
   <h2>Gestión de Proveedores</h2>
 
-  <!-- Menú de opciones -->
   <div *ngIf="mostrarMenu">
       <div class="button-container">
           <button (click)="seleccionarOpcion('agregar')">Agregar Proveedor</button>
           <button (click)="seleccionarOpcion('listar')">Listar Proveedores</button>
       </div>
-      <ng-container *ngIf= "opcionSeleccionada === 'agregar'">
-        <app-agregar-proveedor></app-agregar-proveedor>
-      </ng-container>
-      <ng-container *ngIf="opcionSeleccionada == 'listar'">
-
-      </ng-container>
   </div>
+
+  <ng-container *ngIf="opcionSeleccionada === 'agregar'">
+    <app-agregar-proveedor></app-agregar-proveedor>
+  </ng-container>
+
+  <ng-container *ngIf="opcionSeleccionada === 'listar'">
+    <app-listar-proveedores></app-listar-proveedores>
+  </ng-container>
 
   <ng-container *ngIf="opcionSeleccionada">
       <button (click)="volverAMenu()">Volver al Menú</button>
   </ng-container>
 </div>
+
 
 
 
