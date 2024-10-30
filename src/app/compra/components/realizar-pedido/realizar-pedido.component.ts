@@ -1,5 +1,5 @@
 import { CompraService } from './../../services/compra.service';
-import { Component, inject, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { Producto } from '../../../producto/interfaces/producto.interface';
 import { ProductoService } from '../../../producto/services/producto.service';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -16,10 +16,11 @@ import { Compra } from '../../interfaces/compra';
 export class RealizarPedidoComponent {
   @Output()
 fb = inject(FormBuilder)
+eventEmiter:EventEmitter<Compra> = new EventEmitter()
 formulario = this.fb.nonNullable.group({
 
   id:[0,[Validators.required]],
-  cantidad:[0,[Validators.required]]
+  cantidad:[0,[Validators.required,Validators.min(1)]]
 
 })
 productoService = inject (ProductoService)
@@ -42,10 +43,12 @@ realizarCompra (){
       {
         next:(prod:Producto)=>{
 
-            this.compra.idProducto = prod.id
-            this.compra.proveedor = prod.proveedor
-            this.compra.totalCompra = prod.precioCompra*this.formulario.getRawValue().cantidad;
+   
           
+             this.compra.idProducto = prod.id
+            this.compra.proveedor = prod.proveedor
+            this.compra.totalCompra = (prod.precioCompra)*(this.formulario.getRawValue().cantidad);
+
         },
         error:(error:Error)=>{
           console.log(error);
@@ -55,7 +58,8 @@ realizarCompra (){
      
 }
 agregarCompraService (){
-      this.compraService.postCompra({...this.compra})
+      this.compraService.postCompra({...this.compra}).subscribe()
+      this.eventEmiter.emit (this.compra)
 }
 
 }
