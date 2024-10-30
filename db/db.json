@@ -87,27 +87,13 @@
       ]
     }
   ],
-  "proovedores": [
+  "proveedores": [
     {
-      "id": "1",
-      "razonSocial": "Proveedor 1",
-      "cuit": "11111",
-      "email": "proveedor1@gmail.com",
-      "telefono": "2231111111"
-    },
-    {
-      "id": "2",
-      "razonSocial": "Proveedor 2",
-      "cuit": "22222",
-      "email": "proveedor2@gmail.com",
-      "telefono": "2232222222"
-    },
-    {
-      "id": "3",
-      "razonSocial": "Proveedor 3",
-      "cuit": "33333",
-      "email": "proveedor3@gmail.com",
-      "telefono": "2233333333"
+      "nombre": "Fausto",
+      "apellido": "Gimenez",
+      "razonSocial": "Pepsi",
+      "email": "faustogimenezlobasso@gmail.com",
+      "cuit": "1231414"
     }
   ],
   "categorias": [
