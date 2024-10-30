@@ -18,22 +18,19 @@ export class CategoriaService {
     return this.http.post<Categoria>(this.url, categoria);
   }
 
-  getCategoriaById(id: number | null): Observable<Categoria> {
+  getCategoriaById(id: number): Observable<Categoria> {
     return this.http.get<Categoria>(`${this.url}/${id}`);
   }
 
-  deleteCategoria(id: number | undefined): Observable<Categoria> {
+  deleteCategoria(id: number): Observable<Categoria> {
     return this.http.delete<Categoria>(`${this.url}/${id}`);
   }
 
-  putCategoria(id: number | null, categoria: Categoria): Observable<Categoria> {
+  putCategoria(id: number, categoria: Categoria): Observable<Categoria> {
     return this.http.put<Categoria>(`${this.url}/${id}`, categoria);
   }
 
-  patchCategoria(
-    id: number | null,
-    categoria: Categoria
-  ): Observable<Categoria> {
+  patchCategoria(id: number, categoria: Categoria): Observable<Categoria> {
     return this.http.patch<Categoria>(`${this.url}/${id}`, categoria);
   }
 }

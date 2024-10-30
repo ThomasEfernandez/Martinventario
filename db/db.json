@@ -193,13 +193,34 @@
       ]
     }
   ],
-  "compras": [
+  "pedidos": [
     {
-      "id": 0,
-      "proveedor": "",
-      "idProducto": 0,
+      "id": 1,
+      "idProducto": 2,
+      "cantidad": 5,
+      "proveedor": "Proveedor 1",
+      "totalCompra": 10000
+    },
+    {
+      "id": 2,
+      "idProducto": 1,
       "cantidad": 1,
-      "totalCompra": 0
+      "proveedor": "Proveedor 1",
+      "totalCompra": 1000
+    },
+    {
+      "id": 3,
+      "idProducto": 3,
+      "cantidad": 3,
+      "proveedor": "Proveedor 1",
+      "totalCompra": 17400
+    },
+    {
+      "id": 4,
+      "idProducto": 5,
+      "cantidad": 1,
+      "proveedor": "Proveedor 3",
+      "totalCompra": 4000
     }
   ]
 }
