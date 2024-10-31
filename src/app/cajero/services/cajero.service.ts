@@ -1,8 +1,38 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
+import { Cajero } from '../interfaces/cajero.interface';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class CajeroService {
-  constructor() {}
+
+
+  http = inject(HttpClient);
+  url = 'http://localhost:3000/cajero'; //cambiar
+
+  getCajero(): Observable<Cajero[]> {
+    return this.http.get<Cajero[]>(this.url);
+  }
+
+  postCajero(cajero: Cajero): Observable<Cajero> {
+    return this.http.post<Cajero>(this.url, cajero);
+  }
+
+  getCajeroById(id: number): Observable<Cajero> {
+    return this.http.get<Cajero>(`${this.url}/${id}`);
+  }
+
+  deleteCajero(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.url}/${id}`);
+  }
+
+  putCajero(id: number, cajero: Cajero): Observable<Cajero> {
+    return this.http.put<Cajero>(`${this.url}/${id}`, cajero);
+  }
+
+  patchCategoria(id: number, categoria: Cajero): Observable<Cajero> {
+    return this.http.patch<Cajero>(`${this.url}/${id}`, categoria);
+  }
 }
