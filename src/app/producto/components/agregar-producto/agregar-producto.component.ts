@@ -70,7 +70,7 @@ export class AgregarProductoComponent {
     });
   }
   listarProveedores() {
-    this.proveedoresService. ({
+    this.proveedoresService.obtenerProveedores().subscribe({
       next: (proveedores: Proveedor[]) => {
         this.listaProveedores = proveedores;
       },
@@ -82,6 +82,6 @@ export class AgregarProductoComponent {
 
   ngOnInit(): void {
     this.listarCategorias();
-    this.listaProveedores();
+    this.listarProveedores();
   }
 }

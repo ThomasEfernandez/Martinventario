@@ -37,13 +37,10 @@
     }
     <label for="">Proveedor</label>
     <select size="0">
-      <!-- @for (categoria of listaCategorias; track $index) {
-                <option value="{{ categoria.nombreCategoria }}">{{ categoria.nombreCategoria }}</option>
-            } -->
+      @for (proveedor of listaProveedores; track $index) {
       <option disabled selected>Selecciona un proveedor</option>
-      <option value="Proveedor 1">Proveedor 1</option>
-      <option value="Proveedor 2">Proovedor 2</option>
-      <option value="Proveedor 3">Proveedor 3</option>
+      <option value="{{ proveedor.nombre }}">{{ proveedor.nombre }}</option>
+      }
     </select>
     <label for="">Precio de venta</label>
     <input type="number" formControlName="precioVenta" />
@@ -53,16 +50,10 @@
     }
     <label for="">Etiquetas</label>
     <select size="0">
-      <!-- @for (etiqueta of listaEtiquetas; track $index) {
-                <option value="{{ etiquetas.nombreEtiqueta }}">{{ etiqueta.nombreEtiqueta }}</option>
-            } -->
       <option disabled selected>Selecciona una etiqueta</option>
-      <option value="galletitasDulces">Galletitas dulces</option>
-      <option value="gaseosas">Gaseosas</option>
-      <option value="dulces">Dulces</option>
-      <option value="electrodomesticos">Electrodomésticos</option>
-      <option value="juegos">Juegos</option>
-      <option value="shampoos">Shmapoos</option>
+      <!-- @for (etiqueta of listaEtiquetas; track $index) {
+                <option value="{{ etiqueta.nombreEtiqueta }}">{{ etiqueta.nombreEtiqueta }}</option>
+            } -->
     </select>
   </div>
   <div class="boton">
