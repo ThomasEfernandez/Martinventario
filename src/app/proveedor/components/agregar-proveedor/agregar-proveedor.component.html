@@ -1,1 +1,40 @@
-<p>agregar-proveedor works!</p>
+<div class="form-container">
+  <h2>Registrar Proveedor</h2>
+  <form [formGroup]="formulario" (ngSubmit)="agregarProveedor()">
+    <div class="columna">
+      <label for="nombre">Nombre</label>
+      <input type="text" formControlName="nombre" id="nombre" />
+      <div *ngIf="formulario.controls['nombre'].hasError('required') && formulario.controls['nombre'].touched" class="error">
+        Campo requerido.
+      </div>
+
+      <label for="apellido">Apellido</label>
+      <input type="text" formControlName="apellido" id="apellido" />
+      <div *ngIf="formulario.controls['apellido'].hasError('required') && formulario.controls['apellido'].touched" class="error">
+        Campo requerido.
+      </div>
+
+      <label for="razonSocial">Razón Social</label>
+      <input type="text" formControlName="razonSocial" id="razonSocial" />
+      <div *ngIf="formulario.controls['razonSocial'].hasError('required') && formulario.controls['razonSocial'].touched" class="error">
+        Campo requerido.
+      </div>
+
+      <label for="email">Email</label>
+      <input type="text" formControlName="email" id="email" />
+      <div *ngIf="formulario.controls['email'].hasError('required') && formulario.controls['email'].touched" class="error">
+        Campo requerido.
+      </div>
+
+      <label for="cuit">CUIT</label>
+      <input type="text" formControlName="cuit" id="cuit" />
+      <div *ngIf="formulario.controls['cuit'].hasError('required') && formulario.controls['cuit'].touched" class="error">
+        Campo requerido.
+      </div>
+    </div>
+
+    <div class="boton">
+      <button type="submit">Registrar Proveedor</button>
+    </div>
+  </form>
+</div>
