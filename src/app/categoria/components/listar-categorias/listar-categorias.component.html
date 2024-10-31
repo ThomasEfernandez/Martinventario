@@ -16,7 +16,7 @@
             <tbody>
               @for (etiqueta of categoria.etiquetas; track $index) {
               <tr>
-                <td>ID: {{ etiqueta.id }}</td>
+                <td class="td-etiqueta"><div class="div-id">ID</div><div>{{ etiqueta.id }}</div></td>
                 <td> {{ etiqueta.nombreEtiqueta }}</td>
               </tr>
               }

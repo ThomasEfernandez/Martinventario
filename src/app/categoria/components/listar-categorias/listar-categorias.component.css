@@ -40,3 +40,14 @@ li {
   padding: 0;
   
 }
+
+.div-id{
+  background-color: #0099ff;
+  align-items: center;
+}
+.td-etiqueta{
+  display: flex;
+  align-items: center;
+ 
+  
+}
