@@ -44,10 +44,11 @@ li {
 .div-id{
   background-color: #0099ff;
   align-items: center;
+  border-radius: 10px;
+  color: white;
 }
 .td-etiqueta{
   display: flex;
-  align-items: center;
- 
-  
+  align-items: center; 
 }
+
