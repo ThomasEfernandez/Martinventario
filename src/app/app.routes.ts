@@ -1,8 +1,9 @@
+import { PaginaAgregarProductoComponent } from './producto/pages/pagina-agregar-producto/pagina-agregar-producto.component'; 
 import { Routes } from '@angular/router';
 import { IniciarSesionComponent } from './pagina-inicio-sesion/components/iniciar-sesion/iniciar-sesion.component';
-import { AgregarProductoComponent } from './producto/components/agregar-producto/agregar-producto.component';
 import { PaginaPedidoComponent } from './compra/pages/pagina-pedido/pagina-pedido.component';
 import { ListarCategoriasComponent } from './categoria/components/listar-categorias/listar-categorias.component';
+
 
 export const routes: Routes = [
   {
@@ -15,7 +16,7 @@ export const routes: Routes = [
   // },
   {
     path: 'agregarProducto',
-    component: AgregarProductoComponent,
+    component: PaginaAgregarProductoComponent,
   },
   {
     path: 'pedido',
