@@ -6,6 +6,10 @@ import { Router, RouterModule } from '@angular/router';
 // import { ProductoService } from '../../services/producto.service';
 import { Producto } from '../../interfaces/producto.interface';
 import { ProductoService } from '../../services/producto.service';
+import { Categoria } from '../../../categoria/interfaces/categoria-inteface';
+import { CategoriaService } from '../../../categoria/services/categoria.service';
+import { Proveedor } from '../../../proveedor/interfaces/proveedor-interface';
+import { ProveedorService } from '../../../proveedor/services/proveedor.service';
 
 @Component({
   selector: 'app-agregar-producto',
@@ -19,6 +23,12 @@ export class AgregarProductoComponent {
   emitirProducto: EventEmitter<Producto> = new EventEmitter();
 
   fb = inject(FormBuilder);
+
+  listaCategorias: Categoria[] = [];
+  categoriaService = inject(CategoriaService);
+
+  listaProveedores: Proveedor[] = [];
+  proveedoresService = inject(ProveedorService);
 
   productoService = inject(ProductoService);
 
@@ -49,28 +59,29 @@ export class AgregarProductoComponent {
     });
   }
 
-  //ES PARA MOSTRAR UN MENU DEPLEGABLE CON LAS CATEGORIAS Y DESPUES UNA PARA LAS ETIQUETAS
+  listarCategorias() {
+    this.categoriaService.getCategorias().subscribe({
+      next: (categorias: Categoria[]) => {
+        this.listaCategorias = categorias;
+      },
+      error: (err: Error) => {
+        console.log(err.message);
+      },
+    });
+  }
+  listarProveedores() {
+    this.proveedoresService. ({
+      next: (proveedores: Proveedor[]) => {
+        this.listaProveedores = proveedores;
+      },
+      error: (err: Error) => {
+        console.log(err.message);
+      },
+    });
+  }
 
-  // router = inject(Router);
-
-  // listaCategorias = Categoria[] = [];
-
-  // categoriaService = inject(CategoriaService);
-
-  // ngOnInit(): void {
-  //   this.listarCategorias();
-  // }
-
-  // listarCategorias() {
-  //   this.categoriaService.getCategoria().subscribe(
-  //     {
-  //       next: (categorias: Categoria[]) => {
-  //         this.listaCategorias = categorias
-  //       },
-  //       error: (err: Error) => {
-  //         console.log(err.message)
-  //       }
-  //     }
-  //   )
-  // }
+  ngOnInit(): void {
+    this.listarCategorias();
+    this.listaProveedores();
+  }
 }
