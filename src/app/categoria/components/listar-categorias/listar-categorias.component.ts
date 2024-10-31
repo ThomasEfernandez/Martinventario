@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { Categoria } from '../../interfaces/categoria-inteface';
 import { CategoriaService } from '../../services/categoria.service';
 import { EtiquetaService } from '../../../etiqueta/services/etiqueta.service';
@@ -9,7 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-listar-categorias',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterModule],
   templateUrl: './listar-categorias.component.html',
   styleUrl: './listar-categorias.component.css',
 })
