@@ -106,7 +106,7 @@
           "nombreEtiqueta": "galletitasDulces"
         },
         {
-          "id": "3",
+          "id": "2",
           "nombreEtiqueta": "dulces"
         }
       ]
@@ -116,7 +116,7 @@
       "nombreCategoria": "bebidas",
       "etiquetas": [
         {
-          "id": "2",
+          "id": "3",
           "nombreEtiqueta": "gaseosas"
         }
       ]
@@ -126,7 +126,7 @@
       "nombreCategoria": "higiene",
       "etiquetas": [
         {
-          "id": "6",
+          "id": "4",
           "nombreEtiqueta": "shampoos"
         }
       ]
@@ -134,18 +134,25 @@
     {
       "id": "4",
       "nombreCategoria": "limpieza",
-      "etiquetas": []
+      "etiquetas": [{
+        "id": "5",
+        "nombreEtiqueta": "electrodomesticos"
+      },
+      {
+        "id": "6",
+        "nombreEtiqueta": "juegos"
+      }]
     },
     {
-      "id": "5",
+      "id": "6",
       "nombreCategoria": "hogar",
       "etiquetas": [
         {
-          "id": "4",
+          "id": "7",
           "nombreEtiqueta": "electrodomesticos"
         },
         {
-          "id": "5",
+          "id": "8",
           "nombreEtiqueta": "juegos"
         }
       ]
@@ -153,7 +160,14 @@
     {
       "id": "6",
       "nombreCategoria": "Mascotas",
-      "etiquetas": []
+      "etiquetas": [{
+        "id": "9",
+        "nombreEtiqueta": "electrodomesticos"
+      },
+      {
+        "id": "10",
+        "nombreEtiqueta": "juegos"
+      }]
     }
   ],
   "ventas": [

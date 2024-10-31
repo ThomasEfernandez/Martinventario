@@ -4,19 +4,20 @@
       <th>Id</th>
       <th>Categoria</th>
       <th>Etiquetas</th>
+    
     </thead>
     <tbody>
       @for(categoria of listaCategoria; track $index) {
       <tr>
-        <td>{{ categoria.id }}</td>
+        <td> {{ categoria.id }}</td>
         <td>{{ categoria.nombreCategoria }}</td>
         <td class="tdEtiquetas">
           <table>
             <tbody>
               @for (etiqueta of categoria.etiquetas; track $index) {
               <tr>
-                <td>{{ etiqueta.id }}</td>
-                <td>{{ etiqueta.nombreEtiqueta }}</td>
+                <td>ID: {{ etiqueta.id }}</td>
+                <td> {{ etiqueta.nombreEtiqueta }}</td>
               </tr>
               }
             </tbody>
