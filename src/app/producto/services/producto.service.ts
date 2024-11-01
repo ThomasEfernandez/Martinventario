@@ -9,13 +9,13 @@ import { enviroment } from '../../../enviroments/enviroment';
 })
 export class ProductoService {
   http = inject(HttpClient);
-  url =`${enviroment.url}/productos`;
+  url = 'http://localhost:3000/productos';
 
   getProductos(): Observable<Producto[]> {
     return this.http.get<Producto[]>(this.url);
   }
 
-  getProductoById (id:number):Observable<Producto>{
+  getProductoById(id: number): Observable<Producto> {
     return this.http.get<Producto>(`${this.url}/${id}`);
   }
   postProducto(producto: Producto): Observable<Producto> {

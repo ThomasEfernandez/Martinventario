@@ -21,52 +21,52 @@
   ],
   "productos": [
     {
-      "id": "1",
+      "id": 1,
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Proveedor 1",
-      "cantidad": "10",
-      "precioCompra": "1000",
-      "precioVenta": "1500",
+      "cantidad": 10,
+      "precioCompra": 1000,
+      "precioVenta": 1500,
       "categoria": "1",
       "etiquetas": [
         "1"
       ]
     },
     {
-      "id": "2",
+      "id": 2,
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Proveedor 1",
-      "cantidad": "6",
-      "precioCompra": "2000",
-      "precioVenta": "2500",
+      "cantidad": 6,
+      "precioCompra": 2000,
+      "precioVenta": 2500,
       "categoria": "2",
       "etiquetas": [
         "2"
       ]
     },
     {
-      "id": "3",
+      "id": 3,
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
       "proveedor": "Proveedor 1",
-      "cantidad": "5",
-      "precioCompra": "5800",
-      "precioVenta": "7000",
+      "cantidad": 5,
+      "precioCompra": 5800,
+      "precioVenta": 7000,
       "categorias": "1",
       "etiquetas": [
         "3"
       ]
     },
     {
-      "id": "4",
+      "id": 4,
       "nombreProducto": "Consola playstation 5v Sony 1tb edición standard",
       "marca": "Sony",
       "proveedor": "Proveedor 2",
-      "cantidad": "2",
-      "precioCompra": "1000000",
-      "precioVenta": "1500000",
+      "cantidad": 2,
+      "precioCompra": 1000000,
+      "precioVenta": 1500000,
       "categorias": "1",
       "etiquetas": [
         "4",
@@ -74,26 +74,85 @@
       ]
     },
     {
-      "id": "5",
+      "id": 5,
       "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
       "proveedor": "Proveedor 3",
-      "cantidad": "5",
-      "precioCompra": "4000",
-      "precioVenta": "5700",
+      "cantidad": 5,
+      "precioCompra": 4000,
+      "precioVenta": 5700,
       "categorias": "3",
       "etiquetas": [
         "3"
       ]
+    },
+    {
+      "id": 6,
+      "nombreProducto": "tv",
+      "marca": "lg",
+      "proveedor": "",
+      "cantidad": 1,
+      "precioCompra": 100,
+      "precioVenta": 200,
+      "categoria": "",
+      "etiquetas": [
+        ""
+      ]
+    },
+    {
+      "id": 0,
+      "nombreProducto": "asd",
+      "marca": "asd",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 2,
+      "categoria": "",
+      "etiquetas": [
+        ""
+      ]
+    },
+    {
+      "id": 0,
+      "nombreProducto": "eee",
+      "marca": "eee",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "etiquetas": [
+        ""
+      ],
+      "categoria": "alimentos"
+    },
+    {
+      "id": 0,
+      "nombreProducto": "aaa",
+      "marca": "aaa",
+      "proveedor": "Agustin",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "categoria": "hogar",
+      "etiquetas": "electrodomesticos"
     }
   ],
   "proveedores": [
     {
+      "id": 1,
       "nombre": "Fausto",
       "apellido": "Gimenez",
       "razonSocial": "Pepsi",
       "email": "faustogimenezlobasso@gmail.com",
       "cuit": "1231414"
+    },
+    {
+      "id": 2,
+      "nombre": "Agustin",
+      "apellido": "Rojas",
+      "razonSocial": "agus",
+      "email": "agus@gmail.com",
+      "cuit": "123455"
     }
   ],
   "categorias": [
@@ -134,14 +193,16 @@
     {
       "id": "4",
       "nombreCategoria": "limpieza",
-      "etiquetas": [{
-        "id": "5",
-        "nombreEtiqueta": "electrodomesticos"
-      },
-      {
-        "id": "6",
-        "nombreEtiqueta": "juegos"
-      }]
+      "etiquetas": [
+        {
+          "id": "5",
+          "nombreEtiqueta": "electrodomesticos"
+        },
+        {
+          "id": "6",
+          "nombreEtiqueta": "juegos"
+        }
+      ]
     },
     {
       "id": "6",
@@ -160,14 +221,16 @@
     {
       "id": "6",
       "nombreCategoria": "Mascotas",
-      "etiquetas": [{
-        "id": "9",
-        "nombreEtiqueta": "electrodomesticos"
-      },
-      {
-        "id": "10",
-        "nombreEtiqueta": "juegos"
-      }]
+      "etiquetas": [
+        {
+          "id": "9",
+          "nombreEtiqueta": "electrodomesticos"
+        },
+        {
+          "id": "10",
+          "nombreEtiqueta": "juegos"
+        }
+      ]
     }
   ],
   "ventas": [
@@ -195,28 +258,28 @@
   ],
   "pedidos": [
     {
-      "id": 1,
+      "id": "1",
       "idProducto": 2,
       "cantidad": 5,
       "proveedor": "Proveedor 1",
       "totalCompra": 10000
     },
     {
-      "id": 2,
+      "id": "2",
       "idProducto": 1,
       "cantidad": 1,
       "proveedor": "Proveedor 1",
       "totalCompra": 1000
     },
     {
-      "id": 3,
+      "id": "3",
       "idProducto": 3,
       "cantidad": 3,
       "proveedor": "Proveedor 1",
       "totalCompra": 17400
     },
     {
-      "id": 4,
+      "id": "4",
       "idProducto": 5,
       "cantidad": 1,
       "proveedor": "Proveedor 3",

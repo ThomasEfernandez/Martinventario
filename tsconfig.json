@@ -1,9 +1,9 @@
 /* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
 /* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
-  "baseUrl": "src",
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "src",
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,

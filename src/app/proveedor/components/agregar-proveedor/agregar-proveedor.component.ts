@@ -20,6 +20,7 @@ export class AgregarProveedorComponent {
   proveedorService = inject(ProveedorService);
 
   formulario = this.fb.nonNullable.group({
+    id: [0],
     nombre: ['', Validators.required],
     apellido: ['', Validators.required],
     razonSocial: ['', Validators.required],
@@ -32,10 +33,14 @@ export class AgregarProveedorComponent {
       this.formulario.markAllAsTouched();
       return;
     }
-
     const proveedor = this.formulario.getRawValue();
-    this.agregarProveedorService(proveedor);
-    this.emitirProveedor.emit(proveedor);
+    this.proveedorService.obtenerProveedores().subscribe({
+      next: (proveedores: Proveedor[]) => {
+        proveedor.id = proveedores.length + 1;
+        this.emitirProveedor.emit(proveedor);
+        this.agregarProveedorService(proveedor);
+      },
+    });
   }
 
   agregarProveedorService(proveedor: Proveedor) {
