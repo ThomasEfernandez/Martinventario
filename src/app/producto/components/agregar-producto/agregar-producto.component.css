@@ -20,6 +20,15 @@ form {
 .boton {
   width: 100%;
 }
+.botoncito{
+  transition: 0,2;
+  cursor: pointer;
+  transition: background-color 2s ease, transform 2s ease;
+}
+.botoncito:hover{
+ 
+ box-shadow: 3px 3px 3px 3px rgb(121, 121, 121);
+}
 label {
   display: block;
   margin: 1%;

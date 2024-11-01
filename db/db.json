@@ -21,7 +21,7 @@
   ],
   "productos": [
     {
-      "id": 1,
+      "id": "1",
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Proveedor 1",
@@ -34,11 +34,11 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Proveedor 1",
-      "cantidad": 6,
+      "cantidad": 11,
       "precioCompra": 2000,
       "precioVenta": 2500,
       "categoria": "2",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
       "proveedor": "Proveedor 1",
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "nombreProducto": "Consola playstation 5v Sony 1tb edición standard",
       "marca": "Sony",
       "proveedor": "Proveedor 2",
@@ -74,7 +74,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
       "proveedor": "Proveedor 3",
@@ -87,7 +87,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "nombreProducto": "tv",
       "marca": "lg",
       "proveedor": "",
@@ -100,7 +100,7 @@
       ]
     },
     {
-      "id": 0,
+      "id": "0",
       "nombreProducto": "asd",
       "marca": "asd",
       "proveedor": "Fausto",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "id": 0,
+      "id": "0",
       "nombreProducto": "eee",
       "marca": "eee",
       "proveedor": "Fausto",
@@ -126,7 +126,7 @@
       "categoria": "alimentos"
     },
     {
-      "id": 0,
+      "id": "0",
       "nombreProducto": "aaa",
       "marca": "aaa",
       "proveedor": "Agustin",
@@ -135,11 +135,77 @@
       "precioVenta": 1,
       "categoria": "hogar",
       "etiquetas": "electrodomesticos"
+    },
+    {
+      "id": "10",
+      "nombreProducto": "chocolate",
+      "marca": "toblerone",
+      "proveedor": "Fausto",
+      "cantidad": 2,
+      "precioCompra": 2000,
+      "precioVenta": 3500,
+      "categoria": "alimentos",
+      "etiquetas": "dulces"
+    },
+    {
+      "id": "11",
+      "nombreProducto": "chocolate",
+      "marca": "toblerone",
+      "proveedor": "Fausto",
+      "cantidad": 2,
+      "precioCompra": 2000,
+      "precioVenta": 3500,
+      "categoria": "alimentos",
+      "etiquetas": "dulces"
+    },
+    {
+      "id": "12",
+      "nombreProducto": "chocolate",
+      "marca": "aguila",
+      "proveedor": "Agustin",
+      "cantidad": 3,
+      "precioCompra": 4000,
+      "precioVenta": 5500,
+      "categoria": "alimentos",
+      "etiquetas": "dulces"
+    },
+    {
+      "id": "13",
+      "nombreProducto": "galletitas",
+      "marca": "Oreo",
+      "proveedor": "Agustin",
+      "cantidad": 3,
+      "precioCompra": 1000,
+      "precioVenta": 2300,
+      "categoria": "alimentos",
+      "etiquetas": "galletitasDulces"
+    },
+    {
+      "id": "14",
+      "nombreProducto": "galletitas",
+      "marca": "oreo",
+      "proveedor": "Fausto",
+      "cantidad": 2,
+      "precioCompra": 1500,
+      "precioVenta": 2300,
+      "categoria": "alimentos",
+      "etiquetas": "galletitasDulces"
+    },
+    {
+      "id": "15",
+      "nombreProducto": "jugo",
+      "marca": "cepita",
+      "proveedor": "Agustin",
+      "cantidad": 2,
+      "precioCompra": 1700,
+      "precioVenta": 2500,
+      "categoria": "bebidas",
+      "etiquetas": "gaseosas"
     }
   ],
   "proveedores": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Fausto",
       "apellido": "Gimenez",
       "razonSocial": "Pepsi",
@@ -147,7 +213,7 @@
       "cuit": "1231414"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Agustin",
       "apellido": "Rojas",
       "razonSocial": "agus",
@@ -283,6 +349,34 @@
       "idProducto": 5,
       "cantidad": 1,
       "proveedor": "Proveedor 3",
+      "totalCompra": 4000
+    },
+    {
+      "id": "5",
+      "idProducto": 2,
+      "cantidad": 3,
+      "proveedor": "Proveedor 1",
+      "totalCompra": 6000
+    },
+    {
+      "id": "6",
+      "idProducto": 2,
+      "cantidad": 5,
+      "proveedor": "Proveedor 1",
+      "totalCompra": 10000
+    },
+    {
+      "id": "7",
+      "idProducto": 2,
+      "cantidad": 3,
+      "proveedor": "Proveedor 1",
+      "totalCompra": 6000
+    },
+    {
+      "id": 8,
+      "idProducto": 2,
+      "cantidad": 2,
+      "proveedor": "Proveedor 1",
       "totalCompra": 4000
     }
   ]

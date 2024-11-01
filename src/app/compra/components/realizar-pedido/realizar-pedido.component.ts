@@ -43,6 +43,8 @@ export class RealizarPedidoComponent {
             pedido.totalCompra = pedido.cantidad * producto.precioCompra;
             this.emitirPedido.emit(pedido);
             this.agregarPedidoService(pedido);
+           
+            this.actualizarCantidadService(producto,pedido.cantidad)
             console.log(pedido);
           },
         });
@@ -56,5 +58,26 @@ export class RealizarPedidoComponent {
         console.log(err.message);
       },
     });
+  }
+  actualizarCantidadService (producto:Producto,cantidad:number){
+    this.productoService.getProductoById(producto.id).subscribe({
+      next:(p:Producto)=>{
+        p.cantidad = p.cantidad+cantidad;
+        this.productoService.patchProducto(p.id,p).subscribe({
+     
+          error:(error:Error)=>{
+            console.log(error.message);
+            
+          }
+        });
+
+      }
+    })
+
+
+
+
+  
+
   }
 }

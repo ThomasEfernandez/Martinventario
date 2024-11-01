@@ -32,30 +32,38 @@ export class AgregarProductoComponent {
   listaEtiquetas: Etiqueta[] | undefined = [];
 
   productoService = inject(ProductoService);
+  productoAddCorrectamente: boolean = false;
 
   formulario = this.fb.nonNullable.group({
     id: [0],
-    nombreProducto: ['', Validators.required],
-    marca: ['', Validators.required],
+    nombreProducto: ['', [Validators.required,Validators.minLength(1)]],
+    marca: ['', [Validators.required]],
     proveedor: ['', Validators.required],
-    cantidad: [0, Validators.required],
-    precioCompra: [0, Validators.required],
-    precioVenta: [0, Validators.required],
+    cantidad: [0, [Validators.required,Validators.min(1)]],
+    precioCompra: [0, [Validators.required,Validators.min(1)]],
+    precioVenta: [0, [Validators.required,Validators.min(1)]],
     categoria: ['', Validators.required],
     etiquetas: [[''], Validators.required],
   });
 
   agregarProducto() {
-    if (this.formulario.invalid) return;
-    const producto = this.formulario.getRawValue();
-    this.productoService.getProductos().subscribe({
-      next: (productos: Producto[]) => {
-        producto.id = productos.length + 1;
-        this.emitirProducto.emit(producto);
-        this.agregarProductoService(producto);
-      },
-    });
-    console.log(producto);
+    if (this.formulario.valid) {
+      const producto = this.formulario.getRawValue();
+      this.productoService.getProductos().subscribe({
+        next: (productos: Producto[]) => {
+          producto.id = productos.length + 1;
+          this.emitirProducto.emit(producto);
+          this.agregarProductoService(producto);
+          this.productoAddCorrectamente=true;
+        },
+      });
+      console.log(producto);
+
+
+    }else{
+      this.formulario.markAllAsTouched();
+    }
+
   }
 
   agregarProductoService(producto: Producto) {
