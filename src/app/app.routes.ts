@@ -6,6 +6,8 @@ import { PaginaCategoriasComponent } from './categoria/pages/pagina-categorias/p
 import { PaginaAgregarCategoriaComponent } from './categoria/pages/pagina-agregar-categoria/pagina-agregar-categoria.component';
 import { PaginaPrincipalAdminComponent } from './admin/pages/pagina-principal-admin/pagina-principal-admin.component';
 import { PaginaProductosComponent } from './producto/pages/pagina-productos/pagina-productos.component';
+import { PaginaProveedoresComponent } from './proveedor/pages/pagina-proveedores/pagina-proveedores.component';
+import { PaginaAgregarProveedorComponent } from './proveedor/pages/pagina-agregar-proveedor/pagina-agregar-proveedor.component';
 
 export const routes: Routes = [
   {
@@ -25,16 +27,24 @@ export const routes: Routes = [
     component: PaginaAgregarProductoComponent,
   },
   {
-    path: 'pedido',
-    component: PaginaPedidoComponent,
-  },
-  {
     path: 'categorias',
     component: PaginaCategoriasComponent,
   },
   {
     path: 'agregar-categoria',
     component: PaginaAgregarCategoriaComponent,
+  },
+  {
+    path: 'proveedores',
+    component: PaginaProveedoresComponent,
+  },
+  {
+    path: 'agregar-proveedor',
+    component: PaginaAgregarProveedorComponent,
+  },
+  {
+    path: 'pedido',
+    component: PaginaPedidoComponent,
   },
   {
     path: '**',
