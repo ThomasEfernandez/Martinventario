@@ -8,6 +8,7 @@ import { PaginaPrincipalAdminComponent } from './admin/pages/pagina-principal-ad
 import { PaginaProductosComponent } from './producto/pages/pagina-productos/pagina-productos.component';
 import { PaginaProveedoresComponent } from './proveedor/pages/pagina-proveedores/pagina-proveedores.component';
 import { PaginaAgregarProveedorComponent } from './proveedor/pages/pagina-agregar-proveedor/pagina-agregar-proveedor.component';
+import { PaginaCajeroComponent } from './cajero/pages/pagina-cajero/pagina-cajero.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +18,9 @@ export const routes: Routes = [
   {
     path: 'admin',
     component: PaginaPrincipalAdminComponent,
+  },{
+    path:'cajeros',
+    component:PaginaCajeroComponent,
   },
   {
     path: 'productos',
