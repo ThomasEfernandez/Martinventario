@@ -27,28 +27,50 @@ tbody tr:hover {
   background-color: #d3e3fc;
 }
 
-td,
-th {
-  min-width: 100px;
-}
-
 li {
   list-style: none;
 }
 
+.columna-id {
+  width: 5%;
+}
+
+.columna-categoria {
+  width: 45%;
+}
+
+.columna-etiquetas {
+  padding: 0;
+}
+
+.tabla-th {
+  border: 0;
+}
+
+.columna-etiqueta-id {
+  width: 10%;
+  border: 0;
+}
+
+.columna-etiqueta-nombre {
+  width: 90%;
+  border: 0;
+}
+
 .tdEtiquetas {
   padding: 0;
-  
 }
 
-.div-id{
-  background-color: #0099ff;
-  align-items: center;
-  border-radius: 10px;
-  color: white;
-}
-.td-etiqueta{
-  display: flex;
-  align-items: center; 
+.celda-etiqueta-id {
+  width: 10%;
 }
 
+.celda-etiqueta-nombre {
+  width: 90%;
+}
+
+.tabla-etiquetas {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}

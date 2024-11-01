@@ -1,9 +1,6 @@
-// import { Producto } from '../../interfaces/producto.interface';
 import { Component, EventEmitter, inject, Output } from '@angular/core';
-import { NavbarComponent } from '../../../nav/components/navbar/navbar.component';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
-// import { ProductoService } from '../../services/producto.service';
 import { Producto } from '../../interfaces/producto.interface';
 import { ProductoService } from '../../services/producto.service';
 import { Categoria } from '../../../categoria/interfaces/categoria-inteface';
@@ -14,7 +11,7 @@ import { ProveedorService } from '../../../proveedor/services/proveedor.service'
 @Component({
   selector: 'app-agregar-producto',
   standalone: true,
-  imports: [NavbarComponent, ReactiveFormsModule, RouterModule],
+  imports: [ReactiveFormsModule, RouterModule],
   templateUrl: './agregar-producto.component.html',
   styleUrl: './agregar-producto.component.css',
 })
