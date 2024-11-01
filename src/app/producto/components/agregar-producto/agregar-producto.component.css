@@ -24,6 +24,7 @@ form {
   transition: 0,2;
   cursor: pointer;
   transition: background-color 2s ease, transform 2s ease;
+  color: #ffffff;
 }
 .botoncito:hover{
  
@@ -57,4 +58,5 @@ button {
   background-color: #ffffff;
   color: #ee0000;
   font-size: x-small;
+  margin-bottom: 1rem;
 }

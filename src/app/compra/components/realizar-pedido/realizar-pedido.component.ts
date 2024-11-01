@@ -1,10 +1,11 @@
 import { PedidoService } from '../../services/pedido.service';
-import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { Component, EventEmitter, inject, OnInit, Output } from '@angular/core';
 import { Producto } from '../../../producto/interfaces/producto.interface';
 import { ProductoService } from '../../../producto/services/producto.service';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Pedido } from '../../interfaces/pedido.interface';
+
 
 @Component({
   selector: 'app-realizar-pedido',
@@ -13,8 +14,12 @@ import { Pedido } from '../../interfaces/pedido.interface';
   templateUrl: './realizar-pedido.component.html',
   styleUrl: './realizar-pedido.component.css',
 })
-export class RealizarPedidoComponent {
+export class RealizarPedidoComponent implements OnInit{
   @Output()
+  ngOnInit(): void {
+    this.realizarCompra();
+  }
+
   emitirPedido: EventEmitter<Pedido> = new EventEmitter();
 
   fb = inject(FormBuilder);

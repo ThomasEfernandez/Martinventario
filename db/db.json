@@ -25,7 +25,7 @@
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Proveedor 1",
-      "cantidad": 10,
+      "cantidad": 20,
       "precioCompra": 1000,
       "precioVenta": 1500,
       "categoria": "1",
@@ -38,7 +38,7 @@
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Proveedor 1",
-      "cantidad": 11,
+      "cantidad": 16,
       "precioCompra": 2000,
       "precioVenta": 2500,
       "categoria": "2",
@@ -51,7 +51,7 @@
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
       "proveedor": "Proveedor 1",
-      "cantidad": 5,
+      "cantidad": 10,
       "precioCompra": 5800,
       "precioVenta": 7000,
       "categorias": "1",
@@ -163,7 +163,7 @@
       "nombreProducto": "chocolate",
       "marca": "aguila",
       "proveedor": "Agustin",
-      "cantidad": 3,
+      "cantidad": 8,
       "precioCompra": 4000,
       "precioVenta": 5500,
       "categoria": "alimentos",
@@ -196,7 +196,7 @@
       "nombreProducto": "jugo",
       "marca": "cepita",
       "proveedor": "Agustin",
-      "cantidad": 2,
+      "cantidad": 7,
       "precioCompra": 1700,
       "precioVenta": 2500,
       "categoria": "bebidas",
@@ -373,11 +373,46 @@
       "totalCompra": 6000
     },
     {
-      "id": 8,
+      "id": "8",
       "idProducto": 2,
       "cantidad": 2,
       "proveedor": "Proveedor 1",
       "totalCompra": 4000
+    },
+    {
+      "id": "9",
+      "idProducto": 15,
+      "cantidad": 5,
+      "proveedor": "Agustin",
+      "totalCompra": 8500
+    },
+    {
+      "id": "10",
+      "idProducto": 12,
+      "cantidad": 5,
+      "proveedor": "Agustin",
+      "totalCompra": 20000
+    },
+    {
+      "id": 11,
+      "idProducto": 3,
+      "cantidad": 5,
+      "proveedor": "Proveedor 1",
+      "totalCompra": 29000
+    },
+    {
+      "id": 12,
+      "idProducto": 2,
+      "cantidad": 5,
+      "proveedor": "Proveedor 1",
+      "totalCompra": 10000
+    },
+    {
+      "id": 13,
+      "idProducto": 1,
+      "cantidad": 10,
+      "proveedor": "Proveedor 1",
+      "totalCompra": 10000
     }
   ]
 }
