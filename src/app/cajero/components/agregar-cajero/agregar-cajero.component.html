@@ -1,1 +1,11 @@
-<p>agregar-cajero works!</p>
+<form [formGroup]="formulario">
+    <label for="usuario">Usuario</label>
+    <input type="text" formControlName = "usuario">
+
+    <label for="contrasena">Contraseña</label>
+    <input type="password" formControlName = "contrasena">
+
+    <label for="nroCaja">Numero de caja</label>
+    <input type="number" formControlName = "nroCaja ">
+    <button type="submit">agregar</button>
+</form>
