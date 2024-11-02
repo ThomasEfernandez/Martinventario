@@ -27,8 +27,7 @@ label {
   margin: 1%;
   background-color: #ffffff;
 }
-input,
-select {
+input {
   width: 100%;
   height: 50%;
   margin: 1% 0 3%;

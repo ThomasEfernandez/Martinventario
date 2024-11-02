@@ -1,27 +1,67 @@
 <form [formGroup]="formulario" (ngSubmit)="agregarProducto()">
   <div class="form">
-    <div class="columna">
+    <div class="flex-box">
       <label>Producto</label>
       @if(formulario.controls['nombreProducto'].getError('required') &&
       formulario.controls['nombreProducto'].touched){
       <small class="error">Campo requerido.</small>
       }
       <input type="text" formControlName="nombreProducto" />
+    </div>
 
+    <div class="flex-box">
+      <label>Cantidad</label>
+      @if(formulario.controls['cantidad'].getError('required') &&
+      formulario.controls['cantidad'].touched){
+      <small class="error">Campo requerido.</small>
+      }
+      <input type="number" formControlName="cantidad" />
+    </div>
+
+    <div class="flex-box">
       <label>Marca</label>
       @if(formulario.controls['marca'].getError('required') &&
       formulario.controls['marca'].touched){
       <small class="error">Campo requerido.</small>
       }
       <input type="text" formControlName="marca" />
+    </div>
 
+    <div class="flex-box">
+      <label>Proveedor</label>
+      @if(formulario.controls['proveedor'].getError('required') &&
+      formulario.controls['proveedor'].touched){
+      <small class="error">Campo requerido.</small>
+      }
+      <select formControlName="proveedor">
+        <option value="" disabled selected hidden>
+          Selecciona un proveedor
+        </option>
+        @for (proveedor of listaProveedores; track $index) {
+        <option value="{{ proveedor.nombre }}">{{ proveedor.nombre }}</option>
+        }
+      </select>
+    </div>
+
+    <div class="flex-box">
       <label>Precio de compra</label>
       @if(formulario.controls['precioCompra'].getError('required') &&
       formulario.controls['precioCompra'].touched){
       <small class="error">Campo requerido.</small>
       }
       <input type="number" formControlName="precioCompra" />
+    </div>
 
+    <div class="flex-box">
+      <label>Precio de venta</label>
+      @if(formulario.controls['precioVenta'].getError('required') &&
+      formulario.controls['precioVenta'].touched){
+      <small class="error">Campo requerido.</small>
+      }
+      <input type="number" formControlName="precioVenta" />
+    </div>
+
+    <div class="flex-box">
       <label>Categoría</label>
       @if(formulario.controls['categoria'].getError('required') &&
       formulario.controls['categoria'].touched){
@@ -38,41 +78,13 @@
         }
       </select>
     </div>
-    <div class="columna">
-      <label>Cantidad</label>
-      @if(formulario.controls['cantidad'].getError('required') &&
-      formulario.controls['cantidad'].touched){
-      <small class="error">Campo requerido.</small>
-      }
-      <input type="number" formControlName="cantidad" />
 
-      <label>Proveedor</label>
-      @if(formulario.controls['proveedor'].getError('required') &&
-      formulario.controls['proveedor'].touched){
-      <small class="error">Campo requerido.</small>
-      }
-      <select formControlName="proveedor">
-        <option value="" disabled selected hidden>
-          Selecciona un proveedor
-        </option>
-        @for (proveedor of listaProveedores; track $index) {
-        <option value="{{ proveedor.nombre }}">{{ proveedor.nombre }}</option>
-        }
-      </select>
-
-      <label>Precio de venta</label>
-      @if(formulario.controls['precioVenta'].getError('required') &&
-      formulario.controls['precioVenta'].touched){
-      <small class="error">Campo requerido.</small>
-      }
-      <input type="number" formControlName="precioVenta" />
-
+    <div class="flex-box">
       <label>Etiquetas</label>
       @if(formulario.controls['etiquetas'].getError('required') &&
       formulario.controls['etiquetas'].touched){
       <small class="error">Campo requerido.</small>
       }
-
       <select formControlName="etiquetas">
         <option value="" disabled selected hidden>
           Selecciona una etiqueta
@@ -85,6 +97,7 @@
       </select>
     </div>
   </div>
+
   <div class="botones">
     @if(productoAgregado){
     <div class="exito">Producto agregado</div>
@@ -92,6 +105,6 @@
     <button type="button" id="cancelar" routerLink="/admin/productos">
       Cancelar
     </button>
-    <button id="agregar">Agregar producto</button>
+    <button type="submit" id="agregar">Agregar producto</button>
   </div>
 </form>

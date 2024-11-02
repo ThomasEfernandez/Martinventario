@@ -21,7 +21,7 @@ export class ListarProveedorComponent implements OnInit {
   }
 
   obtenerProveedores() {
-    this.proveedorService.obtenerProveedores().subscribe(
+    this.proveedorService.getProveedores().subscribe(
       (data: Proveedor[]) => {
         this.proveedores = data;
       },

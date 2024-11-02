@@ -34,7 +34,7 @@ export class AgregarProveedorComponent {
       return;
     }
     const proveedor = this.formulario.getRawValue();
-    this.proveedorService.obtenerProveedores().subscribe({
+    this.proveedorService.getProveedores().subscribe({
       next: (proveedores: Proveedor[]) => {
         proveedor.id = proveedores.length + 1;
         this.emitirProveedor.emit(proveedor);
@@ -44,7 +44,7 @@ export class AgregarProveedorComponent {
   }
 
   agregarProveedorService(proveedor: Proveedor) {
-    this.proveedorService.agregarProveedor(proveedor).subscribe(
+    this.proveedorService.postProveedor(proveedor).subscribe(
       (response) => console.log('Proveedor agregado:', response),
       (error) => console.error('Error al agregar proveedor:', error)
     );

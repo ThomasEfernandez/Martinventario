@@ -14,10 +14,8 @@ form {
   flex-wrap: wrap;
   gap: 2%;
 }
-.columna {
-  display: block;
-  flex: 1;
-  flex-direction: column;
+.flex-box {
+  width: 49%;
 }
 .botones {
   display: flex;
@@ -32,7 +30,7 @@ label {
 input,
 select {
   width: 100%;
-  height: 11%;
+  height: 50%;
   margin: 1% 0 3%;
   padding: 1%;
   background-color: #eeeeee;
@@ -48,13 +46,13 @@ button {
   cursor: pointer;
 }
 #cancelar {
-  background-color: #ee7777;
+  background-color: #ee4444;
 }
 #agregar:hover {
   background-color: #00bbff;
 }
 #cancelar:hover {
-  background-color: #ee8888;
+  background-color: #ee6666;
 }
 .error {
   background-color: #ffffff;

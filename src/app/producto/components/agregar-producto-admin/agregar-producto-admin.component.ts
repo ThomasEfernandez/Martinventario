@@ -1,5 +1,5 @@
-import { Component, EventEmitter, inject, Output } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, Output, EventEmitter, inject } from '@angular/core';
+import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
@@ -31,6 +31,7 @@ export class AgregarProductoAdminComponent {
   listaEtiquetas: Etiqueta[] | undefined = [];
 
   productoService = inject(ProductoService);
+
   productoAgregado: boolean = false;
 
   formulario = this.fb.nonNullable.group({
@@ -56,7 +57,6 @@ export class AgregarProductoAdminComponent {
           this.productoAgregado = true;
         },
       });
-      console.log(producto);
     } else {
       this.formulario.markAllAsTouched();
     }
@@ -71,7 +71,7 @@ export class AgregarProductoAdminComponent {
   }
 
   listarProveedores() {
-    this.proveedoresService.obtenerProveedores().subscribe({
+    this.proveedoresService.getProveedores().subscribe({
       next: (proveedores: Proveedor[]) => {
         this.listaProveedores = proveedores;
       },
