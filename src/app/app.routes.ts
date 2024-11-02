@@ -7,6 +7,7 @@ import { PaginaAgregarProveedorAdminComponent } from './admin/pages/pagina-agreg
 import { PaginaProductosAdminComponent } from './admin/pages/pagina-productos-admin/pagina-productos-admin.component';
 import { PaginaAgregarProductoAdminComponent } from './admin/pages/pagina-agregar-producto-admin/pagina-agregar-producto-admin.component';
 import { PaginaCategoriasAdminComponent } from './admin/pages/pagina-categorias-admin/pagina-categorias-admin.component';
+import { PaginaAgregarCategoriaAdminComponent } from './admin/pages/pagina-agregar-categoria-admin/pagina-agregar-categoria-admin.component';
 
 import { PaginaPrincipalRepositorComponent } from './repositor/pages/pagina-principal-repositor/pagina-principal-repositor.component';
 import { PaginaProveedoresRepositorComponent } from './repositor/pages/pagina-proveedores-repositor/pagina-proveedores-repositor.component';
@@ -14,10 +15,9 @@ import { PaginaAgregarProveedorRepositorComponent } from './repositor/pages/pagi
 import { PaginaProductosRepositorComponent } from './repositor/pages/pagina-productos-repositor/pagina-productos-repositor.component';
 import { PaginaAgregarProductoRepositorComponent } from './repositor/pages/pagina-agregar-producto-repositor/pagina-agregar-producto-repositor.component';
 import { PaginaCategoriasRepositorComponent } from './repositor/pages/pagina-categorias-repositor/pagina-categorias-repositor.component';
+import { PaginaAgregarCategoriaRepositorComponent } from './repositor/pages/pagina-agregar-categoria-repositor/pagina-agregar-categoria-repositor.component';
 
 import { PaginaPedidoComponent } from './compra/pages/pagina-pedido/pagina-pedido.component';
-
-import { PaginaAgregarCategoriaComponent } from './categoria/pages/pagina-agregar-categoria/pagina-agregar-categoria.component';
 
 import { PaginaCajeroComponent } from './cajero/pages/pagina-cajero/pagina-cajero.component';
 
@@ -51,6 +51,10 @@ export const routes: Routes = [
     component: PaginaCategoriasAdminComponent,
   },
   {
+    path: 'admin/categorias/agregar',
+    component: PaginaAgregarCategoriaAdminComponent,
+  },
+  {
     path: 'repositor',
     component: PaginaPrincipalRepositorComponent,
   },
@@ -75,12 +79,12 @@ export const routes: Routes = [
     component: PaginaCategoriasRepositorComponent,
   },
   {
-    path: 'cajeros',
-    component: PaginaCajeroComponent,
+    path: 'repositor/categorias/agregar',
+    component: PaginaAgregarCategoriaRepositorComponent,
   },
   {
-    path: 'agregar-categoria',
-    component: PaginaAgregarCategoriaComponent,
+    path: 'cajeros',
+    component: PaginaCajeroComponent,
   },
   {
     path: 'pedido',
