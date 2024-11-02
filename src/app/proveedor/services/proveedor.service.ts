@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Proveedor } from '../interfaces/proveedor-interface';
 
@@ -7,20 +7,30 @@ import { Proveedor } from '../interfaces/proveedor-interface';
   providedIn: 'root',
 })
 export class ProveedorService {
-  private url = 'http://localhost:3000/proveedores';
+  http = inject(HttpClient);
+  url = 'http://localhost:3000/proveedores';
 
-  constructor(private http: HttpClient) {}
-
-  agregarProveedor(proveedor: Proveedor): Observable<Proveedor> {
-    return this.http.post<Proveedor>(this.url, proveedor);
-  }
-
-  obtenerProveedores(): Observable<Proveedor[]> {
+  getProveedores(): Observable<Proveedor[]> {
     return this.http.get<Proveedor[]>(this.url);
   }
 
-  eliminarProveedor(cuit: string): Observable<Proveedor> {
+  getProveedorById(id: number): Observable<Proveedor> {
+    return this.http.get<Proveedor>(`${this.url}/${id}`);
+  }
+
+  postProveedor(proveedor: Proveedor): Observable<Proveedor> {
+    return this.http.post<Proveedor>(this.url, proveedor);
+  }
+
+  putProducto(id: number, producto: Proveedor): Observable<Proveedor> {
+    return this.http.put<Proveedor>(`${this.url}/${id}`, producto);
+  }
+
+  patchProducto(id: number, producto: Proveedor): Observable<Proveedor> {
+    return this.http.patch<Proveedor>(`${this.url}/${id}`, producto);
+  }
+
+  deleteProveedor(cuit: string): Observable<Proveedor> {
     return this.http.delete<Proveedor>(`${this.url}/${cuit}`);
   }
-  
 }

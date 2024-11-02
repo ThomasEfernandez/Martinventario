@@ -1,27 +1,17 @@
 import { Component, inject } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
-import { Categoria } from '../../interfaces/categoria-inteface';
-import { CategoriaService } from '../../services/categoria.service';
-import { EtiquetaService } from '../../../etiqueta/services/etiqueta.service';
-import { Etiqueta } from '../../../etiqueta/interfaces/etiqueta.interface';
-import { ReactiveFormsModule } from '@angular/forms';
+import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
+import { CategoriaService } from 'app/categoria/services/categoria.service';
 
 @Component({
   selector: 'app-listar-categorias',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterModule],
+  imports: [],
   templateUrl: './listar-categorias.component.html',
   styleUrl: './listar-categorias.component.css',
 })
 export class ListarCategoriasComponent {
-  router = inject(Router);
   listaCategoria: Categoria[] = [];
   categoriaService = inject(CategoriaService);
-  etiquetaService = inject(EtiquetaService);
-
-  ngOnInit(): void {
-    this.listar();
-  }
 
   listar() {
     this.categoriaService.getCategorias().subscribe({
@@ -34,14 +24,7 @@ export class ListarCategoriasComponent {
     });
   }
 
-  getEtiquetasByCategoria(id: number) {
-    this.categoriaService.getCategoriaById(id).subscribe({
-      next: () => {
-        this.etiquetaService.getEtiquetas().subscribe({});
-      },
-      error: (err: Error) => {
-        console.log(err.message);
-      },
-    });
+  ngOnInit(): void {
+    this.listar();
   }
 }

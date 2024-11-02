@@ -9,19 +9,37 @@
     {
       "id": "2",
       "usuario": "agustin",
-      "contrasena": "1234",
+      "contrasena": "agustin",
       "tipo": "repositor"
     },
     {
       "id": "3",
       "usuario": "thomas",
-      "contrasena": "1234",
+      "contrasena": "thomas",
       "tipo": "cajero"
+    },
+    {
+      "id": "4",
+      "usuario": "fausto",
+      "contrasena": "fausto",
+      "tipo": "repositor"
+    },
+    {
+      "id": "5",
+      "usuario": "agustina",
+      "contrasena": "agustina",
+      "tipo": "cajero"
+    },
+    {
+      "id": "6",
+      "usuario": "lautaro",
+      "contrasena": "lautaro",
+      "tipo": "repositor"
     }
   ],
   "productos": [
     {
-      "id": 1,
+      "id": "1",
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Proveedor 1",
@@ -29,10 +47,12 @@
       "precioCompra": 1000,
       "precioVenta": 1500,
       "categoria": "1",
-      "etiquetas": ["1"]
+      "etiquetas": [
+        "1"
+      ]
     },
     {
-      "id": 2,
+      "id": "2",
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Proveedor 1",
@@ -40,10 +60,12 @@
       "precioCompra": 2000,
       "precioVenta": 2500,
       "categoria": "2",
-      "etiquetas": ["2"]
+      "etiquetas": [
+        "2"
+      ]
     },
     {
-      "id": 3,
+      "id": "3",
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
       "proveedor": "Proveedor 1",
@@ -51,10 +73,12 @@
       "precioCompra": 5800,
       "precioVenta": 7000,
       "categorias": "1",
-      "etiquetas": ["3"]
+      "etiquetas": [
+        "3"
+      ]
     },
     {
-      "id": 4,
+      "id": "4",
       "nombreProducto": "Consola playstation 5v Sony 1tb edición standard",
       "marca": "Sony",
       "proveedor": "Proveedor 2",
@@ -62,10 +86,13 @@
       "precioCompra": 1000000,
       "precioVenta": 1500000,
       "categorias": "1",
-      "etiquetas": ["4", "5"]
+      "etiquetas": [
+        "4",
+        "5"
+      ]
     },
     {
-      "id": 5,
+      "id": "5",
       "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
       "proveedor": "Proveedor 3",
@@ -73,10 +100,12 @@
       "precioCompra": 4000,
       "precioVenta": 5700,
       "categorias": "3",
-      "etiquetas": ["3"]
+      "etiquetas": [
+        "3"
+      ]
     },
     {
-      "id": 6,
+      "id": "6",
       "nombreProducto": "tv",
       "marca": "lg",
       "proveedor": "",
@@ -84,10 +113,12 @@
       "precioCompra": 100,
       "precioVenta": 200,
       "categoria": "",
-      "etiquetas": [""]
+      "etiquetas": [
+        ""
+      ]
     },
     {
-      "id": 7,
+      "id": "7",
       "nombreProducto": "chocolate",
       "marca": "toblerone",
       "proveedor": "Fausto",
@@ -98,7 +129,7 @@
       "etiquetas": "dulces"
     },
     {
-      "id": 8,
+      "id": "8",
       "nombreProducto": "chocolate",
       "marca": "aguila",
       "proveedor": "Agustin",
@@ -109,7 +140,7 @@
       "etiquetas": "dulces"
     },
     {
-      "id": 9,
+      "id": "9",
       "nombreProducto": "galletitas",
       "marca": "Oreo",
       "proveedor": "Agustin",
@@ -120,7 +151,7 @@
       "etiquetas": "galletitasDulces"
     },
     {
-      "id": 10,
+      "id": "10",
       "nombreProducto": "galletitas",
       "marca": "oreo",
       "proveedor": "Fausto",
@@ -131,7 +162,7 @@
       "etiquetas": "galletitasDulces"
     },
     {
-      "id": 11,
+      "id": "11",
       "nombreProducto": "jugo",
       "marca": "cepita",
       "proveedor": "Agustin",
@@ -142,7 +173,7 @@
       "etiquetas": "gaseosas"
     },
     {
-      "id": 12,
+      "id": "12",
       "nombreProducto": "Uno",
       "marca": "Hasbro",
       "proveedor": "Agustin",
@@ -151,6 +182,83 @@
       "precioVenta": 200,
       "categoria": "hogar",
       "etiquetas": "juegos"
+    },
+    {
+      "id": "13",
+      "nombreProducto": "1",
+      "marca": "1",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
+    },
+    {
+      "id": "14",
+      "nombreProducto": "a",
+      "marca": "a",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
+    },
+    {
+      "id": "15",
+      "nombreProducto": "a",
+      "marca": "1",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
+    },
+    {
+      "id": 16,
+      "nombreProducto": "a",
+      "marca": "1",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
+    },
+    {
+      "id": 17,
+      "nombreProducto": "a",
+      "marca": "1",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
+    },
+    {
+      "id": 18,
+      "nombreProducto": "a",
+      "marca": "1",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
+    },
+    {
+      "id": 19,
+      "nombreProducto": "a",
+      "marca": "a",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
     }
   ],
   "proveedores": [
@@ -177,12 +285,16 @@
       "nombreCategoria": "Alimentos",
       "etiquetas": [
         {
-          "id": "1",
+          "id": 1,
           "nombreEtiqueta": "Galletitas dulces"
         },
         {
-          "id": "2",
+          "id": 2,
           "nombreEtiqueta": "Dulce"
+        },
+        {
+          "id": 3,
+          "nombreEtiqueta": "Carne"
         }
       ]
     },
@@ -191,7 +303,7 @@
       "nombreCategoria": "Bebidas",
       "etiquetas": [
         {
-          "id": "3",
+          "id": 1,
           "nombreEtiqueta": "Gaseosa"
         }
       ]
@@ -201,7 +313,7 @@
       "nombreCategoria": "Higiene",
       "etiquetas": [
         {
-          "id": "4",
+          "id": 1,
           "nombreEtiqueta": "Shampoo"
         }
       ]
@@ -211,25 +323,25 @@
       "nombreCategoria": "Limpieza",
       "etiquetas": [
         {
-          "id": "5",
+          "id": 1,
           "nombreEtiqueta": "Lustrador"
         },
         {
-          "id": "6",
+          "id": 2,
           "nombreEtiqueta": "Desodorante para piso"
         }
       ]
     },
     {
-      "id": "6",
+      "id": "5",
       "nombreCategoria": "Hogar",
       "etiquetas": [
         {
-          "id": "7",
+          "id": 1,
           "nombreEtiqueta": "Electrodomestico"
         },
         {
-          "id": "8",
+          "id": 2,
           "nombreEtiqueta": "Juego"
         }
       ]
@@ -239,11 +351,11 @@
       "nombreCategoria": "Mascotas",
       "etiquetas": [
         {
-          "id": "9",
+          "id": 1,
           "nombreEtiqueta": "Alimento para perro"
         },
         {
-          "id": "10",
+          "id": 2,
           "nombreEtiqueta": "Alimento para gato"
         }
       ]
@@ -265,7 +377,9 @@
           "precioCompra": "1000",
           "precioVenta": "1500",
           "categoria": "1",
-          "etiquetas": ["1"]
+          "etiquetas": [
+            "1"
+          ]
         }
       ]
     }
