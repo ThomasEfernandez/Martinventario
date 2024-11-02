@@ -40,6 +40,7 @@ export class IniciarSesionComponent {
           break;
         case 'repositor':
           console.log(user.tipo);
+          this.router.navigate(['/repositor']);
           break;
         case 'cajero':
           console.log(user.tipo);
