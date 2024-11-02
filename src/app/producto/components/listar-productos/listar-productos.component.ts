@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { Producto } from '../../interfaces/producto.interface';
-import { ProductoService } from '../../services/producto.service';
-import { Router } from '@angular/router';
+import { Producto } from 'app/producto/interfaces/producto.interface';
+import { ProductoService } from 'app/producto/services/producto.service';
 
 @Component({
   selector: 'app-listar-productos',
@@ -11,13 +10,8 @@ import { Router } from '@angular/router';
   styleUrl: './listar-productos.component.css',
 })
 export class ListarProductosComponent {
-  router = inject(Router);
   listaProductos: Producto[] = [];
   productoService = inject(ProductoService);
-
-  ngOnInit(): void {
-    this.listar();
-  }
 
   listar() {
     this.productoService.getProductos().subscribe({
@@ -28,5 +22,9 @@ export class ListarProductosComponent {
         console.log(err.message);
       },
     });
+  }
+
+  ngOnInit(): void {
+    this.listar();
   }
 }

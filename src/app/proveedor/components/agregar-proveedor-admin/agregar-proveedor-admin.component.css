@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 form {
-  width: 50%;
+  width: 25%;
   margin: 0 auto;
   margin-top: 1%;
   padding: 1%;
@@ -15,13 +15,14 @@ form {
   gap: 2%;
 }
 .flex-box {
-  width: 49%;
+  width: 100%;
 }
 .botones {
   display: flex;
   flex-wrap: wrap;
   gap: 2%;
   justify-content: right;
+  align-items: center;
 }
 label {
   margin: 1%;
@@ -47,15 +48,16 @@ button {
 #cancelar {
   background-color: #ee4444;
 }
-#agregar:hover {
+button:hover {
   background-color: #00bbff;
 }
 #cancelar:hover {
   background-color: #ee6666;
 }
 .error {
-  background-color: #ffffff;
   color: #ee0000;
   font-size: x-small;
-  margin-bottom: 1rem;
+}
+.exito {
+  color: #009900;
 }

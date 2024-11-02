@@ -1,9 +1,0 @@
-<form [formGroup]="formulario" (ngSubmit)="agregarCategoria()">
-  <label>Categoría</label>
-  <input type="text" formControlName="nombreCategoria" />
-  @if (formulario.controls['nombreCategoria'].getError('required') &&
-  formulario.controls['nombreCategoria'].touched) {
-  <small>Campo requerido</small>
-  }
-  <button>Agregar Categoria</button>
-</form>

@@ -8,6 +8,7 @@ import { PaginaProductosAdminComponent } from './admin/pages/pagina-productos-ad
 import { PaginaAgregarProductoAdminComponent } from './admin/pages/pagina-agregar-producto-admin/pagina-agregar-producto-admin.component';
 import { PaginaCategoriasAdminComponent } from './admin/pages/pagina-categorias-admin/pagina-categorias-admin.component';
 import { PaginaAgregarCategoriaAdminComponent } from './admin/pages/pagina-agregar-categoria-admin/pagina-agregar-categoria-admin.component';
+import { PaginaAgregarEtiquetaAdminComponent } from './admin/pages/pagina-agregar-etiqueta-admin/pagina-agregar-etiqueta-admin.component';
 
 import { PaginaPrincipalRepositorComponent } from './repositor/pages/pagina-principal-repositor/pagina-principal-repositor.component';
 import { PaginaProveedoresRepositorComponent } from './repositor/pages/pagina-proveedores-repositor/pagina-proveedores-repositor.component';
@@ -16,6 +17,7 @@ import { PaginaProductosRepositorComponent } from './repositor/pages/pagina-prod
 import { PaginaAgregarProductoRepositorComponent } from './repositor/pages/pagina-agregar-producto-repositor/pagina-agregar-producto-repositor.component';
 import { PaginaCategoriasRepositorComponent } from './repositor/pages/pagina-categorias-repositor/pagina-categorias-repositor.component';
 import { PaginaAgregarCategoriaRepositorComponent } from './repositor/pages/pagina-agregar-categoria-repositor/pagina-agregar-categoria-repositor.component';
+import { PaginaAgregarEtiquetaRepositorComponent } from './repositor/pages/pagina-agregar-etiqueta-repositor/pagina-agregar-etiqueta-repositor.component';
 
 import { PaginaPedidoComponent } from './compra/pages/pagina-pedido/pagina-pedido.component';
 
@@ -55,6 +57,10 @@ export const routes: Routes = [
     component: PaginaAgregarCategoriaAdminComponent,
   },
   {
+    path: 'admin/etiquetas/agregar',
+    component: PaginaAgregarEtiquetaAdminComponent,
+  },
+  {
     path: 'repositor',
     component: PaginaPrincipalRepositorComponent,
   },
@@ -81,6 +87,10 @@ export const routes: Routes = [
   {
     path: 'repositor/categorias/agregar',
     component: PaginaAgregarCategoriaRepositorComponent,
+  },
+  {
+    path: 'repositor/etiquetas/agregar',
+    component: PaginaAgregarEtiquetaRepositorComponent,
   },
   {
     path: 'cajeros',

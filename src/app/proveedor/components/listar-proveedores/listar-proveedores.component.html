@@ -1,25 +1,24 @@
-<div class="listar-proveedor-container">
-  <h2>Listado de Proveedores</h2>
-
+<div>
   <table>
     <thead>
       <tr>
         <th>Nombre</th>
         <th>Apellido</th>
         <th>Razón Social</th>
-        <th>Email</th>
         <th>CUIT</th>
+        <th>Email</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let proveedor of proveedores">
+      @for(proveedor of listaProveedores; track $index) {
+      <tr>
         <td>{{ proveedor.nombre }}</td>
         <td>{{ proveedor.apellido }}</td>
         <td>{{ proveedor.razonSocial }}</td>
-        <td>{{ proveedor.email }}</td>
         <td>{{ proveedor.cuit }}</td>
+        <td>{{ proveedor.email }}</td>
       </tr>
+      }
     </tbody>
   </table>
 </div>
-

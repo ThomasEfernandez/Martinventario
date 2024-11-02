@@ -46,14 +46,21 @@
         <input type="text" formControlName="email" id="email" />
       </div>
     </div>
+
     <div class="botones">
-      <!-- @if(proveedorAgregado){
-    <div class="exito">Proveedor agregado</div>
-    } -->
-      <button type="button" id="cancelar" routerLink="/repositor/proveedores">
+      @if(proveedorAgregado){
+      <small class="exito">Proveedor agregado</small>
+      <button type="button" id="volver" routerLink="/repositor/proveedores">
+        Volver
+      </button>
+      } @else {<button
+        type="button"
+        id="cancelar"
+        routerLink="/repositor/proveedores"
+      >
         Cancelar
       </button>
-      <button type="submit" id="agregar">Agregar proveedor</button>
+      <button type="submit" id="agregar">Agregar proveedor</button>}
     </div>
   </form>
 </div>

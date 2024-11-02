@@ -100,11 +100,17 @@
 
   <div class="botones">
     @if(productoAgregado){
-    <div class="exito">Producto agregado</div>
-    }
-    <button type="button" id="cancelar" routerLink="/repositor/productos">
+    <small class="exito">Producto agregado</small>
+    <button type="button" id="volver" routerLink="/repositor/productos">
+      Volver
+    </button>
+    } @else {<button
+      type="button"
+      id="cancelar"
+      routerLink="/repositor/productos"
+    >
       Cancelar
     </button>
-    <button type="submit" id="agregar">Agregar producto</button>
+    <button type="submit" id="agregar">Agregar producto</button>}
   </div>
 </form>

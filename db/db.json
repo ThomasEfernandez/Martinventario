@@ -9,14 +9,32 @@
     {
       "id": "2",
       "usuario": "agustin",
-      "contrasena": "1234",
+      "contrasena": "agustin",
       "tipo": "repositor"
     },
     {
       "id": "3",
       "usuario": "thomas",
-      "contrasena": "1234",
+      "contrasena": "thomas",
       "tipo": "cajero"
+    },
+    {
+      "id": "4",
+      "usuario": "fausto",
+      "contrasena": "fausto",
+      "tipo": "repositor"
+    },
+    {
+      "id": "5",
+      "usuario": "agustina",
+      "contrasena": "agustina",
+      "tipo": "cajero"
+    },
+    {
+      "id": "6",
+      "usuario": "lautaro",
+      "contrasena": "lautaro",
+      "tipo": "repositor"
     }
   ],
   "productos": [
@@ -29,7 +47,9 @@
       "precioCompra": 1000,
       "precioVenta": 1500,
       "categoria": "1",
-      "etiquetas": ["1"]
+      "etiquetas": [
+        "1"
+      ]
     },
     {
       "id": "2",
@@ -40,7 +60,9 @@
       "precioCompra": 2000,
       "precioVenta": 2500,
       "categoria": "2",
-      "etiquetas": ["2"]
+      "etiquetas": [
+        "2"
+      ]
     },
     {
       "id": "3",
@@ -51,7 +73,9 @@
       "precioCompra": 5800,
       "precioVenta": 7000,
       "categorias": "1",
-      "etiquetas": ["3"]
+      "etiquetas": [
+        "3"
+      ]
     },
     {
       "id": "4",
@@ -62,7 +86,10 @@
       "precioCompra": 1000000,
       "precioVenta": 1500000,
       "categorias": "1",
-      "etiquetas": ["4", "5"]
+      "etiquetas": [
+        "4",
+        "5"
+      ]
     },
     {
       "id": "5",
@@ -73,7 +100,9 @@
       "precioCompra": 4000,
       "precioVenta": 5700,
       "categorias": "3",
-      "etiquetas": ["3"]
+      "etiquetas": [
+        "3"
+      ]
     },
     {
       "id": "6",
@@ -84,7 +113,9 @@
       "precioCompra": 100,
       "precioVenta": 200,
       "categoria": "",
-      "etiquetas": [""]
+      "etiquetas": [
+        ""
+      ]
     },
     {
       "id": "7",
@@ -151,6 +182,83 @@
       "precioVenta": 200,
       "categoria": "hogar",
       "etiquetas": "juegos"
+    },
+    {
+      "id": "13",
+      "nombreProducto": "1",
+      "marca": "1",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
+    },
+    {
+      "id": "14",
+      "nombreProducto": "a",
+      "marca": "a",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
+    },
+    {
+      "id": "15",
+      "nombreProducto": "a",
+      "marca": "1",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
+    },
+    {
+      "id": 16,
+      "nombreProducto": "a",
+      "marca": "1",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
+    },
+    {
+      "id": 17,
+      "nombreProducto": "a",
+      "marca": "1",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
+    },
+    {
+      "id": 18,
+      "nombreProducto": "a",
+      "marca": "1",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
+    },
+    {
+      "id": 19,
+      "nombreProducto": "a",
+      "marca": "a",
+      "proveedor": "Fausto",
+      "cantidad": 1,
+      "precioCompra": 1,
+      "precioVenta": 1,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
     }
   ],
   "proveedores": [
@@ -177,12 +285,16 @@
       "nombreCategoria": "Alimentos",
       "etiquetas": [
         {
-          "id": "1",
+          "id": 1,
           "nombreEtiqueta": "Galletitas dulces"
         },
         {
-          "id": "2",
+          "id": 2,
           "nombreEtiqueta": "Dulce"
+        },
+        {
+          "id": 3,
+          "nombreEtiqueta": "Carne"
         }
       ]
     },
@@ -191,7 +303,7 @@
       "nombreCategoria": "Bebidas",
       "etiquetas": [
         {
-          "id": "3",
+          "id": 1,
           "nombreEtiqueta": "Gaseosa"
         }
       ]
@@ -201,7 +313,7 @@
       "nombreCategoria": "Higiene",
       "etiquetas": [
         {
-          "id": "4",
+          "id": 1,
           "nombreEtiqueta": "Shampoo"
         }
       ]
@@ -211,25 +323,25 @@
       "nombreCategoria": "Limpieza",
       "etiquetas": [
         {
-          "id": "5",
+          "id": 1,
           "nombreEtiqueta": "Lustrador"
         },
         {
-          "id": "6",
+          "id": 2,
           "nombreEtiqueta": "Desodorante para piso"
         }
       ]
     },
     {
-      "id": "6",
+      "id": "5",
       "nombreCategoria": "Hogar",
       "etiquetas": [
         {
-          "id": "7",
+          "id": 1,
           "nombreEtiqueta": "Electrodomestico"
         },
         {
-          "id": "8",
+          "id": 2,
           "nombreEtiqueta": "Juego"
         }
       ]
@@ -239,11 +351,11 @@
       "nombreCategoria": "Mascotas",
       "etiquetas": [
         {
-          "id": "9",
+          "id": 1,
           "nombreEtiqueta": "Alimento para perro"
         },
         {
-          "id": "10",
+          "id": 2,
           "nombreEtiqueta": "Alimento para gato"
         }
       ]
@@ -265,7 +377,9 @@
           "precioCompra": "1000",
           "precioVenta": "1500",
           "categoria": "1",
-          "etiquetas": ["1"]
+          "etiquetas": [
+            "1"
+          ]
         }
       ]
     }
