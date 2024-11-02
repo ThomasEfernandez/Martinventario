@@ -1,3 +1,4 @@
+
 <form [formGroup]="formulario" (ngSubmit)="agregarProducto()">
   <div class="columna">
     <label for="">Producto</label>
@@ -19,13 +20,16 @@
     <div class="error">Campo requerido.</div>
     }
     <label for="">Categoría</label>
-    <select size="0">
+    <select size="0" id="categoria" formControlName="categoria">
       <option disabled selected>Selecciona una categoría</option>
       @for (categoria of listaCategorias; track $index) {
       <option value="{{ categoria.nombreCategoria }}">
         {{ categoria.nombreCategoria }}
       </option>
-      }
+      @if(formulario.controls['categoria'].getError('required') &&
+      formulario.controls['categoria'].touched){
+      <div class="error">Campo requerido.</div>
+      } }
     </select>
   </div>
   <div class="columna">
@@ -36,11 +40,14 @@
     <div class="error">Campo requerido.</div>
     }
     <label for="">Proveedor</label>
-    <select size="0">
-      @for (proveedor of listaProveedores; track $index) {
+    <select size="0" formControlName="proveedor">
       <option disabled selected>Selecciona un proveedor</option>
+      @for (proveedor of listaProveedores; track $index) {
       <option value="{{ proveedor.nombre }}">{{ proveedor.nombre }}</option>
-      }
+      @if(formulario.controls['proveedor'].getError('required') &&
+      formulario.controls['proveedor'].touched){
+      <div class="error">Campo requerido.</div>
+      } }
     </select>
     <label for="">Precio de venta</label>
     <input type="number" formControlName="precioVenta" />
@@ -49,14 +56,25 @@
     <div class="error">Campo requerido.</div>
     }
     <label for="">Etiquetas</label>
-    <select size="0">
+    <select size="0" formControlName="etiquetas">
       <option disabled selected>Selecciona una etiqueta</option>
-      <!-- @for (etiqueta of listaEtiquetas; track $index) {
-                <option value="{{ etiqueta.nombreEtiqueta }}">{{ etiqueta.nombreEtiqueta }}</option>
-            } -->
+      @for (etiqueta of listaEtiquetas; track $index) {
+      <option value="{{ etiqueta.nombreEtiqueta }}">
+        {{ etiqueta.nombreEtiqueta }}
+      </option>
+      @if(formulario.controls['etiquetas'].getError('required') &&
+      formulario.controls['etiquetas'].touched){
+      <div class="error">Campo requerido.</div>
+      } }
     </select>
   </div>
+
   <div class="boton">
-    <button>Agregar producto</button>
+    @if(productoAddCorrectamente){
+      <div class="mensaje-exito">
+        ¡Producto agregado correctamente!
+      </div>
+     }
+    <button class="botoncito">Agregar producto</button>
   </div>
 </form>

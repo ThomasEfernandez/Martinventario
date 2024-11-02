@@ -52,6 +52,7 @@ button {
   border: 1px solid #222222;
   border-radius: 3px;
   background-color: #0099ff;
+  color: #ffffff;
 }
 
 .error {

@@ -2,6 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { Producto } from '../interfaces/producto.interface';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { enviroment } from '../../../enviroments/enviroment';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,7 @@ export class ProductoService {
     return this.http.get<Producto[]>(this.url);
   }
 
-  getProductoById (id:number):Observable<Producto>{
+  getProductoById(id: number): Observable<Producto> {
     return this.http.get<Producto>(`${this.url}/${id}`);
   }
   postProducto(producto: Producto): Observable<Producto> {
@@ -25,7 +26,11 @@ export class ProductoService {
     return this.http.put<Producto>(`${this.url}/${id}`, producto);
   }
 
-  deleteProducto(id: number, producto: Producto): Observable<Producto> {
-    return this.http.delete<Producto>(`${this.url}/${id}`);
+  patchProducto(id: number, producto: Producto): Observable<Producto> {
+    return this.http.patch<Producto>(`${this.url}/${id}`, producto);
+  }
+
+  deleteProducto(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.url}/${id}`);
   }
 }
