@@ -1,0 +1,50 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Categoría</th>
+        <th>Cantidad de productos</th>
+        <th>Dinero gastado</th>
+        <th>Valor de la categoría</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (categoria of cat; track $index) {
+      <tr>
+        <td>{{ categoria.categoria }}</td>
+        <td>{{ categoria.cantidad }}</td>
+        <td>${{ categoria.precioCompra }}</td>
+        <td>${{ categoria.precioVenta }}</td>
+      </tr>
+      }
+    </tbody>
+    <tfoot id="total">
+      <tr>
+        <td class="total">Total</td>
+        <td class="total">{{ tCantidad }}</td>
+        <td class="total">${{ tPrecioCompra }}</td>
+        <td class="total">${{ tPrecioVenta }}</td>
+      </tr>
+    </tfoot>
+  </table>
+  <table>
+    <thead>
+      <tr>
+        <th>Repositores</th>
+        <th>Cajeros</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ uRepositores }}</td>
+        <td>{{ uCajeros }}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Total</td>
+        <td>{{ uTotal }}</td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
