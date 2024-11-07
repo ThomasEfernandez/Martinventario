@@ -18,6 +18,8 @@ export class CategoriaService {
     return this.http.post<Categoria>(this.url, categoria);
   }
 
+  /*prueba*/
+
   getCategoriaById(id: number | undefined): Observable<Categoria> {
     return this.http.get<Categoria>(`${this.url}/${id}`);
   }
