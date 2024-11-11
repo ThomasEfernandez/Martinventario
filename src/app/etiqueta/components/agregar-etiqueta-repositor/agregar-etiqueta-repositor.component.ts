@@ -31,6 +31,7 @@ export class AgregarEtiquetaRepositorComponent {
     id: [0],
     nombreEtiqueta: ['', Validators.required],
     nombreCategoria: ['', Validators.required],
+    estado: [true, [Validators.required]],
   });
 
   agregarEtiqueta() {
@@ -41,6 +42,7 @@ export class AgregarEtiquetaRepositorComponent {
           let e = {
             id: categoria.etiquetas.length + 1,
             nombreEtiqueta: etiqueta.nombreEtiqueta,
+            estado: etiqueta.estado,
           };
           categoria.etiquetas.push(e);
           this.emitirEtiqueta.emit(etiqueta);
@@ -52,6 +54,7 @@ export class AgregarEtiquetaRepositorComponent {
       this.formulario.markAllAsTouched();
     }
   }
+
   agregarEtiquetaService(categoria: Categoria) {
     this.categoriaService.putCategoria(categoria.id, categoria).subscribe({
       error: (err: Error) => {

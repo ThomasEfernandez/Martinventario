@@ -1,0 +1,26 @@
+<div>
+  <h2>Eliminar Etiqueta</h2>
+  <form [formGroup]="formulario" (ngSubmit)="eliminarEtiqueta()">
+    <label for="categoria">Categoría</label>
+    <select id="categoria" formControlName="categoriaId" (change)="onCategoriaChange()">
+      <option value="" disabled selected>Seleccione una categoría</option>
+      @for (item of listaCategoria; track $index) {
+      <option [value]="item.id">
+        {{ item.nombreCategoria }}
+      </option>
+      }
+    </select>
+
+    <label for="etiqueta">Etiqueta</label>
+    <select id="etiqueta" formControlName="etiquetaId">
+      <option value="" disabled selected>Seleccione una etiqueta</option>
+      @for (item of listaEtiqueta; track $index) {
+      <option [value]="item.id">
+        {{ item.nombreEtiqueta }}
+      </option>
+      }
+    </select>
+
+    <button type="submit" [disabled]="!formulario.valid">Eliminar</button>
+  </form>
+</div>
