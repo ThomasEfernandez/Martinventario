@@ -1,3 +1,4 @@
+import { PaginaEliminarEtiquetaRepositorComponent } from './repositor/pages/pagina-eliminar-etiqueta-repositor/pagina-eliminar-etiqueta-repositor.component';
 import { Routes } from '@angular/router';
 import { PaginaIniciarSesionComponent } from './sesion/pages/pagina-iniciar-sesion/pagina-iniciar-sesion.component';
 
@@ -23,6 +24,8 @@ import { PaginaPedidoComponent } from './compra/pages/pagina-pedido/pagina-pedid
 
 import { PaginaCajeroComponent } from './cajero/pages/pagina-cajero/pagina-cajero.component';
 import { PaginaEliminarCategoriaAdminComponent } from './admin/pages/pagina-eliminar-categoria-admin/pagina-eliminar-categoria-admin.component';
+import { PaginaEliminarEtiquetaAdminComponent } from './admin/pages/pagina-eliminar-etiqueta-admin/pagina-eliminar-etiqueta-admin.component';
+import { PaginaEliminarCategoriaRepositorComponent } from './repositor/pages/pagina-eliminar-categoria-repositor/pagina-eliminar-categoria-repositor.component';
 
 export const routes: Routes = [
   {
@@ -66,6 +69,10 @@ export const routes: Routes = [
     component: PaginaAgregarEtiquetaAdminComponent,
   },
   {
+    path: 'admin/etiquetas/eliminar',
+    component: PaginaEliminarEtiquetaAdminComponent,
+  },
+  {
     path: 'repositor',
     component: PaginaPrincipalRepositorComponent,
   },
@@ -94,8 +101,16 @@ export const routes: Routes = [
     component: PaginaAgregarCategoriaRepositorComponent,
   },
   {
+    path: 'repositor/categorias/eliminar',
+    component: PaginaEliminarCategoriaRepositorComponent,
+  },
+  {
     path: 'repositor/etiquetas/agregar',
     component: PaginaAgregarEtiquetaRepositorComponent,
+  },
+  {
+    path: 'repositor/etiquetas/eliminar',
+    component: PaginaEliminarEtiquetaRepositorComponent,
   },
   {
     path: 'cajeros',
