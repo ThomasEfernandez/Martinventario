@@ -22,6 +22,7 @@ import { PaginaAgregarEtiquetaRepositorComponent } from './repositor/pages/pagin
 import { PaginaPedidoComponent } from './compra/pages/pagina-pedido/pagina-pedido.component';
 
 import { PaginaCajeroComponent } from './cajero/pages/pagina-cajero/pagina-cajero.component';
+import { PaginaEliminarCategoriaAdminComponent } from './admin/pages/pagina-eliminar-categoria-admin/pagina-eliminar-categoria-admin.component';
 
 export const routes: Routes = [
   {
@@ -55,6 +56,10 @@ export const routes: Routes = [
   {
     path: 'admin/categorias/agregar',
     component: PaginaAgregarCategoriaAdminComponent,
+  },
+  {
+    path: 'admin/categorias/eliminar',
+    component: PaginaEliminarCategoriaAdminComponent,
   },
   {
     path: 'admin/etiquetas/agregar',
