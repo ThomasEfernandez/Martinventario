@@ -14,19 +14,18 @@ import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
 })
 export class EliminarEtiquetaRepositorComponent {
   @Output()
-  etiquetaEliminada: EventEmitter<Etiqueta> = new EventEmitter();
+  etiquetaModificada: EventEmitter<Etiqueta> = new EventEmitter();
 
   fb = inject(FormBuilder);
   categoriaService = inject(CategoriaService);
 
-  listaCategoria: Categoria[] = [];
-  listaEtiqueta: Etiqueta[] = [];
-  categoriaSeleccionada: Categoria | null = null;
-  etiquetaSeleccionada: Etiqueta | null = null;
+  listaCategorias: Categoria[] = [];
+  listaEtiquetas: Etiqueta[] = [];
+  categoriaSeleccionada: Categoria | undefined;
 
   formulario = this.fb.nonNullable.group({
-    categoriaId: [null as number | null],
-    etiquetaId: [null as number | null],
+    categoriaId: [0],
+    etiquetaId: [0],
   });
 
   ngOnInit(): void {
@@ -36,7 +35,7 @@ export class EliminarEtiquetaRepositorComponent {
   listarCategorias() {
     this.categoriaService.getCategorias().subscribe({
       next: (categorias: Categoria[]) => {
-        this.listaCategoria = categorias;
+        this.listaCategorias = categorias;
       },
       error: (err: Error) => {
         console.error(err.message);
@@ -44,46 +43,44 @@ export class EliminarEtiquetaRepositorComponent {
     });
   }
 
+  /*actualiza la lista de etiquetas en categoria*/
   onCategoriaChange() {
     const categoriaId = this.formulario.value.categoriaId;
+    if (categoriaId !== null) {
+      this.categoriaSeleccionada = this.listaCategorias.find(
+        (categoria) => categoria.id === categoriaId
+      );
 
-    if (categoriaId != null) {
-      this.categoriaSeleccionada =
-        this.listaCategoria.find((categoria) => categoria.id === categoriaId) ||
-        null;
-
-      this.listaEtiqueta = this.categoriaSeleccionada?.etiquetas || [];
-    } else {
-      this.listaEtiqueta = [];
+      this.listaEtiquetas = this.categoriaSeleccionada?.etiquetas || [];
     }
   }
 
-  eliminarEtiqueta() {
+  cambiarEstadoEtiqueta() {
     const etiquetaId = this.formulario.value.etiquetaId;
 
     if (this.categoriaSeleccionada && etiquetaId !== null) {
-      this.listaEtiqueta = this.listaEtiqueta.filter(
-        (etiqueta) => etiqueta.id !== etiquetaId
+      const etiquetaSeleccionada = this.categoriaSeleccionada.etiquetas.find(
+        (e) => e.id === etiquetaId
       );
 
-      this.categoriaSeleccionada.etiquetas = this.listaEtiqueta;
+      if (etiquetaSeleccionada) {
+        etiquetaSeleccionada.estado = false;
 
-      this.categoriaService
-        .putCategoria(this.categoriaSeleccionada.id, this.categoriaSeleccionada)
-        .subscribe({
-          next: () => {
-            const etiquetaEliminada = this.listaEtiqueta.find(
-              (e) => e.id === etiquetaId
-            );
-            if (etiquetaEliminada) {
-              this.etiquetaEliminada.emit(etiquetaEliminada);
-            }
-            this.formulario.reset();
-          },
-          error: (err: Error) => {
-            console.error(err.message);
-          },
-        });
+        this.categoriaService
+          .putCategoria(
+            this.categoriaSeleccionada.id,
+            this.categoriaSeleccionada
+          )
+          .subscribe({
+            next: () => {
+              this.etiquetaModificada.emit(etiquetaSeleccionada);
+              this.formulario.reset();
+            },
+            error: (err: Error) => {
+              console.log(err);
+            },
+          });
+      }
     }
   }
 }
