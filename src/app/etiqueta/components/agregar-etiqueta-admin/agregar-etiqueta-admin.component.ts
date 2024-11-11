@@ -31,6 +31,7 @@ export class AgregarEtiquetaAdminComponent {
     id: [0],
     nombreEtiqueta: ['', Validators.required],
     nombreCategoria: ['', Validators.required],
+    estado: [true, [Validators.required]],
   });
 
   agregarEtiqueta() {
@@ -41,6 +42,7 @@ export class AgregarEtiquetaAdminComponent {
           let e = {
             id: categoria.etiquetas.length + 1,
             nombreEtiqueta: etiqueta.nombreEtiqueta,
+            estado: etiqueta.estado,
           };
           categoria.etiquetas.push(e);
           this.emitirEtiqueta.emit(etiqueta);
