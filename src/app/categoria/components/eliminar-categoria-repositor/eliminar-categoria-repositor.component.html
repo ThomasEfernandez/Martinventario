@@ -1,1 +1,21 @@
-<p>eliminar-categoria-repositor works!</p>
+<div>
+  <h2>Cambiar Estado de Categoría</h2>
+
+  <form [formGroup]="formulario" (ngSubmit)="cambiarEstadoCategoria()">
+
+    <label for="categoria">Selecciona una categoría para desactivar</label>
+
+    <select id="categoria" formControlName="categoriaId">
+      <option value="" disabled selected>Seleccione una categoría</option>
+
+      @for (item of listaCategorias; track $index) {
+      <option [value]="item.id">
+        {{ item.nombreCategoria }}
+      </option>
+      }
+    </select>
+
+    <button type="submit" [disabled]="!formulario.valid">Desactivar Categoría</button>
+
+  </form>
+</div>
