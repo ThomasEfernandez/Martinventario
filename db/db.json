@@ -92,6 +92,28 @@
       "precioVenta": 5700,
       "categoria": "Higiene",
       "etiquetas": "Shampoo"
+    },
+    {
+      "id": 6,
+      "nombreProducto": "galletitas",
+      "marca": "oreo",
+      "proveedor": "Fausto",
+      "cantidad": 2,
+      "precioCompra": 1300,
+      "precioVenta": 2000,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
+    },
+    {
+      "id": 7,
+      "nombreProducto": "milanesas",
+      "marca": "carrefour",
+      "proveedor": "Fausto",
+      "cantidad": 10,
+      "precioCompra": 8000,
+      "precioVenta": 10000,
+      "categoria": "Alimentos",
+      "etiquetas": "Carne"
     }
   ],
   "proveedores": [
@@ -310,7 +332,7 @@
       "totalCompra": 10000
     },
     {
-      "id": 14,
+      "id": "14",
       "idProducto": 2,
       "cantidad": 10,
       "proveedor": "Fausto",
