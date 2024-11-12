@@ -21,6 +21,7 @@ export class EliminarCategoriaAdminComponent {
 
   listaCategorias: Categoria[] = [];
   categoriaSeleccionada: Categoria | undefined;
+  cm: boolean = false;
 
   formulario = this.fb.nonNullable.group({
     categoriaId: [0],
@@ -44,7 +45,7 @@ export class EliminarCategoriaAdminComponent {
   cambiarEstadoCategoria() {
     const categoriaId = this.formulario.value.categoriaId;
 
-    if (categoriaId!==null && categoriaId!==undefined) {
+    if (categoriaId !== null && categoriaId !== undefined) {
       this.categoriaSeleccionada = this.listaCategorias.find(
         (c) => c.id === categoriaId
       );
@@ -58,6 +59,7 @@ export class EliminarCategoriaAdminComponent {
             next: () => {
               this.categoriaModificada.emit(this.categoriaSeleccionada);
               this.formulario.reset();
+              this.cm = true;
             },
             error: (err: Error) => {
               console.log(err.message);
@@ -67,4 +69,3 @@ export class EliminarCategoriaAdminComponent {
     }
   }
 }
-

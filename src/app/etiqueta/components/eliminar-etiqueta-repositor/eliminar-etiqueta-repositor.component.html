@@ -26,7 +26,16 @@
       }
     </select>
 
-    <button type="submit" [disabled]="!formulario.valid">Desactivar Etiqueta</button>
 
+    <div class="botones">
+      @if(em){
+      <small class="exito">Etiqueta desactivada</small>
+      <button type="button" id="volver" routerLink="/repositor/categorias">
+        Volver
+      </button>
+      }
+
+      <button type="submit" [disabled]="!formulario.valid">Desactivar Etiqueta</button>
+    </div>
   </form>
 </div>

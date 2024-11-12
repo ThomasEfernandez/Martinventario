@@ -22,6 +22,7 @@ export class EliminarEtiquetaAdminComponent {
   listaCategorias: Categoria[] = [];
   listaEtiquetas: Etiqueta[] = [];
   categoriaSeleccionada: Categoria | undefined;
+  em: boolean = false;
 
   formulario = this.fb.nonNullable.group({
     categoriaId: [0],
@@ -75,6 +76,7 @@ export class EliminarEtiquetaAdminComponent {
             next: () => {
               this.etiquetaModificada.emit(etiquetaSeleccionada);
               this.formulario.reset();
+              this.em = true;
             },
             error: (err: Error) => {
               console.log(err);
