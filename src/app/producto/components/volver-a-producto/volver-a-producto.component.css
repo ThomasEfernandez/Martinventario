@@ -16,7 +16,7 @@
     align-items: end;
     transition: 0,2;
     cursor: pointer;
-    color: white;
+    color: black;
 
     transition: background-color 2s ease, transform 2s ease;
   }
