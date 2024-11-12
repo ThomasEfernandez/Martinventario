@@ -20,6 +20,7 @@ export class EliminarCategoriaRepositorComponent {
 
   listaCategorias: Categoria[] = [];
   categoriaSeleccionada: Categoria | undefined;
+  cm: boolean = false;
 
   formulario = this.fb.nonNullable.group({
     categoriaId: [0],
@@ -57,6 +58,7 @@ export class EliminarCategoriaRepositorComponent {
             next: () => {
               this.categoriaModificada.emit(this.categoriaSeleccionada);
               this.formulario.reset();
+              this.cm = true;
             },
             error: (err: Error) => {
               console.log(err.message);

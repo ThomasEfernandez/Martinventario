@@ -15,7 +15,17 @@
       }
     </select>
 
-    <button type="submit" [disabled]="!formulario.valid">Desactivar Categoría</button>
+
+    <div class="botones">
+      @if (cm) {
+      <small class="exito">Categoria desactivada</small>
+      <button type="button" id="volver" routerLink="/repositor/categorias">
+        Volver
+      </button>
+
+      }
+      <button type="submit" [disabled]="!formulario.valid">Desactivar Categoría</button>
+    </div>
 
   </form>
 </div>
