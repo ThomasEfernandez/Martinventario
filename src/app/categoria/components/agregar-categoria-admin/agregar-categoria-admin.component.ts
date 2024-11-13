@@ -23,6 +23,7 @@ export class AgregarCategoriaAdminComponent {
   formulario = this.fb.nonNullable.group({
     id: [0],
     nombreCategoria: ['', Validators.required],
+    estado: [true, [Validators.required]],
     etiquetas: [[]],
   });
 

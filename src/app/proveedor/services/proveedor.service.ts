@@ -30,7 +30,7 @@ export class ProveedorService {
     return this.http.patch<Proveedor>(`${this.url}/${id}`, producto);
   }
 
-  deleteProveedor(cuit: string): Observable<Proveedor> {
-    return this.http.delete<Proveedor>(`${this.url}/${cuit}`);
+  deleteProveedor(id: number): Observable<Proveedor> {
+    return this.http.delete<Proveedor>(`${this.url}/${id}`);
   }
 }

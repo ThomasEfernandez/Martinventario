@@ -1,0 +1,41 @@
+<div>
+  <h2>Cambiar Estado de Etiqueta</h2>
+
+
+  <form [formGroup]="formulario" (ngSubmit)="cambiarEstadoEtiqueta()">
+
+    <label for="categoria">Categoría</label>
+
+    <select id="categoria" formControlName="categoriaId" (change)="onCategoriaChange()">
+
+      <option value="" disabled selected>Seleccione una categoría</option>
+      @for (item of listaCategorias; track $index) {
+      <option [value]="item.id">
+        {{ item.nombreCategoria }}
+      </option>
+      }
+    </select>
+
+    <label for="etiqueta">Etiqueta</label>
+    <select id="etiqueta" formControlName="etiquetaId">
+      <option value="" disabled selected>Seleccione una etiqueta</option>
+      @for (item of listaEtiquetas; track $index) {
+      <option [value]="item.id">
+        {{ item.nombreEtiqueta }}
+      </option>
+      }
+    </select>
+
+
+    <div class="botones">
+      @if(em){
+      <small class="exito">Etiqueta desactivada</small>
+      <button type="button" id="volver" routerLink="/repositor/categorias">
+        Volver
+      </button>
+      }
+
+      <button type="submit" [disabled]="!formulario.valid">Desactivar Etiqueta</button>
+    </div>
+  </form>
+</div>

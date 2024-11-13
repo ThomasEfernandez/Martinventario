@@ -10,13 +10,13 @@ import { CategoriaService } from 'app/categoria/services/categoria.service';
   styleUrl: './listar-categorias.component.css',
 })
 export class ListarCategoriasComponent {
-  listaCategoria: Categoria[] = [];
+  listaCategorias: Categoria[] = [];
   categoriaService = inject(CategoriaService);
 
   listar() {
     this.categoriaService.getCategorias().subscribe({
       next: (categoria: Categoria[]) => {
-        this.listaCategoria = categoria;
+        this.listaCategorias = categoria;
       },
       error: (err: Error) => {
         console.log(err.message);

@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { Proveedor } from 'app/proveedor/interfaces/proveedor-interface';
 import { ProveedorService } from 'app/proveedor/services/proveedor.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-listar-proveedores',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './listar-proveedores.component.html',
   styleUrls: ['./listar-proveedores.component.css'],
 })
@@ -26,5 +27,16 @@ export class ListarProveedorComponent {
 
   ngOnInit() {
     this.listar();
+  }
+
+  eliminarProveedor(id: number) {
+    this.proveedorService.deleteProveedor(id).subscribe({
+      next: () => {
+        this.listar();
+      },
+      error: (err) => {
+        console.error('Error al eliminar el proveedor', err);
+      }
+    });
   }
 }

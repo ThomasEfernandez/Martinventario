@@ -42,223 +42,100 @@
       "id": "1",
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
-      "proveedor": "Proveedor 1",
+      "proveedor": "Fausto",
       "cantidad": 20,
       "precioCompra": 1000,
       "precioVenta": 1500,
-      "categoria": "1",
-      "etiquetas": [
-        "1"
-      ]
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
     },
     {
       "id": "2",
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
-      "proveedor": "Proveedor 1",
-      "cantidad": 16,
+      "proveedor": "Fausto",
+      "cantidad": 46,
       "precioCompra": 2000,
       "precioVenta": 2500,
-      "categoria": "2",
-      "etiquetas": [
-        "2"
-      ]
+      "categoria": "Bebidas",
+      "etiquetas": "Gaseosa"
     },
     {
       "id": "3",
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
-      "proveedor": "Proveedor 1",
+      "proveedor": "Fausto",
       "cantidad": 10,
       "precioCompra": 5800,
       "precioVenta": 7000,
-      "categorias": "1",
-      "etiquetas": [
-        "3"
-      ]
+      "categoria": "Alimentos",
+      "etiquetas": "Dulce"
     },
     {
       "id": "4",
       "nombreProducto": "Consola playstation 5v Sony 1tb edición standard",
       "marca": "Sony",
-      "proveedor": "Proveedor 2",
-      "cantidad": 2,
+      "proveedor": "Agustin",
+      "cantidad": 5,
       "precioCompra": 1000000,
       "precioVenta": 1500000,
-      "categorias": "1",
-      "etiquetas": [
-        "4",
-        "5"
-      ]
+      "categoria": "Hogar",
+      "etiquetas": "Electrodomestico"
     },
     {
       "id": "5",
       "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
-      "proveedor": "Proveedor 3",
-      "cantidad": 5,
+      "proveedor": "Agustin",
+      "cantidad": 50,
       "precioCompra": 4000,
       "precioVenta": 5700,
-      "categorias": "3",
-      "etiquetas": [
-        "3"
-      ]
+      "categoria": "Higiene",
+      "etiquetas": "Shampoo"
     },
     {
       "id": "6",
-      "nombreProducto": "tv",
-      "marca": "lg",
-      "proveedor": "",
-      "cantidad": 1,
-      "precioCompra": 100,
-      "precioVenta": 200,
-      "categoria": "",
-      "etiquetas": [
-        ""
-      ]
-    },
-    {
-      "id": "7",
-      "nombreProducto": "chocolate",
-      "marca": "toblerone",
-      "proveedor": "Fausto",
-      "cantidad": 2,
-      "precioCompra": 2000,
-      "precioVenta": 3500,
-      "categoria": "alimentos",
-      "etiquetas": "dulces"
-    },
-    {
-      "id": "8",
-      "nombreProducto": "chocolate",
-      "marca": "aguila",
-      "proveedor": "Agustin",
-      "cantidad": 8,
-      "precioCompra": 4000,
-      "precioVenta": 5500,
-      "categoria": "alimentos",
-      "etiquetas": "dulces"
-    },
-    {
-      "id": "9",
-      "nombreProducto": "galletitas",
-      "marca": "Oreo",
-      "proveedor": "Agustin",
-      "cantidad": 3,
-      "precioCompra": 1000,
-      "precioVenta": 2300,
-      "categoria": "alimentos",
-      "etiquetas": "galletitasDulces"
-    },
-    {
-      "id": "10",
       "nombreProducto": "galletitas",
       "marca": "oreo",
       "proveedor": "Fausto",
       "cantidad": 2,
-      "precioCompra": 1500,
-      "precioVenta": 2300,
-      "categoria": "alimentos",
-      "etiquetas": "galletitasDulces"
+      "precioCompra": 1300,
+      "precioVenta": 2000,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
     },
     {
-      "id": "11",
-      "nombreProducto": "jugo",
-      "marca": "cepita",
-      "proveedor": "Agustin",
-      "cantidad": 7,
-      "precioCompra": 1700,
-      "precioVenta": 2500,
-      "categoria": "bebidas",
-      "etiquetas": "gaseosas"
-    },
-    {
-      "id": "12",
-      "nombreProducto": "Uno",
-      "marca": "Hasbro",
-      "proveedor": "Agustin",
+      "id": "7",
+      "nombreProducto": "milanesas",
+      "marca": "carrefour",
+      "proveedor": "Fausto",
       "cantidad": 10,
-      "precioCompra": 100,
-      "precioVenta": 200,
-      "categoria": "hogar",
-      "etiquetas": "juegos"
+      "precioCompra": 8000,
+      "precioVenta": 10000,
+      "categoria": "Alimentos",
+      "etiquetas": "Carne"
     },
     {
-      "id": "13",
-      "nombreProducto": "1",
-      "marca": "1",
-      "proveedor": "Fausto",
-      "cantidad": 1,
-      "precioCompra": 1,
-      "precioVenta": 1,
-      "categoria": "Alimentos",
-      "etiquetas": "Galletitas dulces"
+      "id": "8",
+      "nombreProducto": "gaseosa 1,25",
+      "marca": "pepsi",
+      "proveedor": "Agustin",
+      "cantidad": 5,
+      "precioCompra": 3000,
+      "precioVenta": 3600,
+      "categoria": "Bebidas",
+      "etiquetas": "Gaseosa"
     },
     {
-      "id": "14",
-      "nombreProducto": "a",
-      "marca": "a",
-      "proveedor": "Fausto",
-      "cantidad": 1,
-      "precioCompra": 1,
-      "precioVenta": 1,
+      "id": 9,
+      "nombreProducto": "bombones",
+      "marca": "Ferrero",
+      "proveedor": "Agustin",
+      "cantidad": 5,
+      "precioCompra": 1300,
+      "precioVenta": 2000,
       "categoria": "Alimentos",
-      "etiquetas": "Galletitas dulces"
-    },
-    {
-      "id": "15",
-      "nombreProducto": "a",
-      "marca": "1",
-      "proveedor": "Fausto",
-      "cantidad": 1,
-      "precioCompra": 1,
-      "precioVenta": 1,
-      "categoria": "Alimentos",
-      "etiquetas": "Galletitas dulces"
-    },
-    {
-      "id": 16,
-      "nombreProducto": "a",
-      "marca": "1",
-      "proveedor": "Fausto",
-      "cantidad": 1,
-      "precioCompra": 1,
-      "precioVenta": 1,
-      "categoria": "Alimentos",
-      "etiquetas": "Galletitas dulces"
-    },
-    {
-      "id": 17,
-      "nombreProducto": "a",
-      "marca": "1",
-      "proveedor": "Fausto",
-      "cantidad": 1,
-      "precioCompra": 1,
-      "precioVenta": 1,
-      "categoria": "Alimentos",
-      "etiquetas": "Galletitas dulces"
-    },
-    {
-      "id": 18,
-      "nombreProducto": "a",
-      "marca": "1",
-      "proveedor": "Fausto",
-      "cantidad": 1,
-      "precioCompra": 1,
-      "precioVenta": 1,
-      "categoria": "Alimentos",
-      "etiquetas": "Galletitas dulces"
-    },
-    {
-      "id": 19,
-      "nombreProducto": "a",
-      "marca": "a",
-      "proveedor": "Fausto",
-      "cantidad": 1,
-      "precioCompra": 1,
-      "precioVenta": 1,
-      "categoria": "Alimentos",
-      "etiquetas": "Galletitas dulces"
+      "etiquetas": "Dulce"
     }
   ],
   "proveedores": [
@@ -475,6 +352,27 @@
       "cantidad": 10,
       "proveedor": "Proveedor 1",
       "totalCompra": 10000
+    },
+    {
+      "id": "14",
+      "idProducto": 2,
+      "cantidad": 10,
+      "proveedor": "Fausto",
+      "totalCompra": 20000
+    },
+    {
+      "id": "15",
+      "idProducto": 2,
+      "cantidad": 10,
+      "proveedor": "Fausto",
+      "totalCompra": 20000
+    },
+    {
+      "id": 16,
+      "idProducto": 2,
+      "cantidad": 10,
+      "proveedor": "Fausto",
+      "totalCompra": 20000
     }
   ]
 }
