@@ -160,6 +160,7 @@
     {
       "id": "1",
       "nombreCategoria": "Alimentos",
+      "estado": true,
       "etiquetas": [
         {
           "id": 1,
@@ -178,6 +179,7 @@
     {
       "id": "2",
       "nombreCategoria": "Bebidas",
+      "estado": true,
       "etiquetas": [
         {
           "id": 1,
@@ -188,6 +190,7 @@
     {
       "id": "3",
       "nombreCategoria": "Higiene",
+      "estado": true,
       "etiquetas": [
         {
           "id": 1,
@@ -198,6 +201,7 @@
     {
       "id": "4",
       "nombreCategoria": "Limpieza",
+      "estado": true,
       "etiquetas": [
         {
           "id": 1,
@@ -212,6 +216,7 @@
     {
       "id": "5",
       "nombreCategoria": "Hogar",
+      "estado": true,
       "etiquetas": [
         {
           "id": 1,
@@ -226,6 +231,7 @@
     {
       "id": "6",
       "nombreCategoria": "Mascotas",
+      "estado": false,
       "etiquetas": [
         {
           "id": 1,
