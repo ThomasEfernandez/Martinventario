@@ -1,12 +1,29 @@
 import { Component } from '@angular/core';
 import { NavbarProveedoresAdminComponent } from '../../../nav/components/navbar-proveedores-admin/navbar-proveedores-admin.component';
 import { ListarProveedorComponent } from 'app/proveedor/components/listar-proveedores/listar-proveedores.component';
+import { CommonModule } from '@angular/common';
+import { AgregarProveedorAdminComponent } from 'app/proveedor/components/agregar-proveedor-admin/agregar-proveedor-admin.component';
+import { NavbarAdminComponent } from "../../../nav/components/navbar-admin/navbar-admin.component";
 
 @Component({
   selector: 'app-pagina-proveedores-admin',
   standalone: true,
-  imports: [NavbarProveedoresAdminComponent, ListarProveedorComponent],
+  imports: [NavbarProveedoresAdminComponent, ListarProveedorComponent, CommonModule, AgregarProveedorAdminComponent, NavbarAdminComponent],
   templateUrl: './pagina-proveedores-admin.component.html',
   styleUrl: './pagina-proveedores-admin.component.css',
 })
-export class PaginaProveedoresAdminComponent {}
+export class PaginaProveedoresAdminComponent {
+  opcionSeleccionada: string | null = null;
+  mostrarMenu: boolean = true;
+
+  seleccionarOpcion(opcion: string): void{
+    console.log('Opción seleccionada:', opcion);
+    this.opcionSeleccionada = opcion;
+    this.mostrarMenu = false;
+  }
+
+  volverAMenu(): void {
+    this.opcionSeleccionada = null;
+    this.mostrarMenu = true;
+  }
+}
