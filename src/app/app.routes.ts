@@ -27,121 +27,130 @@ import { PaginaEliminarCategoriaAdminComponent } from './admin/pages/pagina-elim
 import { PaginaEliminarEtiquetaAdminComponent } from './admin/pages/pagina-eliminar-etiqueta-admin/pagina-eliminar-etiqueta-admin.component';
 import { PaginaEliminarCategoriaRepositorComponent } from './repositor/pages/pagina-eliminar-categoria-repositor/pagina-eliminar-categoria-repositor.component';
 import { authGuardFn } from './auth/guard/auth.guard-fn';
+import { VerDetalleComponent } from './ver-detalles/ver-detalle/ver-detalle.component';
 
 export const routes: Routes = [
   {
     path: '',
     component: PaginaIniciarSesionComponent,
   },
+  /*Admin*/
   {
     path: 'admin',
     component: PaginaPrincipalAdminComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'admin/proveedores',
     component: PaginaProveedoresAdminComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'admin/proveedores/agregar',
     component: PaginaAgregarProveedorAdminComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'admin/productos',
     component: PaginaProductosAdminComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'admin/productos/agregar',
     component: PaginaAgregarProductoAdminComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'admin/categorias',
     component: PaginaCategoriasAdminComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'admin/categorias/agregar',
     component: PaginaAgregarCategoriaAdminComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'admin/categorias/eliminar',
     component: PaginaEliminarCategoriaAdminComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
+  },
+  {
+    path: 'admin/categoria/ver-detalle/:id',
+    component: VerDetalleComponent,
+    canActivate: [authGuardFn],
   },
   {
     path: 'admin/etiquetas/agregar',
     component: PaginaAgregarEtiquetaAdminComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'admin/etiquetas/eliminar',
     component: PaginaEliminarEtiquetaAdminComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
+  /*Repositor*/
   {
     path: 'repositores',
     component: PaginaPrincipalRepositorComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'repositor/proveedores',
     component: PaginaProveedoresRepositorComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'repositor/proveedores/agregar',
     component: PaginaAgregarProveedorRepositorComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'repositor/productos',
     component: PaginaProductosRepositorComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'repositor/productos/agregar',
     component: PaginaAgregarProductoRepositorComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'repositor/categorias',
     component: PaginaCategoriasRepositorComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'repositor/categorias/agregar',
     component: PaginaAgregarCategoriaRepositorComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'repositor/categorias/eliminar',
     component: PaginaEliminarCategoriaRepositorComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'repositor/etiquetas/agregar',
     component: PaginaAgregarEtiquetaRepositorComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'repositor/etiquetas/eliminar',
     component: PaginaEliminarEtiquetaRepositorComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
+  /*Cajero*/
   {
     path: 'cajeros',
     component: PaginaCajeroComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: 'pedido',
     component: PaginaPedidoComponent,
-    canActivate: [authGuardFn]
+    canActivate: [authGuardFn],
   },
   {
     path: '**',
