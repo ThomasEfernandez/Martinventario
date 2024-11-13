@@ -5,8 +5,6 @@ export interface Venta {
   total: number;
   fecha: Date;
   cajero: number;
-  productos: {
-    elProducto: Producto;
-    cantidad: number;
-  }[];
+  producto:Producto
+  cantidad: number;
 }
