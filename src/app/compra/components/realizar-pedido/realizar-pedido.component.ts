@@ -15,12 +15,11 @@ import { Pedido } from '../../interfaces/pedido.interface';
   styleUrl: './realizar-pedido.component.css',
 })
 export class RealizarPedidoComponent implements OnInit{
-  
+  @Output()
   ngOnInit(): void {
     this.realizarCompra();
   }
 
-  @Output()
   emitirPedido: EventEmitter<Pedido> = new EventEmitter();
 
   fb = inject(FormBuilder);

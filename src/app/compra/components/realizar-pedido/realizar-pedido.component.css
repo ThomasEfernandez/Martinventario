@@ -13,13 +13,13 @@ div{
         margin-right: 1rem;
         background: transparent ;
         border-color: #0074c2;
-        border-radius: 8px;
+        border-radius: 15px;
         padding: 3px;
         
     }
     form{
         display: flex;
-        padding: 1rem;
+        padding: 5px;
         flex-direction: column;
         
         
@@ -30,7 +30,7 @@ div{
         color: white;
         background-color:  #0074c2;
         padding: 5px;
-        border-radius: 6px;
+        border-radius: 10px;
         
     }
     button:hover{

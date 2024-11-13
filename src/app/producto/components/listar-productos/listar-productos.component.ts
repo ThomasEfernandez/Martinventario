@@ -1,46 +1,30 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Producto } from 'app/producto/interfaces/producto.interface';
 import { ProductoService } from 'app/producto/services/producto.service';
-import { AgregarProductoAdminComponent } from '../agregar-producto-admin/agregar-producto-admin.component';
-
 
 @Component({
   selector: 'app-listar-productos',
   standalone: true,
-  imports: [AgregarProductoAdminComponent],
+  imports: [],
   templateUrl: './listar-productos.component.html',
   styleUrl: './listar-productos.component.css',
 })
-export class ListarProductosComponent implements OnInit {
-  ngOnInit(): void {
-    this.cargarListaProd();
-  }
+export class ListarProductosComponent {
   listaProductos: Producto[] = [];
   productoService = inject(ProductoService);
 
-  listar(producto:Producto) {
-
-    this.listaProductos.push(producto);
-  }
-
-  
-
-  cargarListaProd (){
+  listar() {
     this.productoService.getProductos().subscribe({
-      next:(productos:Producto[])=>{
-
+      next: (productos: Producto[]) => {
         this.listaProductos = productos;
-        console.log("lista cargada");
-
-        
-
-      },error:(e:Error)=>{
-        console.log(e.message);
-        
-      }
-    })
+      },
+      error: (err: Error) => {
+        console.log(err.message);
+      },
+    });
   }
-  
 
-  
+  ngOnInit(): void {
+    this.listar();
+  }
 }

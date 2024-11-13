@@ -2,23 +2,22 @@
 .div-boton-volver{
     all: unset;
     display: flex;
-    justify-content: end;
-    margin: 2rem;
+    margin: 0.5rem;
    
   }
   
   .botoncito-volver{
-      padding: 0.5rem;
+    padding: 0.5rem;
       border: 1px solid #222222;
       border-radius: 3px;
       background-color: #0099ff;
-      display:flex;
+      display: flex;
       justify-content: center;
       align-items: center;
       transition: 0,2;
       cursor: pointer;
       transition: background-color 2s ease, transform 2s ease;
-      color: black;
+      color: white;
     }
     
     .botoncito-volver:hover{
