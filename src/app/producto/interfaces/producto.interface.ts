@@ -6,4 +6,5 @@ export interface Producto {
   proveedor: string;
   precioCompra: number;
   precioVenta: number;
+  categoria: string;
 }
