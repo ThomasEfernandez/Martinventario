@@ -1,0 +1,49 @@
+<form [formGroup]="formulario" (ngSubmit)="agregarPedido()">
+  <div class="form">
+    <div class="flex-box">
+      <label>Producto</label>
+      @if(formulario.controls['producto'].getError('required') &&
+      formulario.controls['producto'].touched){
+      <small class="error">Campo requerido.</small>
+      }
+      <input type="text" formControlName="producto" />
+    </div>
+
+    <div class="flex-box">
+      <label>Cantidad</label>
+      @if(formulario.controls['cantidad'].getError('required') &&
+      formulario.controls['cantidad'].touched){
+      <small class="error">Campo requerido.</small>
+      }
+      <input type="number" formControlName="cantidad" />
+    </div>
+
+    <div class="flex-box">
+      <label>Proveedor</label>
+      @if(formulario.controls['razonSocialProveedor'].getError('required') &&
+      formulario.controls['razonSocialProveedor'].touched){
+      <small class="error">Campo requerido.</small>
+      }
+      <select formControlName="razonSocialProveedor">
+        <option value="" disabled selected hidden>
+          Selecciona un proveedor
+        </option>
+        @for (proveedor of listaProveedores; track $index) {
+        <option value="{{ proveedor.nombre }}">{{ proveedor.nombre }}</option>
+        }
+      </select>
+    </div>
+  </div>
+
+  <div class="botones">
+    @if(pedidoAgregado){
+    <small class="exito">Pedido agregado</small>
+    <button type="button" id="volver" routerLink="/admin/pedidos">
+      Volver
+    </button>
+    } @else {<button type="button" id="cancelar" routerLink="/admin/pedidos">
+      Cancelar
+    </button>
+    <button type="submit" id="agregar">Agregar pedido</button>}
+  </div>
+</form>

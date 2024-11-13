@@ -260,9 +260,7 @@
           "precioCompra": "1000",
           "precioVenta": "1500",
           "categoria": "1",
-          "etiquetas": [
-            "1"
-          ]
+          "etiquetas": ["1"]
         }
       ]
     }
@@ -270,115 +268,11 @@
   "pedidos": [
     {
       "id": "1",
-      "idProducto": 2,
-      "cantidad": 5,
-      "proveedor": "Proveedor 1",
-      "totalCompra": 10000
-    },
-    {
-      "id": "2",
-      "idProducto": 1,
+      "fecha": "13/10/2024",
+      "producto": "a",
       "cantidad": 1,
-      "proveedor": "Proveedor 1",
-      "totalCompra": 1000
-    },
-    {
-      "id": "3",
-      "idProducto": 3,
-      "cantidad": 3,
-      "proveedor": "Proveedor 1",
-      "totalCompra": 17400
-    },
-    {
-      "id": "4",
-      "idProducto": 5,
-      "cantidad": 1,
-      "proveedor": "Proveedor 3",
-      "totalCompra": 4000
-    },
-    {
-      "id": "5",
-      "idProducto": 2,
-      "cantidad": 3,
-      "proveedor": "Proveedor 1",
-      "totalCompra": 6000
-    },
-    {
-      "id": "6",
-      "idProducto": 2,
-      "cantidad": 5,
-      "proveedor": "Proveedor 1",
-      "totalCompra": 10000
-    },
-    {
-      "id": "7",
-      "idProducto": 2,
-      "cantidad": 3,
-      "proveedor": "Proveedor 1",
-      "totalCompra": 6000
-    },
-    {
-      "id": "8",
-      "idProducto": 2,
-      "cantidad": 2,
-      "proveedor": "Proveedor 1",
-      "totalCompra": 4000
-    },
-    {
-      "id": "9",
-      "idProducto": 15,
-      "cantidad": 5,
-      "proveedor": "Agustin",
-      "totalCompra": 8500
-    },
-    {
-      "id": "10",
-      "idProducto": 12,
-      "cantidad": 5,
-      "proveedor": "Agustin",
-      "totalCompra": 20000
-    },
-    {
-      "id": "11",
-      "idProducto": 3,
-      "cantidad": 5,
-      "proveedor": "Proveedor 1",
-      "totalCompra": 29000
-    },
-    {
-      "id": "12",
-      "idProducto": 2,
-      "cantidad": 5,
-      "proveedor": "Proveedor 1",
-      "totalCompra": 10000
-    },
-    {
-      "id": "13",
-      "idProducto": 1,
-      "cantidad": 10,
-      "proveedor": "Proveedor 1",
-      "totalCompra": 10000
-    },
-    {
-      "id": "14",
-      "idProducto": 2,
-      "cantidad": 10,
-      "proveedor": "Fausto",
-      "totalCompra": 20000
-    },
-    {
-      "id": "15",
-      "idProducto": 2,
-      "cantidad": 10,
-      "proveedor": "Fausto",
-      "totalCompra": 20000
-    },
-    {
-      "id": 16,
-      "idProducto": 2,
-      "cantidad": 10,
-      "proveedor": "Fausto",
-      "totalCompra": 20000
+      "razonSocialProveedor": "Agustin",
+      "estado": false
     }
   ]
 }
