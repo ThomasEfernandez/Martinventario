@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
 
 @Component({
   selector: 'app-eliminar-categoria-repositor',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, RouterModule],
   templateUrl: './eliminar-categoria-repositor.component.html',
   styleUrl: './eliminar-categoria-repositor.component.css',
 })
