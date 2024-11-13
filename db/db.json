@@ -43,7 +43,7 @@
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": 20,
+      "cantidad": 7,
       "precioCompra": 1000,
       "precioVenta": 1500,
       "categoria": "Alimentos",
@@ -54,7 +54,7 @@
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Fausto",
-      "cantidad": 46,
+      "cantidad": 42,
       "precioCompra": 2000,
       "precioVenta": 2500,
       "categoria": "Bebidas",
@@ -127,7 +127,7 @@
       "etiquetas": "Gaseosa"
     },
     {
-      "id": 9,
+      "id": "9",
       "nombreProducto": "bombones",
       "marca": "Ferrero",
       "proveedor": "Agustin",
@@ -246,23 +246,20 @@
   ],
   "ventas": [
     {
-      "id": "1",
-      "total": "2500",
-      "fecha": "Sun Oct 27 2024 22:27:44 GMT-0300 (hora estándar de Argentina)",
-      "cajero": "1",
-      "productos": [
-        {
-          "id": "1",
-          "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
-          "marca": "Pepitos",
-          "proveedor": "Proveedor 1",
-          "cantidad": "10",
-          "precioCompra": "1000",
-          "precioVenta": "1500",
-          "categoria": "1",
-          "etiquetas": ["1"]
-        }
-      ]
+      "id": 1,
+      "total": 1500,
+      "fecha": "13/11/2024",
+      "cajero": 0,
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 1
+    },
+    {
+      "id": 2,
+      "total": 3000,
+      "fecha": "13/10/2024",
+      "cajero": 0,
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 2
     }
   ],
   "pedidos": [

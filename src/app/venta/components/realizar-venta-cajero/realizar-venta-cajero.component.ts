@@ -20,57 +20,90 @@ import { CommonModule } from '@angular/common';
 })
 export class RealizarVentaCajeroComponent {
   @Output()
-  producto:Producto|undefined={
-    id: 0,
-    nombreProducto: "",
-    cantidad: 0,
-    marca: "",
-    proveedor:"" ,
-    precioCompra: 0,
-    precioVenta: 0,
-    categoria: "",
-  }
-  c:number=0;
-  asignarCantidadMax(){
-    if(this.producto){
-      this.c=this.producto.cantidad;
-    }
-  }
   emitirVenta: EventEmitter<Venta> = new EventEmitter();
-  fb = inject(FormBuilder);
-  formulario = this.fb.nonNullable.group({
-    id: [0, Validators.required],
-    total: [0, Validators.required],
-    fecha: [new Date(), Validators.required],
-    cajero: [0, Validators.required],
-    //productos: [[], Validators.required],
-    producto:[{}, Validators.required],
-    cantidad:[0,[Validators.required, Validators.min(1), Validators.max(this.c)]]
-  });
 
-  maximo:number=0;
-  fecha = new Date();
   ventasService = inject(VentaService);
   prodService = inject(ProductoService);
 
+  producto: Producto | undefined = {
+    id: 0,
+    nombreProducto: '',
+    cantidad: 0,
+    marca: '',
+    proveedor: '',
+    precioCompra: 0,
+    precioVenta: 0,
+    categoria: '',
+  };
+
+  listaProductos: Producto[] = [];
+
+  ventaRealizada: boolean = false;
+
+  fb = inject(FormBuilder);
+  formulario = this.fb.nonNullable.group({
+    id: [0],
+    total: [0],
+    fecha: [
+      new Date().getDate() +
+        '/' +
+        new Date().getMonth() +
+        '/' +
+        new Date().getFullYear(),
+    ],
+    cajero: [0, Validators.required],
+    producto: ['', Validators.required],
+    cantidad: [0, [Validators.required, Validators.min(1)]],
+  });
+
   agregarVenta() {
-    if (this.formulario.invalid) {
-      return;
+    if (this.formulario.valid) {
+      const venta = this.formulario.getRawValue();
+      this.ventasService.getVenta().subscribe({
+        next: (ventas: Venta[]) => {
+          venta.id = ventas.length + 1;
+
+          const produ = this.listaProductos.find(
+            (p) => p.nombreProducto === venta.producto
+          );
+
+          this.prodService.getProductoById(produ?.id).subscribe({
+            next: (prod: Producto) => {
+              console.log('entra');
+              console.log('cantidad:' + venta.cantidad);
+              console.log('precio venta:' + prod.precioVenta);
+              venta.total = venta.cantidad * prod.precioVenta;
+              console.log('total:' + venta.total);
+              this.emitirVenta.emit(venta);
+              this.agregarVentaService(venta);
+              this.ventaRealizada = true;
+            },
+            error: (err: Error) => {
+              console.log(err.message);
+            },
+          });
+        },
+      });
+    } else {
+      this.formulario.markAllAsTouched();
     }
-    const venta = this.formulario.getRawValue();
-    this.emitirVenta.emit(venta);
-    this.agregarVentaService(venta);
   }
 
   agregarVentaService(venta: Venta) {
-    this.ventasService.postVenta(venta).subscribe();
-    // venta.productos.forEach((aux) => {
-    //   this.modificarStock(aux.cantidad, aux.elProducto.id);
-    // });
-    this.modificarStock(venta.cantidad,venta.producto.id)
+    this.ventasService.postVenta(venta).subscribe({
+      error: (err: Error) => {
+        console.log(err.message);
+      },
+    });
+    const producto = this.listaProductos.find(
+      (p) => p.nombreProducto === venta.producto
+    );
+    if (producto) {
+      this.modificarStock(venta.cantidad, producto.id);
+    }
   }
 
-  modificarStock(cantidad: number, id: number) {
+  modificarStock(cantidad: number, id: number | undefined) {
     this.prodService.getProductoById(id).subscribe({
       next: (aux: Producto) => {
         aux.cantidad = aux.cantidad - cantidad;
@@ -87,26 +120,31 @@ export class RealizarVentaCajeroComponent {
     });
   }
 
-  listaProductos:Producto[]=[]
-
-
-  traerProductos(){
-    this.prodService.getProductos().subscribe({next:(productos:Producto[])=>{
-      productos.forEach(p => {if(p.cantidad>0){
-        this.listaProductos.push(p)
-      }})
-    }})
+  traerProductos() {
+    this.prodService.getProductos().subscribe({
+      next: (productos: Producto[]) => {
+        productos.forEach((p) => {
+          if (p.cantidad > 0) {
+            this.listaProductos.push(p);
+          }
+        });
+      },
+    });
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.traerProductos();
-    document.getElementById('producto')?.addEventListener('click',()=>{
-      const select=document.getElementById('producto') as HTMLSelectElement;
-      const producto=this.listaProductos.find((p)=>p.nombreProducto===select.value)
-      this.producto=producto
-      console.log(this.producto?.cantidad);
-      this.asignarCantidadMax()
-    })
-
+    document.getElementById('producto')?.addEventListener('click', () => {
+      const select = document.getElementById('producto') as HTMLSelectElement;
+      const producto = this.listaProductos.find(
+        (p) => p.nombreProducto === select.value
+      );
+      this.producto = producto;
+      if (this.producto) {
+        this.formulario.controls['cantidad'].addValidators([
+          Validators.max(this.producto.cantidad),
+        ]);
+      }
+    });
   }
 }
