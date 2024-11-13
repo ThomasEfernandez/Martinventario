@@ -23,6 +23,7 @@ export class ListarProductosComponent implements OnInit {
     this.listaProductos.push(producto);
   }
 
+  
 
   cargarListaProd (){
     this.productoService.getProductos().subscribe({
