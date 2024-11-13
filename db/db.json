@@ -39,7 +39,7 @@
   ],
   "productos": [
     {
-      "id": 1,
+      "id": "1",
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
@@ -50,18 +50,18 @@
       "etiquetas": "Galletitas dulces"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Fausto",
-      "cantidad": 16,
+      "cantidad": 46,
       "precioCompra": 2000,
       "precioVenta": 2500,
       "categoria": "Bebidas",
       "etiquetas": "Gaseosa"
     },
     {
-      "id": 3,
+      "id": "3",
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
       "proveedor": "Fausto",
@@ -72,7 +72,7 @@
       "etiquetas": "Dulce"
     },
     {
-      "id": 4,
+      "id": "4",
       "nombreProducto": "Consola playstation 5v Sony 1tb edición standard",
       "marca": "Sony",
       "proveedor": "Agustin",
@@ -83,7 +83,7 @@
       "etiquetas": "Electrodomestico"
     },
     {
-      "id": 5,
+      "id": "5",
       "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
       "proveedor": "Agustin",
@@ -92,6 +92,50 @@
       "precioVenta": 5700,
       "categoria": "Higiene",
       "etiquetas": "Shampoo"
+    },
+    {
+      "id": "6",
+      "nombreProducto": "galletitas",
+      "marca": "oreo",
+      "proveedor": "Fausto",
+      "cantidad": 2,
+      "precioCompra": 1300,
+      "precioVenta": 2000,
+      "categoria": "Alimentos",
+      "etiquetas": "Galletitas dulces"
+    },
+    {
+      "id": "7",
+      "nombreProducto": "milanesas",
+      "marca": "carrefour",
+      "proveedor": "Fausto",
+      "cantidad": 10,
+      "precioCompra": 8000,
+      "precioVenta": 10000,
+      "categoria": "Alimentos",
+      "etiquetas": "Carne"
+    },
+    {
+      "id": "8",
+      "nombreProducto": "gaseosa 1,25",
+      "marca": "pepsi",
+      "proveedor": "Agustin",
+      "cantidad": 5,
+      "precioCompra": 3000,
+      "precioVenta": 3600,
+      "categoria": "Bebidas",
+      "etiquetas": "Gaseosa"
+    },
+    {
+      "id": 9,
+      "nombreProducto": "bombones",
+      "marca": "Ferrero",
+      "proveedor": "Agustin",
+      "cantidad": 5,
+      "precioCompra": 1300,
+      "precioVenta": 2000,
+      "categoria": "Alimentos",
+      "etiquetas": "Dulce"
     }
   ],
   "proveedores": [
@@ -308,6 +352,27 @@
       "cantidad": 10,
       "proveedor": "Proveedor 1",
       "totalCompra": 10000
+    },
+    {
+      "id": "14",
+      "idProducto": 2,
+      "cantidad": 10,
+      "proveedor": "Fausto",
+      "totalCompra": 20000
+    },
+    {
+      "id": "15",
+      "idProducto": 2,
+      "cantidad": 10,
+      "proveedor": "Fausto",
+      "totalCompra": 20000
+    },
+    {
+      "id": 16,
+      "idProducto": 2,
+      "cantidad": 10,
+      "proveedor": "Fausto",
+      "totalCompra": 20000
     }
   ]
 }

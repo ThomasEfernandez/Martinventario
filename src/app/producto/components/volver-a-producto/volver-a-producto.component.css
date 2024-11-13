@@ -7,16 +7,16 @@
 }
 
 .botoncito-volver{
-  padding: 0.5rem;
+    padding: 0.5rem;
     border: 1px solid #222222;
     border-radius: 3px;
     background-color: #0099ff;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
+    align-items: end;
     transition: 0,2;
     cursor: pointer;
-    color: white;
+    color: black;
 
     transition: background-color 2s ease, transform 2s ease;
   }
