@@ -1,5 +1,4 @@
 <div>
-    <button type="button" routerLink="/admin" class="boton-volver" id="volver">Volver</button>
   <table>
     <thead>
       <tr>
@@ -19,11 +18,15 @@
         <td>{{ proveedor.cuit }}</td>
         <td>{{ proveedor.email }}</td>
         <td>
-          <button class="boton-eliminar" (click)="eliminarProveedor(proveedor.id)">Eliminar</button>
+          <button
+            class="boton-eliminar"
+            (click)="eliminarProveedor(proveedor.id)"
+          >
+            Eliminar
+          </button>
         </td>
       </tr>
       }
     </tbody>
   </table>
-
 </div>

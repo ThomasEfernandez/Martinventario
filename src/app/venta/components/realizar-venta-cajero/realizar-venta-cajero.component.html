@@ -1,5 +1,22 @@
-<!-- <form (ngSubmit)="onSubmit()" #form="ngForm">
-  <label for="fecha">Fecha</label>
-  <p>{{fecha}}</p>
-
-</form> -->
+<form [formGroup]="formulario" (ngSubmit)="agregarVenta()">
+<label >Producto: </label>
+@if (formulario.controls["producto"].getError("required") && formulario.controls["producto"].touched) {
+  <small>Campo requerido</small>
+}
+<select id="producto" formControlName="producto">
+  @for (item of listaProductos; track $index) {
+    <option value="item.nombreProducto">{{item.nombreProducto}}</option>
+  }
+</select>
+<label>Cantidad</label>
+@if (formulario.controls["cantidad"].getError("required") && formulario.controls["cantidad"].touched) {
+  <small>Campo requerido</small>
+}
+@if (formulario.controls["cantidad"].getError("min") && formulario.controls["cantidad"].touched) {
+  <small>minimo requerido</small>
+}
+@if (formulario.controls["cantidad"].getError("max") && formulario.controls["cantidad"].touched) {
+  <small>Stock insuficiente</small>
+}
+<input type="number" formControlName="cantidad">
+</form>
