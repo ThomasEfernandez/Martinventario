@@ -1,3 +1,25 @@
 <app-navbar-admin></app-navbar-admin>
 <app-menu-proveedor></app-menu-proveedor>
 <app-listar-proveedores></app-listar-proveedores>
+
+<!-- <div class="proveedor-menu">
+  <h2>Gestión de Proveedores</h2>
+
+  <div *ngIf="mostrarMenu">
+      <div class="button-container">
+          <button (click)="seleccionarOpcion('agregar')">Agregar Proveedor</button>
+          <button (click)="seleccionarOpcion('listar')">Listar Proveedores</button>
+      </div>
+  </div>
+
+  <ng-container *ngIf="opcionSeleccionada === 'agregar'">
+    <app-agregar-proveedor-admin></app-agregar-proveedor-admin>
+  </ng-container>
+
+  <ng-container *ngIf="opcionSeleccionada === 'listar'">
+    <app-listar-proveedores></app-listar-proveedores>
+  </ng-container>
+  <ng-container *ngIf="opcionSeleccionada">
+      <button (click)="volverAMenu()">Volver al Menú</button>
+  </ng-container>
+</div> -->
