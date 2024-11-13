@@ -29,6 +29,17 @@
             </tbody>
           </table>
         </td>
+        <td>
+          <button [routerLink]="['/', categoria.id]">Ver detalle</button>
+        </td>
+        <td>
+          @if (categoria.estado) {
+          <button (click)="desactivarCategoria(categoria.id)">Desactivar</button>
+          }
+          @else {
+          <button (click)="activarCategoria(categoria.id)">Activar</button>
+          }
+        </td>
       </tr>
       }
     </tbody>
