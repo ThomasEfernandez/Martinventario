@@ -44,23 +44,25 @@ export class RealizarVentaCajeroComponent {
 
   agregarVentaService(venta: Venta) {
     this.ventasService.postVenta(venta).subscribe();
-    venta.productos.forEach((aux)=>{this.modificarStock(aux.cantidad,aux.elProducto.id)})
+    venta.productos.forEach((aux) => {
+      this.modificarStock(aux.cantidad, aux.elProducto.id);
+    });
   }
 
   modificarStock(cantidad: number, id: number) {
     this.prodService.getProductoById(id).subscribe({
       next: (aux: Producto) => {
-        aux.cantidad = aux.cantidad-cantidad
+        aux.cantidad = aux.cantidad - cantidad;
         this.prodService.putProducto(aux.id, aux).subscribe({
-          next: () => { },
+          next: () => {},
           error(e: Error) {
             console.log(e.message);
-          }
-        })
+          },
+        });
       },
       error(e: Error) {
         console.log(e.message);
-      }
-    })
+      },
+    });
   }
 }
