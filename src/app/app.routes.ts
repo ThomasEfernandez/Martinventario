@@ -29,12 +29,14 @@ import { PaginaEliminarCategoriaAdminComponent } from './admin/pages/pagina-elim
 import { PaginaEliminarEtiquetaAdminComponent } from './admin/pages/pagina-eliminar-etiqueta-admin/pagina-eliminar-etiqueta-admin.component';
 import { PaginaEliminarCategoriaRepositorComponent } from './repositor/pages/pagina-eliminar-categoria-repositor/pagina-eliminar-categoria-repositor.component';
 import { authGuardFn } from './auth/guard/auth.guard-fn';
+import { VerDetalleComponent } from './ver-detalles/ver-detalle/ver-detalle.component';
 
 export const routes: Routes = [
   {
     path: '',
     component: PaginaIniciarSesionComponent,
   },
+  /*Admin*/
   {
     path: 'admin',
     component: PaginaPrincipalAdminComponent,
@@ -95,6 +97,7 @@ export const routes: Routes = [
     component: PaginaEliminarEtiquetaAdminComponent,
     // canActivate: [authGuardFn],
   },
+  /*Repositor*/
   {
     path: 'repositores',
     component: PaginaPrincipalRepositorComponent,
@@ -145,6 +148,7 @@ export const routes: Routes = [
     component: PaginaEliminarEtiquetaRepositorComponent,
     // canActivate: [authGuardFn],
   },
+  /*Cajero*/
   {
     path: 'cajeros',
     component: PaginaCajeroComponent,
