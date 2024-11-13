@@ -3,6 +3,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UsuarioService } from '../../../usuario/services/usuario.service';
 import { Usuario } from '../../../usuario/interfaces/usuario.interface';
 import { Router, RouterModule } from '@angular/router';
+import { AuthService } from 'app/auth/service/auth.service';
 
 @Component({
   selector: 'app-iniciar-sesion',
@@ -27,12 +28,14 @@ export class IniciarSesionComponent {
   });
 
   usuarioService = inject(UsuarioService);
+  authService = inject(AuthService);
 
   iniciarSesion() {
     if (this.formulario.invalid) return;
     const sesion = this.formulario.getRawValue();
     const user = this.buscarUsuario(sesion);
     if (user) {
+      this.authService.logIn();
       switch (user.tipo) {
         case 'admin':
           console.log(user.tipo);
