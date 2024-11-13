@@ -1,9 +1,12 @@
-import { Producto } from '../../producto/interfaces/producto.interface';
-
+import { Producto } from './../../producto/interfaces/producto.interface';
+import { Cajero } from '../../cajero/interfaces/cajero.interface';
 export interface Venta {
   id: number;
   total: number;
   fecha: Date;
   cajero: number;
-  producto: Producto[];
+  productos: {
+    elProducto: Producto,
+    cantidad: number
+  }[]
 }
