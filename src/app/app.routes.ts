@@ -29,6 +29,9 @@ import { PaginaVerDetalleCategoriaAdminComponent } from './admin/pages/pagina-ve
 import { PaginaVentasAdminComponent } from './admin/pages/pagina-ventas-admin/pagina-ventas-admin.component';
 import { PaginaCajerosAdminComponent } from './admin/pages/pagina-cajeros-admin/pagina-cajeros-admin.component';
 import { PaginaGenerarVentaAdminComponent } from './admin/pages/pagina-generar-venta-admin/pagina-generar-venta-admin.component';
+import { PaginaAgregarCajeroAdminComponent } from './admin/pages/pagina-agregar-cajero-admin/pagina-agregar-cajero-admin.component';
+import { PaginaRepositoresAdminComponent } from './admin/pages/pagina-repositores-admin/pagina-repositores-admin.component';
+import { PaginaAgregarRepositorAdminComponent } from './admin/pages/pagina-agregar-repositor-admin/pagina-agregar-repositor-admin.component';
 
 export const routes: Routes = [
   {
@@ -103,6 +106,18 @@ export const routes: Routes = [
   {
     path: 'admin/cajeros',
     component: PaginaCajerosAdminComponent,
+  },
+  {
+    path: 'admin/cajero/agregar',
+    component: PaginaAgregarCajeroAdminComponent,
+  },
+  {
+    path: 'admin/repositores',
+    component: PaginaRepositoresAdminComponent,
+  },
+  {
+    path: 'admin/repositor/agregar',
+    component: PaginaAgregarRepositorAdminComponent,
   },
   /*Repositor*/
   {
