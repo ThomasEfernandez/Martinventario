@@ -3,19 +3,19 @@
     <thead>
       <th class="columna-id">Id</th>
       <th class="columna-categoria">Categoria</th>
-      <th class="columna-etiquetas">
+      <!-- <th class="columna-etiquetas">
         <table id="tabla-th">
           <th class="columna-etiqueta-id">Id</th>
           <th class="columna-etiqueta-nombre">Etiqueta</th>
         </table>
-      </th>
+      </th> -->
     </thead>
     <tbody>
       @for(categoria of listaCategorias; track $index) {
       <tr>
         <td>{{ categoria.id }}</td>
         <td>{{ categoria.nombreCategoria }}</td>
-        <td class="tdEtiquetas">
+        <!-- <td class="tdEtiquetas">
           <table id="tabla-etiquetas">
             <tbody>
               @for (etiqueta of categoria.etiquetas; track $index) {
@@ -28,7 +28,7 @@
               }
             </tbody>
           </table>
-        </td>
+        </td> -->
         <td>
           <button [routerLink]="['/admin/categoria/ver-detalle', categoria.id]">Ver detalle</button>
         </td>
