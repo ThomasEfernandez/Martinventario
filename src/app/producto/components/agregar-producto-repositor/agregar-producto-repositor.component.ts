@@ -35,7 +35,7 @@ export class AgregarProductoRepositorComponent {
   productoAgregado: boolean = false;
 
   formulario = this.fb.nonNullable.group({
-    id: [0],
+    id: [''],
     nombreProducto: ['', [Validators.required, Validators.minLength(1)]],
     marca: ['', [Validators.required]],
     proveedor: ['', Validators.required],
@@ -51,7 +51,7 @@ export class AgregarProductoRepositorComponent {
       const producto = this.formulario.getRawValue();
       this.productoService.getProductos().subscribe({
         next: (productos: Producto[]) => {
-          producto.id = productos.length + 1;
+          producto.id = `${productos.length + 1}`;
           this.emitirProducto.emit(producto);
           this.agregarProductoService(producto);
           this.productoAgregado = true;

@@ -1,5 +1,5 @@
 export interface Repositor {
-  id: number;
+  id: string;
   nombreRepositor: string;
   usuario: string;
   contrasena: string;

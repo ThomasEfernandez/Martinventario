@@ -29,7 +29,7 @@ export class ListarProveedorComponent {
     this.listar();
   }
 
-  eliminarProveedor(id: number) {
+  eliminarProveedor(id: string) {
     this.proveedorService.deleteProveedor(id).subscribe({
       next: () => {
         this.listar();

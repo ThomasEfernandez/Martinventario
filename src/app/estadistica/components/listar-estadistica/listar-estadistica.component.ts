@@ -3,8 +3,9 @@ import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
 import { Producto } from 'app/producto/interfaces/producto.interface';
 import { ProductoService } from 'app/producto/services/producto.service';
-import { Usuario } from 'app/usuario/interfaces/usuario.interface';
+import { Usuario } from 'app/usuario/interfaces/Usuario.interface';
 import { UsuarioService } from 'app/usuario/services/usuario.service';
+
 
 @Component({
   selector: 'app-listar-estadistica',

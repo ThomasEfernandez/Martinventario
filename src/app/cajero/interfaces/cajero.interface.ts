@@ -1,5 +1,5 @@
 export interface Cajero {
-  id: number;
+  id: string;
   usuario: string;
   contrasena: string;
   nroCaja: number;
