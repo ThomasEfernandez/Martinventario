@@ -27,6 +27,7 @@ import { PaginaCajeroComponent } from './cajero/pages/pagina-cajero/pagina-cajer
 import { authGuardFn } from './auth/guard/auth.guard-fn';
 import { PaginaVerDetalleCategoriaAdminComponent } from './admin/pages/pagina-ver-detalle-categoria-admin/pagina-ver-detalle-categoria-admin.component';
 import { PaginaVentasAdminComponent } from './admin/pages/pagina-ventas-admin/pagina-ventas-admin.component';
+import { PaginaDetallesVentaComponent } from './admin/pages/pagina-detalles-venta/pagina-detalles-venta.component';
 import { PaginaCajerosAdminComponent } from './admin/pages/pagina-cajeros-admin/pagina-cajeros-admin.component';
 import { PaginaGenerarVentaAdminComponent } from './admin/pages/pagina-generar-venta-admin/pagina-generar-venta-admin.component';
 
@@ -97,6 +98,11 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
+    path:'admin/ver-detalles',
+    component:PaginaDetallesVentaComponent
+  },
+  {
+    // canActivate: [authGuardFn],
     path: 'admin/generar-ventas',
     component: PaginaGenerarVentaAdminComponent,
   },
