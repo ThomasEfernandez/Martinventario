@@ -28,6 +28,7 @@ import { authGuardFn } from './auth/guard/auth.guard-fn';
 import { VerDetalleComponent } from './ver-detalles/ver-detalle/ver-detalle.component';
 import { PaginaVerDetalleCategoriaAdminComponent } from './admin/pages/pagina-ver-detalle-categoria-admin/pagina-ver-detalle-categoria-admin.component';
 import { PaginaVentasAdminComponent } from './admin/pages/pagina-ventas-admin/pagina-ventas-admin.component';
+import { PaginaDetallesVentaComponent } from './admin/pages/pagina-detalles-venta/pagina-detalles-venta.component';
 
 export const routes: Routes = [
   {
@@ -93,6 +94,11 @@ export const routes: Routes = [
   {
     path:'admin/ventas',
     component:PaginaVentasAdminComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
+    path:'admin/ver-detalles',
+    component:PaginaDetallesVentaComponent
     // canActivate: [authGuardFn],
   },
   /*Repositor*/

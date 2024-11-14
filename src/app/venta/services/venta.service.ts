@@ -18,7 +18,7 @@ export class VentaService {
     return this.http.get<Venta[]>(this.urlBase);
   }
 
-  getVentaById(id: string): Observable<Venta> {
+  getVentaById(id: string | null): Observable<Venta> {
     return this.http.get<Venta>(`${this.urlBase}/${id}`);
   }
 }
