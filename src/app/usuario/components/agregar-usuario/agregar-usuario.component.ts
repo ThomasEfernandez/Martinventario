@@ -17,9 +17,12 @@ export class AgregarUsuarioComponent {
 
   formulario = this.fb.nonNullable.group({
     id: [''],
+    nombre: ['', [Validators.required]],
+    apellido: ['', [Validators.required]],
     usuario: ['', [Validators.required, Validators.minLength(4)]],
     contrasena: ['', [Validators.required, Validators.minLength(4)]],
     tipo: [''],
+    estado: [true],
   });
 
   usuarioService = inject(UsuarioService);
