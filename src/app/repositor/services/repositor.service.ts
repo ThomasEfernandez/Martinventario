@@ -14,7 +14,7 @@ export class RepositorService {
     return this.http.get<Repositor[]>(this.url);
   }
 
-  getRepositorById(id: number): Observable<Repositor> {
+  getRepositorById(id: string): Observable<Repositor> {
     return this.http.get<Repositor>(`${this.url}/${id}`);
   }
 
@@ -22,15 +22,15 @@ export class RepositorService {
     return this.http.post<Repositor>(this.url, repositor);
   }
 
-  deleteRepositor(id: number): Observable<void> {
+  deleteRepositor(id: string): Observable<void> {
     return this.http.delete<void>(`${this.url}/${id}`);
   }
 
-  putRepositor(id: number, repositor: Repositor): Observable<Repositor> {
+  putRepositor(id: string, repositor: Repositor): Observable<Repositor> {
     return this.http.put<Repositor>(`${this.url}/${id}`, repositor);
   }
 
-  patchRepositor(id: number, repositor: Repositor): Observable<Repositor> {
+  patchRepositor(id: string, repositor: Repositor): Observable<Repositor> {
     return this.http.patch<Repositor>(`${this.url}/${id}`, repositor);
   }
 }

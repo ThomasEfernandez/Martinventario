@@ -1,4 +1,3 @@
-import { PaginaEliminarEtiquetaRepositorComponent } from './repositor/pages/pagina-eliminar-etiqueta-repositor/pagina-eliminar-etiqueta-repositor.component';
 import { Routes } from '@angular/router';
 import { PaginaIniciarSesionComponent } from './sesion/pages/pagina-iniciar-sesion/pagina-iniciar-sesion.component';
 
@@ -25,16 +24,16 @@ import { PaginaAgregarEtiquetaRepositorComponent } from './repositor/pages/pagin
 import { PaginaPedidoComponent } from './compra/pages/pagina-pedido/pagina-pedido.component';
 
 import { PaginaCajeroComponent } from './cajero/pages/pagina-cajero/pagina-cajero.component';
-import { PaginaEliminarCategoriaAdminComponent } from './admin/pages/pagina-eliminar-categoria-admin/pagina-eliminar-categoria-admin.component';
-import { PaginaEliminarEtiquetaAdminComponent } from './admin/pages/pagina-eliminar-etiqueta-admin/pagina-eliminar-etiqueta-admin.component';
-import { PaginaEliminarCategoriaRepositorComponent } from './repositor/pages/pagina-eliminar-categoria-repositor/pagina-eliminar-categoria-repositor.component';
 import { authGuardFn } from './auth/guard/auth.guard-fn';
+import { VerDetalleComponent } from './ver-detalles/ver-detalle/ver-detalle.component';
+import { PaginaVerDetalleCategoriaAdminComponent } from './admin/pages/pagina-ver-detalle-categoria-admin/pagina-ver-detalle-categoria-admin.component';
 
 export const routes: Routes = [
   {
     path: '',
     component: PaginaIniciarSesionComponent,
   },
+  /*Admin*/
   {
     path: 'admin',
     component: PaginaPrincipalAdminComponent,
@@ -81,8 +80,8 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/categorias/eliminar',
-    component: PaginaEliminarCategoriaAdminComponent,
+    path: 'admin/categoria/ver-detalle/:id',
+    component: PaginaVerDetalleCategoriaAdminComponent,
     // canActivate: [authGuardFn],
   },
   {
@@ -90,11 +89,7 @@ export const routes: Routes = [
     component: PaginaAgregarEtiquetaAdminComponent,
     // canActivate: [authGuardFn],
   },
-  {
-    path: 'admin/etiquetas/eliminar',
-    component: PaginaEliminarEtiquetaAdminComponent,
-    // canActivate: [authGuardFn],
-  },
+  /*Repositor*/
   {
     path: 'repositores',
     component: PaginaPrincipalRepositorComponent,
@@ -131,20 +126,11 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path: 'repositor/categorias/eliminar',
-    component: PaginaEliminarCategoriaRepositorComponent,
-    // canActivate: [authGuardFn],
-  },
-  {
     path: 'repositor/etiquetas/agregar',
     component: PaginaAgregarEtiquetaRepositorComponent,
     // canActivate: [authGuardFn],
   },
-  {
-    path: 'repositor/etiquetas/eliminar',
-    component: PaginaEliminarEtiquetaRepositorComponent,
-    // canActivate: [authGuardFn],
-  },
+  /*Cajero*/
   {
     path: 'cajeros',
     component: PaginaCajeroComponent,

@@ -23,12 +23,12 @@ export class AgregarEtiquetaAdminComponent {
 
   listaEtiquetas: Etiqueta[] | undefined = [];
 
-  categoria: number | undefined = 0;
+  categoria: string | null = '';
 
   etiquetaAgregada: boolean = false;
 
   formulario = this.fb.nonNullable.group({
-    id: [0],
+    id: [''],
     nombreEtiqueta: ['', Validators.required],
     nombreCategoria: ['', Validators.required],
     estado: [true, [Validators.required]],
@@ -40,10 +40,12 @@ export class AgregarEtiquetaAdminComponent {
       this.categoriaService.getCategoriaById(this.categoria).subscribe({
         next: (categoria: Categoria) => {
           let e = {
-            id: categoria.etiquetas.length + 1,
+            id: `${categoria.etiquetas.length + 1}`,
             nombreEtiqueta: etiqueta.nombreEtiqueta,
             estado: etiqueta.estado,
           };
+          console.log(e);
+
           categoria.etiquetas.push(e);
           this.emitirEtiqueta.emit(etiqueta);
           this.agregarEtiquetaService(categoria);
@@ -80,7 +82,9 @@ export class AgregarEtiquetaAdminComponent {
       const categoria = this.listaCategorias.find(
         (c) => c.nombreCategoria === select.value
       );
-      this.categoria = categoria?.id;
+      if (categoria) {
+        this.categoria = categoria.id;
+      }
     });
   }
 }

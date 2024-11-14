@@ -46,6 +46,7 @@ export class ListarPedidosComponent {
       });
     }
   }
+
   pedidoNoRealizado(id: string | undefined) {
     const encontrado = this.listaPedidos.find((e) => e.id === id);
     this.ped = encontrado;

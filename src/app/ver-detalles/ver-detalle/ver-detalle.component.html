@@ -1,0 +1,27 @@
+<table>
+  <!-- <label for="">{{cat.nombreCategoria}}</label> -->
+  <thead>
+    <tr>
+      <th class="columna-etiqueta-id">Id</th>
+      <th class="columna-etiquetas">Etiqueta</th>
+      <th class="columna-estado">Estado</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (etiqueta of arrEtiquetas; track $index) {
+    <tr>
+      <td>{{etiqueta.id}}</td>
+      <td>{{etiqueta.nombreEtiqueta}}</td>
+      <td>
+        @if(etiqueta.estado) {
+        <button id="boton" (click)="desactivarEtiqueta(etiqueta.id)">Desactivar</button>
+        } @else {
+        <button id="boton" (click)="activarEtiqueta(etiqueta.id)">Activar</button>
+        }
+      </td>
+    </tr>
+    }
+
+  </tbody>
+</table>

@@ -22,7 +22,7 @@ export class AgregarProveedorAdminComponent {
   proveedorAgregado: boolean = false;
 
   formulario = this.fb.nonNullable.group({
-    id: [0],
+    id: [''],
     nombre: ['', Validators.required],
     apellido: ['', Validators.required],
     razonSocial: ['', Validators.required],
@@ -35,7 +35,7 @@ export class AgregarProveedorAdminComponent {
       const proveedor = this.formulario.getRawValue();
       this.proveedorService.getProveedores().subscribe({
         next: (proveedores: Proveedor[]) => {
-          proveedor.id = proveedores.length + 1;
+          proveedor.id = `${proveedores.length + 1}`;
           this.emitirProveedor.emit(proveedor);
           this.agregarProveedorService(proveedor);
           this.proveedorAgregado = true;

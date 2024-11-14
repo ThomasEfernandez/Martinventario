@@ -6,7 +6,6 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Pedido } from '../../interfaces/pedido.interface';
 
-
 @Component({
   selector: 'app-realizar-pedido',
   standalone: true,
@@ -14,8 +13,7 @@ import { Pedido } from '../../interfaces/pedido.interface';
   templateUrl: './realizar-pedido.component.html',
   styleUrl: './realizar-pedido.component.css',
 })
-export class RealizarPedidoComponent implements OnInit{
-  
+export class RealizarPedidoComponent implements OnInit {
   ngOnInit(): void {
     this.realizarCompra();
   }
@@ -28,8 +26,8 @@ export class RealizarPedidoComponent implements OnInit{
   pedidoService = inject(PedidoService);
 
   formulario = this.fb.nonNullable.group({
-    id: [0],
-    idProducto: [0, [Validators.required]],
+    id: [''],
+    idProducto: ['', [Validators.required]],
     cantidad: [0, [Validators.required, Validators.min(1)]],
     proveedor: [''],
     totalCompra: [0],
@@ -44,13 +42,13 @@ export class RealizarPedidoComponent implements OnInit{
       next: (producto: Producto) => {
         this.pedidoService.getPedidos().subscribe({
           next: (ps: Pedido[]) => {
-            pedido.id = ps.length + 1;
+            pedido.id = `${ps.length + 1}`;
             pedido.proveedor = producto.proveedor;
             pedido.totalCompra = pedido.cantidad * producto.precioCompra;
             this.emitirPedido.emit(pedido);
             this.agregarPedidoService(pedido);
-           
-            this.actualizarCantidadService(producto,pedido.cantidad)
+
+            this.actualizarCantidadService(producto, pedido.cantidad);
             console.log(pedido);
           },
         });
@@ -65,25 +63,16 @@ export class RealizarPedidoComponent implements OnInit{
       },
     });
   }
-  actualizarCantidadService (producto:Producto,cantidad:number){
+  actualizarCantidadService(producto: Producto, cantidad: number) {
     this.productoService.getProductoById(producto.id).subscribe({
-      next:(p:Producto)=>{
-        p.cantidad = p.cantidad+cantidad;
-        this.productoService.patchProducto(p.id,p).subscribe({
-     
-          error:(error:Error)=>{
+      next: (p: Producto) => {
+        p.cantidad = p.cantidad + cantidad;
+        this.productoService.patchProducto(p.id, p).subscribe({
+          error: (error: Error) => {
             console.log(error.message);
-            
-          }
+          },
         });
-
-      }
-    })
-
-
-
-
-  
-
+      },
+    });
   }
 }
