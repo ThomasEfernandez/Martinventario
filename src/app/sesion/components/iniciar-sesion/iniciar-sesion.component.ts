@@ -21,7 +21,7 @@ export class IniciarSesionComponent {
   fb = inject(FormBuilder);
 
   formulario = this.fb.nonNullable.group({
-    id: [0],
+    id: [''],
     usuario: ['', [Validators.required]],
     contrasena: ['', [Validators.required]],
     tipo: [''],
