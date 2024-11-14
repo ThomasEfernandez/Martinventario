@@ -50,7 +50,6 @@ export class IniciarSesionComponent {
           break;
         case 'cajero':
           console.log(user.tipo);
-          this.router.navigate(['/cajeros']);
           break;
       }
     } else {

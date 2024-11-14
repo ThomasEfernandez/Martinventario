@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
-import { NavbarDefaultRepositorComponent } from '../../../nav/components/navbar-default-repositor/navbar-default-repositor.component';
+import { NavbarRepositorComponent } from '../../../nav/components/navbar-repositor/navbar-repositor.component';
 import { AgregarCategoriaRepositorComponent } from '../../../categoria/components/agregar-categoria-repositor/agregar-categoria-repositor.component';
 
 @Component({
   selector: 'app-pagina-agregar-categoria-repositor',
   standalone: true,
-  imports: [
-    NavbarDefaultRepositorComponent,
-    AgregarCategoriaRepositorComponent,
-  ],
+  imports: [NavbarRepositorComponent, AgregarCategoriaRepositorComponent],
   templateUrl: './pagina-agregar-categoria-repositor.component.html',
   styleUrl: './pagina-agregar-categoria-repositor.component.css',
 })

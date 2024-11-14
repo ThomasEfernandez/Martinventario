@@ -41,6 +41,7 @@ select {
 button {
   margin-top: 1%;
   padding: 1.5% 2%;
+  font-weight: bold;
   border: 1px solid #222222;
   border-radius: 3px;
   background-color: #0099ff;

@@ -1,5 +1,5 @@
 div {
-  padding: 20px;
+  padding: 1%;
 }
 table {
   width: 100%;
@@ -11,7 +11,7 @@ thead {
 }
 th,
 td {
-  padding: 12px;
+  padding: 0.75%;
   border: 1px solid #dddddd;
   text-align: left;
 }
@@ -21,7 +21,32 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
   background-color: #d3e3fc;
 }
-td,
-th {
-  min-width: 100px;
+.columna-nombre {
+  width: 10%;
+}
+.columna-apellido {
+  width: 10%;
+}
+.columna-razonSocial {
+  width: 25%;
+}
+.columna-cuit {
+  width: 10%;
+}
+.columna-email {
+  width: 35%;
+}
+.columna-eliminar {
+  width: 10%;
+}
+button {
+  font-weight: bold;
+  padding: 5%;
+  background-color: #ee4444;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #ee6666;
 }
