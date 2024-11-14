@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Fecha:</th>
+      <th>Producto:</th>
+      <th>Cantidad:</th>
+      <th>Total:</th>
+    </tr>
+  </thead>
+<tbody>
+@for (item of listaVentas; track $index) {
+  <tr>
+  <td>{{item.fecha}}</td>
+  <td>{{item.producto}}</td>
+  <td>{{item.cantidad}}</td>
+  <td>{{item.total}}</td>
+  </tr>
+}
+</tbody>
+</table>
