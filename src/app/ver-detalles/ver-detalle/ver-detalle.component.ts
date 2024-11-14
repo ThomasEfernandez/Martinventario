@@ -1,3 +1,4 @@
+import { AddEventListenerOptions } from './../../../../node_modules/undici-types/patch.d';
 import { Component, inject, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
@@ -12,34 +13,92 @@ import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
   styleUrl: './ver-detalle.component.css',
 })
 export class VerDetalleComponent {
-  listaCategorias: Categoria[] = [];
-
   categoriaService = inject(CategoriaService);
-  cat: Categoria | undefined = {
-    id: 0,
-    nombreCategoria: '',
+  catArreglo: Categoria[] = [];
+  arrEtiquetas: Etiqueta[] = [];
+  router = inject(ActivatedRoute);
+  id: string | null = '';
+
+  eti: Etiqueta | undefined = {
+    id: '',
+    nombreEtiqueta: '',
     estado: false,
-    etiquetas: [],
   };
 
-  activarEtiqueta(id: number | undefined) {
-    const categoria = this.listaCategorias.find((e) => e.id === id);
-    this.cat = categoria;
+  ngOnInit(): void {
+    document.getElementById('boton')?.addEventListener('click', () => {
+      this.listarEtiqueta(this.id);
+    });
+    this.router.paramMap.subscribe((params) => {
+      this.id = params.get('id');
+      this.listarEtiqueta(this.id);
+      this.listarCategoria();
+    });
+  }
 
-    if (this.cat) {
-      this.cat.etiquetas.forEach((e) => {
+  listarEtiqueta(id: string | null) {
+    this.categoriaService.getCategoriaById(id).subscribe({
+      next: (aux: Categoria) => {
+        this.arrEtiquetas = aux.etiquetas;
+        console.log(this.arrEtiquetas);
+      },
+      error: (err: Error) => {
+        console.log(err.message);
+      },
+    });
+  }
+
+  listarCategoria() {
+    this.categoriaService.getCategorias().subscribe({
+      next: (categoria: Categoria[]) => {
+        this.catArreglo = categoria;
+      },
+      error: (err: Error) => {
+        console.log(err.message);
+      },
+    });
+  }
+
+  activarEtiqueta(id: string | null) {
+    const cat = this.catArreglo.find((c) => c.id === this.id);
+    cat?.etiquetas.forEach((e) => {
+      if (e.id === id) {
         e.estado = true;
+        this.arrEtiquetas.forEach((e) => {
+          if (e.id === id) {
+            e.estado = true;
+          }
+        });
+      }
+    });
+
+    if (cat?.id) {
+      this.categoriaService.putCategoria(cat?.id, cat).subscribe({
+        error: (err: Error) => {
+          console.log(err.message);
+        },
       });
     }
   }
 
-  desactivarEtiqueta(id: number | undefined) {
-    const categoria = this.listaCategorias.find((e) => e.id === id);
-    this.cat = categoria;
-
-    if (this.cat) {
-      this.cat.etiquetas.forEach((e) => {
+  desactivarEtiqueta(id: string | null) {
+    const cat = this.catArreglo.find((c) => c.id === this.id);
+    cat?.etiquetas.forEach((e) => {
+      if (e.id === id) {
         e.estado = false;
+        this.arrEtiquetas.forEach((e) => {
+          if (e.id === id) {
+            e.estado = true;
+          }
+        });
+      }
+    });
+
+    if (cat?.id) {
+      this.categoriaService.putCategoria(cat?.id, cat).subscribe({
+        error: (err: Error) => {
+          console.log(err.message);
+        },
       });
     }
   }

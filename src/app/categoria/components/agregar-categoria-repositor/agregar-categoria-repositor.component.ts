@@ -21,7 +21,7 @@ export class AgregarCategoriaRepositorComponent {
   categoriaAgregada: boolean = false;
 
   formulario = this.fb.nonNullable.group({
-    id: [0],
+    id: [''],
     nombreCategoria: ['', Validators.required],
     estado: [true, [Validators.required]],
     etiquetas: [[]],
@@ -32,7 +32,7 @@ export class AgregarCategoriaRepositorComponent {
       const categoria = this.formulario.getRawValue();
       this.categoriaService.getCategorias().subscribe({
         next: (categorias: Categoria[]) => {
-          categoria.id = categorias.length + 1;
+          categoria.id = `${categorias.length + 1}`;
           this.emitirCategoria.emit(categoria);
           this.agregarCategoriaService(categoria);
           this.categoriaAgregada = true;
