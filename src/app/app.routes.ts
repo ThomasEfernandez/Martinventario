@@ -27,6 +27,7 @@ import { PaginaCajeroComponent } from './cajero/pages/pagina-cajero/pagina-cajer
 import { authGuardFn } from './auth/guard/auth.guard-fn';
 import { VerDetalleComponent } from './ver-detalles/ver-detalle/ver-detalle.component';
 import { PaginaVerDetalleCategoriaAdminComponent } from './admin/pages/pagina-ver-detalle-categoria-admin/pagina-ver-detalle-categoria-admin.component';
+import { PaginaVentasAdminComponent } from './admin/pages/pagina-ventas-admin/pagina-ventas-admin.component';
 
 export const routes: Routes = [
   {
@@ -87,6 +88,11 @@ export const routes: Routes = [
   {
     path: 'admin/etiquetas/agregar',
     component: PaginaAgregarEtiquetaAdminComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
+    path:'admin/ventas',
+    component:PaginaVentasAdminComponent,
     // canActivate: [authGuardFn],
   },
   /*Repositor*/
