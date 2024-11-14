@@ -13,10 +13,14 @@
   <div class="botones">
     @if(categoriaAgregada){
     <small class="exito">Categoria agregada</small>
-    <button type="button" id="volver" routerLink="/admin/categorias">
+    <button type="button" id="volver" routerLink="/repositor/categorias">
       Volver
     </button>
-    } @else {<button type="button" id="cancelar" routerLink="/admin/categorias">
+    } @else {<button
+      type="button"
+      id="cancelar"
+      routerLink="/repositor/categorias"
+    >
       Cancelar
     </button>
     <button type="submit" id="agregar">Agregar categoria</button>}

@@ -34,12 +34,12 @@ tbody tr:hover {
   width: 10%;
 }
 .columna-email {
-  width: 40%;
+  width: 35%;
 }
 .columna-eliminar {
-  width: 5%;
+  width: 10%;
 }
-.eliminar {
+button {
   font-weight: bold;
   padding: 5%;
   background-color: #ee4444;
@@ -47,6 +47,6 @@ tbody tr:hover {
   border-radius: 5px;
   cursor: pointer;
 }
-.eliminar:hover {
+button:hover {
   background-color: #ee6666;
 }

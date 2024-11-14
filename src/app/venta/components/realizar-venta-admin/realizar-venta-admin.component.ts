@@ -10,11 +10,12 @@ import {
 } from '@angular/forms';
 import { VentaService } from '../../services/venta.service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-realizar-venta-admin',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, CommonModule],
+  imports: [ReactiveFormsModule, FormsModule, CommonModule, RouterModule],
   templateUrl: './realizar-venta-admin.component.html',
   styleUrl: './realizar-venta-admin.component.css',
 })

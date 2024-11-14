@@ -28,8 +28,11 @@
   <div class="botones">
     @if(ventaRealizada){
     <small class="exito">Venta realizada</small>
-    <button type="button" id="volver" routerLink="/admin">Volver</button>
-    } @else {<button type="button" id="cancelar" routerLink="/admin">
+    <button type="button" id="volver" routerLink="/cajero/ventas">
+      Volver
+    </button>
+    } @else {
+    <button type="button" id="cancelar" routerLink="/cajero/ventas">
       Cancelar
     </button>
     <button type="submit" id="agregar">Realizar venta</button>}

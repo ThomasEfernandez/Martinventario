@@ -21,9 +21,6 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
   background-color: #d3e3fc;
 }
-li {
-  list-style: none;
-}
 .columna-id {
   width: 10%;
 }

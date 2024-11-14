@@ -72,7 +72,7 @@
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Fausto",
-      "cantidad": 42,
+      "cantidad": 39,
       "precioCompra": 2000,
       "precioVenta": 2500,
       "categoria": "Bebidas",
@@ -306,6 +306,22 @@
       "cajero": 0,
       "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "cantidad": 2
+    },
+    {
+      "id": "3",
+      "total": 5000,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 2
+    },
+    {
+      "id": "4",
+      "total": 2500,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 1
     }
   ],
   "pedidos": [
