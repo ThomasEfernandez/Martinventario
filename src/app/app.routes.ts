@@ -7,7 +7,7 @@ import { PaginaAgregarProveedorAdminComponent } from './admin/pages/pagina-agreg
 import { PaginaProductosAdminComponent } from './admin/pages/pagina-productos-admin/pagina-productos-admin.component';
 import { PaginaAgregarProductoAdminComponent } from './admin/pages/pagina-agregar-producto-admin/pagina-agregar-producto-admin.component';
 import { PaginaPedidosAdminComponent } from './admin/pages/pagina-pedidos-admin/pagina-pedidos-admin.component';
-import { PaginaAgregarPedidoAdminComponent } from './admin/pages/pagina-agregar-pedido/pagina-agregar-pedido-admin.component';
+import { PaginaAgregarPedidoAdminComponent } from './admin/pages/pagina-agregar-pedido-admin/pagina-agregar-pedido-admin.component';
 import { PaginaCategoriasAdminComponent } from './admin/pages/pagina-categorias-admin/pagina-categorias-admin.component';
 import { PaginaAgregarCategoriaAdminComponent } from './admin/pages/pagina-agregar-categoria-admin/pagina-agregar-categoria-admin.component';
 import { PaginaAgregarEtiquetaAdminComponent } from './admin/pages/pagina-agregar-etiqueta-admin/pagina-agregar-etiqueta-admin.component';
@@ -91,8 +91,8 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path:'admin/ventas',
-    component:PaginaVentasAdminComponent,
+    path: 'admin/ventas',
+    component: PaginaVentasAdminComponent,
     // canActivate: [authGuardFn],
   },
   /*Repositor*/

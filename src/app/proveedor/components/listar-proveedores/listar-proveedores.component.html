@@ -2,11 +2,12 @@
   <table>
     <thead>
       <tr>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Razón Social</th>
-        <th>CUIT</th>
-        <th>Email</th>
+        <th class="columna-nombre">Nombre</th>
+        <th class="columna-apellido">Apellido</th>
+        <th class="columna-razonSocial">Razón Social</th>
+        <th class="columna-cuit">CUIT</th>
+        <th class="columna-email">Email</th>
+        <th class="columna-eliminar">Eliminar</th>
       </tr>
     </thead>
     <tbody>
@@ -18,10 +19,7 @@
         <td>{{ proveedor.cuit }}</td>
         <td>{{ proveedor.email }}</td>
         <td>
-          <button
-            class="boton-eliminar"
-            (click)="eliminarProveedor(proveedor.id)"
-          >
+          <button class="eliminar" (click)="eliminarProveedor(proveedor.id)">
             Eliminar
           </button>
         </td>

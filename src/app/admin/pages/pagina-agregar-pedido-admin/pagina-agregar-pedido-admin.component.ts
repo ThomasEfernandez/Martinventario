@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navbar-admin.component';
-import { AgregarPedidoAdminComponent } from '../../../pedido/components/agregar-pedido/agregar-pedido-admin.component';
+import { AgregarPedidoAdminComponent } from '../../../pedido/components/agregar-pedido-admin/agregar-pedido-admin.component';
 
 @Component({
   selector: 'app-pagina-agregar-pedido-admin',
