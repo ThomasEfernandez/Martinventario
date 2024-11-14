@@ -27,11 +27,8 @@ li {
 .columna-id {
   width: 10%;
 }
-.columna-categoria {
-  width: 70%;
-}
-.columna-verDetalle {
-  width: 10%;
+.columna-etiqueta {
+  width: 80%;
 }
 .columna-estado {
   width: 10%;

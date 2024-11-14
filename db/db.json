@@ -240,7 +240,7 @@
     {
       "id": "6",
       "nombreCategoria": "Mascotas",
-      "estado": false,
+      "estado": true,
       "etiquetas": [
         {
           "id": "1",
@@ -297,6 +297,14 @@
       "producto": "a",
       "cantidad": 1,
       "razonSocialProveedor": "Agustin",
+      "estado": false
+    },
+    {
+      "id": "2",
+      "fecha": "14/10/2024",
+      "producto": "coca",
+      "cantidad": 1,
+      "razonSocialProveedor": "Fausto",
       "estado": false
     }
   ]

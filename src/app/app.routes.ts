@@ -69,6 +69,7 @@ export const routes: Routes = [
     component: PaginaAgregarPedidoAdminComponent,
     // canActivate: [authGuardFn],
   },
+
   {
     path: 'admin/categorias',
     component: PaginaCategoriasAdminComponent,
@@ -80,15 +81,17 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/categoria/ver-detalle/:id',
+    path: 'admin/categoria/:id',
     component: PaginaVerDetalleCategoriaAdminComponent,
     // canActivate: [authGuardFn],
   },
+
   {
     path: 'admin/etiquetas/agregar',
     component: PaginaAgregarEtiquetaAdminComponent,
     // canActivate: [authGuardFn],
   },
+
   {
     path: 'admin/ventas',
     component: PaginaVentasAdminComponent,
@@ -96,7 +99,7 @@ export const routes: Routes = [
   },
   /*Repositor*/
   {
-    path: 'repositores',
+    path: 'repositor',
     component: PaginaPrincipalRepositorComponent,
     // canActivate: [authGuardFn],
   },

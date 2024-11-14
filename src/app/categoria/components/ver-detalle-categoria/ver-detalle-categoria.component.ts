@@ -1,4 +1,4 @@
-import { AddEventListenerOptions } from './../../../../node_modules/undici-types/patch.d';
+import { AddEventListenerOptions } from 'undici-types/patch';
 import { Component, inject, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
@@ -6,13 +6,13 @@ import { CategoriaService } from 'app/categoria/services/categoria.service';
 import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
 
 @Component({
-  selector: 'app-ver-detalle',
+  selector: 'app-ver-detalle-categoria',
   standalone: true,
   imports: [],
-  templateUrl: './ver-detalle.component.html',
-  styleUrl: './ver-detalle.component.css',
+  templateUrl: './ver-detalle-categoria.component.html',
+  styleUrl: './ver-detalle-categoria.component.css',
 })
-export class VerDetalleComponent {
+export class VerDetalleCategoriaComponent {
   categoriaService = inject(CategoriaService);
   catArreglo: Categoria[] = [];
   arrEtiquetas: Etiqueta[] = [];
@@ -26,9 +26,6 @@ export class VerDetalleComponent {
   };
 
   ngOnInit(): void {
-    document.getElementById('boton')?.addEventListener('click', () => {
-      this.listarEtiqueta(this.id);
-    });
     this.router.paramMap.subscribe((params) => {
       this.id = params.get('id');
       this.listarEtiqueta(this.id);

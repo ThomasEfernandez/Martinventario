@@ -3,41 +3,31 @@
     <thead>
       <th class="columna-id">Id</th>
       <th class="columna-categoria">Categoria</th>
-      <!-- <th class="columna-etiquetas">
-        <table id="tabla-th">
-          <th class="columna-etiqueta-id">Id</th>
-          <th class="columna-etiqueta-nombre">Etiqueta</th>
-        </table>
-      </th> -->
+      <th class="columna-verDetalle">Detalle</th>
+      <th class="columna-estado">Estado</th>
     </thead>
     <tbody>
       @for(categoria of listaCategorias; track $index) {
       <tr>
         <td>{{ categoria.id }}</td>
         <td>{{ categoria.nombreCategoria }}</td>
-        <!-- <td class="tdEtiquetas">
-          <table id="tabla-etiquetas">
-            <tbody>
-              @for (etiqueta of categoria.etiquetas; track $index) {
-              <tr>
-                <td class="celda-etiqueta-id">{{ etiqueta.id }}</td>
-                <td class="celda-etiqueta-nombre">
-                  {{ etiqueta.nombreEtiqueta }}
-                </td>
-              </tr>
-              }
-            </tbody>
-          </table>
-        </td> -->
         <td>
-          <button [routerLink]="['/admin/categoria/ver-detalle', categoria.id]">Ver detalle</button>
+          <button [routerLink]="['/admin/categoria', categoria.id]">
+            Ver detalle
+          </button>
         </td>
         <td>
           @if (categoria.estado) {
-          <button (click)="desactivarCategoria(categoria.id)">Desactivar</button>
-          }
-          @else {
-          <button (click)="activarCategoria(categoria.id)">Activar</button>
+          <button
+            class="desactivar"
+            (click)="desactivarCategoria(categoria.id)"
+          >
+            Desactivar
+          </button>
+          } @else {
+          <button class="activar" (click)="activarCategoria(categoria.id)">
+            Activar
+          </button>
           }
         </td>
       </tr>
