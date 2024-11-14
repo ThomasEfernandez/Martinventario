@@ -51,10 +51,9 @@ import { PaginaPedidoComponent } from './compra/pages/pagina-pedido/pagina-pedid
 
 import { PaginaCajeroComponent } from './cajero/pages/pagina-cajero/pagina-cajero.component';
 import { authGuardFn } from './auth/guard/auth.guard-fn';
-import { PaginaVerDetalleCategoriaAdminComponent } from './admin/pages/pagina-ver-detalle-categoria-admin/pagina-ver-detalle-categoria-admin.component';
-import { PaginaVentasAdminComponent } from './admin/pages/pagina-ventas-admin/pagina-ventas-admin.component';
-import { PaginaCajerosAdminComponent } from './admin/pages/pagina-cajeros-admin/pagina-cajeros-admin.component';
-import { PaginaGenerarVentaAdminComponent } from './admin/pages/pagina-generar-venta-admin/pagina-generar-venta-admin.component';
+import { PaginaRepositoresAdminComponent } from './admin/pages/pagina-repositores-admin/pagina-repositores-admin.component';
+import { PaginaAgregarRepositorAdminComponent } from './admin/pages/pagina-agregar-repositor-admin/pagina-agregar-repositor-admin.component';
+import { PaginaAgregarCajeroAdminComponent } from './admin/pages/pagina-agregar-cajero-admin/pagina-agregar-cajero-admin.component';
 
 export const routes: Routes = [
   {
@@ -123,6 +122,11 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
+    path: 'admin/cajeros/agregar',
+    component: PaginaAgregarCajeroAdminComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
     path: 'admin/ventas',
     component: PaginaVentasAdminComponent,
     // canActivate: [authGuardFn],
@@ -135,6 +139,16 @@ export const routes: Routes = [
   {
     path: 'admin/venta/:id',
     component: PaginaVerDetalleVentaAdminComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
+    path: 'admin/repositores',
+    component: PaginaRepositoresAdminComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
+    path: 'admin/repositor/agregar',
+    component: PaginaAgregarRepositorAdminComponent,
     // canActivate: [authGuardFn],
   },
   /*Repositor*/

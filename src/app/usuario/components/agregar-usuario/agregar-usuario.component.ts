@@ -1,4 +1,4 @@
-import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 import { UsuarioService } from '../../services/usuario.service';
@@ -10,8 +10,8 @@ import { UsuarioService } from '../../services/usuario.service';
   styleUrl: './agregar-usuario.component.css',
 })
 export class AgregarUsuarioComponent {
-  @Output()
-  emitirUsuario = new EventEmitter<Usuario>();
+  @Input()
+  usuarioNuevo: string = '';
 
   fb = inject(FormBuilder);
 
@@ -30,7 +30,7 @@ export class AgregarUsuarioComponent {
   agregarUsuario() {
     if (this.formulario.invalid) return;
     const usuario = this.formulario.getRawValue();
-    this.emitirUsuario.emit(usuario);
+    usuario.tipo = this.usuarioNuevo;
     this.agregarUsuarioService(usuario);
   }
 

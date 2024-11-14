@@ -37,7 +37,7 @@ export class ListarRepositorComponent {
     this.listar();
   }
 
-  activarCajero(id: string | undefined) {
+  activarRepositor(id: string | undefined) {
     const encontrado = this.listaUsuarios.find((e) => e.id === id);
     this.usu = encontrado;
 
@@ -51,7 +51,7 @@ export class ListarRepositorComponent {
     }
   }
 
-  desactivarCajero(id: string | undefined) {
+  desactivarRepositor(id: string | undefined) {
     const encontrado = this.listaUsuarios.find((e) => e.id === id);
     this.usu = encontrado;
 
