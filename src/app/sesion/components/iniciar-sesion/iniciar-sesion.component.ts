@@ -1,7 +1,7 @@
 import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UsuarioService } from '../../../usuario/services/usuario.service';
-import { Usuario } from '../../../usuario/interfaces/Usuario.interface';
+import { Usuario } from '../../../usuario/interfaces/usuario.interface';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from 'app/auth/service/auth.service';
 
@@ -23,8 +23,11 @@ export class IniciarSesionComponent {
   formulario = this.fb.nonNullable.group({
     id: [''],
     usuario: ['', [Validators.required]],
+    nombre: [''],
+    apellido: [''],
     contrasena: ['', [Validators.required]],
     tipo: [''],
+    estado: false,
   });
 
   usuarioService = inject(UsuarioService);

@@ -1,0 +1,42 @@
+<div class="div-botones">
+  <button class="botoncito" >Agregar Cajero</button>
+  <button class="botoncito" routerLink="/admin/ventas">Ver Ventas</button>
+</div>
+
+<div>
+  <table>
+
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Usuario</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Contraseña</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (usuario of listaUsuarios; track $index) {
+      <tr>
+        <td>{{ usuario.id }}</td>
+        <td>{{ usuario.usuario }}</td>
+        <td>{{ usuario.nombre }}</td>
+        <td>{{ usuario.apellido }}</td>
+        <td>{{ usuario.contrasena }}</td>
+        <td>
+          @if (usuario.estado) {
+          <button (click)="desactivarCajero(usuario.id)">Desactivar</button>
+          }
+          @else {
+          <button (click)="activarCajero(usuario.id)">Activar</button>
+          }
+        </td>
+      </tr>
+      }
+    </tbody>
+
+  </table>
+
+</div>
