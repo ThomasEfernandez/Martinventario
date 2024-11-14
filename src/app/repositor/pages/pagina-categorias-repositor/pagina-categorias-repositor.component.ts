@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarRepositorComponent } from '../../../nav/components/navbar-repositor/navbar-repositor.component';
-import { MenuCategoriaRepositorComponent } from '../../../categoria/components/menu-categoria-repositor/menu-categoria-repositor.component';
+import { MenuCategoriaComponent } from '../../../categoria/components/menu-categoria/menu-categoria.component';
 import { ListarCategoriasComponent } from 'app/categoria/components/listar-categorias/listar-categorias.component';
 
 @Component({
@@ -8,7 +8,7 @@ import { ListarCategoriasComponent } from 'app/categoria/components/listar-categ
   standalone: true,
   imports: [
     NavbarRepositorComponent,
-    MenuCategoriaRepositorComponent,
+    MenuCategoriaComponent,
     ListarCategoriasComponent,
   ],
   templateUrl: './pagina-categorias-repositor.component.html',

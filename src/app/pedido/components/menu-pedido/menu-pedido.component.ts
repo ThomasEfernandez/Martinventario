@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -8,4 +8,6 @@ import { RouterModule } from '@angular/router';
   templateUrl: './menu-pedido.component.html',
   styleUrl: './menu-pedido.component.css',
 })
-export class MenuPedidoComponent {}
+export class MenuPedidoComponent {
+  @Input() tipo: string = '';
+}

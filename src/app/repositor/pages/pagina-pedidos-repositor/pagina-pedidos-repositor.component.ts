@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarRepositorComponent } from '../../../nav/components/navbar-repositor/navbar-repositor.component';
-import { MenuPedidoRepositorComponent } from '../../../pedido/components/menu-pedido-repositor/menu-pedido-repositor.component';
+import { MenuPedidoComponent } from '../../../pedido/components/menu-pedido/menu-pedido.component';
 import { ListarPedidosComponent } from '../../../pedido/components/listar-pedidos/listar-pedidos.component';
 
 @Component({
@@ -8,7 +8,7 @@ import { ListarPedidosComponent } from '../../../pedido/components/listar-pedido
   standalone: true,
   imports: [
     NavbarRepositorComponent,
-    MenuPedidoRepositorComponent,
+    MenuPedidoComponent,
     ListarPedidosComponent,
   ],
   templateUrl: './pagina-pedidos-repositor.component.html',

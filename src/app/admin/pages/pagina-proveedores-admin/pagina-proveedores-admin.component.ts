@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navbar-admin.component';
-import { MenuProveedorAdminComponent } from 'app/proveedor/components/menu-proveedor-admin/menu-proveedor-admin.component';
+import { MenuProveedorComponent } from 'app/proveedor/components/menu-proveedor/menu-proveedor.component';
 import { ListarProveedorComponent } from 'app/proveedor/components/listar-proveedores/listar-proveedores.component';
 
 @Component({
@@ -8,7 +8,7 @@ import { ListarProveedorComponent } from 'app/proveedor/components/listar-provee
   standalone: true,
   imports: [
     NavbarAdminComponent,
-    MenuProveedorAdminComponent,
+    MenuProveedorComponent,
     ListarProveedorComponent,
   ],
   templateUrl: './pagina-proveedores-admin.component.html',
