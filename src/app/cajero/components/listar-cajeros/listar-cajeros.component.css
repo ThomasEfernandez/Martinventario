@@ -42,7 +42,7 @@ li {
 .columna-estado {
   width: 10%;
 }
-button {
+#boton {
   font-weight: bold;
   padding: 5%;
   background-color: #ee4444;

@@ -7,12 +7,12 @@
 
     <thead>
       <tr>
-        <th>Id</th>
-        <th>Usuario</th>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Contraseña</th>
-        <th>Estado</th>
+        <th class="columna-id">Id</th>
+        <th class="columna-usuario">Usuario</th>
+        <th class="columna-nombre">Nombre</th>
+        <th class="columna-apellido">Apellido</th>
+        <th class="columna-contrasena">Contraseña</th>
+        <th class="columna-estado">Estado</th>
       </tr>
     </thead>
 
@@ -26,10 +26,10 @@
         <td>{{ usuario.contrasena }}</td>
         <td>
           @if (usuario.estado) {
-          <button (click)="desactivarCajero(usuario.id)">Desactivar</button>
+          <button class="desactivar" (click)="desactivarRepositor(usuario.id)">Desactivar</button>
           }
           @else {
-          <button (click)="activarCajero(usuario.id)">Activar</button>
+          <button class="activar" (click)="activarRepositor(usuario.id)">Activar</button>
           }
         </td>
       </tr>

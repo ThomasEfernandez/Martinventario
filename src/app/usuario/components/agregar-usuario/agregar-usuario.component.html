@@ -8,6 +8,7 @@
   formulario.controls['usuario'].touched) {
   <div class="error">Requiere 4 caracteres</div>
   }
+
   <label for="">Contraseña</label>
   <input type="text" formControlName="contrasena" />
   @if(formulario.controls['contrasena'].getError('required') &&
@@ -17,10 +18,20 @@
   formulario.controls['contrasena'].touched) {
   <div class="error">Requiere 4 caracteres</div>
   }
-  <label for="">Tipo</label>
-  <select>
-    <option value="repositor">Repositor</option>
-    <option value="cajero">Cajero</option>
-  </select>
+
+  <label for="">Nombre</label>
+  <input type="text" formControlName="nombre" />
+  @if(formulario.controls['nombre'].getError('required') &&
+  formulario.controls['nombre'].touched) {
+  <div class="error">Campo requerido</div>
+  }
+
+  <label for="">Apellido</label>
+  <input type="text" formControlName="apellido" />
+  @if(formulario.controls['apellido'].getError('required') &&
+  formulario.controls['apellido'].touched) {
+  <div class="error">Campo requerido</div>
+  }
+
   <button>Crear usuario</button>
 </form>
