@@ -21,31 +21,28 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
   background-color: #d3e3fc;
 }
-li {
-  list-style: none;
-}
 .columna-id {
-  width: 5%;
+  width: 10%;
 }
 .columna-usuario {
-  width: 21.5%;
-}
-.columna-contrasena {
-  width: 21.5%;
+  width: 70%;
 }
 .columna-nombre {
-  width: 21.5%;
+  width: 10%;
 }
 .columna-apellido {
-  width: 21.5%;
+  width: 10%;
+}
+.columna-contrasena {
+  width: 10%;
 }
 .columna-estado {
   width: 10%;
 }
-#boton {
+button {
   font-weight: bold;
-  padding: 5%;
-  background-color: #ee4444;
+  padding: 0.5%;
+  background-color: #0088ee;
   border: 0;
   border-radius: 5px;
   cursor: pointer;
@@ -53,9 +50,15 @@ li {
 .activar {
   background-color: #22aa22;
 }
+.desactivar {
+  background-color: #ee4444;
+}
 button:hover {
-  background-color: #ee6666;
+  background-color: #0099ff;
 }
 .activar:hover {
   background-color: #44cc44;
+}
+.desactivar:hover {
+  background-color: #ee6666;
 }

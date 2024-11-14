@@ -51,6 +51,9 @@ import { PaginaPedidoComponent } from './compra/pages/pagina-pedido/pagina-pedid
 
 import { PaginaCajeroComponent } from './cajero/pages/pagina-cajero/pagina-cajero.component';
 import { authGuardFn } from './auth/guard/auth.guard-fn';
+import { PaginaRepositoresAdminComponent } from './admin/pages/pagina-repositores-admin/pagina-repositores-admin.component';
+import { PaginaAgregarRepositorAdminComponent } from './admin/pages/pagina-agregar-repositor-admin/pagina-agregar-repositor-admin.component';
+import { PaginaAgregarCajeroAdminComponent } from './admin/pages/pagina-agregar-cajero-admin/pagina-agregar-cajero-admin.component';
 
 export const routes: Routes = [
   {
@@ -119,6 +122,11 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
+    path: 'admin/cajeros/agregar',
+    component: PaginaAgregarCajeroAdminComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
     path: 'admin/ventas',
     component: PaginaVentasAdminComponent,
     // canActivate: [authGuardFn],
@@ -133,7 +141,17 @@ export const routes: Routes = [
     component: PaginaVerDetalleVentaAdminComponent,
     // canActivate: [authGuardFn],
   },
-  //Repositor
+  {
+    path: 'admin/repositores',
+    component: PaginaRepositoresAdminComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
+    path: 'admin/repositor/agregar',
+    component: PaginaAgregarRepositorAdminComponent,
+    // canActivate: [authGuardFn],
+  },
+  /*Repositor*/
   {
     path: 'repositor',
     component: PaginaPrincipalRepositorComponent,
