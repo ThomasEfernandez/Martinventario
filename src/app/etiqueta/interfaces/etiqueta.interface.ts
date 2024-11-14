@@ -1,5 +1,5 @@
 export interface Etiqueta {
-  id: number;
+  id: string;
   nombreEtiqueta: string;
   estado: boolean;
 }

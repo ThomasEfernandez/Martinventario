@@ -22,15 +22,15 @@ export class CategoriaService {
     return this.http.get<Categoria>(`${this.url}/${id}`);
   }
 
-  deleteCategoria(id: number): Observable<void> {
+  deleteCategoria(id: string): Observable<void> {
     return this.http.delete<void>(`${this.url}/${id}`);
   }
 
-  putCategoria(id: number, categoria: Categoria): Observable<Categoria> {
+  putCategoria(id: string, categoria: Categoria): Observable<Categoria> {
     return this.http.put<Categoria>(`${this.url}/${id}`, categoria);
   }
 
-  patchCategoria(id: number, categoria: Categoria): Observable<Categoria> {
+  patchCategoria(id: string, categoria: Categoria): Observable<Categoria> {
     return this.http.patch<Categoria>(`${this.url}/${id}`, categoria);
   }
 }

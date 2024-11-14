@@ -23,12 +23,12 @@ export class AgregarEtiquetaRepositorComponent {
 
   listaEtiquetas: Etiqueta[] | undefined = [];
 
-  categoria: number | undefined = 0;
+  categoria: string | null = '';
 
   etiquetaAgregada: boolean = false;
 
   formulario = this.fb.nonNullable.group({
-    id: [0],
+    id: [''],
     nombreEtiqueta: ['', Validators.required],
     nombreCategoria: ['', Validators.required],
     estado: [true, [Validators.required]],
@@ -40,7 +40,7 @@ export class AgregarEtiquetaRepositorComponent {
       this.categoriaService.getCategoriaById(this.categoria).subscribe({
         next: (categoria: Categoria) => {
           let e = {
-            id: categoria.etiquetas.length + 1,
+            id: `${categoria.etiquetas.length + 1}`,
             nombreEtiqueta: etiqueta.nombreEtiqueta,
             estado: etiqueta.estado,
           };
@@ -81,7 +81,10 @@ export class AgregarEtiquetaRepositorComponent {
       const categoria = this.listaCategorias.find(
         (c) => c.nombreCategoria === select.value
       );
-      this.categoria = categoria?.id;
+
+      if (categoria) {
+        this.categoria = categoria?.id;
+      }
     });
   }
 }

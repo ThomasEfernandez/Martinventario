@@ -163,16 +163,19 @@
       "estado": true,
       "etiquetas": [
         {
-          "id": 1,
-          "nombreEtiqueta": "Galletitas dulces"
+          "id": "1",
+          "nombreEtiqueta": "Galletitas dulces",
+          "estado": true
         },
         {
-          "id": 2,
-          "nombreEtiqueta": "Dulce"
+          "id": "2",
+          "nombreEtiqueta": "Dulce",
+          "estado": false
         },
         {
-          "id": 3,
-          "nombreEtiqueta": "Carne"
+          "id": "3",
+          "nombreEtiqueta": "Carne",
+          "estado": false
         }
       ]
     },
@@ -182,8 +185,9 @@
       "estado": true,
       "etiquetas": [
         {
-          "id": 1,
-          "nombreEtiqueta": "Gaseosa"
+          "id": "1",
+          "nombreEtiqueta": "Gaseosa",
+          "estado": true
         }
       ]
     },
@@ -193,8 +197,9 @@
       "estado": true,
       "etiquetas": [
         {
-          "id": 1,
-          "nombreEtiqueta": "Shampoo"
+          "id": "1",
+          "nombreEtiqueta": "Shampoo",
+          "estado": true
         }
       ]
     },
@@ -204,12 +209,14 @@
       "estado": true,
       "etiquetas": [
         {
-          "id": 1,
-          "nombreEtiqueta": "Lustrador"
+          "id": "1",
+          "nombreEtiqueta": "Lustrador",
+          "estado": true
         },
         {
-          "id": 2,
-          "nombreEtiqueta": "Desodorante para piso"
+          "id": "2",
+          "nombreEtiqueta": "Desodorante para piso",
+          "estado": true
         }
       ]
     },
@@ -219,12 +226,14 @@
       "estado": true,
       "etiquetas": [
         {
-          "id": 1,
-          "nombreEtiqueta": "Electrodomestico"
+          "id": "1",
+          "nombreEtiqueta": "Electrodomestico",
+          "estado": true
         },
         {
-          "id": 2,
-          "nombreEtiqueta": "Juego"
+          "id": "2",
+          "nombreEtiqueta": "Juego",
+          "estado": true
         }
       ]
     },
@@ -234,12 +243,31 @@
       "estado": false,
       "etiquetas": [
         {
-          "id": 1,
-          "nombreEtiqueta": "Alimento para perro"
+          "id": "1",
+          "nombreEtiqueta": "Alimento para perro",
+          "estado": true
         },
         {
-          "id": 2,
-          "nombreEtiqueta": "Alimento para gato"
+          "id": "2",
+          "nombreEtiqueta": "Alimento para gato",
+          "estado": true
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "nombreCategoria": "Educacion",
+      "estado": true,
+      "etiquetas": [
+        {
+          "id": "1",
+          "nombreEtiqueta": "Utiles escolares",
+          "estado": false
+        },
+        {
+          "id": "2",
+          "nombreEtiqueta": "Libros",
+          "estado": true
         }
       ]
     }

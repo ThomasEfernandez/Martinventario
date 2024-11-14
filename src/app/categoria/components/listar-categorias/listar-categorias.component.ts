@@ -15,7 +15,7 @@ export class ListarCategoriasComponent {
   categoriaService = inject(CategoriaService);
 
   cat: Categoria | undefined = {
-    id: 0,
+    id: '',
     nombreCategoria: '',
     estado: false,
     etiquetas: [],
@@ -36,7 +36,7 @@ export class ListarCategoriasComponent {
     this.listar();
   }
 
-  activarCategoria(id: number | undefined) {
+  activarCategoria(id: string | undefined) {
     const encontrado = this.listaCategorias.find((e) => e.id === id);
     this.cat = encontrado;
 
@@ -50,7 +50,7 @@ export class ListarCategoriasComponent {
     }
   }
 
-  desactivarCategoria(id: number | undefined) {
+  desactivarCategoria(id: string | undefined) {
     const encontrado = this.listaCategorias.find((e) => e.id === id);
     this.cat = encontrado;
 
