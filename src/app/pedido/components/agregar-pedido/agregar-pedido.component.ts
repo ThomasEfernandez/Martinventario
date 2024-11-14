@@ -1,4 +1,4 @@
-import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Pedido } from 'app/pedido/interfaces/pedido.interface';
@@ -7,19 +7,17 @@ import { Proveedor } from 'app/proveedor/interfaces/proveedor-interface';
 import { ProveedorService } from 'app/proveedor/services/proveedor.service';
 
 @Component({
-  selector: 'app-agregar-pedido-repositor',
+  selector: 'app-agregar-pedido',
   standalone: true,
   imports: [ReactiveFormsModule, RouterModule],
-  templateUrl: './agregar-pedido-repositor.component.html',
-  styleUrl: './agregar-pedido-repositor.component.css',
+  templateUrl: './agregar-pedido.component.html',
+  styleUrl: './agregar-pedido.component.css',
 })
-export class AgregarPedidoRepositorComponent {
-  @Output()
-  emitirPedido: EventEmitter<Pedido> = new EventEmitter();
+export class AgregarPedidoComponent {
+  @Input() tipo: string | null = null;
 
   pedidoService = inject(PedidoService);
   proveedorService = inject(ProveedorService);
-  // productoService = inject(ProductoService);
 
   listaProveedores: Proveedor[] = [];
 
@@ -49,7 +47,6 @@ export class AgregarPedidoRepositorComponent {
       this.pedidoService.getPedidos().subscribe({
         next: (pedidos: Pedido[]) => {
           pedido.id = `${pedidos.length + 1}`;
-          this.emitirPedido.emit(pedido);
           this.agregarPedidoService(pedido);
           this.pedidoAgregado = true;
         },

@@ -14,4 +14,6 @@ import { MenuProveedorRepositorComponent } from '../../../proveedor/components/m
   templateUrl: './pagina-proveedores-repositor.component.html',
   styleUrl: './pagina-proveedores-repositor.component.css',
 })
-export class PaginaProveedoresRepositorComponent {}
+export class PaginaProveedoresRepositorComponent {
+  tipo: string = 'repositor';
+}

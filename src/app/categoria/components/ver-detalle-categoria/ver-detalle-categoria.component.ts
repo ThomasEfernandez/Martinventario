@@ -1,6 +1,5 @@
-import { AddEventListenerOptions } from 'undici-types/patch';
-import { Component, inject, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, inject, Input } from '@angular/core';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
 import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
@@ -8,15 +7,20 @@ import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
 @Component({
   selector: 'app-ver-detalle-categoria',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './ver-detalle-categoria.component.html',
   styleUrl: './ver-detalle-categoria.component.css',
 })
 export class VerDetalleCategoriaComponent {
+  @Input() tipo: string = '';
+
   categoriaService = inject(CategoriaService);
+
   catArreglo: Categoria[] = [];
   arrEtiquetas: Etiqueta[] = [];
+
   router = inject(ActivatedRoute);
+
   id: string | null = '';
 
   eti: Etiqueta | undefined = {

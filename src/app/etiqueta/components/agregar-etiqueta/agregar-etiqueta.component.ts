@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
@@ -6,17 +6,14 @@ import { CategoriaService } from 'app/categoria/services/categoria.service';
 import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
 
 @Component({
-  selector: 'app-agregar-etiqueta-admin',
+  selector: 'app-agregar-etiqueta',
   standalone: true,
   imports: [ReactiveFormsModule, RouterModule],
-  templateUrl: './agregar-etiqueta-admin.component.html',
-  styleUrl: './agregar-etiqueta-admin.component.css',
+  templateUrl: './agregar-etiqueta.component.html',
+  styleUrl: './agregar-etiqueta.component.css',
 })
-export class AgregarEtiquetaAdminComponent {
-  @Output()
-  emitirEtiqueta: EventEmitter<Etiqueta> = new EventEmitter();
-
-  fb = inject(FormBuilder);
+export class AgregarEtiquetaComponent {
+  @Input() tipo: string | null = null;
 
   listaCategorias: Categoria[] = [];
   categoriaService = inject(CategoriaService);
@@ -27,6 +24,7 @@ export class AgregarEtiquetaAdminComponent {
 
   etiquetaAgregada: boolean = false;
 
+  fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
     id: [''],
     nombreEtiqueta: ['', Validators.required],
@@ -47,7 +45,6 @@ export class AgregarEtiquetaAdminComponent {
           console.log(e);
 
           categoria.etiquetas.push(e);
-          this.emitirEtiqueta.emit(etiqueta);
           this.agregarEtiquetaService(categoria);
           this.etiquetaAgregada = true;
         },

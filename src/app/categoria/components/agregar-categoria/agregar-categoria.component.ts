@@ -1,19 +1,18 @@
-import { Component, Output, EventEmitter, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
 
 @Component({
-  selector: 'app-agregar-categoria-repositor',
+  selector: 'app-agregar-categoria',
   standalone: true,
   imports: [ReactiveFormsModule, RouterModule],
-  templateUrl: './agregar-categoria-repositor.component.html',
-  styleUrl: './agregar-categoria-repositor.component.css',
+  templateUrl: './agregar-categoria.component.html',
+  styleUrl: './agregar-categoria.component.css',
 })
-export class AgregarCategoriaRepositorComponent {
-  @Output()
-  emitirCategoria: EventEmitter<Categoria> = new EventEmitter();
+export class AgregarCategoriaComponent {
+  @Input() tipo: string | null = null;
 
   fb = inject(FormBuilder);
   categoriaService = inject(CategoriaService);
@@ -33,7 +32,6 @@ export class AgregarCategoriaRepositorComponent {
       this.categoriaService.getCategorias().subscribe({
         next: (categorias: Categoria[]) => {
           categoria.id = `${categorias.length + 1}`;
-          this.emitirCategoria.emit(categoria);
           this.agregarCategoriaService(categoria);
           this.categoriaAgregada = true;
         },

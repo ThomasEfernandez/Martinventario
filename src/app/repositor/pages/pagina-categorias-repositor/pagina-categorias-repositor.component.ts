@@ -14,4 +14,6 @@ import { ListarCategoriasComponent } from 'app/categoria/components/listar-categ
   templateUrl: './pagina-categorias-repositor.component.html',
   styleUrl: './pagina-categorias-repositor.component.css',
 })
-export class PaginaCategoriasRepositorComponent {}
+export class PaginaCategoriasRepositorComponent {
+  tipo: string = 'repositor';
+}

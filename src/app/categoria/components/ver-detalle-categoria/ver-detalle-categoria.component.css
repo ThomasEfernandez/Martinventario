@@ -25,10 +25,13 @@ li {
   list-style: none;
 }
 .columna-id {
-  width: 10%;
+  width: 5%;
 }
 .columna-etiqueta {
-  width: 80%;
+  width: 75%;
+}
+.columna-modificar {
+  width: 10%;
 }
 .columna-estado {
   width: 10%;
@@ -36,7 +39,7 @@ li {
 button {
   font-weight: bold;
   padding: 5%;
-  background-color: #ee4444;
+  background-color: #0088ee;
   border: 0;
   border-radius: 5px;
   cursor: pointer;
@@ -44,9 +47,15 @@ button {
 .activar {
   background-color: #22aa22;
 }
+.desactivar {
+  background-color: #ee4444;
+}
 button:hover {
-  background-color: #ee6666;
+  background-color: #0099ff;
 }
 .activar:hover {
   background-color: #44cc44;
+}
+.desactivar:hover {
+  background-color: #ee6666;
 }

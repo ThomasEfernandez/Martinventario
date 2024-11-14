@@ -10,4 +10,6 @@ import { ListarPedidosComponent } from '../../../pedido/components/listar-pedido
   templateUrl: './pagina-pedidos-admin.component.html',
   styleUrl: './pagina-pedidos-admin.component.css',
 })
-export class PaginaPedidosAdminComponent {}
+export class PaginaPedidosAdminComponent {
+  tipo: string = 'admin';
+}

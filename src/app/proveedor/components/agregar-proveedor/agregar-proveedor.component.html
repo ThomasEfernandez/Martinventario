@@ -46,20 +46,26 @@
         <input type="text" formControlName="email" id="email" />
       </div>
     </div>
-
     <div class="botones">
       @if(proveedorAgregado){
       <small class="exito">Proveedor agregado</small>
+      @if(tipo === 'admin') {
+      <button type="button" id="volver" routerLink="/admin/proveedores">
+        Volver
+      </button>
+      } @else if(tipo === 'repositor') {
       <button type="button" id="volver" routerLink="/repositor/proveedores">
         Volver
       </button>
-      } @else {<button
-        type="button"
-        id="cancelar"
-        routerLink="/repositor/proveedores"
-      >
+      } } @else { @if(tipo === 'admin') {
+      <button type="button" id="cancelar" routerLink="/admin/proveedores">
         Cancelar
       </button>
+      } @else if(tipo==='repositor') {
+      <button type="button" id="cancelar" routerLink="/repositor/proveedores">
+        Cancelar
+      </button>
+      }
       <button type="submit" id="agregar">Agregar proveedor</button>}
     </div>
   </form>

@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
@@ -10,17 +10,14 @@ import { Proveedor } from 'app/proveedor/interfaces/proveedor-interface';
 import { ProveedorService } from 'app/proveedor/services/proveedor.service';
 
 @Component({
-  selector: 'app-agregar-producto-repositor',
+  selector: 'app-agregar-producto',
   standalone: true,
   imports: [ReactiveFormsModule, RouterModule],
-  templateUrl: './agregar-producto-repositor.component.html',
-  styleUrl: './agregar-producto-repositor.component.css',
+  templateUrl: './agregar-producto.component.html',
+  styleUrl: './agregar-producto.component.css',
 })
-export class AgregarProductoRepositorComponent {
-  @Output()
-  emitirProducto: EventEmitter<Producto> = new EventEmitter();
-
-  fb = inject(FormBuilder);
+export class AgregarProductoComponent {
+  @Input() tipo: string | null = null;
 
   listaProveedores: Proveedor[] = [];
   proveedoresService = inject(ProveedorService);
@@ -34,6 +31,7 @@ export class AgregarProductoRepositorComponent {
 
   productoAgregado: boolean = false;
 
+  fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
     id: [''],
     nombreProducto: ['', [Validators.required, Validators.minLength(1)]],
@@ -52,7 +50,6 @@ export class AgregarProductoRepositorComponent {
       this.productoService.getProductos().subscribe({
         next: (productos: Producto[]) => {
           producto.id = `${productos.length + 1}`;
-          this.emitirProducto.emit(producto);
           this.agregarProductoService(producto);
           this.productoAgregado = true;
         },

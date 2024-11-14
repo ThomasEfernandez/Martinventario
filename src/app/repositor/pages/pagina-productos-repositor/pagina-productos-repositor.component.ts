@@ -14,4 +14,6 @@ import { ListarProductosComponent } from '../../../producto/components/listar-pr
   templateUrl: './pagina-productos-repositor.component.html',
   styleUrl: './pagina-productos-repositor.component.css',
 })
-export class PaginaProductosRepositorComponent {}
+export class PaginaProductosRepositorComponent {
+  tipo: string = 'repositor';
+}

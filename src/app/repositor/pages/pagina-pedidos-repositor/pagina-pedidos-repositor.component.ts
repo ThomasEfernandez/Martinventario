@@ -14,4 +14,6 @@ import { ListarPedidosComponent } from '../../../pedido/components/listar-pedido
   templateUrl: './pagina-pedidos-repositor.component.html',
   styleUrl: './pagina-pedidos-repositor.component.css',
 })
-export class PaginaPedidosRepositorComponent {}
+export class PaginaPedidosRepositorComponent {
+  tipo: string = 'repositor';
+}

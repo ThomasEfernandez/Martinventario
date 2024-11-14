@@ -7,6 +7,7 @@
         <th class="columna-razonSocial">Razón Social</th>
         <th class="columna-cuit">CUIT</th>
         <th class="columna-email">Email</th>
+        <th class="columna-modificar">Modificar</th>
         <th class="columna-eliminar">Eliminar</th>
       </tr>
     </thead>
@@ -18,6 +19,19 @@
         <td>{{ proveedor.razonSocial }}</td>
         <td>{{ proveedor.cuit }}</td>
         <td>{{ proveedor.email }}</td>
+        <td>
+          @if(tipo === 'admin') {
+          <button [routerLink]="['/admin/proveedor/modificar', proveedor.id]">
+            Modificar
+          </button>
+          } @else if (tipo === 'repositor') {
+          <button
+            [routerLink]="['/repositor/proveedor/modificar', proveedor.id]"
+          >
+            Modificar
+          </button>
+          }
+        </td>
         <td>
           <button class="eliminar" (click)="eliminarProveedor(proveedor.id)">
             Eliminar

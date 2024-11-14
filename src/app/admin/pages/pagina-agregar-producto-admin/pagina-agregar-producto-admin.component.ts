@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navbar-admin.component';
-import { AgregarProductoAdminComponent } from 'app/producto/components/agregar-producto-admin/agregar-producto-admin.component';
+import { AgregarProductoComponent } from 'app/producto/components/agregar-producto/agregar-producto.component';
 
 @Component({
   selector: 'app-pagina-agregar-producto-admin',
   standalone: true,
-  imports: [NavbarAdminComponent, AgregarProductoAdminComponent],
+  imports: [NavbarAdminComponent, AgregarProductoComponent],
   templateUrl: './pagina-agregar-producto-admin.component.html',
   styleUrl: './pagina-agregar-producto-admin.component.css',
 })
-export class PaginaAgregarProductoAdminComponent {}
+export class PaginaAgregarProductoAdminComponent {
+  tipo: string = 'admin';
+}

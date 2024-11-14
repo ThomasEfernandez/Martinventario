@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
@@ -11,6 +11,8 @@ import { CategoriaService } from 'app/categoria/services/categoria.service';
   styleUrl: './listar-categorias.component.css',
 })
 export class ListarCategoriasComponent {
+  @Input() tipo: string | null = null;
+
   listaCategorias: Categoria[] = [];
   categoriaService = inject(CategoriaService);
 

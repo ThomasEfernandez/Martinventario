@@ -41,7 +41,7 @@ import { PaginaAgregarPedidoRepositorComponent } from './repositor/pages/pagina-
 
 import { PaginaCategoriasRepositorComponent } from './repositor/pages/pagina-categorias-repositor/pagina-categorias-repositor.component';
 import { PaginaAgregarCategoriaRepositorComponent } from './repositor/pages/pagina-agregar-categoria-repositor/pagina-agregar-categoria-repositor.component';
-//ver detalle
+import { PaginaVerDetalleCategoriaRepositorComponent } from './repositor/pages/pagina-ver-detalle-categoria-repositor/pagina-ver-detalle-categoria-repositor.component';
 
 import { PaginaAgregarEtiquetaRepositorComponent } from './repositor/pages/pagina-agregar-etiqueta-repositor/pagina-agregar-etiqueta-repositor.component';
 
@@ -177,6 +177,11 @@ export const routes: Routes = [
   {
     path: 'repositor/categorias/agregar',
     component: PaginaAgregarCategoriaRepositorComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
+    path: 'repositor/categoria/:id',
+    component: PaginaVerDetalleCategoriaRepositorComponent,
     // canActivate: [authGuardFn],
   },
   {
