@@ -31,6 +31,8 @@ import { PaginaPedidoComponent } from './compra/pages/pagina-pedido/pagina-pedid
 import { PaginaCajeroComponent } from './cajero/pages/pagina-cajero/pagina-cajero.component';
 import { authGuardFn } from './auth/guard/auth.guard-fn';
 
+import { PaginaDetallesVentaComponent } from './admin/pages/pagina-detalles-venta/pagina-detalles-venta.component';
+
 export const routes: Routes = [
   {
     path: '',
@@ -99,6 +101,11 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
+    path: 'admin/ver-detalles',
+    component: PaginaDetallesVentaComponent,
+  },
+  {
+    // canActivate: [authGuardFn],
     path: 'admin/generar-ventas',
     component: PaginaGenerarVentaAdminComponent,
   },
