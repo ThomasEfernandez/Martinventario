@@ -88,7 +88,7 @@ export class VerDetalleComponent {
         e.estado = false;
         this.arrEtiquetas.forEach((e) => {
           if (e.id === id) {
-            e.estado = true;
+            e.estado = false;
           }
         });
       }
