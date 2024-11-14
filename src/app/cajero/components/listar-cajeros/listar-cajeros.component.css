@@ -75,24 +75,14 @@ li {
   margin: 0;
 }
 
-#boton {
-  justify-content: end;
-  margin: 0.2rem;
-  cursor: pointer;
-}
-
-/* #boton:hover {
-  box-shadow: 3px 3px 3px 3px rgb(121, 121, 121);
-} */
-
-.div-boton-volver {
+.div-botones {
   all: unset;
   display: flex;
   justify-content: end;
   margin: 1rem;
 }
 
-.boton-volver {
+.botoncito {
   padding: 0.5rem;
   border: 1px solid #222222;
   border-radius: 3px;
@@ -106,6 +96,6 @@ li {
   color: black;
 }
 
-.boton-volver:hover {
+.botoncito:hover {
   box-shadow: 3px 3px 3px 3px rgb(121, 121, 121);
 }

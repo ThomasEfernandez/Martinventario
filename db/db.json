@@ -2,39 +2,57 @@
   "usuarios": [
     {
       "id": "1",
+      "nombre": "admin",
+      "apellido": "admin",
       "usuario": "admin",
       "contrasena": "admin",
-      "tipo": "admin"
+      "tipo": "admin",
+      "estado": true
     },
     {
       "id": "2",
       "usuario": "agustin",
+      "nombre": "Agustin",
+      "apellido": "Rojas",
       "contrasena": "agustin",
-      "tipo": "repositor"
+      "tipo": "repositor",
+      "estado": true
     },
     {
       "id": "3",
       "usuario": "thomas",
+      "nombre": "Thomas",
+      "apellido": "Fernandez",
       "contrasena": "thomas",
-      "tipo": "cajero"
+      "tipo": "cajero",
+      "estado": true
     },
     {
       "id": "4",
       "usuario": "fausto",
+      "nombre": "Fausto",
+      "apellido": "Gimenez",
       "contrasena": "fausto",
-      "tipo": "repositor"
+      "tipo": "repositor",
+      "estado": true
     },
     {
       "id": "5",
       "usuario": "agustina",
+      "nombre": "Agustina",
+      "apellido": "Martin",
       "contrasena": "agustina",
-      "tipo": "cajero"
+      "tipo": "cajero",
+      "estado": true
     },
     {
       "id": "6",
       "usuario": "lautaro",
+      "nombre": "Lautaro",
+      "apellido": "Hourcade",
       "contrasena": "lautaro",
-      "tipo": "repositor"
+      "tipo": "repositor",
+      "estado": true
     }
   ],
   "productos": [
@@ -165,7 +183,7 @@
         {
           "id": "1",
           "nombreEtiqueta": "Galletitas dulces",
-          "estado": true
+          "estado": false
         },
         {
           "id": "2",

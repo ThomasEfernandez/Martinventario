@@ -23,8 +23,11 @@ export class IniciarSesionComponent {
   formulario = this.fb.nonNullable.group({
     id: [''],
     usuario: ['', [Validators.required]],
+    nombre: [''],
+    apellido: [''],
     contrasena: ['', [Validators.required]],
     tipo: [''],
+    estado: false,
   });
 
   usuarioService = inject(UsuarioService);

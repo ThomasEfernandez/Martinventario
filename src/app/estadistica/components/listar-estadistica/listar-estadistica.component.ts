@@ -6,7 +6,6 @@ import { ProductoService } from 'app/producto/services/producto.service';
 import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 import { UsuarioService } from 'app/usuario/services/usuario.service';
 
-
 @Component({
   selector: 'app-listar-estadistica',
   standalone: true,
