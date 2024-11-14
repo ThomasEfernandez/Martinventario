@@ -17,23 +17,15 @@
         <td>{{ pedido.cantidad }}</td>
         <td>{{ pedido.razonSocialProveedor }}</td>
         <td>
-          <input type="checkbox" value="" />
-        </td>
-        <!-- <td class="th-estado">
-          @if (!pedido.estado) {
-          <img
-            class="checkmark"
-            src="https://cdn-icons-png.flaticon.com/512/8625/8625364.png"
-            (click)="pedidoRealizado(pedido.id)"
-          />
-          } @else {
-          <img
-            class="checkmark"
-            src="https://cdn-icons-png.flaticon.com/512/8625/8625364.png"
-            (click)="pedidoNoRealizado(pedido.id)"
-          />
+          @if (pedido.estado) {
+          <button class="noRealizar" (click)="pedidoNoRealizado(pedido.id)">
+            No realizado</button
+          >} @else {
+          <button class="realizar" (click)="pedidoRealizado(pedido.id)">
+            Realizado
+          </button>
           }
-        </td> -->
+        </td>
       </tr>
       }
     </tbody>

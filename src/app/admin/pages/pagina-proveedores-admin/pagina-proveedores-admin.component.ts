@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navbar-admin.component';
-import { MenuProveedorComponent } from 'app/proveedor/components/menu-proveedor/menu-proveedor.component';
+import { MenuProveedorAdminComponent } from 'app/proveedor/components/menu-proveedor-admin/menu-proveedor-admin.component';
 import { ListarProveedorComponent } from 'app/proveedor/components/listar-proveedores/listar-proveedores.component';
+
 import { CommonModule } from '@angular/common';
 import { AgregarProveedorAdminComponent } from 'app/proveedor/components/agregar-proveedor-admin/agregar-proveedor-admin.component';
 
@@ -10,8 +11,7 @@ import { AgregarProveedorAdminComponent } from 'app/proveedor/components/agregar
   standalone: true,
   imports: [
     NavbarAdminComponent,
-    MenuProveedorComponent,
-    // NavbarProveedoresAdminComponent,
+    MenuProveedorAdminComponent,
     ListarProveedorComponent,
   ],
   templateUrl: './pagina-proveedores-admin.component.html',

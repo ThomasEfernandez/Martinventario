@@ -1,76 +1,58 @@
 div {
-  padding: 20px;
+  padding: 1%;
 }
-
 table {
   width: 100%;
   border-collapse: collapse;
 }
-
 thead {
   background-color: #0099ff;
   color: #ffffff;
 }
-
 th,
 td {
-  padding: 12px;
+  padding: 0.75%;
   border: 1px solid #dddddd;
   text-align: left;
 }
-
 tbody tr:nth-child(even) {
   background-color: #e9e9e9;
 }
-
 tbody tr:hover {
   background-color: #d3e3fc;
 }
-
-li {
-  list-style: none;
-}
-
 .columna-id {
-  width: 5%;
+  width: 10%;
 }
-
 .columna-categoria {
-  width: 45%;
+  width: 70%;
 }
-
-.columna-etiquetas {
-  padding: 0;
-}
-
-.tabla-th {
-  border: 0;
-}
-
-.columna-etiqueta-id {
-  width: 10%;
-  border: 0;
-}
-
-.columna-etiqueta-nombre {
-  width: 90%;
-  border: 0;
-}
-
-.tdEtiquetas {
-  padding: 0;
-}
-
-.celda-etiqueta-id {
+.columna-verDetalle {
   width: 10%;
 }
-
-.celda-etiqueta-nombre {
-  width: 90%;
+.columna-estado {
+  width: 10%;
 }
-
-.tabla-etiquetas {
+button {
+  font-weight: bold;
+  padding: 5%;
+  background-color: #0088ee;
   border: 0;
-  padding: 0;
-  margin: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.activar {
+  background-color: #22aa22;
+}
+.desactivar {
+  background-color: #ee4444;
+}
+button:hover {
+  background-color: #0099ff;
+}
+.activar:hover {
+  background-color: #44cc44;
+}
+.desactivar:hover {
+  background-color: #ee6666;
 }

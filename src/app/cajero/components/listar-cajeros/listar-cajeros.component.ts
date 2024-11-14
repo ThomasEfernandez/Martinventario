@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Cajero } from 'app/cajero/interfaces/cajero.interface';
+
 import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 import { UsuarioService } from 'app/usuario/services/usuario.service';
 
@@ -12,8 +12,9 @@ import { UsuarioService } from 'app/usuario/services/usuario.service';
   styleUrl: './listar-cajeros.component.css',
 })
 export class ListarCajerosComponent {
-  listaUsuarios: Usuario[] = [];
   usuarioService = inject(UsuarioService);
+  listaUsuarios: Usuario[] = [];
+
   usu: Usuario | undefined = {
     id: '',
     nombre: '',
