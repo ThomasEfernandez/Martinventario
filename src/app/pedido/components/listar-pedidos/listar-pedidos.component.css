@@ -21,36 +21,61 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
   background-color: #d3e3fc;
 }
-.columna-id {
+
+.columna-id-a {
   width: 5%;
 }
-.columna-fecha {
+.columna-fecha-a {
   width: 10%;
 }
-.columna-producto {
-  width: 40%;
+.columna-producto-a {
+  width: 30%;
 }
-.columna-cantidad {
+.columna-cantidad-a {
+  width: 5%;
+}
+.columna-razonSocialProveedor-a {
+  width: 30%;
+}
+.columna-modificar-a {
   width: 10%;
 }
-.columna-razonSocialProveedor {
-  width: 25%;
-}
-.columna-pedidoRealizado {
+.columna-realizado-a {
   width: 10%;
+}
+.columna-id-r {
+  width: 5%;
+}
+.columna-fecha-r {
+  width: 10%;
+}
+.columna-producto-r {
+  width: 30%;
+}
+.columna-cantidad-r {
+  width: 5%;
+}
+.columna-razonSocialProveedor-r {
+  width: 50%;
 }
 button {
   font-weight: bold;
   padding: 5%;
-  background-color: #22aa22;
+  background-color: #0088ee;
   border: 0;
   border-radius: 5px;
   cursor: pointer;
+}
+.realizar {
+  background-color: #22aa22;
 }
 .noRealizar {
   background-color: #ee4444;
 }
 button:hover {
+  background-color: #0099ff;
+}
+.realizar:hover {
   background-color: #44cc44;
 }
 .noRealizar:hover {

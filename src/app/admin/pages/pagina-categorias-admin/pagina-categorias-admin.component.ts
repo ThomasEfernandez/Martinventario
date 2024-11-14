@@ -14,4 +14,6 @@ import { ListarCategoriasComponent } from '../../../categoria/components/listar-
   templateUrl: './pagina-categorias-admin.component.html',
   styleUrl: './pagina-categorias-admin.component.css',
 })
-export class PaginaCategoriasAdminComponent {}
+export class PaginaCategoriasAdminComponent {
+  tipo: string = 'admin';
+}

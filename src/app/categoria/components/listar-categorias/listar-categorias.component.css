@@ -22,12 +22,15 @@ tbody tr:hover {
   background-color: #d3e3fc;
 }
 .columna-id {
-  width: 10%;
+  width: 5%;
 }
 .columna-categoria {
-  width: 70%;
+  width: 65%;
 }
 .columna-verDetalle {
+  width: 10%;
+}
+.columna-modificar {
   width: 10%;
 }
 .columna-estado {

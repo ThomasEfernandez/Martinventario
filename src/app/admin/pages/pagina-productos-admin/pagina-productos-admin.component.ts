@@ -14,4 +14,6 @@ import { ListarProductosComponent } from 'app/producto/components/listar-product
   templateUrl: './pagina-productos-admin.component.html',
   styleUrl: './pagina-productos-admin.component.css',
 })
-export class PaginaProductosAdminComponent {}
+export class PaginaProductosAdminComponent {
+  tipo: string = 'admin';
+}

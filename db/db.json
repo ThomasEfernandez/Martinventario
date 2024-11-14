@@ -340,6 +340,14 @@
       "cantidad": 1,
       "razonSocialProveedor": "Fausto",
       "estado": false
+    },
+    {
+      "id": "3",
+      "fecha": "14/10/2024",
+      "producto": "aaa",
+      "cantidad": 1,
+      "razonSocialProveedor": "Fausto",
+      "estado": false
     }
   ]
 }

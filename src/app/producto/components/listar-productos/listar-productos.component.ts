@@ -1,21 +1,22 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { Producto } from 'app/producto/interfaces/producto.interface';
 import { ProductoService } from 'app/producto/services/producto.service';
-import { AgregarProductoAdminComponent } from '../agregar-producto-admin/agregar-producto-admin.component';
 
 @Component({
   selector: 'app-listar-productos',
   standalone: true,
-  imports: [
-    /*AgregarProductoAdminComponent*/
-  ],
+  imports: [RouterModule],
   templateUrl: './listar-productos.component.html',
   styleUrl: './listar-productos.component.css',
 })
-export class ListarProductosComponent implements OnInit {
+export class ListarProductosComponent {
+  @Input() tipo: string = '';
+
   ngOnInit(): void {
     this.cargarListaProd();
   }
+
   listaProductos: Producto[] = [];
   productoService = inject(ProductoService);
 

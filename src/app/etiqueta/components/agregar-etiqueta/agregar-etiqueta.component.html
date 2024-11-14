@@ -1,0 +1,52 @@
+<form [formGroup]="formulario" (ngSubmit)="agregarEtiqueta()">
+  <div class="form">
+    <div class="flex-box">
+      <label>Etiqueta</label>
+      @if(formulario.controls['nombreEtiqueta'].getError('required') &&
+      formulario.controls['nombreEtiqueta'].touched){
+      <small class="error">Campo requerido</small>
+      }
+      <input type="text" formControlName="nombreEtiqueta" />
+    </div>
+
+    <div class="flex-box">
+      <label>Categoría</label>
+      @if(formulario.controls['nombreCategoria'].getError('required') &&
+      formulario.controls['nombreCategoria'].touched){
+      <small class="error">Campo requerido</small>
+      }
+      <select id="categoria" formControlName="nombreCategoria">
+        <option value="" disabled selected hidden>
+          Selecciona una categoría
+        </option>
+        @for (categoria of listaCategorias; track $index) {
+        <option value="{{ categoria.nombreCategoria }}">
+          {{ categoria.nombreCategoria }}
+        </option>
+        }
+      </select>
+    </div>
+  </div>
+  <div class="botones">
+    @if(etiquetaAgregada){
+    <small class="exito">Etiqueta agregada</small>
+    @if(tipo === 'admin') {
+    <button type="button" id="volver" routerLink="/admin/categorias">
+      Volver
+    </button>
+    } @else if (tipo === 'repositor') {
+    <button type="button" id="volver" routerLink="/repositor/categorias">
+      Volver
+    </button>
+    } } @else{ @if(tipo === 'admin') {
+    <button type="button" id="cancelar" routerLink="/admin/categorias">
+      Cancelar
+    </button>
+    } @else if(tipo === 'repositor') {
+    <button type="button" id="cancelar" routerLink="/repositor/categorias">
+      Cancelar
+    </button>
+    }
+    <button type="submit" id="agregar">Agregar etiqueta</button> }
+  </div>
+</form>

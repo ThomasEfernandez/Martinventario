@@ -9,4 +9,6 @@ import { VerDetalleCategoriaComponent } from '../../../categoria/components/ver-
   templateUrl: './pagina-ver-detalle-categoria-admin.component.html',
   styleUrl: './pagina-ver-detalle-categoria-admin.component.css',
 })
-export class PaginaVerDetalleCategoriaAdminComponent {}
+export class PaginaVerDetalleCategoriaAdminComponent {
+  tipo: string = 'admin';
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,4 +8,6 @@ import { RouterLink } from '@angular/router';
   templateUrl: './menu-producto.component.html',
   styleUrl: './menu-producto.component.css',
 })
-export class MenuProductoComponent {}
+export class MenuProductoComponent {
+  @Input() tipo: string = '';
+}

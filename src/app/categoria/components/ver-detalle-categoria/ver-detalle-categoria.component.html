@@ -1,12 +1,10 @@
-<!-- <div class="div-boton-volver">
-  <button class="boton-volver" routerLink="/admin/categorias">Volver</button>
-</div> -->
 <div>
   <table>
     <thead>
       <tr>
         <th class="columna-id">Id</th>
         <th class="columna-etiqueta">Etiqueta</th>
+        <th class="columna-modificar">Modificar</th>
         <th class="columna-estado">Estado</th>
       </tr>
     </thead>
@@ -15,6 +13,17 @@
       <tr>
         <td>{{ etiqueta.id }}</td>
         <td>{{ etiqueta.nombreEtiqueta }}</td>
+        <td>
+          @if(tipo === 'admin') {
+          <button [routerLink]="['/admin/etiqueta/modificar', etiqueta.id]">
+            Modificar
+          </button>
+          } @else if (tipo === 'repositor') {
+          <button [routerLink]="['/repositor/etiqueta/modificar', etiqueta.id]">
+            Modificar
+          </button>
+          }
+        </td>
         <td>
           @if(etiqueta.estado) {
           <button class="desactivar" (click)="desactivarEtiqueta(etiqueta.id)">

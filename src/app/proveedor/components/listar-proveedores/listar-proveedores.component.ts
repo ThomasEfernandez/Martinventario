@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { Proveedor } from 'app/proveedor/interfaces/proveedor-interface';
 import { ProveedorService } from 'app/proveedor/services/proveedor.service';
 import { RouterModule } from '@angular/router';
@@ -11,6 +11,8 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./listar-proveedores.component.css'],
 })
 export class ListarProveedorComponent {
+  @Input() tipo: string = '';
+
   listaProveedores: Proveedor[] = [];
   proveedorService = inject(ProveedorService);
 
@@ -36,7 +38,7 @@ export class ListarProveedorComponent {
       },
       error: (err) => {
         console.error('Error al eliminar el proveedor', err);
-      }
+      },
     });
   }
 }

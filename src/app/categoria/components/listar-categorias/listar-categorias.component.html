@@ -4,6 +4,7 @@
       <th class="columna-id">Id</th>
       <th class="columna-categoria">Categoria</th>
       <th class="columna-verDetalle">Detalle</th>
+      <th class="columna-modificar">Modificar</th>
       <th class="columna-estado">Estado</th>
     </thead>
     <tbody>
@@ -12,9 +13,28 @@
         <td>{{ categoria.id }}</td>
         <td>{{ categoria.nombreCategoria }}</td>
         <td>
+          @if(tipo === 'admin') {
           <button [routerLink]="['/admin/categoria', categoria.id]">
             Ver detalle
           </button>
+          } @else if (tipo === 'repositor') {
+          <button [routerLink]="['/repositor/categoria', categoria.id]">
+            Ver detalle
+          </button>
+          }
+        </td>
+        <td>
+          @if(tipo === 'admin') {
+          <button [routerLink]="['/admin/categoria/modificar', categoria.id]">
+            Modificar
+          </button>
+          } @else if (tipo === 'repositor') {
+          <button
+            [routerLink]="['/repositor/categoria/modificar', categoria.id]"
+          >
+            Modificar
+          </button>
+          }
         </td>
         <td>
           @if (categoria.estado) {

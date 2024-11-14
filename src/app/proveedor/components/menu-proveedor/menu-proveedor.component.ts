@@ -2,12 +2,12 @@ import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-menu-categoria',
+  selector: 'app-menu-proveedor',
   standalone: true,
   imports: [RouterModule],
-  templateUrl: './menu-categoria.component.html',
-  styleUrl: './menu-categoria.component.css',
+  templateUrl: './menu-proveedor.component.html',
+  styleUrl: './menu-proveedor.component.css',
 })
-export class MenuCategoriaComponent {
+export class MenuProveedorComponent {
   @Input() tipo: string = '';
 }
