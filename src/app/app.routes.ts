@@ -10,7 +10,12 @@ import { PaginaPedidosAdminComponent } from './admin/pages/pagina-pedidos-admin/
 import { PaginaAgregarPedidoAdminComponent } from './admin/pages/pagina-agregar-pedido-admin/pagina-agregar-pedido-admin.component';
 import { PaginaCategoriasAdminComponent } from './admin/pages/pagina-categorias-admin/pagina-categorias-admin.component';
 import { PaginaAgregarCategoriaAdminComponent } from './admin/pages/pagina-agregar-categoria-admin/pagina-agregar-categoria-admin.component';
+import { PaginaVerDetalleCategoriaAdminComponent } from './admin/pages/pagina-ver-detalle-categoria-admin/pagina-ver-detalle-categoria-admin.component';
 import { PaginaAgregarEtiquetaAdminComponent } from './admin/pages/pagina-agregar-etiqueta-admin/pagina-agregar-etiqueta-admin.component';
+
+import { PaginaVentasAdminComponent } from './admin/pages/pagina-ventas-admin/pagina-ventas-admin.component';
+import { PaginaCajerosAdminComponent } from './admin/pages/pagina-cajeros-admin/pagina-cajeros-admin.component';
+import { PaginaGenerarVentaAdminComponent } from './admin/pages/pagina-generar-venta-admin/pagina-generar-venta-admin.component';
 
 import { PaginaPrincipalRepositorComponent } from './repositor/pages/pagina-principal-repositor/pagina-principal-repositor.component';
 import { PaginaProveedoresRepositorComponent } from './repositor/pages/pagina-proveedores-repositor/pagina-proveedores-repositor.component';
@@ -25,10 +30,6 @@ import { PaginaPedidoComponent } from './compra/pages/pagina-pedido/pagina-pedid
 
 import { PaginaCajeroComponent } from './cajero/pages/pagina-cajero/pagina-cajero.component';
 import { authGuardFn } from './auth/guard/auth.guard-fn';
-import { PaginaVerDetalleCategoriaAdminComponent } from './admin/pages/pagina-ver-detalle-categoria-admin/pagina-ver-detalle-categoria-admin.component';
-import { PaginaVentasAdminComponent } from './admin/pages/pagina-ventas-admin/pagina-ventas-admin.component';
-import { PaginaCajerosAdminComponent } from './admin/pages/pagina-cajeros-admin/pagina-cajeros-admin.component';
-import { PaginaGenerarVentaAdminComponent } from './admin/pages/pagina-generar-venta-admin/pagina-generar-venta-admin.component';
 
 export const routes: Routes = [
   {
@@ -71,7 +72,6 @@ export const routes: Routes = [
     component: PaginaAgregarPedidoAdminComponent,
     // canActivate: [authGuardFn],
   },
-
   {
     path: 'admin/categorias',
     component: PaginaCategoriasAdminComponent,
@@ -87,7 +87,6 @@ export const routes: Routes = [
     component: PaginaVerDetalleCategoriaAdminComponent,
     // canActivate: [authGuardFn],
   },
-
   {
     path: 'admin/etiquetas/agregar',
     component: PaginaAgregarEtiquetaAdminComponent,
@@ -103,6 +102,12 @@ export const routes: Routes = [
     path: 'admin/generar-ventas',
     component: PaginaGenerarVentaAdminComponent,
   },
+  {
+    // path: 'admin/venta/:id',
+    // component: PaginaVerDetalleVentaAdminComponent,
+    // canActivate: [authGuardFn],
+  },
+
   {
     path: 'admin/cajeros',
     component: PaginaCajerosAdminComponent,

@@ -1,15 +1,15 @@
 .contenedor {
+  padding: 2% 1% 1%;
   flex: 1;
   display: flex;
   justify-content: right;
-  padding: 2% 0 1%;
 }
 .contenedor ul {
   display: flex;
   list-style: none;
 }
 .contenedor ul li {
-  margin: 0 15px;
+  margin-left: 30px;
 }
 .contenedor ul li a {
   background-color: #0088ee;

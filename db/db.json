@@ -183,17 +183,17 @@
         {
           "id": "1",
           "nombreEtiqueta": "Galletitas dulces",
-          "estado": false
+          "estado": true
         },
         {
           "id": "2",
           "nombreEtiqueta": "Dulce",
-          "estado": false
+          "estado": true
         },
         {
           "id": "3",
           "nombreEtiqueta": "Carne",
-          "estado": false
+          "estado": true
         }
       ]
     },

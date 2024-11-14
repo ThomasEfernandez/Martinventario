@@ -5,13 +5,13 @@ import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
 
 @Component({
-  selector: 'app-agregar-categoria',
+  selector: 'app-agregar-categoria-repositor',
   standalone: true,
   imports: [ReactiveFormsModule, RouterModule],
-  templateUrl: './agregar-categoria.component.html',
-  styleUrl: './agregar-categoria.component.css',
+  templateUrl: './agregar-categoria-repositor.component.html',
+  styleUrl: './agregar-categoria-repositor.component.css',
 })
-export class AgregarCategoriaComponent {
+export class AgregarCategoriaRepositorComponent {
   @Output()
   emitirCategoria: EventEmitter<Categoria> = new EventEmitter();
 

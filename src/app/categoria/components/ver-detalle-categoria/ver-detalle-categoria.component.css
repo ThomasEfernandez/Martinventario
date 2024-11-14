@@ -1,5 +1,5 @@
 div {
-  padding: 20px;
+  padding: 1%;
 }
 table {
   width: 100%;
@@ -36,7 +36,7 @@ li {
 button {
   font-weight: bold;
   padding: 5%;
-  background-color: #0088ee;
+  background-color: #ee4444;
   border: 0;
   border-radius: 5px;
   cursor: pointer;
@@ -44,15 +44,9 @@ button {
 .activar {
   background-color: #22aa22;
 }
-.desactivar {
-  background-color: #ee4444;
-}
 button:hover {
-  background-color: #0099ff;
+  background-color: #ee6666;
 }
 .activar:hover {
   background-color: #44cc44;
-}
-.desactivar:hover {
-  background-color: #ee6666;
 }
