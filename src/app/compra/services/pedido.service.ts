@@ -18,18 +18,18 @@ export class PedidoService {
     return this.http.post<Pedido>(this.url, pedido);
   }
 
-  getPedidosById(id: number): Observable<Pedido> {
+  getPedidosById(id: string | undefined ): Observable<Pedido> {
     return this.http.get<Pedido>(`${this.url}/${id}`);
   }
 
-  deletePedido(id: number): Observable<Pedido> {
+  deletePedido(id: string): Observable<Pedido> {
     return this.http.delete<Pedido>(`${this.url}/${id}`);
   }
 
-  putPedidos(id: number, pedido: Pedido): Observable<Pedido> {
+  putPedidos(id: string, pedido: Pedido): Observable<Pedido> {
     return this.http.put<Pedido>(`${this.url}/${id}`, pedido);
   }
-  patchPedidos(id: number, pedido: Pedido): Observable<Pedido> {
+  patchPedidos(id: string, pedido: Pedido): Observable<Pedido> {
     return this.http.patch<Pedido>(`${this.url}/${id}`, pedido);
   }
 }

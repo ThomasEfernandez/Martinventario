@@ -26,7 +26,7 @@ export class RealizarVentaCajeroComponent {
   prodService = inject(ProductoService);
 
   producto: Producto | undefined = {
-    id: 0,
+    id: '',
     nombreProducto: '',
     cantidad: 0,
     marca: '',
@@ -42,7 +42,7 @@ export class RealizarVentaCajeroComponent {
 
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
-    id: [0],
+    id: [''],
     total: [0],
     fecha: [
       new Date().getDate() +
@@ -61,7 +61,7 @@ export class RealizarVentaCajeroComponent {
       const venta = this.formulario.getRawValue();
       this.ventasService.getVenta().subscribe({
         next: (ventas: Venta[]) => {
-          venta.id = ventas.length + 1;
+          venta.id = `${ventas.length + 1}`;
 
           const produ = this.listaProductos.find(
             (p) => p.nombreProducto === venta.producto
@@ -103,7 +103,7 @@ export class RealizarVentaCajeroComponent {
     }
   }
 
-  modificarStock(cantidad: number, id: number | undefined) {
+  modificarStock(cantidad: number, id: string | undefined) {
     this.prodService.getProductoById(id).subscribe({
       next: (aux: Producto) => {
         aux.cantidad = aux.cantidad - cantidad;

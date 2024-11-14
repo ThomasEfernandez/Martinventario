@@ -14,7 +14,7 @@ export class ProveedorService {
     return this.http.get<Proveedor[]>(this.url);
   }
 
-  getProveedorById(id: number): Observable<Proveedor> {
+  getProveedorById(id: string | undefined): Observable<Proveedor> {
     return this.http.get<Proveedor>(`${this.url}/${id}`);
   }
 
@@ -22,15 +22,21 @@ export class ProveedorService {
     return this.http.post<Proveedor>(this.url, proveedor);
   }
 
-  putProducto(id: number, producto: Proveedor): Observable<Proveedor> {
+  putProducto(
+    id: string | undefined,
+    producto: Proveedor
+  ): Observable<Proveedor> {
     return this.http.put<Proveedor>(`${this.url}/${id}`, producto);
   }
 
-  patchProducto(id: number, producto: Proveedor): Observable<Proveedor> {
+  patchProducto(
+    id: string | undefined,
+    producto: Proveedor
+  ): Observable<Proveedor> {
     return this.http.patch<Proveedor>(`${this.url}/${id}`, producto);
   }
 
-  deleteProveedor(id: number): Observable<Proveedor> {
+  deleteProveedor(id: string | undefined): Observable<Proveedor> {
     return this.http.delete<Proveedor>(`${this.url}/${id}`);
   }
 }

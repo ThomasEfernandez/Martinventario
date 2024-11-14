@@ -1,6 +1,6 @@
 import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Usuario } from '../../interfaces/Usuario.interface';
+import { Usuario } from 'app/usuario/interfaces/Usuario.interface';
 import { UsuarioService } from '../../services/usuario.service';
 @Component({
   selector: 'app-agregar-usuario',
@@ -16,7 +16,7 @@ export class AgregarUsuarioComponent {
   fb = inject(FormBuilder);
 
   formulario = this.fb.nonNullable.group({
-    id: [0],
+    id: [''],
     usuario: ['', [Validators.required, Validators.minLength(4)]],
     contrasena: ['', [Validators.required, Validators.minLength(4)]],
     tipo: [''],

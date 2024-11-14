@@ -15,7 +15,7 @@ export class AgregarCajeroComponent {
   emitirCajero: EventEmitter<Cajero> = new EventEmitter();
   fp = inject(FormBuilder);
   formulario = this.fp.nonNullable.group({
-    id: [0],
+    id: [''],
     usuario: ['', Validators.required],
     contrasena: ['', Validators.required],
     nroCaja: [0, Validators.required],
@@ -31,6 +31,6 @@ export class AgregarCajeroComponent {
     this.emitirCajero.emit(cajero)
   }
 
-  
+
 
 }

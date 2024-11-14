@@ -1,9 +1,9 @@
 import { Producto } from '../../producto/interfaces/producto.interface';
 
 export interface Pedido {
-  id: number;
+  id: string;
   proveedor: string;
-  idProducto: number;
+  idProducto: string;
   cantidad: number;
   totalCompra: number;
 }

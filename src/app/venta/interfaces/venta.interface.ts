@@ -1,5 +1,5 @@
 export interface Venta {
-  id: number;
+  id: string;
   total: number;
   fecha: string;
   cajero: number;
