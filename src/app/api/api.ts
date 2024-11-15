@@ -1,5 +1,5 @@
 import { API_CONFIG } from './config';
-import { Product } from './types';
+import { Productt } from './types';
 
 async function fetchData<T>(endpoint: string): Promise<T | null> {
   try {
@@ -20,8 +20,8 @@ async function fetchData<T>(endpoint: string): Promise<T | null> {
   }
 }
 
-export async function fetchProducts(): Promise<Product | null> {
-  return fetchData<Product>(
+export async function fetchProducts(): Promise<Productt[] | null> {
+  return fetchData<Productt[]>(
     'products/v2/list?store_id=911&category=5xtg6&count=20&offset=0&default_purchasability_filter=true&sort_by=relevance'
   );
 }

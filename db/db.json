@@ -181,6 +181,256 @@
       "precioVenta": 2000,
       "categoria": "Alimentos",
       "etiquetas": "Dulce"
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple iPad 10.2-inch Wi-Fi 256GB (2021, 9th Generation) - Space Gray",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 349.99,
+      "precioVenta": 699.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Bose QuietComfort Bluetooth Wireless Noise Cancelling Headphones - Blue Dusk",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 349.99,
+      "precioVenta": 699.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Energizer Max AA Batteries - 4pk Alkaline Battery",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 4.29,
+      "precioVenta": 8.58,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Duracell Coppertop AA Batteries - 8pk Alkaline Battery",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 8.99,
+      "precioVenta": 17.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Amazon Echo Pop (1st Gen, 2023 Release) Full sound Compact Smart Speaker with Alexa - Charcoal",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 39.99,
+      "precioVenta": 79.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Energizer Max AA Batteries - 24pk Alkaline Battery",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 17.99,
+      "precioVenta": 35.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "AT&#38;T Prepaid Motorola Moto G Play LTE 2024 (64GB) - Blue",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 49.99,
+      "precioVenta": 99.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple AirPods Pro 2",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 189.99,
+      "precioVenta": 379.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple 20W USB-C Power Adapter",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 19.99,
+      "precioVenta": 39.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple Wired EarPods with Lightning Connector",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 19.99,
+      "precioVenta": 39.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple AirPods (2nd Generation) with Charging Case",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 129.99,
+      "precioVenta": 259.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "AA Batteries - 20pk Alkaline Battery  - up&#38;up&#8482;",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 14.49,
+      "precioVenta": 28.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Fujifilm INSTAX MINI Instant Film Twin Pack",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 14.99,
+      "precioVenta": 29.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Fujifilm Quicksnap 135 Flash 400-27exp Camera",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 19.99,
+      "precioVenta": 39.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "AirPods (3rd Generation) with Lightning Charging Case",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 169.99,
+      "precioVenta": 339.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "AAA Batteries - 20pk Alkaline Battery - up&#38;up&#8482;",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 14.49,
+      "precioVenta": 28.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "2 Year Electronics Protection Plan ($18-$29.99) - Allstate",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 3.5,
+      "precioVenta": 7,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple AirTag (1 Pack)",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 29.99,
+      "precioVenta": 59.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Energizer Max 9V Batteries - 2pk Alkaline Battery",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 6.99,
+      "precioVenta": 13.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Single Port 20W USB-C Wall Charger - dealworthy&#8482; White",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 5.99,
+      "precioVenta": 11.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Luigi&#39;s Mansion 2 HD - Nintendo Switch",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 59.99,
+      "precioVenta": 119.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "3&#39; Lightning to USB-A Charging Cable - dealworthy&#8482; White",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 5.99,
+      "precioVenta": 11.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Energizer 2032 Batteries 4pk - Lithium Coin Battery",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 6.49,
+      "precioVenta": 12.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple EarPods (USB-C)",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 19.99,
+      "precioVenta": 39.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple USB-C to Lightning Cable (1m)",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 19.99,
+      "precioVenta": 39.98,
+      "categoria": ""
     }
   ],
   "proveedores": [
