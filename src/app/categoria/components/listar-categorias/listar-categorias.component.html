@@ -4,7 +4,7 @@
       <th class="columna-id">Id</th>
       <th class="columna-categoria">Categoria</th>
       <th class="columna-verDetalle">Detalle</th>
-      <th class="columna-modificar">Modificar</th>
+      <!-- <th class="columna-modificar">Modificar</th> -->
       <th class="columna-estado">Estado</th>
     </thead>
     <tbody>
@@ -23,7 +23,7 @@
           </button>
           }
         </td>
-        <td>
+        <!-- <td>
           @if(tipo === 'admin') {
           <button [routerLink]="['/admin/categoria/modificar', categoria.id]">
             Modificar
@@ -35,7 +35,7 @@
             Modificar
           </button>
           }
-        </td>
+        </td> -->
         <td>
           @if (categoria.estado) {
           <button

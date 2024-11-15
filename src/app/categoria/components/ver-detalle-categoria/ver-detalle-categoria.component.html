@@ -4,7 +4,7 @@
       <tr>
         <th class="columna-id">Id</th>
         <th class="columna-etiqueta">Etiqueta</th>
-        <th class="columna-modificar">Modificar</th>
+        <!-- <th class="columna-modificar">Modificar</th> -->
         <th class="columna-estado">Estado</th>
       </tr>
     </thead>
@@ -13,7 +13,7 @@
       <tr>
         <td>{{ etiqueta.id }}</td>
         <td>{{ etiqueta.nombreEtiqueta }}</td>
-        <td>
+        <!-- <td>
           @if(tipo === 'admin') {
           <button [routerLink]="['/admin/etiqueta/modificar', etiqueta.id]">
             Modificar
@@ -23,7 +23,7 @@
             Modificar
           </button>
           }
-        </td>
+        </td> -->
         <td>
           @if(etiqueta.estado) {
           <button class="desactivar" (click)="desactivarEtiqueta(etiqueta.id)">

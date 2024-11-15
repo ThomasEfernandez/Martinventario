@@ -452,26 +452,18 @@
   "pedidos": [
     {
       "id": "1",
-      "fecha": "13/10/2024",
-      "producto": "a",
-      "cantidad": 1,
-      "razonSocialProveedor": "Agustin",
+      "fecha": "15/10/2024",
+      "producto": "Pepitos",
+      "cantidad": 10,
+      "razonSocialProveedor": "Fausto",
       "estado": false
     },
     {
       "id": "2",
-      "fecha": "14/10/2024",
-      "producto": "coca",
-      "cantidad": 1,
-      "razonSocialProveedor": "Fausto",
-      "estado": false
-    },
-    {
-      "id": "3",
-      "fecha": "14/10/2024",
-      "producto": "aaa",
-      "cantidad": 1,
-      "razonSocialProveedor": "Fausto",
+      "fecha": "15/10/2024",
+      "producto": "Pepsi",
+      "cantidad": 5,
+      "razonSocialProveedor": "Agustin",
       "estado": false
     }
   ]

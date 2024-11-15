@@ -7,7 +7,7 @@
       <th class="columna-producto-a">Producto</th>
       <th class="columna-cantidad-a">Cantidad</th>
       <th class="columna-razonSocialProveedor-a">Proveedor</th>
-      <th class="columna-modificar-a">Modificar</th>
+      <!-- <th class="columna-modificar-a">Modificar</th> -->
       <th class="columna-realizado-a">Realizado</th>
       } @else if (tipo === 'repositor') {
       <th class="columna-id-r">Id</th>
@@ -26,11 +26,11 @@
         <td>{{ pedido.cantidad }}</td>
         <td>{{ pedido.razonSocialProveedor }}</td>
         @if (tipo === 'admin') {
-        <td>
+        <!-- <td>
           <button [routerLink]="['/admin/pedido/modificar', pedido.id]">
             Modificar
           </button>
-        </td>
+        </td> -->
         <td>
           @if (pedido.estado) {
           <button class="realizar" (click)="pedidoNoRealizado(pedido.id)">
