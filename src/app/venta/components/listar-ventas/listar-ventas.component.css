@@ -42,17 +42,11 @@ tbody tr:hover {
 button {
   font-weight: bold;
   padding: 5%;
-  background-color: #22aa22;
+  background-color: #0088ee;
   border: 0;
   border-radius: 5px;
   cursor: pointer;
 }
-.noRealizar {
-  background-color: #ee4444;
-}
 button:hover {
-  background-color: #44cc44;
-}
-.noRealizar:hover {
-  background-color: #ee6666;
+  background-color: #0099ff;
 }

@@ -147,7 +147,7 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/repositor/agregar',
+    path: 'admin/repositores/agregar',
     component: PaginaAgregarRepositorAdminComponent,
     // canActivate: [authGuardFn],
   },

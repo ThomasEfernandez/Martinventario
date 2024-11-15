@@ -2,19 +2,22 @@ import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 import { UsuarioService } from '../../services/usuario.service';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-agregar-usuario',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterModule],
   templateUrl: './agregar-usuario.component.html',
   styleUrl: './agregar-usuario.component.css',
 })
 export class AgregarUsuarioComponent {
-  @Input()
-  usuarioNuevo: string = '';
+  @Input() usuarioNuevo: string = '';
+
+  usuarioService = inject(UsuarioService);
+
+  usuarioAgregado: boolean = false;
 
   fb = inject(FormBuilder);
-
   formulario = this.fb.nonNullable.group({
     id: [''],
     nombre: ['', [Validators.required]],
@@ -25,13 +28,20 @@ export class AgregarUsuarioComponent {
     estado: [true],
   });
 
-  usuarioService = inject(UsuarioService);
-
   agregarUsuario() {
-    if (this.formulario.invalid) return;
-    const usuario = this.formulario.getRawValue();
-    usuario.tipo = this.usuarioNuevo;
-    this.agregarUsuarioService(usuario);
+    if (this.formulario.valid) {
+      const usuario = this.formulario.getRawValue();
+      this.usuarioService.getUsuarios().subscribe({
+        next: (usuarios: Usuario[]) => {
+          usuario.id = `${usuarios.length + 1}`;
+          usuario.tipo = this.usuarioNuevo;
+          this.agregarUsuarioService(usuario);
+          this.usuarioAgregado = true;
+        },
+      });
+    } else {
+      this.formulario.markAllAsTouched();
+    }
   }
 
   agregarUsuarioService(usuario: Usuario) {

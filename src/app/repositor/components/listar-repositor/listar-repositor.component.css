@@ -22,26 +22,26 @@ tbody tr:hover {
   background-color: #d3e3fc;
 }
 .columna-id {
-  width: 10%;
+  width: 5%;
 }
 .columna-usuario {
-  width: 70%;
-}
-.columna-nombre {
-  width: 10%;
-}
-.columna-apellido {
-  width: 10%;
+  width: 20%;
 }
 .columna-contrasena {
-  width: 10%;
+  width: 20%;
+}
+.columna-nombre {
+  width: 22.5%;
+}
+.columna-apellido {
+  width: 22.5%;
 }
 .columna-estado {
   width: 10%;
 }
 button {
   font-weight: bold;
-  padding: 0.5%;
+  padding: 5%;
   background-color: #0088ee;
   border: 0;
   border-radius: 5px;

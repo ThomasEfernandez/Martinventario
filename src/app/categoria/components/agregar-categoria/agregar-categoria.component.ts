@@ -12,7 +12,7 @@ import { CategoriaService } from 'app/categoria/services/categoria.service';
   styleUrl: './agregar-categoria.component.css',
 })
 export class AgregarCategoriaComponent {
-  @Input() tipo: string | null = null;
+  @Input() tipo: string = '';
 
   fb = inject(FormBuilder);
   categoriaService = inject(CategoriaService);
