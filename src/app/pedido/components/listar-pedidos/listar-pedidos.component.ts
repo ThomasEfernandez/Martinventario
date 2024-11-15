@@ -1,15 +1,18 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { Pedido } from '../../interfaces/pedido.interface';
 import { PedidoService } from '../../services/pedido.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-listar-pedidos',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './listar-pedidos.component.html',
   styleUrl: './listar-pedidos.component.css',
 })
 export class ListarPedidosComponent {
+  @Input() tipo: string = '';
+
   pedidoService = inject(PedidoService);
 
   listaPedidos: Pedido[] = [];

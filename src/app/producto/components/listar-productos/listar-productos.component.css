@@ -1,5 +1,5 @@
 div {
-  padding: 20px;
+  padding: 1%;
 }
 table {
   width: 100%;
@@ -21,7 +21,50 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
   background-color: #d3e3fc;
 }
-td,
-th {
-  min-width: 100px;
+.columna-id {
+  width: 5%;
+}
+.columna-producto {
+  width: 20%;
+}
+.columna-marca {
+  width: 15%;
+}
+.columna-cantidad {
+  width: 10%;
+}
+.columna-proveedor {
+  width: 20%;
+}
+.columna-precioCompra {
+  width: 10%;
+}
+.columna-precioVenta {
+  width: 10%;
+}
+.columna-modificar {
+  width: 10%;
+}
+button {
+  font-weight: bold;
+  padding: 5%;
+  background-color: #0088ee;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.activar {
+  background-color: #22aa22;
+}
+.desactivar {
+  background-color: #ee4444;
+}
+button:hover {
+  background-color: #0099ff;
+}
+.activar:hover {
+  background-color: #44cc44;
+}
+.desactivar:hover {
+  background-color: #ee6666;
 }

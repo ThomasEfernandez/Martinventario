@@ -53,6 +53,33 @@
       "contrasena": "lautaro",
       "tipo": "repositor",
       "estado": true
+    },
+    {
+      "id": "7",
+      "nombre": "chaldu",
+      "apellido": "chaldu",
+      "usuario": "chaldu",
+      "contrasena": "chaldu",
+      "tipo": "cajero",
+      "estado": true
+    },
+    {
+      "id": "8",
+      "nombre": "a",
+      "apellido": "a",
+      "usuario": "aaaa",
+      "contrasena": "aaaa",
+      "tipo": "cajero",
+      "estado": true
+    },
+    {
+      "id": "9",
+      "nombre": "aaa",
+      "apellido": "a",
+      "usuario": "aaaa",
+      "contrasena": "aaaaa",
+      "tipo": "repositor",
+      "estado": true
     }
   ],
   "productos": [
@@ -337,6 +364,14 @@
       "id": "2",
       "fecha": "14/10/2024",
       "producto": "coca",
+      "cantidad": 1,
+      "razonSocialProveedor": "Fausto",
+      "estado": false
+    },
+    {
+      "id": "3",
+      "fecha": "14/10/2024",
+      "producto": "aaa",
       "cantidad": 1,
       "razonSocialProveedor": "Fausto",
       "estado": false

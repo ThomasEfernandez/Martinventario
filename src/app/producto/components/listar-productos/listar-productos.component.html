@@ -2,13 +2,14 @@
 <div>
   <table>
     <thead>
-      <th>Id</th>
-      <th>Producto</th>
-      <th>Marca</th>
-      <th>Cantidad</th>
-      <th>Proveedor</th>
-      <th>Precio compra</th>
-      <th>Precio venta</th>
+      <th class="columna-id">Id</th>
+      <th class="columna-producto">Producto</th>
+      <th class="columna-marca">Marca</th>
+      <th class="columna-cantidad">Cantidad</th>
+      <th class="columna-proveedor">Proveedor</th>
+      <th class="columna-precioCompra">Precio compra</th>
+      <th class="columna-precioVenta">Precio venta</th>
+      <th class="columna-modificar">Modificar</th>
     </thead>
     <tbody>
       @for(producto of listaProductos; track $index) {
@@ -20,6 +21,17 @@
         <td>{{ producto.proveedor }}</td>
         <td>{{ producto.precioCompra }}</td>
         <td>{{ producto.precioVenta }}</td>
+        <td>
+          @if(tipo === 'admin') {
+          <button [routerLink]="['/admin/producto/modificar', producto.id]">
+            Modificar
+          </button>
+          } @else if (tipo === 'repositor') {
+          <button [routerLink]="['/repositor/producto/modificar', producto.id]">
+            Modificar
+          </button>
+          }
+        </td>
       </tr>
       }
     </tbody>

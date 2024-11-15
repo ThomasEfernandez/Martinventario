@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarRepositorComponent } from '../../../nav/components/navbar-repositor/navbar-repositor.component';
-import { MenuProductoRepositorComponent } from '../../../producto/components/menu-producto-repositor/menu-producto-repositor.component';
+import { MenuProductoComponent } from '../../../producto/components/menu-producto/menu-producto.component';
 import { ListarProductosComponent } from '../../../producto/components/listar-productos/listar-productos.component';
 
 @Component({
@@ -8,10 +8,12 @@ import { ListarProductosComponent } from '../../../producto/components/listar-pr
   standalone: true,
   imports: [
     NavbarRepositorComponent,
-    MenuProductoRepositorComponent,
+    MenuProductoComponent,
     ListarProductosComponent,
   ],
   templateUrl: './pagina-productos-repositor.component.html',
   styleUrl: './pagina-productos-repositor.component.css',
 })
-export class PaginaProductosRepositorComponent {}
+export class PaginaProductosRepositorComponent {
+  tipo: string = 'repositor';
+}
