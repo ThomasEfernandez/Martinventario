@@ -1,7 +1,7 @@
 import { Producto } from '../../../producto/interfaces/producto.interface';
 import { ProductoService } from '../../../producto/services/producto.service';
 import { Venta } from '../../interfaces/venta.interface';
-import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import {
   FormBuilder,
   FormsModule,
@@ -10,18 +10,19 @@ import {
 } from '@angular/forms';
 import { VentaService } from '../../services/venta.service';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-realizar-venta-admin',
+  selector: 'app-realizar-venta',
   standalone: true,
   imports: [ReactiveFormsModule, FormsModule, CommonModule, RouterModule],
-  templateUrl: './realizar-venta-admin.component.html',
-  styleUrl: './realizar-venta-admin.component.css',
+  templateUrl: './realizar-venta.component.html',
+  styleUrl: './realizar-venta.component.css',
 })
-export class RealizarVentaAdminComponent {
-  @Output()
-  emitirVenta: EventEmitter<Venta> = new EventEmitter();
+export class RealizarVentaComponent {
+  @Input() tipo: string = '';
+
+  router = inject(Router);
 
   ventasService = inject(VentaService);
   prodService = inject(ProductoService);
@@ -63,21 +64,19 @@ export class RealizarVentaAdminComponent {
       this.ventasService.getVenta().subscribe({
         next: (ventas: Venta[]) => {
           venta.id = `${ventas.length + 1}`;
-
           const produ = this.listaProductos.find(
             (p) => p.nombreProducto === venta.producto
           );
-
           this.prodService.getProductoById(produ?.id).subscribe({
             next: (prod: Producto) => {
-              console.log('entra');
-              console.log('cantidad:' + venta.cantidad);
-              console.log('precio venta:' + prod.precioVenta);
               venta.total = venta.cantidad * prod.precioVenta;
-              console.log('total:' + venta.total);
-              this.emitirVenta.emit(venta);
               this.agregarVentaService(venta);
               this.ventaRealizada = true;
+              if (this.tipo === 'admin') {
+                this.router.navigate([`/admin/venta/${venta.id}`]);
+              } else if (this.tipo === 'cajero') {
+                this.router.navigate([`/cajero/venta/${venta.id}`]);
+              }
             },
             error: (err: Error) => {
               console.log(err.message);

@@ -88,7 +88,7 @@
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": 7,
+      "cantidad": 10,
       "precioCompra": 1000,
       "precioVenta": 1500,
       "categoria": "Alimentos",
@@ -99,7 +99,7 @@
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Fausto",
-      "cantidad": 39,
+      "cantidad": 41,
       "precioCompra": 2000,
       "precioVenta": 2500,
       "categoria": "Bebidas",
@@ -132,7 +132,7 @@
       "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
       "proveedor": "Agustin",
-      "cantidad": 50,
+      "cantidad": 48,
       "precioCompra": 4000,
       "precioVenta": 5700,
       "categoria": "Higiene",
@@ -143,7 +143,7 @@
       "nombreProducto": "galletitas",
       "marca": "oreo",
       "proveedor": "Fausto",
-      "cantidad": 2,
+      "cantidad": 0,
       "precioCompra": 1300,
       "precioVenta": 2000,
       "categoria": "Alimentos",
@@ -154,7 +154,7 @@
       "nombreProducto": "milanesas",
       "marca": "carrefour",
       "proveedor": "Fausto",
-      "cantidad": 10,
+      "cantidad": 7,
       "precioCompra": 8000,
       "precioVenta": 10000,
       "categoria": "Alimentos",
@@ -349,6 +349,104 @@
       "cajero": 0,
       "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "cantidad": 1
+    },
+    {
+      "id": "5",
+      "total": 1500,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "6",
+      "total": 2000,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "galletitas",
+      "cantidad": 1
+    },
+    {
+      "id": "7",
+      "total": 2000,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "galletitas",
+      "cantidad": 1
+    },
+    {
+      "id": "8",
+      "total": 7000,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "9",
+      "total": 7000,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "10",
+      "total": 7000,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "11",
+      "total": 2500,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 1
+    },
+    {
+      "id": "12",
+      "total": 11400,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "Shampoo Dove reconstruccion completa 400cc",
+      "cantidad": 2
+    },
+    {
+      "id": "13",
+      "total": 30000,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "milanesas",
+      "cantidad": 3
+    }
+  ],
+  "compras": [
+    {
+      "id": "1",
+      "proveedor": "Fausto",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 2,
+      "precioUnitario": 2,
+      "totalCompra": 4
+    },
+    {
+      "id": "2",
+      "proveedor": "Fausto",
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 2,
+      "precioUnitario": 7,
+      "totalCompra": 14
+    },
+    {
+      "id": "3",
+      "proveedor": "Fausto",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 4,
+      "precioUnitario": 10,
+      "totalCompra": 40
     }
   ],
   "pedidos": [
