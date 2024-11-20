@@ -43,6 +43,7 @@ export class IniciarSesionComponent {
           this.router.navigate(['/repositor']);
           break;
         case 'cajero':
+          this.router.navigate(['/cajero']);
           break;
       }
     } else {

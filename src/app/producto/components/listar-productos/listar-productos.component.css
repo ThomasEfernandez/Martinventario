@@ -21,29 +21,58 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
   background-color: #d3e3fc;
 }
-.columna-id {
+/* admin */
+.columna-id-a {
   width: 5%;
 }
-.columna-producto {
+.columna-producto-a {
+  width: 25%;
+}
+.columna-marca-a {
+  width: 10%;
+}
+.columna-cantidad-a {
+  width: 10%;
+}
+.columna-proveedor-a {
+  width: 10%;
+}
+.columna-precioCompra-a {
+  width: 10%;
+}
+.columna-precioVenta-a {
+  width: 10%;
+}
+.columna-categoria-a {
+  width: 10%;
+}
+.columna-modificar-a {
+  width: 10%;
+}
+/* repositor */
+.columna-id-r {
+  width: 5%;
+}
+.columna-producto-r {
+  width: 25%;
+}
+.columna-marca-r {
+  width: 10%;
+}
+.columna-cantidad-r {
+  width: 10%;
+}
+.columna-proveedor-r {
+  width: 10%;
+}
+.columna-precioCompra-r {
+  width: 10%;
+}
+.columna-precioVenta-r {
+  width: 10%;
+}
+.columna-categoria-r {
   width: 20%;
-}
-.columna-marca {
-  width: 15%;
-}
-.columna-cantidad {
-  width: 10%;
-}
-.columna-proveedor {
-  width: 15%;
-}
-.columna-precioCompra {
-  width: 15%;
-}
-.columna-precioVenta {
-  width: 15%;
-}
-.columna-modificar {
-  width: 10%;
 }
 button {
   font-weight: bold;
@@ -52,6 +81,9 @@ button {
   border: 0;
   border-radius: 5px;
   cursor: pointer;
+}
+.modificar {
+  background-color: #fbcb5b;
 }
 .activar {
   background-color: #22aa22;
@@ -67,4 +99,7 @@ button:hover {
 }
 .desactivar:hover {
   background-color: #ee6666;
+}
+.modificar:hover {
+  background-color: #ffdc6c;
 }

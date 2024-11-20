@@ -21,7 +21,7 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
   background-color: #d3e3fc;
 }
-
+/* admin */
 .columna-id-a {
   width: 5%;
 }
@@ -29,13 +29,13 @@ tbody tr:hover {
   width: 10%;
 }
 .columna-producto-a {
-  width: 30%;
+  width: 40%;
 }
 .columna-cantidad-a {
   width: 5%;
 }
 .columna-razonSocialProveedor-a {
-  width: 30%;
+  width: 20%;
 }
 .columna-modificar-a {
   width: 10%;
@@ -43,6 +43,7 @@ tbody tr:hover {
 .columna-realizado-a {
   width: 10%;
 }
+/* repositor */
 .columna-id-r {
   width: 5%;
 }
@@ -50,13 +51,16 @@ tbody tr:hover {
   width: 10%;
 }
 .columna-producto-r {
-  width: 30%;
+  width: 40%;
 }
 .columna-cantidad-r {
   width: 5%;
 }
 .columna-razonSocialProveedor-r {
-  width: 50%;
+  width: 30%;
+}
+.columna-realizado-r {
+  width: 10%;
 }
 button {
   font-weight: bold;
@@ -64,7 +68,11 @@ button {
   background-color: #0088ee;
   border: 0;
   border-radius: 5px;
+  color: #222222;
   cursor: pointer;
+}
+.modificar {
+  background-color: #fbcb5b;
 }
 .realizar {
   background-color: #22aa22;
@@ -72,12 +80,29 @@ button {
 .noRealizar {
   background-color: #ee4444;
 }
+.realizar-d {
+  background-color: #22aa22;
+  cursor: default;
+}
+.noRealizar-d {
+  background-color: #ee4444;
+  cursor: default;
+}
 button:hover {
   background-color: #0099ff;
+}
+.modificar:hover {
+  background-color: #ffdc6c;
 }
 .realizar:hover {
   background-color: #44cc44;
 }
 .noRealizar:hover {
   background-color: #ee6666;
+}
+.realizar-d:hover {
+  background-color: #22aa22;
+}
+.noRealizar-d:hover {
+  background-color: #ee4444;
 }

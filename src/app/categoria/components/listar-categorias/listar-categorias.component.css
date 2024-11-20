@@ -21,19 +21,27 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
   background-color: #d3e3fc;
 }
-.columna-id {
-  width: 5%;
+/* admin */
+.columna-categoria-a {
+  width: 70%;
 }
-.columna-categoria {
-  width: 65%;
-}
-.columna-verDetalle {
-  width: 20%;
-}
-.columna-modificar {
+.columna-verDetalle-a {
   width: 10%;
 }
-.columna-estado {
+.columna-modificar-a {
+  width: 10%;
+}
+.columna-estado-a {
+  width: 10%;
+}
+/* repositor */
+.columna-categoria-r {
+  width: 80%;
+}
+.columna-verDetalle-r {
+  width: 10%;
+}
+.columna-estado-r {
   width: 10%;
 }
 button {
@@ -44,6 +52,9 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+.modificar {
+  background-color: #fbcb5b;
+}
 .activar {
   background-color: #22aa22;
 }
@@ -52,6 +63,9 @@ button {
 }
 button:hover {
   background-color: #0099ff;
+}
+.modificar:hover {
+  background-color: #ffdc6c;
 }
 .activar:hover {
   background-color: #44cc44;

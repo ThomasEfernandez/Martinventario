@@ -70,7 +70,7 @@
       "usuario": "aaaa",
       "contrasena": "aaaa",
       "tipo": "cajero",
-      "estado": true
+      "estado": false
     },
     {
       "id": "9",
@@ -79,7 +79,7 @@
       "usuario": "aaaa",
       "contrasena": "aaaaa",
       "tipo": "repositor",
-      "estado": true
+      "estado": false
     }
   ],
   "productos": [
@@ -88,11 +88,13 @@
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": 10,
+      "cantidad": 11,
       "precioCompra": 1000,
       "precioVenta": 1500,
       "categoria": "Alimentos",
-      "etiquetas": "Galletitas dulces"
+      "etiquetas": [
+        ""
+      ]
     },
     {
       "id": "2",
@@ -442,7 +444,7 @@
       "id": "1",
       "nombre": "Fausto",
       "apellido": "Gimenez",
-      "razonSocial": "CocaCola",
+      "razonSocial": "CocaCola2",
       "cuit": "1231414",
       "email": "faustogimenezlobasso@gmail.com"
     },
@@ -710,7 +712,7 @@
       "producto": "Pepitos",
       "cantidad": 10,
       "razonSocialProveedor": "Fausto",
-      "estado": false
+      "estado": true
     },
     {
       "id": "2",

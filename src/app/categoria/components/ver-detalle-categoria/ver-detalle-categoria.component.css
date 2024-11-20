@@ -24,16 +24,21 @@ tbody tr:hover {
 li {
   list-style: none;
 }
-.columna-id {
-  width: 5%;
+/* admin */
+.columna-etiqueta-a {
+  width: 80%;
 }
-.columna-etiqueta {
-  width: 85%;
-}
-.columna-modificar {
+.columna-modificar-a {
   width: 10%;
 }
-.columna-estado {
+.columna-estado-a {
+  width: 10%;
+}
+/* repositor */
+.columna-etiqueta-r {
+  width: 90%;
+}
+.columna-estado-r {
   width: 10%;
 }
 button {
@@ -44,6 +49,9 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+.modificar {
+  background-color: #fbcb5b;
+}
 .activar {
   background-color: #22aa22;
 }
@@ -52,6 +60,9 @@ button {
 }
 button:hover {
   background-color: #0099ff;
+}
+.modificar:hover {
+  background-color: #ffdc6c;
 }
 .activar:hover {
   background-color: #44cc44;

@@ -71,11 +71,12 @@
         <option value="" disabled selected hidden>
           Selecciona una categoría
         </option>
-        @for (categoria of listaCategorias; track $index) {
+        @for (categoria of listaCategorias; track $index) { @if
+        (categoria.estado) {
         <option value="{{ categoria.nombreCategoria }}">
           {{ categoria.nombreCategoria }}
         </option>
-        }
+        } }
       </select>
     </div>
 

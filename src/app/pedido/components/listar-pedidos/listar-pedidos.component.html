@@ -7,7 +7,7 @@
       <th class="columna-producto-a">Producto</th>
       <th class="columna-cantidad-a">Cantidad</th>
       <th class="columna-razonSocialProveedor-a">Proveedor</th>
-      <!-- <th class="columna-modificar-a">Modificar</th> -->
+      <th class="columna-modificar-a">Modificar</th>
       <th class="columna-realizado-a">Realizado</th>
       } @else if (tipo === 'repositor') {
       <th class="columna-id-r">Id</th>
@@ -15,6 +15,7 @@
       <th class="columna-producto-r">Producto</th>
       <th class="columna-cantidad-r">Cantidad</th>
       <th class="columna-razonSocialProveedor-r">Proveedor</th>
+      <th class="columna-realizado-r">Realizado</th>
       }
     </thead>
     <tbody>
@@ -26,13 +27,17 @@
         <td>{{ pedido.cantidad }}</td>
         <td>{{ pedido.razonSocialProveedor }}</td>
         @if (tipo === 'admin') {
-        <!-- <td>
-          <button [routerLink]="['/admin/pedido/modificar', pedido.id]">
+        <td>
+          <button
+            class="modificar"
+            [routerLink]="['/admin/pedido/modificar', pedido.id]"
+          >
             Modificar
           </button>
-        </td> -->
+        </td>
+        }
         <td>
-          @if (pedido.estado) {
+          @if (tipo === 'admin') { @if (pedido.estado) {
           <button class="realizar" (click)="pedidoNoRealizado(pedido.id)">
             Realizado
           </button>
@@ -40,9 +45,12 @@
           <button class="noRealizar" (click)="pedidoRealizado(pedido.id)">
             No realizado
           </button>
-          }
+          } } @else if (tipo === 'repositor') { @if(pedido.estado) {
+          <button class="realizar-d" disabled>Realizado</button>
+          } @else {
+          <button class="noRealizar-d" disabled>No realizado</button>
+          } }
         </td>
-        }
       </tr>
       }
     </tbody>
