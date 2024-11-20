@@ -98,34 +98,38 @@
       "id": "2",
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
-      "proveedor": "Fausto",
-      "cantidad": 41,
+      "proveedor": "Agustin",
+      "cantidad": 40,
       "precioCompra": 2000,
       "precioVenta": 2500,
       "categoria": "Bebidas",
-      "etiquetas": "Gaseosa"
+      "etiquetas": [
+        ""
+      ]
     },
     {
       "id": "3",
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
-      "proveedor": "Fausto",
-      "cantidad": 10,
+      "proveedor": "Agustin",
+      "cantidad": 8,
       "precioCompra": 5800,
       "precioVenta": 7000,
       "categoria": "Alimentos",
-      "etiquetas": "Dulce"
+      "etiquetas": [
+        ""
+      ]
     },
     {
       "id": "4",
       "nombreProducto": "Consola playstation 5v Sony 1tb edición standard",
       "marca": "Sony",
-      "proveedor": "Agustin",
-      "cantidad": 5,
-      "precioCompra": 1000000,
-      "precioVenta": 1500000,
-      "categoria": "Hogar",
-      "etiquetas": "Electrodomestico"
+      "proveedor": "Fausto",
+      "cantidad": 10,
+      "precioCompra": 1500000,
+      "precioVenta": 2000000,
+      "categoria": "Higiene",
+      "etiquetas": "Shampoo"
     },
     {
       "id": "5",
@@ -438,9 +442,9 @@
       "id": "1",
       "nombre": "Fausto",
       "apellido": "Gimenez",
-      "razonSocial": "Pepsi",
-      "email": "faustogimenezlobasso@gmail.com",
-      "cuit": "1231414"
+      "razonSocial": "CocaCola",
+      "cuit": "1231414",
+      "email": "faustogimenezlobasso@gmail.com"
     },
     {
       "id": "2",

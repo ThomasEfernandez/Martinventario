@@ -65,6 +65,11 @@ import { PaginaVerDetalleVentaCajeroComponent } from './cajero/pages/pagina-ver-
 //auth
 
 import { authGuardFn } from './auth/guard/auth.guard-fn';
+import { PaginaModificarProductoAdminComponent } from './admin/pages/pagina-modificar-producto-admin/pagina-modificar-producto-admin.component';
+import { ModificarProductosRepositorComponent } from './repositor/pages/modificar-productos-repositor/modificar-productos-repositor.component';
+import { ModificarProveedorComponent } from './proveedor/components/modificar-proveedor/modificar-proveedor.component';
+import { PaginaModificarProveedoresAdminComponent } from './admin/pages/pagina-modificar-proveedores-admin/pagina-modificar-proveedores-admin.component';
+import { PaginaModificarProveedorRepositorComponent } from './repositor/pages/pagina-modificar-proveedor-repositor/pagina-modificar-proveedor-repositor.component';
 
 export const routes: Routes = [
   {
@@ -88,6 +93,11 @@ export const routes: Routes = [
     canActivate: [authGuardFn],
   },
   {
+    path: 'admin/proveedores/modificar/:id',
+    component: PaginaModificarProveedoresAdminComponent,
+    canActivate: [authGuardFn],
+  },
+  {
     path: 'admin/productos',
     component: PaginaProductosAdminComponent,
     canActivate: [authGuardFn],
@@ -95,6 +105,11 @@ export const routes: Routes = [
   {
     path: 'admin/productos/agregar',
     component: PaginaAgregarProductoAdminComponent,
+    canActivate: [authGuardFn],
+  },
+  {
+    path: 'admin/productos/modificar/:id',
+    component: PaginaModificarProductoAdminComponent,
     canActivate: [authGuardFn],
   },
 
@@ -190,6 +205,11 @@ export const routes: Routes = [
     canActivate: [authGuardFn],
   },
   {
+    path: 'repositor/proveedores/modificar/:id',
+    component: PaginaModificarProveedorRepositorComponent,
+    canActivate: [authGuardFn],
+  },
+  {
     path: 'repositor/productos',
     component: PaginaProductosRepositorComponent,
     canActivate: [authGuardFn],
@@ -197,6 +217,11 @@ export const routes: Routes = [
   {
     path: 'repositor/productos/agregar',
     component: PaginaAgregarProductoRepositorComponent,
+    canActivate: [authGuardFn],
+  },
+  {
+    path: 'repositor/productos/modificar/:id',
+    component: ModificarProductosRepositorComponent,
     canActivate: [authGuardFn],
   },
   {

@@ -9,7 +9,7 @@
       <th class="columna-proveedor">Proveedor</th>
       <th class="columna-precioCompra">Precio compra</th>
       <th class="columna-precioVenta">Precio venta</th>
-      <!-- <th class="columna-modificar">Modificar</th> -->
+      <th class="columna-modificar">Modificar</th>
     </thead>
     <tbody>
       @for(producto of listaProductos; track $index) {
@@ -21,17 +21,17 @@
         <td>{{ producto.proveedor }}</td>
         <td>{{ producto.precioCompra }}</td>
         <td>{{ producto.precioVenta }}</td>
-        <!-- <td>
+         <td>
           @if(tipo === 'admin') {
-          <button [routerLink]="['/admin/producto/modificar', producto.id]">
+          <button [routerLink]="['/admin/productos/modificar', producto.id]">
             Modificar
           </button>
           } @else if (tipo === 'repositor') {
-          <button [routerLink]="['/repositor/producto/modificar', producto.id]">
+          <button [routerLink]="['/repositor/productos/modificar', producto.id]">
             Modificar
           </button>
           }
-        </td> -->
+        </td>
       </tr>
       }
     </tbody>

@@ -14,7 +14,7 @@ export class ProveedorService {
     return this.http.get<Proveedor[]>(this.url);
   }
 
-  getProveedorById(id: string | undefined): Observable<Proveedor> {
+  getProveedorById(id: string | undefined| null): Observable<Proveedor> {
     return this.http.get<Proveedor>(`${this.url}/${id}`);
   }
 
@@ -23,7 +23,7 @@ export class ProveedorService {
   }
 
   putProducto(
-    id: string | undefined,
+    id: string | undefined | null,
     producto: Proveedor
   ): Observable<Proveedor> {
     return this.http.put<Proveedor>(`${this.url}/${id}`, producto);
