@@ -7,4 +7,5 @@ export interface Producto {
   precioCompra: number;
   precioVenta: number;
   categoria: string;
+  etiqueta: string;
 }

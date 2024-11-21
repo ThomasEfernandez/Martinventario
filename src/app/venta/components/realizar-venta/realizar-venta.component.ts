@@ -36,6 +36,7 @@ export class RealizarVentaComponent {
     precioCompra: 0,
     precioVenta: 0,
     categoria: '',
+    etiqueta: '',
   };
 
   listaProductos: Producto[] = [];

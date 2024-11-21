@@ -79,6 +79,7 @@ export class AgregarCompraComponent {
     precioCompra: 0,
     precioVenta: 0,
     categoria: '',
+    etiqueta: '',
   };
 
   agregarCompraService(compra: Compra) {
