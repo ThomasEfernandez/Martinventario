@@ -1,17 +1,27 @@
+# Martinventario
 
+## Pasos a seguir para iniciar el proyecto:
 
+### 1. Descargar nodemodules:
 
-pasos a seguir:
+**npm install --legacy-peer-deps**
 
-abrir json server en la terminal: json-server db/db.json --watch
+### 2. Abrir json server en la terminal:
 
-iniciar el servidor: ng serve -open
+**json-server db/db.json --watch**
 
+### 3. Iniciar el servidor:
 
-Integrantes:
+**ng serve -open**
 
-Fernandez Thomas
-Gimenez Lobasso Fausto
-Hourcade Lautaro
-Martin Agustina
-Rojas Agustin
+## Integrantes:
+
+[![Static Badge](https://img.shields.io/badge/agustinamartin-8A2BE2?style=for-the-badge&logo=github)](https://github.com/agustinamartin)
+
+[![Static Badge](https://img.shields.io/badge/agustinrojass-8A2BE2?style=for-the-badge&logo=github)](https://github.com/agustinrojass)
+
+[![Static Badge](https://img.shields.io/badge/FaustoGimenezLobasso-8A2BE2?style=for-the-badge&logo=github)](https://github.com/FaustoGimenezLobasso)
+
+[![Static Badge](https://img.shields.io/badge/lautaro13dejulio-8A2BE2?style=for-the-badge&logo=github)](https://github.com/lautaro13dejulio)
+
+[![Static Badge](https://img.shields.io/badge/ThomasEfernandez-8A2BE2?style=for-the-badge&logo=github)](https://github.com/ThomasEfernandez)
