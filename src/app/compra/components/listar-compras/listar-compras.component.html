@@ -1,0 +1,26 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th class="columna-id">Fecha:</th>
+        <th class="columna-producto">Producto:</th>
+        <th class="columna-cantidad">Cantidad:</th>
+        <th class="columna-total">Total:</th>
+        <!-- <th class="columna-verDetalle">Detalle</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      @for (compra of listaCompras; track $index) {
+      <tr>
+        <td>{{ compra.id }}</td>
+        <td>{{ compra.producto }}</td>
+        <td>{{ compra.cantidad }}</td>
+        <td>${{ compra.totalCompra }}</td>
+        <!-- <td>
+          <button [routerLink]="['/admin/venta', venta.id]">Ver detalle</button>
+        </td> -->
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

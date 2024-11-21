@@ -13,13 +13,9 @@ import { AuthService } from 'app/auth/service/auth.service';
   styleUrl: './iniciar-sesion.component.css',
 })
 export class IniciarSesionComponent {
-  @Output()
-  emitirUsuario = new EventEmitter<Usuario>();
-
   router = inject(Router);
 
   fb = inject(FormBuilder);
-
   formulario = this.fb.nonNullable.group({
     id: [''],
     usuario: ['', [Validators.required]],
@@ -41,15 +37,13 @@ export class IniciarSesionComponent {
       this.authService.logIn();
       switch (user.tipo) {
         case 'admin':
-          console.log(user.tipo);
           this.router.navigate(['/admin']);
           break;
         case 'repositor':
-          console.log(user.tipo);
           this.router.navigate(['/repositor']);
           break;
         case 'cajero':
-          console.log(user.tipo);
+          this.router.navigate(['/cajero']);
           break;
       }
     } else {
@@ -60,6 +54,13 @@ export class IniciarSesionComponent {
   listaUsuarios: Usuario[] = [];
 
   buscarUsuario(i: Usuario): Usuario | undefined {
+    const usuario: Usuario | undefined = this.listaUsuarios.find(
+      (u) => u.usuario === i.usuario && u.contrasena === i.contrasena
+    );
+    return usuario;
+  }
+
+  listarUsuarios() {
     const usuarios = this.usuarioService.getUsuarios().subscribe({
       next: (usuarios: Usuario[]) => {
         this.listaUsuarios = usuarios;
@@ -68,9 +69,9 @@ export class IniciarSesionComponent {
         console.log(err.message);
       },
     });
-    const usuario: Usuario | undefined = this.listaUsuarios.find(
-      (u) => u.usuario === i.usuario && u.contrasena === i.contrasena
-    );
-    return usuario;
+  }
+
+  ngOnInit() {
+    this.listarUsuarios();
   }
 }

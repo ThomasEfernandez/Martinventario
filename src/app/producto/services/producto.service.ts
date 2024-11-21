@@ -14,7 +14,7 @@ export class ProductoService {
     return this.http.get<Producto[]>(this.url);
   }
 
-  getProductoById(id: string | undefined): Observable<Producto> {
+  getProductoById(id: string | null | undefined): Observable<Producto> {
     return this.http.get<Producto>(`${this.url}/${id}`);
   }
 
@@ -22,7 +22,7 @@ export class ProductoService {
     return this.http.post<Producto>(this.url, producto);
   }
 
-  putProducto(id: string, producto: Producto): Observable<Producto> {
+  putProducto(id: string | null | undefined, producto: Producto): Observable<Producto> {
     return this.http.put<Producto>(`${this.url}/${id}`, producto);
   }
 

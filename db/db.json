@@ -70,7 +70,7 @@
       "usuario": "aaaa",
       "contrasena": "aaaa",
       "tipo": "cajero",
-      "estado": true
+      "estado": false
     },
     {
       "id": "9",
@@ -79,7 +79,7 @@
       "usuario": "aaaa",
       "contrasena": "aaaaa",
       "tipo": "repositor",
-      "estado": true
+      "estado": false
     }
   ],
   "productos": [
@@ -88,51 +88,57 @@
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": 7,
+      "cantidad": 11,
       "precioCompra": 1000,
       "precioVenta": 1500,
       "categoria": "Alimentos",
-      "etiquetas": "Galletitas dulces"
+      "etiquetas": [
+        ""
+      ]
     },
     {
       "id": "2",
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
-      "proveedor": "Fausto",
-      "cantidad": 39,
+      "proveedor": "Agustin",
+      "cantidad": 40,
       "precioCompra": 2000,
       "precioVenta": 2500,
       "categoria": "Bebidas",
-      "etiquetas": "Gaseosa"
+      "etiquetas": [
+        ""
+      ]
     },
     {
       "id": "3",
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
-      "proveedor": "Fausto",
-      "cantidad": 10,
+      "proveedor": "Agustin",
+      "cantidad": 8,
       "precioCompra": 5800,
       "precioVenta": 7000,
       "categoria": "Alimentos",
-      "etiquetas": "Dulce"
+      "etiquetas": [
+        ""
+      ]
     },
     {
       "id": "4",
       "nombreProducto": "Consola playstation 5v Sony 1tb edición standard",
       "marca": "Sony",
-      "proveedor": "Agustin",
-      "cantidad": 5,
-      "precioCompra": 1000000,
-      "precioVenta": 1500000,
-      "categoria": "Hogar",
-      "etiquetas": "Electrodomestico"
+      "proveedor": "Fausto",
+      "cantidad": 10,
+      "precioCompra": 1500000,
+      "precioVenta": 2000000,
+      "categoria": "Higiene",
+      "etiquetas": "Shampoo"
     },
     {
       "id": "5",
       "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
       "proveedor": "Agustin",
-      "cantidad": 50,
+      "cantidad": 48,
       "precioCompra": 4000,
       "precioVenta": 5700,
       "categoria": "Higiene",
@@ -143,7 +149,7 @@
       "nombreProducto": "galletitas",
       "marca": "oreo",
       "proveedor": "Fausto",
-      "cantidad": 2,
+      "cantidad": 0,
       "precioCompra": 1300,
       "precioVenta": 2000,
       "categoria": "Alimentos",
@@ -154,7 +160,7 @@
       "nombreProducto": "milanesas",
       "marca": "carrefour",
       "proveedor": "Fausto",
-      "cantidad": 10,
+      "cantidad": 7,
       "precioCompra": 8000,
       "precioVenta": 10000,
       "categoria": "Alimentos",
@@ -181,6 +187,256 @@
       "precioVenta": 2000,
       "categoria": "Alimentos",
       "etiquetas": "Dulce"
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple iPad 10.2-inch Wi-Fi 256GB (2021, 9th Generation) - Space Gray",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 349.99,
+      "precioVenta": 699.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Bose QuietComfort Bluetooth Wireless Noise Cancelling Headphones - Blue Dusk",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 349.99,
+      "precioVenta": 699.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Energizer Max AA Batteries - 4pk Alkaline Battery",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 4.29,
+      "precioVenta": 8.58,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Duracell Coppertop AA Batteries - 8pk Alkaline Battery",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 8.99,
+      "precioVenta": 17.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Amazon Echo Pop (1st Gen, 2023 Release) Full sound Compact Smart Speaker with Alexa - Charcoal",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 39.99,
+      "precioVenta": 79.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Energizer Max AA Batteries - 24pk Alkaline Battery",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 17.99,
+      "precioVenta": 35.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "AT&#38;T Prepaid Motorola Moto G Play LTE 2024 (64GB) - Blue",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 49.99,
+      "precioVenta": 99.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple AirPods Pro 2",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 189.99,
+      "precioVenta": 379.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple 20W USB-C Power Adapter",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 19.99,
+      "precioVenta": 39.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple Wired EarPods with Lightning Connector",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 19.99,
+      "precioVenta": 39.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple AirPods (2nd Generation) with Charging Case",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 129.99,
+      "precioVenta": 259.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "AA Batteries - 20pk Alkaline Battery  - up&#38;up&#8482;",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 14.49,
+      "precioVenta": 28.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Fujifilm INSTAX MINI Instant Film Twin Pack",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 14.99,
+      "precioVenta": 29.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Fujifilm Quicksnap 135 Flash 400-27exp Camera",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 19.99,
+      "precioVenta": 39.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "AirPods (3rd Generation) with Lightning Charging Case",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 169.99,
+      "precioVenta": 339.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "AAA Batteries - 20pk Alkaline Battery - up&#38;up&#8482;",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 14.49,
+      "precioVenta": 28.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "2 Year Electronics Protection Plan ($18-$29.99) - Allstate",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 3.5,
+      "precioVenta": 7,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple AirTag (1 Pack)",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 29.99,
+      "precioVenta": 59.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Energizer Max 9V Batteries - 2pk Alkaline Battery",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 6.99,
+      "precioVenta": 13.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Single Port 20W USB-C Wall Charger - dealworthy&#8482; White",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 5.99,
+      "precioVenta": 11.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Luigi&#39;s Mansion 2 HD - Nintendo Switch",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 59.99,
+      "precioVenta": 119.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "3&#39; Lightning to USB-A Charging Cable - dealworthy&#8482; White",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 5.99,
+      "precioVenta": 11.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Energizer 2032 Batteries 4pk - Lithium Coin Battery",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 6.49,
+      "precioVenta": 12.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple EarPods (USB-C)",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 19.99,
+      "precioVenta": 39.98,
+      "categoria": ""
+    },
+    {
+      "id": "1",
+      "nombreProducto": "Apple USB-C to Lightning Cable (1m)",
+      "cantidad": 10,
+      "marca": "mi_super",
+      "proveedor": "Fausto",
+      "precioCompra": 19.99,
+      "precioVenta": 39.98,
+      "categoria": ""
     }
   ],
   "proveedores": [
@@ -188,9 +444,9 @@
       "id": "1",
       "nombre": "Fausto",
       "apellido": "Gimenez",
-      "razonSocial": "Pepsi",
-      "email": "faustogimenezlobasso@gmail.com",
-      "cuit": "1231414"
+      "razonSocial": "CocaCola2",
+      "cuit": "1231414",
+      "email": "faustogimenezlobasso@gmail.com"
     },
     {
       "id": "2",
@@ -286,35 +542,13 @@
       "id": "6",
       "nombreCategoria": "Mascotas",
       "estado": true,
-      "etiquetas": [
-        {
-          "id": "1",
-          "nombreEtiqueta": "Alimento para perro",
-          "estado": true
-        },
-        {
-          "id": "2",
-          "nombreEtiqueta": "Alimento para gato",
-          "estado": true
-        }
-      ]
+      "etiquetas": []
     },
     {
       "id": "7",
-      "nombreCategoria": "Educacion",
+      "nombreCategoria": "Educacionnnn",
       "estado": true,
-      "etiquetas": [
-        {
-          "id": "1",
-          "nombreEtiqueta": "Utiles escolares",
-          "estado": false
-        },
-        {
-          "id": "2",
-          "nombreEtiqueta": "Libros",
-          "estado": true
-        }
-      ]
+      "etiquetas": []
     }
   ],
   "ventas": [
@@ -349,31 +583,121 @@
       "cajero": 0,
       "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "cantidad": 1
+    },
+    {
+      "id": "5",
+      "total": 1500,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "6",
+      "total": 2000,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "galletitas",
+      "cantidad": 1
+    },
+    {
+      "id": "7",
+      "total": 2000,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "galletitas",
+      "cantidad": 1
+    },
+    {
+      "id": "8",
+      "total": 7000,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "9",
+      "total": 7000,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "10",
+      "total": 7000,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "11",
+      "total": 2500,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 1
+    },
+    {
+      "id": "12",
+      "total": 11400,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "Shampoo Dove reconstruccion completa 400cc",
+      "cantidad": 2
+    },
+    {
+      "id": "13",
+      "total": 30000,
+      "fecha": "14/10/2024",
+      "cajero": 0,
+      "producto": "milanesas",
+      "cantidad": 3
+    }
+  ],
+  "compras": [
+    {
+      "id": "1",
+      "proveedor": "Fausto",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 2,
+      "precioUnitario": 2,
+      "totalCompra": 4
+    },
+    {
+      "id": "2",
+      "proveedor": "Fausto",
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 2,
+      "precioUnitario": 7,
+      "totalCompra": 14
+    },
+    {
+      "id": "3",
+      "proveedor": "Fausto",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 4,
+      "precioUnitario": 10,
+      "totalCompra": 40
     }
   ],
   "pedidos": [
     {
       "id": "1",
-      "fecha": "13/10/2024",
-      "producto": "a",
-      "cantidad": 1,
-      "razonSocialProveedor": "Agustin",
-      "estado": false
+      "fecha": "15/10/2024",
+      "producto": "Pepitos",
+      "cantidad": 10,
+      "razonSocialProveedor": "Fausto",
+      "estado": true
     },
     {
       "id": "2",
-      "fecha": "14/10/2024",
-      "producto": "coca",
-      "cantidad": 1,
-      "razonSocialProveedor": "Fausto",
-      "estado": false
-    },
-    {
-      "id": "3",
-      "fecha": "14/10/2024",
-      "producto": "aaa",
-      "cantidad": 1,
-      "razonSocialProveedor": "Fausto",
+      "fecha": "15/10/2024",
+      "producto": "Pepsi",
+      "cantidad": 5,
+      "razonSocialProveedor": "Agustin",
       "estado": false
     }
   ]

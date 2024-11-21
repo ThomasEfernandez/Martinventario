@@ -1,0 +1,28 @@
+
+<form [formGroup]="formulario">//(ngSubmit)="actualizarEtiqueta(categoria.id,etiqueta.id)"
+
+    
+
+    <div class="form">
+        <div class="flex-box">
+          <label>Etiqueta</label>
+          @if(formulario.controls['nombreEtiqueta'].getError('required') &&
+          formulario.controls['nombreEtiqueta'].touched){
+          <small class="error">Campo requerido.</small>
+          }
+          <input type="text" formControlName="nombreProducto"/>
+        </div>
+    </div>
+
+    <div>
+        // hay que hacer la funcion de activar o desactivar etiqueta
+        <button class="desactivar">inactivo</button>
+    </div>
+
+    <div class="botones">
+   
+          <button type="submit" id="agregar">editar</button>
+      </div>
+
+    
+</form>
