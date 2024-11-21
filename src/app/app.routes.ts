@@ -1,3 +1,4 @@
+import { PaginaModificarCategoriaAdminComponent } from './admin/pages/pagina-modificar-categoria-admin/pagina-modificar-categoria-admin.component';
 import { Routes } from '@angular/router';
 import { PaginaIniciarSesionComponent } from './sesion/pages/pagina-iniciar-sesion/pagina-iniciar-sesion.component';
 
@@ -121,6 +122,11 @@ export const routes: Routes = [
   {
     path: 'admin/categorias/agregar',
     component: PaginaAgregarCategoriaAdminComponent,
+    canActivate: [authGuardFn],
+  },
+  {
+    path: 'admin/categoria/modificar/:id',
+    component: PaginaModificarCategoriaAdminComponent,
     canActivate: [authGuardFn],
   },
   {

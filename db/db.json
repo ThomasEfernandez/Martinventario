@@ -542,35 +542,13 @@
       "id": "6",
       "nombreCategoria": "Mascotas",
       "estado": true,
-      "etiquetas": [
-        {
-          "id": "1",
-          "nombreEtiqueta": "Alimento para perro",
-          "estado": true
-        },
-        {
-          "id": "2",
-          "nombreEtiqueta": "Alimento para gato",
-          "estado": true
-        }
-      ]
+      "etiquetas": []
     },
     {
       "id": "7",
-      "nombreCategoria": "Educacion",
+      "nombreCategoria": "Educacionnnn",
       "estado": true,
-      "etiquetas": [
-        {
-          "id": "1",
-          "nombreEtiqueta": "Utiles escolares",
-          "estado": false
-        },
-        {
-          "id": "2",
-          "nombreEtiqueta": "Libros",
-          "estado": true
-        }
-      ]
+      "etiquetas": []
     }
   ],
   "ventas": [

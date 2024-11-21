@@ -26,7 +26,7 @@ export class CategoriaService {
     return this.http.delete<void>(`${this.url}/${id}`);
   }
 
-  putCategoria(id: string, categoria: Categoria): Observable<Categoria> {
+  putCategoria(id: string | null, categoria: Categoria): Observable<Categoria> {
     return this.http.put<Categoria>(`${this.url}/${id}`, categoria);
   }
 
