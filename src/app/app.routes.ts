@@ -7,6 +7,7 @@ import { PaginaIniciarSesionComponent } from './sesion/pages/pagina-iniciar-sesi
 import { PaginaPrincipalAdminComponent } from './admin/pages/pagina-principal-admin/pagina-principal-admin.component';
 
 import { PaginaProveedoresAdminComponent } from './admin/pages/pagina-proveedores-admin/pagina-proveedores-admin.component';
+import { PaginaModificarProveedoresAdminComponent } from './admin/pages/pagina-modificar-proveedores-admin/pagina-modificar-proveedores-admin.component';
 import { PaginaAgregarProveedorAdminComponent } from './admin/pages/pagina-agregar-proveedor-admin/pagina-agregar-proveedor-admin.component';
 
 import { PaginaProductosAdminComponent } from './admin/pages/pagina-productos-admin/pagina-productos-admin.component';
@@ -16,6 +17,7 @@ import { PaginaCategoriasAdminComponent } from './admin/pages/pagina-categorias-
 import { PaginaAgregarCategoriaAdminComponent } from './admin/pages/pagina-agregar-categoria-admin/pagina-agregar-categoria-admin.component';
 import { PaginaVerDetalleCategoriaAdminComponent } from './admin/pages/pagina-ver-detalle-categoria-admin/pagina-ver-detalle-categoria-admin.component';
 
+import { PaginaModificarEtiquetaComponent } from './admin/pages/pagina-modificar-etiqueta/pagina-modificar-etiqueta.component';
 import { PaginaAgregarEtiquetaAdminComponent } from './admin/pages/pagina-agregar-etiqueta-admin/pagina-agregar-etiqueta-admin.component';
 
 import { PaginaCajerosAdminComponent } from './admin/pages/pagina-cajeros-admin/pagina-cajeros-admin.component';
@@ -42,6 +44,7 @@ import { PaginaProveedoresRepositorComponent } from './repositor/pages/pagina-pr
 import { PaginaAgregarProveedorRepositorComponent } from './repositor/pages/pagina-agregar-proveedor-repositor/pagina-agregar-proveedor-repositor.component';
 
 import { PaginaProductosRepositorComponent } from './repositor/pages/pagina-productos-repositor/pagina-productos-repositor.component';
+import { PaginaModificarProductoAdminComponent } from './admin/pages/pagina-modificar-producto-admin/pagina-modificar-producto-admin.component';
 import { PaginaAgregarProductoRepositorComponent } from './repositor/pages/pagina-agregar-producto-repositor/pagina-agregar-producto-repositor.component';
 
 import { PaginaCategoriasRepositorComponent } from './repositor/pages/pagina-categorias-repositor/pagina-categorias-repositor.component';
@@ -66,15 +69,6 @@ import { PaginaVerDetalleVentaCajeroComponent } from './cajero/pages/pagina-ver-
 //auth
 
 import { authGuardFn } from './auth/guard/auth.guard-fn';
-
-import { PaginaModificarProductoAdminComponent } from './admin/pages/pagina-modificar-producto-admin/pagina-modificar-producto-admin.component';
-
-import { ModificarProductosRepositorComponent } from './repositor/pages/modificar-productos-repositor/modificar-productos-repositor.component';
-
-import { PaginaModificarProveedoresAdminComponent } from './admin/pages/pagina-modificar-proveedores-admin/pagina-modificar-proveedores-admin.component';
-
-import { PaginaModificarProveedorRepositorComponent } from './repositor/pages/pagina-modificar-proveedor-repositor/pagina-modificar-proveedor-repositor.component';
-import { PaginaEditarEtiquetaComponent } from './admin/pages/pagina-editar-etiqueta/pagina-editar-etiqueta.component';
 
 export const routes: Routes = [
   {
@@ -144,9 +138,9 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/etiquetas/editar',
-    component: PaginaEditarEtiquetaComponent,
-    canActivate: [authGuardFn],
+    path: 'admin/categoria/:idC/etiqueta/modificar/:idE',
+    component: PaginaModificarEtiquetaComponent,
+    // canActivate: [authGuardFn],
   },
   {
     path: 'admin/cajeros',
@@ -220,11 +214,6 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path: 'repositor/proveedores/modificar/:id',
-    component: PaginaModificarProveedorRepositorComponent,
-    // canActivate: [authGuardFn],
-  },
-  {
     path: 'repositor/productos',
     component: PaginaProductosRepositorComponent,
     // canActivate: [authGuardFn],
@@ -232,11 +221,6 @@ export const routes: Routes = [
   {
     path: 'repositor/productos/agregar',
     component: PaginaAgregarProductoRepositorComponent,
-    // canActivate: [authGuardFn],
-  },
-  {
-    path: 'repositor/productos/modificar/:id',
-    component: ModificarProductosRepositorComponent,
     // canActivate: [authGuardFn],
   },
   {

@@ -1,5 +1,5 @@
 import { Component, inject, Input } from '@angular/core';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
 import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
@@ -20,6 +20,8 @@ export class VerDetalleCategoriaComponent {
   arrEtiquetas: Etiqueta[] = [];
 
   router = inject(ActivatedRoute);
+
+  r = inject(Router);
 
   id: string | null = '';
 
@@ -102,5 +104,11 @@ export class VerDetalleCategoriaComponent {
         },
       });
     }
+  }
+
+  modificar(etiquetaId: string): any {
+    this.r.navigate([
+      '/admin/categoria/' + this.id + '/etiqueta/modificar/' + etiquetaId,
+    ]);
   }
 }

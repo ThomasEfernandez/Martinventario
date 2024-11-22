@@ -3,10 +3,10 @@ import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navba
 import { ModificarEtiquetaComponent } from '../../../etiqueta/components/modificar-etiqueta/modificar-etiqueta.component';
 
 @Component({
-  selector: 'app-pagina-modificar-etiqueta-admin',
+  selector: 'app-pagina-editar-modificar',
   standalone: true,
   imports: [NavbarAdminComponent, ModificarEtiquetaComponent],
-  templateUrl: './pagina-modificar-etiqueta-admin.component.html',
-  styleUrl: './pagina-modificar-etiqueta-admin.component.css',
+  templateUrl: './pagina-modificar-etiqueta.component.html',
+  styleUrl: './pagina-modificar-etiqueta.component.css',
 })
-export class PaginaModificarEtiquetaAdminComponent {}
+export class PaginaModificarEtiquetaComponent {}

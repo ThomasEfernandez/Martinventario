@@ -1,42 +1,42 @@
 import { Component, inject, Input } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
 
 @Component({
   selector: 'app-modificar-etiqueta',
   standalone: true,
-  imports: [],
+  imports: [ReactiveFormsModule, RouterModule],
   templateUrl: './modificar-etiqueta.component.html',
   styleUrl: './modificar-etiqueta.component.css',
 })
 export class ModificarEtiquetaComponent {
-  @Input() tipo: string | null = null;
-
-  categoriaService = inject(CategoriaService);
-
-  etiquetaModificada: boolean = false;
+  @Input() tipo: string = '';
 
   router = inject(Router);
+  activatedRoute = inject(ActivatedRoute);
 
-  id: string | null = null;
-
-  activatedRoutes = inject(ActivatedRoute);
+  categoriaService = inject(CategoriaService);
 
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
     id: [''],
-    nombreCategoria: ['', Validators.required],
+    nombreEtiqueta: ['', [Validators.required, Validators.minLength(3)]],
     estado: [false],
-    etiquetas: [[]],
   });
 
-  ngOnInit(): void {
-    this.activatedRoutes.paramMap.subscribe({
+  idCategoria: string | null = '';
+  idEtiqueta: string | null = '';
+
+  etiquetaModificada: boolean = false;
+
+  ngOnInit() {
+    this.activatedRoute.paramMap.subscribe({
       next: (param) => {
-        this.id = param.get('id');
-        this.getCategoriaById(this.id);
+        this.idCategoria = param.get('idC');
+        this.idEtiqueta = param.get('idE');
+        this.getEtiquetaById(this.idCategoria, this.idEtiqueta);
       },
       error: (err: Error) => {
         console.log(err.message);
@@ -44,14 +44,18 @@ export class ModificarEtiquetaComponent {
     });
   }
 
-  getCategoriaById(id: string | null) {
-    this.categoriaService.getCategoriaById(id).subscribe({
+  getEtiquetaById(idCategoria: string | null, idEtiqueta: string | null) {
+    this.categoriaService.getCategoriaById(idCategoria).subscribe({
       next: (categoria: Categoria) => {
-        this.formulario.controls['id'].setValue(categoria.id);
-        this.formulario.controls['nombreCategoria'].setValue(
-          categoria.nombreCategoria
-        );
-        this.formulario.controls['estado'].setValue(categoria.estado);
+        categoria.etiquetas.forEach((e) => {
+          if (e.id === idEtiqueta) {
+            this.formulario.controls['id'].setValue(e.id);
+            this.formulario.controls['nombreEtiqueta'].setValue(
+              e.nombreEtiqueta
+            );
+            this.formulario.controls['estado'].setValue(e.estado);
+          }
+        });
       },
       error: (err: Error) => {
         console.log(err.message);
@@ -59,42 +63,30 @@ export class ModificarEtiquetaComponent {
     });
   }
 
-  modificarEtiqueta() {
+  actualizarEtiqueta() {
     if (this.formulario.valid) {
-      // const categoria = this.formulario.getRawValue();
       const etiqueta = this.formulario.getRawValue();
-
-      // this.categoriaService.getCategoriaById(this.categoria).subscribe({
-      //   next: (categoria: Categoria) => {
-      //     let e = {
-      //       id: `${categoria.etiquetas.length + 1}`,
-      //       nombreEtiqueta: etiqueta.nombreEtiqueta,
-      //       estado: etiqueta.estado,
-      //     };
-      //     console.log(e);
-
-      //     categoria.etiquetas.push(e);
-      //     this.agregarEtiquetaService(categoria);
-      //     this.etiquetaAgregada = true;
-      //   },
-      // });
-    } else {
-      this.formulario.markAllAsTouched();
+      this.categoriaService.getCategoriaById(this.idCategoria).subscribe({
+        next: (categoria: Categoria) => {
+          categoria.etiquetas.forEach((e) => {
+            if (e.id === etiqueta.id) {
+              e.nombreEtiqueta = etiqueta.nombreEtiqueta;
+              this.categoriaService
+                .putCategoria(categoria.id, categoria)
+                .subscribe({
+                  error: (err: Error) => {
+                    console.log(err.message);
+                  },
+                });
+              this.etiquetaModificada = true;
+            }
+          });
+        },
+      });
     }
   }
 
-  putCategoriaService(categoria: Categoria) {
-    this.categoriaService.putCategoria(this.id, categoria).subscribe({
-      next: () => {
-        if (this.tipo === 'admin') {
-          this.router.navigateByUrl('admin/proveedores');
-        } else if (this.tipo === 'repositor') {
-          this.router.navigateByUrl('repositor/proveedores');
-        }
-      },
-      error: (err: Error) => {
-        console.log(err.message);
-      },
-    });
+  volver() {
+    this.router.navigate(['/admin/categoria/' + this.idCategoria]);
   }
 }

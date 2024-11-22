@@ -1,0 +1,13 @@
+<div class="contenedor">
+  <ul class="lista">
+    @if (tipo === 'admin') {
+    <li>
+      <a class="volver" routerLink="/admin/categorias">VOLVER</a>
+    </li>
+    } @else if (tipo === 'repositor') {
+    <li>
+      <a class="volver" routerLink="/repositor/categorias">VOLVER</a>
+    </li>
+    }
+  </ul>
+</div>

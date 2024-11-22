@@ -18,10 +18,7 @@
         <td>{{ etiqueta.nombreEtiqueta }}</td>
         @if(tipo === 'admin') {
         <td>
-          <button
-            class="modificar"
-            [routerLink]="['/admin/etiqueta/modificar', etiqueta.id]"
-          >
+          <button class="modificar" (click)="modificar(etiqueta.id)">
             Modificar
           </button>
         </td>

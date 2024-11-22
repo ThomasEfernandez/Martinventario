@@ -1,5 +1,9 @@
 # Martinventario
 
+## Pasos previos:
+
+Asegurarse de tener Node.js, Angular y json-server instalado.
+
 ## Pasos a seguir para iniciar el proyecto:
 
 ### 1. Descargar nodemodules:
