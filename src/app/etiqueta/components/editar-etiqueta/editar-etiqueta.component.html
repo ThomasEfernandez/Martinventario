@@ -15,8 +15,11 @@
     </div>
 
     <div>
-        // hay que hacer la funcion de activar o desactivar etiqueta
-        <button class="desactivar">inactivo</button>
+        <section>
+                @for (estado of estadoOptions; track $index) {
+                    <option value="">{{estado}}</option>
+                }
+        </section>
     </div>
 
     <div class="botones">

@@ -16,6 +16,7 @@ import { CategoriaService } from 'app/categoria/services/categoria.service';
 export class EditarEtiquetaComponent {
   @Input() tipo : string='';
 
+  estadoOptions = ["habilitada","desabilida"]
   router = inject(Router)
   fb = inject(FormBuilder)
   categoriaService = inject(CategoriaService)
@@ -23,7 +24,7 @@ export class EditarEtiquetaComponent {
   formulario = this.fb.nonNullable.group({
     id:[''],
     nombreEtiqueta: ['',[Validators.required,Validators.minLength(3)]],
-    estado:[true,Validators.required],
+    estado:['',Validators.required],
 
   });
 
@@ -35,8 +36,13 @@ export class EditarEtiquetaComponent {
             if(etiqueta.id == idEtiqueta){
                 this.formulario.controls['id'].setValue(etiqueta.id);
                 this.formulario.controls['nombreEtiqueta'].setValue(etiqueta.nombreEtiqueta);
-                this.formulario.controls['estado'].setValue(etiqueta.estado);
-              return; //calculo que esto corta con la iteracion de los foreach, sino sacar.
+                if (etiqueta.estado==true){
+                  
+                  this.formulario.controls['estado'].setValue("habilitada");
+                }else{
+                  this.formulario.controls['estado'].setValue("desabilitada");
+                }
+           
               }
             
           
@@ -57,7 +63,13 @@ actualizarEtiqueta (idCategoria:string|null){
         categoria.etiquetas.forEach(etiqueta => {
 
           if (etiqueta.id === this.formulario.getRawValue().id){
-            etiqueta  = this.formulario.getRawValue();
+            etiqueta.nombreEtiqueta  = this.formulario.getRawValue().nombreEtiqueta;
+            if(this.formulario.getRawValue().estado == 'habilitada'){
+              etiqueta.estado=true;
+
+            }else{
+              etiqueta.estado=false;
+            }
 
             this.categoriaService.putCategoria(categoria.id,categoria).subscribe({
 

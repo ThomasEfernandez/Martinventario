@@ -71,6 +71,7 @@ import { ModificarProductosRepositorComponent } from './repositor/pages/modifica
 import { ModificarProveedorComponent } from './proveedor/components/modificar-proveedor/modificar-proveedor.component';
 import { PaginaModificarProveedoresAdminComponent } from './admin/pages/pagina-modificar-proveedores-admin/pagina-modificar-proveedores-admin.component';
 import { PaginaModificarProveedorRepositorComponent } from './repositor/pages/pagina-modificar-proveedor-repositor/pagina-modificar-proveedor-repositor.component';
+import { PaginaEditarEtiquetaComponent } from './admin/pages/pagina-editar-etiqueta/pagina-editar-etiqueta.component';
 
 export const routes: Routes = [
   {
@@ -137,6 +138,11 @@ export const routes: Routes = [
   {
     path: 'admin/etiquetas/agregar',
     component: PaginaAgregarEtiquetaAdminComponent,
+    canActivate: [authGuardFn],
+  },
+  {
+    path: 'admin/etiquetas/editar',
+    component: PaginaEditarEtiquetaComponent,
     canActivate: [authGuardFn],
   },
   {
