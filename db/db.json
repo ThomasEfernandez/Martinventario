@@ -718,6 +718,14 @@
       "cantidad": 5,
       "razonSocialProveedor": "Agustin",
       "estado": false
+    },
+    {
+      "id": "3",
+      "fecha": "22/10/2024",
+      "producto": "oreos",
+      "cantidad": 10,
+      "razonSocialProveedor": "Fausto",
+      "estado": false
     }
   ]
 }
