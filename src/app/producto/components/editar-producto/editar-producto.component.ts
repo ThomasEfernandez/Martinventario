@@ -1,4 +1,4 @@
-import { Component, EventEmitter, inject, Input, Output} from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
@@ -14,7 +14,7 @@ import { ProveedorService } from 'app/proveedor/services/proveedor.service';
   standalone: true,
   imports: [ReactiveFormsModule, RouterModule],
   templateUrl: './editar-producto.component.html',
-  styleUrl: './editar-producto.component.css'
+  styleUrl: './editar-producto.component.css',
 })
 export class EditarProductoComponent {
   @Input() tipo: string = '';
@@ -44,43 +44,47 @@ export class EditarProductoComponent {
     precioCompra: [0, [Validators.required, Validators.min(1)]],
     precioVenta: [0, [Validators.required, Validators.min(1)]],
     categoria: ['', Validators.required],
-    etiquetas: [[''], Validators.required],
+    etiqueta: ['', Validators.required],
   });
 
-  getTareaById(id: string | null){
-      this.productoService.getProductoById(id).subscribe({
-        next: (producto : Producto)=>{
-            this.formulario.controls['id'].setValue(producto.id);
-            this.formulario.controls['nombreProducto'].setValue(producto.nombreProducto);
-            this.formulario.controls['marca'].setValue(producto.marca);
-            this.formulario.controls['proveedor'].setValue(producto.proveedor);
-            this.formulario.controls['cantidad'].setValue(producto.cantidad);
-            this.formulario.controls['precioCompra'].setValue(producto.precioCompra);
-            this.formulario.controls['precioVenta'].setValue(producto.precioVenta);
-            this.formulario.controls['categoria'].setValue(producto.categoria);
-        },
-        error: ()=>{
-          console.log('error....');
-        }
-      })
+  getTareaById(id: string | null) {
+    this.productoService.getProductoById(id).subscribe({
+      next: (producto: Producto) => {
+        this.formulario.controls['id'].setValue(producto.id);
+        this.formulario.controls['nombreProducto'].setValue(
+          producto.nombreProducto
+        );
+        this.formulario.controls['marca'].setValue(producto.marca);
+        this.formulario.controls['proveedor'].setValue(producto.proveedor);
+        this.formulario.controls['cantidad'].setValue(producto.cantidad);
+        this.formulario.controls['precioCompra'].setValue(
+          producto.precioCompra
+        );
+        this.formulario.controls['precioVenta'].setValue(producto.precioVenta);
+        this.formulario.controls['categoria'].setValue(producto.categoria);
+      },
+      error: () => {
+        console.log('error....');
+      },
+    });
   }
 
-  update(){
-    if(this.formulario.invalid)return;
-    const producto = this.formulario.getRawValue()
+  update() {
+    if (this.formulario.invalid) return;
+    const producto = this.formulario.getRawValue();
     this.productoService.putProducto(this.id, producto).subscribe({
-      next: () =>{
+      next: () => {
         console.log('Actualizado');
-        if(this.tipo === 'admin'){
-          this.router.navigateByUrl('admin/productos')
-        }else if (this.tipo === 'repositor'){
-          this.router.navigateByUrl('repositor/productos')
+        if (this.tipo === 'admin') {
+          this.router.navigateByUrl('admin/productos');
+        } else if (this.tipo === 'repositor') {
+          this.router.navigateByUrl('repositor/productos');
         }
       },
-      error: (e:Error) =>{
-          console.log(e.message);
-      }
-    })
+      error: (e: Error) => {
+        console.log(e.message);
+      },
+    });
   }
 
   listarProveedores() {
@@ -109,14 +113,14 @@ export class EditarProductoComponent {
     this.listarCategorias();
     this.listarProveedores();
     this.activaredRoutes.paramMap.subscribe({
-      next: (param) =>{
-          this.id = param.get('id');
-          this.getTareaById(this.id)
+      next: (param) => {
+        this.id = param.get('id');
+        this.getTareaById(this.id);
       },
-      error: (e: Error) =>{
-          console.log(e.message);
-      }
-    })
+      error: (e: Error) => {
+        console.log(e.message);
+      },
+    });
     document.getElementById('categoria')?.addEventListener('click', () => {
       const select = document.getElementById('categoria') as HTMLSelectElement;
       const categoria = this.listaCategorias.find(

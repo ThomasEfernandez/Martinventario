@@ -82,11 +82,11 @@
 
     <div class="flex-box">
       <label>Etiquetas</label>
-      @if(formulario.controls['etiquetas'].getError('required') &&
-      formulario.controls['etiquetas'].touched){
+      @if(formulario.controls['etiqueta'].getError('required') &&
+      formulario.controls['etiqueta'].touched){
       <small class="error">Campo requerido.</small>
       }
-      <select formControlName="etiquetas">
+      <select formControlName="etiqueta">
         <option value="" disabled selected hidden>
           Selecciona una etiqueta
         </option>

@@ -13,7 +13,7 @@ async function fetchData<T>(endpoint: string): Promise<T | null> {
     }
 
     const data = await response.json();
-    return data.data.search.products as T; // Usamos un tipo genérico para flexibilidad
+    return data.data.search.products as T;
   } catch (error) {
     console.error('Fetch Error:', error);
     return null;
