@@ -20,12 +20,12 @@ Asegurarse de tener Node.js, Angular y json-server instalado.
 
 ## Integrantes:
 
-[![Static Badge](https://img.shields.io/badge/agustinamartin-8A2BE2?style=for-the-badge&logo=github)](https://github.com/agustinamartin)
+[![Static Badge](https://img.shields.io/badge/agustin_rojas-8A2BE2?style=for-the-badge&logo=github)](https://github.com/agustinrojass)
 
-[![Static Badge](https://img.shields.io/badge/agustinrojass-8A2BE2?style=for-the-badge&logo=github)](https://github.com/agustinrojass)
+[![Static Badge](https://img.shields.io/badge/agustina_martin-8A2BE2?style=for-the-badge&logo=github)](https://github.com/agustinamartin)
 
-[![Static Badge](https://img.shields.io/badge/FaustoGimenezLobasso-8A2BE2?style=for-the-badge&logo=github)](https://github.com/FaustoGimenezLobasso)
+[![Static Badge](https://img.shields.io/badge/fausto_gimenez_lobasso-8A2BE2?style=for-the-badge&logo=github)](https://github.com/FaustoGimenezLobasso)
 
-[![Static Badge](https://img.shields.io/badge/lautaro13dejulio-8A2BE2?style=for-the-badge&logo=github)](https://github.com/lautaro13dejulio)
+[![Static Badge](https://img.shields.io/badge/lautaro_hourcade-8A2BE2?style=for-the-badge&logo=github)](https://github.com/lautaro13dejulio)
 
-[![Static Badge](https://img.shields.io/badge/ThomasEfernandez-8A2BE2?style=for-the-badge&logo=github)](https://github.com/ThomasEfernandez)
+[![Static Badge](https://img.shields.io/badge/thomas_fernandez-8A2BE2?style=for-the-badge&logo=github)](https://github.com/ThomasEfernandez)
