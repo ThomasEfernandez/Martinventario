@@ -88,18 +88,18 @@
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": 11,
+      "cantidad": 12,
       "precioCompra": 1000,
       "precioVenta": 1500,
       "categoria": "Alimentos",
-      "etiqueta": ""
+      "etiqueta": "Galletitas dulces"
     },
     {
       "id": "2",
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Agustin",
-      "cantidad": 40,
+      "cantidad": 39,
       "precioCompra": 2000,
       "precioVenta": 2500,
       "categoria": "Bebidas",
@@ -124,8 +124,8 @@
       "cantidad": 10,
       "precioCompra": 1500000,
       "precioVenta": 2000000,
-      "categoria": "Higiene",
-      "etiqueta": "Shampoo"
+      "categoria": "Hogar",
+      "etiqueta": "Electrodomestico"
     },
     {
       "id": "5",
@@ -456,6 +456,17 @@
       "precioVenta": 75.98,
       "categoria": "",
       "etiqueta": ""
+    },
+    {
+      "id": "35",
+      "nombreProducto": "Gaseosa cola",
+      "marca": "Coca Cola",
+      "proveedor": "Agustin",
+      "cantidad": 3,
+      "precioCompra": 2000,
+      "precioVenta": 3000,
+      "categoria": "Bebidas",
+      "etiqueta": "Gaseosa"
     }
   ],
   "proveedores": [
@@ -479,7 +490,7 @@
   "categorias": [
     {
       "id": "1",
-      "nombreCategoria": "Alimentos",
+      "nombreCategoria": "Alimentoss",
       "estado": true,
       "etiquetas": [
         {
@@ -513,7 +524,7 @@
     },
     {
       "id": "3",
-      "nombreCategoria": "Higiene",
+      "nombreCategoria": "Higiene y cuidado personal",
       "estado": true,
       "etiquetas": [
         {
@@ -565,7 +576,7 @@
     },
     {
       "id": "7",
-      "nombreCategoria": "Educacionnnn",
+      "nombreCategoria": "Educacion",
       "estado": true,
       "etiquetas": []
     }
@@ -674,6 +685,14 @@
       "cajero": 0,
       "producto": "milanesas",
       "cantidad": 3
+    },
+    {
+      "id": "14",
+      "total": 2500,
+      "fecha": "27/10/2024",
+      "cajero": 0,
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 1
     }
   ],
   "compras": [

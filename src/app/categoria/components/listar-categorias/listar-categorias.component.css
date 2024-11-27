@@ -56,10 +56,10 @@ button {
   background-color: #fbcb5b;
 }
 .activar {
-  background-color: #22aa22;
+  background-color: #ee4444;
 }
 .desactivar {
-  background-color: #ee4444;
+  background-color: #22aa22;
 }
 button:hover {
   background-color: #0099ff;
@@ -68,8 +68,8 @@ button:hover {
   background-color: #ffdc6c;
 }
 .activar:hover {
-  background-color: #44cc44;
+  background-color: #ee6666;
 }
 .desactivar:hover {
-  background-color: #ee6666;
+  background-color: #44cc44;
 }

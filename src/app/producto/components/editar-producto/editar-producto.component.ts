@@ -40,7 +40,7 @@ export class EditarProductoComponent {
     nombreProducto: ['', [Validators.required, Validators.minLength(1)]],
     marca: ['', [Validators.required]],
     proveedor: ['', Validators.required],
-    cantidad: [0, [Validators.required, Validators.min(1)]],
+    cantidad: [0, [Validators.required, Validators.min(0)]],
     precioCompra: [0, [Validators.required, Validators.min(1)]],
     precioVenta: [0, [Validators.required, Validators.min(1)]],
     categoria: ['', Validators.required],
