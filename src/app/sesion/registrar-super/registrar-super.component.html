@@ -1,8 +1,9 @@
 <form [formGroup]="formulario" (ngSubmit)="registrarse()">
-  
+  <label for="">Supermercado</label>
+  <input type="text" formControlName="nombreSuper" />
     <label for="">Usuario</label>
     <input type="text" formControlName="usuario" />
     <label for="">Contraseña</label>
     <input type="password" formControlName="contrasena" />
-    <button>Iniciar sesión</button>
+    <button>registrarse</button>
   </form>

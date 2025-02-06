@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, inject } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registrar-super',
@@ -16,17 +16,19 @@ router = inject(Router)
 fb =inject (FormBuilder)
 
 formulario = this.fb.nonNullable.group ({
-
-
-
-
+nombreSuper:['',[Validators.required]],
+usuario:['',[Validators.required]],
+contrasena:['',[Validators.required]]
 })
 
 
 
 
-  registrarse(){
-
+  registrarse(){ 
+   if(this.formulario.invalid)return;
+   const registro =this.formulario.getRawValue();
+   
+    
     
   }
 }
