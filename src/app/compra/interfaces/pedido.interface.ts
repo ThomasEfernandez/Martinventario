@@ -6,4 +6,5 @@ export interface Pedido {
   idProducto: string;
   cantidad: number;
   totalCompra: number;
+  nombreSuper?:string;
 }

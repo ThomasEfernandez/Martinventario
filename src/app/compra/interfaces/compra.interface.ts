@@ -5,4 +5,5 @@ export interface Compra {
   cantidad: number;
   precioUnitario: number;
   totalCompra: number;
+  nombreSuper?:string;
 }

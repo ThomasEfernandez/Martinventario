@@ -5,4 +5,5 @@ export interface Pedido {
   cantidad: number;
   razonSocialProveedor: string;
   estado: boolean;
+  nombreSuper?:string;
 }
