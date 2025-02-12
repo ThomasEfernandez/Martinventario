@@ -12,6 +12,8 @@
     </option>
     }
   </select>
+
+
   <label>Cantidad</label>
   @if (formulario.controls['cantidad'].getError('required') &&
   formulario.controls['cantidad'].touched) {
@@ -25,6 +27,20 @@
   }
   <input type="number" formControlName="cantidad" />
 
+  <label>Motivo</label>
+  @if (formulario.controls['motivo'].getError('required') &&
+  formulario.controls['motivo'].touched) {
+  <small class="error">Campo requerido</small>
+  }
+  <select id="motivo" formControlName="motivo">
+    <option value="" disabled selected hidden>Selecciona un producto</option>
+    @for (item of listaMotivos; track $index) {
+    <option value="{{ item }}">
+      {{ item }}
+    </option>
+    }
+  </select>
+
   <div class="botones">
     @if(ventaRealizada){
     <small class="exito">Venta realizada</small>
@@ -33,6 +49,6 @@
     <button type="button" id="cancelar" routerLink="/admin/ventas">
       Cancelar
     </button>
-    <button type="submit" id="agregar">Realizar venta</button>}
+    <button type="submit" id="agregar">Realizar salida</button>}
   </div>
 </form>

@@ -154,7 +154,7 @@
       "nombreProducto": "milanesas",
       "marca": "carrefour",
       "proveedor": "Fausto",
-      "cantidad": 7,
+      "cantidad": 8,
       "precioCompra": 8000,
       "precioVenta": 10000,
       "categoria": "Alimentos",
@@ -381,6 +381,13 @@
       "cajero": 0,
       "producto": "milanesas",
       "cantidad": 3
+    },
+    {
+      "id": "9",
+      "fecha": "11/1/2025",
+      "producto": "milanesas",
+      "cantidad": 2,
+      "motivo": "Caducacion"
     }
   ],
   "pedidos": [

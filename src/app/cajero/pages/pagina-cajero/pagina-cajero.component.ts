@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navbar-admin.component';
-import { RealizarVentaCajeroComponent } from "../../../venta/components/realizar-venta-cajero/realizar-venta-cajero.component";
+import { RealizarVentaCajeroComponent } from "../../../venta/components/realizar-egreso-cajero/realizar-venta-cajero.component";
 
 @Component({
   selector: 'app-pagina-cajero',

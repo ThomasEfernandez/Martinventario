@@ -14,11 +14,12 @@ export class VerDetalleVentaComponent {
 serviciosVenta=inject(VentaService)
 venta:Venta|undefined={
   id:"",
-  total:0,
+  /* total:0, */
   fecha:"",
-  cajero:0,
+  /* cajero:0, */
   producto:"",
-  cantidad:0
+  cantidad:0,
+  motivo: ""
 }
 router=inject(ActivatedRoute)
 id: string | null = '';
