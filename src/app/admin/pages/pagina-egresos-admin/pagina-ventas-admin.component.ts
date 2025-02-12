@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navbar-admin.component';
-import { MenuVentaAdminComponent } from '../../../venta/components/menu-venta-admin/menu-venta-admin.component';
-import { ListarVentasComponent } from '../../../venta/components/listar-ventas/listar-ventas.component';
+import { MenuVentaAdminComponent } from '../../../venta/components/menu-egreso-admin/menu-venta-admin.component';
+import { ListarVentasComponent } from '../../../venta/components/listar-egreso/listar-ventas.component';
 
 @Component({
   selector: 'app-pagina-ventas-admin',
