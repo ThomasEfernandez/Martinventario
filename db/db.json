@@ -99,7 +99,7 @@
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Fausto",
-      "cantidad": 38,
+      "cantidad": 39,
       "precioCompra": 2000,
       "precioVenta": 2500,
       "categoria": "Bebidas",
@@ -154,7 +154,7 @@
       "nombreProducto": "milanesas",
       "marca": "carrefour",
       "proveedor": "Fausto",
-      "cantidad": 7,
+      "cantidad": 10,
       "precioCompra": 8000,
       "precioVenta": 10000,
       "categoria": "Alimentos",
@@ -176,7 +176,7 @@
       "nombreProducto": "bombones",
       "marca": "Ferrero",
       "proveedor": "Agustin",
-      "cantidad": 0,
+      "cantidad": 5,
       "precioCompra": 1300,
       "precioVenta": 2000,
       "categoria": "Alimentos",
@@ -349,38 +349,6 @@
       "cajero": 0,
       "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "cantidad": 1
-    },
-    {
-      "id": "5",
-      "total": 10000,
-      "fecha": "11/1/2025",
-      "cajero": 0,
-      "producto": "bombones",
-      "cantidad": 5
-    },
-    {
-      "id": "6",
-      "total": 5000,
-      "fecha": "11/1/2025",
-      "cajero": 0,
-      "producto": "Gaseosa lima limón Sprite 2,25 lts",
-      "cantidad": 2
-    },
-    {
-      "id": "7",
-      "total": 2500,
-      "fecha": "11/1/2025",
-      "cajero": 0,
-      "producto": "Gaseosa lima limón Sprite 2,25 lts",
-      "cantidad": 1
-    },
-    {
-      "id": "8",
-      "total": 30000,
-      "fecha": "11/1/2025",
-      "cajero": 0,
-      "producto": "milanesas",
-      "cantidad": 3
     }
   ],
   "pedidos": [
