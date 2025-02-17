@@ -39,14 +39,12 @@ export class RealizarVentaAdminComponent {
 
   listaProductos: Producto[] = [];
 
-  listaMotivos: string[] = ['Venta', 'Caducacion', 'Recibido en mal estado']
-
   ventaRealizada: boolean = false;
 
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
     id: [''],
-    /* total: [0], */
+    total: [0],
     fecha: [
       new Date().getDate() +
         '/' +
@@ -54,10 +52,9 @@ export class RealizarVentaAdminComponent {
         '/' +
         new Date().getFullYear(),
     ],
-    /* cajero: [0, Validators.required], */
+    cajero: [0, Validators.required],
     producto: ['', Validators.required],
     cantidad: [0, [Validators.required, Validators.min(1)]],
-    motivo: ['', Validators.required]
   });
 
   agregarVenta() {
@@ -75,9 +72,9 @@ export class RealizarVentaAdminComponent {
             next: (prod: Producto) => {
               console.log('entra');
               console.log('cantidad:' + venta.cantidad);
-              /* console.log('precio venta:' + prod.precioVenta); */
-              /* venta.total = venta.cantidad * prod.precioVenta;
-              console.log('total:' + venta.total); */
+              console.log('precio venta:' + prod.precioVenta);
+              venta.total = venta.cantidad * prod.precioVenta;
+              console.log('total:' + venta.total);
               this.emitirVenta.emit(venta);
               this.agregarVentaService(venta);
               this.ventaRealizada = true;

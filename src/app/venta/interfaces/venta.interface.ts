@@ -1,9 +1,8 @@
 export interface Venta {
   id: string;
-  /* total: number; */
+  total: number;
   fecha: string;
-  /* cajero: number; */
+  cajero: number;
   producto: string;
   cantidad: number;
-  motivo: string;
 }
