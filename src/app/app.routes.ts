@@ -117,7 +117,7 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/cajeros',
+    path: 'admin/egresos',
     component: PaginaCajerosAdminComponent,
     // canActivate: [authGuardFn],
   },
