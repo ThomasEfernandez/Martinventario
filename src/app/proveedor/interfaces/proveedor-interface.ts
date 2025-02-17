@@ -5,5 +5,4 @@ export interface Proveedor {
   razonSocial: string;
   email: string;
   cuit: string;
-  nombreSuper?:string;
 }

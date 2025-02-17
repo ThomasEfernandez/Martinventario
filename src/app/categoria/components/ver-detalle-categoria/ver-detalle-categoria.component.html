@@ -2,27 +2,28 @@
   <table>
     <thead>
       <tr>
-        @if (tipo === 'admin') {
-        <th class="columna-etiqueta-a">Etiqueta</th>
-        <th class="columna-modificar-a">Modificar</th>
-        <th class="columna-estado-a">Estado</th>
-        } @else if (tipo === 'repositor') {
-        <th class="columna-etiqueta-r">Etiqueta</th>
-        <th class="columna-estado-r">Estado</th>
-        }
+        <th class="columna-id">Id</th>
+        <th class="columna-etiqueta">Etiqueta</th>
+        <th class="columna-modificar">Modificar</th>
+        <th class="columna-estado">Estado</th>
       </tr>
     </thead>
     <tbody>
       @for (etiqueta of arrEtiquetas; track $index) {
       <tr>
+        <td>{{ etiqueta.id }}</td>
         <td>{{ etiqueta.nombreEtiqueta }}</td>
-        @if(tipo === 'admin') {
         <td>
-          <button class="modificar" (click)="modificar(etiqueta.id)">
+          @if(tipo === 'admin') {
+          <button [routerLink]="['/admin/etiqueta/modificar', etiqueta.id]">
             Modificar
           </button>
+          } @else if (tipo === 'repositor') {
+          <button [routerLink]="['/repositor/etiqueta/modificar', etiqueta.id]">
+            Modificar
+          </button>
+          }
         </td>
-        }
         <td>
           @if(etiqueta.estado) {
           <button class="desactivar" (click)="desactivarEtiqueta(etiqueta.id)">

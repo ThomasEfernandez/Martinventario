@@ -5,5 +5,4 @@ export interface Venta {
   cajero: number;
   producto: string;
   cantidad: number;
-  nombreSuper?:string;
 }

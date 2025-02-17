@@ -71,22 +71,21 @@
         <option value="" disabled selected hidden>
           Selecciona una categoría
         </option>
-        @for (categoria of listaCategorias; track $index) { @if
-        (categoria.estado) {
+        @for (categoria of listaCategorias; track $index) {
         <option value="{{ categoria.nombreCategoria }}">
           {{ categoria.nombreCategoria }}
         </option>
-        } }
+        }
       </select>
     </div>
 
     <div class="flex-box">
       <label>Etiquetas</label>
-      @if(formulario.controls['etiqueta'].getError('required') &&
-      formulario.controls['etiqueta'].touched){
+      @if(formulario.controls['etiquetas'].getError('required') &&
+      formulario.controls['etiquetas'].touched){
       <small class="error">Campo requerido.</small>
       }
-      <select formControlName="etiqueta">
+      <select formControlName="etiquetas">
         <option value="" disabled selected hidden>
           Selecciona una etiqueta
         </option>

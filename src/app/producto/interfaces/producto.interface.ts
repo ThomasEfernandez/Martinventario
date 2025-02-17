@@ -1,6 +1,5 @@
 export interface Producto {
   id: string;
-  nombreSuper?:string,
   nombreProducto: string;
   cantidad: number;
   marca: string;
@@ -8,5 +7,4 @@ export interface Producto {
   precioCompra: number;
   precioVenta: number;
   categoria: string;
-  etiqueta: string;
 }

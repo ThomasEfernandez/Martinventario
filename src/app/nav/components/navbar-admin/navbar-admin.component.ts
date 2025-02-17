@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+import { AuthService } from 'app/auth/service/auth.service';
 
 @Component({
   selector: 'app-navbar-admin',
@@ -8,4 +9,5 @@ import { RouterModule } from '@angular/router';
   templateUrl: './navbar-admin.component.html',
   styleUrl: './navbar-admin.component.css',
 })
-export class NavbarAdminComponent {}
+export class NavbarAdminComponent {
+}

@@ -18,9 +18,10 @@ export class ListarVentasComponent {
     this.ventaServicios.getVenta().subscribe({
       next: (aux: Venta[]) => {
         this.listaVentas = aux;
-      },
-      error: (e: Error) => {
-        console.log(e.message);
+
+        error: (e: Error) => {
+          console.log(e.message);
+        };
       },
     });
   }
