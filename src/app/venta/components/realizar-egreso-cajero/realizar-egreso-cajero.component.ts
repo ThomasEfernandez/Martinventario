@@ -1,6 +1,6 @@
-import { Producto } from './../../../producto/interfaces/producto.interface';
-import { ProductoService } from './../../../producto/services/producto.service';
-import { Venta } from './../../../venta/interfaces/venta.interface';
+import { Producto } from '../../../producto/interfaces/producto.interface';
+import { ProductoService } from '../../../producto/services/producto.service';
+import { Egreso } from '../../interfaces/egreso.interface';
 import { Component, EventEmitter, inject, Output } from '@angular/core';
 import {
   FormBuilder,
@@ -8,21 +8,21 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { VentaService } from '../../../venta/services/venta.service';
+import { EgresoService } from '../../services/egreso.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-realizar-venta-cajero',
+  selector: 'app-realizar-egreso-cajero',
   standalone: true,
   imports: [ReactiveFormsModule, FormsModule, CommonModule],
-  templateUrl: './realizar-venta-cajero.component.html',
-  styleUrl: './realizar-venta-cajero.component.css',
+  templateUrl: './realizar-egreso-cajero.component.html',
+  styleUrl: './realizar-egreso-cajero.component.css',
 })
-export class RealizarVentaCajeroComponent {
+export class RealizarEgresoCajeroComponent {
   @Output()
-  emitirVenta: EventEmitter<Venta> = new EventEmitter();
+  emitirVenta: EventEmitter<Egreso> = new EventEmitter();
 
-  ventasService = inject(VentaService);
+  ventasService = inject(EgresoService);
   prodService = inject(ProductoService);
 
   producto: Producto | undefined = {
@@ -37,13 +37,14 @@ export class RealizarVentaCajeroComponent {
   };
 
   listaProductos: Producto[] = [];
+  listaMotivos: string[] = ['Venta', 'Perdida', 'Desgaste'];
 
   ventaRealizada: boolean = false;
 
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
     id: [''],
-    total: [0],
+    /* total: [0], */
     fecha: [
       new Date().getDate() +
         '/' +
@@ -51,16 +52,17 @@ export class RealizarVentaCajeroComponent {
         '/' +
         new Date().getFullYear(),
     ],
-    cajero: [0, Validators.required],
+    /* cajero: [0, Validators.required], */
     producto: ['', Validators.required],
     cantidad: [0, [Validators.required, Validators.min(1)]],
+    motivo: ['', [Validators.required]],
   });
 
   agregarVenta() {
     if (this.formulario.valid) {
       const venta = this.formulario.getRawValue();
       this.ventasService.getVenta().subscribe({
-        next: (ventas: Venta[]) => {
+        next: (ventas: Egreso[]) => {
           venta.id = `${ventas.length + 1}`;
 
           const produ = this.listaProductos.find(
@@ -72,8 +74,8 @@ export class RealizarVentaCajeroComponent {
               console.log('entra');
               console.log('cantidad:' + venta.cantidad);
               console.log('precio venta:' + prod.precioVenta);
-              venta.total = venta.cantidad * prod.precioVenta;
-              console.log('total:' + venta.total);
+              /* venta.total = venta.cantidad * prod.precioVenta;
+              console.log('total:' + venta.total); */
               this.emitirVenta.emit(venta);
               this.agregarVentaService(venta);
               this.ventaRealizada = true;
@@ -89,7 +91,7 @@ export class RealizarVentaCajeroComponent {
     }
   }
 
-  agregarVentaService(venta: Venta) {
+  agregarVentaService(venta: Egreso) {
     this.ventasService.postVenta(venta).subscribe({
       error: (err: Error) => {
         console.log(err.message);

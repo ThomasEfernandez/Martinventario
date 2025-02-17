@@ -6,7 +6,7 @@
         <th class="columna-fecha">Fecha:</th>
         <th class="columna-producto">Producto:</th>
         <th class="columna-cantidad">Cantidad:</th>
-        <th class="columna-total">Total:</th>
+        <th class="columna-total">Motivo:</th>
         <th class="columna-verDetalle">Detalle</th>
       </tr>
     </thead>
@@ -17,7 +17,7 @@
         <td>{{ venta.fecha }}</td>
         <td>{{ venta.producto }}</td>
         <td>{{ venta.cantidad }}</td>
-        <td>${{ venta.total }}</td>
+        <td>${{ venta.motivo }}</td>
         <td>
           <button [routerLink]="['/admin/venta', venta.id]">Ver detalle</button>
         </td>
