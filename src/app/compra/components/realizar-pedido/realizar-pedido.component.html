@@ -1,0 +1,24 @@
+<div class="contenedorForm">
+  <form action="" [formGroup]="formulario" (ngSubmit)="realizarCompra()">
+    <div class="contenedor">
+      <label for="">Id Producto</label>
+      <input type="number" formControlName="idProducto" />
+    </div>
+    @if (formulario.controls['idProducto'].getError('required')&&
+    formulario.controls['idProducto'].touched){
+    <div class="menErr">Debe elegir el id de un producto</div>
+
+    }
+
+    <div class="contenedor">
+      <label for="">Cantidad </label>
+      <input type="number" formControlName="cantidad" />
+    </div>
+    @if (formulario.controls['cantidad'].getError('required')&&
+    formulario.controls['cantidad'].touched){
+    <div class="menErr">Debe decidir cuantos pedir</div>
+
+    }
+    <button>PEDIR</button>
+  </form>
+</div>

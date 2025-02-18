@@ -2,26 +2,14 @@
 <div>
   <table>
     <thead>
-      @if (tipo === 'admin') {
-      <th class="columna-id-a">Id</th>
-      <th class="columna-producto-a">Producto</th>
-      <th class="columna-marca-a">Marca</th>
-      <th class="columna-cantidad-a">Cantidad</th>
-      <th class="columna-proveedor-a">Proveedor</th>
-      <th class="columna-precioCompra-a">Precio compra</th>
-      <th class="columna-precioVenta-a">Precio venta</th>
-      <th class="columna-categoria-a">Categoria</th>
-      <th class="columna-modificar-a">Modificar</th>
-      } @else if (tipo === 'repositor') {
-      <th class="columna-id-r">Id</th>
-      <th class="columna-producto-r">Producto</th>
-      <th class="columna-marca-r">Marca</th>
-      <th class="columna-cantidad-r">Cantidad</th>
-      <th class="columna-proveedor-r">Proveedor</th>
-      <th class="columna-precioCompra-r">Precio compra</th>
-      <th class="columna-precioVenta-r">Precio venta</th>
-      <th class="columna-categoria-r">Categoria</th>
-      }
+      <th class="columna-id">Id</th>
+      <th class="columna-producto">Producto</th>
+      <th class="columna-marca">Marca</th>
+      <th class="columna-cantidad">Cantidad</th>
+      <th class="columna-proveedor">Proveedor</th>
+      <th class="columna-precioCompra">Precio compra</th>
+      <th class="columna-precioVenta">Precio venta</th>
+      <th class="columna-modificar">Modificar</th>
     </thead>
     <tbody>
       @for(producto of listaProductos; track $index) {
@@ -33,27 +21,17 @@
         <td>{{ producto.proveedor }}</td>
         <td>{{ producto.precioCompra }}</td>
         <td>{{ producto.precioVenta }}</td>
-        <td>{{ producto.categoria }}</td>
-        @if(tipo === 'admin') {
         <td>
-          <button
-            class="modificar"
-            [routerLink]="['/admin/productos/modificar', producto.id]"
-          >
+          @if(tipo === 'admin') {
+          <button [routerLink]="['/admin/producto/modificar', producto.id]">
             Modificar
           </button>
-        </td>
-        }
-        <!-- @else if (tipo === 'repositor') {
-        <td>
-          <button
-            class="modificar"
-            [routerLink]="['/repositor/productos/modificar', producto.id]"
-          >
+          } @else if (tipo === 'repositor') {
+          <button [routerLink]="['/repositor/producto/modificar', producto.id]">
             Modificar
           </button>
+          }
         </td>
-        } -->
       </tr>
       }
     </tbody>

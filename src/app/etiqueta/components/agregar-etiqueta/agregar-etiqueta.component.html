@@ -16,13 +16,14 @@
       <small class="error">Campo requerido</small>
       }
       <select id="categoria" formControlName="nombreCategoria">
-        <option value="" disabled selected>Selecciona una categoría</option>
-        @for (categoria of listaCategorias; track $index) { @if
-        (categoria.estado) {
+        <option value="" disabled selected hidden>
+          Selecciona una categoría
+        </option>
+        @for (categoria of listaCategorias; track $index) {
         <option value="{{ categoria.nombreCategoria }}">
           {{ categoria.nombreCategoria }}
         </option>
-        } }
+        }
       </select>
     </div>
   </div>

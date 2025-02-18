@@ -1,0 +1,55 @@
+<form [formGroup]="formulario" (ngSubmit)="agregarVenta()">
+  <label>Producto: </label>
+  @if (formulario.controls['producto'].getError('required') &&
+  formulario.controls['producto'].touched) {
+  <small class="error">Campo requerido</small>
+  }
+  <select id="producto" formControlName="producto">
+    <option value="" disabled selected hidden>Selecciona un producto</option>
+    @for (producto of listaProductos; track $index) {
+    <option value="{{ producto.nombreProducto }}">
+      {{ producto.nombreProducto }}
+    </option>
+    }
+  </select>
+
+  <label>Cantidad</label>
+  @if (formulario.controls['cantidad'].getError('required') &&
+  formulario.controls['cantidad'].touched) {
+  <small class="error">Campo requerido</small>
+  } @else if (formulario.controls['cantidad'].getError('min') &&
+  formulario.controls['cantidad'].touched) {
+  <small class="error">Mínimo requerido</small>
+  } @else if (formulario.controls['cantidad'].getError('max') &&
+  formulario.controls['cantidad'].touched) {
+  <small class="error">Stock insuficiente</small>
+  }
+  <input type="number" formControlName="cantidad" />
+
+  <label>Motivo: </label>
+  @if (formulario.controls['motivo'].getError('required') &&
+  formulario.controls['motivo'].touched) {
+  <small class="error">Campo requerido</small>
+  }
+  <select id="motivo" formControlName="motivo">
+    <option value="" disabled selected hidden>Selecciona un motivo</option>
+    @for (motivo of listaMotivos; track $index) {
+    <option value="{{ motivo }}">
+      {{ motivo }}
+    </option>
+    }
+  </select>
+
+  <div class="botones">
+    @if(ventaRealizada){
+    <small class="exito">Egreso realizado</small>
+    <button type="button" id="volver" routerLink="/admin/egresos">
+      Volver
+    </button>
+    } @else {
+    <button type="button" id="cancelar" routerLink="/admin/egresos">
+      Cancelar
+    </button>
+    <button type="submit" id="agregar">Realizar egreso</button>}
+  </div>
+</form>

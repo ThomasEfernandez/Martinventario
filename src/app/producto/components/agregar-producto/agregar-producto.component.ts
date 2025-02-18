@@ -41,7 +41,7 @@ export class AgregarProductoComponent {
     precioCompra: [0, [Validators.required, Validators.min(1)]],
     precioVenta: [0, [Validators.required, Validators.min(1)]],
     categoria: ['', Validators.required],
-    etiqueta: ['', Validators.required],
+    etiquetas: [[''], Validators.required],
   });
 
   agregarProducto() {

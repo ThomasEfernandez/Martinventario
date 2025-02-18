@@ -1,17 +1,11 @@
 <div class="contenedor">
   <ul class="lista">
     @if (tipo === 'admin') {
-    <li>
-      <a class="volver" routerLink="/admin/repositor">VOLVER</a>
-    </li>
-    <li>
+    <li class="item">
       <a routerLink="/admin/pedidos/agregar">AGREGAR PEDIDO</a>
     </li>
     } @else if (tipo === 'repositor') {
-    <li>
-      <a class="volver" routerLink="/repositor">VOLVER</a>
-    </li>
-    <li>
+    <li class="item">
       <a routerLink="/repositor/pedidos/agregar">AGREGAR PEDIDO</a>
     </li>
     }
