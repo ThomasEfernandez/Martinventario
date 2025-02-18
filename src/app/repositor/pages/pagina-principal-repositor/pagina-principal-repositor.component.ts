@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { NavbarRepositorComponent } from '../../../nav/components/navbar-repositor/navbar-repositor.component';
+import { NavbarEntradaComponent } from 'app/nav/components/navbar-entrada/navbar-entrada.component';
+
 
 @Component({
   selector: 'app-pagina-principal-repositor',
   standalone: true,
-  imports: [NavbarRepositorComponent],
+  imports: [NavbarEntradaComponent],
   templateUrl: './pagina-principal-repositor.component.html',
-  styleUrl: './pagina-principal-repositor.component.css',
+  
 })
 export class PaginaPrincipalRepositorComponent {}
