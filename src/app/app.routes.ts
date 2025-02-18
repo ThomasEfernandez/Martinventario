@@ -22,9 +22,9 @@ import { PaginaAgregarEtiquetaAdminComponent } from './admin/pages/pagina-agrega
 
 import { PaginaCajerosAdminComponent } from './admin/pages/pagina-cajeros-admin/pagina-cajeros-admin.component';
 
-import { PaginaVentasAdminComponent } from './admin/pages/pagina-ventas-admin/pagina-ventas-admin.component';
-import { PaginaRealizarVentaAdminComponent } from './admin/pages/pagina-realizar-venta-admin/pagina-realizar-venta-admin.component';
-import { PaginaVerDetalleVentaAdminComponent } from './admin/pages/pagina-ver-detalle-venta-admin/pagina-ver-detalle-venta-admin.component';
+import { PaginaVentasAdminComponent } from './admin/pages/pagina-egresos-admin/pagina-egresos-admin.component';
+import { PaginaRealizarEgresoAdminComponent } from './admin/pages/pagina-realizar-egreso-admin/pagina-realizar-egreso-admin.component';
+import { PaginaVerDetalleEgresoAdminComponent } from './admin/pages/pagina-ver-detalle-egreso-admin/pagina-ver-detalle-egreso-admin.component';
 
 //repositor
 
@@ -53,7 +53,7 @@ import { PaginaCajeroComponent } from './cajero/pages/pagina-cajero/pagina-cajer
 import { authGuardFn } from './auth/guard/auth.guard-fn';
 import { PaginaRepositoresAdminComponent } from './admin/pages/pagina-repositores-admin/pagina-repositores-admin.component';
 import { PaginaAgregarRepositorAdminComponent } from './admin/pages/pagina-agregar-repositor-admin/pagina-agregar-repositor-admin.component';
-import { PaginaAgregarCajeroAdminComponent } from './admin/pages/pagina-agregar-cajero-admin/pagina-agregar-cajero-admin.component';
+import { PaginaAgregarCajeroAdminComponent } from './admin/pages/pagina-agregar-cajero-admin(ELIMINAR)/pagina-agregar-cajero-admin.component';
 
 export const routes: Routes = [
   {
@@ -117,7 +117,7 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/egresos',
+    path: 'admin/cajero',
     component: PaginaCajerosAdminComponent,
     // canActivate: [authGuardFn],
   },
@@ -127,18 +127,18 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/ventas',
+    path: 'admin/egresos',
     component: PaginaVentasAdminComponent,
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/ventas/realizar',
-    component: PaginaRealizarVentaAdminComponent,
+    path: 'admin/egreso/realizar',
+    component: PaginaRealizarEgresoAdminComponent,
     // canActivate: [authGuardFn],
   },
   {
     path: 'admin/venta/:id',
-    component: PaginaVerDetalleVentaAdminComponent,
+    component: PaginaVerDetalleEgresoAdminComponent,
     // canActivate: [authGuardFn],
   },
   {
