@@ -26,19 +26,19 @@ import { PaginaAgregarPedidoAdminComponent } from './admin/pages/pagina-agregar-
 import { PaginaComprasAdminComponent } from './admin/pages/pagina-compras-admin/pagina-compras-admin.component';
 import { PaginaAgregarCompraAdminComponent } from './admin/pages/pagina-agregar-compra-admin/pagina-agregar-compra-admin.component';
 //repositor
-import { PaginaPrincipalRepositorComponent } from './repositor/pages/pagina-principal-repositor/pagina-principal-repositor.component';
-import { PaginaProveedoresRepositorComponent } from './repositor/pages/pagina-proveedores-repositor/pagina-proveedores-repositor.component';
-import { PaginaAgregarProveedorRepositorComponent } from './repositor/pages/pagina-agregar-proveedor-repositor/pagina-agregar-proveedor-repositor.component';
-import { PaginaProductosRepositorComponent } from './repositor/pages/pagina-productos-repositor/pagina-productos-repositor.component';
-import { PaginaAgregarProductoRepositorComponent } from './repositor/pages/pagina-agregar-producto-repositor/pagina-agregar-producto-repositor.component';
-import { PaginaCategoriasRepositorComponent } from './repositor/pages/pagina-categorias-repositor/pagina-categorias-repositor.component';
-import { PaginaAgregarCategoriaRepositorComponent } from './repositor/pages/pagina-agregar-categoria-repositor/pagina-agregar-categoria-repositor.component';
-import { PaginaVerDetalleCategoriaRepositorComponent } from './repositor/pages/pagina-ver-detalle-categoria-repositor/pagina-ver-detalle-categoria-repositor.component';
-import { PaginaAgregarEtiquetaRepositorComponent } from './repositor/pages/pagina-agregar-etiqueta-repositor/pagina-agregar-etiqueta-repositor.component';
-import { PaginaPedidosRepositorComponent } from './repositor/pages/pagina-pedidos-repositor/pagina-pedidos-repositor.component';
-import { PaginaAgregarPedidoRepositorComponent } from './repositor/pages/pagina-agregar-pedido-repositor/pagina-agregar-pedido-repositor.component';
-import { PaginaAgregarCompraRepositorComponent } from './repositor/pages/pagina-agregar-compra-repositor/pagina-agregar-compra-repositor.component';
-import { PaginaComprasRepositorComponent } from './repositor/pages/pagina-compras-repositor/pagina-compras-repositor.component';
+import { PaginaPrincipalRepositorComponent } from './repositor/pages/pagina-principal-entradas/pagina-principal-entradas.component';
+import { PaginaProveedoresRepositorComponent } from './repositor/pages/pagina-proveedores-entradas/pagina-proveedores-entradas.component';
+import { PaginaAgregarProveedorRepositorComponent } from './repositor/pages/pagina-agregar-proveedor-entradas/pagina-agregar-proveedor-entradas.component';
+import { PaginaProductosRepositorComponent } from './repositor/pages/pagina-productos-entradas/pagina-productos-entradas.component';
+import { PaginaAgregarProductoRepositorComponent } from './repositor/pages/pagina-agregar-producto-entradas/pagina-agregar-producto-entradas.component';
+import { PaginaCategoriasRepositorComponent } from './repositor/pages/pagina-categorias-entradas/pagina-categorias-entradas.component';
+import { PaginaAgregarCategoriaEntradaComponent } from './repositor/pages/pagina-agregar-categoria-entradas/pagina-agregar-categoria-entradas.component';
+import { PaginaVerDetalleCategoriaRepositorComponent } from './repositor/pages/pagina-ver-detalle-categoria-entradas/pagina-ver-detalle-categoria-entradas.component';
+import { PaginaAgregarEtiquetaEntradasComponent } from './repositor/pages/pagina-agregar-etiqueta-entradas/pagina-agregar-etiqueta-entradas.component'; 
+import { PaginaPedidosRepositorComponent } from './repositor/pages/pagina-pedidos-entradas/pagina-pedidos-entradas.component';
+import { PaginaAgregarPedidoRepositorComponent } from './repositor/pages/pagina-agregar-pedido-entradas/pagina-agregar-pedido-entradas.component';
+import { PaginaAgregarCompraRepositorComponent } from './repositor/pages/pagina-agregar-compra-entradas/pagina-agregar-compra-entradas.component';
+import { PaginaComprasRepositorComponent } from './repositor/pages/pagina-compras-entradas/pagina-compras-entradas.component';
 //cajero
 import { PaginaPrincipalCajeroComponent } from './cajero/pages/pagina-principal-cajero/pagina-principal-cajero.component';
 import { PaginaRealizarVentaCajeroComponent } from './cajero/pages/pagina-realizar-venta-cajero/pagina-realizar-venta-cajero.component';
@@ -144,12 +144,12 @@ export const routes: Routes = [
     canActivate: [authGuardFn],
   },
   {
-    path: 'admin/repositor',
+    path: 'admin/entrada',
     component: PaginaRepositoresAdminComponent,
     canActivate: [authGuardFn],
   },
   {
-    path: 'admin/repositores/agregar',
+    path: 'admin/entradas/agregar',
     component: PaginaAgregarRepositorAdminComponent,
     canActivate: [authGuardFn],
   },
@@ -175,67 +175,67 @@ export const routes: Routes = [
   },
   /*Repositor*/
   {
-    path: 'repositor',
+    path: 'entrada',
     component: PaginaPrincipalRepositorComponent,
     canActivate: [authGuardFn],
   },
   {
-    path: 'repositor/proveedores',
+    path: 'entrada/proveedores',
     component: PaginaProveedoresRepositorComponent,
     canActivate: [authGuardFn],
   },
   {
-    path: 'repositor/proveedores/agregar',
+    path: 'entrada/proveedores/agregar',
     component: PaginaAgregarProveedorRepositorComponent,
     canActivate: [authGuardFn],
   },
   {
-    path: 'repositor/productos',
+    path: 'entrada/productos',
     component: PaginaProductosRepositorComponent,
     canActivate: [authGuardFn],
   },
   {
-    path: 'repositor/productos/agregar',
+    path: 'entrada/productos/agregar',
     component: PaginaAgregarProductoRepositorComponent,
     canActivate: [authGuardFn],
   },
   {
-    path: 'repositor/categorias',
+    path: 'entrada/categorias',
     component: PaginaCategoriasRepositorComponent,
     canActivate: [authGuardFn],
   },
   {
-    path: 'repositor/categorias/agregar',
-    component: PaginaAgregarCategoriaRepositorComponent,
+    path: 'entrada/categorias/agregar',
+    component: PaginaAgregarCategoriaEntradaComponent,
     canActivate: [authGuardFn],
   },
   {
-    path: 'repositor/categoria/:id',
+    path: 'entrada/categoria/:id',
     component: PaginaVerDetalleCategoriaRepositorComponent,
     canActivate: [authGuardFn],
   },
   {
-    path: 'repositor/etiquetas/agregar',
-    component: PaginaAgregarEtiquetaRepositorComponent,
+    path: 'entrada/etiquetas/agregar',
+    component: PaginaAgregarEtiquetaEntradasComponent,
     canActivate: [authGuardFn],
   },
   {
-    path: 'repositor/pedidos',
+    path: 'entrada/pedidos',
     component: PaginaPedidosRepositorComponent,
     canActivate: [authGuardFn],
   },
   {
-    path: 'repositor/pedidos/agregar',
+    path: 'entrada/pedidos/agregar',
     component: PaginaAgregarPedidoRepositorComponent,
     canActivate: [authGuardFn],
   },
   {
-    path: 'repositor/compras',
+    path: 'entrada/compras',
     component: PaginaComprasRepositorComponent,
     canActivate: [authGuardFn],
   },
   {
-    path: 'repositor/compras/agregar',
+    path: 'entrada/compras/agregar',
     component: PaginaAgregarCompraRepositorComponent,
     canActivate: [authGuardFn],
   },
