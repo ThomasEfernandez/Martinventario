@@ -1,0 +1,49 @@
+.contenedor {
+  padding: 5% 15%;
+  width: 70%;
+}
+.tarjeta {
+  display: inline-block;
+  margin-bottom: 5%;
+  padding: 5% 0;
+  width: 100%;
+  background-color: #fbcb5b;
+  border-radius: 10px;
+  justify-items: center;
+  justify-content: center;
+}
+label {
+  display: block;
+  margin-top: 2%;
+  background-color: transparent;
+  font-size: large;
+}
+.dato {
+  background-color: transparent;
+  font-size: x-large;
+}
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  justify-content: right;
+  align-items: center;
+}
+button {
+  margin-top: 1%;
+  padding: 1.5% 2%;
+  font-weight: bold;
+  border: 1px solid #222222;
+  border-radius: 3px;
+  background-color: #0099ff;
+  cursor: pointer;
+}
+#cancelar {
+  background-color: #ee4444;
+}
+button:hover {
+  background-color: #00bbff;
+}
+#cancelar:hover {
+  background-color: #ee6666;
+}

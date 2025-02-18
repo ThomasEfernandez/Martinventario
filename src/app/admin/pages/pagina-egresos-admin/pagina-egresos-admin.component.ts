@@ -14,4 +14,4 @@ import { ListarEgresosComponent } from '../../../venta/components/listar-egresos
   templateUrl: './pagina-egresos-admin.component.html',
   styleUrl: './pagina-egresos-admin.component.css',
 })
-export class PaginaVentasAdminComponent {}
+export class PaginaEgresosAdminComponent {}
