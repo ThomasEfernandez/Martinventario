@@ -20,9 +20,11 @@ import { PaginaVerDetalleCategoriaAdminComponent } from './admin/pages/pagina-ve
 
 import { PaginaAgregarEtiquetaAdminComponent } from './admin/pages/pagina-agregar-etiqueta-admin/pagina-agregar-etiqueta-admin.component';
 
-import { PaginaCajerosAdminComponent } from './admin/pages/pagina-cajeros-admin/pagina-cajeros-admin.component';
+import { PaginaCajerosAdminComponent } from './admin/pages/pagina-cajeros-admin(ELIMINAR)/pagina-cajeros-admin.component';
 
-import { PaginaVentasAdminComponent } from './admin/pages/pagina-egresos-admin/pagina-egresos-admin.component';
+import {
+  PaginaEgresosAdminComponent,
+} from './admin/pages/pagina-egresos-admin/pagina-egresos-admin.component';
 import { PaginaRealizarEgresoAdminComponent } from './admin/pages/pagina-realizar-egreso-admin/pagina-realizar-egreso-admin.component';
 import { PaginaVerDetalleEgresoAdminComponent } from './admin/pages/pagina-ver-detalle-egreso-admin/pagina-ver-detalle-egreso-admin.component';
 
@@ -128,7 +130,7 @@ export const routes: Routes = [
   },
   {
     path: 'admin/egresos',
-    component: PaginaVentasAdminComponent,
+    component: PaginaEgresosAdminComponent,
     // canActivate: [authGuardFn],
   },
   {
@@ -137,7 +139,7 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/venta/:id',
+    path: 'admin/egreso/:id',
     component: PaginaVerDetalleEgresoAdminComponent,
     // canActivate: [authGuardFn],
   },

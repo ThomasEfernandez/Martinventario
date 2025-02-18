@@ -1,18 +1,26 @@
-<div>
-  <div>
-    <div>
-      <label>Fecha: </label>
-      <div>{{ venta?.fecha }}</div>
-    </div>
+<div div class="contenedor">
+
+  <div class="tarjeta">
+
+    <label>Fecha: </label>
+    <div class="dato">{{ venta?.fecha }}</div>
+
     <label>Producto: </label>
-    <div>{{ venta?.producto }}</div>
-  </div>
-  <div>
+    <div class="dato">{{ venta?.producto }}</div>
+
     <label>Cantidad: </label>
-    <div>{{ venta?.cantidad }}</div>
-  </div>
-  <div>
+    <div class="dato">{{ venta?.cantidad }}</div>
+
     <label>Motivo: </label>
-    <div>{{ venta?.motivo }}</div>
+    <div class="dato">{{ venta?.motivo }}</div>
+
+    <!-- REVISAR!!!!!!!!! -->
+    <div class="botones">
+      <button type="button" id="cancelar" routerLink="/admin/egresos">
+        Cancelar
+      </button>
+    </div>
+
   </div>
+
 </div>
