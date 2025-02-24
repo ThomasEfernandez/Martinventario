@@ -22,9 +22,7 @@ import { PaginaAgregarEtiquetaAdminComponent } from './admin/pages/pagina-agrega
 
 import { PaginaCajerosAdminComponent } from './admin/pages/pagina-cajeros-admin(ELIMINAR)/pagina-cajeros-admin.component';
 
-import {
-  PaginaEgresosAdminComponent,
-} from './admin/pages/pagina-egresos-admin/pagina-egresos-admin.component';
+import { PaginaEgresosAdminComponent } from './admin/pages/pagina-egresos-admin/pagina-egresos-admin.component';
 import { PaginaRealizarEgresoAdminComponent } from './admin/pages/pagina-realizar-egreso-admin/pagina-realizar-egreso-admin.component';
 import { PaginaVerDetalleEgresoAdminComponent } from './admin/pages/pagina-ver-detalle-egreso-admin/pagina-ver-detalle-egreso-admin.component';
 
@@ -52,8 +50,8 @@ import { PaginaPedidoComponent } from './compra/pages/pagina-pedido/pagina-pedid
 
 import { PaginaCajeroComponent } from './cajero/pages/pagina-cajero/pagina-cajero.component';
 import { authGuardFn } from './auth/guard/auth.guard-fn';
-import { PaginaRepositoresAdminComponent } from './admin/pages/pagina-repositores-admin/pagina-repositores-admin.component';
-import { PaginaAgregarRepositorAdminComponent } from './admin/pages/pagina-agregar-repositor-admin/pagina-agregar-repositor-admin.component';
+import { PaginaRepositoresAdminComponent } from './admin/pages/pagina-entrada-admin/pagina-entrada-admin.component';
+import { PaginaAgregarRepositorAdminComponent } from './admin/pages/pagina-agregar-entrada-admin/pagina-agregar-entrada-admin.component';
 import { PaginaAgregarCajeroAdminComponent } from './admin/pages/pagina-agregar-cajero-admin(ELIMINAR)/pagina-agregar-cajero-admin.component';
 
 export const routes: Routes = [
@@ -143,12 +141,12 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/repositor',
+    path: 'admin/entradas',
     component: PaginaRepositoresAdminComponent,
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/repositores/agregar',
+    path: 'admin/entrada/agregar',
     component: PaginaAgregarRepositorAdminComponent,
     // canActivate: [authGuardFn],
   },
