@@ -11,7 +11,7 @@ import { ListarRepositorComponent } from '../../../repositor/components/listar-e
     MenuRepositorComponent,
     ListarRepositorComponent,
   ],
-  templateUrl: './pagina-repositores-admin.component.html',
-  styleUrl: './pagina-repositores-admin.component.css',
+  templateUrl: './pagina-entrada-admin.component.html',
+  styleUrl: './pagina-entrada-admin.component.css',
 })
 export class PaginaRepositoresAdminComponent {}

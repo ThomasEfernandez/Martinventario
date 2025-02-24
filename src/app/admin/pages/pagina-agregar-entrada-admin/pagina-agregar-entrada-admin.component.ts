@@ -6,8 +6,8 @@ import { AgregarUsuarioComponent } from "../../../usuario/components/agregar-usu
   selector: 'app-pagina-agregar-repositor-admin',
   standalone: true,
   imports: [NavbarAdminComponent, AgregarUsuarioComponent],
-  templateUrl: './pagina-agregar-repositor-admin.component.html',
-  styleUrl: './pagina-agregar-repositor-admin.component.css',
+  templateUrl: './pagina-agregar-entrada-admin.component.html',
+  styleUrl: './pagina-agregar-entrada-admin.component.css',
 })
 export class PaginaAgregarRepositorAdminComponent {
   usuarioNuevo: string = 'repositor';
