@@ -132,7 +132,7 @@
       "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
       "proveedor": "Agustin",
-      "cantidad": 50,
+      "cantidad": 48,
       "precioCompra": 4000,
       "precioVenta": 5700,
       "categoria": "Higiene",
@@ -356,6 +356,13 @@
       "producto": "galletitas",
       "cantidad": 1,
       "motivo": "Venta"
+    },
+    {
+      "id": "6",
+      "fecha": "24/1/2025",
+      "producto": "Shampoo Dove reconstruccion completa 400cc",
+      "cantidad": 2,
+      "motivo": "Perdida"
     }
   ],
   "pedidos": [
