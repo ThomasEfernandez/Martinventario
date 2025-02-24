@@ -16,8 +16,8 @@ import { RouterModule } from '@angular/router';
   selector: 'app-realizar-egreso-admin',
   standalone: true,
   imports: [ReactiveFormsModule, FormsModule, CommonModule, RouterModule],
-  templateUrl: './realizar-venta-admin.component.html',
-  styleUrl: './realizar-venta-admin.component.css',
+  templateUrl: './realizar-egreso-admin.component.html',
+  styleUrl: './realizar-egreso-admin.component.css',
 })
 export class RealizarEgresoAdminComponent {
   @Output()
