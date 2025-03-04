@@ -85,7 +85,7 @@
   "productos": [
     {
       "id": "1",
-      "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
       "cantidad": 7,
@@ -96,7 +96,7 @@
     },
     {
       "id": "2",
-      "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Fausto",
       "cantidad": 39,
@@ -107,7 +107,7 @@
     },
     {
       "id": "3",
-      "nombreProducto": "Crema de avellanas Nutella 350 g.",
+      "producto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
       "proveedor": "Fausto",
       "cantidad": 10,
@@ -118,7 +118,7 @@
     },
     {
       "id": "4",
-      "nombreProducto": "Consola playstation 5v Sony 1tb edición standard",
+      "producto": "Consola playstation 5v Sony 1tb edición standard",
       "marca": "Sony",
       "proveedor": "Agustin",
       "cantidad": 5,
@@ -129,7 +129,7 @@
     },
     {
       "id": "5",
-      "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
+      "producto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
       "proveedor": "Agustin",
       "cantidad": 48,
@@ -140,7 +140,7 @@
     },
     {
       "id": "6",
-      "nombreProducto": "galletitas",
+      "producto": "galletitas",
       "marca": "oreo",
       "proveedor": "Fausto",
       "cantidad": 1,
@@ -151,7 +151,7 @@
     },
     {
       "id": "7",
-      "nombreProducto": "milanesas",
+      "producto": "milanesas",
       "marca": "carrefour",
       "proveedor": "Fausto",
       "cantidad": 10,
@@ -162,7 +162,7 @@
     },
     {
       "id": "8",
-      "nombreProducto": "gaseosa 1,25",
+      "producto": "gaseosa 1,25",
       "marca": "pepsi",
       "proveedor": "Agustin",
       "cantidad": 5,
@@ -173,7 +173,7 @@
     },
     {
       "id": "9",
-      "nombreProducto": "bombones",
+      "producto": "bombones",
       "marca": "Ferrero",
       "proveedor": "Agustin",
       "cantidad": 5,
@@ -181,6 +181,24 @@
       "precioVenta": 2000,
       "categoria": "Alimentos",
       "etiquetas": "Dulce"
+    },
+    {
+      "id": "10",
+      "fecha": "4/2/2025",
+      "producto": "Test",
+      "cantidad": 10
+    },
+    {
+      "id": "11",
+      "fecha": "4/2/2025",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 10
+    },
+    {
+      "id": "12",
+      "fecha": "4/3/2025",
+      "producto": "Test2",
+      "cantidad": 20
     }
   ],
   "proveedores": [

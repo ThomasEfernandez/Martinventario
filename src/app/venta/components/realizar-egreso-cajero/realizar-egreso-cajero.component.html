@@ -7,8 +7,8 @@
   <select id="producto" formControlName="producto">
     <option value="" disabled selected hidden>Selecciona un producto</option>
     @for (producto of listaProductos; track $index) {
-    <option value="{{ producto.nombreProducto }}">
-      {{ producto.nombreProducto }}
+    <option value="{{ producto.producto }}">
+      {{ producto.producto }}
     </option>
     }
   </select>

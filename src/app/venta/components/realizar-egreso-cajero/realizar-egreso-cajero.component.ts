@@ -27,7 +27,7 @@ export class RealizarEgresoCajeroComponent {
 
   producto: Producto | undefined = {
     id: '',
-    nombreProducto: '',
+    producto: '',
     cantidad: 0,
     marca: '',
     proveedor: '',
@@ -66,7 +66,7 @@ export class RealizarEgresoCajeroComponent {
           venta.id = `${ventas.length + 1}`;
 
           const produ = this.listaProductos.find(
-            (p) => p.nombreProducto === venta.producto
+            (p) => p.producto === venta.producto
           );
 
           this.prodService.getProductoById(produ?.id).subscribe({
@@ -98,7 +98,7 @@ export class RealizarEgresoCajeroComponent {
       },
     });
     const producto = this.listaProductos.find(
-      (p) => p.nombreProducto === venta.producto
+      (p) => p.producto === venta.producto
     );
     if (producto) {
       this.modificarStock(venta.cantidad, producto.id);
@@ -139,7 +139,7 @@ export class RealizarEgresoCajeroComponent {
     document.getElementById('producto')?.addEventListener('click', () => {
       const select = document.getElementById('producto') as HTMLSelectElement;
       const producto = this.listaProductos.find(
-        (p) => p.nombreProducto === select.value
+        (p) => p.producto === select.value
       );
       this.producto = producto;
       if (this.producto) {

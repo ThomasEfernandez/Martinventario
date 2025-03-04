@@ -23,12 +23,12 @@ export class RealizarEgresoAdminComponent {
   @Output()
   emitirVenta: EventEmitter<Egreso> = new EventEmitter();
 
-  ventasService = inject(EgresoService);
+  egresoService = inject(EgresoService);
   prodService = inject(ProductoService);
 
   producto: Producto | undefined = {
     id: '',
-    nombreProducto: '',
+    producto: '',
     cantidad: 0,
     marca: '',
     proveedor: '',
@@ -40,7 +40,7 @@ export class RealizarEgresoAdminComponent {
   listaProductos: Producto[] = [];
   listaMotivos: string[] = ['Venta', 'Perdida', 'Desgaste'];
 
-  ventaRealizada: boolean = false;
+  egresoRealizada: boolean = false;
 
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
@@ -59,27 +59,27 @@ export class RealizarEgresoAdminComponent {
     motivo: ['', [Validators.required]],
   });
 
-  agregarVenta() {
+  agregarEgreso() {
     if (this.formulario.valid) {
-      const venta = this.formulario.getRawValue();
-      this.ventasService.getVenta().subscribe({
-        next: (ventas: Egreso[]) => {
-          venta.id = `${ventas.length + 1}`;
+      const egresos = this.formulario.getRawValue();
+      this.egresoService.getVenta().subscribe({
+        next: (egreso: Egreso[]) => {
+          egresos.id = `${egreso.length + 1}`;
 
           const produ = this.listaProductos.find(
-            (p) => p.nombreProducto === venta.producto
+            (p) => p.producto === egresos.producto
           );
 
           this.prodService.getProductoById(produ?.id).subscribe({
             next: (prod: Producto) => {
               console.log('entra');
-              console.log('cantidad:' + venta.cantidad);
+              console.log('cantidad:' + egresos.cantidad);
               console.log('precio venta:' + prod.precioVenta);
               /* venta.total = venta.cantidad * prod.precioVenta;
               console.log('total:' + venta.total); */
-              this.emitirVenta.emit(venta);
-              this.agregarVentaService(venta);
-              this.ventaRealizada = true;
+              this.emitirVenta.emit(egresos);
+              this.agregarEgresoService(egresos);
+              this.egresoRealizada = true;
             },
             error: (err: Error) => {
               console.log(err.message);
@@ -92,14 +92,14 @@ export class RealizarEgresoAdminComponent {
     }
   }
 
-  agregarVentaService(venta: Egreso) {
-    this.ventasService.postVenta(venta).subscribe({
+  agregarEgresoService(venta: Egreso) {
+    this.egresoService.postVenta(venta).subscribe({
       error: (err: Error) => {
         console.log(err.message);
       },
     });
     const producto = this.listaProductos.find(
-      (p) => p.nombreProducto === venta.producto
+      (p) => p.producto === venta.producto
     );
     if (producto) {
       this.modificarStock(venta.cantidad, producto.id);
@@ -140,7 +140,7 @@ export class RealizarEgresoAdminComponent {
     document.getElementById('producto')?.addEventListener('click', () => {
       const select = document.getElementById('producto') as HTMLSelectElement;
       const producto = this.listaProductos.find(
-        (p) => p.nombreProducto === select.value
+        (p) => p.producto === select.value
       );
       this.producto = producto;
       if (this.producto) {

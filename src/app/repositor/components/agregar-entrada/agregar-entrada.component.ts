@@ -22,7 +22,7 @@ export class AgregarEntradaComponent {
 
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
-    id: ['', [Validators.required]],
+    id: [''],
     /* nombre: ['', [Validators.required]],
     apellido: ['', [Validators.required]],
     usuario: ['', [Validators.required, Validators.minLength(4)]],
@@ -32,19 +32,25 @@ export class AgregarEntradaComponent {
     fecha: [
       new Date().getDate() +
         '/' +
-        new Date().getMonth() +
+        (new Date().getMonth() + 1) +
         '/' +
         new Date().getFullYear(),
     ],
-    producto: ['', [Validators.required]],
-    cantidad: [0, [Validators.required]],
+    producto: ['', [Validators.required, Validators.minLength(4)]],
+    cantidad: [0, [Validators.required, Validators.min(1)]],
   });
 
   agregarEntrada() {
+    console.log('Método agregarEntrada() ejecutado');
+
     if (this.formulario.valid) {
+      console.log('Formulario válido:', this.formulario.getRawValue());
+
       const entradas = this.formulario.getRawValue();
       this.entradaService.getEntrada().subscribe({
         next: (entrada: Entrada[]) => {
+          console.log('Entradas existentes:', entrada);
+
           entradas.id = `${entrada.length + 1}`;
           /* usuario.tipo = this.entradaNueva; */
           this.agregarEntradaService(entradas);
@@ -52,12 +58,14 @@ export class AgregarEntradaComponent {
         },
       });
     } else {
+      console.warn('Formulario inválido:', this.formulario.errors);
       this.formulario.markAllAsTouched();
     }
   }
 
   agregarEntradaService(entrada: Entrada) {
     this.entradaService.postEntrada(entrada).subscribe({
+      next: () => {},
       error: (err: Error) => {
         console.log(err.message);
       },

@@ -2,11 +2,11 @@
   <div class="form">
     <div class="flex-box">
       <label>Producto</label>
-      @if(formulario.controls['nombreProducto'].getError('required') &&
-      formulario.controls['nombreProducto'].touched){
+      @if(formulario.controls['producto'].getError('required') &&
+      formulario.controls['producto'].touched){
       <small class="error">Campo requerido.</small>
       }
-      <input type="text" formControlName="nombreProducto" />
+      <input type="text" formControlName="producto" />
     </div>
 
     <div class="flex-box">

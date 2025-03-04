@@ -1,4 +1,5 @@
 <form [formGroup]="formulario" (ngSubmit)="agregarEntrada()">
+
   <div class="form">
     <div class="flex-box">
       <label>Producto</label>
@@ -18,19 +19,23 @@
       formulario.controls['cantidad'].touched) {
       <small class="error">Campo requerido</small>
       }
-      <input type="text" formControlName="cantidad" />
+      @if(formulario.controls['cantidad'].getError('min') &&
+      formulario.controls['cantidad'].touched) {
+      <small class="error">Cantidad minima requerida es 1</small>
+      }
+      <input type="number" formControlName="cantidad" />
     </div>
   </div>
-  <div class="botones">
 
+  <div class="botones">
     @if(entradaAgregada){
-    <small class="exito">Entrada agregada</small>
+    <small class="exito">Entrada realizada</small>
+    <button type="button" id="volver" routerLink="/admin/entradas">Volver</button>
     } @else {
     <button type="button" id="cancelar" routerLink="/admin/entradas">
       Cancelar
     </button>
-
-    <button type="submit" id="agregar">Agregar entrada</button>
-    }
+    <button type="submit" id="agregar">Realizar Entrada</button>}
   </div>
+
 </form>
