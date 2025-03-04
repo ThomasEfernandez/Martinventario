@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <table>
     <thead>
       <tr>
@@ -7,7 +7,7 @@
         <th class="columna-contrasena">Contraseña</th>
         <th class="columna-nombre">Nombre</th>
         <th class="columna-apellido">Apellido</th>
-        <!-- <th class="columna-estado">Estado</th> -->
+         <th class="columna-estado">Estado</th>
       </tr>
     </thead>
     <tbody>
@@ -18,7 +18,7 @@
         <td>{{ usuario.contrasena }}</td>
         <td>{{ usuario.nombre }}</td>
         <td>{{ usuario.apellido }}</td>
-        <!-- <td>
+         <td>
           @if (usuario.estado) {
           <button class="desactivar" (click)="desactivarRepositor(usuario.id)">
             Desactivar
@@ -28,7 +28,34 @@
             Activar
           </button>
           }
-        </td> -->
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div> -->
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th class="columna-id">Fecha:</th>
+        <th class="columna-fecha">Fecha:</th>
+        <th class="columna-producto">Producto:</th>
+        <th class="columna-cantidad">Cantidad:</th>
+        <!--         <th class="columna-verDetalle">Detalle</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      @for (entrada of listaEntrada; track $index) {
+      <tr>
+        <td>{{ entrada.id }}</td>
+        <td>{{ entrada.fecha }}</td>
+        <td>{{ entrada.producto }}</td>
+        <td>{{ entrada.cantidad }}</td>
+        <td>
+          <!-- <button [routerLink]="/admin/entradas">Ver detalle</button> -->
+        </td>
       </tr>
       }
     </tbody>
