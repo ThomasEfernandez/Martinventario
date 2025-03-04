@@ -1,16 +1,18 @@
 import { Component, inject } from '@angular/core';
+import { Entrada } from 'app/repositor/interfaces/entrada.interface';
+import { EntradaService } from 'app/repositor/services/entrada.service';
 import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 import { UsuarioService } from 'app/usuario/services/usuario.service';
 
 @Component({
-  selector: 'app-listar-repositor',
+  selector: 'app-listar-entrada',
   standalone: true,
   imports: [],
-  templateUrl: './listar-repositor.component.html',
-  styleUrl: './listar-repositor.component.css',
+  templateUrl: './listar-entrada.component.html',
+  styleUrl: './listar-entrada.component.css',
 })
-export class ListarRepositorComponent {
-  listaUsuarios: Usuario[] = [];
+export class ListarEntradaComponent {
+  /* listaUsuarios: Usuario[] = [];
   usuarioService = inject(UsuarioService);
   usu: Usuario | undefined = {
     id: '',
@@ -63,5 +65,24 @@ export class ListarRepositorComponent {
         },
       });
     }
+  } */
+
+  entradaServicios = inject(EntradaService);
+  listaEntrada: Entrada[] = [];
+
+  traerEntradas() {
+    this.entradaServicios.getEntrada().subscribe({
+      next: (aux: Entrada[]) => {
+        this.listaEntrada = aux;
+
+        error: (e: Error) => {
+          console.log(e.message);
+        };
+      },
+    });
+  }
+
+  ngOnInit() {
+    this.traerEntradas();
   }
 }
