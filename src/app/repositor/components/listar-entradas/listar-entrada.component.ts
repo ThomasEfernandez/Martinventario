@@ -1,4 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
 import { Entrada } from 'app/repositor/interfaces/entrada.interface';
 import { EntradaService } from 'app/repositor/services/entrada.service';
 import { Usuario } from 'app/usuario/interfaces/usuario.interface';
@@ -7,11 +8,11 @@ import { UsuarioService } from 'app/usuario/services/usuario.service';
 @Component({
   selector: 'app-listar-entrada',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './listar-entrada.component.html',
   styleUrl: './listar-entrada.component.css',
 })
-export class ListarEntradaComponent {
+export class ListarEntradaComponent implements OnInit {
   /* listaUsuarios: Usuario[] = [];
   usuarioService = inject(UsuarioService);
   usu: Usuario | undefined = {
@@ -73,11 +74,11 @@ export class ListarEntradaComponent {
   traerEntradas() {
     this.entradaServicios.getEntrada().subscribe({
       next: (aux: Entrada[]) => {
+        console.log('Datos recibidos:', aux);
         this.listaEntrada = aux;
-
-        error: (e: Error) => {
-          console.log(e.message);
-        };
+      },
+      error: (e: Error) => {
+        console.log(e.message);
       },
     });
   }

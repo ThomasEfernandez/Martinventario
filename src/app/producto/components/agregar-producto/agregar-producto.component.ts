@@ -34,7 +34,7 @@ export class AgregarProductoComponent {
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
     id: [''],
-    nombreProducto: ['', [Validators.required, Validators.minLength(1)]],
+    producto: ['', [Validators.required, Validators.minLength(1)]],
     marca: ['', [Validators.required]],
     proveedor: ['', Validators.required],
     cantidad: [0, [Validators.required, Validators.min(1)]],

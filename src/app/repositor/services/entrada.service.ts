@@ -8,7 +8,7 @@ import { Entrada } from '../interfaces/entrada.interface';
 })
 export class EntradaService {
   http = inject(HttpClient);
-  url = 'http://localhost:3000/';
+  url = 'http://localhost:3000/productos';
 
   getEntrada(): Observable<Entrada[]> {
     return this.http.get<Entrada[]>(this.url);
@@ -18,19 +18,19 @@ export class EntradaService {
     return this.http.get<Entrada>(`${this.url}/${id}`);
   }
 
-  postEntrada(repositor: Entrada): Observable<Entrada> {
-    return this.http.post<Entrada>(this.url, repositor);
+  postEntrada(entrada: Entrada): Observable<Entrada> {
+    return this.http.post<Entrada>(this.url, entrada);
   }
 
   deleteEntrada(id: string): Observable<void> {
     return this.http.delete<void>(`${this.url}/${id}`);
   }
 
-  putEntrada(id: string, repositor: Entrada): Observable<Entrada> {
-    return this.http.put<Entrada>(`${this.url}/${id}`, repositor);
+  putEntrada(id: string, entrada: Entrada): Observable<Entrada> {
+    return this.http.put<Entrada>(`${this.url}/${id}`, entrada);
   }
 
-  patchEntrada(id: string, repositor: Entrada): Observable<Entrada> {
-    return this.http.patch<Entrada>(`${this.url}/${id}`, repositor);
+  patchEntrada(id: string, entrada: Entrada): Observable<Entrada> {
+    return this.http.patch<Entrada>(`${this.url}/${id}`, entrada);
   }
 }

@@ -1,4 +1,4 @@
-<form [formGroup]="formulario" (ngSubmit)="agregarVenta()">
+<form [formGroup]="formulario" (ngSubmit)="agregarEgreso()">
   <label>Producto: </label>
   @if (formulario.controls['producto'].getError('required') &&
   formulario.controls['producto'].touched) {
@@ -7,8 +7,8 @@
   <select id="producto" formControlName="producto">
     <option value="" disabled selected hidden>Selecciona un producto</option>
     @for (producto of listaProductos; track $index) {
-    <option value="{{ producto.nombreProducto }}">
-      {{ producto.nombreProducto }}
+    <option value="{{ producto.producto }}">
+      {{ producto.producto }}
     </option>
     }
   </select>
@@ -41,7 +41,7 @@
   </select>
 
   <div class="botones">
-    @if(ventaRealizada){
+    @if(egresoRealizada){
     <small class="exito">Egreso realizado</small>
     <button type="button" id="volver" routerLink="/admin/egresos">Volver</button>
     } @else {
