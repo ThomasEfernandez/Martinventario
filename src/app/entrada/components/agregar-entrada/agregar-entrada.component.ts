@@ -1,10 +1,10 @@
-import { EntradaService } from 'app/repositor/services/entrada.service';
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 import { UsuarioService } from '../../../usuario/services/usuario.service';
 import { RouterModule } from '@angular/router';
-import { Entrada } from 'app/repositor/interfaces/entrada.interface';
+import { Entrada } from 'app/entrada/interface/entrada.interface';
+import { EntradaService } from 'app/entrada/services/entrada.service';
 
 @Component({
   selector: 'app-agregar-entrada',
