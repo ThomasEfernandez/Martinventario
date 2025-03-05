@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navbar-admin.component';
-import { MenuEgresoAdminComponent } from '../../../venta/components/menu-egreso-admin/menu-egreso-admin.component';
-import { ListarEgresosComponent } from '../../../venta/components/listar-egresos/listar-egresos.component';
+import { MenuEgresoAdminComponent } from '../../../egreso/components/menu-egreso-admin/menu-egreso-admin.component';
+import { ListarEgresosComponent } from '../../../egreso/components/listar-egresos/listar-egresos.component';
 
 @Component({
   selector: 'app-pagina-egresos-admin',
