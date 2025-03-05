@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navbar-admin.component';
-import { MenuRepositorComponent } from 'app/repositor/components/menu-entradas/menu-repositor.component';
-import { ListarEntradaComponent } from '../../../repositor/components/listar-entradas/listar-entrada.component';
+import { MenuRepositorComponent } from 'app/entrada/components/menu-entradas/menu-repositor.component';
+import { ListarEntradaComponent } from '../../../entrada/components/listar-entradas/listar-entrada.component';
 
 @Component({
   selector: 'app-pagina-repositores-admin',
