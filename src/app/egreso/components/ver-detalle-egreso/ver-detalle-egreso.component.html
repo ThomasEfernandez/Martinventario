@@ -1,0 +1,28 @@
+<div div class="contenedor">
+
+  <div class="tarjeta">
+
+    <label>Fecha: </label>
+    <div class="dato">{{ venta?.fecha }}</div>
+
+    <label>Producto: </label>
+    <div class="dato">{{ venta?.producto }}</div>
+
+    <label>Cantidad: </label>
+    <div class="dato">{{ venta?.cantidad }}</div>
+
+    <label>Motivo: </label>
+    <div class="dato">{{ venta?.motivo }}</div>
+
+    <!-- REVISAR!!!!!!!!! -->
+    <div class="botones">
+      @if (venta) {
+      <button type="button" id="cancelar" routerLink="/admin/egresos">
+        Cancelar
+      </button>
+      }
+    </div>
+
+  </div>
+
+</div>

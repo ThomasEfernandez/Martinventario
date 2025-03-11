@@ -21,43 +21,25 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
   background-color: #d3e3fc;
 }
-.columna-nombre-a {
-  width: 12.5%;
-}
-.columna-apellido-a {
-  width: 12.5%;
-}
-.columna-razonSocial-a {
-  width: 15%;
-}
-.columna-cuit-a {
+.columna-nombre {
   width: 10%;
 }
-.columna-email-a {
+.columna-apellido {
+  width: 10%;
+}
+.columna-razonSocial {
+  width: 20%;
+}
+.columna-cuit {
+  width: 10%;
+}
+.columna-email {
   width: 30%;
 }
-.columna-modificar-a {
+.columna-modificar {
   width: 10%;
 }
-.columna-eliminar-a {
-  width: 10%;
-}
-.columna-nombre-r {
-  width: 12.5%;
-}
-.columna-apellido-r {
-  width: 12.5%;
-}
-.columna-razonSocial-r {
-  width: 15%;
-}
-.columna-cuit-r {
-  width: 10%;
-}
-.columna-email-r {
-  width: 40%;
-}
-.columna-eliminar-r {
+.columna-eliminar {
   width: 10%;
 }
 button {
@@ -68,9 +50,6 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
-.modificar {
-  background-color: #fbcb5b;
-}
 .eliminar {
   background-color: #ee4444;
 }
@@ -79,7 +58,4 @@ button:hover {
 }
 .eliminar:hover {
   background-color: #ee6666;
-}
-.modificar:hover {
-  background-color: #ffdc6c;
 }

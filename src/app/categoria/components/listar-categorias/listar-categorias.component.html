@@ -1,20 +1,16 @@
 <div>
   <table>
     <thead>
-      @if (tipo === 'admin') {
-      <th class="columna-categoria-a">Categoria</th>
-      <th class="columna-verDetalle-a">Detalle</th>
-      <th class="columna-modificar-a">Modificar</th>
-      <th class="columna-estado-a">Estado</th>
-      } @else if (tipo === 'repositor') {
-      <th class="columna-categoria-r">Categoria</th>
-      <th class="columna-verDetalle-r">Detalle</th>
-      <th class="columna-estado-r">Estado</th>
-      }
+      <th class="columna-id">Id</th>
+      <th class="columna-categoria">Categoria</th>
+      <th class="columna-verDetalle">Detalle</th>
+      <th class="columna-modificar">Modificar</th>
+      <th class="columna-estado">Estado</th>
     </thead>
     <tbody>
       @for(categoria of listaCategorias; track $index) {
       <tr>
+        <td>{{ categoria.id }}</td>
         <td>{{ categoria.nombreCategoria }}</td>
         <td>
           @if(tipo === 'admin') {
@@ -27,16 +23,19 @@
           </button>
           }
         </td>
-        @if(tipo === 'admin') {
         <td>
+          @if(tipo === 'admin') {
+          <button [routerLink]="['/admin/categoria/modificar', categoria.id]">
+            Modificar
+          </button>
+          } @else if (tipo === 'repositor') {
           <button
-            class="modificar"
-            [routerLink]="['/admin/categoria/modificar', categoria.id]"
+            [routerLink]="['/repositor/categoria/modificar', categoria.id]"
           >
             Modificar
           </button>
+          }
         </td>
-        }
         <td>
           @if (categoria.estado) {
           <button

@@ -2,22 +2,13 @@
   <table>
     <thead>
       <tr>
-        @if (tipo === 'admin') {
-        <th class="columna-nombre-a">Nombre</th>
-        <th class="columna-apellido-a">Apellido</th>
-        <th class="columna-razonSocial-a">Razón Social</th>
-        <th class="columna-cuit-a">CUIT</th>
-        <th class="columna-email-a">Email</th>
-        <th class="columna-modificar-a">Modificar</th>
-        <th class="columna-eliminar-a">Eliminar</th>
-        } @else if (tipo === 'repositor') {
-        <th class="columna-nombre-r">Nombre</th>
-        <th class="columna-apellido-r">Apellido</th>
-        <th class="columna-razonSocial-r">Razón Social</th>
-        <th class="columna-cuit-r">CUIT</th>
-        <th class="columna-email-r">Email</th>
-        <th class="columna-eliminar-r">Eliminar</th>
-        }
+        <th class="columna-nombre">Nombre</th>
+        <th class="columna-apellido">Apellido</th>
+        <th class="columna-razonSocial">Razón Social</th>
+        <th class="columna-cuit">CUIT</th>
+        <th class="columna-email">Email</th>
+        <th class="columna-modificar">Modificar</th>
+        <th class="columna-eliminar">Eliminar</th>
       </tr>
     </thead>
     <tbody>
@@ -28,26 +19,19 @@
         <td>{{ proveedor.razonSocial }}</td>
         <td>{{ proveedor.cuit }}</td>
         <td>{{ proveedor.email }}</td>
-        @if(tipo === 'admin') {
         <td>
+          @if(tipo === 'admin') {
+          <button [routerLink]="['/admin/proveedor/modificar', proveedor.id]">
+            Modificar
+          </button>
+          } @else if (tipo === 'repositor') {
           <button
-            class="modificar"
-            [routerLink]="['/admin/proveedores/modificar', proveedor.id]"
+            [routerLink]="['/repositor/proveedor/modificar', proveedor.id]"
           >
             Modificar
           </button>
+          }
         </td>
-        }
-        <!-- @else if (tipo === 'repositor') {
-        <td>
-          <button
-            class="modificar"
-            [routerLink]="['/repositor/proveedores/modificar', proveedor.id]"
-          >
-            Modificar
-          </button>
-        </td>
-        } -->
         <td>
           <button class="eliminar" (click)="eliminarProveedor(proveedor.id)">
             Eliminar
