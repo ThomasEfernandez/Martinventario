@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { Entrada } from 'app/entrada/interface/entrada.interface';
-import { EntradaService } from 'app/repositor/services/entrada.service';
+import { EntradaService } from 'app/entrada/services/entrada.service';
 import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 import { UsuarioService } from 'app/usuario/services/usuario.service';
 

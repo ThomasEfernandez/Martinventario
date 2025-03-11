@@ -8,7 +8,7 @@ import { Entrada } from '../../entrada/interface/entrada.interface';
 })
 export class EntradaService {
   http = inject(HttpClient);
-  url = 'http://localhost:3000/productos';
+  url = 'http://localhost:3000/entradas';
 
   getEntrada(): Observable<Entrada[]> {
     return this.http.get<Entrada[]>(this.url);

@@ -1,16 +1,21 @@
 <form [formGroup]="formulario" (ngSubmit)="agregarEntrada()">
-
   <div class="form">
     <div class="flex-box">
       <label>Producto</label>
       @if(formulario.controls['producto'].getError('required') &&
-      formulario.controls['producto'].touched) {
-      <small class="error">Campo requerido</small>
-      } @if(formulario.controls['producto'].getError('minlength') &&
-      formulario.controls['producto'].touched) {
-      <small class="error">Requiere 4 caracteres</small>
+      formulario.controls['producto'].touched){
+      <small class="error">Campo requerido.</small>
       }
-      <input type="text" formControlName="producto" />
+      <select id="producto" formControlName="producto">
+        <option value="" disabled selected hidden>
+          Selecciona un producto
+        </option>
+        @for (producto of listaProductos; track $index) {
+        <option value="{{ producto.producto }}">
+          {{ producto.producto }}
+        </option>
+        }
+      </select>
     </div>
 
     <div class="flex-box">
@@ -18,8 +23,7 @@
       @if(formulario.controls['cantidad'].getError('required') &&
       formulario.controls['cantidad'].touched) {
       <small class="error">Campo requerido</small>
-      }
-      @if(formulario.controls['cantidad'].getError('min') &&
+      } @if(formulario.controls['cantidad'].getError('min') &&
       formulario.controls['cantidad'].touched) {
       <small class="error">Cantidad minima requerida es 1</small>
       }
@@ -30,12 +34,13 @@
   <div class="botones">
     @if(entradaAgregada){
     <small class="exito">Entrada realizada</small>
-    <button type="button" id="volver" routerLink="/admin/entradas">Volver</button>
+    <button type="button" id="volver" routerLink="/admin/entradas">
+      Volver
+    </button>
     } @else {
     <button type="button" id="cancelar" routerLink="/admin/entradas">
       Cancelar
     </button>
     <button type="submit" id="agregar">Realizar Entrada</button>}
   </div>
-
 </form>

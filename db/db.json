@@ -181,24 +181,6 @@
       "precioVenta": 2000,
       "categoria": "Alimentos",
       "etiquetas": "Dulce"
-    },
-    {
-      "id": "10",
-      "fecha": "4/2/2025",
-      "producto": "Test",
-      "cantidad": 10
-    },
-    {
-      "id": "11",
-      "fecha": "4/2/2025",
-      "producto": "Gaseosa lima limón Sprite 2,25 lts",
-      "cantidad": 10
-    },
-    {
-      "id": "12",
-      "fecha": "4/3/2025",
-      "producto": "Test2",
-      "cantidad": 20
     }
   ],
   "proveedores": [
@@ -439,6 +421,14 @@
       "cantidad": 1,
       "razonSocialProveedor": "Fausto",
       "estado": false
+    }
+  ],
+  "entradas": [
+    {
+      "id": "1",
+      "fecha": "11/3/2025",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 2
     }
   ]
 }
