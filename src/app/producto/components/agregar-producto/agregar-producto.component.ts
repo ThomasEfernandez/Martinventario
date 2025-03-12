@@ -97,7 +97,11 @@ export class AgregarProductoComponent {
       const categoria = this.listaCategorias.find(
         (c) => c.nombreCategoria === select.value
       );
-      this.listaEtiquetas = categoria?.etiquetas;
+      categoria?.etiquetas.forEach((e) => {
+        if (e.estado === true) {
+          this.listaEtiquetas?.push(e);
+        }
+      });
     });
   }
 }

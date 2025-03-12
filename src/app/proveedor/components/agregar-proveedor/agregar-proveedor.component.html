@@ -47,7 +47,9 @@
       </div>
     </div>
     <div class="botones">
-      @if(proveedorAgregado){
+      @if(proveedorRepetido) {
+      <small class="repetido">Proveedor repetido</small>
+      }@if(proveedorAgregado){
       <small class="exito">Proveedor agregado</small>
       @if(tipo === 'admin') {
       <button type="button" id="volver" routerLink="/admin/proveedores">

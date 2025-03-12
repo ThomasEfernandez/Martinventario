@@ -14,10 +14,17 @@ import { CategoriaService } from 'app/categoria/services/categoria.service';
 export class AgregarCategoriaComponent {
   @Input() tipo: string = '';
 
+  ngOnInit(): void {
+    this.listar();
+  }
+
   fb = inject(FormBuilder);
   categoriaService = inject(CategoriaService);
+  listaCategorias: Categoria[] = [];
 
   categoriaAgregada: boolean = false;
+
+  categoriaRepetida: boolean = false;
 
   formulario = this.fb.nonNullable.group({
     id: [''],
@@ -29,13 +36,22 @@ export class AgregarCategoriaComponent {
   agregarCategoria() {
     if (this.formulario.valid) {
       const categoria = this.formulario.getRawValue();
-      this.categoriaService.getCategorias().subscribe({
-        next: (categorias: Categoria[]) => {
-          categoria.id = `${categorias.length + 1}`;
-          this.agregarCategoriaService(categoria);
-          this.categoriaAgregada = true;
-        },
+
+      this.listaCategorias.forEach((c) => {
+        if (c.nombreCategoria === categoria.nombreCategoria) {
+          this.categoriaRepetida = true;
+        }
       });
+
+      if (this.categoriaRepetida === false) {
+        this.categoriaService.getCategorias().subscribe({
+          next: (categorias: Categoria[]) => {
+            categoria.id = `${categorias.length + 1}`;
+            this.agregarCategoriaService(categoria);
+            this.categoriaAgregada = true;
+          },
+        });
+      }
     } else {
       this.formulario.markAllAsTouched();
     }
@@ -43,6 +59,17 @@ export class AgregarCategoriaComponent {
 
   agregarCategoriaService(categoria: Categoria) {
     this.categoriaService.postCategoria(categoria).subscribe({
+      error: (err: Error) => {
+        console.log(err.message);
+      },
+    });
+  }
+
+  listar() {
+    this.categoriaService.getCategorias().subscribe({
+      next: (categoria: Categoria[]) => {
+        this.listaCategorias = categoria;
+      },
       error: (err: Error) => {
         console.log(err.message);
       },

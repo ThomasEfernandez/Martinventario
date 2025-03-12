@@ -24,6 +24,8 @@ export class AgregarEtiquetaComponent {
 
   etiquetaAgregada: boolean = false;
 
+  etiquetaRepetida: boolean = false;
+
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
     id: [''],
@@ -35,18 +37,30 @@ export class AgregarEtiquetaComponent {
   agregarEtiqueta() {
     if (this.formulario.valid) {
       const etiqueta = this.formulario.getRawValue();
+
       this.categoriaService.getCategoriaById(this.categoria).subscribe({
         next: (categoria: Categoria) => {
-          let e = {
-            id: `${categoria.etiquetas.length + 1}`,
-            nombreEtiqueta: etiqueta.nombreEtiqueta,
-            estado: etiqueta.estado,
-          };
-          console.log(e);
+          this.listaEtiquetas = categoria.etiquetas;
+          if (this.listaEtiquetas) {
+            this.listaEtiquetas.forEach((e) => {
+              if (e.nombreEtiqueta === etiqueta.nombreEtiqueta) {
+                this.etiquetaRepetida = true;
+              }
+            });
+          }
 
-          categoria.etiquetas.push(e);
-          this.agregarEtiquetaService(categoria);
-          this.etiquetaAgregada = true;
+          if (this.etiquetaRepetida === false) {
+            let e = {
+              id: `${categoria.etiquetas.length + 1}`,
+              nombreEtiqueta: etiqueta.nombreEtiqueta,
+              estado: etiqueta.estado,
+            };
+            console.log(e);
+
+            categoria.etiquetas.push(e);
+            this.agregarEtiquetaService(categoria);
+            this.etiquetaAgregada = true;
+          }
         },
       });
     } else {

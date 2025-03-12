@@ -14,9 +14,11 @@ import { ProveedorService } from 'app/proveedor/services/proveedor.service';
 export class AgregarProveedorComponent {
   @Input() tipo: string | null = null;
 
+  listaProveedores: Proveedor[] = [];
   proveedorService = inject(ProveedorService);
 
   proveedorAgregado: boolean = false;
+  proveedorRepetido: boolean = false;
 
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
@@ -31,13 +33,22 @@ export class AgregarProveedorComponent {
   agregarProveedor() {
     if (this.formulario.valid) {
       const proveedor = this.formulario.getRawValue();
-      this.proveedorService.getProveedores().subscribe({
-        next: (proveedores: Proveedor[]) => {
-          proveedor.id = `${proveedores.length + 1}`;
-          this.agregarProveedorService(proveedor);
-          this.proveedorAgregado = true;
-        },
+
+      this.listaProveedores.forEach((p) => {
+        if (p.cuit === proveedor.cuit) {
+          this.proveedorRepetido = true;
+        }
       });
+
+      if (this.proveedorRepetido === false) {
+        this.proveedorService.getProveedores().subscribe({
+          next: (proveedores: Proveedor[]) => {
+            proveedor.id = `${proveedores.length + 1}`;
+            this.agregarProveedorService(proveedor);
+            this.proveedorAgregado = true;
+          },
+        });
+      }
     } else {
       this.formulario.markAllAsTouched();
     }
@@ -49,5 +60,20 @@ export class AgregarProveedorComponent {
         console.log(err.message);
       },
     });
+  }
+
+  listar() {
+    this.proveedorService.getProveedores().subscribe({
+      next: (proveedores: Proveedor[]) => {
+        this.listaProveedores = proveedores;
+      },
+      error: (err: Error) => {
+        console.log(err.message);
+      },
+    });
+  }
+
+  ngOnInit() {
+    this.listar();
   }
 }

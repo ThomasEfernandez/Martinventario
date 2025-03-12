@@ -11,7 +11,9 @@
   </div>
 
   <div class="botones">
-    @if(categoriaAgregada){
+    @if(categoriaRepetida) {
+    <small class="repetido">Categoria repetida</small>
+    } @if(categoriaAgregada){
     <small class="exito">Categoria agregada</small>
     @if(tipo === 'admin') {
     <button type="button" id="volver" routerLink="/admin/categorias">
