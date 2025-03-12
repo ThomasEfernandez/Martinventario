@@ -1,19 +1,19 @@
 import { Component, inject, Input } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { Compra } from 'app/compra/interfaces/compra.interface';
-import { CompraService } from 'app/compra/services/compra.service';
+import { Entrada } from 'app/compra/interfaces/entrada.interface';
+import { EntradaService } from 'app/compra/services/entrada.service';
 import { Producto } from 'app/producto/interfaces/producto.interface';
 import { ProductoService } from 'app/producto/services/producto.service';
 
 @Component({
-  selector: 'app-agregar-compra',
+  selector: 'app-agregar-entrada',
   standalone: true,
   imports: [ReactiveFormsModule, RouterModule],
-  templateUrl: './agregar-compra.component.html',
-  styleUrl: './agregar-compra.component.css',
+  templateUrl: './agregar-entrada.component.html',
+  styleUrl: './agregar-entrada.component.css',
 })
-export class AgregarCompraComponent {
+export class AgregarEntradaComponent {
   @Input() tipo: string = '';
 
   ngOnInit() {
@@ -27,12 +27,12 @@ export class AgregarCompraComponent {
     });
   }
 
-  compraService = inject(CompraService);
+  entradaService = inject(EntradaService);
   productoService = inject(ProductoService);
 
   listaProductos: Producto[] = [];
 
-  compraAgregada: boolean = false;
+  entradaAgregada: boolean = false;
 
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
@@ -44,22 +44,22 @@ export class AgregarCompraComponent {
     totalCompra: [0],
   });
 
-  agregarCompra() {
+  agregarEntrada() {
     if (this.formulario.valid) {
-      const compra: Compra = this.formulario.getRawValue();
+      const entrada: Entrada = this.formulario.getRawValue();
       if (this.pp) {
         this.productoService.getProductoById(this.pp.id).subscribe({
           next: (producto: Producto) => {
-            this.compraService.getCompras().subscribe({
-              next: (cs: Compra[]) => {
-                compra.id = `${cs.length + 1}`;
+            this.entradaService.getEntradas().subscribe({
+              next: (cs: Entrada[]) => {
+                entrada.id = `${cs.length + 1}`;
                 if (this.pp) {
-                  compra.proveedor = this.pp.proveedor;
+                  entrada.proveedor = this.pp.proveedor;
                 }
-                compra.totalCompra = compra.cantidad * compra.precioUnitario;
-                this.agregarCompraService(compra);
-                this.actualizarCantidadService(producto, compra.cantidad);
-                this.compraAgregada = true;
+                entrada.totalCompra = entrada.cantidad * entrada.precioUnitario;
+                this.agregarEntradaService(entrada);
+                this.actualizarCantidadService(producto, entrada.cantidad);
+                this.entradaAgregada = true;
               },
             });
           },
@@ -82,8 +82,8 @@ export class AgregarCompraComponent {
     etiqueta: '',
   };
 
-  agregarCompraService(compra: Compra) {
-    this.compraService.postCompra(compra).subscribe({
+  agregarEntradaService(entrada: Entrada) {
+    this.entradaService.postEntrada(entrada).subscribe({
       error: (err: Error) => {
         console.log(err.message);
       },

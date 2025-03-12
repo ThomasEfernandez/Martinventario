@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { ListarComprasComponent } from 'app/compra/components/listar-compras/listar-compras.component';
-import { MenuCompraComponent } from 'app/compra/components/menu-compra/menu-compra.component';
+import { ListarEntradasComponent } from 'app/compra/components/listar-entradas/listar-entradas.component';
+import { MenuEntradaComponent } from 'app/compra/components/menu-entrada/menu-entrada.component';
 import { NavbarAdminComponent } from 'app/nav/components/navbar-admin/navbar-admin.component';
 
 @Component({
   selector: 'app-pagina-compras-admin',
   standalone: true,
-  imports: [NavbarAdminComponent, MenuCompraComponent, ListarComprasComponent],
+  imports: [
+    NavbarAdminComponent,
+    MenuEntradaComponent,
+    ListarEntradasComponent,
+  ],
   templateUrl: './pagina-compras-admin.component.html',
   styleUrl: './pagina-compras-admin.component.css',
 })

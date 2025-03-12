@@ -1,4 +1,4 @@
-<form [formGroup]="formulario" (ngSubmit)="agregarCompra()">
+<form [formGroup]="formulario" (ngSubmit)="agregarEntrada()">
   <label>Producto</label>
   @if (formulario.controls['producto'].getError('required') &&
   formulario.controls['producto'].touched) {
@@ -34,7 +34,7 @@
   <input type="number" formControlName="precioUnitario" />
 
   <div class="botones">
-    @if(compraAgregada){
+    @if(entradaAgregada){
     <small class="exito">Compra agregada</small>
     @if (tipo === 'admin') {
     <button type="button" id="volver" routerLink="/admin/compras">

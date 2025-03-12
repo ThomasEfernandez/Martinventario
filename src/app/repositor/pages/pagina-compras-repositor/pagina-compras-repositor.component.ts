@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ListarComprasComponent } from 'app/compra/components/listar-compras/listar-compras.component';
-import { MenuCompraComponent } from 'app/compra/components/menu-compra/menu-compra.component';
+import { ListarEntradasComponent } from 'app/compra/components/listar-entradas/listar-entradas.component';
+import { MenuEntradaComponent } from 'app/compra/components/menu-entrada/menu-entrada.component';
 import { NavbarRepositorComponent } from 'app/nav/components/navbar-repositor/navbar-repositor.component';
 
 @Component({
@@ -8,8 +8,8 @@ import { NavbarRepositorComponent } from 'app/nav/components/navbar-repositor/na
   standalone: true,
   imports: [
     NavbarRepositorComponent,
-    MenuCompraComponent,
-    ListarComprasComponent,
+    MenuEntradaComponent,
+    ListarEntradasComponent,
   ],
   templateUrl: './pagina-compras-repositor.component.html',
   styleUrl: './pagina-compras-repositor.component.css',

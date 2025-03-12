@@ -1,4 +1,4 @@
-export interface Compra {
+export interface Entrada {
   id: string;
   proveedor: string;
   producto: string;
