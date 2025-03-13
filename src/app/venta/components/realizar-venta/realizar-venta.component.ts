@@ -1,6 +1,6 @@
 import { Producto } from '../../../producto/interfaces/producto.interface';
 import { ProductoService } from '../../../producto/services/producto.service';
-import { Venta } from '../../interfaces/venta.interface';
+import { Venta } from '../../interfaces/egreso.interface';
 import { Component, inject, Input } from '@angular/core';
 import {
   FormBuilder,
@@ -8,7 +8,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { VentaService } from '../../services/venta.service';
+import { VentaService } from '../../services/egreso.service';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 

@@ -1,4 +1,4 @@
-export interface Venta {
+export interface Egreso {
   id: string;
   total: number;
   fecha: string;

@@ -21,7 +21,7 @@ import { PaginaAgregarEtiquetaAdminComponent } from './admin/pages/pagina-agrega
 import { PaginaCajerosAdminComponent } from './admin/pages/pagina-cajeros-admin/pagina-cajeros-admin.component';
 import { PaginaAgregarCajeroAdminComponent } from './admin/pages/pagina-agregar-cajero-admin/pagina-agregar-cajero-admin.component';
 
-import { PaginaVentasAdminComponent } from './admin/pages/pagina-ventas-admin/pagina-ventas-admin.component';
+import { PaginaVentasAdminComponent } from './admin/pages/pagina-ventas-admin/pagina-egresos-admin.component';
 import { PaginaRealizarVentaAdminComponent } from './admin/pages/pagina-realizar-venta-admin/pagina-realizar-venta-admin.component';
 import { PaginaVerDetalleVentaAdminComponent } from './admin/pages/pagina-ver-detalle-venta-admin/pagina-ver-detalle-venta-admin.component';
 

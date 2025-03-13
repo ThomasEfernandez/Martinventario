@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navbar-admin.component';
 import { MenuVentaAdminComponent } from '../../../venta/components/menu-venta-admin/menu-venta-admin.component';
-import { ListarVentasComponent } from '../../../venta/components/listar-ventas/listar-ventas.component';
+import { ListarEgresosComponent } from '../../../venta/components/listar-egresos/listar-egresos.component';
 
 @Component({
   selector: 'app-pagina-ventas-admin',
@@ -9,9 +9,9 @@ import { ListarVentasComponent } from '../../../venta/components/listar-ventas/l
   imports: [
     NavbarAdminComponent,
     MenuVentaAdminComponent,
-    ListarVentasComponent,
+    ListarEgresosComponent,
   ],
-  templateUrl: './pagina-ventas-admin.component.html',
-  styleUrl: './pagina-ventas-admin.component.css',
+  templateUrl: './pagina-egresos-admin.component.html',
+  styleUrl: './pagina-egresos-admin.component.css',
 })
-export class PaginaVentasAdminComponent {}
+export class PaginaEgresosAdminComponent {}
