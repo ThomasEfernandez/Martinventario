@@ -4,14 +4,13 @@ import { MenuVentaAdminComponent } from '../../../venta/components/menu-venta-ad
 import { ListarEgresosComponent } from '../../../venta/components/listar-egresos/listar-egresos.component';
 
 @Component({
-  selector: 'app-pagina-ventas-admin',
-  standalone: true,
-  imports: [
-    NavbarAdminComponent,
-    MenuVentaAdminComponent,
-    ListarEgresosComponent,
-  ],
-  templateUrl: './pagina-egresos-admin.component.html',
-  styleUrl: './pagina-egresos-admin.component.css',
+    selector: 'app-pagina-egresos-admin',
+    imports: [
+        NavbarAdminComponent,
+        MenuVentaAdminComponent,
+        ListarEgresosComponent,
+    ],
+    templateUrl: './pagina-egresos-admin.component.html',
+    styleUrl: './pagina-egresos-admin.component.css'
 })
 export class PaginaEgresosAdminComponent {}

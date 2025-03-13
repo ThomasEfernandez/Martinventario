@@ -1,6 +1,6 @@
 import { Producto } from '../../../producto/interfaces/producto.interface';
 import { ProductoService } from '../../../producto/services/producto.service';
-import { Venta } from '../../interfaces/egreso.interface';
+import { Egreso } from '../../interfaces/egreso.interface';
 import { Component, inject, Input } from '@angular/core';
 import {
   FormBuilder,
@@ -8,23 +8,22 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { VentaService } from '../../services/egreso.service';
+import { EgresoService } from '../../services/egreso.service';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-realizar-venta',
-  standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, CommonModule, RouterModule],
-  templateUrl: './realizar-venta.component.html',
-  styleUrl: './realizar-venta.component.css',
+    selector: 'app-realizar-egresos',
+    imports: [ReactiveFormsModule, FormsModule, CommonModule, RouterModule],
+    templateUrl: './realizar-egresos.component.html',
+    styleUrl: './realizar-egresos.component.css'
 })
-export class RealizarVentaComponent {
+export class RealizarEgresosComponent {
   @Input() tipo: string = '';
 
   router = inject(Router);
 
-  ventasService = inject(VentaService);
+  ventasService = inject(EgresoService);
   prodService = inject(ProductoService);
 
   producto: Producto | undefined = {
@@ -63,7 +62,7 @@ export class RealizarVentaComponent {
     if (this.formulario.valid) {
       const venta = this.formulario.getRawValue();
       this.ventasService.getVenta().subscribe({
-        next: (ventas: Venta[]) => {
+        next: (ventas: Egreso[]) => {
           venta.id = `${ventas.length + 1}`;
           const produ = this.listaProductos.find(
             (p) => p.nombreProducto === venta.producto
@@ -90,7 +89,7 @@ export class RealizarVentaComponent {
     }
   }
 
-  agregarVentaService(venta: Venta) {
+  agregarVentaService(venta: Egreso) {
     this.ventasService.postVenta(venta).subscribe({
       error: (err: Error) => {
         console.log(err.message);

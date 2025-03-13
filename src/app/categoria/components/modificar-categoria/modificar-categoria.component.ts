@@ -6,11 +6,10 @@ import { CategoriaService } from 'app/categoria/services/categoria.service';
 import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
 
 @Component({
-  selector: 'app-modificar-categoria',
-  standalone: true,
-  imports: [ReactiveFormsModule, RouterModule],
-  templateUrl: './modificar-categoria.component.html',
-  styleUrl: './modificar-categoria.component.css'
+    selector: 'app-modificar-categoria',
+    imports: [ReactiveFormsModule, RouterModule],
+    templateUrl: './modificar-categoria.component.html',
+    styleUrl: './modificar-categoria.component.css'
 })
 export class ModificarCategoriaComponent {
   @Input() tipo: string | null = null;

@@ -3,11 +3,10 @@ import { NavbarAdminComponent } from "../../../nav/components/navbar-admin/navba
 import { EditarProductoComponent } from "../../../producto/components/editar-producto/editar-producto.component";
 
 @Component({
-  selector: 'app-pagina-modificar-producto-admin',
-  standalone: true,
-  imports: [NavbarAdminComponent, EditarProductoComponent],
-  templateUrl: './pagina-modificar-producto-admin.component.html',
-  styleUrl: './pagina-modificar-producto-admin.component.css'
+    selector: 'app-pagina-modificar-producto-admin',
+    imports: [NavbarAdminComponent, EditarProductoComponent],
+    templateUrl: './pagina-modificar-producto-admin.component.html',
+    styleUrl: './pagina-modificar-producto-admin.component.css'
 })
 export class PaginaModificarProductoAdminComponent {
   tipo: string = 'admin';

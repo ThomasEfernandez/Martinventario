@@ -3,11 +3,10 @@ import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navba
 import { AgregarPedidoComponent } from '../../../pedido/components/agregar-pedido/agregar-pedido.component';
 
 @Component({
-  selector: 'app-pagina-agregar-pedido-admin',
-  standalone: true,
-  imports: [NavbarAdminComponent, AgregarPedidoComponent],
-  templateUrl: './pagina-agregar-pedido-admin.component.html',
-  styleUrl: './pagina-agregar-pedido-admin.component.css',
+    selector: 'app-pagina-agregar-pedido-admin',
+    imports: [NavbarAdminComponent, AgregarPedidoComponent],
+    templateUrl: './pagina-agregar-pedido-admin.component.html',
+    styleUrl: './pagina-agregar-pedido-admin.component.css'
 })
 export class PaginaAgregarPedidoAdminComponent {
   tipo: string = 'admin';

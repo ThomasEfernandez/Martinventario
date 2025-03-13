@@ -7,11 +7,10 @@ import { Proveedor } from 'app/proveedor/interfaces/proveedor-interface';
 import { ProveedorService } from 'app/proveedor/services/proveedor.service';
 
 @Component({
-  selector: 'app-agregar-pedido',
-  standalone: true,
-  imports: [ReactiveFormsModule, RouterModule],
-  templateUrl: './agregar-pedido.component.html',
-  styleUrl: './agregar-pedido.component.css',
+    selector: 'app-agregar-pedido',
+    imports: [ReactiveFormsModule, RouterModule],
+    templateUrl: './agregar-pedido.component.html',
+    styleUrl: './agregar-pedido.component.css'
 })
 export class AgregarPedidoComponent {
   @Input() tipo: string | null = null;

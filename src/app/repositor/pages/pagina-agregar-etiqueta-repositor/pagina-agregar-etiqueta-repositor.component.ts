@@ -3,11 +3,10 @@ import { NavbarRepositorComponent } from 'app/nav/components/navbar-repositor/na
 import { AgregarEtiquetaComponent } from '../../../etiqueta/components/agregar-etiqueta/agregar-etiqueta.component';
 
 @Component({
-  selector: 'app-pagina-agregar-etiqueta-repositor',
-  standalone: true,
-  imports: [NavbarRepositorComponent, AgregarEtiquetaComponent],
-  templateUrl: './pagina-agregar-etiqueta-repositor.component.html',
-  styleUrl: './pagina-agregar-etiqueta-repositor.component.css',
+    selector: 'app-pagina-agregar-etiqueta-repositor',
+    imports: [NavbarRepositorComponent, AgregarEtiquetaComponent],
+    templateUrl: './pagina-agregar-etiqueta-repositor.component.html',
+    styleUrl: './pagina-agregar-etiqueta-repositor.component.css'
 })
 export class PaginaAgregarEtiquetaRepositorComponent {
   tipo: string = 'repositor';

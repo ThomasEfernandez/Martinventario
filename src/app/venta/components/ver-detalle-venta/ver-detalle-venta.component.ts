@@ -1,18 +1,17 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Venta } from 'app/venta/interfaces/egreso.interface';
-import { VentaService } from 'app/venta/services/egreso.service';
+import { Egreso } from 'app/venta/interfaces/egreso.interface';
+import { EgresoService} from 'app/venta/services/egreso.service';
 
 @Component({
-  selector: 'app-ver-detalle-venta',
-  standalone: true,
-  imports: [],
-  templateUrl: './ver-detalle-venta.component.html',
-  styleUrl: './ver-detalle-venta.component.css'
+    selector: 'app-ver-detalle-venta',
+    imports: [],
+    templateUrl: './ver-detalle-venta.component.html',
+    styleUrl: './ver-detalle-venta.component.css'
 })
 export class VerDetalleVentaComponent {
-serviciosVenta=inject(VentaService)
-venta:Venta|undefined={
+serviciosVenta=inject(EgresoService)
+venta:Egreso|undefined={
   id:"",
   total:0,
   fecha:"",
@@ -24,7 +23,7 @@ router=inject(ActivatedRoute)
 id: string | null = '';
 
 traerVenta(id: string | null){
-  this.serviciosVenta.getVentaById(id).subscribe({next:(aux:Venta)=>{
+  this.serviciosVenta.getVentaById(id).subscribe({next:(aux:Egreso)=>{
     this.venta=aux;
     error:(e:Error)=>{
       console.log(e.message);

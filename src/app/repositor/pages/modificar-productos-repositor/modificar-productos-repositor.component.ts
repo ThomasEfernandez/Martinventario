@@ -3,11 +3,10 @@ import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navba
 import { EditarProductoComponent } from '../../../producto/components/editar-producto/editar-producto.component';
 
 @Component({
-  selector: 'app-modificar-productos-repositor',
-  standalone: true,
-  imports: [NavbarAdminComponent, EditarProductoComponent],
-  templateUrl: './modificar-productos-repositor.component.html',
-  styleUrl: './modificar-productos-repositor.component.css',
+    selector: 'app-modificar-productos-repositor',
+    imports: [NavbarAdminComponent, EditarProductoComponent],
+    templateUrl: './modificar-productos-repositor.component.html',
+    styleUrl: './modificar-productos-repositor.component.css'
 })
 export class ModificarProductosRepositorComponent {
   tipo: string = 'repositor';

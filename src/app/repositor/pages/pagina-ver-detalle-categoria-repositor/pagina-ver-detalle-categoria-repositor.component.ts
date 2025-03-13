@@ -3,11 +3,10 @@ import { VerDetalleCategoriaComponent } from 'app/categoria/components/ver-detal
 import { NavbarRepositorComponent } from 'app/nav/components/navbar-repositor/navbar-repositor.component';
 
 @Component({
-  selector: 'app-pagina-ver-detalle-categoria-repositor',
-  standalone: true,
-  imports: [NavbarRepositorComponent, VerDetalleCategoriaComponent],
-  templateUrl: './pagina-ver-detalle-categoria-repositor.component.html',
-  styleUrl: './pagina-ver-detalle-categoria-repositor.component.css',
+    selector: 'app-pagina-ver-detalle-categoria-repositor',
+    imports: [NavbarRepositorComponent, VerDetalleCategoriaComponent],
+    templateUrl: './pagina-ver-detalle-categoria-repositor.component.html',
+    styleUrl: './pagina-ver-detalle-categoria-repositor.component.css'
 })
 export class PaginaVerDetalleCategoriaRepositorComponent {
   tipo: string = 'repositor';

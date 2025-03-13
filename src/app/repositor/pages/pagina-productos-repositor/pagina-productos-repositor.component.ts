@@ -4,15 +4,14 @@ import { MenuProductoComponent } from '../../../producto/components/menu-product
 import { ListarProductosComponent } from '../../../producto/components/listar-productos/listar-productos.component';
 
 @Component({
-  selector: 'app-pagina-productos-repositor',
-  standalone: true,
-  imports: [
-    NavbarRepositorComponent,
-    MenuProductoComponent,
-    ListarProductosComponent,
-  ],
-  templateUrl: './pagina-productos-repositor.component.html',
-  styleUrl: './pagina-productos-repositor.component.css',
+    selector: 'app-pagina-productos-repositor',
+    imports: [
+        NavbarRepositorComponent,
+        MenuProductoComponent,
+        ListarProductosComponent,
+    ],
+    templateUrl: './pagina-productos-repositor.component.html',
+    styleUrl: './pagina-productos-repositor.component.css'
 })
 export class PaginaProductosRepositorComponent {
   tipo: string = 'repositor';

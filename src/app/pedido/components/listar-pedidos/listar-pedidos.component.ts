@@ -4,11 +4,10 @@ import { PedidoService } from '../../services/pedido.service';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-listar-pedidos',
-  standalone: true,
-  imports: [RouterModule],
-  templateUrl: './listar-pedidos.component.html',
-  styleUrl: './listar-pedidos.component.css',
+    selector: 'app-listar-pedidos',
+    imports: [RouterModule],
+    templateUrl: './listar-pedidos.component.html',
+    styleUrl: './listar-pedidos.component.css'
 })
 export class ListarPedidosComponent {
   @Input() tipo: string = '';

@@ -7,11 +7,10 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 import { UsuarioService } from 'app/usuario/services/usuario.service';
 
 @Component({
-  selector: 'app-listar-estadistica',
-  standalone: true,
-  imports: [],
-  templateUrl: './listar-estadistica.component.html',
-  styleUrl: './listar-estadistica.component.css',
+    selector: 'app-listar-estadistica',
+    imports: [],
+    templateUrl: './listar-estadistica.component.html',
+    styleUrl: './listar-estadistica.component.css'
 })
 export class ListarEstadisticaComponent {
   categoriaService = inject(CategoriaService);

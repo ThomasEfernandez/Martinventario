@@ -3,11 +3,10 @@ import { NavbarAdminComponent } from "../../../nav/components/navbar-admin/navba
 import { ModificarCategoriaComponent } from "../../../categoria/components/modificar-categoria/modificar-categoria.component";
 
 @Component({
-  selector: 'app-pagina-modificar-categoria-admin',
-  standalone: true,
-  imports: [NavbarAdminComponent, ModificarCategoriaComponent],
-  templateUrl: './pagina-modificar-categoria-admin.component.html',
-  styleUrl: './pagina-modificar-categoria-admin.component.css'
+    selector: 'app-pagina-modificar-categoria-admin',
+    imports: [NavbarAdminComponent, ModificarCategoriaComponent],
+    templateUrl: './pagina-modificar-categoria-admin.component.html',
+    styleUrl: './pagina-modificar-categoria-admin.component.css'
 })
 export class PaginaModificarCategoriaAdminComponent {
 tipo:string = 'admin';

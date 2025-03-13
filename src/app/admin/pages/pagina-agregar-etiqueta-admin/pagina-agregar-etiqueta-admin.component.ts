@@ -3,11 +3,10 @@ import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navba
 import { AgregarEtiquetaComponent } from '../../../etiqueta/components/agregar-etiqueta/agregar-etiqueta.component';
 
 @Component({
-  selector: 'app-pagina-agregar-etiqueta-admin',
-  standalone: true,
-  imports: [NavbarAdminComponent, AgregarEtiquetaComponent],
-  templateUrl: './pagina-agregar-etiqueta-admin.component.html',
-  styleUrl: './pagina-agregar-etiqueta-admin.component.css',
+    selector: 'app-pagina-agregar-etiqueta-admin',
+    imports: [NavbarAdminComponent, AgregarEtiquetaComponent],
+    templateUrl: './pagina-agregar-etiqueta-admin.component.html',
+    styleUrl: './pagina-agregar-etiqueta-admin.component.css'
 })
 export class PaginaAgregarEtiquetaAdminComponent {
   tipo: string = 'admin';

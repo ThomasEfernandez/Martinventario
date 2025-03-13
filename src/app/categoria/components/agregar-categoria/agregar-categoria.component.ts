@@ -5,11 +5,10 @@ import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
 
 @Component({
-  selector: 'app-agregar-categoria',
-  standalone: true,
-  imports: [ReactiveFormsModule, RouterModule],
-  templateUrl: './agregar-categoria.component.html',
-  styleUrl: './agregar-categoria.component.css',
+    selector: 'app-agregar-categoria',
+    imports: [ReactiveFormsModule, RouterModule],
+    templateUrl: './agregar-categoria.component.html',
+    styleUrl: './agregar-categoria.component.css'
 })
 export class AgregarCategoriaComponent {
   @Input() tipo: string = '';
