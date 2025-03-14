@@ -26,6 +26,7 @@ export class ListarProductosComponent {
   cargarListaProd() {
     this.productoService.getProductos().subscribe({
       next: (productos: Producto[]) => {
+        
         this.listaProductos = productos;
         console.log('lista cargada');
       },

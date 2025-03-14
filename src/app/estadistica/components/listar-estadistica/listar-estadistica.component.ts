@@ -23,9 +23,8 @@ export class ListarEstadisticaComponent {
     // precioCompra: number;
     // precioVenta: number;
   }[] = [];
-
   tCantidad = 0;
-
+  tCategoria ="";
   uRepositores = 0;
   uCajeros = 0;
   uTotal = 0;
@@ -36,20 +35,25 @@ export class ListarEstadisticaComponent {
         categorias.forEach((c) => {
           let cc = {
             categoria: c.nombreCategoria,
-            cantidad: 0,
+            cantidad: 0
             // precioCompra: 0,
             // precioVenta: 0,
           };
+          this.cat.push(cc);
+          
+        
           this.productoService.getProductos().subscribe({
             next: (productos: Producto[]) => {
               productos.forEach((p) => {
                 if (cc.categoria === p.categoria) {
-                  // cc.cantidad = cc.cantidad + p.cantidad;
+
+                  cc.cantidad = cc.cantidad + p.cantidad;
                   // cc.precioCompra =
                   //   cc.precioCompra + p.cantidad * p.precioCompra;
                   // cc.precioVenta = cc.precioVenta + p.cantidad * p.precioVenta;
-
-                  // this.tCantidad = this.tCantidad + p.cantidad;
+                  
+                   this.tCantidad = this.tCantidad + p.cantidad;
+                  
                   // this.tPrecioCompra =
                   //   this.tPrecioCompra + p.cantidad * p.precioCompra;
                   // this.tPrecioVenta =
@@ -69,6 +73,7 @@ export class ListarEstadisticaComponent {
       },
     });
   }
+  
   obtenerUsuarios() {
     this.usuarioService.getUsuarios().subscribe({
       next: (usuarios: Usuario[]) => {
