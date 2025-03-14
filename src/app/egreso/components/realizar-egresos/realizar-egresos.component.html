@@ -5,7 +5,7 @@
   <small class="error">Campo requerido</small>
   }
   <select id="producto" formControlName="producto">
-    <option value="" disabled selected hidden>Selecciona un producto</option>
+    <option value="" disabled selected hidden>Selecciona un producto</option> 
     @for (producto of listaProductos; track $index) {
     <option value="{{ producto.nombreProducto }}">
       {{ producto.nombreProducto }}

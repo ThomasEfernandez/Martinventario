@@ -4,8 +4,6 @@ export interface Producto {
   cantidad: number;
   marca: string;
   proveedor: string;
-  precioCompra: number;
-  precioVenta: number;
   categoria: string;
   etiqueta: string;
 }

@@ -76,8 +76,8 @@ export class AgregarEntradaComponent {
     cantidad: 0,
     marca: '',
     proveedor: '',
-    precioCompra: 0,
-    precioVenta: 0,
+    // precioCompra: 0,
+    // precioVenta: 0,
     categoria: '',
     etiqueta: '',
   };

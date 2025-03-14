@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Egreso } from 'app/venta/interfaces/egreso.interface';
-import { EgresoService} from 'app/venta/services/egreso.service';
+import { Egreso } from 'app/egreso/interfaces/egreso.interface';
+import { EgresoService} from 'app/egreso/services/egreso.service';
 
 @Component({
     selector: 'app-ver-detalle-venta',

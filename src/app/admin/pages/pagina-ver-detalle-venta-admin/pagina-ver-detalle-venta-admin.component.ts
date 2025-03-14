@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarAdminComponent } from 'app/nav/components/navbar-admin/navbar-admin.component';
-import { VerDetalleVentaComponent } from 'app/venta/components/ver-detalle-venta/ver-detalle-venta.component';
+import { VerDetalleVentaComponent } from 'app/egreso/components/ver-detalle-venta/ver-detalle-venta.component';
 
 @Component({
     selector: 'app-pagina-ver-detalle-venta-admin',

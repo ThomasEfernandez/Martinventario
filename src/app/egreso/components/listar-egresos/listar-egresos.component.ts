@@ -1,7 +1,8 @@
-import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Egreso } from 'app/venta/interfaces/egreso.interface';
-import {EgresoService} from 'app/venta/services/egreso.service'
+import { EgresoService } from './../../services/egreso.service';
+import { Component, inject } from '@angular/core';
+import { Egreso } from 'app/egreso/interfaces/egreso.interface';
+
 
 
 @Component({

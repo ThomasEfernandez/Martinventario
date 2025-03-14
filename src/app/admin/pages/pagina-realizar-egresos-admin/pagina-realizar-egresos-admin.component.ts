@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navbar-admin.component';
-import { RealizarEgresosComponent } from 'app/venta/components/realizar-egresos/realizar-egresos.component';
+import { RealizarEgresosComponent } from 'app/egreso/components/realizar-egresos/realizar-egresos.component';
 
 @Component({
     selector: 'app-pagina-realizar-egresos-admin',
