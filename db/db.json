@@ -172,6 +172,15 @@
       "cantidad": 10,
       "categoria": "Alimentos",
       "etiqueta": "Carne"
+    },
+    {
+      "id": "11",
+      "nombreProducto": "alimento canino",
+      "marca": "Royal Canin",
+      "proveedor": "Fausto",
+      "cantidad": 10,
+      "categoria": "Mascotas",
+      "etiqueta": "Alimento Canino"
     }
   ],
   "proveedores": [
@@ -285,6 +294,11 @@
           "id": "2",
           "nombreEtiqueta": "Juego",
           "estado": true
+        },
+        {
+          "id": "3",
+          "nombreEtiqueta": "Limpieza",
+          "estado": true
         }
       ]
     },
@@ -292,7 +306,13 @@
       "id": "6",
       "nombreCategoria": "Mascotas",
       "estado": true,
-      "etiquetas": []
+      "etiquetas": [
+        {
+          "id": "1",
+          "nombreEtiqueta": "Alimento Canino",
+          "estado": true
+        }
+      ]
     },
     {
       "id": "7",
@@ -433,7 +453,6 @@
       "proveedor": "Fausto",
       "producto": "Crema de avellanas Nutella 350 g.",
       "cantidad": 2
-    
     },
     {
       "id": "3",

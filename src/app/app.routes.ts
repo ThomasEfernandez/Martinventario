@@ -74,6 +74,8 @@ import { ModificarProductosRepositorComponent } from './repositor/pages/modifica
 import { PaginaModificarProveedoresAdminComponent } from './admin/pages/pagina-modificar-proveedores-admin/pagina-modificar-proveedores-admin.component';
 
 import { PaginaModificarProveedorRepositorComponent } from './repositor/pages/pagina-modificar-proveedor-repositor/pagina-modificar-proveedor-repositor.component';
+import { EmpleadosComponent } from './admin/empleados/empleados/empleados.component';
+import { PaginaEmpleadoComponent } from './admin/pages/pagina-empleado/pagina-empleado.component';
 
 export const routes: Routes = [
   {
@@ -171,6 +173,10 @@ export const routes: Routes = [
     path: 'admin/repositores',
     component: PaginaRepositoresAdminComponent,
     // canActivate: [authGuardFn],
+  },
+  {
+    path: 'admin/empleados',
+    component:PaginaEmpleadoComponent,
   },
   {
     path: 'admin/repositores/agregar',
