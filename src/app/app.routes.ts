@@ -76,6 +76,7 @@ import { PaginaModificarProveedoresAdminComponent } from './admin/pages/pagina-m
 import { PaginaModificarProveedorRepositorComponent } from './repositor/pages/pagina-modificar-proveedor-repositor/pagina-modificar-proveedor-repositor.component';
 import { EmpleadosComponent } from './admin/empleados/empleados/empleados.component';
 import { PaginaEmpleadoComponent } from './admin/pages/pagina-empleado/pagina-empleado.component';
+import { PaginaSeccionesComponent } from './admin/pages/pagina-secciones/pagina-secciones.component';
 
 export const routes: Routes = [
   {
@@ -143,6 +144,10 @@ export const routes: Routes = [
     path: 'admin/etiquetas/agregar',
     component: PaginaAgregarEtiquetaAdminComponent,
     // canActivate: [authGuardFn],
+  },{
+    path:'admin/secciones',
+    component:PaginaSeccionesComponent,
+
   },
   {
     path: 'admin/cajeros',
