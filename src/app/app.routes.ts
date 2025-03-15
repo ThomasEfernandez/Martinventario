@@ -155,17 +155,17 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/ventas',
+    path: 'admin/egresos',
     component: PaginaEgresosAdminComponent,
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/ventas/realizar',
+    path: 'admin/egresos/realizar',
     component: PaginaRealizarVentaAdminComponent,
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/venta/:id',
+    path: 'admin/egresos/:id',
     component: PaginaVerDetalleVentaAdminComponent,
     // canActivate: [authGuardFn],
   },
@@ -286,12 +286,12 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path: 'cajero/ventas/realizar',
+    path: 'cajero/egreso/realizar',
     component: PaginaRealizarVentaCajeroComponent,
     // canActivate: [authGuardFn],
   },
   {
-    path: 'cajero/venta/:id',
+    path: 'cajero/egreso/:id',
     component: PaginaVerDetalleVentaCajeroComponent,
     // canActivate: [authGuardFn],
   },
