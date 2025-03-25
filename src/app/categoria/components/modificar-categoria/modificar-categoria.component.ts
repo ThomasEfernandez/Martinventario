@@ -6,10 +6,11 @@ import { CategoriaService } from 'app/categoria/services/categoria.service';
 import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
 
 @Component({
-    selector: 'app-modificar-categoria',
-    imports: [ReactiveFormsModule, RouterModule],
-    templateUrl: './modificar-categoria.component.html',
-    styleUrl: './modificar-categoria.component.css'
+  selector: 'app-modificar-categoria',
+  standalone: true,
+  imports: [ReactiveFormsModule, RouterModule],
+  templateUrl: './modificar-categoria.component.html',
+  styleUrl: './modificar-categoria.component.css',
 })
 export class ModificarCategoriaComponent {
   @Input() tipo: string | null = null;
@@ -31,48 +32,50 @@ export class ModificarCategoriaComponent {
     etiquetas: [[]],
   });
 
-  getCategoriaById(id: string | null){
+  getCategoriaById(id: string | null) {
     this.categoriaService.getCategoriaById(id).subscribe({
-      next: (categoria : Categoria)=>{
-          this.formulario.controls['id'].setValue(categoria.id);
-          this.formulario.controls['nombreCategoria'].setValue(categoria.nombreCategoria);
-          this.formulario.controls['estado'].setValue(categoria.estado);
-          // this.formulario.controls['etiquetas'].setValue(categoria.etiquetas);
+      next: (categoria: Categoria) => {
+        this.formulario.controls['id'].setValue(categoria.id);
+        this.formulario.controls['nombreCategoria'].setValue(
+          categoria.nombreCategoria
+        );
+        this.formulario.controls['estado'].setValue(categoria.estado);
+        // this.formulario.controls['etiquetas'].setValue(categoria.etiquetas);
       },
-      error: ()=>{
+      error: () => {
         console.log('error....');
-      }
-    })
+      },
+    });
   }
-  categoriaModificada: boolean=false;
-  update(){
-    if(this.formulario.invalid)return;
-    const categoria = this.formulario.getRawValue()
+  categoriaModificada: boolean = false;
+  update() {
+    if (this.formulario.invalid) return;
+    const categoria = this.formulario.getRawValue();
     this.categoriaService.putCategoria(this.id, categoria).subscribe({
-      next: () =>{
+      next: () => {
         console.log('Actualizado');
-        this.categoriaModificada=true;
+        this.categoriaModificada = true;
         // if(this.tipo === 'admin'){
         //   this.router.navigateByUrl('admin/proveedores')
         // }else if (this.tipo === 'repositor'){
         //   this.router.navigateByUrl('repositor/proveedores')
         // }
       },
-      error: (e:Error) =>{
-          console.log(e.message);
-      }
-    })
+      error: (e: Error) => {
+        console.log(e.message);
+      },
+    });
   }
 
   ngOnInit(): void {
     this.activaredRoutes.paramMap.subscribe({
-      next: (param) =>{
-          this.id = param.get('id');
-          this.getCategoriaById(this.id)
+      next: (param) => {
+        this.id = param.get('id');
+        this.getCategoriaById(this.id);
       },
-      error: (e: Error) =>{
-          console.log(e.message);
-      }
-    })
+      error: (e: Error) => {
+        console.log(e.message);
+      },
+    });
   }
 }

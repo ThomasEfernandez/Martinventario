@@ -4,14 +4,15 @@ import { MenuCategoriaComponent } from '../../../categoria/components/menu-categ
 import { ListarCategoriasComponent } from '../../../categoria/components/listar-categorias/listar-categorias.component';
 
 @Component({
-    selector: 'app-pagina-categorias-admin',
-    imports: [
-        NavbarAdminComponent,
-        ListarCategoriasComponent,
-        MenuCategoriaComponent,
-    ],
-    templateUrl: './pagina-categorias-admin.component.html',
-    styleUrl: './pagina-categorias-admin.component.css'
+  selector: 'app-pagina-categorias-admin',
+  standalone: true,
+  imports: [
+    NavbarAdminComponent,
+    ListarCategoriasComponent,
+    MenuCategoriaComponent,
+  ],
+  templateUrl: './pagina-categorias-admin.component.html',
+  styleUrl: './pagina-categorias-admin.component.css',
 })
 export class PaginaCategoriasAdminComponent {
   tipo: string = 'admin';

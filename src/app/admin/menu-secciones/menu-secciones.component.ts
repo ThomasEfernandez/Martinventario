@@ -3,10 +3,9 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-menu-secciones',
+  standalone: true,
   imports: [RouterModule],
   templateUrl: './menu-secciones.component.html',
-  styleUrl: './menu-secciones.component.css'
+  styleUrl: './menu-secciones.component.css',
 })
-export class MenuSeccionesComponent {
-
-}
+export class MenuSeccionesComponent {}

@@ -44,7 +44,6 @@ export class RealizarPedidoComponent implements OnInit {
           next: (ps: Pedido[]) => {
             pedido.id = `${ps.length + 1}`;
             pedido.proveedor = producto.proveedor;
-            pedido.totalCompra = pedido.cantidad * producto.precioCompra;
             this.emitirPedido.emit(pedido);
             this.agregarPedidoService(pedido);
 

@@ -4,14 +4,15 @@ import { MenuCategoriaComponent } from '../../../categoria/components/menu-categ
 import { ListarCategoriasComponent } from 'app/categoria/components/listar-categorias/listar-categorias.component';
 
 @Component({
-    selector: 'app-pagina-categorias-repositor',
-    imports: [
-        NavbarRepositorComponent,
-        MenuCategoriaComponent,
-        ListarCategoriasComponent,
-    ],
-    templateUrl: './pagina-categorias-repositor.component.html',
-    styleUrl: './pagina-categorias-repositor.component.css'
+  selector: 'app-pagina-categorias-repositor',
+  standalone: true,
+  imports: [
+    NavbarRepositorComponent,
+    MenuCategoriaComponent,
+    ListarCategoriasComponent,
+  ],
+  templateUrl: './pagina-categorias-repositor.component.html',
+  styleUrl: './pagina-categorias-repositor.component.css',
 })
 export class PaginaCategoriasRepositorComponent {
   tipo: string = 'repositor';

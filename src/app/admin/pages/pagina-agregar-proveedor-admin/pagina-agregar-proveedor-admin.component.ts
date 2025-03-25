@@ -3,10 +3,11 @@ import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navba
 import { AgregarProveedorComponent } from '../../../proveedor/components/agregar-proveedor/agregar-proveedor.component';
 
 @Component({
-    selector: 'app-pagina-agregar-proveedor-admin',
-    imports: [NavbarAdminComponent, AgregarProveedorComponent],
-    templateUrl: './pagina-agregar-proveedor-admin.component.html',
-    styleUrl: './pagina-agregar-proveedor-admin.component.css'
+  selector: 'app-pagina-agregar-proveedor-admin',
+  standalone: true,
+  imports: [NavbarAdminComponent, AgregarProveedorComponent],
+  templateUrl: './pagina-agregar-proveedor-admin.component.html',
+  styleUrl: './pagina-agregar-proveedor-admin.component.css',
 })
 export class PaginaAgregarProveedorAdminComponent {
   tipo: string = 'admin';

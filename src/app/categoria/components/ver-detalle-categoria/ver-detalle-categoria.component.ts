@@ -5,10 +5,11 @@ import { CategoriaService } from 'app/categoria/services/categoria.service';
 import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
 
 @Component({
-    selector: 'app-ver-detalle-categoria',
-    imports: [RouterModule],
-    templateUrl: './ver-detalle-categoria.component.html',
-    styleUrl: './ver-detalle-categoria.component.css'
+  selector: 'app-ver-detalle-categoria',
+  standalone: true,
+  imports: [RouterModule],
+  templateUrl: './ver-detalle-categoria.component.html',
+  styleUrl: './ver-detalle-categoria.component.css',
 })
 export class VerDetalleCategoriaComponent {
   @Input() tipo: string = '';

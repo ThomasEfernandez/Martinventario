@@ -4,10 +4,11 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 import { UsuarioService } from '../../services/usuario.service';
 import { RouterModule } from '@angular/router';
 @Component({
-    selector: 'app-agregar-usuario',
-    imports: [ReactiveFormsModule, RouterModule],
-    templateUrl: './agregar-usuario.component.html',
-    styleUrl: './agregar-usuario.component.css'
+  selector: 'app-agregar-usuario',
+  standalone: true,
+  imports: [ReactiveFormsModule, RouterModule],
+  templateUrl: './agregar-usuario.component.html',
+  styleUrl: './agregar-usuario.component.css',
 })
 export class AgregarUsuarioComponent {
   @Input() usuarioNuevo: string = '';

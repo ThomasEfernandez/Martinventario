@@ -4,14 +4,15 @@ import { ListarProveedorComponent } from '../../../proveedor/components/listar-p
 import { MenuProveedorComponent } from '../../../proveedor/components/menu-proveedor/menu-proveedor.component';
 
 @Component({
-    selector: 'app-pagina-proveedores-repositor',
-    imports: [
-        NavbarRepositorComponent,
-        ListarProveedorComponent,
-        MenuProveedorComponent,
-    ],
-    templateUrl: './pagina-proveedores-repositor.component.html',
-    styleUrl: './pagina-proveedores-repositor.component.css'
+  selector: 'app-pagina-proveedores-repositor',
+  standalone: true,
+  imports: [
+    NavbarRepositorComponent,
+    ListarProveedorComponent,
+    MenuProveedorComponent,
+  ],
+  templateUrl: './pagina-proveedores-repositor.component.html',
+  styleUrl: './pagina-proveedores-repositor.component.css',
 })
 export class PaginaProveedoresRepositorComponent {
   tipo: string = 'repositor';

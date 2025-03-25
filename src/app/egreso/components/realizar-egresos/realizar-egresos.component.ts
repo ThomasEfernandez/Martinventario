@@ -14,9 +14,10 @@ import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-realizar-egresos',
+  standalone: true,
   imports: [ReactiveFormsModule, FormsModule, CommonModule, RouterModule],
   templateUrl: './realizar-egresos.component.html',
-  styleUrl: './realizar-egresos.component.css'
+  styleUrl: './realizar-egresos.component.css',
 })
 export class RealizarEgresosComponent {
   @Input() tipo: string = '';
@@ -48,10 +49,10 @@ export class RealizarEgresosComponent {
     total: [0],
     fecha: [
       new Date().getDate() +
-      '/' +
-      new Date().getMonth() +
-      '/' +
-      new Date().getFullYear(),
+        '/' +
+        new Date().getMonth() +
+        '/' +
+        new Date().getFullYear(),
     ],
     cajero: [0, Validators.required],
     producto: ['', Validators.required],
@@ -69,7 +70,7 @@ export class RealizarEgresosComponent {
           );
           this.prodService.getProductoById(produ?.id).subscribe({
             next: (prod: Producto) => {
-            //  venta.total = venta.cantidad * prod.precioVenta;
+              //  venta.total = venta.cantidad * prod.precioVenta;
               this.agregarVentaService(venta);
               this.ventaRealizada = true;
               if (this.tipo === 'admin') {
@@ -108,7 +109,7 @@ export class RealizarEgresosComponent {
       next: (aux: Producto) => {
         aux.cantidad = aux.cantidad - cantidad;
         this.prodService.putProducto(aux.id, aux).subscribe({
-          next: () => { },
+          next: () => {},
           error(e: Error) {
             console.log(e.message);
           },

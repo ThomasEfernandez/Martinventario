@@ -10,10 +10,11 @@ import { Proveedor } from 'app/proveedor/interfaces/proveedor-interface';
 import { ProveedorService } from 'app/proveedor/services/proveedor.service';
 
 @Component({
-    selector: 'app-agregar-producto',
-    imports: [ReactiveFormsModule, RouterModule],
-    templateUrl: './agregar-producto.component.html',
-    styleUrl: './agregar-producto.component.css'
+  selector: 'app-agregar-producto',
+  standalone: true,
+  imports: [ReactiveFormsModule, RouterModule],
+  templateUrl: './agregar-producto.component.html',
+  styleUrl: './agregar-producto.component.css',
 })
 export class AgregarProductoComponent {
   @Input() tipo: string | null = null;

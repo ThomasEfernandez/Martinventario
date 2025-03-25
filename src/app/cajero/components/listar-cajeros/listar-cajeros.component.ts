@@ -5,10 +5,11 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 import { UsuarioService } from 'app/usuario/services/usuario.service';
 
 @Component({
-    selector: 'app-listar-cajeros',
-    imports: [RouterModule],
-    templateUrl: './listar-cajeros.component.html',
-    styleUrl: './listar-cajeros.component.css'
+  selector: 'app-listar-cajeros',
+  standalone: true,
+  imports: [RouterModule],
+  templateUrl: './listar-cajeros.component.html',
+  styleUrl: './listar-cajeros.component.css',
 })
 export class ListarCajerosComponent {
   usuarioService = inject(UsuarioService);
