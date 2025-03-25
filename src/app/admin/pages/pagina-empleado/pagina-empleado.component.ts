@@ -4,6 +4,7 @@ import { EmpleadosComponent } from "../../empleados/empleados/empleados.componen
 
 @Component({
   selector: 'app-pagina-empleado',
+  standalone: true,
   imports: [NavbarAdminComponent, EmpleadosComponent],
   templateUrl: './pagina-empleado.component.html',
   styleUrl: './pagina-empleado.component.css'
@@ -11,3 +12,4 @@ import { EmpleadosComponent } from "../../empleados/empleados/empleados.componen
 export class PaginaEmpleadoComponent {
 
 }
+
