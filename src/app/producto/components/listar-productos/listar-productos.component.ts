@@ -4,10 +4,11 @@ import { Producto } from 'app/producto/interfaces/producto.interface';
 import { ProductoService } from 'app/producto/services/producto.service';
 
 @Component({
-    selector: 'app-listar-productos',
-    imports: [RouterModule],
-    templateUrl: './listar-productos.component.html',
-    styleUrl: './listar-productos.component.css'
+  selector: 'app-listar-productos',
+  standalone: true,
+  imports: [RouterModule],
+  templateUrl: './listar-productos.component.html',
+  styleUrl: './listar-productos.component.css',
 })
 export class ListarProductosComponent {
   @Input() tipo: string = '';

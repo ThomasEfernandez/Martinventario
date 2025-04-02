@@ -4,9 +4,10 @@ import { MenuSeccionesComponent } from '../../menu-secciones/menu-secciones.comp
 import { RouterModule } from '@angular/router';
 
 @Component({
-    selector: 'app-pagina-secciones',
-    imports: [NavbarAdminComponent, MenuSeccionesComponent, RouterModule],
-    templateUrl: './pagina-secciones.component.html',
-    styleUrl: './pagina-secciones.component.css'
+  selector: 'app-pagina-secciones',
+  standalone: true,
+  imports: [NavbarAdminComponent, MenuSeccionesComponent, RouterModule],
+  templateUrl: './pagina-secciones.component.html',
+  styleUrl: './pagina-secciones.component.css',
 })
 export class PaginaSeccionesComponent {}

@@ -6,10 +6,11 @@ import { CategoriaService } from 'app/categoria/services/categoria.service';
 import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
 
 @Component({
-    selector: 'app-agregar-etiqueta',
-    imports: [ReactiveFormsModule, RouterModule],
-    templateUrl: './agregar-etiqueta.component.html',
-    styleUrl: './agregar-etiqueta.component.css'
+  selector: 'app-agregar-etiqueta',
+  standalone: true,
+  imports: [ReactiveFormsModule, RouterModule],
+  templateUrl: './agregar-etiqueta.component.html',
+  styleUrl: './agregar-etiqueta.component.css',
 })
 export class AgregarEtiquetaComponent {
   @Input() tipo: string | null = null;

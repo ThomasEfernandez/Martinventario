@@ -7,10 +7,11 @@ import { Producto } from 'app/producto/interfaces/producto.interface';
 import { ProductoService } from 'app/producto/services/producto.service';
 
 @Component({
-    selector: 'app-agregar-entrada',
-    imports: [ReactiveFormsModule, RouterModule],
-    templateUrl: './agregar-entrada.component.html',
-    styleUrl: './agregar-entrada.component.css'
+  selector: 'app-agregar-entrada',
+  standalone: true,
+  imports: [ReactiveFormsModule, RouterModule],
+  templateUrl: './agregar-entrada.component.html',
+  styleUrl: './agregar-entrada.component.css',
 })
 export class AgregarEntradaComponent {
   @Input() tipo: string = '';

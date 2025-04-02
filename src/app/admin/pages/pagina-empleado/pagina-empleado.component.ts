@@ -3,9 +3,10 @@ import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navba
 import { EmpleadosComponent } from '../../empleados/empleados/empleados.component';
 
 @Component({
-    selector: 'app-pagina-empleado',
-    imports: [NavbarAdminComponent, EmpleadosComponent],
-    templateUrl: './pagina-empleado.component.html',
-    styleUrl: './pagina-empleado.component.css'
+  selector: 'app-pagina-empleado',
+  standalone: true,
+  imports: [NavbarAdminComponent, EmpleadosComponent],
+  templateUrl: './pagina-empleado.component.html',
+  styleUrl: './pagina-empleado.component.css',
 })
 export class PaginaEmpleadoComponent {}

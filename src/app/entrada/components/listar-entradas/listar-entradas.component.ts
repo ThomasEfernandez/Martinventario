@@ -4,10 +4,11 @@ import { Entrada } from 'app/entrada/interfaces/entrada.interface';
 import { EntradaService } from 'app/entrada/services/entrada.service';
 
 @Component({
-    selector: 'app-listar-entradas',
-    imports: [RouterModule],
-    templateUrl: './listar-entradas.component.html',
-    styleUrl: './listar-entradas.component.css'
+  selector: 'app-listar-entradas',
+  standalone: true,
+  imports: [RouterModule],
+  templateUrl: './listar-entradas.component.html',
+  styleUrl: './listar-entradas.component.css',
 })
 export class ListarEntradasComponent {
   @Input() tipo: string = '';
