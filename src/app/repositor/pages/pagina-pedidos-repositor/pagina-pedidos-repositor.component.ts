@@ -4,15 +4,14 @@ import { MenuPedidoComponent } from '../../../pedido/components/menu-pedido/menu
 import { ListarPedidosComponent } from '../../../pedido/components/listar-pedidos/listar-pedidos.component';
 
 @Component({
-  selector: 'app-pagina-pedidos-repositor',
-  standalone: true,
-  imports: [
-    NavbarRepositorComponent,
-    MenuPedidoComponent,
-    ListarPedidosComponent,
-  ],
-  templateUrl: './pagina-pedidos-repositor.component.html',
-  styleUrl: './pagina-pedidos-repositor.component.css',
+    selector: 'app-pagina-pedidos-repositor',
+    imports: [
+        NavbarRepositorComponent,
+        MenuPedidoComponent,
+        ListarPedidosComponent,
+    ],
+    templateUrl: './pagina-pedidos-repositor.component.html',
+    styleUrl: './pagina-pedidos-repositor.component.css'
 })
 export class PaginaPedidosRepositorComponent {
   tipo: string = 'repositor';

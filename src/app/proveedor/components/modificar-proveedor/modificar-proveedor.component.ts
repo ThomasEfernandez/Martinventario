@@ -5,11 +5,10 @@ import { Proveedor } from 'app/proveedor/interfaces/proveedor-interface';
 import { ProveedorService } from 'app/proveedor/services/proveedor.service';
 
 @Component({
-  selector: 'app-modificar-proveedor',
-  standalone: true,
-  imports: [ReactiveFormsModule, RouterModule],
-  templateUrl: './modificar-proveedor.component.html',
-  styleUrl: './modificar-proveedor.component.css',
+    selector: 'app-modificar-proveedor',
+    imports: [ReactiveFormsModule, RouterModule],
+    templateUrl: './modificar-proveedor.component.html',
+    styleUrl: './modificar-proveedor.component.css'
 })
 export class ModificarProveedorComponent {
   @Input() tipo: string | null = null;

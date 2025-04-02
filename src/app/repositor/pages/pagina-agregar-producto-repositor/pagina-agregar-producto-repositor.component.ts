@@ -3,11 +3,10 @@ import { NavbarRepositorComponent } from '../../../nav/components/navbar-reposit
 import { AgregarProductoComponent } from '../../../producto/components/agregar-producto/agregar-producto.component';
 
 @Component({
-  selector: 'app-pagina-agregar-producto-repositor',
-  standalone: true,
-  imports: [NavbarRepositorComponent, AgregarProductoComponent],
-  templateUrl: './pagina-agregar-producto-repositor.component.html',
-  styleUrl: './pagina-agregar-producto-repositor.component.css',
+    selector: 'app-pagina-agregar-producto-repositor',
+    imports: [NavbarRepositorComponent, AgregarProductoComponent],
+    templateUrl: './pagina-agregar-producto-repositor.component.html',
+    styleUrl: './pagina-agregar-producto-repositor.component.css'
 })
 export class PaginaAgregarProductoRepositorComponent {
   tipo: string = 'repositor';

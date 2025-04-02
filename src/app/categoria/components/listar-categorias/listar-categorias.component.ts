@@ -4,11 +4,10 @@ import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
 
 @Component({
-  selector: 'app-listar-categorias',
-  standalone: true,
-  imports: [RouterModule],
-  templateUrl: './listar-categorias.component.html',
-  styleUrl: './listar-categorias.component.css',
+    selector: 'app-listar-categorias',
+    imports: [RouterModule],
+    templateUrl: './listar-categorias.component.html',
+    styleUrl: './listar-categorias.component.css'
 })
 export class ListarCategoriasComponent {
   @Input() tipo: string | null = null;

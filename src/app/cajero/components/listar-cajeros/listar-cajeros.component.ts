@@ -1,12 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { Usuario } from 'app/usuario/interfaces/usuario.interface';
+import { Usuario } from 'app/usuario/interfaces/Usuario.interface';
 import { UsuarioService } from 'app/usuario/services/usuario.service';
 
 @Component({
   selector: 'app-listar-cajeros',
-  standalone: true,
   imports: [RouterModule],
   templateUrl: './listar-cajeros.component.html',
   styleUrl: './listar-cajeros.component.css',

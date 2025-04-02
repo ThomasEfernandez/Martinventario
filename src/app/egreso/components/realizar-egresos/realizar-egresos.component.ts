@@ -13,11 +13,10 @@ import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-realizar-egresos',
-  standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, CommonModule, RouterModule],
-  templateUrl: './realizar-egresos.component.html',
-  styleUrl: './realizar-egresos.component.css',
+    selector: 'app-realizar-egresos',
+    imports: [ReactiveFormsModule, FormsModule, CommonModule, RouterModule],
+    templateUrl: './realizar-egresos.component.html',
+    styleUrl: './realizar-egresos.component.css'
 })
 export class RealizarEgresosComponent {
   @Input() tipo: string = '';

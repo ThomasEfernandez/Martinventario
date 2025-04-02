@@ -4,14 +4,13 @@ import { MenuRepositorComponent } from 'app/repositor/components/menu-repositor/
 import { ListarRepositorComponent } from '../../../repositor/components/listar-repositor/listar-repositor.component';
 
 @Component({
-  selector: 'app-pagina-repositores-admin',
-  standalone: true,
-  imports: [
-    NavbarAdminComponent,
-    MenuRepositorComponent,
-    ListarRepositorComponent,
-  ],
-  templateUrl: './pagina-repositores-admin.component.html',
-  styleUrl: './pagina-repositores-admin.component.css',
+    selector: 'app-pagina-repositores-admin',
+    imports: [
+        NavbarAdminComponent,
+        MenuRepositorComponent,
+        ListarRepositorComponent,
+    ],
+    templateUrl: './pagina-repositores-admin.component.html',
+    styleUrl: './pagina-repositores-admin.component.css'
 })
 export class PaginaRepositoresAdminComponent {}

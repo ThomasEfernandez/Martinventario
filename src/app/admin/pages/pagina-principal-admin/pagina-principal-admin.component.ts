@@ -4,10 +4,9 @@ import { ListarEstadisticaComponent } from 'app/estadistica/components/listar-es
 import { fetchProducts } from '../../../api/api';
 
 @Component({
-  selector: 'app-pagina-principal-admin',
-  standalone: true,
-  imports: [NavbarAdminComponent, ListarEstadisticaComponent],
-  templateUrl: './pagina-principal-admin.component.html',
-  styleUrl: './pagina-principal-admin.component.css',
+    selector: 'app-pagina-principal-admin',
+    imports: [NavbarAdminComponent, ListarEstadisticaComponent],
+    templateUrl: './pagina-principal-admin.component.html',
+    styleUrl: './pagina-principal-admin.component.css'
 })
 export class PaginaPrincipalAdminComponent {}

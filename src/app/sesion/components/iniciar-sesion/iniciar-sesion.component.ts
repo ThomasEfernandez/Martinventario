@@ -1,16 +1,15 @@
 import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UsuarioService } from '../../../usuario/services/usuario.service';
-import { Usuario } from '../../../usuario/interfaces/usuario.interface';
+import { Usuario } from '../../../usuario/interfaces/Usuario.interface';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from 'app/auth/service/auth.service';
 
 @Component({
-  selector: 'app-iniciar-sesion',
-  standalone: true,
-  imports: [ReactiveFormsModule, RouterModule],
-  templateUrl: './iniciar-sesion.component.html',
-  styleUrl: './iniciar-sesion.component.css',
+    selector: 'app-iniciar-sesion',
+    imports: [ReactiveFormsModule, RouterModule],
+    templateUrl: './iniciar-sesion.component.html',
+    styleUrl: './iniciar-sesion.component.css'
 })
 export class IniciarSesionComponent {
   router = inject(Router);

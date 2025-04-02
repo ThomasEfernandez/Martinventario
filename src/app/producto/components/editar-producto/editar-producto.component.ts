@@ -10,11 +10,10 @@ import { Proveedor } from 'app/proveedor/interfaces/proveedor-interface';
 import { ProveedorService } from 'app/proveedor/services/proveedor.service';
 
 @Component({
-  selector: 'app-editar-producto',
-  standalone: true,
-  imports: [ReactiveFormsModule, RouterModule],
-  templateUrl: './editar-producto.component.html',
-  styleUrl: './editar-producto.component.css',
+    selector: 'app-editar-producto',
+    imports: [ReactiveFormsModule, RouterModule],
+    templateUrl: './editar-producto.component.html',
+    styleUrl: './editar-producto.component.css'
 })
 export class EditarProductoComponent {
   @Input() tipo: string = '';

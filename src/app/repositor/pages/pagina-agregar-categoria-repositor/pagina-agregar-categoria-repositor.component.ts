@@ -3,11 +3,10 @@ import { NavbarRepositorComponent } from '../../../nav/components/navbar-reposit
 import { AgregarCategoriaComponent } from '../../../categoria/components/agregar-categoria/agregar-categoria.component';
 
 @Component({
-  selector: 'app-pagina-agregar-categoria-repositor',
-  standalone: true,
-  imports: [NavbarRepositorComponent, AgregarCategoriaComponent],
-  templateUrl: './pagina-agregar-categoria-repositor.component.html',
-  styleUrl: './pagina-agregar-categoria-repositor.component.css',
+    selector: 'app-pagina-agregar-categoria-repositor',
+    imports: [NavbarRepositorComponent, AgregarCategoriaComponent],
+    templateUrl: './pagina-agregar-categoria-repositor.component.html',
+    styleUrl: './pagina-agregar-categoria-repositor.component.css'
 })
 export class PaginaAgregarCategoriaRepositorComponent {
   tipo: string = 'repositor';

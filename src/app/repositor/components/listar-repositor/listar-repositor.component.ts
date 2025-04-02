@@ -1,13 +1,12 @@
 import { Component, inject } from '@angular/core';
-import { Usuario } from 'app/usuario/interfaces/usuario.interface';
+import { Usuario } from 'app/usuario/interfaces/Usuario.interface';
 import { UsuarioService } from 'app/usuario/services/usuario.service';
 
 @Component({
-  selector: 'app-listar-repositor',
-  standalone: true,
-  imports: [],
-  templateUrl: './listar-repositor.component.html',
-  styleUrl: './listar-repositor.component.css',
+    selector: 'app-listar-repositor',
+    imports: [],
+    templateUrl: './listar-repositor.component.html',
+    styleUrl: './listar-repositor.component.css'
 })
 export class ListarRepositorComponent {
   listaUsuarios: Usuario[] = [];

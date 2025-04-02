@@ -3,10 +3,9 @@ import { NavbarAdminComponent } from 'app/nav/components/navbar-admin/navbar-adm
 import { VerDetalleVentaComponent } from 'app/egreso/components/ver-detalle-venta/ver-detalle-venta.component';
 
 @Component({
-  selector: 'app-pagina-ver-detalle-venta-admin',
-  standalone: true,
-  imports: [NavbarAdminComponent, VerDetalleVentaComponent],
-  templateUrl: './pagina-ver-detalle-venta-admin.component.html',
-  styleUrl: './pagina-ver-detalle-venta-admin.component.css',
+    selector: 'app-pagina-ver-detalle-venta-admin',
+    imports: [NavbarAdminComponent, VerDetalleVentaComponent],
+    templateUrl: './pagina-ver-detalle-venta-admin.component.html',
+    styleUrl: './pagina-ver-detalle-venta-admin.component.css'
 })
 export class PaginaVerDetalleVentaAdminComponent {}

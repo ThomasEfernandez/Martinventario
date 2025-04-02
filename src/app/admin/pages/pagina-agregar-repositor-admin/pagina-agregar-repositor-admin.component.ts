@@ -3,11 +3,10 @@ import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navba
 import { AgregarUsuarioComponent } from '../../../usuario/components/agregar-usuario/agregar-usuario.component';
 
 @Component({
-  selector: 'app-pagina-agregar-repositor-admin',
-  standalone: true,
-  imports: [NavbarAdminComponent, AgregarUsuarioComponent],
-  templateUrl: './pagina-agregar-repositor-admin.component.html',
-  styleUrl: './pagina-agregar-repositor-admin.component.css',
+    selector: 'app-pagina-agregar-repositor-admin',
+    imports: [NavbarAdminComponent, AgregarUsuarioComponent],
+    templateUrl: './pagina-agregar-repositor-admin.component.html',
+    styleUrl: './pagina-agregar-repositor-admin.component.css'
 })
 export class PaginaAgregarRepositorAdminComponent {
   usuarioNuevo: string = 'repositor';

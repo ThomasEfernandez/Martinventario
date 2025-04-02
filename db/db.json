@@ -87,10 +87,10 @@
       "id": "1",
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
-      "proveedor": "Fausto",
+      "proveedor": "Agustin",
       "cantidad": 11,
       "categoria": "Alimentos",
-      "etiqueta": ""
+      "etiqueta": "Galletitas dulces"
     },
     {
       "id": "2",
@@ -106,7 +106,7 @@
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
       "proveedor": "Agustin",
-      "cantidad": 8,
+      "cantidad": 10,
       "categoria": "Alimentos",
       "etiqueta": ""
     },
@@ -160,7 +160,7 @@
       "nombreProducto": "Bombones Ferrero Rocher 3 u.",
       "marca": "Ferrero Rocher",
       "proveedor": "Agustin",
-      "cantidad": 10,
+      "cantidad": 15,
       "categoria": "Alimentos",
       "etiqueta": "Dulce"
     },
@@ -181,6 +181,15 @@
       "cantidad": 10,
       "categoria": "Mascotas",
       "etiqueta": "Alimento Canino"
+    },
+    {
+      "id": "12",
+      "nombreProducto": "Test",
+      "marca": "Carmex",
+      "proveedor": "Fausto",
+      "cantidad": 10,
+      "categoria": "Higiene",
+      "etiqueta": "Shampoo"
     }
   ],
   "proveedores": [
@@ -189,7 +198,7 @@
       "nombre": "Fausto",
       "apellido": "Gimenez",
       "razonSocial": "CocaCola2",
-      "cuit": "1231414",
+      "cuit": "28542362359",
       "email": "faustogimenezlobasso@gmail.com"
     },
     {
@@ -197,8 +206,8 @@
       "nombre": "Agustin",
       "apellido": "Rojas",
       "razonSocial": "agus",
-      "cuit": "123",
-      "email": "agus@gmail.com"
+      "cuit": "30698523125",
+      "email": "agustinrojas@gmail.com"
     }
   ],
   "categorias": [
@@ -255,13 +264,7 @@
       "id": "3",
       "nombreCategoria": "Higiene",
       "estado": true,
-      "etiquetas": [
-        {
-          "id": "1",
-          "nombreEtiqueta": "Shampoo",
-          "estado": true
-        }
-      ]
+      "etiquetas": []
     },
     {
       "id": "4",
@@ -324,6 +327,18 @@
       "id": "9",
       "nombreCategoria": "Alimentos",
       "estado": false,
+      "etiquetas": [
+        {
+          "id": "1",
+          "nombreEtiqueta": "Test1",
+          "estado": false
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "nombreCategoria": "Test",
+      "estado": true,
       "etiquetas": []
     }
   ],
@@ -439,6 +454,14 @@
       "cajero": 0,
       "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "cantidad": 2
+    },
+    {
+      "id": "15",
+      "total": 0,
+      "fecha": "26/2/2025",
+      "cajero": 0,
+      "producto": "Test",
+      "cantidad": 90
     }
   ],
   "entradas": [
@@ -465,6 +488,22 @@
       "proveedor": "Agustin",
       "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "cantidad": 1
+    },
+    {
+      "id": "5",
+      "proveedor": "Agustin",
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 2,
+      "precioUnitario": 5500,
+      "totalCompra": 11000
+    },
+    {
+      "id": "6",
+      "proveedor": "Agustin",
+      "producto": "Bombones Ferrero Rocher 3 u.",
+      "cantidad": 5,
+      "precioUnitario": 4200,
+      "totalCompra": 21000
     }
   ],
   "pedidos": [

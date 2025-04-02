@@ -4,15 +4,14 @@ import { MenuEntradaComponent } from 'app/entrada/components/menu-entrada/menu-e
 import { NavbarAdminComponent } from 'app/nav/components/navbar-admin/navbar-admin.component';
 
 @Component({
-  selector: 'app-pagina-compras-admin',
-  standalone: true,
-  imports: [
-    NavbarAdminComponent,
-    MenuEntradaComponent,
-    ListarEntradasComponent,
-  ],
-  templateUrl: './pagina-compras-admin.component.html',
-  styleUrl: './pagina-compras-admin.component.css',
+    selector: 'app-pagina-compras-admin',
+    imports: [
+        NavbarAdminComponent,
+        MenuEntradaComponent,
+        ListarEntradasComponent,
+    ],
+    templateUrl: './pagina-compras-admin.component.html',
+    styleUrl: './pagina-compras-admin.component.css'
 })
 export class PaginaComprasAdminComponent {
   tipo: string = 'admin';

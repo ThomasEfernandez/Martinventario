@@ -4,11 +4,10 @@ import { ProveedorService } from 'app/proveedor/services/proveedor.service';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-listar-proveedores',
-  standalone: true,
-  imports: [RouterModule],
-  templateUrl: './listar-proveedores.component.html',
-  styleUrls: ['./listar-proveedores.component.css'],
+    selector: 'app-listar-proveedores',
+    imports: [RouterModule],
+    templateUrl: './listar-proveedores.component.html',
+    styleUrls: ['./listar-proveedores.component.css']
 })
 export class ListarProveedorComponent {
   @Input() tipo: string = '';
