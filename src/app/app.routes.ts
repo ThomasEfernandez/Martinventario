@@ -78,6 +78,10 @@ import { EmpleadosComponent } from './admin/empleados/empleados/empleados.compon
 import { PaginaEmpleadoComponent } from './admin/pages/pagina-empleado/pagina-empleado.component';
 import { PaginaSeccionesComponent } from './admin/pages/pagina-secciones/pagina-secciones.component';
 
+//Base
+import { PaginaEntradasBaseComponent } from './base/pages/pagina-entradas-base/pagina-entradas-base.component';
+import { PaginaPrincipalBaseComponent } from './base/pages/pagina-principal-base/pagina-principal-base.component';
+
 export const routes: Routes = [
   {
     path: '',
@@ -144,10 +148,10 @@ export const routes: Routes = [
     path: 'admin/etiquetas/agregar',
     component: PaginaAgregarEtiquetaAdminComponent,
     // canActivate: [authGuardFn],
-  },{
-    path:'admin/secciones',
-    component:PaginaSeccionesComponent,
-
+  },
+  {
+    path: 'admin/secciones',
+    component: PaginaSeccionesComponent,
   },
   {
     path: 'admin/cajeros',
@@ -181,7 +185,7 @@ export const routes: Routes = [
   },
   {
     path: 'admin/empleados',
-    component:PaginaEmpleadoComponent,
+    component: PaginaEmpleadoComponent,
   },
   {
     path: 'admin/repositores/agregar',
@@ -208,6 +212,20 @@ export const routes: Routes = [
     component: PaginaAgregarCompraAdminComponent,
     // canActivate: [authGuardFn],
   },
+
+  /*Base*/
+  {
+    path: 'base',
+    component: PaginaPrincipalBaseComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
+    path: 'base/entradas',
+    component: PaginaEntradasBaseComponent,
+    // canActivate: [authGuardFn],
+  },
+  //
+
   /*Repositor*/
   {
     path: 'repositor',

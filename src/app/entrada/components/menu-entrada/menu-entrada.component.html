@@ -2,13 +2,12 @@
   <ul class="lista">
     @if (tipo === 'admin') {
     <li class="item">
-      <a routerLink="/admin/compras/agregar">REALIZAR INGRESO</a>
+      <a routerLink="/admin/compras/agregar">REALIZAR ENTRADA</a>
     </li>
-    } @else if (tipo === 'repositor') {
+    } @else if (tipo === 'base') {
     <li class="item">
-      <a routerLink="/repositor/compras/agregar">REALIZAR INGRESO</a>
+      <a routerLink="/repositor/compras/agregar">REALIZAR ENTRADA</a>
     </li>
-
     }
   </ul>
 </div>

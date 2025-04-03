@@ -39,11 +39,8 @@ export class IniciarSesionComponent {
         case 'admin':
           this.router.navigate(['/admin']);
           break;
-        case 'repositor':
-          this.router.navigate(['/repositor']);
-          break;
-        case 'cajero':
-          this.router.navigate(['/cajero']);
+        case 'base':
+          this.router.navigate(['/base']);
           break;
       }
     } else {

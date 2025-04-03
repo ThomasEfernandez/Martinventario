@@ -12,7 +12,7 @@
       <th class="columna-precioVenta-a">Precio venta</th> -->
       <th class="columna-categoria-a">Categoria</th>
       <th class="columna-modificar-a">Modificar</th>
-      } @else if (tipo === 'repositor') {
+      } @else if (tipo === 'base') {
       <th class="columna-id-r">Id</th>
       <th class="columna-producto-r">Producto</th>
       <th class="columna-marca-r">Marca</th>
@@ -43,8 +43,7 @@
             Modificar
           </button>
         </td>
-        }
-        @else if (tipo === 'repositor') {
+        } @else if (tipo === 'repositor') {
         <td>
           <button
             class="modificar"
