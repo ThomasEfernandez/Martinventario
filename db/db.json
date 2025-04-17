@@ -88,7 +88,7 @@
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": 11,
+      "cantidad": 10,
       "categoria": "Alimentos",
       "etiqueta": ""
     },
@@ -330,118 +330,62 @@
   "egresos": [
     {
       "id": "1",
-      "total": 1500,
       "fecha": "13/11/2024",
-      "cajero": 0,
       "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "cantidad": 1
     },
     {
       "id": "2",
-      "total": 3000,
       "fecha": "13/10/2024",
-      "cajero": 0,
       "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "cantidad": 2
     },
     {
       "id": "3",
-      "total": 5000,
       "fecha": "14/10/2024",
-      "cajero": 0,
       "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "cantidad": 2
     },
     {
       "id": "4",
-      "total": 2500,
       "fecha": "14/10/2024",
-      "cajero": 0,
       "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "cantidad": 1
     },
     {
       "id": "5",
-      "total": 1500,
       "fecha": "14/10/2024",
-      "cajero": 0,
       "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "cantidad": 1
     },
     {
       "id": "6",
-      "total": 2000,
       "fecha": "14/10/2024",
-      "cajero": 0,
       "producto": "galletitas",
       "cantidad": 1
     },
     {
       "id": "7",
-      "total": 2000,
       "fecha": "14/10/2024",
-      "cajero": 0,
       "producto": "galletitas",
       "cantidad": 1
     },
     {
       "id": "8",
-      "total": 7000,
       "fecha": "14/10/2024",
-      "cajero": 0,
       "producto": "Crema de avellanas Nutella 350 g.",
       "cantidad": 1
     },
     {
       "id": "9",
-      "total": 7000,
-      "fecha": "14/10/2024",
+      "total": 0,
+      "fecha": "16/3/2025",
       "cajero": 0,
-      "producto": "Crema de avellanas Nutella 350 g.",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "cantidad": 1
-    },
-    {
-      "id": "10",
-      "total": 7000,
-      "fecha": "14/10/2024",
-      "cajero": 0,
-      "producto": "Crema de avellanas Nutella 350 g.",
-      "cantidad": 1
-    },
-    {
-      "id": "11",
-      "total": 2500,
-      "fecha": "14/10/2024",
-      "cajero": 0,
-      "producto": "Gaseosa lima limón Sprite 2,25 lts",
-      "cantidad": 1
-    },
-    {
-      "id": "12",
-      "total": 11400,
-      "fecha": "14/10/2024",
-      "cajero": 0,
-      "producto": "Shampoo Dove reconstruccion completa 400cc",
-      "cantidad": 2
-    },
-    {
-      "id": "13",
-      "total": 30000,
-      "fecha": "14/10/2024",
-      "cajero": 0,
-      "producto": "milanesas",
-      "cantidad": 3
-    },
-    {
-      "id": "14",
-      "total": 5000,
-      "fecha": "11/2/2025",
-      "cajero": 0,
-      "producto": "Gaseosa lima limón Sprite 2,25 lts",
-      "cantidad": 2
     }
   ],
-  "entradas": [
+  "ingresos": [
     {
       "id": "1",
       "proveedor": "Fausto",

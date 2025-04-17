@@ -1,0 +1,22 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th class="columna-id">Id</th>
+        <th class="columna-fecha">Fecha</th>
+        <th class="columna-producto">Producto</th>
+        <th class="columna-cantidad">Cantidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (ingreso of listaIngresos; track $index) {
+      <tr>
+        <td>{{ ingreso.id }}</td>
+        <td></td>
+        <td>{{ ingreso.producto }}</td>
+        <td>{{ ingreso.cantidad }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

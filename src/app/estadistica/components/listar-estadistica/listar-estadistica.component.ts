@@ -21,8 +21,6 @@ export class ListarEstadisticaComponent {
   cat: {
     categoria: string;
     cantidad: number;
-    // precioCompra: number;
-    // precioVenta: number;
   }[] = [];
   tCantidad = 0;
   tCategoria = '';
@@ -37,8 +35,6 @@ export class ListarEstadisticaComponent {
           let cc = {
             categoria: c.nombreCategoria,
             cantidad: 0,
-            // precioCompra: 0,
-            // precioVenta: 0,
           };
           this.cat.push(cc);
 
@@ -47,16 +43,7 @@ export class ListarEstadisticaComponent {
               productos.forEach((p) => {
                 if (cc.categoria === p.categoria) {
                   cc.cantidad = cc.cantidad + p.cantidad;
-                  // cc.precioCompra =
-                  //   cc.precioCompra + p.cantidad * p.precioCompra;
-                  // cc.precioVenta = cc.precioVenta + p.cantidad * p.precioVenta;
-
                   this.tCantidad = this.tCantidad + p.cantidad;
-
-                  // this.tPrecioCompra =
-                  //   this.tPrecioCompra + p.cantidad * p.precioCompra;
-                  // this.tPrecioVenta =
-                  //   this.tPrecioVenta + p.cantidad * p.precioVenta;
                 }
               });
             },

@@ -1,0 +1,26 @@
+.contenedor {
+  padding: 2% 1% 1%;
+  flex: 1;
+  display: flex;
+  justify-content: right;
+}
+.contenedor ul {
+  display: flex;
+  list-style: none;
+}
+.contenedor ul li {
+  margin-left: 30px;
+}
+.contenedor ul li a {
+  background-color: #0088ee;
+  text-decoration: none;
+  color: #222222;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.contenedor ul li a:hover {
+  background-color: #0099ff;
+}

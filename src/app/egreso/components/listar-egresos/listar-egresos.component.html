@@ -2,12 +2,11 @@
   <table>
     <thead>
       <tr>
-        <th class="columna-id">Fecha:</th>
-        <th class="columna-fecha">Fecha:</th>
-        <th class="columna-producto">Producto:</th>
-        <th class="columna-cantidad">Cantidad:</th>
-        <th class="columna-total">Total:</th>
-        <th class="columna-verDetalle">Detalle</th>
+        <th class="columna-id">Id</th>
+        <th class="columna-fecha">Fecha</th>
+        <th class="columna-producto">Producto</th>
+        <th class="columna-cantidad">Cantidad</th>
+        <!-- <th class="columna-verDetalle">Detalle</th> -->
       </tr>
     </thead>
     <tbody>
@@ -17,10 +16,9 @@
         <td>{{ venta.fecha }}</td>
         <td>{{ venta.producto }}</td>
         <td>{{ venta.cantidad }}</td>
-        <td>${{ venta.total }}</td>
-        <td>
+        <!-- <td>
           <button [routerLink]="['/admin/venta', venta.id]">Ver detalle</button>
-        </td>
+        </td> -->
       </tr>
       }
     </tbody>

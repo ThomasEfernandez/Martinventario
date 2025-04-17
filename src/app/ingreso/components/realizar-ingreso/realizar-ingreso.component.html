@@ -1,0 +1,48 @@
+<form [formGroup]="formulario" (ngSubmit)="realizarIngreso()">
+  <label>Producto</label>
+  @if (formulario.controls['producto'].getError('required') &&
+  formulario.controls['producto'].touched) {
+  <small class="error">Campo requerido</small>
+  }
+  <select id="producto" formControlName="producto">
+    <option value="" disabled selected hidden>Selecciona un producto</option>
+    @for (producto of listaProductos; track $index) {
+    <option value="{{ producto.nombreProducto }}">
+      {{ producto.nombreProducto }}
+    </option>
+    }
+  </select>
+
+  <label>Cantidad</label>
+  @if (formulario.controls['cantidad'].getError('required') &&
+  formulario.controls['cantidad'].touched) {
+  <small class="error">Campo requerido</small>
+  } @else if (formulario.controls['cantidad'].getError('min') &&
+  formulario.controls['cantidad'].touched) {
+  <small class="error">Mínimo requerido</small>
+  }
+  <input type="number" formControlName="cantidad" />
+
+  <div class="botones">
+    @if(ingresoRealizado){
+    <small class="exito">Ingreso realizado</small>
+    @if (tipo === 'admin') {
+    <button type="button" id="volver" routerLink="/admin/ingresos">
+      Volver
+    </button>
+    } @else if (tipo === 'base') {
+    <button type="button" id="volver" routerLink="/base/ingresos">
+      Volver
+    </button>
+    } } @else { @if (tipo === 'admin') {
+    <button type="button" id="cancelar" routerLink="/admin/ingresos">
+      Cancelar
+    </button>
+    } @else if (tipo === 'base') {
+    <button type="button" id="cancelar" routerLink="/base/ingresos">
+      Cancelar
+    </button>
+    }
+    <button type="submit" id="agregar">Agregar</button>}
+  </div>
+</form>

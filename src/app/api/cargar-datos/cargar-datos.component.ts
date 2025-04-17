@@ -26,8 +26,6 @@ export class CargarDatosComponent {
     cantidad: 0,
     marca: '',
     proveedor: '',
-    precioCompra: 0,
-    precioVenta: 0,
     categoria: '',
     etiqueta: '',
   };
@@ -41,8 +39,6 @@ export class CargarDatosComponent {
       let cont = 0;
       products.forEach((p) => {
         this.pp.nombreProducto = p.item.product_description.title;
-        this.pp.precioCompra = p.price.current_retail;
-        this.pp.precioVenta = p.price.current_retail * 2;
         this.pp.id = `${this.x + 1 + cont}`;
         cont++;
         this.productoService.postProducto(this.pp).subscribe({

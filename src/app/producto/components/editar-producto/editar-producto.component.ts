@@ -41,8 +41,6 @@ export class EditarProductoComponent {
     marca: ['', [Validators.required]],
     proveedor: ['', Validators.required],
     cantidad: [0, [Validators.required, Validators.min(1)]],
-    // precioCompra: [0, [Validators.required, Validators.min(1)]],
-    // precioVenta: [0, [Validators.required, Validators.min(1)]],
     categoria: ['', Validators.required],
     etiqueta: ['', Validators.required],
   });
@@ -57,10 +55,6 @@ export class EditarProductoComponent {
         this.formulario.controls['marca'].setValue(producto.marca);
         this.formulario.controls['proveedor'].setValue(producto.proveedor);
         this.formulario.controls['cantidad'].setValue(producto.cantidad);
-        // this.formulario.controls['precioCompra'].setValue(
-        //   producto.precioCompra
-        // );
-        // this.formulario.controls['precioVenta'].setValue(producto.precioVenta);
         this.formulario.controls['categoria'].setValue(producto.categoria);
       },
       error: () => {
