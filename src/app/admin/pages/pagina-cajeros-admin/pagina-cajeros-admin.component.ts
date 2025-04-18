@@ -3,6 +3,7 @@ import { ListarCajerosComponent } from '../../../cajero/components/listar-cajero
 import { MenuCajeroComponent } from '../../../cajero/components/menu-cajero/menu-cajero.component';
 import { NavbarAdminComponent } from 'app/nav/components/navbar-admin/navbar-admin.component';
 
+
 @Component({
   selector: 'app-pagina-cajeros-admin',
   standalone: true,
@@ -10,4 +11,6 @@ import { NavbarAdminComponent } from 'app/nav/components/navbar-admin/navbar-adm
   templateUrl: './pagina-cajeros-admin.component.html',
   styleUrl: './pagina-cajeros-admin.component.css',
 })
-export class PaginaCajerosAdminComponent {}
+export class PaginaCajerosAdminComponent {
+  tipo: string = 'admin';
+}

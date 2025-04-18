@@ -79,6 +79,9 @@ import { authGuardFn } from './auth/guard/auth.guard-fn';
 import { ModificarProductosRepositorComponent } from './repositor/pages/modificar-productos-repositor/modificar-productos-repositor.component';
 
 import { PaginaModificarProveedorRepositorComponent } from './repositor/pages/pagina-modificar-proveedor-repositor/pagina-modificar-proveedor-repositor.component';
+import { PaginaCajerosAdminComponent } from './admin/pages/pagina-cajeros-admin/pagina-cajeros-admin.component';
+import { Component } from '@angular/core';
+import { AgregarUsuarioComponent } from './usuario/components/agregar-usuario/agregar-usuario.component';
 
 export const routes: Routes = [
   {
@@ -153,13 +156,17 @@ export const routes: Routes = [
   {
     path: 'admin/secciones',
     component: PaginaSeccionesComponent,
+      // canActivate: [authGuardFn],
   },
   //EMPLEADOS
   {
     path: 'admin/empleados',
     component: PaginaEmpleadoComponent,
+      // canActivate: [authGuardFn],
+  },{
+    path:'admin/empleados/agregar',
+    component:AgregarUsuarioComponent,
   },
-  //falta agregar empleados
 
   //INGRESOS
   {

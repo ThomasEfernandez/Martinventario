@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -8,4 +8,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './menu-cajero.component.html',
   styleUrl: './menu-cajero.component.css',
 })
-export class MenuCajeroComponent {}
+export class MenuCajeroComponent {
+  @Input() tipo: string | null = null;
+
+}

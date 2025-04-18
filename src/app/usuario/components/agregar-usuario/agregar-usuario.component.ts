@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './agregar-usuario.component.css',
 })
 export class AgregarUsuarioComponent {
+  @Input() tipo: string | null = null;
   @Input() usuarioNuevo: string = '';
 
   usuarioService = inject(UsuarioService);

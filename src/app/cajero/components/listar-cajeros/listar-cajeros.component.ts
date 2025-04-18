@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { Usuario } from 'app/usuario/interfaces/usuario.interface';
@@ -12,6 +12,8 @@ import { UsuarioService } from 'app/usuario/services/usuario.service';
   styleUrl: './listar-cajeros.component.css',
 })
 export class ListarCajerosComponent {
+  @Input() tipo: string | null = null;
+
   usuarioService = inject(UsuarioService);
   listaUsuarios: Usuario[] = [];
 

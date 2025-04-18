@@ -24,7 +24,7 @@
       "nombre": "Thomas",
       "apellido": "Fernandez",
       "contrasena": "thomas",
-      "tipo": "cajero",
+      "tipo": "base",
       "estado": true
     },
     {
@@ -33,7 +33,7 @@
       "nombre": "Fausto",
       "apellido": "Gimenez",
       "contrasena": "fausto",
-      "tipo": "repositor",
+      "tipo": "base",
       "estado": true
     },
     {
@@ -42,7 +42,7 @@
       "nombre": "Agustina",
       "apellido": "Martin",
       "contrasena": "agustina",
-      "tipo": "cajero",
+      "tipo": "base",
       "estado": true
     },
     {
@@ -51,7 +51,7 @@
       "nombre": "Lautaro",
       "apellido": "Hourcade",
       "contrasena": "lautaro",
-      "tipo": "repositor",
+      "tipo": "base",
       "estado": true
     },
     {
@@ -60,7 +60,7 @@
       "apellido": "chaldu",
       "usuario": "chaldu",
       "contrasena": "chaldu",
-      "tipo": "cajero",
+      "tipo": "base",
       "estado": true
     },
     {
@@ -69,7 +69,7 @@
       "apellido": "a",
       "usuario": "aaaa",
       "contrasena": "aaaa",
-      "tipo": "cajero",
+      "tipo": "base",
       "estado": false
     },
     {
@@ -78,7 +78,7 @@
       "apellido": "a",
       "usuario": "aaaa",
       "contrasena": "aaaaa",
-      "tipo": "repositor",
+      "tipo": "base",
       "estado": false
     }
   ],
