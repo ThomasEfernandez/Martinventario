@@ -27,7 +27,7 @@ import { PaginaRealizarIngresoAdminComponent } from './admin/pages/pagina-realiz
 //EGRESOS
 import { PaginaEgresosAdminComponent } from './admin/pages/pagina-egresos-admin/pagina-egresos-admin.component';
 import { PaginaRealizarEgresoAdminComponent } from './admin/pages/pagina-realizar-egresos-admin/pagina-realizar-egresos-admin.component';
-import { PaginaVerDetalleVentaAdminComponent } from './admin/pages/pagina-ver-detalle-venta-admin/pagina-ver-detalle-venta-admin.component';
+
 //PEDIDOS
 import { PaginaPedidosAdminComponent } from './admin/pages/pagina-pedidos-admin/pagina-pedidos-admin.component';
 import { PaginaAgregarPedidoAdminComponent } from './admin/pages/pagina-agregar-pedido-admin/pagina-agregar-pedido-admin.component';
@@ -69,8 +69,7 @@ import { PaginaComprasRepositorComponent } from './repositor/pages/pagina-compra
 
 import { PaginaPrincipalCajeroComponent } from './cajero/pages/pagina-principal-cajero/pagina-principal-cajero.component';
 
-import { PaginaRealizarVentaCajeroComponent } from './cajero/pages/pagina-realizar-venta-cajero/pagina-realizar-venta-cajero.component';
-import { PaginaVerDetalleVentaCajeroComponent } from './cajero/pages/pagina-ver-detalle-venta-cajero/pagina-ver-detalle-venta-cajero.component';
+import {PaginaVerDetalleEgresoCajeroComponent } from './cajero/pages/pagina-ver-detalle-egreso-cajero/pagina-ver-detalle-egreso-cajero.component';
 
 //auth
 
@@ -82,6 +81,8 @@ import { PaginaModificarProveedorRepositorComponent } from './repositor/pages/pa
 import { PaginaCajerosAdminComponent } from './admin/pages/pagina-cajeros-admin/pagina-cajeros-admin.component';
 import { Component } from '@angular/core';
 import { AgregarUsuarioComponent } from './usuario/components/agregar-usuario/agregar-usuario.component';
+import { PaginaRealizarEgresoCajeroComponent } from './cajero/pages/pagina-realizar-egreso-cajero/pagina-realizar-egreso-cajero.component';
+import { PaginaVerDetalleEgresoAdminComponent } from './admin/pages/pagina-ver-detalle-egreso-admin/pagina-ver-detalle-venta-admin.component';
 
 export const routes: Routes = [
   {
@@ -193,7 +194,7 @@ export const routes: Routes = [
   //ver si se usa el detalle
   {
     path: 'admin/egresos/:id',
-    component: PaginaVerDetalleVentaAdminComponent,
+    component: PaginaVerDetalleEgresoAdminComponent,
     // canActivate: [authGuardFn],
   },
   //PEDIDOS
@@ -327,12 +328,12 @@ export const routes: Routes = [
   },
   {
     path: 'cajero/egreso/realizar',
-    component: PaginaRealizarVentaCajeroComponent,
+    component: PaginaRealizarEgresoCajeroComponent,
     // canActivate: [authGuardFn],
   },
   {
     path: 'cajero/egreso/:id',
-    component: PaginaVerDetalleVentaCajeroComponent,
+    component: PaginaVerDetalleEgresoCajeroComponent,
     // canActivate: [authGuardFn],
   },
   {

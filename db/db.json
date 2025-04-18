@@ -88,7 +88,7 @@
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": 10,
+      "cantidad": 8,
       "categoria": "Alimentos",
       "etiqueta": ""
     },
@@ -380,6 +380,22 @@
       "id": "9",
       "total": 0,
       "fecha": "16/3/2025",
+      "cajero": 0,
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "10",
+      "total": 0,
+      "fecha": "18/3/2025",
+      "cajero": 0,
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "11",
+      "total": 0,
+      "fecha": "18/3/2025",
       "cajero": 0,
       "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "cantidad": 1

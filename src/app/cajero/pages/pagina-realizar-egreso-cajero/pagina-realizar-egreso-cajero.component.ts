@@ -3,12 +3,12 @@ import { NavbarCajeroComponent } from 'app/nav/components/navbar-cajero/navbar-c
 import { RealizarEgresoComponent } from 'app/egreso/components/realizar-egreso/realizar-egreso.component';
 
 @Component({
-  selector: 'app-pagina-realizar-venta-cajero',
+  selector: 'app-pagina-realizar-egreso-cajero',
   standalone: true,
   imports: [NavbarCajeroComponent, RealizarEgresoComponent],
-  templateUrl: './pagina-realizar-venta-cajero.component.html',
-  styleUrl: './pagina-realizar-venta-cajero.component.css',
+  templateUrl: './pagina-realizar-egreso-cajero.component.html',
+  styleUrl: './pagina-realizar-egreso-cajero.component.css',
 })
-export class PaginaRealizarVentaCajeroComponent {
+export class PaginaRealizarEgresoCajeroComponent {
   tipo: string = 'cajero';
 }
