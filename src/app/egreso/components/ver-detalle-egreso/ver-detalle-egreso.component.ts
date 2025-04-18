@@ -4,13 +4,13 @@ import { Egreso } from 'app/egreso/interfaces/egreso.interface';
 import { EgresoService } from 'app/egreso/services/egreso.service';
 
 @Component({
-  selector: 'app-ver-detalle-venta',
+  selector: 'app-ver-detalle-egreso',
   standalone: true,
   imports: [],
-  templateUrl: './ver-detalle-venta.component.html',
-  styleUrl: './ver-detalle-venta.component.css',
+  templateUrl: './ver-detalle-egreso.component.html',
+  styleUrl: './ver-detalle-egreso.component.css',
 })
-export class VerDetalleVentaComponent {
+export class VerDetalleEgresoComponent {
   serviciosVenta = inject(EgresoService);
   venta: Egreso | undefined = {
     id: '',
