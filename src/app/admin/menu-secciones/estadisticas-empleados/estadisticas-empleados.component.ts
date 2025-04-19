@@ -9,9 +9,13 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 })
 export class EstadisticasEmpleadosComponent implements OnInit{
   ngOnInit(): void {
-    console.log(this.cantEmpleados);
+  this.contarEmpleados();
+ 
+  
     
   }
+
+  
 
   empleadosService = inject(UsuarioService);
   cantEmpleados:number=0;
@@ -22,7 +26,9 @@ export class EstadisticasEmpleadosComponent implements OnInit{
       next:(usuarios:Usuario[])=>{
 
         usuarios.forEach(us => {
-          this.cantEmpleados = this.cantEmpleados++;
+          if (us.tipo==='base'){
+            this.cantEmpleados++;
+          }
           
         });
 
@@ -32,6 +38,7 @@ export class EstadisticasEmpleadosComponent implements OnInit{
         
 
       }
+      
     });
 
   }

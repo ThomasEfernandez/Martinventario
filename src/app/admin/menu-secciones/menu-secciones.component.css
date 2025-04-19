@@ -1,17 +1,29 @@
-.contenedor {
+.menu {
+  
     padding: 2% 1% 1%;
     flex: 1;
     display: flex;
     justify-content: right;
   }
-  .contenedor ul {
+  .estadisticas{
+    margin: 2rem;
+    display: flex;
+ 
+    justify-content:left;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .menu ul {
     display: flex;
     list-style: none;
   }
-  .contenedor ul li {
+  .menu ul li {
     margin-left: 30px;
   }
-  .contenedor ul li a {
+  .menu ul li a {
     background-color: #0088ee;
     text-decoration: none;
     color: #222222;
@@ -21,7 +33,7 @@
     transition: background-color 0.3s;
     cursor: pointer;
   }
-  .contenedor ul li a:hover {
+  .menu ul li a:hover {
     background-color: #0099ff;
   }
   
