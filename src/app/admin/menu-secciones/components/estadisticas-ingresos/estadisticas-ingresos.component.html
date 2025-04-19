@@ -1,0 +1,30 @@
+<div>
+   <h3>ULTIMOS INGRESOS</h3>
+    <table>
+      
+     <thead>
+            
+        <tr>
+            
+            <th>id</th>
+            <th>nombre</th>
+            <th>cantidad</th>
+            <th>proveedor</th>
+            </tr>
+     </thead>
+      <tbody>
+            @for (ingreso of listaUltimosIngresos; track $index) {
+             <tr>
+                <td>{{ingreso.id}}</td>
+                <td>{{ingreso.producto}}</td>
+                <td>{{ingreso.cantidad}}</td>
+                <td>{{ingreso.proveedor}}</td>
+             </tr>
+   
+           }
+         
+      </tbody>
+      </table>
+    
+ 
+</div>

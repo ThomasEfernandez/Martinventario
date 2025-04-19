@@ -10,15 +10,15 @@ export class EgresoService {
   http = inject(HttpClient);
   urlBase = 'http://localhost:3000/egresos';
 
-  postVenta(aux: Egreso): Observable<Egreso> {
+  postEgreso(aux: Egreso): Observable<Egreso> {
     return this.http.post<Egreso>(this.urlBase, aux);
   }
 
-  getVenta(): Observable<Egreso[]> {
+  getEgreso(): Observable<Egreso[]> {
     return this.http.get<Egreso[]>(this.urlBase);
   }
 
-  getVentaById(id: string | null): Observable<Egreso> {
+  getEgresoById(id: string | null): Observable<Egreso> {
     return this.http.get<Egreso>(`${this.urlBase}/${id}`);
   }
 }

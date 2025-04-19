@@ -24,7 +24,7 @@ export class VerDetalleEgresoComponent {
   id: string | null = '';
 
   traerVenta(id: string | null) {
-    this.serviciosVenta.getVentaById(id).subscribe({
+    this.serviciosVenta.getEgresoById(id).subscribe({
       next: (aux: Egreso) => {
         this.venta = aux;
         error: (e: Error) => {

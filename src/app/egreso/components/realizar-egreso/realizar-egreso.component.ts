@@ -60,7 +60,7 @@ export class RealizarEgresoComponent {
   agregarVenta() {
     if (this.formulario.valid) {
       const venta = this.formulario.getRawValue();
-      this.ventasService.getVenta().subscribe({
+      this.ventasService.getEgreso().subscribe({
         next: (ventas: Egreso[]) => {
           venta.id = `${ventas.length + 1}`;
           const produ = this.listaProductos.find(
@@ -89,7 +89,7 @@ export class RealizarEgresoComponent {
   }
 
   agregarVentaService(venta: Egreso) {
-    this.ventasService.postVenta(venta).subscribe({
+    this.ventasService.postEgreso(venta).subscribe({
       error: (err: Error) => {
         console.log(err.message);
       },

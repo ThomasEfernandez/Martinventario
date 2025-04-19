@@ -1,0 +1,33 @@
+<div>
+   <h3>ULTIMO EGRESO</h3>
+    <table>
+     <thead>
+        <tr>
+            <th>id</th>
+            <th>fecha</th>
+            <th>nombre</th>
+            <th>cantidad</th>
+            
+            </tr>
+
+     </thead>
+      <tbody>
+         
+      @for (egreso of listaUltimosEgresos; track $index) {
+         <tr>
+            <td>{{egreso.id}}</td>
+            <td>{{egreso.fecha}}</td>
+            <td>{{egreso.producto}}</td>
+            <td>{{egreso.cantidad}}</td>
+            
+         </tr>
+
+       }
+      
+         
+      </tbody>
+      </table>
+
+    
+ 
+</div>

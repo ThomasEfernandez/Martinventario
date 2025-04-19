@@ -15,7 +15,7 @@ export class ListarEgresosComponent {
   listaEgreso: Egreso[] = [];
 
   traerEgresos() {
-    this.egresoServicios.getVenta().subscribe({
+    this.egresoServicios.getEgreso().subscribe({
       next: (aux: Egreso[]) => {
         this.listaEgreso = aux;
       },
