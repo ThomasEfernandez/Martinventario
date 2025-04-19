@@ -19,7 +19,7 @@ export class EstadisticasEmpleadosComponent implements OnInit{
 
   empleadosService = inject(UsuarioService);
   cantEmpleados:number=0;
-
+  cantAdmin:number=0;
 
   contarEmpleados(){
     this.empleadosService.getUsuarios().subscribe({
@@ -28,6 +28,8 @@ export class EstadisticasEmpleadosComponent implements OnInit{
         usuarios.forEach(us => {
           if (us.tipo==='base'){
             this.cantEmpleados++;
+          }else{
+            this.cantAdmin++;
           }
           
         });
