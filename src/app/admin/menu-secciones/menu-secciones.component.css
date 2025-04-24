@@ -14,6 +14,8 @@
   }
   .container{
     width: 850px;
+   
+    box-shadow: 7px 7px 7px 7px  #767676;
  
   }
  
@@ -43,5 +45,6 @@
     background-color: red;
     color: white;
     width: 100%;
+   
   }
 

@@ -20,7 +20,7 @@ import { Router, RouterModule } from '@angular/router';
   styleUrl: './realizar-egreso.component.css',
 })
 export class RealizarEgresoComponent {
-  @Input() tipo: string = '';
+  @Input() tipo: string = 'admin';
 
   router = inject(Router);
 
@@ -71,11 +71,7 @@ export class RealizarEgresoComponent {
               //  venta.total = venta.cantidad * prod.precioVenta;
               this.agregarVentaService(venta);
               this.ventaRealizada = true;
-              if (this.tipo === 'admin') {
-                this.router.navigate([`/admin/venta/${venta.id}`]);
-              } else if (this.tipo === 'cajero') {
-                this.router.navigate([`/cajero/venta/${venta.id}`]);
-              }
+             
             },
             error: (err: Error) => {
               console.log(err.message);

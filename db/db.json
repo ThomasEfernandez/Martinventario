@@ -88,7 +88,7 @@
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": 8,
+      "cantidad": 7,
       "categoria": "Alimentos",
       "etiqueta": ""
     },
@@ -97,7 +97,7 @@
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Agustin",
-      "cantidad": 40,
+      "cantidad": 38,
       "categoria": "Bebidas",
       "etiqueta": ""
     },
@@ -106,7 +106,7 @@
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
       "proveedor": "Agustin",
-      "cantidad": 8,
+      "cantidad": 7,
       "categoria": "Alimentos",
       "etiqueta": ""
     },
@@ -115,7 +115,7 @@
       "nombreProducto": "Consola playstation 5v Sony 1tb edición standard",
       "marca": "Sony",
       "proveedor": "Fausto",
-      "cantidad": 10,
+      "cantidad": 9,
       "categoria": "Higiene",
       "etiqueta": "Shampoo"
     },
@@ -124,7 +124,7 @@
       "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
       "proveedor": "Agustin",
-      "cantidad": 48,
+      "cantidad": 47,
       "categoria": "Higiene",
       "etiqueta": "Shampoo"
     },
@@ -133,7 +133,7 @@
       "nombreProducto": "Galletitas dulces Oreo rellenas con crema 118 g.",
       "marca": "Oreo",
       "proveedor": "Fausto",
-      "cantidad": 10,
+      "cantidad": 9,
       "categoria": "Alimentos",
       "etiqueta": "Galletitas dulces"
     },
@@ -178,7 +178,7 @@
       "nombreProducto": "alimento canino",
       "marca": "Royal Canin",
       "proveedor": "Fausto",
-      "cantidad": 10,
+      "cantidad": 9,
       "categoria": "Mascotas",
       "etiqueta": "Alimento Canino"
     }
@@ -330,74 +330,26 @@
   "egresos": [
     {
       "id": "1",
-      "fecha": "13/11/2024",
+      "total": 0,
+      "fecha": "23/3/2025",
+      "cajero": 0,
       "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
-      "cantidad": 1
+      "cantidad": 2
     },
     {
       "id": "2",
-      "fecha": "13/10/2024",
-      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "total": 0,
+      "fecha": "23/3/2025",
+      "cajero": 0,
+      "producto": "Crema de avellanas Nutella 350 g.",
       "cantidad": 2
     },
     {
       "id": "3",
-      "fecha": "14/10/2024",
-      "producto": "Gaseosa lima limón Sprite 2,25 lts",
-      "cantidad": 2
-    },
-    {
-      "id": "4",
-      "fecha": "14/10/2024",
-      "producto": "Gaseosa lima limón Sprite 2,25 lts",
-      "cantidad": 1
-    },
-    {
-      "id": "5",
-      "fecha": "14/10/2024",
-      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
-      "cantidad": 1
-    },
-    {
-      "id": "6",
-      "fecha": "14/10/2024",
-      "producto": "galletitas",
-      "cantidad": 1
-    },
-    {
-      "id": "7",
-      "fecha": "14/10/2024",
-      "producto": "galletitas",
-      "cantidad": 1
-    },
-    {
-      "id": "8",
-      "fecha": "14/10/2024",
+      "total": 0,
+      "fecha": "23/3/2025",
+      "cajero": 0,
       "producto": "Crema de avellanas Nutella 350 g.",
-      "cantidad": 1
-    },
-    {
-      "id": "9",
-      "total": 0,
-      "fecha": "16/3/2025",
-      "cajero": 0,
-      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
-      "cantidad": 1
-    },
-    {
-      "id": "10",
-      "total": 0,
-      "fecha": "18/3/2025",
-      "cajero": 0,
-      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
-      "cantidad": 1
-    },
-    {
-      "id": "11",
-      "total": 0,
-      "fecha": "18/3/2025",
-      "cajero": 0,
-      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "cantidad": 1
     }
   ],
@@ -425,6 +377,18 @@
       "proveedor": "Agustin",
       "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "cantidad": 1
+    },
+    {
+      "id": "5",
+      "proveedor": "Fausto",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "6",
+      "proveedor": "Agustin",
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 2
     }
   ],
   "pedidos": [
@@ -441,6 +405,30 @@
       "fecha": "15/10/2024",
       "producto": "Pepsi",
       "cantidad": 5,
+      "razonSocialProveedor": "Agustin",
+      "estado": false
+    },
+    {
+      "id": "3",
+      "fecha": "21/3/2025",
+      "producto": "cereales",
+      "cantidad": 2,
+      "razonSocialProveedor": "Agustin",
+      "estado": false
+    },
+    {
+      "id": "4",
+      "fecha": "23/3/2025",
+      "producto": "uvas",
+      "cantidad": 20,
+      "razonSocialProveedor": "Agustin",
+      "estado": false
+    },
+    {
+      "id": "5",
+      "fecha": "23/3/2025",
+      "producto": "uvas",
+      "cantidad": 2,
       "razonSocialProveedor": "Agustin",
       "estado": false
     }
