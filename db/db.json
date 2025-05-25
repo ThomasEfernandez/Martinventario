@@ -351,6 +351,22 @@
       "cajero": 0,
       "producto": "Crema de avellanas Nutella 350 g.",
       "cantidad": 1
+    },
+    {
+      "id": "4",
+      "total": 0,
+      "fecha": "25/4/2025",
+      "cajero": 0,
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "5",
+      "total": 0,
+      "fecha": "25/4/2025",
+      "cajero": 0,
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 1
     }
   ],
   "ingresos": [
@@ -389,6 +405,12 @@
       "proveedor": "Agustin",
       "producto": "Crema de avellanas Nutella 350 g.",
       "cantidad": 2
+    },
+    {
+      "id": "7",
+      "proveedor": "Agustin",
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 1
     }
   ],
   "pedidos": [

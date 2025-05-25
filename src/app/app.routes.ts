@@ -1,3 +1,5 @@
+import { PaginaModificarPedidoAdminComponent } from './admin/pages/pagina-modificar-pedido-admin/pagina-modificar-pedido-admin.component';
+import { AgregarPedidoComponent } from './pedido/components/agregar-pedido/agregar-pedido.component';
 import { Routes } from '@angular/router';
 import { PaginaIniciarSesionComponent } from './sesion/pages/pagina-iniciar-sesion/pagina-iniciar-sesion.component';
 
@@ -69,7 +71,7 @@ import { PaginaComprasRepositorComponent } from './repositor/pages/pagina-compra
 
 import { PaginaPrincipalCajeroComponent } from './cajero/pages/pagina-principal-cajero/pagina-principal-cajero.component';
 
-import {PaginaVerDetalleEgresoCajeroComponent } from './cajero/pages/pagina-ver-detalle-egreso-cajero/pagina-ver-detalle-egreso-cajero.component';
+import { PaginaVerDetalleEgresoCajeroComponent } from './cajero/pages/pagina-ver-detalle-egreso-cajero/pagina-ver-detalle-egreso-cajero.component';
 
 //auth
 
@@ -83,6 +85,7 @@ import { Component } from '@angular/core';
 import { AgregarUsuarioComponent } from './usuario/components/agregar-usuario/agregar-usuario.component';
 import { PaginaRealizarEgresoCajeroComponent } from './cajero/pages/pagina-realizar-egreso-cajero/pagina-realizar-egreso-cajero.component';
 import { PaginaVerDetalleEgresoAdminComponent } from './admin/pages/pagina-ver-detalle-egreso-admin/pagina-ver-detalle-venta-admin.component';
+import { PaginaPedidosBaseComponent } from './base/pages/pagina-pedidos-base/pagina-pedidos-base.component';
 
 export const routes: Routes = [
   {
@@ -157,16 +160,17 @@ export const routes: Routes = [
   {
     path: 'admin/secciones',
     component: PaginaSeccionesComponent,
-      // canActivate: [authGuardFn],
+    // canActivate: [authGuardFn],
   },
   //EMPLEADOS
   {
     path: 'admin/empleados',
     component: PaginaEmpleadoComponent,
-      // canActivate: [authGuardFn],
-  },{
-    path:'admin/empleados/agregar',
-    component:AgregarUsuarioComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
+    path: 'admin/empleados/agregar',
+    component: AgregarUsuarioComponent,
   },
 
   //INGRESOS
@@ -208,6 +212,11 @@ export const routes: Routes = [
     component: PaginaAgregarPedidoAdminComponent,
     // canActivate: [authGuardFn],
   },
+  {
+    path: 'admin/pedidos/modificar',
+    component: PaginaModificarPedidoAdminComponent,
+    // canActivate: [authGuardFn],
+  },
 
   /* BASE */
   {
@@ -241,6 +250,18 @@ export const routes: Routes = [
   {
     path: 'base/realizar-egreso',
     component: PaginaRealizarEgresoBaseComponent,
+    // canActivate: [authGuardFn],
+  },
+
+  //PEDIDO
+  {
+    path: 'base/pedidos',
+    component: PaginaPedidosBaseComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
+    path: 'base/pedidos/agregar',
+    component: AgregarPedidoComponent,
     // canActivate: [authGuardFn],
   },
 
@@ -298,16 +319,6 @@ export const routes: Routes = [
   {
     path: 'repositor/etiquetas/agregar',
     component: PaginaAgregarEtiquetaRepositorComponent,
-    // canActivate: [authGuardFn],
-  },
-  {
-    path: 'repositor/pedidos',
-    component: PaginaPedidosRepositorComponent,
-    // canActivate: [authGuardFn],
-  },
-  {
-    path: 'repositor/pedidos/agregar',
-    component: PaginaAgregarPedidoRepositorComponent,
     // canActivate: [authGuardFn],
   },
   {

@@ -1,5 +1,5 @@
 .menu {
-  
+
     padding: 2% 1% 1%;
     flex: 1;
     display: flex;
@@ -14,13 +14,13 @@
   }
   .container{
     width: 850px;
-   
+
     box-shadow: 7px 7px 7px 7px  #767676;
- 
+
   }
- 
+
   .menu ul {
-  
+
     display: flex;
     list-style: none;
   }
@@ -40,11 +40,11 @@
   .menu ul li a:hover {
     background-color: #0099ff;
   }
-  
+
   h3{
     background-color: red;
     color: white;
     width: 100%;
-   
+
   }
 

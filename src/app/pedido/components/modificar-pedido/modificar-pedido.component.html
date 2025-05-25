@@ -1,0 +1,11 @@
+<div *ngIf="pedidoSeleccionado">
+  <h3>Modificar cantidad para: {{ pedidoSeleccionado.producto }}</h3>
+
+  <form (ngSubmit)="modificarCantidad()">
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" name="cantidad" (ngModel)="nuevaCantidad" required min="1"
+      placeholder="Ingresar nueva cantidad" />
+
+    <button type="submit">Actualizar</button>
+  </form>
+</div>
