@@ -24,3 +24,7 @@
 .contenedor ul li a:hover {
   background-color: #0099ff;
 }
+
+.container {
+  background-color: white;
+}

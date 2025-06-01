@@ -88,7 +88,7 @@
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": 10,
+      "cantidad": 8,
       "categoria": "Alimentos",
       "etiqueta": "Dulce"
     },
@@ -96,17 +96,17 @@
       "id": "2",
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
-      "proveedor": "Agustin",
-      "cantidad": 38,
+      "proveedor": "Fausto",
+      "cantidad": 19,
       "categoria": "Bebidas",
-      "etiqueta": ""
+      "etiqueta": "Gaseosa"
     },
     {
       "id": "3",
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
       "proveedor": "Agustin",
-      "cantidad": 9,
+      "cantidad": 10,
       "categoria": "Alimentos",
       "etiqueta": "Dulce"
     },
@@ -189,7 +189,7 @@
       "nombre": "Fausto",
       "apellido": "Gimenez",
       "razonSocial": "CocaCola2",
-      "cuit": "1231414",
+      "cuit": "111111",
       "email": "faustogimenezlobasso@gmail.com"
     },
     {
@@ -367,6 +367,22 @@
       "cajero": 0,
       "producto": "Crema de avellanas Nutella 350 g.",
       "cantidad": 1
+    },
+    {
+      "id": "6",
+      "total": 0,
+      "fecha": "1/5/2025",
+      "cajero": 0,
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "7",
+      "total": 0,
+      "fecha": "1/5/2025",
+      "cajero": 0,
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 1
     }
   ],
   "ingresos": [
@@ -411,6 +427,18 @@
       "proveedor": "Agustin",
       "producto": "Crema de avellanas Nutella 350 g.",
       "cantidad": 1
+    },
+    {
+      "id": "8",
+      "proveedor": "Agustin",
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "9",
+      "proveedor": "Fausto",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 1
     }
   ],
   "pedidos": [
@@ -420,7 +448,7 @@
       "producto": "Pepitos",
       "cantidad": 10,
       "razonSocialProveedor": "Fausto",
-      "estado": false
+      "estado": true
     },
     {
       "id": "2",
@@ -428,7 +456,7 @@
       "producto": "Pepsi",
       "cantidad": 5,
       "razonSocialProveedor": "Agustin",
-      "estado": false
+      "estado": true
     },
     {
       "id": "3",
@@ -476,6 +504,14 @@
       "producto": "Test",
       "cantidad": 2,
       "razonSocialProveedor": "Agustin",
+      "estado": false
+    },
+    {
+      "id": "9",
+      "fecha": "1/5/2025",
+      "producto": "Test",
+      "cantidad": 1,
+      "razonSocialProveedor": "Fausto",
       "estado": false
     }
   ]

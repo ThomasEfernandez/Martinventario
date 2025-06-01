@@ -119,9 +119,9 @@ export class EditarProductoComponent {
     document.getElementById('categoria')?.addEventListener('click', () => {
       const select = document.getElementById('categoria') as HTMLSelectElement;
       const categoria = this.listaCategorias.find(
-        (c) => c.nombreCategoria === select.value
+        (c) => c.nombreCategoria === select.value,
       );
-      this.listaEtiquetas = categoria?.etiquetas;
+      this.listaEtiquetas = categoria?.etiquetas
     });
   }
 }
