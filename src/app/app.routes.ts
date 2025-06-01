@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { PaginaIniciarSesionComponent } from './sesion/pages/pagina-iniciar-sesion/pagina-iniciar-sesion.component';
 
-/* ADMIN */
+/* ------ADMIN------ */
 import { PaginaPrincipalAdminComponent } from './admin/pages/pagina-principal-admin/pagina-principal-admin.component';
 //PROVEEDORES
 import { PaginaProveedoresAdminComponent } from './admin/pages/pagina-proveedores-admin/pagina-proveedores-admin.component';
@@ -34,7 +34,7 @@ import { PaginaPedidosAdminComponent } from './admin/pages/pagina-pedidos-admin/
 import { PaginaAgregarPedidoAdminComponent } from './admin/pages/pagina-agregar-pedido-admin/pagina-agregar-pedido-admin.component';
 import { PaginaModificarPedidoAdminComponent } from './admin/pages/pagina-modificar-pedido-admin/pagina-modificar-pedido-admin.component';
 
-/* BASE */
+/* ------BASE------ */
 import { PaginaPrincipalBaseComponent } from './base/pages/pagina-principal-base/pagina-principal-base.component';
 //SECCIONES
 import { PaginaSeccionesBaseComponent } from './base/pages/pagina-secciones-base/pagina-secciones-base.component';
@@ -198,6 +198,11 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   //PRODUCTOS
+  {
+    path: 'base/productos',
+    component: PaginaPrincipalBaseComponent,
+    // canActivate: [authGuardFn],
+  },
   {
     path: 'base/productos/modificar/:id',
     component: PaginaModificarProductoBaseComponent,

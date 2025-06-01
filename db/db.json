@@ -88,9 +88,9 @@
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": 7,
+      "cantidad": 10,
       "categoria": "Alimentos",
-      "etiqueta": ""
+      "etiqueta": "Dulce"
     },
     {
       "id": "2",
@@ -106,9 +106,9 @@
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
       "proveedor": "Agustin",
-      "cantidad": 7,
+      "cantidad": 9,
       "categoria": "Alimentos",
-      "etiqueta": ""
+      "etiqueta": "Dulce"
     },
     {
       "id": "4",

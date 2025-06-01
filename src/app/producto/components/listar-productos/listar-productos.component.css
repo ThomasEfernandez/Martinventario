@@ -49,31 +49,35 @@ tbody tr:hover {
 .columna-modificar-a {
   width: 10%;
 }
-/* repositor */
-.columna-id-r {
+/* base */
+.columna-id-b {
   width: 5%;
 }
-.columna-producto-r {
+.columna-producto-b {
   width: 25%;
 }
-.columna-marca-r {
+.columna-marca-b {
   width: 10%;
 }
-.columna-cantidad-r {
+.columna-cantidad-b {
   width: 10%;
 }
-.columna-proveedor-r {
+.columna-proveedor-b {
   width: 10%;
 }
-.columna-precioCompra-r {
+.columna-precioCompra-b {
   width: 10%;
 }
-.columna-precioVenta-r {
+.columna-precioVenta-b {
   width: 10%;
 }
-.columna-categoria-r {
+.columna-categoria-b {
   width: 20%;
 }
+.columna-modificar-b {
+  width: 10%;
+}
+
 button {
   font-weight: bold;
   padding: 5%;

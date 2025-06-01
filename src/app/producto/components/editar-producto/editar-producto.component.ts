@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
@@ -12,7 +13,7 @@ import { ProveedorService } from 'app/proveedor/services/proveedor.service';
 @Component({
   selector: 'app-editar-producto',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterModule],
+  imports: [ReactiveFormsModule, RouterModule, CommonModule],
   templateUrl: './editar-producto.component.html',
   styleUrl: './editar-producto.component.css',
 })
@@ -71,8 +72,8 @@ export class EditarProductoComponent {
         console.log('Actualizado');
         if (this.tipo === 'admin') {
           this.router.navigateByUrl('admin/productos');
-        } else if (this.tipo === 'repositor') {
-          this.router.navigateByUrl('repositor/productos');
+        } else if (this.tipo === 'base') {
+          this.router.navigateByUrl('base/productos');
         }
       },
       error: (e: Error) => {
