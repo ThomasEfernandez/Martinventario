@@ -88,7 +88,7 @@
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": -7,
+      "cantidad": -15,
       "categoria": "Alimentos",
       "etiqueta": ""
     },
@@ -97,7 +97,7 @@
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Agustin",
-      "cantidad": 12,
+      "cantidad": 8,
       "categoria": "Bebidas",
       "etiqueta": ""
     },
@@ -169,7 +169,7 @@
       "nombreProducto": "papitas",
       "marca": "Lays",
       "proveedor": "Agustin",
-      "cantidad": 10,
+      "cantidad": 23,
       "categoria": "Alimentos",
       "etiqueta": "Carne"
     },
@@ -390,6 +390,13 @@
       "usuario": "admin",
       "producto": "Crema de avellanas Nutella 350 g.",
       "cantidad": 1
+    },
+    {
+      "id": "10",
+      "fecha": "1/6/2025",
+      "usuario": "admin",
+      "producto": "papitas",
+      "cantidad": 5
     }
   ],
   "ingresos": [
@@ -489,6 +496,34 @@
       "usuario": "admin",
       "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "cantidad": 1
+    },
+    {
+      "id": "14",
+      "fecha": "1/6/2025",
+      "usuario": "admin",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 4
+    },
+    {
+      "id": "15",
+      "fecha": "1/6/2025",
+      "usuario": "admin",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 8
+    },
+    {
+      "id": "16",
+      "fecha": "1/6/2025",
+      "usuario": "admin",
+      "producto": "papitas",
+      "cantidad": 2
+    },
+    {
+      "id": "17",
+      "fecha": "1/6/2025",
+      "usuario": "admin",
+      "producto": "papitas",
+      "cantidad": 20
     }
   ],
   "pedidos": [

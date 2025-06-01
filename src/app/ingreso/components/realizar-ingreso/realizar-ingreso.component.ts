@@ -99,7 +99,7 @@ export class RealizarIngresoComponent {
   modificarStock(cantidad: number, id: string | undefined) {
     this.productoService.getProductoById(id).subscribe({
       next: (p: Producto) => {
-        p.cantidad = p.cantidad - cantidad;
+        p.cantidad = p.cantidad + cantidad;
         this.productoService.patchProducto(p.id, p).subscribe({
           error(e: Error) {
             console.log(e.message);
