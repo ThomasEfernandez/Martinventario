@@ -47,8 +47,8 @@ import { PaginaRealizarEgresoBaseComponent } from './base/pages/pagina-realizar-
 //PEDIDO
 import { PaginaPedidosBaseComponent } from './base/pages/pagina-pedidos-base/pagina-pedidos-base.component';
 import { PaginaRealizarPedidoBaseComponent } from './base/pages/pagina-realizar-pedido-base/pagina-realizar-pedido-base.component';
-
-
+//PRODUCTO
+import { PaginaModificarProductoBaseComponent } from './base/pages/pagina-modificar-producto-base/pagina-modificar-producto-base.component';
 //auth
 
 import { authGuardFn } from './auth/guard/auth.guard-fn';
@@ -200,7 +200,7 @@ export const routes: Routes = [
   //PRODUCTOS
   {
     path: 'base/productos/modificar/:id',
-    component: ModificarProductosRepositorComponent,
+    component: PaginaModificarProductoBaseComponent,
     // canActivate: [authGuardFn],
   },
 
@@ -246,7 +246,6 @@ export const routes: Routes = [
     component: PaginaRealizarPedidoBaseComponent,
     // canActivate: [authGuardFn],
   },
-
 
   {
     path: '**',
