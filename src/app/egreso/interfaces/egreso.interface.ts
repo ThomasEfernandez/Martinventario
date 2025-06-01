@@ -1,8 +1,7 @@
 export interface Egreso {
   id: string;
-  total: number;
   fecha: string;
-  cajero: number;
+  usuario: string;
   producto: string;
   cantidad: number;
 }

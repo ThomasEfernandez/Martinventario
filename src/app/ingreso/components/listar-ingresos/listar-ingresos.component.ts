@@ -18,8 +18,9 @@ export class ListarIngresosComponent {
 
   listarIngresos() {
     this.ingresoService.getIngresos().subscribe({
-      next: (aux: Ingreso[]) => {
-        this.listaIngresos = aux;
+      next: (ingresos: Ingreso[]) => {
+        this.listaIngresos = [...ingresos].reverse();
+        
       },
       error: (e: Error) => {
         console.log(e.message);

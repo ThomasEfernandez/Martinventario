@@ -29,7 +29,7 @@ export class ListarPedidosComponent {
   listarPedidosService() {
     this.pedidoService.getPedidos().subscribe({
       next: (pedidos: Pedido[]) => {
-        this.listaPedidos = pedidos;
+        this.listaPedidos = [...pedidos].reverse();
       },
       error: (err: Error) => {
         console.log(err.message);

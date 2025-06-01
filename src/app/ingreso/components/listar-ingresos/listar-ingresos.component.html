@@ -6,15 +6,21 @@
         <th class="columna-fecha">Fecha</th>
         <th class="columna-producto">Producto</th>
         <th class="columna-cantidad">Cantidad</th>
+        <th class="columna-verDetalle">Detalle</th>
+        <th class="columna-usuario">Usuario</th>
       </tr>
     </thead>
     <tbody>
       @for (ingreso of listaIngresos; track $index) {
       <tr>
         <td>{{ ingreso.id }}</td>
-        <td></td>
+        <td>{{ ingreso.fecha }}</td>
         <td>{{ ingreso.producto }}</td>
         <td>{{ ingreso.cantidad }}</td>
+        <td>
+          <button [routerLink]="['/admin/ingreso', ingreso.id]">Ver detalle</button>
+        </td>
+        <td>{{ ingreso.usuario }}</td>
       </tr>
       }
     </tbody>

@@ -82,7 +82,6 @@ import { PaginaCajerosAdminComponent } from './admin/pages/pagina-cajeros-admin/
 import { Component } from '@angular/core';
 import { AgregarUsuarioComponent } from './usuario/components/agregar-usuario/agregar-usuario.component';
 import { PaginaRealizarEgresoCajeroComponent } from './cajero/pages/pagina-realizar-egreso-cajero/pagina-realizar-egreso-cajero.component';
-import { PaginaVerDetalleEgresoAdminComponent } from './admin/pages/pagina-ver-detalle-egreso-admin/pagina-ver-detalle-venta-admin.component';
 
 export const routes: Routes = [
   {
@@ -167,6 +166,7 @@ export const routes: Routes = [
   },{
     path:'admin/empleados/agregar',
     component:AgregarUsuarioComponent,
+    // canActivate: [authGuardFn],
   },
 
   //INGRESOS
@@ -189,12 +189,6 @@ export const routes: Routes = [
   {
     path: 'admin/realizar-egreso',
     component: PaginaRealizarEgresoAdminComponent,
-    // canActivate: [authGuardFn],
-  },
-  //ver si se usa el detalle
-  {
-    path: 'admin/egresos/:id',
-    component: PaginaVerDetalleEgresoAdminComponent,
     // canActivate: [authGuardFn],
   },
   //PEDIDOS

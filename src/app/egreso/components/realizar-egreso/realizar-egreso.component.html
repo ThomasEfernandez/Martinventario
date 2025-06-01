@@ -1,4 +1,4 @@
-<form [formGroup]="formulario" (ngSubmit)="agregarVenta()">
+<form [formGroup]="formulario" (ngSubmit)="realizarEgreso()">
   <label>Producto: </label>
   @if (formulario.controls['producto'].getError('required') &&
   formulario.controls['producto'].touched) {
@@ -26,7 +26,7 @@
   <input type="number" formControlName="cantidad" />
 
   <div class="botones">
-    @if(ventaRealizada){
+    @if(egresoRealizado){
      <small class="exito">Venta realizada</small>
     <button type="button" id="volver" routerLink="/admin/egresos">Volver</button> 
     } @else { @if (tipo === 'admin') {

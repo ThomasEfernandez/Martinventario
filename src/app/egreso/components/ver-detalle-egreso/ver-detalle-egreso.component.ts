@@ -14,9 +14,8 @@ export class VerDetalleEgresoComponent {
   serviciosVenta = inject(EgresoService);
   venta: Egreso | undefined = {
     id: '',
-    total: 0,
     fecha: '',
-    cajero: 0,
+    usuario: '',
     producto: '',
     cantidad: 0,
   };

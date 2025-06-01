@@ -88,7 +88,7 @@
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": 7,
+      "cantidad": -7,
       "categoria": "Alimentos",
       "etiqueta": ""
     },
@@ -97,7 +97,7 @@
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Agustin",
-      "cantidad": 38,
+      "cantidad": 12,
       "categoria": "Bebidas",
       "etiqueta": ""
     },
@@ -106,7 +106,7 @@
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
       "proveedor": "Agustin",
-      "cantidad": 7,
+      "cantidad": 6,
       "categoria": "Alimentos",
       "etiqueta": ""
     },
@@ -133,7 +133,7 @@
       "nombreProducto": "Galletitas dulces Oreo rellenas con crema 118 g.",
       "marca": "Oreo",
       "proveedor": "Fausto",
-      "cantidad": 9,
+      "cantidad": 8,
       "categoria": "Alimentos",
       "etiqueta": "Galletitas dulces"
     },
@@ -142,7 +142,7 @@
       "nombreProducto": "Milanesa Granja del sol de soja espinaca 4 uni",
       "marca": "Granja del Sol",
       "proveedor": "Fausto",
-      "cantidad": 7,
+      "cantidad": -3,
       "categoria": "Alimentos",
       "etiqueta": "Dulce"
     },
@@ -160,7 +160,7 @@
       "nombreProducto": "Bombones Ferrero Rocher 3 u.",
       "marca": "Ferrero Rocher",
       "proveedor": "Agustin",
-      "cantidad": 10,
+      "cantidad": 7,
       "categoria": "Alimentos",
       "etiqueta": "Dulce"
     },
@@ -330,25 +330,64 @@
   "egresos": [
     {
       "id": "1",
-      "total": 0,
       "fecha": "23/3/2025",
-      "cajero": 0,
+      "usuario": "agustin",
       "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "cantidad": 2
     },
     {
       "id": "2",
-      "total": 0,
       "fecha": "23/3/2025",
-      "cajero": 0,
+      "usuario": "thomas",
       "producto": "Crema de avellanas Nutella 350 g.",
       "cantidad": 2
     },
     {
       "id": "3",
-      "total": 0,
       "fecha": "23/3/2025",
-      "cajero": 0,
+      "usuario": "fausto",
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "4",
+      "fecha": "1/5/2025",
+      "usuario": 0,
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 1
+    },
+    {
+      "id": "5",
+      "fecha": "1/5/2025",
+      "usuario": "",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "6",
+      "fecha": "1/5/2025",
+      "usuario": "pepe",
+      "producto": "Galletitas dulces Oreo rellenas con crema 118 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "7",
+      "fecha": "1/5/2025",
+      "usuario": "",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 12
+    },
+    {
+      "id": "8",
+      "fecha": "1/6/2025",
+      "usuario": "",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 2
+    },
+    {
+      "id": "9",
+      "fecha": "1/6/2025",
+      "usuario": "admin",
       "producto": "Crema de avellanas Nutella 350 g.",
       "cantidad": 1
     }
@@ -356,39 +395,100 @@
   "ingresos": [
     {
       "id": "1",
+      "fecha": "23/3/2025",
       "proveedor": "Fausto",
+      "usuario": "fausto",
       "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "cantidad": 2
     },
     {
       "id": "2",
+      "fecha": "23/3/2025",
       "proveedor": "Fausto",
+      "usuario": "fausto",
       "producto": "Crema de avellanas Nutella 350 g.",
       "cantidad": 2
     },
     {
       "id": "3",
+      "fecha": "23/3/2025",
       "proveedor": "Fausto",
+      "usuario": "fausto",
       "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "cantidad": 4
     },
     {
       "id": "4",
+      "fecha": "23/3/2025",
       "proveedor": "Agustin",
+      "usuario": "fausto",
       "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "cantidad": 1
     },
     {
       "id": "5",
+      "fecha": "23/3/2025",
       "proveedor": "Fausto",
+      "usuario": "fausto",
       "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "cantidad": 1
     },
     {
       "id": "6",
+      "fecha": "23/3/2025",
       "proveedor": "Agustin",
+      "usuario": "fausto",
       "producto": "Crema de avellanas Nutella 350 g.",
       "cantidad": 2
+    },
+    {
+      "id": "7",
+      "fecha": "1/5/2025",
+      "usuario": "",
+      "producto": "Bombones Ferrero Rocher 3 u.",
+      "cantidad": 3
+    },
+    {
+      "id": "8",
+      "fecha": "1/5/2025",
+      "usuario": "",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "9",
+      "fecha": "1/6/2025",
+      "usuario": "",
+      "producto": "Milanesa Granja del sol de soja espinaca 4 uni",
+      "cantidad": 10
+    },
+    {
+      "id": "10",
+      "fecha": "1/6/2025",
+      "usuario": "",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 2
+    },
+    {
+      "id": "11",
+      "fecha": "1/6/2025",
+      "usuario": "",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 9
+    },
+    {
+      "id": "12",
+      "fecha": "1/6/2025",
+      "usuario": "",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 11
+    },
+    {
+      "id": "13",
+      "fecha": "1/6/2025",
+      "usuario": "admin",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 1
     }
   ],
   "pedidos": [
@@ -429,6 +529,14 @@
       "fecha": "23/3/2025",
       "producto": "uvas",
       "cantidad": 2,
+      "razonSocialProveedor": "Agustin",
+      "estado": false
+    },
+    {
+      "id": "6",
+      "fecha": "1/6/2025",
+      "producto": "MILANESAS",
+      "cantidad": 1,
       "razonSocialProveedor": "Agustin",
       "estado": false
     }

@@ -21,7 +21,7 @@ export class RealizarIngresoComponent {
 
     document.getElementById('producto')?.addEventListener('click', () => {
       const select = document.getElementById('producto') as HTMLSelectElement;
-      this.pp = this.listaProductos.find(
+      this.producto = this.listaProductos.find(
         (p) => p.nombreProducto === select.value
       );
     });
@@ -37,7 +37,14 @@ export class RealizarIngresoComponent {
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
     id: [''],
-    proveedor: [''],
+    fecha: [
+      new Date().getDate() +
+        '/' +
+        (new Date().getMonth() + 1) +
+        '/' +
+        new Date().getFullYear(),
+    ],
+    usuario: [''],
     producto: ['', Validators.required],
     cantidad: [0, [Validators.required, Validators.min(1)]],
   });
@@ -45,17 +52,14 @@ export class RealizarIngresoComponent {
   realizarIngreso() {
     if (this.formulario.valid) {
       const ingreso: Ingreso = this.formulario.getRawValue();
-      if (this.pp) {
-        this.productoService.getProductoById(this.pp.id).subscribe({
+      if (this.producto) {
+        this.productoService.getProductoById(this.producto.id).subscribe({
           next: (producto: Producto) => {
             this.ingresoService.getIngresos().subscribe({
-              next: (cs: Ingreso[]) => {
-                ingreso.id = `${cs.length + 1}`;
-                if (this.pp) {
-                  ingreso.proveedor = this.pp.proveedor;
-                }
+              next: (i: Ingreso[]) => {
+                ingreso.id = `${i.length + 1}`;
+                ingreso.usuario = this.tipo;
                 this.realizarIngresoService(ingreso);
-                this.actualizarCantidadService(producto, ingreso.cantidad);
                 this.ingresoRealizado = true;
               },
             });
@@ -63,11 +67,12 @@ export class RealizarIngresoComponent {
         });
       }
     } else {
+      console.log(this.formulario.value)
       this.formulario.markAllAsTouched();
     }
   }
 
-  pp: Producto | undefined = {
+  producto: Producto | undefined = {
     id: '',
     nombreProducto: '',
     cantidad: 0,
@@ -83,21 +88,26 @@ export class RealizarIngresoComponent {
         console.log(err.message);
       },
     });
+    const producto = this.listaProductos.find(
+      (p) => p.nombreProducto === ingreso.producto
+    );
+    if (producto) {
+      this.modificarStock(ingreso.cantidad, producto.id);
+    }
   }
 
-  actualizarCantidadService(producto: Producto, cantidad: number) {
-    console.log(producto.id);
-    this.productoService.getProductoById(producto.id).subscribe({
+  modificarStock(cantidad: number, id: string | undefined) {
+    this.productoService.getProductoById(id).subscribe({
       next: (p: Producto) => {
-        p.cantidad = p.cantidad + cantidad;
+        p.cantidad = p.cantidad - cantidad;
         this.productoService.patchProducto(p.id, p).subscribe({
-          error: (err: Error) => {
-            console.log(err.message);
+          error(e: Error) {
+            console.log(e.message);
           },
         });
       },
-      error: (err: Error) => {
-        console.log(err.message);
+      error(e: Error) {
+        console.log(e.message);
       },
     });
   }
@@ -107,8 +117,8 @@ export class RealizarIngresoComponent {
       next: (productos: Producto[]) => {
         this.listaProductos = productos;
       },
-      error: (err: Error) => {
-        console.log(err.message);
+      error: (e: Error) => {
+        console.log(e.message);
       },
     });
   }

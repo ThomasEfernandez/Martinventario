@@ -6,19 +6,21 @@
         <th class="columna-fecha">Fecha</th>
         <th class="columna-producto">Producto</th>
         <th class="columna-cantidad">Cantidad</th>
-        <!-- <th class="columna-verDetalle">Detalle</th> -->
+        <th class="columna-verDetalle">Detalle</th>
+        <th class="columna-usuario">Usuario</th>
       </tr>
     </thead>
     <tbody>
-      @for (venta of listaEgreso; track $index) {
+      @for (egreso of listaEgresos; track $index) {
       <tr>
-        <td>{{ venta.id }}</td>
-        <td>{{ venta.fecha }}</td>
-        <td>{{ venta.producto }}</td>
-        <td>{{ venta.cantidad }}</td>
-        <!-- <td>
-          <button [routerLink]="['/admin/venta', venta.id]">Ver detalle</button>
-        </td> -->
+        <td>{{ egreso.id }}</td>
+        <td>{{ egreso.fecha }}</td>
+        <td>{{ egreso.producto }}</td>
+        <td>{{ egreso.cantidad }}</td>
+        <td>
+          <button [routerLink]="['/admin/egreso', egreso.id]">Ver detalle</button>
+        </td>
+        <td>{{ egreso.usuario }}</td>
       </tr>
       }
     </tbody>

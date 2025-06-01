@@ -1,7 +1,7 @@
+import { Component, inject, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { EgresoService } from './../../services/egreso.service';
-import { Component, inject } from '@angular/core';
 import { Egreso } from 'app/egreso/interfaces/egreso.interface';
+import { EgresoService } from './../../services/egreso.service';
 
 @Component({
   selector: 'app-listar-egresos',
@@ -11,13 +11,15 @@ import { Egreso } from 'app/egreso/interfaces/egreso.interface';
   styleUrl: './listar-egresos.component.css',
 })
 export class ListarEgresosComponent {
-  egresoServicios = inject(EgresoService);
-  listaEgreso: Egreso[] = [];
+  @Input() tipo: string = '';
+
+  egresoService = inject(EgresoService);
+  listaEgresos: Egreso[] = [];
 
   traerEgresos() {
-    this.egresoServicios.getEgreso().subscribe({
-      next: (aux: Egreso[]) => {
-        this.listaEgreso = aux;
+    this.egresoService.getEgreso().subscribe({
+      next: (egresos: Egreso[]) => {
+        this.listaEgresos = [...egresos].reverse();
       },
       error: (e: Error) => {
         console.log(e.message);

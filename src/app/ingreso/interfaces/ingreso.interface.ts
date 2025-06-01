@@ -1,6 +1,7 @@
 export interface Ingreso {
   id: string;
-  proveedor: string;
+  fecha: string;
+  usuario: string;
   producto: string;
   cantidad: number;
 }
