@@ -15,6 +15,10 @@
       formulario.controls['cantidad'].touched){
       <small class="error">Campo requerido.</small>
       }
+      @if(formulario.get('cantidad')?.hasError('min') &&
+      formulario.controls['cantidad'].touched){
+      <small class="error">Cantidad debe ser mayor a 0.</small>
+      }
       <input type="number" formControlName="cantidad" />
     </div>
 

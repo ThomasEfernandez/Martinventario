@@ -36,7 +36,7 @@ export class AgregarPedidoComponent {
         new Date().getFullYear(),
     ],
     producto: ['', Validators.required],
-    cantidad: [0, Validators.required],
+    cantidad: [0, [Validators.required, Validators.min(1)]],
     razonSocialProveedor: ['', Validators.required],
     estado: [false],
   });

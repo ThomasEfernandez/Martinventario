@@ -469,6 +469,14 @@
       "cantidad": 0,
       "razonSocialProveedor": "Agustin",
       "estado": false
+    },
+    {
+      "id": "8",
+      "fecha": "1/5/2025",
+      "producto": "Test",
+      "cantidad": 2,
+      "razonSocialProveedor": "Agustin",
+      "estado": false
     }
   ]
 }
