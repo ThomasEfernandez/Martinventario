@@ -420,7 +420,7 @@
       "producto": "Pepitos",
       "cantidad": 10,
       "razonSocialProveedor": "Fausto",
-      "estado": true
+      "estado": false
     },
     {
       "id": "2",
@@ -451,6 +451,22 @@
       "fecha": "23/3/2025",
       "producto": "uvas",
       "cantidad": 2,
+      "razonSocialProveedor": "Agustin",
+      "estado": false
+    },
+    {
+      "id": "6",
+      "fecha": "1/5/2025",
+      "producto": "Test Pedido",
+      "cantidad": 1,
+      "razonSocialProveedor": "Fausto",
+      "estado": false
+    },
+    {
+      "id": "7",
+      "fecha": "1/5/2025",
+      "producto": "Test",
+      "cantidad": 0,
       "razonSocialProveedor": "Agustin",
       "estado": false
     }

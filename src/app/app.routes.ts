@@ -86,6 +86,7 @@ import { AgregarUsuarioComponent } from './usuario/components/agregar-usuario/ag
 import { PaginaRealizarEgresoCajeroComponent } from './cajero/pages/pagina-realizar-egreso-cajero/pagina-realizar-egreso-cajero.component';
 import { PaginaVerDetalleEgresoAdminComponent } from './admin/pages/pagina-ver-detalle-egreso-admin/pagina-ver-detalle-venta-admin.component';
 import { PaginaPedidosBaseComponent } from './base/pages/pagina-pedidos-base/pagina-pedidos-base.component';
+import { PaginaRealizarPedidoBaseComponent } from './base/pages/pagina-realizar-pedido-base/pagina-realizar-pedido-base.component';
 
 export const routes: Routes = [
   {
@@ -261,7 +262,7 @@ export const routes: Routes = [
   },
   {
     path: 'base/pedidos/agregar',
-    component: AgregarPedidoComponent,
+    component: PaginaRealizarPedidoBaseComponent,
     // canActivate: [authGuardFn],
   },
 

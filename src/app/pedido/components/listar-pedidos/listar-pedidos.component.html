@@ -9,7 +9,7 @@
       <th class="columna-razonSocialProveedor-a">Proveedor</th>
       <th class="columna-modificar-a">Modificar</th>
       <th class="columna-realizado-a">Realizado</th>
-      } @else if (tipo === 'repositor') {
+      } @else if (tipo === 'base') {
       <th class="columna-id-r">Id</th>
       <th class="columna-fecha-r">Fecha</th>
       <th class="columna-producto-r">Producto</th>
@@ -43,9 +43,9 @@
             No realizado
           </button>
           } } @else if (tipo === 'base') { @if(pedido.estado) {
-          <button class="realizar-d" disabled>Realizado</button>
+          <button class="realizar-d" (click)="pedidoNoRealizado(pedido.id)">Realizado</button>
           } @else {
-          <button class="noRealizar-d" disabled>No realizado</button>
+          <button class="noRealizar-d" (click)="pedidoRealizado(pedido.id)">No realizado</button>
           } }
         </td>
       </tr>

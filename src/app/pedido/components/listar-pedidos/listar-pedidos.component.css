@@ -43,7 +43,7 @@ tbody tr:hover {
 .columna-realizado-a {
   width: 10%;
 }
-/* repositor */
+/* base */
 .columna-id-r {
   width: 5%;
 }
@@ -54,7 +54,7 @@ tbody tr:hover {
   width: 40%;
 }
 .columna-cantidad-r {
-  width: 5%;
+  width: 7%;
 }
 .columna-razonSocialProveedor-r {
   width: 30%;
