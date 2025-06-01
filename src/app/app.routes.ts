@@ -225,12 +225,20 @@ export const routes: Routes = [
     component: PaginaPrincipalBaseComponent,
     // canActivate: [authGuardFn],
   },
+  //PRODUCTOS
+  {
+    path: 'base/productos/modificar/:id',
+    component: ModificarProductosRepositorComponent,
+    // canActivate: [authGuardFn],
+  },
+
   //SECCIONES
   {
     path: 'base/secciones',
     component: PaginaSeccionesBaseComponent,
     // canActivate: [authGuardFn],
   },
+
   //INGRESOS
   {
     path: 'base/ingresos',
@@ -242,6 +250,7 @@ export const routes: Routes = [
     component: PaginaRealizarIngresoBaseComponent,
     // canActivate: [authGuardFn],
   },
+  
   //EGRESOS
   {
     path: 'base/egresos',
@@ -266,8 +275,9 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
 
+
   /*Repositor*/
-  {
+ /*  {
     path: 'repositor',
     component: PaginaPrincipalRepositorComponent,
     // canActivate: [authGuardFn],
@@ -281,7 +291,7 @@ export const routes: Routes = [
     path: 'repositor/proveedores/agregar',
     component: PaginaAgregarProveedorRepositorComponent,
     // canActivate: [authGuardFn],
-  },
+  }, */
   {
     path: 'repositor/proveedores/modificar/:id',
     component: PaginaModificarProveedorRepositorComponent,
@@ -297,11 +307,7 @@ export const routes: Routes = [
     component: PaginaAgregarProductoRepositorComponent,
     // canActivate: [authGuardFn],
   },
-  {
-    path: 'repositor/productos/modificar/:id',
-    component: ModificarProductosRepositorComponent,
-    // canActivate: [authGuardFn],
-  },
+
   {
     path: 'repositor/categorias',
     component: PaginaCategoriasRepositorComponent,
