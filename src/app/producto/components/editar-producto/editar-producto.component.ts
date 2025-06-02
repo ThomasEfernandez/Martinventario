@@ -45,23 +45,39 @@ export class EditarProductoComponent {
     etiqueta: ['', Validators.required],
   });
 
-  getTareaById(id: string | null) {
-    this.productoService.getProductoById(id).subscribe({
-      next: (producto: Producto) => {
-        this.formulario.controls['id'].setValue(producto.id);
-        this.formulario.controls['nombreProducto'].setValue(
-          producto.nombreProducto
-        );
-        this.formulario.controls['marca'].setValue(producto.marca);
-        this.formulario.controls['proveedor'].setValue(producto.proveedor);
-        this.formulario.controls['cantidad'].setValue(producto.cantidad);
-        this.formulario.controls['categoria'].setValue(producto.categoria);
-      },
-      error: () => {
-        console.log('error....');
-      },
-    });
-  }
+  ngOnInit(): void {
+  this.listarCategorias();
+  this.listarProveedores();
+  this.activaredRoutes.paramMap.subscribe({
+    next: (param) => {
+      this.id = param.get('id');
+      this.getTareaById(this.id);
+    },
+    error: (e: Error) => {
+      console.log(e.message);
+    },
+  });
+}
+
+getTareaById(id: string | null) {
+  this.productoService.getProductoById(id).subscribe({
+    next: (producto: Producto) => {
+      this.formulario.patchValue(producto);
+
+      // Encontrar la categoría y asignar sus etiquetas
+      const categoriaSeleccionada = this.listaCategorias.find(
+        (c) => c.nombreCategoria === producto.categoria
+      );
+      this.listaEtiquetas = categoriaSeleccionada?.etiquetas || [];
+
+      // Asignar la etiqueta del producto
+      this.formulario.controls['etiqueta'].setValue(producto.etiqueta);
+    },
+    error: () => {
+      console.log('error....');
+    },
+  });
+}
 
   update() {
     if (this.formulario.invalid) return;
@@ -101,26 +117,24 @@ export class EditarProductoComponent {
         console.log(err.message);
       },
     });
-  }
+  
 
-  ngOnInit(): void {
-    this.listarCategorias();
-    this.listarProveedores();
-    this.activaredRoutes.paramMap.subscribe({
-      next: (param) => {
-        this.id = param.get('id');
-        this.getTareaById(this.id);
-      },
-      error: (e: Error) => {
-        console.log(e.message);
-      },
-    });
+
     document.getElementById('categoria')?.addEventListener('click', () => {
       const select = document.getElementById('categoria') as HTMLSelectElement;
       const categoria = this.listaCategorias.find(
         (c) => c.nombreCategoria === select.value
       );
+      
       this.listaEtiquetas = categoria?.etiquetas;
     });
   }
+  actualizarEtiquetas(event: Event) {
+  const select = event.target as HTMLSelectElement;
+  const categoriaSeleccionada = this.listaCategorias.find(
+    (c) => c.nombreCategoria === select.value
+  );
+  this.listaEtiquetas = categoriaSeleccionada?.etiquetas || [];
+  this.formulario.controls['etiqueta'].setValue(''); // Limpia la selección de etiqueta
+}
 }

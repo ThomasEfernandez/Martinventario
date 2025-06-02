@@ -2,11 +2,12 @@ import { Component, inject, Input } from '@angular/core';
 import { Proveedor } from 'app/proveedor/interfaces/proveedor-interface';
 import { ProveedorService } from 'app/proveedor/services/proveedor.service';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-listar-proveedores',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule,CommonModule],
   templateUrl: './listar-proveedores.component.html',
   styleUrls: ['./listar-proveedores.component.css'],
 })
@@ -15,6 +16,7 @@ export class ListarProveedorComponent {
 
   listaProveedores: Proveedor[] = [];
   proveedorService = inject(ProveedorService);
+mensajeExito:string | null = null;
 
   listar() {
     this.proveedorService.getProveedores().subscribe({
@@ -35,10 +37,16 @@ export class ListarProveedorComponent {
     this.proveedorService.deleteProveedor(id).subscribe({
       next: () => {
         this.listar();
+       this.mensajeExito =  "Se ha eliminado correctamente. "
+   
+          setTimeout(() => {
+            this.mensajeExito=null;
+          }, 3000);
       },
       error: (err) => {
         console.error('Error al eliminar el proveedor', err);
       },
     });
+    
   }
 }

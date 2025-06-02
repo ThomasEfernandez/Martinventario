@@ -1,4 +1,4 @@
-<div>
+<div>    
   <table>
     <thead>
       <tr>
@@ -21,6 +21,7 @@
       </tr>
     </thead>
     <tbody>
+ 
       @for(proveedor of listaProveedores; track $index) {
       <tr>
         <td>{{ proveedor.nombre }}</td>
@@ -50,11 +51,20 @@
         } -->
         <td>
           <button class="eliminar" (click)="eliminarProveedor(proveedor.id)">
+            
             Eliminar
           </button>
-        </td>
+          
+        
+          
+       
       </tr>
+            
       }
+      
     </tbody>
   </table>
+   <div *ngIf="mensajeExito" class="mensaje-exito">
+        {{ mensajeExito }}
+            </div>
 </div>

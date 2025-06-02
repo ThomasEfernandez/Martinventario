@@ -83,3 +83,7 @@ button:hover {
 .modificar:hover {
   background-color: #ffdc6c;
 }
+
+.mensaje-exito{
+  color: rgb(102, 255, 47);
+}

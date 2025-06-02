@@ -90,7 +90,7 @@
       "proveedor": "Fausto",
       "cantidad": -15,
       "categoria": "Alimentos",
-      "etiqueta": ""
+      "etiqueta": "Galletitas dulces"
     },
     {
       "id": "2",
@@ -99,7 +99,7 @@
       "proveedor": "Agustin",
       "cantidad": 8,
       "categoria": "Bebidas",
-      "etiqueta": ""
+      "etiqueta": "Gaseosa"
     },
     {
       "id": "3",
@@ -108,7 +108,7 @@
       "proveedor": "Agustin",
       "cantidad": 6,
       "categoria": "Alimentos",
-      "etiqueta": ""
+      "etiqueta": "Untables"
     },
     {
       "id": "4",
@@ -186,19 +186,18 @@
   "proveedores": [
     {
       "id": "1",
-      "nombre": "Fausto",
-      "apellido": "Gimenez",
-      "razonSocial": "CocaCola2",
-      "cuit": "1231414",
-      "email": "faustogimenezlobasso@gmail.com"
-    },
-    {
+      "nombre": "thomas",
+      "apellido": "fernandez",
+      "razonSocial": "asdsa",
+      "cuit": "23232",
+      "email": "thomyezequiel@hotmail.com"
+    }, {
       "id": "2",
-      "nombre": "Agustin",
-      "apellido": "Rojas",
-      "razonSocial": "agus",
-      "cuit": "123",
-      "email": "agus@gmail.com"
+      "nombre": "Fausto",
+      "apellido": "asddas",
+      "razonSocial": "asdsa",
+      "cuit": "23232",
+      "email": "fausto@hotmail.com"
     }
   ],
   "categorias": [
@@ -224,8 +223,13 @@
         },
         {
           "id": "4",
-          "nombreEtiqueta": "Dulce",
-          "estado": false
+          "nombreEtiqueta": "Salado",
+          "estado": true
+        },
+        {
+          "id": "5",
+          "nombreEtiqueta": "Untables",
+          "estado": true
         }
       ]
     },
@@ -238,15 +242,13 @@
           "id": "1",
           "nombreEtiqueta": "Gaseosa",
           "estado": true
-        },
-        {
+        },  {
           "id": "2",
-          "nombreEtiqueta": "Gaseosas",
+          "nombreEtiqueta": "Vinos",
           "estado": true
-        },
-        {
+        },  {
           "id": "3",
-          "nombreEtiqueta": "Gaseosas",
+          "nombreEtiqueta": "Aguas",
           "estado": true
         }
       ]
