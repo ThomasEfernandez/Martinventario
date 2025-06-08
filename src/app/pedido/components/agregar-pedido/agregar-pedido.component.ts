@@ -30,13 +30,13 @@ export class AgregarPedidoComponent {
     id: [''],
     fecha: [
       new Date().getDate() +
-        '/' +
-        (new Date().getMonth() + 1) +
-        '/' +
-        new Date().getFullYear(),
+      '/' +
+      new Date().getMonth() +
+      '/' +
+      new Date().getFullYear(),
     ],
     producto: ['', Validators.required],
-    cantidad: [0, Validators.required],
+    cantidad: [0, [Validators.required, Validators.min(1)]],
     razonSocialProveedor: ['', Validators.required],
     estado: [false],
   });

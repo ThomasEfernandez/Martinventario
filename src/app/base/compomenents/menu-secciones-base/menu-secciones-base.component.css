@@ -4,13 +4,16 @@
   display: flex;
   justify-content: right;
 }
+
 .contenedor ul {
   display: flex;
   list-style: none;
 }
+
 .contenedor ul li {
   margin-left: 30px;
 }
+
 .contenedor ul li a {
   background-color: #0088ee;
   text-decoration: none;
@@ -21,6 +24,11 @@
   transition: background-color 0.3s;
   cursor: pointer;
 }
+
 .contenedor ul li a:hover {
   background-color: #0099ff;
+}
+
+.container {
+  background-color: white;
 }

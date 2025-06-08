@@ -15,6 +15,10 @@
       formulario.controls['cantidad'].touched){
       <small class="error">Campo requerido.</small>
       }
+      @if(formulario.get('cantidad')?.hasError('min') &&
+      formulario.controls['cantidad'].touched){
+      <small class="error">Cantidad debe ser mayor a 0.</small>
+      }
       <input type="number" formControlName="cantidad" />
     </div>
 
@@ -41,16 +45,16 @@
     <button type="button" id="volver" routerLink="/admin/pedidos">
       Volver
     </button>
-    } @else if (tipo === 'repositor') {
-    <button type="button" id="volver" routerLink="/repositor/pedidos">
+    } @else if (tipo === 'base') {
+    <button type="button" id="volver" routerLink="/base/pedidos">
       Volver
     </button>
     } } @else { @if(tipo === 'admin') {
     <button type="button" id="cancelar" routerLink="/admin/pedidos">
       Cancelar
     </button>
-    } @else if (tipo === 'repositor') {
-    <button type="button" id="cancelar" routerLink="/repositor/pedidos">
+    } @else if (tipo === 'base') {
+    <button type="button" id="cancelar" routerLink="/base/pedidos">
       Cancelar
     </button>
     }

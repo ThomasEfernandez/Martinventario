@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
@@ -12,7 +13,7 @@ import { ProveedorService } from 'app/proveedor/services/proveedor.service';
 @Component({
   selector: 'app-editar-producto',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterModule],
+  imports: [ReactiveFormsModule, RouterModule, CommonModule],
   templateUrl: './editar-producto.component.html',
   styleUrl: './editar-producto.component.css',
 })
@@ -46,38 +47,38 @@ export class EditarProductoComponent {
   });
 
   ngOnInit(): void {
-  this.listarCategorias();
-  this.listarProveedores();
-  this.activaredRoutes.paramMap.subscribe({
-    next: (param) => {
-      this.id = param.get('id');
-      this.getTareaById(this.id);
-    },
-    error: (e: Error) => {
-      console.log(e.message);
-    },
-  });
-}
+    this.listarCategorias();
+    this.listarProveedores();
+    this.activaredRoutes.paramMap.subscribe({
+      next: (param) => {
+        this.id = param.get('id');
+        this.getTareaById(this.id);
+      },
+      error: (e: Error) => {
+        console.log(e.message);
+      },
+    });
+  }
 
-getTareaById(id: string | null) {
-  this.productoService.getProductoById(id).subscribe({
-    next: (producto: Producto) => {
-      this.formulario.patchValue(producto);
+  getTareaById(id: string | null) {
+    this.productoService.getProductoById(id).subscribe({
+      next: (producto: Producto) => {
+        this.formulario.patchValue(producto);
 
-      // Encontrar la categoría y asignar sus etiquetas
-      const categoriaSeleccionada = this.listaCategorias.find(
-        (c) => c.nombreCategoria === producto.categoria
-      );
-      this.listaEtiquetas = categoriaSeleccionada?.etiquetas || [];
+        // Encontrar la categoría y asignar sus etiquetas
+        const categoriaSeleccionada = this.listaCategorias.find(
+          (c) => c.nombreCategoria === producto.categoria
+        );
+        this.listaEtiquetas = categoriaSeleccionada?.etiquetas || [];
 
-      // Asignar la etiqueta del producto
-      this.formulario.controls['etiqueta'].setValue(producto.etiqueta);
-    },
-    error: () => {
-      console.log('error....');
-    },
-  });
-}
+        // Asignar la etiqueta del producto
+        this.formulario.controls['etiqueta'].setValue(producto.etiqueta);
+      },
+      error: () => {
+        console.log('error....');
+      },
+    });
+  }
 
   update() {
     if (this.formulario.invalid) return;
@@ -87,8 +88,8 @@ getTareaById(id: string | null) {
         console.log('Actualizado');
         if (this.tipo === 'admin') {
           this.router.navigateByUrl('admin/productos');
-        } else if (this.tipo === 'repositor') {
-          this.router.navigateByUrl('repositor/productos');
+        } else if (this.tipo === 'base') {
+          this.router.navigateByUrl('base/productos');
         }
       },
       error: (e: Error) => {
@@ -117,24 +118,21 @@ getTareaById(id: string | null) {
         console.log(err.message);
       },
     });
-  
-
-
     document.getElementById('categoria')?.addEventListener('click', () => {
       const select = document.getElementById('categoria') as HTMLSelectElement;
       const categoria = this.listaCategorias.find(
         (c) => c.nombreCategoria === select.value
       );
-      
       this.listaEtiquetas = categoria?.etiquetas;
     });
   }
+
   actualizarEtiquetas(event: Event) {
-  const select = event.target as HTMLSelectElement;
-  const categoriaSeleccionada = this.listaCategorias.find(
-    (c) => c.nombreCategoria === select.value
-  );
-  this.listaEtiquetas = categoriaSeleccionada?.etiquetas || [];
-  this.formulario.controls['etiqueta'].setValue(''); // Limpia la selección de etiqueta
-}
+    const select = event.target as HTMLSelectElement;
+    const categoriaSeleccionada = this.listaCategorias.find(
+      (c) => c.nombreCategoria === select.value
+    );
+    this.listaEtiquetas = categoriaSeleccionada?.etiquetas || [];
+    this.formulario.controls['etiqueta'].setValue(''); // Limpia la selección de etiqueta
+  }
 }
