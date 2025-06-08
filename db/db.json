@@ -88,7 +88,7 @@
       "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": -15,
+      "cantidad": 10,
       "categoria": "Alimentos",
       "etiqueta": "Galletitas dulces"
     },
@@ -97,7 +97,7 @@
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Agustin",
-      "cantidad": 9,
+      "cantidad": 42,
       "categoria": "Bebidas",
       "etiqueta": "Gaseosa"
     },
@@ -123,7 +123,7 @@
       "id": "5",
       "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
-      "proveedor": "Agustin",
+      "proveedor": "Fausto",
       "cantidad": 47,
       "categoria": "Higiene",
       "etiqueta": "Shampoo"
@@ -186,18 +186,11 @@
   "proveedores": [
     {
       "id": "1",
-      "nombre": "thomas",
-      "apellido": "fernandez",
-      "razonSocial": "asdsa",
-      "cuit": "23232",
-      "email": "thomyezequiel@hotmail.com"
-    }, {
-      "id": "2",
       "nombre": "Fausto",
-      "apellido": "asddas",
-      "razonSocial": "asdsa",
-      "cuit": "23232",
-      "email": "fausto@hotmail.com"
+      "apellido": "Gimenez",
+      "razonSocial": "fausto",
+      "cuit": "1234",
+      "email": "fausto@gmail.com"
     }
   ],
   "categorias": [
@@ -242,11 +235,13 @@
           "id": "1",
           "nombreEtiqueta": "Gaseosa",
           "estado": true
-        },  {
+        },
+        {
           "id": "2",
           "nombreEtiqueta": "Vinos",
           "estado": true
-        },  {
+        },
+        {
           "id": "3",
           "nombreEtiqueta": "Aguas",
           "estado": true
@@ -540,6 +535,13 @@
       "usuario": "admin",
       "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "cantidad": 1
+    },
+    {
+      "id": "19",
+      "fecha": "8/6/2025",
+      "usuario": "admin",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 33
     }
   ],
   "pedidos": [
