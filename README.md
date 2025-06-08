@@ -1,27 +1,27 @@
-# Martinventario
+# TpFinal
 
-## Pasos a seguir para iniciar el proyecto:
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.7.
 
-### 1. Descargar nodemodules:
+## Development server
 
-**npm install --legacy-peer-deps**
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-### 2. Abrir json server en la terminal:
+## Code scaffolding
 
-**json-server db/db.json --watch**
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-### 3. Iniciar el servidor:
+## Build
 
-**ng serve -open**
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Integrantes:
+## Running unit tests
 
-[![Static Badge](https://img.shields.io/badge/agustinamartin-8A2BE2?style=for-the-badge&logo=github)](https://github.com/agustinamartin)
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-[![Static Badge](https://img.shields.io/badge/agustinrojass-8A2BE2?style=for-the-badge&logo=github)](https://github.com/agustinrojass)
+## Running end-to-end tests
 
-[![Static Badge](https://img.shields.io/badge/FaustoGimenezLobasso-8A2BE2?style=for-the-badge&logo=github)](https://github.com/FaustoGimenezLobasso)
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-[![Static Badge](https://img.shields.io/badge/lautaro13dejulio-8A2BE2?style=for-the-badge&logo=github)](https://github.com/lautaro13dejulio)
+## Further help
 
-[![Static Badge](https://img.shields.io/badge/ThomasEfernandez-8A2BE2?style=for-the-badge&logo=github)](https://github.com/ThomasEfernandez)
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

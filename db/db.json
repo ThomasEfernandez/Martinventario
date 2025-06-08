@@ -85,7 +85,7 @@
   "productos": [
     {
       "id": "1",
-      "nombreProducto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
       "cantidad": 10,
@@ -94,7 +94,7 @@
     },
     {
       "id": "2",
-      "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Agustin",
       "cantidad": 42,
@@ -103,7 +103,7 @@
     },
     {
       "id": "3",
-      "nombreProducto": "Crema de avellanas Nutella 350 g.",
+      "producto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
       "proveedor": "Agustin",
       "cantidad": 6,
@@ -112,7 +112,7 @@
     },
     {
       "id": "4",
-      "nombreProducto": "Consola playstation 5v Sony 1tb edición standard",
+      "producto": "Consola playstation 5v Sony 1tb edición standard",
       "marca": "Sony",
       "proveedor": "Fausto",
       "cantidad": 8,
@@ -121,44 +121,44 @@
     },
     {
       "id": "5",
-      "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
+      "producto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
       "proveedor": "Fausto",
       "cantidad": 47,
       "categoria": "Higiene",
-      "etiqueta": "Shampoo"
+      "etiquetas": "Shampoo"
     },
     {
       "id": "6",
-      "nombreProducto": "Galletitas dulces Oreo rellenas con crema 118 g.",
-      "marca": "Oreo",
+      "producto": "galletitas",
+      "marca": "oreo",
       "proveedor": "Fausto",
       "cantidad": 8,
       "categoria": "Alimentos",
-      "etiqueta": "Galletitas dulces"
+      "etiquetas": "Galletitas dulces"
     },
     {
       "id": "7",
-      "nombreProducto": "Milanesa Granja del sol de soja espinaca 4 uni",
-      "marca": "Granja del Sol",
+      "producto": "milanesas",
+      "marca": "carrefour",
       "proveedor": "Fausto",
       "cantidad": -3,
       "categoria": "Alimentos",
-      "etiqueta": "Dulce"
+      "etiquetas": "Carne"
     },
     {
       "id": "8",
-      "nombreProducto": "Gaseosa cola Pepsi regular pet 2 lts",
-      "marca": "Pepsi",
+      "producto": "gaseosa 1,25",
+      "marca": "pepsi",
       "proveedor": "Agustin",
       "cantidad": 5,
       "categoria": "Bebidas",
-      "etiqueta": "Gaseosa"
+      "etiquetas": "Gaseosa"
     },
     {
       "id": "9",
-      "nombreProducto": "Bombones Ferrero Rocher 3 u.",
-      "marca": "Ferrero Rocher",
+      "producto": "bombones",
+      "marca": "Ferrero",
       "proveedor": "Agustin",
       "cantidad": 7,
       "categoria": "Alimentos",
@@ -544,7 +544,7 @@
       "cantidad": 33
     }
   ],
-  "pedidos": [
+  "entradas": [
     {
       "id": "1",
       "fecha": "15/10/2024",
