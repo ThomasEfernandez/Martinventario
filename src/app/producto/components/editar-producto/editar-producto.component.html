@@ -49,17 +49,16 @@
       formulario.controls['categoria'].touched){
       <small class="error">Campo requerido.</small>
       }
-      <select id="categoria" formControlName="categoria">
-        <option value="" disabled selected hidden>
-          Selecciona una categoría
-        </option>
-        @for (categoria of listaCategorias; track $index) {
-        <option value="{{ categoria.nombreCategoria }}">
-          {{ categoria.nombreCategoria }}
-        </option>
-        }
-      </select>
+         <select id="categoria" formControlName="categoria" (change)="actualizarEtiquetas($event)">
+  <option value="" disabled selected hidden>Selecciona una categoría</option>
+  @for (categoria of listaCategorias; track $index) {
+    <option value="{{ categoria.nombreCategoria }}">{{ categoria.nombreCategoria }}</option>
+  }
+</select>
     </div>
+
+
+
 
     <div class="flex-box">
       <label>Etiquetas</label>
@@ -67,16 +66,13 @@
       formulario.controls['etiqueta'].touched){
       <small class="error">Campo requerido.</small>
       }
-      <select formControlName="etiqueta">
-        <option value="" disabled selected hidden>
-          Selecciona una etiqueta
-        </option>
-        @for (etiqueta of listaEtiquetas; track $index) {
-        <option value="{{ etiqueta.nombreEtiqueta }}">
-          {{ etiqueta.nombreEtiqueta }}
-        </option>
-        }
-      </select>
+  
+<select formControlName="etiqueta">
+  <option value="" disabled selected hidden>Selecciona una etiqueta</option>
+  @for (etiqueta of listaEtiquetas; track $index) {
+    <option value="{{ etiqueta.nombreEtiqueta }}">{{ etiqueta.nombreEtiqueta }}</option>
+  }
+</select>
     </div>
   </div>
   <div class="botones">

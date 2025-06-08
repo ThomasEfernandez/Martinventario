@@ -1,6 +1,6 @@
 div {
     padding: 1%;
-    background-color: red;
+    background-color: #fbcb5b;
     border:#707070;
     
   }
@@ -17,7 +17,7 @@ div {
     padding: 0.50%;
     border: 1px solid #707070;
     text-align: left;
-    background-color: #ff0000;
+    background-color: #0099ff;
    
   }
   tbody tr:nth-child(even) {
