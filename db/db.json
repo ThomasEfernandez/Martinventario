@@ -97,7 +97,7 @@
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Agustin",
-      "cantidad": 8,
+      "cantidad": 9,
       "categoria": "Bebidas",
       "etiqueta": ""
     },
@@ -115,7 +115,7 @@
       "nombreProducto": "Consola playstation 5v Sony 1tb edición standard",
       "marca": "Sony",
       "proveedor": "Fausto",
-      "cantidad": 9,
+      "cantidad": 8,
       "categoria": "Higiene",
       "etiqueta": "Shampoo"
     },
@@ -397,6 +397,13 @@
       "usuario": "admin",
       "producto": "papitas",
       "cantidad": 5
+    },
+    {
+      "id": "11",
+      "fecha": "8/6/2025",
+      "usuario": "base",
+      "producto": "Consola playstation 5v Sony 1tb edición standard",
+      "cantidad": 1
     }
   ],
   "ingresos": [
@@ -524,6 +531,13 @@
       "usuario": "admin",
       "producto": "papitas",
       "cantidad": 20
+    },
+    {
+      "id": "18",
+      "fecha": "8/6/2025",
+      "usuario": "admin",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 1
     }
   ],
   "pedidos": [
