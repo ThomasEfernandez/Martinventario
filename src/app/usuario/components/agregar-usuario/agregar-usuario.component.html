@@ -1,0 +1,67 @@
+<form [formGroup]="formulario" (ngSubmit)="agregarUsuario()">
+  <div class="form">
+    <div class="flex-box">
+      <label>Usuario</label>
+      @if(formulario.controls['usuario'].getError('required') &&
+      formulario.controls['usuario'].touched) {
+      <small class="error">Campo requerido</small>
+      } @if(formulario.controls['usuario'].getError('minlength') &&
+      formulario.controls['usuario'].touched) {
+      <small class="error">Requiere 4 caracteres</small>
+      }
+      <input type="text" formControlName="usuario" />
+    </div>
+
+    <div class="flex-box">
+      <label>Contraseña</label>
+      @if(formulario.controls['contrasena'].getError('required') &&
+      formulario.controls['contrasena'].touched) {
+      <small class="error">Campo requerido</small>
+      } @if(formulario.controls['contrasena'].getError('minlength') &&
+      formulario.controls['contrasena'].touched) {
+      <small class="error">Requiere 4 caracteres</small>
+      }
+      <input type="text" formControlName="contrasena" />
+    </div>
+
+    <div class="flex-box">
+      <label>Nombre</label>
+      @if(formulario.controls['nombre'].getError('required') &&
+      formulario.controls['nombre'].touched) {
+      <small class="error">Campo requerido</small>
+      }
+      <input type="text" formControlName="nombre" />
+    </div>
+
+    <div class="flex-box">
+      <label>Apellido</label>
+      @if(formulario.controls['apellido'].getError('required') &&
+      formulario.controls['apellido'].touched) {
+      <small class="error">Campo requerido</small>
+      }
+      <input type="text" formControlName="apellido" />
+    </div>
+  </div>
+  <div class="botones">
+    @if(usuarioAgregado){
+    <small class="exito">Usuario agregado</small>
+    @if (usuarioNuevo === 'repositor') {
+    <button type="button" id="volver" routerLink="/admin/repositores">
+      Volver
+    </button>
+    } @else if (usuarioNuevo === 'cajero') {
+    <button type="button" id="volver" routerLink="/admin/cajeros">
+      Volver
+    </button>
+    } } @else { @if (usuarioNuevo === 'repositor') {
+    <button type="button" id="cancelar" routerLink="/admin/repositores">
+      Cancelar
+    </button>
+    } @else if (usuarioNuevo === 'cajero') {
+    <button type="button" id="cancelar" routerLink="/admin/cajeros">
+      Cancelar
+    </button>
+    }
+    <button type="submit" id="agregar">Agregar usuario</button>}
+  </div>
+</form>

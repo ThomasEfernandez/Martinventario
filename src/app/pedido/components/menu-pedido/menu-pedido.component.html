@@ -1,0 +1,13 @@
+<div class="contenedor">
+  <ul class="lista">
+    @if (tipo === 'admin') {
+    <li class="item">
+      <a routerLink="/admin/pedidos/agregar">AGREGAR PEDIDO</a>
+    </li>
+    } @else if (tipo === 'repositor') {
+    <li class="item">
+      <a routerLink="/repositor/pedidos/agregar">AGREGAR PEDIDO</a>
+    </li>
+    }
+  </ul>
+</div>

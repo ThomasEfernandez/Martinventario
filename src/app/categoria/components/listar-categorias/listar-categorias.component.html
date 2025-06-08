@@ -1,0 +1,58 @@
+<div>
+  <table>
+    <thead>
+      @if (tipo === 'admin') {
+      <th class="columna-categoria-a">Categoria</th>
+      <th class="columna-verDetalle-a">Detalle</th>
+      <th class="columna-modificar-a">Modificar</th>
+      <th class="columna-estado-a">Estado</th>
+      } @else if (tipo === 'repositor') {
+      <th class="columna-categoria-r">Categoria</th>
+      <th class="columna-verDetalle-r">Detalle</th>
+      <th class="columna-estado-r">Estado</th>
+      }
+    </thead>
+    <tbody>
+      @for(categoria of listaCategorias; track $index) {
+      <tr>
+        <td>{{ categoria.nombreCategoria }}</td>
+        <td>
+          @if(tipo === 'admin') {
+          <button [routerLink]="['/admin/categoria', categoria.id]">
+            Ver detalle
+          </button>
+          } @else if (tipo === 'repositor') {
+          <button [routerLink]="['/repositor/categoria', categoria.id]">
+            Ver detalle
+          </button>
+          }
+        </td>
+        @if(tipo === 'admin') {
+        <td>
+          <button
+            class="modificar"
+            [routerLink]="['/admin/categoria/modificar', categoria.id]"
+          >
+            Modificar
+          </button>
+        </td>
+        }
+        <td>
+          @if (categoria.estado) {
+          <button
+            class="desactivar"
+            (click)="desactivarCategoria(categoria.id)"
+          >
+            Desactivar
+          </button>
+          } @else {
+          <button class="activar" (click)="activarCategoria(categoria.id)">
+            Activar
+          </button>
+          }
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
