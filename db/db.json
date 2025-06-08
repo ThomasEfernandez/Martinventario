@@ -15,7 +15,7 @@
       "nombre": "Agustin",
       "apellido": "Rojas",
       "contrasena": "agustin",
-      "tipo": "repositor",
+      "tipo": "base",
       "estado": true
     },
     {
@@ -24,7 +24,7 @@
       "nombre": "Thomas",
       "apellido": "Fernandez",
       "contrasena": "thomas",
-      "tipo": "cajero",
+      "tipo": "base",
       "estado": true
     },
     {
@@ -33,7 +33,7 @@
       "nombre": "Fausto",
       "apellido": "Gimenez",
       "contrasena": "fausto",
-      "tipo": "repositor",
+      "tipo": "base",
       "estado": true
     },
     {
@@ -42,7 +42,7 @@
       "nombre": "Agustina",
       "apellido": "Martin",
       "contrasena": "agustina",
-      "tipo": "cajero",
+      "tipo": "base",
       "estado": true
     },
     {
@@ -51,7 +51,7 @@
       "nombre": "Lautaro",
       "apellido": "Hourcade",
       "contrasena": "lautaro",
-      "tipo": "repositor",
+      "tipo": "base",
       "estado": true
     },
     {
@@ -60,7 +60,7 @@
       "apellido": "chaldu",
       "usuario": "chaldu",
       "contrasena": "chaldu",
-      "tipo": "cajero",
+      "tipo": "base",
       "estado": true
     },
     {
@@ -69,8 +69,8 @@
       "apellido": "a",
       "usuario": "aaaa",
       "contrasena": "aaaa",
-      "tipo": "cajero",
-      "estado": true
+      "tipo": "base",
+      "estado": false
     },
     {
       "id": "9",
@@ -78,8 +78,8 @@
       "apellido": "a",
       "usuario": "aaaa",
       "contrasena": "aaaaa",
-      "tipo": "repositor",
-      "estado": true
+      "tipo": "base",
+      "estado": false
     }
   ],
   "productos": [
@@ -88,53 +88,43 @@
       "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": 2,
-      "precioCompra": 1000,
-      "precioVenta": 1500,
+      "cantidad": 10,
       "categoria": "Alimentos",
-      "etiquetas": "Galletitas dulces"
+      "etiqueta": "Galletitas dulces"
     },
     {
       "id": "2",
       "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
-      "proveedor": "Fausto",
-      "cantidad": 39,
-      "precioCompra": 2000,
-      "precioVenta": 2500,
+      "proveedor": "Agustin",
+      "cantidad": 42,
       "categoria": "Bebidas",
-      "etiquetas": "Gaseosa"
+      "etiqueta": "Gaseosa"
     },
     {
       "id": "3",
       "producto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
-      "proveedor": "Fausto",
-      "cantidad": 10,
-      "precioCompra": 5800,
-      "precioVenta": 7000,
+      "proveedor": "Agustin",
+      "cantidad": 6,
       "categoria": "Alimentos",
-      "etiquetas": "Dulce"
+      "etiqueta": "Untables"
     },
     {
       "id": "4",
       "producto": "Consola playstation 5v Sony 1tb edición standard",
       "marca": "Sony",
-      "proveedor": "Agustin",
-      "cantidad": 5,
-      "precioCompra": 1000000,
-      "precioVenta": 1500000,
-      "categoria": "Hogar",
-      "etiquetas": "Electrodomestico"
+      "proveedor": "Fausto",
+      "cantidad": 8,
+      "categoria": "Higiene",
+      "etiqueta": "Shampoo"
     },
     {
       "id": "5",
       "producto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
-      "proveedor": "Agustin",
-      "cantidad": 48,
-      "precioCompra": 4000,
-      "precioVenta": 5700,
+      "proveedor": "Fausto",
+      "cantidad": 47,
       "categoria": "Higiene",
       "etiquetas": "Shampoo"
     },
@@ -143,9 +133,7 @@
       "producto": "galletitas",
       "marca": "oreo",
       "proveedor": "Fausto",
-      "cantidad": 1,
-      "precioCompra": 1300,
-      "precioVenta": 2000,
+      "cantidad": 8,
       "categoria": "Alimentos",
       "etiquetas": "Galletitas dulces"
     },
@@ -154,9 +142,7 @@
       "producto": "milanesas",
       "marca": "carrefour",
       "proveedor": "Fausto",
-      "cantidad": 10,
-      "precioCompra": 8000,
-      "precioVenta": 10000,
+      "cantidad": -3,
       "categoria": "Alimentos",
       "etiquetas": "Carne"
     },
@@ -166,8 +152,6 @@
       "marca": "pepsi",
       "proveedor": "Agustin",
       "cantidad": 5,
-      "precioCompra": 3000,
-      "precioVenta": 3600,
       "categoria": "Bebidas",
       "etiquetas": "Gaseosa"
     },
@@ -176,11 +160,27 @@
       "producto": "bombones",
       "marca": "Ferrero",
       "proveedor": "Agustin",
-      "cantidad": 5,
-      "precioCompra": 1300,
-      "precioVenta": 2000,
+      "cantidad": 7,
       "categoria": "Alimentos",
-      "etiquetas": "Dulce"
+      "etiqueta": "Dulce"
+    },
+    {
+      "id": "10",
+      "nombreProducto": "papitas",
+      "marca": "Lays",
+      "proveedor": "Agustin",
+      "cantidad": 23,
+      "categoria": "Alimentos",
+      "etiqueta": "Carne"
+    },
+    {
+      "id": "11",
+      "nombreProducto": "alimento canino",
+      "marca": "Royal Canin",
+      "proveedor": "Fausto",
+      "cantidad": 9,
+      "categoria": "Mascotas",
+      "etiqueta": "Alimento Canino"
     }
   ],
   "proveedores": [
@@ -188,17 +188,9 @@
       "id": "1",
       "nombre": "Fausto",
       "apellido": "Gimenez",
-      "razonSocial": "Pepsi",
-      "email": "faustogimenezlobasso@gmail.com",
-      "cuit": "1231414"
-    },
-    {
-      "id": "2",
-      "nombre": "Agustin",
-      "apellido": "Rojas",
-      "razonSocial": "agus",
-      "email": "agus@gmail.com",
-      "cuit": "123455"
+      "razonSocial": "fausto",
+      "cuit": "1234",
+      "email": "fausto@gmail.com"
     }
   ],
   "categorias": [
@@ -224,8 +216,13 @@
         },
         {
           "id": "4",
-          "nombreEtiqueta": "Dulce",
-          "estado": false
+          "nombreEtiqueta": "Salado",
+          "estado": true
+        },
+        {
+          "id": "5",
+          "nombreEtiqueta": "Untables",
+          "estado": true
         }
       ]
     },
@@ -237,6 +234,16 @@
         {
           "id": "1",
           "nombreEtiqueta": "Gaseosa",
+          "estado": true
+        },
+        {
+          "id": "2",
+          "nombreEtiqueta": "Vinos",
+          "estado": true
+        },
+        {
+          "id": "3",
+          "nombreEtiqueta": "Aguas",
           "estado": true
         }
       ]
@@ -284,6 +291,11 @@
           "id": "2",
           "nombreEtiqueta": "Juego",
           "estado": true
+        },
+        {
+          "id": "3",
+          "nombreEtiqueta": "Limpieza",
+          "estado": true
         }
       ]
     },
@@ -294,12 +306,7 @@
       "etiquetas": [
         {
           "id": "1",
-          "nombreEtiqueta": "Alimento para perro",
-          "estado": true
-        },
-        {
-          "id": "2",
-          "nombreEtiqueta": "Alimento para gato",
+          "nombreEtiqueta": "Alimento Canino",
           "estado": true
         }
       ]
@@ -308,127 +315,283 @@
       "id": "7",
       "nombreCategoria": "Educacion",
       "estado": true,
-      "etiquetas": [
-        {
-          "id": "1",
-          "nombreEtiqueta": "Utiles escolares",
-          "estado": false
-        },
-        {
-          "id": "2",
-          "nombreEtiqueta": "Libros",
-          "estado": true
-        }
-      ]
+      "etiquetas": []
     },
     {
-      "id": "8",
+      "id": "9",
       "nombreCategoria": "Alimentos",
       "estado": false,
       "etiquetas": []
     }
   ],
-  "ventas": [
+  "egresos": [
     {
       "id": "1",
-      "total": 1500,
-      "fecha": "13/11/2024",
-      "cajero": 0,
+      "fecha": "23/3/2025",
+      "usuario": "agustin",
       "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
-      "cantidad": 1
+      "cantidad": 2
     },
     {
       "id": "2",
-      "total": 3000,
-      "fecha": "13/10/2024",
-      "cajero": 0,
-      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "fecha": "23/3/2025",
+      "usuario": "thomas",
+      "producto": "Crema de avellanas Nutella 350 g.",
       "cantidad": 2
     },
     {
       "id": "3",
-      "total": 5000,
-      "fecha": "14/10/2024",
-      "cajero": 0,
-      "producto": "Gaseosa lima limón Sprite 2,25 lts",
-      "cantidad": 2
+      "fecha": "23/3/2025",
+      "usuario": "fausto",
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 1
     },
     {
       "id": "4",
-      "total": 2500,
-      "fecha": "14/10/2024",
-      "cajero": 0,
+      "fecha": "1/5/2025",
+      "usuario": 0,
       "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "cantidad": 1
     },
     {
       "id": "5",
-      "fecha": "17/1/2025",
-      "producto": "galletitas",
-      "cantidad": 1,
-      "motivo": "Venta"
+      "fecha": "1/5/2025",
+      "usuario": "",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 1
     },
     {
       "id": "6",
-      "fecha": "24/1/2025",
-      "producto": "Shampoo Dove reconstruccion completa 400cc",
-      "cantidad": 2,
-      "motivo": "Perdida"
+      "fecha": "1/5/2025",
+      "usuario": "pepe",
+      "producto": "Galletitas dulces Oreo rellenas con crema 118 g.",
+      "cantidad": 1
     },
     {
       "id": "7",
-      "fecha": "4/2/2025",
-      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
-      "cantidad": 4,
-      "motivo": "Venta"
+      "fecha": "1/5/2025",
+      "usuario": "",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 12
     },
     {
       "id": "8",
-      "fecha": "4/2/2025",
-      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
-      "cantidad": 2,
-      "motivo": "Venta"
+      "fecha": "1/6/2025",
+      "usuario": "",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 2
     },
     {
       "id": "9",
-      "fecha": "4/2/2025",
-      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
-      "cantidad": 5,
-      "motivo": "Venta"
+      "fecha": "1/6/2025",
+      "usuario": "admin",
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "10",
+      "fecha": "1/6/2025",
+      "usuario": "admin",
+      "producto": "papitas",
+      "cantidad": 5
+    },
+    {
+      "id": "11",
+      "fecha": "8/6/2025",
+      "usuario": "base",
+      "producto": "Consola playstation 5v Sony 1tb edición standard",
+      "cantidad": 1
     }
   ],
-  "pedidos": [
+  "ingresos": [
     {
       "id": "1",
-      "fecha": "13/10/2024",
-      "producto": "a",
-      "cantidad": 1,
-      "razonSocialProveedor": "Agustin",
-      "estado": false
+      "fecha": "23/3/2025",
+      "proveedor": "Fausto",
+      "usuario": "fausto",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 2
     },
     {
       "id": "2",
-      "fecha": "14/10/2024",
-      "producto": "coca",
-      "cantidad": 1,
-      "razonSocialProveedor": "Fausto",
-      "estado": false
+      "fecha": "23/3/2025",
+      "proveedor": "Fausto",
+      "usuario": "fausto",
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 2
     },
     {
       "id": "3",
-      "fecha": "14/10/2024",
-      "producto": "aaa",
-      "cantidad": 1,
-      "razonSocialProveedor": "Fausto",
-      "estado": false
+      "fecha": "23/3/2025",
+      "proveedor": "Fausto",
+      "usuario": "fausto",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 4
+    },
+    {
+      "id": "4",
+      "fecha": "23/3/2025",
+      "proveedor": "Agustin",
+      "usuario": "fausto",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 1
+    },
+    {
+      "id": "5",
+      "fecha": "23/3/2025",
+      "proveedor": "Fausto",
+      "usuario": "fausto",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "6",
+      "fecha": "23/3/2025",
+      "proveedor": "Agustin",
+      "usuario": "fausto",
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 2
+    },
+    {
+      "id": "7",
+      "fecha": "1/5/2025",
+      "usuario": "",
+      "producto": "Bombones Ferrero Rocher 3 u.",
+      "cantidad": 3
+    },
+    {
+      "id": "8",
+      "fecha": "1/5/2025",
+      "usuario": "",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "9",
+      "fecha": "1/6/2025",
+      "usuario": "",
+      "producto": "Milanesa Granja del sol de soja espinaca 4 uni",
+      "cantidad": 10
+    },
+    {
+      "id": "10",
+      "fecha": "1/6/2025",
+      "usuario": "",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 2
+    },
+    {
+      "id": "11",
+      "fecha": "1/6/2025",
+      "usuario": "",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 9
+    },
+    {
+      "id": "12",
+      "fecha": "1/6/2025",
+      "usuario": "",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 11
+    },
+    {
+      "id": "13",
+      "fecha": "1/6/2025",
+      "usuario": "admin",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 1
+    },
+    {
+      "id": "14",
+      "fecha": "1/6/2025",
+      "usuario": "admin",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 4
+    },
+    {
+      "id": "15",
+      "fecha": "1/6/2025",
+      "usuario": "admin",
+      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "cantidad": 8
+    },
+    {
+      "id": "16",
+      "fecha": "1/6/2025",
+      "usuario": "admin",
+      "producto": "papitas",
+      "cantidad": 2
+    },
+    {
+      "id": "17",
+      "fecha": "1/6/2025",
+      "usuario": "admin",
+      "producto": "papitas",
+      "cantidad": 20
+    },
+    {
+      "id": "18",
+      "fecha": "8/6/2025",
+      "usuario": "admin",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 1
+    },
+    {
+      "id": "19",
+      "fecha": "8/6/2025",
+      "usuario": "admin",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 33
     }
   ],
   "entradas": [
     {
       "id": "1",
-      "fecha": "11/3/2025",
-      "producto": "Gaseosa lima limón Sprite 2,25 lts",
-      "cantidad": 2
+      "fecha": "15/10/2024",
+      "producto": "Pepitos",
+      "cantidad": 10,
+      "razonSocialProveedor": "Fausto",
+      "estado": true
+    },
+    {
+      "id": "2",
+      "fecha": "15/10/2024",
+      "producto": "Pepsi",
+      "cantidad": 5,
+      "razonSocialProveedor": "Agustin",
+      "estado": false
+    },
+    {
+      "id": "3",
+      "fecha": "21/3/2025",
+      "producto": "cereales",
+      "cantidad": 2,
+      "razonSocialProveedor": "Agustin",
+      "estado": false
+    },
+    {
+      "id": "4",
+      "fecha": "23/3/2025",
+      "producto": "uvas",
+      "cantidad": 20,
+      "razonSocialProveedor": "Agustin",
+      "estado": false
+    },
+    {
+      "id": "5",
+      "fecha": "23/3/2025",
+      "producto": "uvas",
+      "cantidad": 2,
+      "razonSocialProveedor": "Agustin",
+      "estado": false
+    },
+    {
+      "id": "6",
+      "fecha": "1/6/2025",
+      "producto": "MILANESAS",
+      "cantidad": 1,
+      "razonSocialProveedor": "Agustin",
+      "estado": false
     }
   ]
 }

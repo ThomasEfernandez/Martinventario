@@ -1,0 +1,50 @@
+.menu {
+  
+    padding: 2% 1% 1%;
+    flex: 1;
+    display: flex;
+    justify-content: right;
+  }
+  .estadisticas{
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content:center;
+  }
+  .container{
+    width: 850px;
+   
+    box-shadow: 7px 7px 7px 7px  #767676;
+ 
+  }
+ 
+  .menu ul {
+  
+    display: flex;
+    list-style: none;
+  }
+  .menu ul li {
+    margin-left: 30px;
+  }
+  .menu ul li a {
+    background-color: #0088ee;
+    text-decoration: none;
+    color: #222222;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  .menu ul li a:hover {
+    background-color: #0099ff;
+  }
+  
+  h3{
+    background-color: #fbcb5b;
+    color: white;
+    width: 100%;
+   
+  }
+

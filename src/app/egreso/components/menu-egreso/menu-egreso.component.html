@@ -1,0 +1,13 @@
+<div class="contenedor">
+  <ul class="lista">
+    @if (tipo === 'admin') {
+    <li class="item">
+      <a routerLink="/admin/realizar-egreso">REALIZAR EGRESO</a>
+    </li>
+    } @else if (tipo === 'base') {
+    <li class="item">
+      <a routerLink="/base/realizar-egreso">REALIZAR EGRESO</a>
+    </li>
+    }
+  </ul>
+</div>

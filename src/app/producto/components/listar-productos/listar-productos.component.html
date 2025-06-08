@@ -1,0 +1,54 @@
+<!-- <app-agregar-producto-admin (emitirProducto)="listar($event)"></app-agregar-producto-admin> -->
+<div>
+  <table>
+    <thead>
+      @if (tipo === 'admin') {
+      <th class="columna-id-a">Id</th>
+      <th class="columna-producto-a">Producto</th>
+      <th class="columna-marca-a">Marca</th>
+      <th class="columna-cantidad-a">Cantidad</th>
+      <th class="columna-proveedor-a">Proveedor</th>
+      <th class="columna-categoria-a">Categoria</th>
+      <th class="columna-modificar-a">Modificar</th>
+      } @else if (tipo === 'base') {
+      <th class="columna-id-r">Id</th>
+      <th class="columna-producto-r">Producto</th>
+      <th class="columna-marca-r">Marca</th>
+      <th class="columna-cantidad-r">Cantidad</th>
+      <th class="columna-proveedor-r">Proveedor</th>
+      <th class="columna-categoria-r">Categoria</th>
+      }
+    </thead>
+    <tbody>
+      @for(producto of listaProductos; track $index) {
+      <tr>
+        <td>{{ producto.id }}</td>
+        <td>{{ producto.nombreProducto }}</td>
+        <td>{{ producto.marca }}</td>
+        <td>{{ producto.cantidad }}</td>
+        <td>{{ producto.proveedor }}</td>
+        <td>{{ producto.categoria }}</td>
+        @if(tipo === 'admin') {
+        <td>
+          <button
+            class="modificar"
+            [routerLink]="['/admin/productos/modificar', producto.id]"
+          >
+            Modificar
+          </button>
+        </td>
+        } @else if (tipo === 'repositor') {
+        <td>
+          <button
+            class="modificar"
+            [routerLink]="['/repositor/productos/modificar', producto.id]"
+          >
+            Modificar
+          </button>
+        </td>
+        }
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
