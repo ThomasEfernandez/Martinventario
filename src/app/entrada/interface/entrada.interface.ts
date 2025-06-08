@@ -4,5 +4,4 @@ export interface Entrada {
   idProducto: string;
   producto: string;
   cantidad: number;
-  //test
 }
