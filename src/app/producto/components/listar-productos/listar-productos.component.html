@@ -11,12 +11,13 @@
       <th class="columna-categoria-a">Categoria</th>
       <th class="columna-modificar-a">Modificar</th>
       } @else if (tipo === 'base') {
-      <th class="columna-id-r">Id</th>
-      <th class="columna-producto-r">Producto</th>
-      <th class="columna-marca-r">Marca</th>
-      <th class="columna-cantidad-r">Cantidad</th>
-      <th class="columna-proveedor-r">Proveedor</th>
-      <th class="columna-categoria-r">Categoria</th>
+      <th class="columna-id-b">Id</th>
+      <th class="columna-producto-b">Producto</th>
+      <th class="columna-marca-b">Marca</th>
+      <th class="columna-cantidad-b">Cantidad</th>
+      <th class="columna-proveedor-b">Proveedor</th>
+      <th class="columna-categoria-b">Categoria</th>
+      <th class="columna-modificar-b">Modificar</th>
       }
     </thead>
     <tbody>
@@ -30,21 +31,11 @@
         <td>{{ producto.categoria }}</td>
         @if(tipo === 'admin') {
         <td>
-          <button
-            class="modificar"
-            [routerLink]="['/admin/productos/modificar', producto.id]"
-          >
-            Modificar
-          </button>
+          <button class="modificar" [routerLink]="['/admin/productos/modificar', producto.id]">Modificar</button>
         </td>
-        } @else if (tipo === 'repositor') {
+        } @else if (tipo === 'base') {
         <td>
-          <button
-            class="modificar"
-            [routerLink]="['/repositor/productos/modificar', producto.id]"
-          >
-            Modificar
-          </button>
+          <button class="modificar" [routerLink]="['/base/productos/modificar', producto.id]">Modificar</button>
         </td>
         }
       </tr>

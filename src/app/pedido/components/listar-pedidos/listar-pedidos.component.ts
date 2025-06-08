@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './listar-pedidos.component.css',
 })
 export class ListarPedidosComponent {
-  @Input() tipo: string = 'admin';
+  @Input() tipo: string = '';
 
   pedidoService = inject(PedidoService);
 

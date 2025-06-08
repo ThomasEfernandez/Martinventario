@@ -29,6 +29,7 @@ export class PedidoService {
   putPedido(id: string, pedido: Pedido): Observable<Pedido> {
     return this.http.put<Pedido>(`${this.url}/${id}`, pedido);
   }
+
   patchPedido(id: string, pedido: Pedido): Observable<Pedido> {
     return this.http.patch<Pedido>(`${this.url}/${id}`, pedido);
   }

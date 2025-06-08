@@ -85,16 +85,16 @@
   "productos": [
     {
       "id": "1",
-      "producto": "Galletitas Pepitos con chips de chocolate 119 g.",
+      "nombreProducto": "Pepitos",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": 10,
+      "cantidad": 9,
       "categoria": "Alimentos",
       "etiqueta": "Galletitas dulces"
     },
     {
       "id": "2",
-      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Agustin",
       "cantidad": 42,
@@ -103,7 +103,7 @@
     },
     {
       "id": "3",
-      "producto": "Crema de avellanas Nutella 350 g.",
+      "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
       "proveedor": "Agustin",
       "cantidad": 6,
@@ -112,7 +112,7 @@
     },
     {
       "id": "4",
-      "producto": "Consola playstation 5v Sony 1tb edición standard",
+      "nombreProducto": "Consola playstation 5v Sony 1tb edición standard",
       "marca": "Sony",
       "proveedor": "Fausto",
       "cantidad": 8,
@@ -121,7 +121,7 @@
     },
     {
       "id": "5",
-      "producto": "Shampoo Dove reconstruccion completa 400cc",
+      "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
       "proveedor": "Fausto",
       "cantidad": 47,
@@ -130,7 +130,7 @@
     },
     {
       "id": "6",
-      "producto": "galletitas",
+      "nombreProducto": "galletitas",
       "marca": "oreo",
       "proveedor": "Fausto",
       "cantidad": 8,
@@ -139,7 +139,7 @@
     },
     {
       "id": "7",
-      "producto": "milanesas",
+      "nombreProducto": "milanesas",
       "marca": "carrefour",
       "proveedor": "Fausto",
       "cantidad": -3,
@@ -148,7 +148,7 @@
     },
     {
       "id": "8",
-      "producto": "gaseosa 1,25",
+      "nombreProducto": "gaseosa 1,25",
       "marca": "pepsi",
       "proveedor": "Agustin",
       "cantidad": 5,
@@ -157,7 +157,7 @@
     },
     {
       "id": "9",
-      "producto": "bombones",
+      "nombreProducto": "bombones",
       "marca": "Ferrero",
       "proveedor": "Agustin",
       "cantidad": 7,
@@ -191,6 +191,14 @@
       "razonSocial": "fausto",
       "cuit": "1234",
       "email": "fausto@gmail.com"
+    },
+    {
+      "id": "2",
+      "nombre": "Thomas",
+      "apellido": "Fernandez",
+      "razonSocial": "thomi",
+      "cuit": "1234567",
+      "email": "thomi@gmail.com"
     }
   ],
   "categorias": [
@@ -198,33 +206,7 @@
       "id": "1",
       "nombreCategoria": "Alimentos",
       "estado": true,
-      "etiquetas": [
-        {
-          "id": "1",
-          "nombreEtiqueta": "Galletitas dulces",
-          "estado": true
-        },
-        {
-          "id": "2",
-          "nombreEtiqueta": "Dulce",
-          "estado": true
-        },
-        {
-          "id": "3",
-          "nombreEtiqueta": "Carne",
-          "estado": true
-        },
-        {
-          "id": "4",
-          "nombreEtiqueta": "Salado",
-          "estado": true
-        },
-        {
-          "id": "5",
-          "nombreEtiqueta": "Untables",
-          "estado": true
-        }
-      ]
+      "etiquetas": []
     },
     {
       "id": "2",
@@ -400,6 +382,13 @@
       "fecha": "8/6/2025",
       "usuario": "base",
       "producto": "Consola playstation 5v Sony 1tb edición standard",
+      "cantidad": 1
+    },
+    {
+      "id": "12",
+      "fecha": "8/6/2025",
+      "usuario": "admin",
+      "producto": "Pepitos",
       "cantidad": 1
     }
   ],

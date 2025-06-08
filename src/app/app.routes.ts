@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { PaginaIniciarSesionComponent } from './sesion/pages/pagina-iniciar-sesion/pagina-iniciar-sesion.component';
 
-/* ADMIN */
+/* ------ADMIN------ */
 import { PaginaPrincipalAdminComponent } from './admin/pages/pagina-principal-admin/pagina-principal-admin.component';
 //PROVEEDORES
 import { PaginaProveedoresAdminComponent } from './admin/pages/pagina-proveedores-admin/pagina-proveedores-admin.component';
@@ -21,18 +21,20 @@ import { PaginaAgregarEtiquetaAdminComponent } from './admin/pages/pagina-agrega
 import { PaginaSeccionesComponent } from './admin/pages/pagina-secciones/pagina-secciones.component';
 //EMPLEADOS
 import { PaginaEmpleadoComponent } from './admin/pages/pagina-empleado/pagina-empleado.component';
+import { AgregarUsuarioComponent } from './usuario/components/agregar-usuario/agregar-usuario.component';
 //INGRESOS
 import { PaginaIngresosAdminComponent } from './admin/pages/pagina-ingresos-admin/pagina-ingresos-admin.component';
 import { PaginaRealizarIngresoAdminComponent } from './admin/pages/pagina-realizar-ingreso-admin/pagina-realizar-ingreso-admin.component';
 //EGRESOS
 import { PaginaEgresosAdminComponent } from './admin/pages/pagina-egresos-admin/pagina-egresos-admin.component';
 import { PaginaRealizarEgresoAdminComponent } from './admin/pages/pagina-realizar-egresos-admin/pagina-realizar-egresos-admin.component';
-
+import { PaginaVerDetalleEgresoAdminComponent } from './admin/pages/pagina-ver-detalle-egreso-admin/pagina-ver-detalle-egreso-admin.component';
 //PEDIDOS
 import { PaginaPedidosAdminComponent } from './admin/pages/pagina-pedidos-admin/pagina-pedidos-admin.component';
 import { PaginaAgregarPedidoAdminComponent } from './admin/pages/pagina-agregar-pedido-admin/pagina-agregar-pedido-admin.component';
+import { PaginaModificarPedidoAdminComponent } from './admin/pages/pagina-modificar-pedido-admin/pagina-modificar-pedido-admin.component';
 
-/* BASE */
+/* ------BASE------ */
 import { PaginaPrincipalBaseComponent } from './base/pages/pagina-principal-base/pagina-principal-base.component';
 //SECCIONES
 import { PaginaSeccionesBaseComponent } from './base/pages/pagina-secciones-base/pagina-secciones-base.component';
@@ -42,15 +44,15 @@ import { PaginaRealizarIngresoBaseComponent } from './base/pages/pagina-realizar
 //EGRESOS
 import { PaginaEgresosBaseComponent } from './base/pages/pagina-egresos-base/pagina-egresos-base.component';
 import { PaginaRealizarEgresoBaseComponent } from './base/pages/pagina-realizar-egreso-base/pagina-realizar-egreso-base.component';
+///////////// FALTARIA VER DETALLE EGRESO BASE (PARA ADMIN ESTA)
+//PEDIDO
+import { PaginaPedidosBaseComponent } from './base/pages/pagina-pedidos-base/pagina-pedidos-base.component';
+import { PaginaRealizarPedidoBaseComponent } from './base/pages/pagina-realizar-pedido-base/pagina-realizar-pedido-base.component';
+//PRODUCTO
+import { PaginaModificarProductoBaseComponent } from './base/pages/pagina-modificar-producto-base/pagina-modificar-producto-base.component';
 
-
-
-//auth
-
+/* ------AUTH------ */
 import { authGuardFn } from './auth/guard/auth.guard-fn';
-
-import { Component } from '@angular/core';
-import { AgregarUsuarioComponent } from './usuario/components/agregar-usuario/agregar-usuario.component';
 
 
 export const routes: Routes = [
@@ -64,6 +66,7 @@ export const routes: Routes = [
     component: PaginaPrincipalAdminComponent,
     // canActivate: [authGuardFn],
   },
+
   //PROVEEDORES
   {
     path: 'admin/proveedores',
@@ -80,6 +83,7 @@ export const routes: Routes = [
     component: PaginaModificarProveedoresAdminComponent,
     // canActivate: [authGuardFn],
   },
+
   //PRODUCTOS
   {
     path: 'admin/productos',
@@ -96,6 +100,7 @@ export const routes: Routes = [
     component: PaginaModificarProductoAdminComponent,
     // canActivate: [authGuardFn],
   },
+
   //CATEGORIAS Y ETIQUETAS
   {
     path: 'admin/categorias',
@@ -122,21 +127,23 @@ export const routes: Routes = [
     component: PaginaAgregarEtiquetaAdminComponent,
     // canActivate: [authGuardFn],
   },
+
   //SECCIONES
   {
     path: 'admin/secciones',
     component: PaginaSeccionesComponent,
-      // canActivate: [authGuardFn],
+    // canActivate: [authGuardFn],
   },
+
   //EMPLEADOS
   {
     path: 'admin/empleados',
     component: PaginaEmpleadoComponent,
-      // canActivate: [authGuardFn],
-  },{
-    path:'admin/empleados/agregar',
-    component:AgregarUsuarioComponent,
     // canActivate: [authGuardFn],
+  },
+  {
+    path: 'admin/empleados/agregar',
+    component: AgregarUsuarioComponent,
   },
 
   //INGRESOS
@@ -161,6 +168,12 @@ export const routes: Routes = [
     component: PaginaRealizarEgresoAdminComponent,
     // canActivate: [authGuardFn],
   },
+  //ver si se usa el detalle
+  {
+    path: 'admin/egresos/:id',
+    component: PaginaVerDetalleEgresoAdminComponent,
+    // canActivate: [authGuardFn],
+  },
   //PEDIDOS
   {
     path: 'admin/pedidos',
@@ -172,6 +185,11 @@ export const routes: Routes = [
     component: PaginaAgregarPedidoAdminComponent,
     // canActivate: [authGuardFn],
   },
+  {
+    path: 'admin/pedidos/modificar',
+    component: PaginaModificarPedidoAdminComponent,
+    // canActivate: [authGuardFn],
+  },
 
   /* BASE */
   {
@@ -179,12 +197,25 @@ export const routes: Routes = [
     component: PaginaPrincipalBaseComponent,
     // canActivate: [authGuardFn],
   },
+  //PRODUCTOS
+  {
+    path: 'base/productos',
+    component: PaginaPrincipalBaseComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
+    path: 'base/productos/modificar/:id',
+    component: PaginaModificarProductoBaseComponent,
+    // canActivate: [authGuardFn],
+  },
+
   //SECCIONES
   {
     path: 'base/secciones',
     component: PaginaSeccionesBaseComponent,
     // canActivate: [authGuardFn],
   },
+
   //INGRESOS
   {
     path: 'base/ingresos',
@@ -196,6 +227,7 @@ export const routes: Routes = [
     component: PaginaRealizarIngresoBaseComponent,
     // canActivate: [authGuardFn],
   },
+
   //EGRESOS
   {
     path: 'base/egresos',
@@ -207,6 +239,19 @@ export const routes: Routes = [
     component: PaginaRealizarEgresoBaseComponent,
     // canActivate: [authGuardFn],
   },
+
+  //PEDIDO
+  {
+    path: 'base/pedidos',
+    component: PaginaPedidosBaseComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
+    path: 'base/pedidos/agregar',
+    component: PaginaRealizarPedidoBaseComponent,
+    // canActivate: [authGuardFn],
+  },
+
   {
     path: '**',
     redirectTo: '',

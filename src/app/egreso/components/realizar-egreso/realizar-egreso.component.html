@@ -27,8 +27,8 @@
 
   <div class="botones">
     @if(egresoRealizado){
-     <small class="exito">Venta realizada</small>
-    <button type="button" id="volver" routerLink="/admin/egresos">Volver</button> 
+    <small class="exito">Egreso realizado</small>
+    <button type="button" id="volver" routerLink="/admin/egresos">Volver</button>
     } @else { @if (tipo === 'admin') {
     <button type="button" id="cancelar" routerLink="/admin/egresos">
       Cancelar
@@ -39,7 +39,7 @@
     </button>
     }
     <button type="submit" id="agregar">Realizar</button>
-  
-  }
+
+    }
   </div>
 </form>
