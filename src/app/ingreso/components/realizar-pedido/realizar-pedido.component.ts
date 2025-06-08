@@ -30,7 +30,6 @@ export class RealizarPedidoComponent implements OnInit {
     idProducto: ['', [Validators.required]],
     cantidad: [0, [Validators.required, Validators.min(1)]],
     proveedor: [''],
-    totalCompra: [0],
   });
 
   productoService = inject(ProductoService);

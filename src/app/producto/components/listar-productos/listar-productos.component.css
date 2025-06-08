@@ -48,14 +48,6 @@ tbody tr:hover {
   width: 10%;
 }
 
-.columna-precioCompra-a {
-  width: 10%;
-}
-
-.columna-precioVenta-a {
-  width: 10%;
-}
-
 .columna-categoria-a {
   width: 10%;
 }
@@ -82,14 +74,6 @@ tbody tr:hover {
 }
 
 .columna-proveedor-b {
-  width: 10%;
-}
-
-.columna-precioCompra-b {
-  width: 10%;
-}
-
-.columna-precioVenta-b {
   width: 10%;
 }
 

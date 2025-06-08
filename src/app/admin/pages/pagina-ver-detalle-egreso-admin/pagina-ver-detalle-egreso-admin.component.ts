@@ -10,4 +10,4 @@ import { NavbarAdminComponent } from 'app/nav/components/navbar-admin/navbar-adm
   templateUrl: './pagina-ver-detalle-egreso-admin.component.html',
   styleUrl: './pagina-ver-detalle-egreso-admin.component.css',
 })
-export class PaginaVerDetalleVentaAdminComponent {}
+export class PaginaVerDetalleEgresoAdminComponent { }
