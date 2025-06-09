@@ -591,6 +591,14 @@
       "cantidad": 10,
       "razonSocialProveedor": "Thomas",
       "estado": true
+    },
+    {
+      "id": "2",
+      "fecha": "9/5/2025",
+      "producto": "Lays",
+      "cantidad": 12,
+      "razonSocialProveedor": "Fausto",
+      "estado": true
     }
   ]
 }
