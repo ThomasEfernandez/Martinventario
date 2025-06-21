@@ -1,71 +1,85 @@
 div {
-    padding: 1%;
-    
-  }
-  table {
-    width: 100%;
-    margin-top: 2rem;
-    border-collapse: collapse;
-  }
-  thead {
-    background-color: #0099ff;
-    color: #ffffff;
-  }
-  th,
-  td {
-    padding: 0.75%;
-    border: 1px solid #dddddd;
-    text-align: left;
-  }
-  tbody tr:nth-child(even) {
-    background-color: #e9e9e9;
-  }
-  tbody tr:hover {
-    background-color: #d3e3fc;
-  }
-  .columna-nombre-a {
-    width: 12.5%;
-  }
-  .columna-apellido-a {
-    width: 12.5%;
-  }
-  .columna-id-a {
-    width: 15%;
-  }
-  .columna-usuario-a {
-    width: 10%;
-  }
-  .columna-tipo-a {
-    width: 30%;
-  }
-  .columna-estado-a {
-    width: 10%;
-  }
-  .columna-eliminar-a {
-    width: 10%;
-  }
+  padding: 1%;
+}
+table {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+}
+thead {
+  background-color: #0099ff;
+  color: #ffffff;
+}
+th,
+td {
+  padding: 0.75%;
+  border: 1px solid #dddddd;
+  text-align: left;
+}
+tbody tr:nth-child(even) {
+  background-color: #e9e9e9;
+}
+tbody tr:hover {
+  background-color: #d3e3fc;
+}
+.columna-nombre-a {
+  width: 12.5%;
+}
+.columna-apellido-a {
+  width: 12.5%;
+}
+.columna-id-a {
+  width: 15%;
+}
+.columna-usuario-a {
+  width: 10%;
+}
+.columna-tipo-a {
+  width: 30%;
+}
+.columna-estado-a {
+  width: 10%;
+}
+.columna-eliminar-a {
+  width: 10%;
+}
 
-  button {
-    font-weight: bold;
-    padding: 5%;
-    background-color: #0088ee;
-    border: 0;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .modificar {
-    background-color: #fbcb5b;
-  }
-  .eliminar {
-    background-color: #ee4444;
-  }
-  button:hover {
-    background-color: #0099ff;
-  }
-  .eliminar:hover {
-    background-color: #ee6666;
-  }
-  .modificar:hover {
-    background-color: #ffdc6c;
-  }
-  
+button {
+  font-weight: bold;
+  padding: 5%;
+  background-color: #0088ee;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.modificar {
+  background-color: #fbcb5b;
+}
+.eliminar {
+  background-color: #ee4444;
+}
+button:hover {
+  background-color: #0099ff;
+}
+.eliminar:hover {
+  background-color: #ee6666;
+}
+.modificar:hover {
+  background-color: #ffdc6c;
+}
+
+.activo {
+  background-color: #22aa22;
+}
+
+.desactivado {
+  background-color: #ee4444;
+}
+
+.activo:hover {
+  background-color: #44cc44;
+}
+
+.desactivado:hover {
+  background-color: #ee6666;
+}

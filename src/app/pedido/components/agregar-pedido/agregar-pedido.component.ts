@@ -3,6 +3,8 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Pedido } from 'app/pedido/interfaces/pedido.interface';
 import { PedidoService } from 'app/pedido/services/pedido.service';
+import { Producto } from 'app/producto/interfaces/producto.interface';
+import { ProductoService } from 'app/producto/services/producto.service';
 import { Proveedor } from 'app/proveedor/interfaces/proveedor-interface';
 import { ProveedorService } from 'app/proveedor/services/proveedor.service';
 
@@ -18,8 +20,10 @@ export class AgregarPedidoComponent {
 
   pedidoService = inject(PedidoService);
   proveedorService = inject(ProveedorService);
+  productoService = inject(ProductoService);
 
   listaProveedores: Proveedor[] = [];
+  listaProductos: Producto[] = [];
 
   razonSocial: string | undefined = '';
 
@@ -30,10 +34,10 @@ export class AgregarPedidoComponent {
     id: [''],
     fecha: [
       new Date().getDate() +
-      '/' +
-      new Date().getMonth() +
-      '/' +
-      new Date().getFullYear(),
+        '/' +
+        new Date().getMonth() +
+        '/' +
+        new Date().getFullYear(),
     ],
     producto: ['', Validators.required],
     cantidad: [0, [Validators.required, Validators.min(1)]],
@@ -77,12 +81,24 @@ export class AgregarPedidoComponent {
 
   ngOnInit(): void {
     this.listarProveedores();
+    this.listarProductos();
     document.getElementById('proveedor')?.addEventListener('click', () => {
       const select = document.getElementById('proveedor') as HTMLSelectElement;
       const proveedor = this.listaProveedores.find(
         (p) => p.razonSocial === select.value
       );
       this.razonSocial = proveedor?.razonSocial;
+    });
+  }
+
+  listarProductos() {
+    this.productoService.getProductos().subscribe({
+      next: (productos: Producto[]) => {
+        this.listaProductos = productos;
+      },
+      error: (e: Error) => {
+        console.log(e.message);
+      },
     });
   }
 }
