@@ -2,6 +2,7 @@ import { Component, inject, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-listar-categorias',
@@ -11,7 +12,15 @@ import { CategoriaService } from 'app/categoria/services/categoria.service';
   styleUrl: './listar-categorias.component.css',
 })
 export class ListarCategoriasComponent {
-  @Input() tipo: string | null = null;
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 
   listaCategorias: Categoria[] = [];
   categoriaService = inject(CategoriaService);

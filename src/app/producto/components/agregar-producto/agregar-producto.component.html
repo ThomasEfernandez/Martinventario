@@ -81,25 +81,15 @@
     </div>
   </div>
   <div class="botones">
-    @if(productoAgregado){
+    @if(productoAgregado) {
     <small class="exito">Producto agregado</small>
-    @if(tipo === 'admin') {
-    <button type="button" id="volver" routerLink="/admin/productos">
+    <button type="button" id="volver" routerLink="/productos" [state]="{user}">
       Volver
     </button>
-    } @else if (tipo === 'repositor') {
-    <button type="button" id="volver" routerLink="/repositor/productos">
-      Volver
-    </button>
-    } } @else { @if(tipo === 'admin') {
-    <button type="button" id="cancelar" routerLink="/admin/productos">
+    } @else {
+    <button type="button" id="cancelar" routerLink="/productos" [state]="{user}">
       Cancelar
     </button>
-    } @else if (tipo === 'repositor') {
-    <button type="button" id="cancelar" routerLink="/repositor/productos">
-      Cancelar
-    </button>
-    }
     <button type="submit" id="agregar">Agregar producto</button>}
   </div>
 </form>

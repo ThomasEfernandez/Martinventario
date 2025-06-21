@@ -62,7 +62,7 @@ tbody tr:hover {
 }
 
 .columna-producto-b {
-  width: 25%;
+  width: 35%;
 }
 
 .columna-marca-b {
@@ -79,10 +79,6 @@ tbody tr:hover {
 
 .columna-categoria-b {
   width: 20%;
-}
-
-.columna-modificar-b {
-  width: 10%;
 }
 
 button {

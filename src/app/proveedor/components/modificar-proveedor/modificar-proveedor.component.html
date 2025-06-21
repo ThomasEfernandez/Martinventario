@@ -46,16 +46,9 @@
         <input type="text" formControlName="email" id="email" />
       </div>
     </div>
+
     <div class="botones">
-      @if(tipo === 'admin') {
-      <button type="button" id="cancelar" routerLink="/admin/proveedores">
-        Cancelar
-      </button>
-      } @else if(tipo==='repositor') {
-      <button type="button" id="cancelar" routerLink="/repositor/proveedores">
-        Cancelar
-      </button>
-      }
+      <button type="button" id="cancelar" routerLink="/proveedores" [state]="{user}">Cancelar</button>
       <button type="submit" id="agregar">Actualizar proveedor</button>
     </div>
   </form>

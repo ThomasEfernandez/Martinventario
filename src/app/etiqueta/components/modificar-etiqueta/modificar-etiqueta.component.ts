@@ -1,18 +1,28 @@
 import { Component, inject, Input } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-modificar-etiqueta',
   standalone: true,
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './modificar-etiqueta.component.html',
   styleUrl: './modificar-etiqueta.component.css',
 })
 export class ModificarEtiquetaComponent {
-  @Input() tipo: string | null = null;
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
+
 
   categoriaService = inject(CategoriaService);
 
@@ -86,11 +96,11 @@ export class ModificarEtiquetaComponent {
   putCategoriaService(categoria: Categoria) {
     this.categoriaService.putCategoria(this.id, categoria).subscribe({
       next: () => {
-        if (this.tipo === 'admin') {
-          this.router.navigateByUrl('admin/proveedores');
-        } else if (this.tipo === 'repositor') {
-          this.router.navigateByUrl('repositor/proveedores');
-        }
+        // if (this.tipo === 'admin') {
+        //   this.router.navigateByUrl('admin/proveedores');
+        // } else if (this.tipo === 'repositor') {
+        //   this.router.navigateByUrl('repositor/proveedores');
+        // }
       },
       error: (err: Error) => {
         console.log(err.message);
