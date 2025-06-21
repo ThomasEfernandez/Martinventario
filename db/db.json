@@ -80,6 +80,24 @@
       "contrasena": "aaaaa",
       "tipo": "base",
       "estado": false
+    },
+    {
+      "id": "10",
+      "nombre": "Test",
+      "apellido": "Test",
+      "usuario": "Test",
+      "contrasena": "test",
+      "tipo": "",
+      "estado": true
+    },
+    {
+      "id": "11",
+      "nombre": "Javier",
+      "apellido": "Gomez",
+      "usuario": "Javier",
+      "contrasena": "javier",
+      "tipo": "",
+      "estado": true
     }
   ],
   "productos": [
