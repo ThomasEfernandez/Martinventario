@@ -51,6 +51,7 @@ export class AgregarPedidoComponent {
       this.pedidoService.getPedidos().subscribe({
         next: (pedidos: Pedido[]) => {
           pedido.id = `${pedidos.length + 1}`;
+/*           pedido.razonSocialProveedor =  */
           this.agregarPedidoService(pedido);
           this.pedidoAgregado = true;
         },

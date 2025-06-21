@@ -8,4 +8,6 @@ import { ModificarPedidoComponent } from '../../../pedido/components/modificar-p
   templateUrl: './pagina-modificar-pedido-admin.component.html',
   styleUrl: './pagina-modificar-pedido-admin.component.css',
 })
-export class PaginaModificarPedidoAdminComponent {}
+export class PaginaModificarPedidoAdminComponent {
+  tipo: string = 'admin';
+}

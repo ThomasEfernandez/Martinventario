@@ -18,7 +18,7 @@ export class PedidoService {
     return this.http.post<Pedido>(this.url, pedido);
   }
 
-  getPedidosById(id: string): Observable<Pedido> {
+  getPedidosById(id: string | null): Observable<Pedido> {
     return this.http.get<Pedido>(`${this.url}/${id}`);
   }
 
@@ -26,7 +26,7 @@ export class PedidoService {
     return this.http.delete<Pedido>(`${this.url}/${id}`);
   }
 
-  putPedido(id: string, pedido: Pedido): Observable<Pedido> {
+  putPedido(id: string | null, pedido: Pedido): Observable<Pedido> {
     return this.http.put<Pedido>(`${this.url}/${id}`, pedido);
   }
 
