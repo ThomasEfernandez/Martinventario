@@ -3,7 +3,7 @@ div {
 }
 table {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   border-collapse: collapse;
 }
 thead {
@@ -22,26 +22,22 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
   background-color: #d3e3fc;
 }
-.columna-nombre-a {
-  width: 12.5%;
+.columna-nombre {
+  width: 16%;
 }
-.columna-apellido-a {
-  width: 12.5%;
+.columna-apellido {
+  width: 16%;
 }
-.columna-id-a {
-  width: 15%;
+.columna-id {
+  width: 7%;
 }
-.columna-usuario-a {
+.columna-usuario {
+  width: 18%;
+}
+.columna-estado {
   width: 10%;
-}
-.columna-tipo-a {
-  width: 30%;
-}
-.columna-estado-a {
-  width: 10%;
-}
-.columna-eliminar-a {
-  width: 10%;
+  text-align: center;
+  vertical-align: middle;
 }
 
 button {

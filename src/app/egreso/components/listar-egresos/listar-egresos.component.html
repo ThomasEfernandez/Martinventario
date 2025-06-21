@@ -6,7 +6,6 @@
         <th class="columna-fecha">Fecha</th>
         <th class="columna-producto">Producto</th>
         <th class="columna-cantidad">Cantidad</th>
-        <th class="columna-verDetalle">Detalle</th>
         <th class="columna-usuario">Usuario</th>
       </tr>
     </thead>
@@ -17,9 +16,6 @@
         <td>{{ egreso.fecha }}</td>
         <td>{{ egreso.producto }}</td>
         <td>{{ egreso.cantidad }}</td>
-        <td>
-          <button [routerLink]="['/admin/egreso', egreso.id]">Ver detalle</button>
-        </td>
         <td>{{ egreso.usuario }}</td>
       </tr>
       }

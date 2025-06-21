@@ -1,41 +1,36 @@
-
-<table>
-  <thead>
-    <tr>
-      @if (tipo === 'admin') {
-      <th class="columna-id-a">ID</th>
-      <th class="columna-usuario-a">Usuario</th>
-      <th class="columna-nombre-a">Nombre</th>
-      <th class="columna-apellido-a">Apellido</th>
-      <th class="columna-tipo-a">Tipo</th>
-      <th class="columna-estado-a">Estado</th>
-
-      }
-    </tr>
-  </thead>
-  <tbody>
-    @for(usuario of listaUsuarios; track $index) {
-    <tr>
-      <td>{{ usuario.id }}</td>
-      <td>{{ usuario.usuario }}</td>
-      <td>{{ usuario.nombre }}</td>
-      <td>{{ usuario.apellido }}</td>
-      <td>{{ usuario.tipo }}</td>
-      <!-- <td>{{ usuario.estado }}</td> -->
-
-      <td>
-         @if (usuario.estado) {
-        <button class="activo" (click)="usuarioDesactivado(usuario.id)">
-          Activo
-        </button>
-        } @else {
-        <button class="desactivado" (click)="usuarioActivo(usuario.id)">
-          Desactivado
-        </button>
+<div>
+  <table>
+    <thead>
+      <tr>
+        @if (tipo === 'admin') {
+        <th class="columna-id">ID</th>
+        <th class="columna-usuario">Usuario</th>
+        <th class="columna-nombre">Nombre</th>
+        <th class="columna-apellido">Apellido</th>
+        <th class="columna-estado">Estado</th>
         }
-      </td>
-    </tr>
-
-    }
-
-  </tbody>
+      </tr>
+    </thead>
+    <tbody>
+      @for(usuario of listaUsuarios; track $index) {
+      <tr>
+        <td>{{ usuario.id }}</td>
+        <td>{{ usuario.usuario }}</td>
+        <td>{{ usuario.nombre }}</td>
+        <td>{{ usuario.apellido }}</td>
+        <td class="columna-estado">
+          @if (usuario.estado) {
+          <button class="activo" (click)="usuarioDesactivado(usuario.id)">
+            Activo
+          </button>
+          } @else {
+          <button class="desactivado" (click)="usuarioActivo(usuario.id)">
+            Desactivado
+          </button>
+          }
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
