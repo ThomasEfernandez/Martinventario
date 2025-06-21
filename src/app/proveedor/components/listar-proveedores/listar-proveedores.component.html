@@ -1,4 +1,4 @@
-<div>    
+<div>
   <table>
     <thead>
       <tr>
@@ -21,7 +21,7 @@
       </tr>
     </thead>
     <tbody>
- 
+
       @for(proveedor of listaProveedores; track $index) {
       <tr>
         <td>{{ proveedor.nombre }}</td>
@@ -31,10 +31,7 @@
         <td>{{ proveedor.email }}</td>
         @if(tipo === 'admin') {
         <td>
-          <button
-            class="modificar"
-            [routerLink]="['/admin/proveedores/modificar', proveedor.id]"
-          >
+          <button class="modificar" [routerLink]="['/admin/proveedores/modificar', proveedor.id]">
             Modificar
           </button>
         </td>
@@ -51,20 +48,20 @@
         } -->
         <td>
           <button class="eliminar" (click)="eliminarProveedor(proveedor.id)">
-            
+
             Eliminar
           </button>
-          
-        
-          
-       
+
+
+
+
       </tr>
-            
+
       }
-      
+
     </tbody>
   </table>
-   <div *ngIf="mensajeExito" class="mensaje-exito">
-        {{ mensajeExito }}
-            </div>
+  <div *ngIf="mensajeExito" class="mensaje-exito">
+    {{ mensajeExito }}
+  </div>
 </div>

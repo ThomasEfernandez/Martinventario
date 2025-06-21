@@ -1,30 +1,30 @@
 <div>
    <h3>ULTIMOS INGRESOS</h3>
-    <table>
-      
-     <thead>
-            
-        <tr>
-            
-            <th>id</th>
-            <th>nombre</th>
-            <th>cantidad</th>
-            <th>fecha</th>
-            </tr>
-     </thead>
+   <table>
+
+      <thead>
+
+         <tr>
+
+            <th>Id</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Fecha</th>
+         </tr>
+      </thead>
       <tbody>
-            @for (ingreso of listaUltimosIngresos; track $index) {
-             <tr>
-                <td>{{ingreso.id}}</td>
-                <td>{{ingreso.producto}}</td>
-                <td>{{ingreso.cantidad}}</td>
-                <td>{{ingreso.fecha}}</td>
-             </tr>
-   
-           }
-         
+         @for (ingreso of listaUltimosIngresos; track $index) {
+         <tr>
+            <td>{{ingreso.id}}</td>
+            <td>{{ingreso.producto}}</td>
+            <td>{{ingreso.cantidad}}</td>
+            <td>{{ingreso.fecha}}</td>
+         </tr>
+
+         }
+
       </tbody>
-      </table>
-    
- 
+   </table>
+
+
 </div>

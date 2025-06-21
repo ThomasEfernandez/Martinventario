@@ -1,33 +1,23 @@
 <div>
    <h3>ULTIMO EGRESO</h3>
-    <table>
-     <thead>
-        <tr>
-            <th>id</th>
-            <th>fecha</th>
-            <th>nombre</th>
-            <th>cantidad</th>
-            
-            </tr>
-
-     </thead>
+   <table>
+      <thead>
+         <tr>
+            <th>Id</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Fecha</th>
+         </tr>
+      </thead>
       <tbody>
-         
-      @for (egreso of listaUltimosEgresos; track $index) {
+         @for (egreso of listaUltimosEgresos; track $index) {
          <tr>
             <td>{{egreso.id}}</td>
-            <td>{{egreso.fecha}}</td>
             <td>{{egreso.producto}}</td>
             <td>{{egreso.cantidad}}</td>
-            
+            <td>{{egreso.fecha}}</td>
          </tr>
-
-       }
-      
-         
+         }
       </tbody>
-      </table>
-
-    
- 
+   </table>
 </div>
