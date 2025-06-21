@@ -62,6 +62,9 @@ import { PaginaRealizarPedidoBaseComponent } from './base/pages/pagina-realizar-
 //AUTH
 import { authGuardFn } from './auth/guard/auth.guard-fn';
 
+import { PaginaAgregarEmpleadoComponent } from './admin/pages/pagina-agregar-empleado/pagina-agregar-empleado.component';
+
+
 export const routes: Routes = [
   {
     path: '',
@@ -157,7 +160,7 @@ export const routes: Routes = [
   },
   {
     path: 'admin/empleados/agregar',
-    component: AgregarUsuarioComponent,
+    component: PaginaAgregarEmpleadoComponent,
   },
 
   //INGRESOS

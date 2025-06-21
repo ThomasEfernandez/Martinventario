@@ -45,23 +45,13 @@
   <div class="botones">
     @if(usuarioAgregado){
     <small class="exito">Usuario agregado</small>
-    @if (usuarioNuevo === 'repositor') {
-    <button type="button" id="volver" routerLink="/admin/repositores">
+    <button type="button" id="volver" routerLink="/admin/empleados">
       Volver
     </button>
-    } @else if (usuarioNuevo === 'cajero') {
-    <button type="button" id="volver" routerLink="/admin/cajeros">
-      Volver
-    </button>
-    } } @else { @if (usuarioNuevo === 'repositor') {
-    <button type="button" id="cancelar" routerLink="/admin/repositores">
+    } @else {
+    <button type="button" id="cancelar" routerLink="/admin/empleados">
       Cancelar
     </button>
-    } @else if (usuarioNuevo === 'cajero') {
-    <button type="button" id="cancelar" routerLink="/admin/cajeros">
-      Cancelar
-    </button>
-    }
     <button type="submit" id="agregar">Agregar usuario</button>}
   </div>
 </form>

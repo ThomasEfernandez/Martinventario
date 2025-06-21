@@ -41,11 +41,11 @@ tbody tr:hover {
 }
 
 .columna-cantidad-a {
-  width: 5%;
+  width: 6%;
 }
 
 .columna-razonSocialProveedor-a {
-  width: 20%;
+  width: 15%;
 }
 
 .columna-modificar-a {
@@ -58,23 +58,23 @@ tbody tr:hover {
 
 /* base */
 .columna-id-r {
-  width: 5%;
-}
-
-.columna-fecha-r {
-  width: 10%;
-}
-
-.columna-producto-r {
-  width: 40%;
-}
-
-.columna-cantidad-r {
   width: 7%;
 }
 
+.columna-fecha-r {
+  width: 12%;
+}
+
+.columna-producto-r {
+  width: 42%;
+}
+
+.columna-cantidad-r {
+  width: 8%;
+}
+
 .columna-razonSocialProveedor-r {
-  width: 30%;
+  width: 25%;
 }
 
 .columna-realizado-r {

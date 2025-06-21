@@ -1,33 +1,35 @@
 <div>
-   <h3>ULTIMO PEDIDO</h3>
-   <table>
-      <thead>
-         <tr>
-            <th>Id</th>
-            <th>Fecha</th>
-            <th>Nombre</th>
-            <th>Cantidad</th>
+  <h3>ULTIMO PEDIDO</h3>
+  <table>
+    <thead>
+      <tr>
+        <th class="columna-id">Id</th>
+        <th class="columna-fecha">Fecha</th>
+        <th class="columna-nombre">Nombre</th>
+        <th class="columna-cantidad">Cantidad</th>
+        <th class="columna-estado">Estado</th>
+        <!-- <th class="columna-proveedor">Proveedor</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      @for (ingreso of listarUltimosPedidos; track $index) {
+      <tr>
+        <td class="columna-id">{{ingreso.id}}</td>
+        <td class="columna-fecha">{{ingreso.fecha}}</td>
+        <td class="columna-nombre">{{ingreso.producto}}</td>
+        <td class="columna-cantidad">{{ingreso.cantidad}}</td>
+        @if (ingreso.estado == false ) {
+        <td class="columna-estado">No realizado</td>
+        } @else if (ingreso.estado == true ) {
+        <td class="columna-estado">Realizado</td>
+        }
+        <!-- <td class="columna-proveedor">{{ingreso.razonSocialProveedor}}</td> -->
+      </tr>
 
-            <th>Estado</th>
-            <th>Proveedor</th>
-         </tr>
-      </thead>
-      <tbody>
-         @for (ingreso of listarUltimosPedidos; track $index) {
-         <tr>
-            <td>{{ingreso.id}}</td>
-            <td>{{ingreso.fecha}}</td>
-            <td>{{ingreso.producto}}</td>
-            <td>{{ingreso.cantidad}}</td>
+      }
 
-            <td>{{ingreso.estado}}</td>
-            <td>{{ingreso.razonSocialProveedor}}</td>
-         </tr>
-
-         }
-
-      </tbody>
-   </table>
+    </tbody>
+  </table>
 
 
 </div>

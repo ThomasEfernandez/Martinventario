@@ -6,7 +6,12 @@
       formulario.controls['producto'].touched){
       <small class="error">Campo requerido.</small>
       }
-      <input type="text" formControlName="producto" />
+      <select id="producto" formControlName="producto">
+        <option value="" disabled selected hidden>Selecciona un producto</option>
+        @for (producto of listaProductos; track $index) {
+        <option value="{{producto.nombreProducto}}">{{ producto.nombreProducto }}</option>
+        }
+      </select>
     </div>
 
     <div class="flex-box">

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule,  Validators } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 import { UsuarioService } from '../../services/usuario.service';
 import { RouterModule } from '@angular/router';
@@ -12,7 +12,6 @@ import { RouterModule } from '@angular/router';
 })
 export class AgregarUsuarioComponent {
   @Input() tipo: string | null = null;
-  @Input() usuarioNuevo: string = '';
 
   usuarioService = inject(UsuarioService);
 
@@ -35,7 +34,7 @@ export class AgregarUsuarioComponent {
       this.usuarioService.getUsuarios().subscribe({
         next: (usuarios: Usuario[]) => {
           usuario.id = `${usuarios.length + 1}`;
-          usuario.tipo = this.usuarioNuevo;
+          usuario.tipo = 'base';
           this.agregarUsuarioService(usuario);
           this.usuarioAgregado = true;
         },
