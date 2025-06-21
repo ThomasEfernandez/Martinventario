@@ -8,6 +8,7 @@ import { Producto } from 'app/producto/interfaces/producto.interface';
 import { ProductoService } from 'app/producto/services/producto.service';
 import { Proveedor } from 'app/proveedor/interfaces/proveedor-interface';
 import { ProveedorService } from 'app/proveedor/services/proveedor.service';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-agregar-producto',
@@ -17,7 +18,15 @@ import { ProveedorService } from 'app/proveedor/services/proveedor.service';
   styleUrl: './agregar-producto.component.css',
 })
 export class AgregarProductoComponent {
-  @Input() tipo: string | null = null;
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 
   listaProveedores: Proveedor[] = [];
   proveedoresService = inject(ProveedorService);

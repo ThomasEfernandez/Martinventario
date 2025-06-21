@@ -3,6 +3,7 @@ import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Proveedor } from 'app/proveedor/interfaces/proveedor-interface';
 import { ProveedorService } from 'app/proveedor/services/proveedor.service';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-agregar-proveedor',
@@ -12,7 +13,15 @@ import { ProveedorService } from 'app/proveedor/services/proveedor.service';
   styleUrl: './agregar-proveedor.component.css',
 })
 export class AgregarProveedorComponent {
-  @Input() tipo: string | null = null;
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 
   listaProveedores: Proveedor[] = [];
   proveedorService = inject(ProveedorService);

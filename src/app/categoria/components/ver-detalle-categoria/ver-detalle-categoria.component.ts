@@ -3,6 +3,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
 import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-ver-detalle-categoria',
@@ -12,7 +13,17 @@ import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
   styleUrl: './ver-detalle-categoria.component.css',
 })
 export class VerDetalleCategoriaComponent {
-  @Input() tipo: string = '';
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
+
+  catcat = history.state.categoria;
 
   categoriaService = inject(CategoriaService);
 
@@ -21,18 +32,12 @@ export class VerDetalleCategoriaComponent {
 
   router = inject(ActivatedRoute);
 
-  id: string | null = '';
-
-  eti: Etiqueta | undefined = {
-    id: '',
-    nombreEtiqueta: '',
-    estado: false,
-  };
+  categoria: string | null = '';
 
   ngOnInit(): void {
     this.router.paramMap.subscribe((params) => {
-      this.id = params.get('id');
-      this.listarEtiqueta(this.id);
+      this.categoria = params.get('cat');
+      this.listarEtiqueta(this.catcat.id);
       this.listarCategoria();
     });
   }
@@ -61,7 +66,7 @@ export class VerDetalleCategoriaComponent {
   }
 
   activarEtiqueta(id: string | null) {
-    const cat = this.catArreglo.find((c) => c.id === this.id);
+    const cat = this.catArreglo.find((c) => c.nombreCategoria === this.categoria);
     cat?.etiquetas.forEach((e) => {
       if (e.id === id) {
         e.estado = true;
@@ -83,7 +88,7 @@ export class VerDetalleCategoriaComponent {
   }
 
   desactivarEtiqueta(id: string | null) {
-    const cat = this.catArreglo.find((c) => c.id === this.id);
+    const cat = this.catArreglo.find((c) => c.nombreCategoria === this.categoria);
     cat?.etiquetas.forEach((e) => {
       if (e.id === id) {
         e.estado = false;

@@ -3,6 +3,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Proveedor } from 'app/proveedor/interfaces/proveedor-interface';
 import { ProveedorService } from 'app/proveedor/services/proveedor.service';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-modificar-proveedor',
@@ -12,7 +13,15 @@ import { ProveedorService } from 'app/proveedor/services/proveedor.service';
   styleUrl: './modificar-proveedor.component.css',
 })
 export class ModificarProveedorComponent {
-  @Input() tipo: string | null = null;
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 
   proveedorService = inject(ProveedorService);
 
@@ -55,11 +64,11 @@ export class ModificarProveedorComponent {
     this.proveedorService.putProducto(this.id, proveedor).subscribe({
       next: () => {
         console.log('Actualizado');
-        if (this.tipo === 'admin') {
-          this.router.navigateByUrl('admin/proveedores');
-        } else if (this.tipo === 'repositor') {
-          this.router.navigateByUrl('repositor/proveedores');
-        }
+        // if (this.tipo === 'admin') {
+        //   this.router.navigateByUrl('admin/proveedores');
+        // } else if (this.tipo === 'repositor') {
+        //   this.router.navigateByUrl('repositor/proveedores');
+        // }
       },
       error: (e: Error) => {
         console.log(e.message);

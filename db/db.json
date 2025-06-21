@@ -172,6 +172,14 @@
       "razonSocial": "thomi",
       "cuit": "1234567",
       "email": "thomi@gmail.com"
+    },
+    {
+      "id": "3",
+      "nombre": "Agus",
+      "apellido": "Rojas",
+      "razonSocial": "|123",
+      "cuit": "1321",
+      "email": "dasd@gmail.com"
     }
   ],
   "categorias": [

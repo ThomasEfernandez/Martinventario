@@ -1,13 +1,13 @@
 <div class="contenedor">
   <ul class="lista">
-    @if (tipo === 'admin') {
+    @if (user.tipo === 'admin') {
     <li class="item">
-      <a routerLink="/admin/proveedores">PROVEEDORES</a>
+      <a routerLink="/proveedores" [state]="{user}">PROVEEDORES</a>
     </li>
     <li class="item">
-      <a routerLink="/admin/productos/agregar">AGREGAR PRODUCTO</a>
+      <a routerLink="/productos/agregar" [state]="{user}">AGREGAR PRODUCTO</a>
     </li>
-    <li class="item"><a routerLink="/admin/categorias">CATEGORÍAS</a></li>
+    <li class="item"><a routerLink="/categorias" [state]="{user}">CATEGORÍAS</a></li>
     }
   </ul>
 </div>

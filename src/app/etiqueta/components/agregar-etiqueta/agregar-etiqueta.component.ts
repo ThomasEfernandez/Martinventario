@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
 import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-agregar-etiqueta',
@@ -13,7 +14,15 @@ import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
   styleUrl: './agregar-etiqueta.component.css',
 })
 export class AgregarEtiquetaComponent {
-  @Input() tipo: string | null = null;
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 
   listaCategorias: Categoria[] = [];
   categoriaService = inject(CategoriaService);

@@ -53,25 +53,15 @@
     <div class="botones">
       @if(proveedorRepetido) {
       <small class="repetido">Proveedor repetido</small>
-      }@if(proveedorAgregado){
+      } @if(proveedorAgregado) {
       <small class="exito">Proveedor agregado</small>
-      @if(tipo === 'admin') {
-      <button type="button" id="volver" routerLink="/admin/proveedores">
+      <button type="button" id="volver" routerLink="/proveedores" [state]="{user}">
         Volver
       </button>
-      } @else if(tipo === 'repositor') {
-      <button type="button" id="volver" routerLink="/repositor/proveedores">
-        Volver
-      </button>
-      } } @else { @if(tipo === 'admin') {
-      <button type="button" id="cancelar" routerLink="/admin/proveedores">
+      } @else {
+      <button type="button" id="cancelar" routerLink="/proveedores" [state]="{user}">
         Cancelar
       </button>
-      } @else if(tipo==='repositor') {
-      <button type="button" id="cancelar" routerLink="/repositor/proveedores">
-        Cancelar
-      </button>
-      }
       <button type="submit" id="agregar">Agregar proveedor</button>}
     </div>
   </form>

@@ -3,20 +3,29 @@ import { Proveedor } from 'app/proveedor/interfaces/proveedor-interface';
 import { ProveedorService } from 'app/proveedor/services/proveedor.service';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-listar-proveedores',
   standalone: true,
-  imports: [RouterModule,CommonModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './listar-proveedores.component.html',
   styleUrls: ['./listar-proveedores.component.css'],
 })
 export class ListarProveedorComponent {
-  @Input() tipo: string = '';
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 
   listaProveedores: Proveedor[] = [];
   proveedorService = inject(ProveedorService);
-mensajeExito:string | null = null;
+  mensajeExito: string | null = null;
 
   listar() {
     this.proveedorService.getProveedores().subscribe({
@@ -37,16 +46,16 @@ mensajeExito:string | null = null;
     this.proveedorService.deleteProveedor(id).subscribe({
       next: () => {
         this.listar();
-       this.mensajeExito =  "Se ha eliminado correctamente. "
-   
-          setTimeout(() => {
-            this.mensajeExito=null;
-          }, 3000);
+        this.mensajeExito = "Se ha eliminado correctamente. "
+
+        setTimeout(() => {
+          this.mensajeExito = null;
+        }, 3000);
       },
       error: (err) => {
         console.error('Error al eliminar el proveedor', err);
       },
     });
-    
+
   }
 }
