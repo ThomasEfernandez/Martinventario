@@ -2,17 +2,23 @@
   <ul class="lista">
     @if (tipo === 'admin') {
     <li class="item">
-      <a routerLink="/admin/categorias/agregar">AGREGAR CATEGORIA</a>
+      <a class="boton" routerLink="/admin/categorias/agregar">AGREGAR CATEGORIA</a>
     </li>
     <li class="item">
-      <a routerLink="/admin/etiquetas/agregar">AGREGAR ETIQUETA</a>
-    </li>
-    } @else if (tipo === 'repositor') {
-    <li class="item">
-      <a routerLink="/repositor/categorias/agregar">AGREGAR CATEGORIA</a>
+      <a class="boton" routerLink="/admin/etiquetas/agregar">AGREGAR ETIQUETA</a>
     </li>
     <li class="item">
-      <a routerLink="/repositor/etiquetas/agregar">AGREGAR ETIQUETA</a>
+      <a class="volver" routerLink="/admin/productos">VOLVER</a>
+    </li>
+    } @else if (tipo === 'base') {
+    <li class="item">
+      <a class="boton" routerLink="/base/categorias/agregar">AGREGAR CATEGORIA</a>
+    </li>
+    <li class="item">
+      <a class="boton" routerLink="/base/etiquetas/agregar">AGREGAR ETIQUETA</a>
+    </li>
+    <li class="item">
+      <a class="volver" routerLink="/base/productos">VOLVER</a>
     </li>
     }
   </ul>

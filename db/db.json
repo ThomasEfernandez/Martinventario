@@ -206,7 +206,23 @@
       "id": "1",
       "nombreCategoria": "Alimentos",
       "estado": true,
-      "etiquetas": []
+      "etiquetas": [
+        {
+          "id": "1",
+          "nombreEtiqueta": "Galletitas",
+          "estado": true
+        },
+        {
+          "id": "2",
+          "nombreEtiqueta": "Verduras",
+          "estado": true
+        },
+        {
+          "id": "3",
+          "nombreEtiqueta": "Carnes",
+          "estado": true
+        }
+      ]
     },
     {
       "id": "2",
@@ -533,7 +549,7 @@
       "cantidad": 33
     }
   ],
-  "entradas": [
+  "pedidos": [
     {
       "id": "1",
       "fecha": "15/10/2024",
@@ -580,6 +596,22 @@
       "producto": "MILANESAS",
       "cantidad": 1,
       "razonSocialProveedor": "Agustin",
+      "estado": false
+    },
+    {
+      "id": "7",
+      "fecha": "21/5/2025",
+      "producto": "Pepitos",
+      "cantidad": 1,
+      "razonSocialProveedor": "Fausto",
+      "estado": false
+    },
+    {
+      "id": "8",
+      "fecha": "21/5/2025",
+      "producto": "asfdada",
+      "cantidad": 1,
+      "razonSocialProveedor": "Thomas",
       "estado": false
     }
   ]

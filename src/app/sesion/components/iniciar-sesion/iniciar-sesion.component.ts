@@ -37,10 +37,10 @@ export class IniciarSesionComponent {
       this.authService.logIn();
       switch (user.tipo) {
         case 'admin':
-          this.router.navigate(['/admin']);
+          this.router.navigate(['/admin/productos']);
           break;
         case 'base':
-          this.router.navigate(['/base']);
+          this.router.navigate(['/base/productos']);
           break;
       }
     } else {

@@ -1,34 +1,33 @@
 <div>
    <h3>ULTIMO PEDIDO</h3>
-    <table>
-     <thead>
-        <tr>
-            <th>id</th>
-            <th>fecha</th>
-            <th>nombre</th>
-            <th>cantidad</th>
-        
-            <th>estado</th>
-            <th>proveedor</th>
-            </tr>
-     </thead>
-      <tbody>
-            @for (ingreso of listarUltimosPedidos; track $index) {
-             <tr>
-                <td>{{ingreso.id}}</td>
-                <td>{{ingreso.fecha}}</td>
-                <td>{{ingreso.producto}}</td>
-                <td>{{ingreso.cantidad}}</td>
-               
-                <td>{{ingreso.estado}}</td>
-                <td>{{ingreso.razonSocialProveedor}}</td>
-             </tr>
-   
-           }
-         
-      </tbody>
-      </table>
-    
- 
-</div>
+   <table>
+      <thead>
+         <tr>
+            <th>Id</th>
+            <th>Fecha</th>
+            <th>Nombre</th>
+            <th>Cantidad</th>
 
+            <th>Estado</th>
+            <th>Proveedor</th>
+         </tr>
+      </thead>
+      <tbody>
+         @for (ingreso of listarUltimosPedidos; track $index) {
+         <tr>
+            <td>{{ingreso.id}}</td>
+            <td>{{ingreso.fecha}}</td>
+            <td>{{ingreso.producto}}</td>
+            <td>{{ingreso.cantidad}}</td>
+
+            <td>{{ingreso.estado}}</td>
+            <td>{{ingreso.razonSocialProveedor}}</td>
+         </tr>
+
+         }
+
+      </tbody>
+   </table>
+
+
+</div>

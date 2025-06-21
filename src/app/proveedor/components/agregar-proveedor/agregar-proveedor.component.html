@@ -43,7 +43,11 @@
         formulario.controls['email'].touched){
         <small class="error">Campo requerido.</small>
         }
-        <input type="text" formControlName="email" id="email" />
+        @if(formulario.controls['email'].hasError('email') &&
+        formulario.controls['email'].touched){
+        <small class="error">Formato inválido.</small>
+        }
+        <input type="email" formControlName="email" id="email" />
       </div>
     </div>
     <div class="botones">
