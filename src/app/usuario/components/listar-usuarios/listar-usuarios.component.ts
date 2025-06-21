@@ -11,28 +11,58 @@ import { UsuarioService } from 'app/usuario/services/usuario.service';
 })
 export class ListarUsuariosComponent implements OnInit {
   ngOnInit(): void {
-   this.listarUsuarios();
+    this.listarUsuarios();
   }
   @Input() tipo: string = 'admin';
 
   usuarioService = inject(UsuarioService);
-  
-  listaUsuarios: Usuario[]=[]
 
+  listaUsuarios: Usuario[] = [];
 
+  usu: Usuario | undefined = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false,
+  };
 
-  listarUsuarios (){
-
+  listarUsuarios() {
     this.usuarioService.getUsuarios().subscribe({
-      next:(usuarios:Usuario[])=>{
+      next: (usuarios: Usuario[]) => {
         this.listaUsuarios = usuarios;
       },
-      error: (e:Error)=>{
+      error: (e: Error) => {
         console.log(e.message);
-        
-      }
-    })
+      },
+    });
   }
 
+  usuarioActivo(id: string | undefined) {
+    const encontrado = this.listaUsuarios.find((e) => e.id === id);
+    this.usu = encontrado;
+    if (this.usu) {
+      this.usu.estado = true;
+      this.usuarioService.putUsuario(this.usu.id, this.usu).subscribe({
+        error: (err: Error) => {
+          console.log(err.message);
+        },
+      });
+    }
+  }
 
+  usuarioDesactivado(id: string | undefined) {
+    const encontrado = this.listaUsuarios.find((e) => e.id === id);
+    this.usu = encontrado;
+    if (this.usu) {
+      this.usu.estado = false;
+      this.usuarioService.putUsuario(this.usu.id, this.usu).subscribe({
+        error: (err: Error) => {
+          console.log(err.message);
+        },
+      });
+    }
+  }
 }

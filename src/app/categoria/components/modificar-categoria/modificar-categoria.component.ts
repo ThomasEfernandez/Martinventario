@@ -47,7 +47,9 @@ export class ModificarCategoriaComponent {
       },
     });
   }
+
   categoriaModificada: boolean = false;
+  
   update() {
     if (this.formulario.invalid) return;
     const categoria = this.formulario.getRawValue();

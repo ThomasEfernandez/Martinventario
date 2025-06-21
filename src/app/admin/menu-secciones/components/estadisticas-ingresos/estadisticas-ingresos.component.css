@@ -1,7 +1,7 @@
 div {
   padding: 1%;
   background-color: #fbcb5b;
-  border: #707070;
+  border: #a7a5a5;
 }
 
 table {
@@ -15,8 +15,8 @@ thead {
 }
 
 th {
-  padding: 0.50%;
-  border: 1px solid #707070;
+  padding: 0.5%;
+  border: 1px solid black;
   text-align: left;
   background-color: #0099ff;
 }
@@ -31,11 +31,24 @@ tbody tr:hover {
 
 td {
   padding: 0.75%;
-  border: 1px solid #707070;
+  border: 1px solid black;
   text-align: left;
   background-color: #efefef;
 }
 
 h3 {
   color: white;
+}
+
+.columna-id {
+  width: 6.5%;
+}
+.columna-fecha {
+  width: 16%;
+}
+.columna-nombre {
+  width: 60%;
+}
+.columna-cantidad {
+  width: 2%;
 }

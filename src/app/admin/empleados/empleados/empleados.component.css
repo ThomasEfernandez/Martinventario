@@ -4,14 +4,14 @@
   display: flex;
   justify-content: right;
 }
-.contenedor ul {
+.lista {
   display: flex;
   list-style: none;
 }
-.contenedor ul li {
+.item {
   margin-left: 30px;
 }
-.contenedor ul li a {
+.agregar {
   background-color: #0088ee;
   text-decoration: none;
   color: #222222;
@@ -21,6 +21,21 @@
   transition: background-color 0.3s;
   cursor: pointer;
 }
-.contenedor ul li a:hover {
+.agregar:hover {
   background-color: #0099ff;
+}
+
+.volver {
+  background-color: #aaaaaa;
+  text-decoration: none;
+  color: #222222;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.volver:hover {
+  background-color: #cccccc;
 }

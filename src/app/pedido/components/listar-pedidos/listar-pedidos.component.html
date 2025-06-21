@@ -15,7 +15,7 @@
       <th class="columna-producto-r">Producto</th>
       <th class="columna-cantidad-r">Cantidad</th>
       <th class="columna-razonSocialProveedor-r">Proveedor</th>
-      <th class="columna-realizado-r">Realizado</th>
+      <th class="columna-modificar-a">Modificar</th>
       }
     </thead>
     <tbody>
@@ -28,25 +28,30 @@
         <td>{{ pedido.razonSocialProveedor }}</td>
         @if (tipo === 'admin') {
         <td>
+          @if (pedido.estado == false ) {
           <button class="modificar" [routerLink]="['/admin/pedido/modificar', pedido.id]">
             Modificar
           </button>
+          }
         </td>
-        }
+        } @else if (tipo === 'base') {
         <td>
-          @if (tipo === 'admin') { @if (pedido.estado) {
-          <button class="realizar" (click)="pedidoNoRealizado(pedido.id)">
-            Realizado
+          @if (pedido.estado == false ) {
+          <button class="modificar" [routerLink]="['/base/pedido/modificar', pedido.id]">
+            Modificar
           </button>
-          } @else {
+          }
+        </td> }
+
+        <td>
+          @if (tipo === 'admin') { @if (pedido.estado == false) {
           <button class="noRealizar" (click)="pedidoRealizado(pedido.id)">
             No realizado
           </button>
-          } } @else if (tipo === 'base') { @if(pedido.estado) {
-          <button class="realizar-d" (click)="pedidoNoRealizado(pedido.id)">Realizado</button>
           } @else {
-          <button class="noRealizar-d" (click)="pedidoRealizado(pedido.id)">No realizado</button>
-          } }
+          <button class="realizar">Realizado</button>
+          }}
+
         </td>
       </tr>
       }

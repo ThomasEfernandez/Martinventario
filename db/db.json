@@ -52,33 +52,6 @@
       "apellido": "Hourcade",
       "contrasena": "lautaro",
       "tipo": "base",
-      "estado": true
-    },
-    {
-      "id": "7",
-      "nombre": "chaldu",
-      "apellido": "chaldu",
-      "usuario": "chaldu",
-      "contrasena": "chaldu",
-      "tipo": "base",
-      "estado": true
-    },
-    {
-      "id": "8",
-      "nombre": "a",
-      "apellido": "a",
-      "usuario": "aaaa",
-      "contrasena": "aaaa",
-      "tipo": "base",
-      "estado": false
-    },
-    {
-      "id": "9",
-      "nombre": "aaa",
-      "apellido": "a",
-      "usuario": "aaaa",
-      "contrasena": "aaaaa",
-      "tipo": "base",
       "estado": false
     }
   ],
@@ -564,7 +537,7 @@
       "producto": "Pepsi",
       "cantidad": 5,
       "razonSocialProveedor": "Agustin",
-      "estado": false
+      "estado": true
     },
     {
       "id": "3",
@@ -572,7 +545,7 @@
       "producto": "cereales",
       "cantidad": 2,
       "razonSocialProveedor": "Agustin",
-      "estado": false
+      "estado": true
     },
     {
       "id": "4",
