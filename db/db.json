@@ -614,5 +614,15 @@
       "razonSocialProveedor": "Thomas",
       "estado": false
     }
+  ],
+  "pedidos": [
+    {
+      "id": "1",
+      "fecha": "8/5/2025",
+      "producto": "pepitos",
+      "cantidad": 10,
+      "razonSocialProveedor": "Thomas",
+      "estado": true
+    }
   ]
 }
