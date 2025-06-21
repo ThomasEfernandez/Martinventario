@@ -50,7 +50,7 @@ export class ListarPedidosComponent {
     }
   }
 
-  pedidoNoRealizado(id: string | undefined) {
+  /* pedidoNoRealizado(id: string | undefined) {
     const encontrado = this.listaPedidos.find((e) => e.id === id);
     this.ped = encontrado;
     if (this.ped) {
@@ -61,7 +61,7 @@ export class ListarPedidosComponent {
         },
       });
     }
-  }
+  } */
 
   ngOnInit(): void {
     this.listarPedidosService();

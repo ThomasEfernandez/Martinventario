@@ -45,10 +45,15 @@ export class ModificarPedidoComponent {
       return;
     }
 
-    const patchData = { cantidad: this.nuevaCantidad };
+    /* const patchData = { cantidad: this.nuevaCantidad }; */
+
+    const pedidoModificado: Pedido = {
+      ...this.pedidoSeleccionado,
+      cantidad: this.nuevaCantidad,
+    };
 
     this.pedidoService
-      .patchPedido(this.pedidoSeleccionado.id, patchData)
+      .patchPedido(this.pedidoSeleccionado.id, pedidoModificado)
       .subscribe({
         next: () => {
           alert('Cantidad modificada correctamente');

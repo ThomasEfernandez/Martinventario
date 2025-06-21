@@ -19,6 +19,7 @@
         <td>{{ usuario.nombre }}</td>
         <td>{{ usuario.apellido }}</td>
         <td class="columna-estado">
+          @if (usuario.tipo == 'base') {
           @if (usuario.estado) {
           <button class="activo" (click)="usuarioDesactivado(usuario.id)">
             Activo
@@ -27,6 +28,7 @@
           <button class="desactivado" (click)="usuarioActivo(usuario.id)">
             Desactivado
           </button>
+          }
           }
         </td>
       </tr>
