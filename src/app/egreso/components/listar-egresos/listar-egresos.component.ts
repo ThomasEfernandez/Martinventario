@@ -2,6 +2,7 @@ import { Component, inject, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Egreso } from 'app/egreso/interfaces/egreso.interface';
 import { EgresoService } from './../../services/egreso.service';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-listar-egresos',
@@ -10,8 +11,17 @@ import { EgresoService } from './../../services/egreso.service';
   templateUrl: './listar-egresos.component.html',
   styleUrl: './listar-egresos.component.css',
 })
+
 export class ListarEgresosComponent {
-  @Input() tipo: string = '';
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 
   egresoService = inject(EgresoService);
   listaEgresos: Egreso[] = [];

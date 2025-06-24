@@ -61,7 +61,7 @@
       "nombreProducto": "Pepitos",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": 9,
+      "cantidad": 13,
       "categoria": "Alimentos",
       "etiqueta": "Galletitas dulces"
     },
@@ -70,7 +70,7 @@
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
       "proveedor": "Agustin",
-      "cantidad": 42,
+      "cantidad": 51,
       "categoria": "Bebidas",
       "etiqueta": "Gaseosa"
     },
@@ -79,7 +79,7 @@
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
       "proveedor": "Agustin",
-      "cantidad": 6,
+      "cantidad": 5,
       "categoria": "Alimentos",
       "etiqueta": "Untables"
     },
@@ -97,7 +97,7 @@
       "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
       "proveedor": "Fausto",
-      "cantidad": 47,
+      "cantidad": 46,
       "categoria": "Higiene",
       "etiquetas": "Shampoo"
     },
@@ -115,7 +115,7 @@
       "nombreProducto": "milanesas",
       "marca": "carrefour",
       "proveedor": "Fausto",
-      "cantidad": -3,
+      "cantidad": -2,
       "categoria": "Alimentos",
       "etiquetas": "Carne"
     },
@@ -387,6 +387,34 @@
       "usuario": "admin",
       "producto": "Pepitos",
       "cantidad": 1
+    },
+    {
+      "id": "13",
+      "fecha": "24/6/2025",
+      "usuario": "",
+      "producto": "Pepitos",
+      "cantidad": 8
+    },
+    {
+      "id": "14",
+      "fecha": "24/6/2025",
+      "usuario": "",
+      "producto": "Pepitos",
+      "cantidad": 1
+    },
+    {
+      "id": "15",
+      "fecha": "24/6/2025",
+      "usuario": "",
+      "producto": "Shampoo Dove reconstruccion completa 400cc",
+      "cantidad": 1
+    },
+    {
+      "id": "16",
+      "fecha": "24/6/2025",
+      "usuario": "thomas",
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 1
     }
   ],
   "ingresos": [
@@ -528,6 +556,48 @@
       "usuario": "admin",
       "producto": "Gaseosa lima limón Sprite 2,25 lts",
       "cantidad": 33
+    },
+    {
+      "id": "20",
+      "fecha": "24/6/2025",
+      "usuario": "admin",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 8
+    },
+    {
+      "id": "21",
+      "fecha": "24/6/2025",
+      "usuario": "",
+      "producto": "Pepitos",
+      "cantidad": 10
+    },
+    {
+      "id": "22",
+      "fecha": "24/6/2025",
+      "usuario": "agustin",
+      "producto": "Pepitos",
+      "cantidad": 1
+    },
+    {
+      "id": "23",
+      "fecha": "24/6/2025",
+      "usuario": "thomas",
+      "producto": "milanesas",
+      "cantidad": 1
+    },
+    {
+      "id": "24",
+      "fecha": "24/6/2025",
+      "usuario": "thomas",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": 1
+    },
+    {
+      "id": "25",
+      "fecha": "24/6/2025",
+      "usuario": "thomas",
+      "producto": "Pepitos",
+      "cantidad": 2
     }
   ],
   "pedidos": [

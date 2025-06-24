@@ -1,10 +1,11 @@
-import { Producto } from '../../../producto/interfaces/producto.interface';
-import { ProductoService } from '../../../producto/services/producto.service';
-import { Egreso } from '../../interfaces/egreso.interface';
 import { Component, inject, Input } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { EgresoService } from '../../services/egreso.service';
 import { RouterModule } from '@angular/router';
+import { Egreso } from '../../interfaces/egreso.interface';
+import { EgresoService } from '../../services/egreso.service';
+import { Producto } from '../../../producto/interfaces/producto.interface';
+import { ProductoService } from '../../../producto/services/producto.service';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-realizar-egreso',
@@ -13,17 +14,26 @@ import { RouterModule } from '@angular/router';
   templateUrl: './realizar-egreso.component.html',
   styleUrl: './realizar-egreso.component.css',
 })
+
 export class RealizarEgresoComponent {
-  @Input() tipo: string = '';
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 
   ngOnInit() {
     this.listarProductos();
+
     document.getElementById('producto')?.addEventListener('click', () => {
       const select = document.getElementById('producto') as HTMLSelectElement;
-      const producto = this.listaProductos.find(
+      this.producto = this.listaProductos.find(
         (p) => p.nombreProducto === select.value
       );
-      this.producto = producto;
       if (this.producto) {
         this.formulario.controls['cantidad'].addValidators([
           Validators.max(this.producto.cantidad),
@@ -54,10 +64,10 @@ export class RealizarEgresoComponent {
     id: [''],
     fecha: [
       new Date().getDate() +
-        '/' +
-        (new Date().getMonth() + 1) +
-        '/' +
-        new Date().getFullYear(),
+      '/' +
+      (new Date().getMonth() + 1) +
+      '/' +
+      new Date().getFullYear(),
     ],
     usuario: [''],
     producto: ['', Validators.required],
@@ -66,26 +76,19 @@ export class RealizarEgresoComponent {
 
   realizarEgreso() {
     if (this.formulario.valid) {
-      const egreso = this.formulario.getRawValue();
+      const egreso: Egreso = this.formulario.getRawValue();
+      // this.productoService.getProductoById(this.producto?.id).subscribe({
+      // next: (producto: Producto) => {
       this.egresoService.getEgreso().subscribe({
-        next: (egresos: Egreso[]) => {
-          egreso.id = `${egresos.length + 1}`;
-          egreso.usuario = this.tipo;
-          const produ = this.listaProductos.find(
-            (p) => p.nombreProducto === egreso.producto
-          );
-          this.productoService.getProductoById(produ?.id).subscribe({
-            next: (prod: Producto) => {
-              this.realizarEgresoService(egreso);
-              this.egresoRealizado = true;
-             
-            },
-            error: (err: Error) => {
-              console.log(err.message);
-            },
-          });
+        next: (e: Egreso[]) => {
+          egreso.id = `${e.length + 1}`;
+          egreso.usuario = this.user.usuario;
+          this.realizarEgresoService(egreso);
+          this.egresoRealizado = true;
         },
-      });
+      })
+      // },
+      // });
     } else {
       this.formulario.markAllAsTouched();
     }
@@ -124,17 +127,11 @@ export class RealizarEgresoComponent {
   listarProductos() {
     this.productoService.getProductos().subscribe({
       next: (productos: Producto[]) => {
-        productos.forEach((p) => {
-          if (p.cantidad > 0) {
-            this.listaProductos.push(p);
-          }
-        });
+        this.listaProductos = productos;
       },
       error: (e: Error) => {
         console.log(e.message);
       },
     });
   }
-
-  
 }

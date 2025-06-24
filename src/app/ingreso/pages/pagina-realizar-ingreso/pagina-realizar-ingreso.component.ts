@@ -10,8 +10,6 @@ import { NavbarComponent } from 'app/nav/components/navbar/navbar.component';
   styleUrl: './pagina-realizar-ingreso.component.css',
 })
 export class PaginaRealizarIngresoComponent {
-  tipo: string = 'admin';
-
   user = history.state.user;
 
   ngOnInit() {

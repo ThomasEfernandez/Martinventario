@@ -26,20 +26,14 @@
   <input type="number" formControlName="cantidad" />
 
   <div class="botones">
-    @if(egresoRealizado){
+    @if(egresoRealizado) {
     <small class="exito">Egreso realizado</small>
-    <button type="button" id="volver" routerLink="/admin/egresos">Volver</button>
-    } @else { @if (tipo === 'admin') {
-    <button type="button" id="cancelar" routerLink="/admin/egresos">
+    <button type="button" id="volver" routerLink="/egresos" [state]="{user}">Volver</button>
+    } @else {
+    <button type="button" id="cancelar" routerLink="/egresos" [state]="{user}">
       Cancelar
     </button>
-    } @else if (tipo === 'base') {
-    <button type="button" id="cancelar" routerLink="/base/egresos">
-      Cancelar
-    </button>
-    }
     <button type="submit" id="agregar">Realizar</button>
-
     }
   </div>
 </form>

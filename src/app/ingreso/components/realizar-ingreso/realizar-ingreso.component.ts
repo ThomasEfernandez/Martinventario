@@ -14,6 +14,7 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
   templateUrl: './realizar-ingreso.component.html',
   styleUrl: './realizar-ingreso.component.css',
 })
+
 export class RealizarIngresoComponent {
   @Input() user: Usuario = {
     id: '',
@@ -36,12 +37,27 @@ export class RealizarIngresoComponent {
     });
   }
 
+
+
+
+
+
   ingresoService = inject(IngresoService);
   productoService = inject(ProductoService);
 
   listaProductos: Producto[] = [];
 
   ingresoRealizado: boolean = false;
+
+  producto: Producto | undefined = {
+    id: '',
+    nombreProducto: '',
+    cantidad: 0,
+    marca: '',
+    proveedor: '',
+    categoria: '',
+    etiqueta: '',
+  };
 
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
@@ -61,35 +77,22 @@ export class RealizarIngresoComponent {
   realizarIngreso() {
     if (this.formulario.valid) {
       const ingreso: Ingreso = this.formulario.getRawValue();
-      if (this.producto) {
-        this.productoService.getProductoById(this.producto.id).subscribe({
-          next: (producto: Producto) => {
-            this.ingresoService.getIngresos().subscribe({
-              next: (i: Ingreso[]) => {
-                ingreso.id = `${i.length + 1}`;
-                ingreso.usuario = this.user.usuario;
-                this.realizarIngresoService(ingreso);
-                this.ingresoRealizado = true;
-              },
-            });
-          },
-        });
-      }
+      // this.productoService.getProductoById(this.producto?.id).subscribe({
+      // next: (producto: Producto) => {
+      this.ingresoService.getIngresos().subscribe({
+        next: (i: Ingreso[]) => {
+          ingreso.id = `${i.length + 1}`;
+          ingreso.usuario = this.user.usuario;
+          this.realizarIngresoService(ingreso);
+          this.ingresoRealizado = true;
+        },
+      })
+      // },
+      // });
     } else {
-      console.log(this.formulario.value)
       this.formulario.markAllAsTouched();
     }
   }
-
-  producto: Producto | undefined = {
-    id: '',
-    nombreProducto: '',
-    cantidad: 0,
-    marca: '',
-    proveedor: '',
-    categoria: '',
-    etiqueta: '',
-  };
 
   realizarIngresoService(ingreso: Ingreso) {
     this.ingresoService.postIngreso(ingreso).subscribe({

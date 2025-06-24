@@ -11,16 +11,17 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
   templateUrl: './listar-ingresos.component.html',
   styleUrl: './listar-ingresos.component.css',
 })
+
 export class ListarIngresosComponent {
   @Input() user: Usuario = {
-      id: '',
-      nombre: '',
-      apellido: '',
-      usuario: '',
-      contrasena: '',
-      tipo: '',
-      estado: false
-    };
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 
   ingresoService = inject(IngresoService);
   listaIngresos: Ingreso[] = [];
@@ -29,7 +30,6 @@ export class ListarIngresosComponent {
     this.ingresoService.getIngresos().subscribe({
       next: (ingresos: Ingreso[]) => {
         this.listaIngresos = [...ingresos].reverse();
-        
       },
       error: (e: Error) => {
         console.log(e.message);

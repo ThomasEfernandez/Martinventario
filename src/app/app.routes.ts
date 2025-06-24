@@ -36,20 +36,15 @@ import { PaginaAgregarEmpleadoComponent } from './empleado/pages/pagina-agregar-
 import { PaginaIngresosComponent } from './ingreso/pages/pagina-ingresos/pagina-ingresos.component';
 import { PaginaRealizarIngresoComponent } from './ingreso/pages/pagina-realizar-ingreso/pagina-realizar-ingreso.component';
 
+//EGRESOS
+import { PaginaEgresosComponent } from './egreso/pages/pagina-egresos/pagina-egresos.component';
+import { PaginaRealizarEgresoComponent } from './egreso/pages/pagina-realizar-egreso/pagina-realizar-egreso.component';
 
 
 
 
 ///// FALTA
 
-
-//SECCIONES
-
-
-
-//EGRESOS
-import { PaginaEgresosAdminComponent } from './admin/pages/pagina-egresos-admin/pagina-egresos-admin.component';
-import { PaginaRealizarEgresoAdminComponent } from './admin/pages/pagina-realizar-egresos-admin/pagina-realizar-egresos-admin.component';
 //PEDIDOS
 import { PaginaPedidosAdminComponent } from './admin/pages/pagina-pedidos-admin/pagina-pedidos-admin.component';
 import { PaginaAgregarPedidoAdminComponent } from './admin/pages/pagina-agregar-pedido-admin/pagina-agregar-pedido-admin.component';
@@ -57,9 +52,6 @@ import { PaginaModificarPedidoAdminComponent } from './admin/pages/pagina-modifi
 
 /* ------BASE------ */
 
-//EGRESOS
-import { PaginaEgresosBaseComponent } from './base/pages/pagina-egresos-base/pagina-egresos-base.component';
-import { PaginaRealizarEgresoBaseComponent } from './base/pages/pagina-realizar-egreso-base/pagina-realizar-egreso-base.component';
 ///////////// FALTARIA VER DETALLE EGRESO BASE (PARA ADMIN ESTA)
 //PEDIDO
 import { PaginaPedidosBaseComponent } from './base/pages/pagina-pedidos-base/pagina-pedidos-base.component';
@@ -167,26 +159,26 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
 
+  //EGRESOS
+  {
+    path: 'egresos',
+    component: PaginaEgresosComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
+    path: 'realizar-egreso',
+    component: PaginaRealizarEgresoComponent,
+    // canActivate: [authGuardFn],
+  },
 
 
-  
 
 
 
 
   // FALTA
 
-  //EGRESOS
-  {
-    path: 'egresos',
-    component: PaginaEgresosAdminComponent,
-    // canActivate: [authGuardFn],
-  },
-  {
-    path: 'realizar-egreso',
-    component: PaginaRealizarEgresoAdminComponent,
-    // canActivate: [authGuardFn],
-  },
+
 
   //PEDIDOS
   {
@@ -206,18 +198,6 @@ export const routes: Routes = [
   },
 
   /* BASE */
-
-    //EGRESOS
-  {
-    path: 'base/egresos',
-    component: PaginaEgresosBaseComponent,
-    // canActivate: [authGuardFn],
-  },
-  {
-    path: 'base/realizar-egreso',
-    component: PaginaRealizarEgresoBaseComponent,
-    // canActivate: [authGuardFn],
-  },
 
   //PEDIDO
   {
