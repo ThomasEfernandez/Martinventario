@@ -5,6 +5,7 @@ import { Ingreso } from 'app/ingreso/interfaces/ingreso.interface';
 import { IngresoService } from 'app/ingreso/services/ingreso.service';
 import { Producto } from 'app/producto/interfaces/producto.interface';
 import { ProductoService } from 'app/producto/services/producto.service';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-realizar-ingreso',
@@ -14,7 +15,15 @@ import { ProductoService } from 'app/producto/services/producto.service';
   styleUrl: './realizar-ingreso.component.css',
 })
 export class RealizarIngresoComponent {
-  @Input() tipo: string = '';
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 
   ngOnInit() {
     this.listarProductos();
@@ -39,10 +48,10 @@ export class RealizarIngresoComponent {
     id: [''],
     fecha: [
       new Date().getDate() +
-        '/' +
-        (new Date().getMonth() + 1) +
-        '/' +
-        new Date().getFullYear(),
+      '/' +
+      (new Date().getMonth() + 1) +
+      '/' +
+      new Date().getFullYear(),
     ],
     usuario: [''],
     producto: ['', Validators.required],
@@ -58,7 +67,7 @@ export class RealizarIngresoComponent {
             this.ingresoService.getIngresos().subscribe({
               next: (i: Ingreso[]) => {
                 ingreso.id = `${i.length + 1}`;
-                ingreso.usuario = this.tipo;
+                ingreso.usuario = this.user.usuario;
                 this.realizarIngresoService(ingreso);
                 this.ingresoRealizado = true;
               },

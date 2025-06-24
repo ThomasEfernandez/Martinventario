@@ -3,12 +3,18 @@ import { RealizarIngresoComponent } from 'app/ingreso/components/realizar-ingres
 import { NavbarComponent } from 'app/nav/components/navbar/navbar.component';
 
 @Component({
-  selector: 'app-pagina-realizar-ingreso-admin',
+  selector: 'app-pagina-realizar-ingreso',
   standalone: true,
   imports: [NavbarComponent, RealizarIngresoComponent],
-  templateUrl: './pagina-realizar-ingreso-admin.component.html',
-  styleUrl: './pagina-realizar-ingreso-admin.component.css',
+  templateUrl: './pagina-realizar-ingreso.component.html',
+  styleUrl: './pagina-realizar-ingreso.component.css',
 })
-export class PaginaRealizarIngresoAdminComponent {
+export class PaginaRealizarIngresoComponent {
   tipo: string = 'admin';
+
+  user = history.state.user;
+
+  ngOnInit() {
+    console.log("PAGINA REALIZAR INGRESO", this.user)
+  }
 }

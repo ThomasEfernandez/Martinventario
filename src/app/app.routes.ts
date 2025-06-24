@@ -32,7 +32,9 @@ import { PaginaSeccionesComponent } from './secciones/pages/pagina-secciones/pag
 import { PaginaEmpleadosComponent } from './empleado/pages/pagina-empleados/pagina-empleados.component';
 import { PaginaAgregarEmpleadoComponent } from './empleado/pages/pagina-agregar-empleado/pagina-agregar-empleado.component';
 
-
+//INGRESOS
+import { PaginaIngresosComponent } from './ingreso/pages/pagina-ingresos/pagina-ingresos.component';
+import { PaginaRealizarIngresoComponent } from './ingreso/pages/pagina-realizar-ingreso/pagina-realizar-ingreso.component';
 
 
 
@@ -43,24 +45,18 @@ import { PaginaAgregarEmpleadoComponent } from './empleado/pages/pagina-agregar-
 
 //SECCIONES
 
-//INGRESOS
-import { PaginaIngresosAdminComponent } from './admin/pages/pagina-ingresos-admin/pagina-ingresos-admin.component';
-import { PaginaRealizarIngresoAdminComponent } from './admin/pages/pagina-realizar-ingreso-admin/pagina-realizar-ingreso-admin.component';
+
+
 //EGRESOS
 import { PaginaEgresosAdminComponent } from './admin/pages/pagina-egresos-admin/pagina-egresos-admin.component';
 import { PaginaRealizarEgresoAdminComponent } from './admin/pages/pagina-realizar-egresos-admin/pagina-realizar-egresos-admin.component';
-import { PaginaVerDetalleEgresoAdminComponent } from './admin/pages/pagina-ver-detalle-egreso-admin/pagina-ver-detalle-egreso-admin.component';
 //PEDIDOS
 import { PaginaPedidosAdminComponent } from './admin/pages/pagina-pedidos-admin/pagina-pedidos-admin.component';
 import { PaginaAgregarPedidoAdminComponent } from './admin/pages/pagina-agregar-pedido-admin/pagina-agregar-pedido-admin.component';
 import { PaginaModificarPedidoAdminComponent } from './admin/pages/pagina-modificar-pedido-admin/pagina-modificar-pedido-admin.component';
 
 /* ------BASE------ */
-//SECCIONES
-import { PaginaSeccionesBaseComponent } from './base/pages/pagina-secciones-base/pagina-secciones-base.component';
-//INGRESOS
-import { PaginaIngresosBaseComponent } from './base/pages/pagina-ingresos-base/pagina-ingresos-base.component';
-import { PaginaRealizarIngresoBaseComponent } from './base/pages/pagina-realizar-ingreso-base/pagina-realizar-ingreso-base.component';
+
 //EGRESOS
 import { PaginaEgresosBaseComponent } from './base/pages/pagina-egresos-base/pagina-egresos-base.component';
 import { PaginaRealizarEgresoBaseComponent } from './base/pages/pagina-realizar-egreso-base/pagina-realizar-egreso-base.component';
@@ -159,30 +155,27 @@ export const routes: Routes = [
     component: PaginaAgregarEmpleadoComponent,
   },
 
-
+  //INGRESOS
+  {
+    path: 'ingresos',
+    component: PaginaIngresosComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
+    path: 'realizar-ingreso',
+    component: PaginaRealizarIngresoComponent,
+    // canActivate: [authGuardFn],
+  },
 
 
 
   
 
+
+
+
   // FALTA
 
-
-
-  //SECCIONES
-
-
-  //INGRESOS
-  {
-    path: 'ingresos',
-    component: PaginaIngresosAdminComponent,
-    // canActivate: [authGuardFn],
-  },
-  {
-    path: 'realizar-ingreso',
-    component: PaginaRealizarIngresoAdminComponent,
-    // canActivate: [authGuardFn],
-  },
   //EGRESOS
   {
     path: 'egresos',
@@ -194,12 +187,7 @@ export const routes: Routes = [
     component: PaginaRealizarEgresoAdminComponent,
     // canActivate: [authGuardFn],
   },
-  //ver si se usa el detalle
-  {
-    path: 'egresos/:id',
-    component: PaginaVerDetalleEgresoAdminComponent,
-    // canActivate: [authGuardFn],
-  },
+
   //PEDIDOS
   {
     path: 'pedidos',
@@ -219,26 +207,7 @@ export const routes: Routes = [
 
   /* BASE */
 
-  //SECCIONES
-  {
-    path: 'base/secciones',
-    component: PaginaSeccionesBaseComponent,
-    // canActivate: [authGuardFn],
-  },
-
-  //INGRESOS
-  {
-    path: 'base/ingresos',
-    component: PaginaIngresosBaseComponent,
-    // canActivate: [authGuardFn],
-  },
-  {
-    path: 'base/realizar-ingreso',
-    component: PaginaRealizarIngresoBaseComponent,
-    // canActivate: [authGuardFn],
-  },
-
-  //EGRESOS
+    //EGRESOS
   {
     path: 'base/egresos',
     component: PaginaEgresosBaseComponent,

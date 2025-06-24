@@ -4,16 +4,22 @@ import { MenuIngresoComponent } from 'app/ingreso/components/menu-ingreso/menu-i
 import { NavbarComponent } from 'app/nav/components/navbar/navbar.component';
 
 @Component({
-  selector: 'app-pagina-ingresos-admin',
+  selector: 'app-pagina-ingresos',
   standalone: true,
   imports: [
     NavbarComponent,
     MenuIngresoComponent,
     ListarIngresosComponent,
   ],
-  templateUrl: './pagina-ingresos-admin.component.html',
-  styleUrl: './pagina-ingresos-admin.component.css',
+  templateUrl: './pagina-ingresos.component.html',
+  styleUrl: './pagina-ingresos.component.css',
 })
-export class PaginaIngresosAdminComponent {
+export class PaginaIngresosComponent {
   tipo: string = 'admin';
+
+  user = history.state.user;
+
+  ngOnInit() {
+    console.log("PAGINA INGRESOS", this.user)
+  }
 }

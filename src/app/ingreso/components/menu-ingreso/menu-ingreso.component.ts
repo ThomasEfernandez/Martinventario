@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-menu-ingreso',
@@ -9,5 +10,13 @@ import { RouterModule } from '@angular/router';
   styleUrl: './menu-ingreso.component.css',
 })
 export class MenuIngresoComponent {
-  @Input() tipo: string = '';
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 }
