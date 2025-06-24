@@ -43,13 +43,13 @@
     </div>
   </div>
   <div class="botones">
-    @if(usuarioAgregado){
+    @if(usuarioAgregado) {
     <small class="exito">Usuario agregado</small>
-    <button type="button" id="volver" routerLink="/admin/empleados">
+    <button type="button" id="volver" routerLink="/empleados" [state]="{user}">
       Volver
     </button>
     } @else {
-    <button type="button" id="cancelar" routerLink="/admin/empleados">
+    <button type="button" id="cancelar" routerLink="/empleados" [state]="{user}">
       Cancelar
     </button>
     <button type="submit" id="agregar">Agregar usuario</button>}

@@ -9,5 +9,9 @@ import { AgregarUsuarioComponent } from "../../../usuario/components/agregar-usu
   styleUrl: './pagina-agregar-empleado.component.css',
 })
 export class PaginaAgregarEmpleadoComponent {
-  tipo: string = 'admin';
+  user = history.state.user;
+
+  ngOnInit() {
+    console.log("PAGINA AGREGAR EMPLEADOS", this.user)
+  }
 }

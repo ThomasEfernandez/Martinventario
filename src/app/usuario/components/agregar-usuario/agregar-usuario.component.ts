@@ -1,8 +1,9 @@
-import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 import { UsuarioService } from '../../services/usuario.service';
 import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-agregar-usuario',
   standalone: true,
@@ -10,8 +11,17 @@ import { RouterModule } from '@angular/router';
   templateUrl: './agregar-usuario.component.html',
   styleUrl: './agregar-usuario.component.css',
 })
+
 export class AgregarUsuarioComponent {
-  @Input() tipo: string | null = null;
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 
   usuarioService = inject(UsuarioService);
 

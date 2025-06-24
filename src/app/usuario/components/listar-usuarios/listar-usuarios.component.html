@@ -2,13 +2,12 @@
   <table>
     <thead>
       <tr>
-        @if (tipo === 'admin') {
         <th class="columna-id">ID</th>
         <th class="columna-usuario">Usuario</th>
+        <th class="columna-constraseña">Contraseña</th>
         <th class="columna-nombre">Nombre</th>
         <th class="columna-apellido">Apellido</th>
         <th class="columna-estado">Estado</th>
-        }
       </tr>
     </thead>
     <tbody>
@@ -16,20 +15,20 @@
       <tr>
         <td>{{ usuario.id }}</td>
         <td>{{ usuario.usuario }}</td>
+        <td>{{ usuario.contrasena }}</td>
         <td>{{ usuario.nombre }}</td>
         <td>{{ usuario.apellido }}</td>
-        <td class="columna-estado">
-          @if (usuario.tipo == 'base') {
+        <td>
+          @if (usuario.tipo === 'base') {
           @if (usuario.estado) {
-          <button class="activo" (click)="usuarioDesactivado(usuario.id)">
-            Activo
+          <button class="desactivar" (click)="desactivarUsuario(usuario.id)">
+            Desactivar
           </button>
           } @else {
-          <button class="desactivado" (click)="usuarioActivo(usuario.id)">
-            Desactivado
+          <button class="activar" (click)="activarUsusario(usuario.id)">
+            Activar
           </button>
-          }
-          }
+          } }
         </td>
       </tr>
       }
