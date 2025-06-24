@@ -10,10 +10,15 @@ import { UsuarioService } from 'app/usuario/services/usuario.service';
   styleUrl: './listar-usuarios.component.css',
 })
 export class ListarUsuariosComponent implements OnInit {
-  ngOnInit(): void {
-    this.listarUsuarios();
-  }
-  @Input() tipo: string = 'admin';
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 
   usuarioService = inject(UsuarioService);
 
@@ -40,7 +45,7 @@ export class ListarUsuariosComponent implements OnInit {
     });
   }
 
-  usuarioActivo(id: string | undefined) {
+  activarUsusario(id: string | undefined) {
     const encontrado = this.listaUsuarios.find((e) => e.id === id);
     this.usu = encontrado;
     if (this.usu) {
@@ -53,7 +58,7 @@ export class ListarUsuariosComponent implements OnInit {
     }
   }
 
-  usuarioDesactivado(id: string | undefined) {
+  desactivarUsuario(id: string | undefined) {
     const encontrado = this.listaUsuarios.find((e) => e.id === id);
     this.usu = encontrado;
     if (this.usu) {
@@ -64,5 +69,9 @@ export class ListarUsuariosComponent implements OnInit {
         },
       });
     }
+  }
+
+  ngOnInit(): void {
+    this.listarUsuarios();
   }
 }

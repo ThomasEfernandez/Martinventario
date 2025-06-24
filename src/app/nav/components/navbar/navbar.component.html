@@ -8,10 +8,10 @@
   <nav class="navbar">
     <ul>
       <li>
-        <a routerLink="/productos">PRODUCTOS</a>
+        <a routerLink="/productos" [state]="{user}">PRODUCTOS</a>
       </li>
       <li>
-        <a routerLink="/admin/secciones">SECCIONES</a>
+        <a routerLink="/secciones" [state]="{user}">SECCIONES</a>
       </li>
       <li>
         <a routerLink="/">CERRAR SESION</a>

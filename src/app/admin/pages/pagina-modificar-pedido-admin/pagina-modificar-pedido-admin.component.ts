@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navbar-admin.component';
+import { NavbarComponent } from '../../../nav/components/navbar/navbar.component';
 import { ModificarPedidoComponent } from '../../../pedido/components/modificar-pedido/modificar-pedido.component';
 
 @Component({
   selector: 'app-pagina-modificar-pedido-admin',
-  imports: [NavbarAdminComponent, ModificarPedidoComponent],
+  imports: [NavbarComponent, ModificarPedidoComponent],
   templateUrl: './pagina-modificar-pedido-admin.component.html',
   styleUrl: './pagina-modificar-pedido-admin.component.css',
 })

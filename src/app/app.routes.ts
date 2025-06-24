@@ -1,6 +1,9 @@
 import { Routes } from '@angular/router';
+import { authGuardFn } from './auth/guard/auth.guard-fn';
 
 import { PaginaIniciarSesionComponent } from './sesion/pages/pagina-iniciar-sesion/pagina-iniciar-sesion.component';
+
+/* PRODUCTOS */
 
 // PRODUCTO
 import { PaginaProductosComponent } from './producto/pages/pagina-productos/pagina-productos.component';
@@ -22,15 +25,24 @@ import { PaginaModificarCategoriaComponent } from './categoria/pages/pagina-modi
 import { PaginaAgregarEtiquetaComponent } from './etiqueta/pages/pagina-agregar-etiqueta/pagina-agregar-etiqueta.component';
 import { PaginaModificarEtiquetaComponent } from './etiqueta/pages/pagina-modificar-etiqueta/pagina-modificar-etiqueta.component';
 
+/* SECCIONES */
+import { PaginaSeccionesComponent } from './secciones/pages/pagina-secciones/pagina-secciones.component';
+
+//EMPLEADOS
+import { PaginaEmpleadosComponent } from './empleado/pages/pagina-empleados/pagina-empleados.component';
+import { PaginaAgregarEmpleadoComponent } from './empleado/pages/pagina-agregar-empleado/pagina-agregar-empleado.component';
+
+
+
+
+
+
 
 ///// FALTA
 
 
 //SECCIONES
-import { PaginaSeccionesComponent } from './admin/pages/pagina-secciones/pagina-secciones.component';
-//EMPLEADOS
-import { PaginaEmpleadoComponent } from './admin/pages/pagina-empleado/pagina-empleado.component';
-import { AgregarUsuarioComponent } from './usuario/components/agregar-usuario/agregar-usuario.component';
+
 //INGRESOS
 import { PaginaIngresosAdminComponent } from './admin/pages/pagina-ingresos-admin/pagina-ingresos-admin.component';
 import { PaginaRealizarIngresoAdminComponent } from './admin/pages/pagina-realizar-ingreso-admin/pagina-realizar-ingreso-admin.component';
@@ -57,13 +69,7 @@ import { PaginaRealizarEgresoBaseComponent } from './base/pages/pagina-realizar-
 import { PaginaPedidosBaseComponent } from './base/pages/pagina-pedidos-base/pagina-pedidos-base.component';
 import { PaginaRealizarPedidoBaseComponent } from './base/pages/pagina-realizar-pedido-base/pagina-realizar-pedido-base.component';
 
-
-
-//AUTH
-import { authGuardFn } from './auth/guard/auth.guard-fn';
-
-import { PaginaAgregarEmpleadoComponent } from './admin/pages/pagina-agregar-empleado/pagina-agregar-empleado.component';
-
+// FIN
 
 export const routes: Routes = [
   {
@@ -135,75 +141,78 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
 
-
-
-
-
-
-
-  // FALTA
-
-
-
   //SECCIONES
   {
-    path: 'admin/secciones',
+    path: 'secciones',
     component: PaginaSeccionesComponent,
     // canActivate: [authGuardFn],
   },
 
   //EMPLEADOS
   {
-    path: 'admin/empleados',
-    component: PaginaEmpleadoComponent,
+    path: 'empleados',
+    component: PaginaEmpleadosComponent,
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/empleados/agregar',
+    path: 'empleados/agregar',
     component: PaginaAgregarEmpleadoComponent,
   },
 
+
+
+
+
+  
+
+  // FALTA
+
+
+
+  //SECCIONES
+
+
   //INGRESOS
   {
-    path: 'admin/ingresos',
+    path: 'ingresos',
     component: PaginaIngresosAdminComponent,
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/realizar-ingreso',
+    path: 'realizar-ingreso',
     component: PaginaRealizarIngresoAdminComponent,
     // canActivate: [authGuardFn],
   },
   //EGRESOS
   {
-    path: 'admin/egresos',
+    path: 'egresos',
     component: PaginaEgresosAdminComponent,
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/realizar-egreso',
+    path: 'realizar-egreso',
     component: PaginaRealizarEgresoAdminComponent,
     // canActivate: [authGuardFn],
   },
   //ver si se usa el detalle
   {
-    path: 'admin/egresos/:id',
+    path: 'egresos/:id',
     component: PaginaVerDetalleEgresoAdminComponent,
     // canActivate: [authGuardFn],
   },
   //PEDIDOS
   {
-    path: 'admin/pedidos',
+    path: 'pedidos',
     component: PaginaPedidosAdminComponent,
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/pedidos/agregar',
+    path: 'pedidos/agregar',
     component: PaginaAgregarPedidoAdminComponent,
     // canActivate: [authGuardFn],
   },
   {
-    path: 'admin/pedidos/modificar',
+    path: 'pedidos/modificar',
     component: PaginaModificarPedidoAdminComponent,
     // canActivate: [authGuardFn],
   },
