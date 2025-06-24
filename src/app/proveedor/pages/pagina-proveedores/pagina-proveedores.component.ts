@@ -12,7 +12,8 @@ import { ListarProveedorComponent } from 'app/proveedor/components/listar-provee
 })
 export class PaginaProveedoresComponent {
   user = history.state.user;
+
   ngOnInit() {
-    console.log(this.user)
+    console.log("PAGINA PROVEEDORES", this.user)
   }
 }

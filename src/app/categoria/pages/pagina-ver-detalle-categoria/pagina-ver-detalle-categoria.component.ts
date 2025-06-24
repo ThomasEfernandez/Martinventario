@@ -12,4 +12,8 @@ import { VerDetalleCategoriaComponent } from '../../../categoria/components/ver-
 export class PaginaVerDetalleCategoriaComponent {
   user = history.state.user;
   categoria = history.state.categoria;
+
+  ngOnInit() {
+    console.log("PAGINA VER DETALLE CATEGORIA", this.user)
+  }
 }

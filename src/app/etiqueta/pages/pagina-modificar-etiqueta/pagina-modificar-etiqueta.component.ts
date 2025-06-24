@@ -11,4 +11,8 @@ import { ModificarEtiquetaComponent } from '../../components/modificar-etiqueta/
 })
 export class PaginaModificarEtiquetaComponent {
   user = history.state.user;
+
+  ngOnInit() {
+    console.log("PAGINA MODIFICAR ETIQUETA", this.user)
+  }
 }

@@ -11,4 +11,8 @@ import { AgregarProductoComponent } from 'app/producto/components/agregar-produc
 })
 export class PaginaAgregarProductoComponent {
   user = history.state.user;
+
+  ngOnInit() {
+    console.log("PAGINA AGREGAR PRODUCTO", this.user)
+  }
 }

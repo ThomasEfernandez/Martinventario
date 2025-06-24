@@ -11,4 +11,8 @@ import { AgregarEtiquetaComponent } from '../../components/agregar-etiqueta/agre
 })
 export class PaginaAgregarEtiquetaComponent {
   user = history.state.user;
+
+  ngOnInit() {
+    console.log("PAGINA AGREGAR ETIQUETA", this.user)
+  }
 }

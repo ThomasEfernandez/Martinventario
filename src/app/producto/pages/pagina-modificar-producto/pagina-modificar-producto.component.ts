@@ -11,4 +11,8 @@ import { ModificarProductoComponent } from '../../components/modificar-producto/
 })
 export class PaginaModificarProductoComponent {
   user = history.state.user;
+
+  ngOnInit() {
+    console.log("PAGINA MODIFICAR PRODUCTO", this.user)
+  }
 }

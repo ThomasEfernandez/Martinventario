@@ -11,4 +11,8 @@ import { AgregarProveedorComponent } from 'app/proveedor/components/agregar-prov
 })
 export class PaginaAgregarProveedorComponent {
   user = history.state.user;
+
+  ngOnInit() {
+    console.log("PAGINA AGREGAR PROVEEDOR", this.user)
+  }
 }

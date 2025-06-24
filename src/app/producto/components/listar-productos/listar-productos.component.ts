@@ -24,7 +24,6 @@ export class ListarProductosComponent {
 
   ngOnInit(): void {
     this.cargarListaProd();
-    console.log(this.user)
   }
 
   listaProductos: Producto[] = [];

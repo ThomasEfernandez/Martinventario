@@ -11,4 +11,8 @@ import { AgregarCategoriaComponent } from '../../../categoria/components/agregar
 })
 export class PaginaAgregarCategoriaComponent {
   user = history.state.user;
+
+  ngOnInit() {
+    console.log("PAGINA AGREGAR CATEGORIA", this.user)
+  }
 }
