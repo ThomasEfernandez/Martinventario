@@ -143,8 +143,12 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
 
-
-
+  //SECCIONES
+  {
+    path: 'secciones',
+    component: PaginaSeccionesComponent,
+    // canActivate: [authGuardFn],
+  },
 
 
 
@@ -154,11 +158,7 @@ export const routes: Routes = [
 
 
   //SECCIONES
-  {
-    path: 'admin/secciones',
-    component: PaginaSeccionesComponent,
-    // canActivate: [authGuardFn],
-  },
+
 
   //EMPLEADOS
   {
