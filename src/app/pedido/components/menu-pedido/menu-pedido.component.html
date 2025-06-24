@@ -1,4 +1,4 @@
-<div class="contenedor">
+<!-- <div class="contenedor">
   <ul class="lista">
     @if (tipo === 'admin') {
     <li class="item">
@@ -15,5 +15,16 @@
       <a class="volver" routerLink="/base/secciones">VOLVER</a>
     </li>
     }
+  </ul>
+</div> -->
+
+<div class="contenedor">
+  <ul class="lista">
+    <li class="item">
+      <a class="boton" routerLink="/pedidos/agregar" [state]="{user}">AGREGAR PROVEEDOR</a>
+    </li>
+    <li class="item">
+      <a class="volver" routerLink="/pedidos" [state]="{user}">VOLVER</a>
+    </li>
   </ul>
 </div>

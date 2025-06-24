@@ -9,5 +9,5 @@ import { ModificarPedidoComponent } from '../../../pedido/components/modificar-p
   styleUrl: './pagina-modificar-pedido-admin.component.css',
 })
 export class PaginaModificarPedidoAdminComponent {
-  tipo: string = 'admin';
+  user = history.state.user;
 }

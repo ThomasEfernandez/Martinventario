@@ -593,7 +593,7 @@
       "producto": "asfdada",
       "cantidad": 1,
       "razonSocialProveedor": "Thomas",
-      "estado": false
+      "estado": true
     }
   ]
 }
