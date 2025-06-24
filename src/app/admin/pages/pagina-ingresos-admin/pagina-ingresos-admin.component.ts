@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { ListarIngresosComponent } from 'app/ingreso/components/listar-ingresos/listar-ingresos.component';
 import { MenuIngresoComponent } from 'app/ingreso/components/menu-ingreso/menu-ingreso.component';
-import { NavbarAdminComponent } from 'app/nav/components/navbar-admin/navbar-admin.component';
+import { NavbarComponent } from 'app/nav/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-pagina-ingresos-admin',
   standalone: true,
   imports: [
-    NavbarAdminComponent,
+    NavbarComponent,
     MenuIngresoComponent,
     ListarIngresosComponent,
   ],

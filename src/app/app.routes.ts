@@ -22,12 +22,20 @@ import { PaginaModificarCategoriaComponent } from './categoria/pages/pagina-modi
 import { PaginaAgregarEtiquetaComponent } from './etiqueta/pages/pagina-agregar-etiqueta/pagina-agregar-etiqueta.component';
 import { PaginaModificarEtiquetaComponent } from './etiqueta/pages/pagina-modificar-etiqueta/pagina-modificar-etiqueta.component';
 
+//SECCIONES
+import { PaginaSeccionesComponent } from './secciones/pages/pagina-secciones/pagina-secciones.component';
+
+
+
+
+
+
 
 ///// FALTA
 
 
 //SECCIONES
-import { PaginaSeccionesComponent } from './admin/pages/pagina-secciones/pagina-secciones.component';
+
 //EMPLEADOS
 import { PaginaEmpleadoComponent } from './admin/pages/pagina-empleado/pagina-empleado.component';
 import { AgregarUsuarioComponent } from './usuario/components/agregar-usuario/agregar-usuario.component';

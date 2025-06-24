@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navbar-admin.component';
+import { NavbarComponent } from '../../../nav/components/navbar/navbar.component';
 import { EmpleadosComponent } from '../../empleados/empleados/empleados.component';
 
 @Component({
   selector: 'app-pagina-empleado',
   standalone: true,
-  imports: [NavbarAdminComponent, EmpleadosComponent],
+  imports: [NavbarComponent, EmpleadosComponent],
   templateUrl: './pagina-empleado.component.html',
   styleUrl: './pagina-empleado.component.css',
 })
-export class PaginaEmpleadoComponent {}
+export class PaginaEmpleadoComponent { }

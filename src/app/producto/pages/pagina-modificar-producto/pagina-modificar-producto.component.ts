@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NavbarAdminComponent } from '../../../nav/components/navbar-admin/navbar-admin.component';
+import { NavbarComponent } from '../../../nav/components/navbar/navbar.component';
 import { ModificarProductoComponent } from '../../components/modificar-producto/modificar-producto.component';
 
 @Component({
   selector: 'app-pagina-modificar-producto',
   standalone: true,
-  imports: [NavbarAdminComponent, ModificarProductoComponent],
+  imports: [NavbarComponent, ModificarProductoComponent],
   templateUrl: './pagina-modificar-producto.component.html',
   styleUrl: './pagina-modificar-producto.component.css',
 })
