@@ -20,10 +20,11 @@
         <td>{{ proveedor.cuit }}</td>
         <td>{{ proveedor.email }}</td>
         <td>
-          <button class="modificar" [routerLink]="['/proveedores/modificar', proveedor.id]" [state]="{user}">
+          <button class="modificar" [routerLink]="['/modificar-proveedor', proveedor.id]" [state]="{user}">
             Modificar
           </button>
         </td>
+        <!-- ver si se usa eliminar o no -->
         <td>
           <button class="eliminar" (click)="eliminarProveedor(proveedor.id)">
             Eliminar

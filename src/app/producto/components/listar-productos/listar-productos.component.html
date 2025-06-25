@@ -30,7 +30,7 @@
         <td>{{ producto.categoria }}</td>
         @if(user.tipo === 'admin') {
         <td>
-          <button class="modificar" [routerLink]="['/productos/modificar', producto.id]"
+          <button class="modificar" [routerLink]="['/modificar-producto', producto.id]"
             [state]="{user}">Modificar</button>
         </td>
         }

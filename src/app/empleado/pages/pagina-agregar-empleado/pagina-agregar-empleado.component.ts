@@ -8,6 +8,7 @@ import { AgregarUsuarioComponent } from "../../../usuario/components/agregar-usu
   templateUrl: './pagina-agregar-empleado.component.html',
   styleUrl: './pagina-agregar-empleado.component.css',
 })
+
 export class PaginaAgregarEmpleadoComponent {
   user = history.state.user;
 

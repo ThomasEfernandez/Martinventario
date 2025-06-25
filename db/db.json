@@ -295,12 +295,6 @@
       "nombreCategoria": "Educacion",
       "estado": true,
       "etiquetas": []
-    },
-    {
-      "id": "9",
-      "nombreCategoria": "Alimentos",
-      "estado": false,
-      "etiquetas": []
     }
   ],
   "egresos": [

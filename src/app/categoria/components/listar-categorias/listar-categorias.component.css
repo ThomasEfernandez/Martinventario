@@ -27,19 +27,19 @@ tbody tr:hover {
   background-color: #d3e3fc;
 }
 
-.columna-categoria-a {
+.columna-categoria {
   width: 70%;
 }
 
-.columna-verDetalle-a {
+.columna-verDetalle {
   width: 10%;
 }
 
-.columna-modificar-a {
+.columna-modificar {
   width: 10%;
 }
 
-.columna-estado-a {
+.columna-estado {
   width: 10%;
 }
 

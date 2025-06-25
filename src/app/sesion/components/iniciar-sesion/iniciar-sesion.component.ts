@@ -35,18 +35,8 @@ export class IniciarSesionComponent {
     const sesion = this.formulario.getRawValue();
     const user = this.buscarUsuario(sesion);
     if (user) {
-      this.authService.logIn();
-
+      //this.authService.logIn();
       this.router.navigate(['/productos'], { state: { user } });
-
-      // switch (user.tipo) {
-      //   case 'admin':
-      //     this.router.navigate(['/admin/productos']);
-      //     break;
-      //   case 'base':
-      //     this.router.navigate(['/base/productos']);
-      //     break;
-      // }
     } else {
       console.log('Credenciales incorrectas. Contáctese con el admin.');
     }
