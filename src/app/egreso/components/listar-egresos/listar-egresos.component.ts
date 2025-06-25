@@ -26,7 +26,7 @@ export class ListarEgresosComponent {
   egresoService = inject(EgresoService);
   listaEgresos: Egreso[] = [];
 
-  traerEgresos() {
+  listarEgresos() {
     this.egresoService.getEgreso().subscribe({
       next: (egresos: Egreso[]) => {
         this.listaEgresos = [...egresos].reverse();
@@ -38,6 +38,6 @@ export class ListarEgresosComponent {
   }
 
   ngOnInit() {
-    this.traerEgresos();
+    this.listarEgresos();
   }
 }

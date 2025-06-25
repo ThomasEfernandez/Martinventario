@@ -50,12 +50,6 @@ import { PaginaPedidosAdminComponent } from './admin/pages/pagina-pedidos-admin/
 import { PaginaAgregarPedidoAdminComponent } from './admin/pages/pagina-agregar-pedido-admin/pagina-agregar-pedido-admin.component';
 import { PaginaModificarPedidoAdminComponent } from './admin/pages/pagina-modificar-pedido-admin/pagina-modificar-pedido-admin.component';
 
-/* ------BASE------ */
-
-///////////// FALTARIA VER DETALLE EGRESO BASE (PARA ADMIN ESTA)
-//PEDIDO
-import { PaginaPedidosBaseComponent } from './base/pages/pagina-pedidos-base/pagina-pedidos-base.component';
-import { PaginaRealizarPedidoBaseComponent } from './base/pages/pagina-realizar-pedido-base/pagina-realizar-pedido-base.component';
 
 // FIN
 
@@ -197,19 +191,6 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
 
-  /* BASE */
-
-  //PEDIDO
-  {
-    path: 'base/pedidos',
-    component: PaginaPedidosBaseComponent,
-    // canActivate: [authGuardFn],
-  },
-  {
-    path: 'base/pedidos/agregar',
-    component: PaginaRealizarPedidoBaseComponent,
-    // canActivate: [authGuardFn],
-  },
 
   {
     path: '**',

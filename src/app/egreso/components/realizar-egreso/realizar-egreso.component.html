@@ -12,6 +12,7 @@
     </option>
     }
   </select>
+
   <label>Cantidad</label>
   @if (formulario.controls['cantidad'].getError('required') &&
   formulario.controls['cantidad'].touched) {
@@ -30,9 +31,7 @@
     <small class="exito">Egreso realizado</small>
     <button type="button" id="volver" routerLink="/egresos" [state]="{user}">Volver</button>
     } @else {
-    <button type="button" id="cancelar" routerLink="/egresos" [state]="{user}">
-      Cancelar
-    </button>
+    <button type="button" id="cancelar" routerLink="/egresos" [state]="{user}">Cancelar</button>
     <button type="submit" id="agregar">Realizar</button>
     }
   </div>
