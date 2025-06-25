@@ -11,5 +11,8 @@ import { ListarPedidosComponent } from '../../../pedido/components/listar-pedido
   styleUrl: './pagina-pedidos-admin.component.css',
 })
 export class PaginaPedidosAdminComponent {
-  tipo: string = 'admin';
+  user = history.state.user;
+  ngOnInit() {
+    console.log(this.user);
+  }
 }

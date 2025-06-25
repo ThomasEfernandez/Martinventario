@@ -2,16 +2,26 @@ import { Component, inject, Input } from '@angular/core';
 import { Pedido } from '../../interfaces/pedido.interface';
 import { PedidoService } from '../../services/pedido.service';
 import { RouterModule } from '@angular/router';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-listar-pedidos',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './listar-pedidos.component.html',
   styleUrl: './listar-pedidos.component.css',
 })
 export class ListarPedidosComponent {
-  @Input() tipo: string = '';
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false,
+  };
 
   pedidoService = inject(PedidoService);
 

@@ -1,18 +1,27 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, Input } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Pedido } from 'app/pedido/interfaces/pedido.interface';
 import { PedidoService } from 'app/pedido/services/pedido.service';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-modificar-pedido',
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, ReactiveFormsModule],
   templateUrl: './modificar-pedido.component.html',
   styleUrl: './modificar-pedido.component.css',
 })
 export class ModificarPedidoComponent {
-  @Input() tipo: string | null = null;
+  @Input() user: Usuario = {
+      id: '',
+      nombre: '',
+      apellido: '',
+      usuario: '',
+      contrasena: '',
+      tipo: '',
+      estado: false
+    };
 
   pedidoService = inject(PedidoService);
 

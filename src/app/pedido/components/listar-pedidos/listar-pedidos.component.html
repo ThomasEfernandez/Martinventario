@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <table>
     <thead>
       @if(tipo === 'admin') {
@@ -57,4 +57,58 @@
       }
     </tbody>
   </table>
+</div>
+ -->
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th class="columna-id-a">Id</th>
+        <th class="columna-fecha-a">Fecha</th>
+        <th class="columna-producto-a">Producto</th>
+        <th class="columna-cantidad-a">Cantidad</th>
+        <th class="columna-razonSocialProveedor-a">Proveedor</th>
+        <th class="columna-modificar-a">Modificar</th>
+        @if (user.nombre == 'admin') {
+        <th class="columna-realizado-a">Realizado</th>
+        }
+      </tr>
+    </thead>
+    <tbody>
+      @for(pedido of listaPedidos; track $index) {
+      <tr>
+        <td>{{ pedido.id }}</td>
+        <td>{{ pedido.fecha }}</td>
+        <td>{{ pedido.producto }}</td>
+        <td>{{ pedido.cantidad }}</td>
+        <td>{{ pedido.razonSocialProveedor }}</td>
+        <td>
+          @if (pedido.estado == false ) {
+          <button class="modificar" [routerLink]="['/pedidos/modificar', pedido.id]" [state]="{user}">
+            Modificar
+          </button>
+          }
+        </td>
+
+
+        <td>
+          @if (user.nombre == 'admin') {
+          @if (pedido.estado == false) {
+          <button class="noRealizar" (click)="pedidoRealizado(pedido.id)">
+            No realizado
+          </button>
+          } @else {
+          <button class="realizar">Realizado</button>
+          }}
+
+        </td>
+      </tr>
+      }
+    </tbody>
+
+  </table>
+  <!-- <div **ngIf="mensajeExito" class="mensaje-exito">
+    {{ mensajeExito }}
+  </div> -->
 </div>
