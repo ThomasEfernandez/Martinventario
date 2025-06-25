@@ -12,4 +12,8 @@ import { ListarCategoriasComponent } from '../../../categoria/components/listar-
 })
 export class PaginaCategoriasComponent {
   user = history.state.user;
+
+  ngOnInit() {
+    console.log("PAGINA CATEGORIAS", this.user)
+  }
 }

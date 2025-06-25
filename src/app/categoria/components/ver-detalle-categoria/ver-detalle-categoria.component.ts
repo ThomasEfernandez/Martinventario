@@ -46,7 +46,6 @@ export class VerDetalleCategoriaComponent {
     this.categoriaService.getCategoriaById(id).subscribe({
       next: (aux: Categoria) => {
         this.arrEtiquetas = aux.etiquetas;
-        console.log(this.arrEtiquetas);
       },
       error: (err: Error) => {
         console.log(err.message);

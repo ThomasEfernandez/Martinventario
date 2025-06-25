@@ -12,4 +12,8 @@ import { MenuSeccionesComponent } from 'app/secciones/components/menu-secciones/
 })
 export class PaginaSeccionesComponent {
   user = history.state.user;
+
+  ngOnInit() {
+    console.log("PAGINA SECCIONES", this.user)
+  }
 }

@@ -12,6 +12,7 @@ import { AuthService } from 'app/auth/service/auth.service';
   templateUrl: './iniciar-sesion.component.html',
   styleUrl: './iniciar-sesion.component.css',
 })
+
 export class IniciarSesionComponent {
   router = inject(Router);
 
@@ -34,18 +35,8 @@ export class IniciarSesionComponent {
     const sesion = this.formulario.getRawValue();
     const user = this.buscarUsuario(sesion);
     if (user) {
-      this.authService.logIn();
-
+      //this.authService.logIn();
       this.router.navigate(['/productos'], { state: { user } });
-
-      // switch (user.tipo) {
-      //   case 'admin':
-      //     this.router.navigate(['/admin/productos']);
-      //     break;
-      //   case 'base':
-      //     this.router.navigate(['/base/productos']);
-      //     break;
-      // }
     } else {
       console.log('Credenciales incorrectas. Contáctese con el admin.');
     }

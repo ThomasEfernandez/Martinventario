@@ -11,4 +11,8 @@ import { ModificarProveedorComponent } from '../../components/modificar-proveedo
 })
 export class PaginaModificarProveedoresComponent {
   user = history.state.user;
+
+  ngOnInit() {
+    console.log("PAGINA MODIFICAR PROVEEDOR", this.user)
+  }
 }

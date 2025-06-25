@@ -1,19 +1,10 @@
 <div class="contenedor">
   <ul class="lista">
-    @if (tipo === 'admin') {
     <li class="item">
-      <a class="agregar" routerLink="/admin/realizar-ingreso">REALIZAR INGRESO</a>
+      <a class="boton" routerLink="/realizar-ingreso" [state]="{user}">REALIZAR INGRESO</a>
     </li>
     <li class="item">
-      <a class="volver" routerLink="/admin/secciones">VOLVER</a>
+      <a class="volver" routerLink="/secciones" [state]="{user}">VOLVER</a>
     </li>
-    } @else if (tipo === 'base') {
-    <li class="item">
-      <a class="agregar" routerLink="/base/realizar-ingreso">REALIZAR INGRESO</a>
-    </li>
-    <li class="item">
-      <a class="volver" routerLink="/base/secciones">VOLVER</a>
-    </li>
-    }
   </ul>
 </div>

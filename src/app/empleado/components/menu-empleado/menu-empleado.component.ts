@@ -8,6 +8,7 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
   templateUrl: './menu-empleado.component.html',
   styleUrl: './menu-empleado.component.css'
 })
+
 export class MenuEmpleadoComponent {
   @Input() user: Usuario = {
     id: '',

@@ -1,12 +1,27 @@
-import { Component } from '@angular/core';
-import { NavbarDefaultComponent } from '../../../nav/components/navbar-default/navbar-default.component';
+import { Component, Input } from '@angular/core';
+import { NavbarComponent } from '../../../nav/components/navbar/navbar.component';
 import { IniciarSesionComponent } from '../../components/iniciar-sesion/iniciar-sesion.component';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-pagina-iniciar-sesion',
   standalone: true,
-  imports: [NavbarDefaultComponent, IniciarSesionComponent],
+  imports: [NavbarComponent, IniciarSesionComponent],
   templateUrl: './pagina-iniciar-sesion.component.html',
   styleUrl: './pagina-iniciar-sesion.component.css',
 })
-export class PaginaIniciarSesionComponent {}
+export class PaginaIniciarSesionComponent {
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
+
+  ngOnInit() {
+    console.log("PAGINA INICIAR SESION", this.user)
+  }
+}

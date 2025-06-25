@@ -2,6 +2,7 @@ import { Component, inject, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Ingreso } from 'app/ingreso/interfaces/ingreso.interface';
 import { IngresoService } from 'app/ingreso/services/ingreso.service';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-listar-ingresos',
@@ -10,8 +11,17 @@ import { IngresoService } from 'app/ingreso/services/ingreso.service';
   templateUrl: './listar-ingresos.component.html',
   styleUrl: './listar-ingresos.component.css',
 })
+
 export class ListarIngresosComponent {
-  @Input() tipo: string = '';
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 
   ingresoService = inject(IngresoService);
   listaIngresos: Ingreso[] = [];
@@ -20,7 +30,6 @@ export class ListarIngresosComponent {
     this.ingresoService.getIngresos().subscribe({
       next: (ingresos: Ingreso[]) => {
         this.listaIngresos = [...ingresos].reverse();
-        
       },
       error: (e: Error) => {
         console.log(e.message);

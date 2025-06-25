@@ -12,18 +12,14 @@
       <tr>
         <td>{{ etiqueta.nombreEtiqueta }}</td>
         <td>
-          <button class="modificar" [routerLink]="['/etiqueta/modificar', etiqueta.id]" [state]="{user}">
-            Modificar </button>
+          <button class="modificar" [routerLink]="['/modificar-etiqueta', etiqueta.id]" [state]="{user}">Modificar
+          </button>
         </td>
         <td>
           @if(etiqueta.estado) {
-          <button class="desactivar" (click)="desactivarEtiqueta(etiqueta.id)">
-            Desactivar
-          </button>
+          <button class="desactivar" (click)="desactivarEtiqueta(etiqueta.id)">Desactivar</button>
           } @else {
-          <button class="activar" (click)="activarEtiqueta(etiqueta.id)">
-            Activar
-          </button>
+          <button class="activar" (click)="activarEtiqueta(etiqueta.id)">Activar</button>
           }
         </td>
       </tr>

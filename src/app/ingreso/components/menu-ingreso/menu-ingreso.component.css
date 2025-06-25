@@ -4,14 +4,17 @@
   display: flex;
   justify-content: right;
 }
+
 .lista {
   display: flex;
   list-style: none;
 }
+
 .item {
   margin-left: 30px;
 }
-.agregar {
+
+.boton {
   background-color: #0088ee;
   text-decoration: none;
   color: #222222;
@@ -21,7 +24,8 @@
   transition: background-color 0.3s;
   cursor: pointer;
 }
-.agregar:hover {
+
+.boton:hover {
   background-color: #0099ff;
 }
 

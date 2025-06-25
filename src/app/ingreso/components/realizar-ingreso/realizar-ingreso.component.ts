@@ -5,6 +5,7 @@ import { Ingreso } from 'app/ingreso/interfaces/ingreso.interface';
 import { IngresoService } from 'app/ingreso/services/ingreso.service';
 import { Producto } from 'app/producto/interfaces/producto.interface';
 import { ProductoService } from 'app/producto/services/producto.service';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-realizar-ingreso',
@@ -13,8 +14,17 @@ import { ProductoService } from 'app/producto/services/producto.service';
   templateUrl: './realizar-ingreso.component.html',
   styleUrl: './realizar-ingreso.component.css',
 })
+
 export class RealizarIngresoComponent {
-  @Input() tipo: string = '';
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 
   ngOnInit() {
     this.listarProductos();
@@ -27,50 +37,17 @@ export class RealizarIngresoComponent {
     });
   }
 
+
+
+
+
+
   ingresoService = inject(IngresoService);
   productoService = inject(ProductoService);
 
   listaProductos: Producto[] = [];
 
   ingresoRealizado: boolean = false;
-
-  fb = inject(FormBuilder);
-  formulario = this.fb.nonNullable.group({
-    id: [''],
-    fecha: [
-      new Date().getDate() +
-        '/' +
-        (new Date().getMonth() + 1) +
-        '/' +
-        new Date().getFullYear(),
-    ],
-    usuario: [''],
-    producto: ['', Validators.required],
-    cantidad: [0, [Validators.required, Validators.min(1)]],
-  });
-
-  realizarIngreso() {
-    if (this.formulario.valid) {
-      const ingreso: Ingreso = this.formulario.getRawValue();
-      if (this.producto) {
-        this.productoService.getProductoById(this.producto.id).subscribe({
-          next: (producto: Producto) => {
-            this.ingresoService.getIngresos().subscribe({
-              next: (i: Ingreso[]) => {
-                ingreso.id = `${i.length + 1}`;
-                ingreso.usuario = this.tipo;
-                this.realizarIngresoService(ingreso);
-                this.ingresoRealizado = true;
-              },
-            });
-          },
-        });
-      }
-    } else {
-      console.log(this.formulario.value)
-      this.formulario.markAllAsTouched();
-    }
-  }
 
   producto: Producto | undefined = {
     id: '',
@@ -81,6 +58,41 @@ export class RealizarIngresoComponent {
     categoria: '',
     etiqueta: '',
   };
+
+  fb = inject(FormBuilder);
+  formulario = this.fb.nonNullable.group({
+    id: [''],
+    fecha: [
+      new Date().getDate() +
+      '/' +
+      (new Date().getMonth() + 1) +
+      '/' +
+      new Date().getFullYear(),
+    ],
+    usuario: [''],
+    producto: ['', Validators.required],
+    cantidad: [0, [Validators.required, Validators.min(1)]],
+  });
+
+  realizarIngreso() {
+    if (this.formulario.valid) {
+      const ingreso: Ingreso = this.formulario.getRawValue();
+      // this.productoService.getProductoById(this.producto?.id).subscribe({
+      // next: (producto: Producto) => {
+      this.ingresoService.getIngresos().subscribe({
+        next: (i: Ingreso[]) => {
+          ingreso.id = `${i.length + 1}`;
+          ingreso.usuario = this.user.usuario;
+          this.realizarIngresoService(ingreso);
+          this.ingresoRealizado = true;
+        },
+      })
+      // },
+      // });
+    } else {
+      this.formulario.markAllAsTouched();
+    }
+  }
 
   realizarIngresoService(ingreso: Ingreso) {
     this.ingresoService.postIngreso(ingreso).subscribe({

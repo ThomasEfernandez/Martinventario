@@ -12,4 +12,8 @@ import { ListarProductosComponent } from 'app/producto/components/listar-product
 })
 export class PaginaProductosComponent {
   user = history.state.user;
+
+  ngOnInit() {
+    console.log("PAGINA PRODUCTOS", this.user)
+  }
 }

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-menu-egreso',
@@ -8,6 +9,15 @@ import { RouterModule } from '@angular/router';
   templateUrl: './menu-egreso.component.html',
   styleUrl: './menu-egreso.component.css',
 })
+
 export class MenuEgresoComponent {
-  @Input() tipo: string = '';
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 }

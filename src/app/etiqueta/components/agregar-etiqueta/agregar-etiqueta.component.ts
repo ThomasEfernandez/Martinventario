@@ -76,6 +76,7 @@ export class AgregarEtiquetaComponent {
       this.formulario.markAllAsTouched();
     }
   }
+
   agregarEtiquetaService(categoria: Categoria) {
     this.categoriaService.putCategoria(categoria.id, categoria).subscribe({
       error: (err: Error) => {
