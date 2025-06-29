@@ -1,4 +1,3 @@
-<!-- <app-agregar-producto-admin (emitirProducto)="listar($event)"></app-agregar-producto-admin> -->
 <div>
   <table>
     <thead>
@@ -30,8 +29,13 @@
         <td>{{ producto.categoria }}</td>
         @if(user.tipo === 'admin') {
         <td>
-          <button class="modificar" [routerLink]="['/modificar-producto', producto.id]"
-            [state]="{user}">Modificar</button>
+          <button
+            class="modificar"
+            [routerLink]="['/modificar-producto', producto.id]"
+            [state]="{user}"
+          >
+            Modificar
+          </button>
         </td>
         }
       </tr>

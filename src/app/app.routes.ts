@@ -40,7 +40,7 @@ export const routes: Routes = [
     path: '',
     component: PaginaIniciarSesionComponent,
   },
-  //PRODUCTO 
+  //PRODUCTO
   {
     path: 'productos',
     component: PaginaProductosComponent,

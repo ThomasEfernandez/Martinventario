@@ -27,64 +27,37 @@ tbody tr:hover {
   background-color: #d3e3fc;
 }
 
-/* admin */
-.columna-id-a {
+.columna-id {
   width: 5%;
 }
 
-.columna-fecha-a {
+.columna-fecha {
   width: 10%;
 }
 
-.columna-producto-a {
+.columna-producto {
   width: 40%;
 }
 
-.columna-cantidad-a {
+.columna-cantidad {
   width: 6%;
 }
 
-.columna-proveedor-a {
+.columna-proveedor {
   width: 15%;
 }
 
-.columna-modificar-a {
+.columna-modificar {
   width: 10%;
 }
 
-.columna-realizado-a {
-  width: 10%;
-}
-
-/* base */
-.columna-id-r {
-  width: 7%;
-}
-
-.columna-fecha-r {
-  width: 12%;
-}
-
-.columna-producto-r {
-  width: 42%;
-}
-
-.columna-cantidad-r {
-  width: 8%;
-}
-
-.columna-proveedor-r {
-  width: 25%;
-}
-
-.columna-realizado-r {
+.columna-realizado {
   width: 10%;
 }
 
 button {
   font-weight: bold;
   padding: 5%;
-  background-color: #0088ee;
   border: 0;
   border-radius: 5px;
   color: #222222;
@@ -95,44 +68,32 @@ button {
   background-color: #fbcb5b;
 }
 
-.realizar {
-  background-color: #22aa22;
-}
-
-.noRealizar {
+.realizar-a {
   background-color: #ee4444;
 }
 
-.realizar-d {
+.noRealizar-a {
   background-color: #22aa22;
-  cursor: default;
 }
 
-.noRealizar-d {
+.realizar-b {
   background-color: #ee4444;
   cursor: default;
 }
 
-button:hover {
-  background-color: #0099ff;
+.noRealizar-b {
+  background-color: #22aa22;
+  cursor: default;
 }
 
 .modificar:hover {
   background-color: #ffdc6c;
 }
 
-.realizar:hover {
-  background-color: #44cc44;
-}
-
-.noRealizar:hover {
+.realizar-a:hover {
   background-color: #ee6666;
 }
 
-.realizar-d:hover {
-  background-color: #22aa22;
-}
-
-.noRealizar-d:hover {
-  background-color: #ee4444;
+.noRealizar-a:hover {
+  cursor: default;
 }
