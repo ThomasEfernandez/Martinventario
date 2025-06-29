@@ -7,9 +7,13 @@
       <small class="error">Campo requerido.</small>
       }
       <select id="producto" formControlName="producto">
-        <option value="" disabled selected hidden>Selecciona un producto</option>
+        <option value="" disabled selected hidden>
+          Selecciona un producto
+        </option>
         @for (producto of listaProductos; track $index) {
-        <option value="{{producto.nombreProducto}}">{{ producto.nombreProducto }}</option>
+        <option value="{{ producto.nombreProducto }}">
+          {{ producto.nombreProducto }}
+        </option>
         }
       </select>
     </div>
@@ -19,8 +23,7 @@
       @if(formulario.controls['cantidad'].getError('required') &&
       formulario.controls['cantidad'].touched){
       <small class="error">Campo requerido.</small>
-      }
-      @if(formulario.get('cantidad')?.hasError('min') &&
+      } @if(formulario.get('cantidad')?.hasError('min') &&
       formulario.controls['cantidad'].touched){
       <small class="error">Cantidad debe ser mayor a 0.</small>
       }
@@ -43,26 +46,17 @@
       </select>
     </div>
   </div>
+
   <div class="botones">
-    @if(pedidoAgregado){
+    @if(pedidoAgregado) {
     <small class="exito">Pedido agregado</small>
-    @if(tipo === 'admin') {
-    <button type="button" id="volver" routerLink="/admin/pedidos">
+    <button type="button" id="volver" routerLink="/pedidos" [state]="{user}">
       Volver
     </button>
-    } @else if (tipo === 'base') {
-    <button type="button" id="volver" routerLink="/base/pedidos">
-      Volver
-    </button>
-    } } @else { @if(tipo === 'admin') {
-    <button type="button" id="cancelar" routerLink="/admin/pedidos">
+    } @else {
+    <button type="button" id="cancelar" routerLink="/pedidos" [state]="{user}">
       Cancelar
     </button>
-    } @else if (tipo === 'base') {
-    <button type="button" id="cancelar" routerLink="/base/pedidos">
-      Cancelar
-    </button>
-    }
     <button type="submit" id="agregar">Agregar pedido</button>}
   </div>
 </form>

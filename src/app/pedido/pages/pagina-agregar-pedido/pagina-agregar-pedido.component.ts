@@ -10,5 +10,8 @@ import { AgregarPedidoComponent } from '../../components/agregar-pedido/agregar-
   styleUrl: './pagina-agregar-pedido.component.css',
 })
 export class PaginaAgregarPedidoComponent {
-  tipo: string = 'admin';
+  user = history.state.user;
+  ngOnInit() {
+    console.log("PAGINA AGREGAR PEDIDO", this.user);
+  }
 }

@@ -13,6 +13,6 @@ import { ListarPedidosComponent } from '../../components/listar-pedidos/listar-p
 export class PaginaPedidosComponent {
   user = history.state.user;
   ngOnInit() {
-    console.log(this.user);
+    console.log("PAGINA PEDIDOS", this.user);
   }
 }

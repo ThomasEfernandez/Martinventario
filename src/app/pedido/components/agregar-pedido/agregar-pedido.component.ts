@@ -7,6 +7,7 @@ import { Producto } from 'app/producto/interfaces/producto.interface';
 import { ProductoService } from 'app/producto/services/producto.service';
 import { Proveedor } from 'app/proveedor/interfaces/proveedor-interface';
 import { ProveedorService } from 'app/proveedor/services/proveedor.service';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-agregar-pedido',
@@ -16,7 +17,15 @@ import { ProveedorService } from 'app/proveedor/services/proveedor.service';
   styleUrl: './agregar-pedido.component.css',
 })
 export class AgregarPedidoComponent {
-  @Input() tipo: string | null = null;
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false,
+  };
 
   pedidoService = inject(PedidoService);
   proveedorService = inject(ProveedorService);
@@ -51,7 +60,7 @@ export class AgregarPedidoComponent {
       this.pedidoService.getPedidos().subscribe({
         next: (pedidos: Pedido[]) => {
           pedido.id = `${pedidos.length + 1}`;
-/*           pedido.proveedor =  */
+          /*           pedido.proveedor =  */
           this.agregarPedidoService(pedido);
           this.pedidoAgregado = true;
         },

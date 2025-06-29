@@ -10,4 +10,7 @@ import { ModificarPedidoComponent } from '../../components/modificar-pedido/modi
 })
 export class PaginaModificarPedidoComponent {
   user = history.state.user;
+  ngOnInit() {
+    console.log("PAGINA MODIFICAR PEDIDO", this.user);
+  }
 }
