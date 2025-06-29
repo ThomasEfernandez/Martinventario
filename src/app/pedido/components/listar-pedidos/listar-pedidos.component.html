@@ -19,19 +19,23 @@
         <td>{{ pedido.proveedor }}</td>
         <td>
           @if (pedido.estado == false ) {
-          <button class="modificar" [routerLink]="['/pedidos/modificar', pedido.id]" [state]="{user}">
+          <button
+            class="modificar"
+            [routerLink]="['/modificar-pedido', pedido.id]"
+            [state]="{user}"
+          >
             Modificar
           </button>
           }
         </td>
         <td>
-          @if (user.tipo === 'admin') {
-          @if (pedido.estado == false) {
-          <button class="realizar-a" (click)="pedidoRealizado(pedido.id)">No realizado</button>
+          @if (user.tipo === 'admin') { @if (pedido.estado == false) {
+          <button class="realizar-a" (click)="pedidoRealizado(pedido.id)">
+            No realizado
+          </button>
           } @else {
           <button class="noRealizar-a">Realizado</button>
-          }} @else if (user.tipo === 'base') {
-          @if (pedido.estado == false) {
+          }} @else if (user.tipo === 'base') { @if (pedido.estado == false) {
           <button class="realizar-b">No realizado</button>
           } @else {
           <button class="noRealizar-b">Realizado</button>

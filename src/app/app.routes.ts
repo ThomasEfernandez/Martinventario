@@ -149,12 +149,12 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path: 'pedidos/agregar',
+    path: 'agregar-pedido',
     component: PaginaAgregarPedidoComponent,
     // canActivate: [authGuardFn],
   },
   {
-    path: 'pedidos/modificar',
+    path: 'modificar-pedido/:id',
     component: PaginaModificarPedidoComponent,
     // canActivate: [authGuardFn],
   },
