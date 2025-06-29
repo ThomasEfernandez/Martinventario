@@ -3,6 +3,6 @@ export interface Pedido {
   fecha: string;
   producto: string;
   cantidad: number;
-  razonSocialProveedor: string;
+  proveedor: string;
   estado: boolean;
 }

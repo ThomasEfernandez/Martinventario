@@ -6,7 +6,7 @@
       <th class="columna-fecha-a">Fecha</th>
       <th class="columna-producto-a">Producto</th>
       <th class="columna-cantidad-a">Cantidad</th>
-      <th class="columna-razonSocialProveedor-a">Proveedor</th>
+      <th class="columna-proveedor-a">Proveedor</th>
       <th class="columna-modificar-a">Modificar</th>
       <th class="columna-realizado-a">Realizado</th>
       } @else if (tipo === 'base') {
@@ -14,7 +14,7 @@
       <th class="columna-fecha-r">Fecha</th>
       <th class="columna-producto-r">Producto</th>
       <th class="columna-cantidad-r">Cantidad</th>
-      <th class="columna-razonSocialProveedor-r">Proveedor</th>
+      <th class="columna-proveedor-r">Proveedor</th>
       <th class="columna-modificar-a">Modificar</th>
       }
     </thead>
@@ -25,7 +25,7 @@
         <td>{{ pedido.fecha }}</td>
         <td>{{ pedido.producto }}</td>
         <td>{{ pedido.cantidad }}</td>
-        <td>{{ pedido.razonSocialProveedor }}</td>
+        <td>{{ pedido.proveedor }}</td>
         @if (tipo === 'admin') {
         <td>
           @if (pedido.estado == false ) {
@@ -68,7 +68,7 @@
         <th class="columna-fecha-a">Fecha</th>
         <th class="columna-producto-a">Producto</th>
         <th class="columna-cantidad-a">Cantidad</th>
-        <th class="columna-razonSocialProveedor-a">Proveedor</th>
+        <th class="columna-proveedor-a">Proveedor</th>
         <th class="columna-modificar-a">Modificar</th>
         @if (user.nombre == 'admin') {
         <th class="columna-realizado-a">Realizado</th>
@@ -82,7 +82,7 @@
         <td>{{ pedido.fecha }}</td>
         <td>{{ pedido.producto }}</td>
         <td>{{ pedido.cantidad }}</td>
-        <td>{{ pedido.razonSocialProveedor }}</td>
+        <td>{{ pedido.proveedor }}</td>
         <td>
           @if (pedido.estado == false ) {
           <button class="modificar" [routerLink]="['/pedidos/modificar', pedido.id]" [state]="{user}">

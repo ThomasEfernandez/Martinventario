@@ -30,16 +30,10 @@ import { PaginaRealizarIngresoComponent } from './ingreso/pages/pagina-realizar-
 //EGRESO
 import { PaginaEgresosComponent } from './egreso/pages/pagina-egresos/pagina-egresos.component';
 import { PaginaRealizarEgresoComponent } from './egreso/pages/pagina-realizar-egreso/pagina-realizar-egreso.component';
-
-
-///// FALTA
-
-//PEDIDOS
-import { PaginaPedidosAdminComponent } from './admin/pages/pagina-pedidos-admin/pagina-pedidos-admin.component';
-import { PaginaAgregarPedidoAdminComponent } from './admin/pages/pagina-agregar-pedido-admin/pagina-agregar-pedido-admin.component';
-import { PaginaModificarPedidoAdminComponent } from './admin/pages/pagina-modificar-pedido-admin/pagina-modificar-pedido-admin.component';
-
-// FIN
+//PEDIDO
+import { PaginaPedidosComponent } from './pedido/pages/pagina-pedidos/pagina-pedidos.component';
+import { PaginaAgregarPedidoComponent } from './pedido/pages/pagina-agregar-pedido/pagina-agregar-pedido.component';
+import { PaginaModificarPedidoComponent } from './pedido/pages/pagina-modificar-pedido/pagina-modificar-pedido.component';
 
 export const routes: Routes = [
   {
@@ -126,7 +120,7 @@ export const routes: Routes = [
     path: 'agregar-empleado',
     component: PaginaAgregarEmpleadoComponent,
   },
-  //INGRESOS
+  //INGRESO
   {
     path: 'ingresos',
     component: PaginaIngresosComponent,
@@ -137,8 +131,7 @@ export const routes: Routes = [
     component: PaginaRealizarIngresoComponent,
     // canActivate: [authGuardFn],
   },
-
-  //EGRESOS
+  //EGRESO
   {
     path: 'egresos',
     component: PaginaEgresosComponent,
@@ -149,26 +142,23 @@ export const routes: Routes = [
     component: PaginaRealizarEgresoComponent,
     // canActivate: [authGuardFn],
   },
-
-  // FALTA
   //PEDIDO
   {
     path: 'pedidos',
-    component: PaginaPedidosAdminComponent,
+    component: PaginaPedidosComponent,
     // canActivate: [authGuardFn],
   },
   {
     path: 'pedidos/agregar',
-    component: PaginaAgregarPedidoAdminComponent,
+    component: PaginaAgregarPedidoComponent,
     // canActivate: [authGuardFn],
   },
   {
     path: 'pedidos/modificar',
-    component: PaginaModificarPedidoAdminComponent,
+    component: PaginaModificarPedidoComponent,
     // canActivate: [authGuardFn],
   },
-  // FIN
-
+  //
   {
     path: '**',
     redirectTo: '',

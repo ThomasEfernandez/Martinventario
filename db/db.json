@@ -600,7 +600,7 @@
       "fecha": "15/10/2024",
       "producto": "Pepitos",
       "cantidad": 10,
-      "razonSocialProveedor": "Fausto",
+      "proveedor": "Fausto",
       "estado": true
     },
     {
@@ -608,7 +608,7 @@
       "fecha": "15/10/2024",
       "producto": "Pepsi",
       "cantidad": 5,
-      "razonSocialProveedor": "Agustin",
+      "proveedor": "Agustin",
       "estado": true
     },
     {
@@ -616,7 +616,7 @@
       "fecha": "21/3/2025",
       "producto": "cereales",
       "cantidad": 2,
-      "razonSocialProveedor": "Agustin",
+      "proveedor": "Agustin",
       "estado": true
     },
     {
@@ -624,7 +624,7 @@
       "fecha": "23/3/2025",
       "producto": "uvas",
       "cantidad": 20,
-      "razonSocialProveedor": "Agustin",
+      "proveedor": "Agustin",
       "estado": false
     },
     {
@@ -632,7 +632,7 @@
       "fecha": "23/3/2025",
       "producto": "uvas",
       "cantidad": 2,
-      "razonSocialProveedor": "Agustin",
+      "proveedor": "Agustin",
       "estado": false
     },
     {
@@ -640,7 +640,7 @@
       "fecha": "1/6/2025",
       "producto": "MILANESAS",
       "cantidad": 1,
-      "razonSocialProveedor": "Agustin",
+      "proveedor": "Agustin",
       "estado": false
     },
     {
@@ -648,7 +648,7 @@
       "fecha": "21/5/2025",
       "producto": "Pepitos",
       "cantidad": 1,
-      "razonSocialProveedor": "Fausto",
+      "proveedor": "Fausto",
       "estado": false
     },
     {
@@ -656,7 +656,7 @@
       "fecha": "21/5/2025",
       "producto": "asfdada",
       "cantidad": 1,
-      "razonSocialProveedor": "Thomas",
+      "proveedor": "Thomas",
       "estado": true
     }
   ]

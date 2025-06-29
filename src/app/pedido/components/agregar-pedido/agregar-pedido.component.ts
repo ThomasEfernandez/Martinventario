@@ -41,7 +41,7 @@ export class AgregarPedidoComponent {
     ],
     producto: ['', Validators.required],
     cantidad: [0, [Validators.required, Validators.min(1)]],
-    razonSocialProveedor: ['', Validators.required],
+    proveedor: ['', Validators.required],
     estado: [false],
   });
 
@@ -51,7 +51,7 @@ export class AgregarPedidoComponent {
       this.pedidoService.getPedidos().subscribe({
         next: (pedidos: Pedido[]) => {
           pedido.id = `${pedidos.length + 1}`;
-/*           pedido.razonSocialProveedor =  */
+/*           pedido.proveedor =  */
           this.agregarPedidoService(pedido);
           this.pedidoAgregado = true;
         },

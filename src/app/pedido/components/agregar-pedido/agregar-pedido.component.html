@@ -29,11 +29,11 @@
 
     <div class="flex-box">
       <label>Proveedor</label>
-      @if(formulario.controls['razonSocialProveedor'].getError('required') &&
-      formulario.controls['razonSocialProveedor'].touched){
+      @if(formulario.controls['proveedor'].getError('required') &&
+      formulario.controls['proveedor'].touched){
       <small class="error">Campo requerido.</small>
       }
-      <select formControlName="razonSocialProveedor">
+      <select formControlName="proveedor">
         <option value="" disabled selected hidden>
           Selecciona un proveedor
         </option>

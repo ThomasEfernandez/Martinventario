@@ -32,7 +32,7 @@ export class ListarPedidosComponent {
     fecha: '',
     producto: '',
     cantidad: 0,
-    razonSocialProveedor: '',
+    proveedor: '',
     estado: false,
   };
 

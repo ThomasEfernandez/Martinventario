@@ -14,14 +14,14 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 })
 export class ModificarPedidoComponent {
   @Input() user: Usuario = {
-      id: '',
-      nombre: '',
-      apellido: '',
-      usuario: '',
-      contrasena: '',
-      tipo: '',
-      estado: false
-    };
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false
+  };
 
   pedidoService = inject(PedidoService);
 
@@ -35,14 +35,14 @@ export class ModificarPedidoComponent {
     id: [''],
     fecha: [
       new Date().getDate() +
-        '/' +
-        (new Date().getMonth() + 1) +
-        '/' +
-        new Date().getFullYear(),
+      '/' +
+      (new Date().getMonth() + 1) +
+      '/' +
+      new Date().getFullYear(),
     ],
     producto: [''],
     cantidad: [0],
-    razonSocialProveedor: [''],
+    proveedor: [''],
     estado: [false],
   });
 
@@ -58,8 +58,8 @@ export class ModificarPedidoComponent {
         this.formulario.controls['id'].setValue(pedido.id);
         this.formulario.controls['producto'].setValue(pedido.producto);
         this.formulario.controls['cantidad'].setValue(pedido.cantidad);
-        this.formulario.controls['razonSocialProveedor'].setValue(
-          pedido.razonSocialProveedor
+        this.formulario.controls['proveedor'].setValue(
+          pedido.proveedor
         );
         this.formulario.controls['estado'].setValue(pedido.estado);
       },
