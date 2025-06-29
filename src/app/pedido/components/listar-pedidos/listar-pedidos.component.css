@@ -1,138 +1,78 @@
 div {
   padding: 1%;
 }
-
 table {
   width: 100%;
   border-collapse: collapse;
 }
-
 thead {
   background-color: #0099ff;
   color: #ffffff;
 }
-
 th,
 td {
   padding: 0.75%;
   border: 1px solid #dddddd;
   text-align: left;
 }
-
 tbody tr:nth-child(even) {
   background-color: #e9e9e9;
 }
-
 tbody tr:hover {
   background-color: #d3e3fc;
 }
-
-/* admin */
-.columna-id-a {
+.columna-id {
   width: 5%;
 }
-
-.columna-fecha-a {
+.columna-fecha {
   width: 10%;
 }
-
-.columna-producto-a {
+.columna-producto {
   width: 40%;
 }
-
-.columna-cantidad-a {
+.columna-cantidad {
   width: 6%;
 }
-
-.columna-razonSocialProveedor-a {
+.columna-proveedor {
   width: 15%;
 }
-
-.columna-modificar-a {
+.columna-modificar {
   width: 10%;
 }
-
-.columna-realizado-a {
+.columna-realizado {
   width: 10%;
 }
-
-/* base */
-.columna-id-r {
-  width: 7%;
-}
-
-.columna-fecha-r {
-  width: 12%;
-}
-
-.columna-producto-r {
-  width: 42%;
-}
-
-.columna-cantidad-r {
-  width: 8%;
-}
-
-.columna-razonSocialProveedor-r {
-  width: 25%;
-}
-
-.columna-realizado-r {
-  width: 10%;
-}
-
 button {
   font-weight: bold;
   padding: 5%;
-  background-color: #0088ee;
   border: 0;
   border-radius: 5px;
   color: #222222;
   cursor: pointer;
 }
-
 .modificar {
   background-color: #fbcb5b;
 }
-
-.realizar {
-  background-color: #22aa22;
-}
-
-.noRealizar {
+.realizar-a {
   background-color: #ee4444;
 }
-
-.realizar-d {
+.noRealizar-a {
   background-color: #22aa22;
-  cursor: default;
 }
-
-.noRealizar-d {
+.realizar-b {
   background-color: #ee4444;
   cursor: default;
 }
-
-button:hover {
-  background-color: #0099ff;
+.noRealizar-b {
+  background-color: #22aa22;
+  cursor: default;
 }
-
 .modificar:hover {
   background-color: #ffdc6c;
 }
-
-.realizar:hover {
-  background-color: #44cc44;
-}
-
-.noRealizar:hover {
+.realizar-a:hover {
   background-color: #ee6666;
 }
-
-.realizar-d:hover {
-  background-color: #22aa22;
-}
-
-.noRealizar-d:hover {
-  background-color: #ee4444;
+.noRealizar-a:hover {
+  cursor: default;
 }

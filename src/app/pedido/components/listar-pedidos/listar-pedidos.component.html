@@ -1,79 +1,13 @@
-<!-- <div>
-  <table>
-    <thead>
-      @if(tipo === 'admin') {
-      <th class="columna-id-a">Id</th>
-      <th class="columna-fecha-a">Fecha</th>
-      <th class="columna-producto-a">Producto</th>
-      <th class="columna-cantidad-a">Cantidad</th>
-      <th class="columna-razonSocialProveedor-a">Proveedor</th>
-      <th class="columna-modificar-a">Modificar</th>
-      <th class="columna-realizado-a">Realizado</th>
-      } @else if (tipo === 'base') {
-      <th class="columna-id-r">Id</th>
-      <th class="columna-fecha-r">Fecha</th>
-      <th class="columna-producto-r">Producto</th>
-      <th class="columna-cantidad-r">Cantidad</th>
-      <th class="columna-razonSocialProveedor-r">Proveedor</th>
-      <th class="columna-modificar-a">Modificar</th>
-      }
-    </thead>
-    <tbody>
-      @for(pedido of listaPedidos; track $index) {
-      <tr>
-        <td>{{ pedido.id }}</td>
-        <td>{{ pedido.fecha }}</td>
-        <td>{{ pedido.producto }}</td>
-        <td>{{ pedido.cantidad }}</td>
-        <td>{{ pedido.razonSocialProveedor }}</td>
-        @if (tipo === 'admin') {
-        <td>
-          @if (pedido.estado == false ) {
-          <button class="modificar" [routerLink]="['/admin/pedido/modificar', pedido.id]">
-            Modificar
-          </button>
-          }
-        </td>
-        } @else if (tipo === 'base') {
-        <td>
-          @if (pedido.estado == false ) {
-          <button class="modificar" [routerLink]="['/base/pedido/modificar', pedido.id]">
-            Modificar
-          </button>
-          }
-        </td> }
-
-        <td>
-          @if (tipo === 'admin') { @if (pedido.estado == false) {
-          <button class="noRealizar" (click)="pedidoRealizado(pedido.id)">
-            No realizado
-          </button>
-          } @else {
-          <button class="realizar">Realizado</button>
-          }}
-
-        </td>
-      </tr>
-      }
-    </tbody>
-  </table>
-</div>
- -->
-
 <div>
   <table>
     <thead>
-      <tr>
-        <th class="columna-id-a">Id</th>
-        <th class="columna-fecha-a">Fecha</th>
-        <th class="columna-producto-a">Producto</th>
-        <th class="columna-cantidad-a">Cantidad</th>
-        <th class="columna-razonSocialProveedor-a">Proveedor</th>
-        <th class="columna-modificar-a">Modificar</th>
-        @if (user.nombre == 'admin') {
-        <th class="columna-realizado-a">Realizado</th>
-        }
-      </tr>
+      <th class="columna-id">Id</th>
+      <th class="columna-fecha">Fecha</th>
+      <th class="columna-producto">Producto</th>
+      <th class="columna-cantidad">Cantidad</th>
+      <th class="columna-proveedor">Proveedor</th>
+      <th class="columna-modificar">Modificar</th>
+      <th class="columna-realizado">Realizado</th>
     </thead>
     <tbody>
       @for(pedido of listaPedidos; track $index) {
@@ -82,33 +16,33 @@
         <td>{{ pedido.fecha }}</td>
         <td>{{ pedido.producto }}</td>
         <td>{{ pedido.cantidad }}</td>
-        <td>{{ pedido.razonSocialProveedor }}</td>
+        <td>{{ pedido.proveedor }}</td>
         <td>
           @if (pedido.estado == false ) {
-          <button class="modificar" [routerLink]="['/pedidos/modificar', pedido.id]" [state]="{user}">
+          <button
+            class="modificar"
+            [routerLink]="['/modificar-pedido', pedido.id]"
+            [state]="{user}"
+          >
             Modificar
           </button>
           }
         </td>
-
-
         <td>
-          @if (user.nombre == 'admin') {
-          @if (pedido.estado == false) {
-          <button class="noRealizar" (click)="pedidoRealizado(pedido.id)">
+          @if (user.tipo === 'admin') { @if (pedido.estado == false) {
+          <button class="realizar-a" (click)="pedidoRealizado(pedido.id)">
             No realizado
           </button>
           } @else {
-          <button class="realizar">Realizado</button>
+          <button class="noRealizar-a">Realizado</button>
+          }} @else if (user.tipo === 'base') { @if (pedido.estado == false) {
+          <button class="realizar-b">No realizado</button>
+          } @else {
+          <button class="noRealizar-b">Realizado</button>
           }}
-
         </td>
       </tr>
       }
     </tbody>
-
   </table>
-  <!-- <div **ngIf="mensajeExito" class="mensaje-exito">
-    {{ mensajeExito }}
-  </div> -->
 </div>

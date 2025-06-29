@@ -25,7 +25,7 @@ export class AgregarProductoComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
   };
 
   listaProveedores: Proveedor[] = [];

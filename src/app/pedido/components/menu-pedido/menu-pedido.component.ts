@@ -11,12 +11,12 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 })
 export class MenuPedidoComponent {
   @Input() user: Usuario = {
-      id: '',
-      nombre: '',
-      apellido: '',
-      usuario: '',
-      contrasena: '',
-      tipo: '',
-      estado: false
-    };
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false,
+  };
 }
