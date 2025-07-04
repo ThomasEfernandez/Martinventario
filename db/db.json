@@ -61,15 +61,15 @@
       "nombreProducto": "Pepitos",
       "marca": "Pepitos",
       "proveedor": "Fausto",
-      "cantidad": 13,
+      "cantidad": 17,
       "categoria": "Alimentos",
-      "etiqueta": "Galletitas dulces"
+      "etiqueta": "Galletitas"
     },
     {
       "id": "2",
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
-      "proveedor": "Agustin",
+      "proveedor": "Thomas",
       "cantidad": 51,
       "categoria": "Bebidas",
       "etiqueta": "Gaseosa"
@@ -78,7 +78,7 @@
       "id": "3",
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
-      "proveedor": "Agustin",
+      "proveedor": "Agus",
       "cantidad": 5,
       "categoria": "Alimentos",
       "etiqueta": "Untables"
@@ -99,7 +99,7 @@
       "proveedor": "Fausto",
       "cantidad": 46,
       "categoria": "Higiene",
-      "etiquetas": "Shampoo"
+      "etiqueta": "Shampoo"
     },
     {
       "id": "6",
@@ -108,7 +108,7 @@
       "proveedor": "Fausto",
       "cantidad": 8,
       "categoria": "Alimentos",
-      "etiquetas": "Galletitas dulces"
+      "etiqueta": "Galletitas"
     },
     {
       "id": "7",
@@ -117,22 +117,22 @@
       "proveedor": "Fausto",
       "cantidad": -2,
       "categoria": "Alimentos",
-      "etiquetas": "Carne"
+      "etiqueta": "Carne"
     },
     {
       "id": "8",
       "nombreProducto": "gaseosa 1,25",
       "marca": "pepsi",
-      "proveedor": "Agustin",
+      "proveedor": "Agus",
       "cantidad": 5,
       "categoria": "Bebidas",
-      "etiquetas": "Gaseosa"
+      "etiqueta": "Gaseosa"
     },
     {
       "id": "9",
       "nombreProducto": "bombones",
       "marca": "Ferrero",
-      "proveedor": "Agustin",
+      "proveedor": "Agus",
       "cantidad": 7,
       "categoria": "Alimentos",
       "etiqueta": "Dulce"
@@ -141,7 +141,7 @@
       "id": "10",
       "nombreProducto": "papitas",
       "marca": "Lays",
-      "proveedor": "Agustin",
+      "proveedor": "Agus",
       "cantidad": 23,
       "categoria": "Alimentos",
       "etiqueta": "Carne"
@@ -201,6 +201,11 @@
         {
           "id": "3",
           "nombreEtiqueta": "Carnes",
+          "estado": true
+        },
+        {
+          "id": "4",
+          "nombreEtiqueta": "Untables",
           "estado": true
         }
       ]

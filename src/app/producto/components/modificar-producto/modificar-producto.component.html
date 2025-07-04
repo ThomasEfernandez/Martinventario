@@ -72,7 +72,11 @@
     </div>
   </div>
   <div class="botones">
+       @if (mensajeExito) {
+     <small class="exito">Actualizado Correctamente</small>
+   }
     <button type="button" id="cancelar" routerLink="/productos" [state]="{user}"> Cancelar </button>
     <button type="submit" id="agregar">Actualizar producto </button>
+
   </div>
 </form>

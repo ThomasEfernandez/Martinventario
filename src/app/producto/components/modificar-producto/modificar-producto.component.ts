@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
@@ -30,25 +30,22 @@ export class ModificarProductoComponent {
   };
 
   listaProveedores: Proveedor[] = [];
-  proveedoresService = inject(ProveedorService);
-
   listaCategorias: Categoria[] = [];
+  listaEtiquetas: Etiqueta[] = [];
+
+  proveedoresService = inject(ProveedorService);
   categoriaService = inject(CategoriaService);
-
-  listaEtiquetas: Etiqueta[] | undefined = [];
-
   productoService = inject(ProductoService);
-
   router = inject(Router);
-
-  id: string | null = null;
+  fb = inject(FormBuilder);
   activaredRoutes = inject(ActivatedRoute);
 
-  fb = inject(FormBuilder);
+  id: string | null = null;
+
   formulario = this.fb.nonNullable.group({
     id: [''],
     nombreProducto: ['', [Validators.required, Validators.minLength(1)]],
-    marca: ['', [Validators.required]],
+    marca: ['', Validators.required],
     proveedor: ['', Validators.required],
     cantidad: [0, [Validators.required, Validators.min(1)]],
     categoria: ['', Validators.required],
@@ -56,83 +53,62 @@ export class ModificarProductoComponent {
   });
 
   ngOnInit(): void {
-    this.listarCategorias();
-    this.listarProveedores();
-    this.activaredRoutes.paramMap.subscribe({
-      next: (param) => {
-        this.id = param.get('id');
-        this.getTareaById(this.id);
-      },
-      error: (e: Error) => {
-        console.log(e.message);
-      },
+    this.listarCategoriasYProveedores().then(() => {
+      this.activaredRoutes.paramMap.subscribe({
+        next: (param) => {
+          this.id = param.get('id');
+          this.getProductoById(this.id);
+        },
+        error: (e: Error) => {
+          console.log(e.message);
+        },
+      });
     });
   }
 
-  getTareaById(id: string | null) {
+  listarCategoriasYProveedores(): Promise<void> {
+    return new Promise((resolve) => {
+      let categoriasCargadas = false;
+      let proveedoresCargados = false;
+
+      this.categoriaService.getCategorias().subscribe({
+        next: (categorias: Categoria[]) => {
+          this.listaCategorias = categorias;
+          categoriasCargadas = true;
+          if (proveedoresCargados) resolve();
+        },
+        error: (err: Error) => console.log(err.message),
+      });
+
+      this.proveedoresService.getProveedores().subscribe({
+        next: (proveedores: Proveedor[]) => {
+          this.listaProveedores = proveedores;
+          proveedoresCargados = true;
+          if (categoriasCargadas) resolve();
+        },
+        error: (err: Error) => console.log(err.message),
+      });
+    });
+  }
+
+  getProductoById(id: string | null) {
+    if (!id) return;
     this.productoService.getProductoById(id).subscribe({
       next: (producto: Producto) => {
         this.formulario.patchValue(producto);
 
-        // Encontrar la categoría y asignar sus etiquetas
+        // Cargar etiquetas según la categoría
         const categoriaSeleccionada = this.listaCategorias.find(
           (c) => c.nombreCategoria === producto.categoria
         );
         this.listaEtiquetas = categoriaSeleccionada?.etiquetas || [];
 
-        // Asignar la etiqueta del producto
+        // Establecer la etiqueta actual del producto
         this.formulario.controls['etiqueta'].setValue(producto.etiqueta);
       },
       error: () => {
-        console.log('error....');
+        console.log('Error al obtener el producto.');
       },
-    });
-  }
-
-  update() {
-    if (this.formulario.invalid) return;
-    const producto = this.formulario.getRawValue();
-    this.productoService.putProducto(this.id, producto).subscribe({
-      next: () => {
-        console.log('Actualizado');
-        // if (this.user.tipo === 'admin') {
-        //   this.router.navigateByUrl('admin/productos');
-        // } else if (this.user.tipo === 'base') {
-        //   this.router.navigateByUrl('base/productos');
-        // }
-      },
-      error: (e: Error) => {
-        console.log(e.message);
-      },
-    });
-  }
-
-  listarProveedores() {
-    this.proveedoresService.getProveedores().subscribe({
-      next: (proveedores: Proveedor[]) => {
-        this.listaProveedores = proveedores;
-      },
-      error: (err: Error) => {
-        console.log(err.message);
-      },
-    });
-  }
-
-  listarCategorias() {
-    this.categoriaService.getCategorias().subscribe({
-      next: (categorias: Categoria[]) => {
-        this.listaCategorias = categorias;
-      },
-      error: (err: Error) => {
-        console.log(err.message);
-      },
-    });
-    document.getElementById('categoria')?.addEventListener('click', () => {
-      const select = document.getElementById('categoria') as HTMLSelectElement;
-      const categoria = this.listaCategorias.find(
-        (c) => c.nombreCategoria === select.value
-      );
-      this.listaEtiquetas = categoria?.etiquetas;
     });
   }
 
@@ -142,6 +118,37 @@ export class ModificarProductoComponent {
       (c) => c.nombreCategoria === select.value
     );
     this.listaEtiquetas = categoriaSeleccionada?.etiquetas || [];
-    this.formulario.controls['etiqueta'].setValue(''); // Limpia la selección de etiqueta
+    this.formulario.controls['etiqueta'].setValue('');
+  }
+
+  
+
+  update() {
+    if (this.formulario.invalid) return;
+    const producto = this.formulario.getRawValue();
+    this.productoService.putProducto(this.id, producto).subscribe({
+      next: () => {
+        console.log('Producto actualizado correctamente.');
+        // Redirección condicional si se necesita
+        // if (this.user.tipo === 'admin') {
+        //   this.router.navigateByUrl('admin/productos');
+        // } else {
+        //   this.router.navigateByUrl('base/productos');
+        // }
+         this.mensajeExito = true;
+         setTimeout (()=>{
+        this.mensajeExito = false;
+         },3000);
+      },
+      error: (e: Error) => {
+        console.log(e.message);
+      },
+    });
+  }
+
+  mensajeExito=false
+  actualizarMensaje (){
+
+
   }
 }
