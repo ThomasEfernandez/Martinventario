@@ -1,8 +1,10 @@
 <div class="contenedor">
   <ul class="lista">
+    @if (user.tipo === 'admin') {
     <li class="item">
       <a class="boton" routerLink="/empleados" [state]="{user}">EMPLEADOS</a>
     </li>
+    }
     <li class="item">
       <a class="boton" routerLink="/ingresos" [state]="{user}">INGRESOS</a>
     </li>
@@ -13,15 +15,4 @@
       <a class="boton" routerLink="/pedidos" [state]="{user}">PEDIDOS</a>
     </li>
   </ul>
-</div>
-
-<!-- ESTO DEBE IR EN UN COMPONENTE APARTE -->
-
-<div class="estadisticas">
-  <div class="container">
-    <app-estadisticas-pedidos></app-estadisticas-pedidos>
-    <app-estadisticas-ingresos></app-estadisticas-ingresos>
-    <app-estadisticas-egresos></app-estadisticas-egresos>
-    <app-estadisticas-empleados></app-estadisticas-empleados>
-  </div>
 </div>
