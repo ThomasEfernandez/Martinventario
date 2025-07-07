@@ -60,16 +60,16 @@
       "id": "1",
       "nombreProducto": "Pepitos",
       "marca": "Pepitos",
-      "proveedor": "Fausto",
-      "cantidad": 13,
+      "proveedor": "Thomas",
+      "cantidad": 17,
       "categoria": "Alimentos",
-      "etiqueta": "Galletitas dulces"
+      "etiqueta": "Verduras"
     },
     {
       "id": "2",
       "nombreProducto": "Gaseosa lima limón Sprite 2,25 lts",
       "marca": "Sprite",
-      "proveedor": "Agustin",
+      "proveedor": "Thomas",
       "cantidad": 51,
       "categoria": "Bebidas",
       "etiqueta": "Gaseosa"
@@ -78,7 +78,7 @@
       "id": "3",
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
-      "proveedor": "Agustin",
+      "proveedor": "Agus",
       "cantidad": 5,
       "categoria": "Alimentos",
       "etiqueta": "Untables"
@@ -99,7 +99,7 @@
       "proveedor": "Fausto",
       "cantidad": 46,
       "categoria": "Higiene",
-      "etiquetas": "Shampoo"
+      "etiqueta": "Shampoo"
     },
     {
       "id": "6",
@@ -108,43 +108,43 @@
       "proveedor": "Fausto",
       "cantidad": 8,
       "categoria": "Alimentos",
-      "etiquetas": "Galletitas dulces"
+      "etiqueta": "Galletitas"
     },
     {
       "id": "7",
       "nombreProducto": "milanesas",
       "marca": "carrefour",
       "proveedor": "Fausto",
-      "cantidad": -2,
+      "cantidad": 4,
       "categoria": "Alimentos",
-      "etiquetas": "Carne"
+      "etiqueta": "Carnes"
     },
     {
       "id": "8",
       "nombreProducto": "gaseosa 1,25",
       "marca": "pepsi",
-      "proveedor": "Agustin",
+      "proveedor": "Agus",
       "cantidad": 5,
       "categoria": "Bebidas",
-      "etiquetas": "Gaseosa"
+      "etiqueta": "Gaseosa"
     },
     {
       "id": "9",
       "nombreProducto": "bombones",
       "marca": "Ferrero",
-      "proveedor": "Agustin",
+      "proveedor": "Agus",
       "cantidad": 7,
       "categoria": "Alimentos",
-      "etiqueta": "Dulce"
+      "etiqueta": "Galletitas"
     },
     {
       "id": "10",
       "nombreProducto": "papitas",
       "marca": "Lays",
-      "proveedor": "Agustin",
+      "proveedor": "Agus",
       "cantidad": 23,
       "categoria": "Alimentos",
-      "etiqueta": "Carne"
+      "etiqueta": "Galletitas"
     },
     {
       "id": "11",
@@ -162,7 +162,7 @@
       "nombre": "Fausto",
       "apellido": "Gimenez",
       "razonSocial": "fausto",
-      "cuit": "1234",
+      "cuit": "12345",
       "email": "fausto@gmail.com"
     },
     {
@@ -202,6 +202,11 @@
           "id": "3",
           "nombreEtiqueta": "Carnes",
           "estado": true
+        },
+        {
+          "id": "4",
+          "nombreEtiqueta": "Untables",
+          "estado": true
         }
       ]
     },
@@ -209,35 +214,13 @@
       "id": "2",
       "nombreCategoria": "Bebidas",
       "estado": true,
-      "etiquetas": [
-        {
-          "id": "1",
-          "nombreEtiqueta": "Gaseosa",
-          "estado": true
-        },
-        {
-          "id": "2",
-          "nombreEtiqueta": "Vinos",
-          "estado": true
-        },
-        {
-          "id": "3",
-          "nombreEtiqueta": "Aguas",
-          "estado": true
-        }
-      ]
+      "etiquetas": []
     },
     {
       "id": "3",
       "nombreCategoria": "Higiene",
       "estado": true,
-      "etiquetas": [
-        {
-          "id": "1",
-          "nombreEtiqueta": "Shampoo",
-          "estado": true
-        }
-      ]
+      "etiquetas": []
     },
     {
       "id": "4",

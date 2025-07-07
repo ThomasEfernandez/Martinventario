@@ -20,7 +20,7 @@ export class ModificarProveedorComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
   };
 
   proveedorService = inject(ProveedorService);
@@ -31,6 +31,8 @@ export class ModificarProveedorComponent {
 
   id: string | null = null;
   activaredRoutes = inject(ActivatedRoute);
+
+  mensajeExito = false;
 
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
@@ -63,12 +65,7 @@ export class ModificarProveedorComponent {
     const proveedor = this.formulario.getRawValue();
     this.proveedorService.putProducto(this.id, proveedor).subscribe({
       next: () => {
-        console.log('Actualizado');
-        // if (this.tipo === 'admin') {
-        //   this.router.navigateByUrl('admin/proveedores');
-        // } else if (this.tipo === 'repositor') {
-        //   this.router.navigateByUrl('repositor/proveedores');
-        // }
+        this.mensajeExito = true;
       },
       error: (e: Error) => {
         console.log(e.message);

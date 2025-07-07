@@ -89,7 +89,7 @@ export const routes: Routes = [
     // canActivate: [authGuardFn],
   },
   {
-    path: 'modificar-categoria/:id',
+    path: 'modificar-categoria/:cat',
     component: PaginaModificarCategoriaComponent,
     // canActivate: [authGuardFn],
   },
