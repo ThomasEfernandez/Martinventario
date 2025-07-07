@@ -11,8 +11,9 @@ import { ModificarCategoriaComponent } from '../../../categoria/components/modif
 })
 export class PaginaModificarCategoriaComponent {
   user = history.state.user;
+  categoria = history.state.categoria;
 
   ngOnInit() {
-    console.log("PAGINA MODIFICAR CATEGORIAS", this.user)
+    console.log('PAGINA MODIFICAR CATEGORIAS', this.user);
   }
 }

@@ -59,9 +59,9 @@ export class AgregarProductoComponent {
           producto.id = `${productos.length + 1}`;
           this.agregarProductoService(producto);
           this.productoAgregado = true;
-          setTimeout (()=>{
-            this.productoAgregado =false;
-          },3000);
+          // setTimeout (()=>{
+          //   this.productoAgregado =false;
+          // },3000);
         },
       });
     } else {

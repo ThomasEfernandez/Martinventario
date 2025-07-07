@@ -1,4 +1,4 @@
-<form [formGroup]="formulario" (ngSubmit)="update()">
+<form [formGroup]="formulario" (ngSubmit)="modificarCategoria()">
   <div class="form">
     <div class="flex-box">
       <label>Categoria</label>
@@ -13,9 +13,18 @@
   <div class="botones">
     @if(categoriaModificada){
     <small class="exito">Categoria modificada</small>
-    <button type="button" id="volver" routerLink="/categorias" [state]="{user}"> Volver </button>
+    <button type="button" id="volver" routerLink="/categorias" [state]="{user}">
+      Volver
+    </button>
     } @else {
-    <button type="button" id="cancelar" routerLink="/categorias" [state]="{user}"> Cancelar </button>
-    <button type="submit" id="agregar"> Modificar categoria </button>}
+    <button
+      type="button"
+      id="cancelar"
+      routerLink="/categorias"
+      [state]="{user}"
+    >
+      Cancelar
+    </button>
+    <button type="submit" id="agregar">Modificar categoria</button>}
   </div>
 </form>

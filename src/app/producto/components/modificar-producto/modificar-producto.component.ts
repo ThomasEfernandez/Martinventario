@@ -26,7 +26,7 @@ export class ModificarProductoComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
   };
 
   listaProveedores: Proveedor[] = [];
@@ -41,6 +41,8 @@ export class ModificarProductoComponent {
   activaredRoutes = inject(ActivatedRoute);
 
   id: string | null = null;
+
+  mensajeExito = false;
 
   formulario = this.fb.nonNullable.group({
     id: [''],
@@ -121,34 +123,19 @@ export class ModificarProductoComponent {
     this.formulario.controls['etiqueta'].setValue('');
   }
 
-  
-
   update() {
     if (this.formulario.invalid) return;
     const producto = this.formulario.getRawValue();
     this.productoService.putProducto(this.id, producto).subscribe({
       next: () => {
-        console.log('Producto actualizado correctamente.');
-        // Redirección condicional si se necesita
-        // if (this.user.tipo === 'admin') {
-        //   this.router.navigateByUrl('admin/productos');
-        // } else {
-        //   this.router.navigateByUrl('base/productos');
-        // }
-         this.mensajeExito = true;
-         setTimeout (()=>{
-        this.mensajeExito = false;
-         },3000);
+        this.mensajeExito = true;
+        // setTimeout(() => {
+        //   this.mensajeExito = false;
+        // }, 3000);
       },
       error: (e: Error) => {
         console.log(e.message);
       },
     });
-  }
-
-  mensajeExito=false
-  actualizarMensaje (){
-
-
   }
 }

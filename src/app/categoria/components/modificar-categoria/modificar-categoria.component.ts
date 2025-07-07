@@ -1,9 +1,8 @@
 import { Component, inject, Input } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
-import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
 import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
@@ -21,17 +20,16 @@ export class ModificarCategoriaComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
   };
+
+  catcat = history.state.categoria;
 
   categoriaService = inject(CategoriaService);
 
-  proveedorAgregado: boolean = false;
+  router = inject(ActivatedRoute);
 
-  router = inject(Router);
-
-  id: string | null = null;
-  activaredRoutes = inject(ActivatedRoute);
+  categoriaModificada: boolean = false;
 
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
@@ -41,52 +39,44 @@ export class ModificarCategoriaComponent {
     etiquetas: [[]],
   });
 
-  getCategoriaById(id: string | null) {
-    this.categoriaService.getCategoriaById(id).subscribe({
-      next: (categoria: Categoria) => {
-        this.formulario.controls['id'].setValue(categoria.id);
-        this.formulario.controls['nombreCategoria'].setValue(
-          categoria.nombreCategoria
-        );
-        this.formulario.controls['estado'].setValue(categoria.estado);
-        // this.formulario.controls['etiquetas'].setValue(categoria.etiquetas);
-      },
-      error: () => {
-        console.log('error....');
-      },
-    });
-  }
-
-  categoriaModificada: boolean = false;
-  
-  update() {
-    if (this.formulario.invalid) return;
-    const categoria = this.formulario.getRawValue();
-    this.categoriaService.putCategoria(this.id, categoria).subscribe({
-      next: () => {
-        console.log('Actualizado');
-        this.categoriaModificada = true;
-        // if(this.tipo === 'admin'){
-        //   this.router.navigateByUrl('admin/proveedores')
-        // }else if (this.tipo === 'repositor'){
-        //   this.router.navigateByUrl('repositor/proveedores')
-        // }
-      },
-      error: (e: Error) => {
-        console.log(e.message);
-      },
-    });
-  }
-
   ngOnInit(): void {
-    this.activaredRoutes.paramMap.subscribe({
-      next: (param) => {
-        this.id = param.get('id');
-        this.getCategoriaById(this.id);
+    this.router.paramMap.subscribe({
+      next: (params) => {
+        this.buscarCategoria();
       },
       error: (e: Error) => {
         console.log(e.message);
       },
     });
+  }
+
+  buscarCategoria() {
+    this.categoriaService.getCategoriaById(this.catcat.id).subscribe({
+      next: (aux: Categoria) => {
+        this.formulario.controls['id'].setValue(aux.id);
+        this.formulario.controls['nombreCategoria'].setValue(
+          aux.nombreCategoria
+        );
+        this.formulario.controls['estado'].setValue(aux.estado);
+        // this.formulario.controls['etiquetas'].setValue(aux.etiquetas);
+      },
+      error: (e: Error) => {
+        console.log(e.message);
+      },
+    });
+  }
+
+  modificarCategoria() {
+    if (this.formulario.valid) {
+      const categoria = this.formulario.getRawValue();
+      this.categoriaService.putCategoria(categoria.id, categoria).subscribe({
+        next: () => {
+          this.categoriaModificada = true;
+        },
+        error: (e: Error) => {
+          console.log(e.message);
+        },
+      });
+    }
   }
 }

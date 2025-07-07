@@ -63,7 +63,7 @@
       "proveedor": "Thomas",
       "cantidad": 17,
       "categoria": "Alimentos",
-      "etiqueta": "Galletitas"
+      "etiqueta": "Verduras"
     },
     {
       "id": "2",
@@ -115,9 +115,9 @@
       "nombreProducto": "milanesas",
       "marca": "carrefour",
       "proveedor": "Fausto",
-      "cantidad": -2,
+      "cantidad": 4,
       "categoria": "Alimentos",
-      "etiqueta": "Carne"
+      "etiqueta": "Carnes"
     },
     {
       "id": "8",
@@ -135,7 +135,7 @@
       "proveedor": "Agus",
       "cantidad": 7,
       "categoria": "Alimentos",
-      "etiqueta": "Dulce"
+      "etiqueta": "Galletitas"
     },
     {
       "id": "10",
@@ -144,7 +144,7 @@
       "proveedor": "Agus",
       "cantidad": 23,
       "categoria": "Alimentos",
-      "etiqueta": "Carne"
+      "etiqueta": "Galletitas"
     },
     {
       "id": "11",
@@ -162,7 +162,7 @@
       "nombre": "Fausto",
       "apellido": "Gimenez",
       "razonSocial": "fausto",
-      "cuit": "1234",
+      "cuit": "12345",
       "email": "fausto@gmail.com"
     },
     {
@@ -214,35 +214,13 @@
       "id": "2",
       "nombreCategoria": "Bebidas",
       "estado": true,
-      "etiquetas": [
-        {
-          "id": "1",
-          "nombreEtiqueta": "Gaseosa",
-          "estado": true
-        },
-        {
-          "id": "2",
-          "nombreEtiqueta": "Vinos",
-          "estado": true
-        },
-        {
-          "id": "3",
-          "nombreEtiqueta": "Aguas",
-          "estado": true
-        }
-      ]
+      "etiquetas": []
     },
     {
       "id": "3",
       "nombreCategoria": "Higiene",
       "estado": true,
-      "etiquetas": [
-        {
-          "id": "1",
-          "nombreEtiqueta": "Shampoo",
-          "estado": true
-        }
-      ]
+      "etiquetas": []
     },
     {
       "id": "4",

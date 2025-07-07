@@ -48,8 +48,27 @@
     </div>
 
     <div class="botones">
-      <button type="button" id="cancelar" routerLink="/proveedores" [state]="{user}">Cancelar</button>
+      @if(mensajeExito) {
+      <small class="exito">Actualizado Correctamente</small>
+      <button
+        type="button"
+        id="volver"
+        routerLink="/proveedores"
+        [state]="{user}"
+      >
+        Volver
+      </button>
+      } @else {
+      <button
+        type="button"
+        id="cancelar"
+        routerLink="/proveedores"
+        [state]="{user}"
+      >
+        Cancelar
+      </button>
       <button type="submit" id="agregar">Actualizar proveedor</button>
+      }
     </div>
   </form>
 </div>

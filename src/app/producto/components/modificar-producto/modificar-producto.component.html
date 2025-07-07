@@ -49,10 +49,18 @@
       formulario.controls['categoria'].touched){
       <small class="error">Campo requerido.</small>
       }
-      <select id="categoria" formControlName="categoria" (change)="actualizarEtiquetas($event)">
-        <option value="" disabled selected hidden>Selecciona una categoría</option>
+      <select
+        id="categoria"
+        formControlName="categoria"
+        (change)="actualizarEtiquetas($event)"
+      >
+        <option value="" disabled selected hidden>
+          Selecciona una categoría
+        </option>
         @for (categoria of listaCategorias; track $index) {
-        <option value="{{ categoria.nombreCategoria }}">{{ categoria.nombreCategoria }}</option>
+        <option value="{{ categoria.nombreCategoria }}">
+          {{ categoria.nombreCategoria }}
+        </option>
         }
       </select>
     </div>
@@ -64,19 +72,33 @@
       <small class="error">Campo requerido.</small>
       }
       <select formControlName="etiqueta">
-        <option value="" disabled selected hidden>Selecciona una etiqueta</option>
+        <option value="" disabled selected hidden>
+          Selecciona una etiqueta
+        </option>
         @for (etiqueta of listaEtiquetas; track $index) {
-        <option value="{{ etiqueta.nombreEtiqueta }}">{{ etiqueta.nombreEtiqueta }}</option>
+        <option value="{{ etiqueta.nombreEtiqueta }}">
+          {{ etiqueta.nombreEtiqueta }}
+        </option>
         }
       </select>
     </div>
   </div>
   <div class="botones">
-       @if (mensajeExito) {
-     <small class="exito">Actualizado Correctamente</small>
-   }
-    <button type="button" id="cancelar" routerLink="/productos" [state]="{user}"> Cancelar </button>
-    <button type="submit" id="agregar">Actualizar producto </button>
-
+    @if (mensajeExito) {
+    <small class="exito">Actualizado Correctamente</small>
+    <button type="button" id="volver" routerLink="/productos" [state]="{user}">
+      Volver
+    </button>
+    } @else {
+    <button
+      type="button"
+      id="cancelar"
+      routerLink="/productos"
+      [state]="{user}"
+    >
+      Cancelar
+    </button>
+    <button type="submit" id="agregar">Actualizar producto</button>
+    }
   </div>
 </form>
