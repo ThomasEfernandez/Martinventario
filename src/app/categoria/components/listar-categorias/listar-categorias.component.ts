@@ -21,7 +21,7 @@ export class ListarCategoriasComponent {
     tipo: '',
     estado: false
   };
-
+  
   listaCategorias: Categoria[] = [];
   categoriaService = inject(CategoriaService);
 
