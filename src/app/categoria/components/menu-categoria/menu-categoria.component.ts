@@ -17,6 +17,7 @@ export class MenuCategoriaComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 }

@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 //import { authGuardFn } from './auth/guard/auth.guard-fn';
 /* INICIAR SESION */
 import { PaginaIniciarSesionComponent } from './sesion/pages/pagina-iniciar-sesion/pagina-iniciar-sesion.component';
+/* RECUPERAR CONTRASEÑA */
+import { PaginaRecuperarContrasenaComponent } from './sesion/pages/pagina-recuperar-contrasena/pagina-recuperar-contrasena.component';
 /* PRODUCTOS */
 // PRODUCTO
 import { PaginaProductosComponent } from './producto/pages/pagina-productos/pagina-productos.component';
@@ -39,6 +41,11 @@ export const routes: Routes = [
   {
     path: '',
     component: PaginaIniciarSesionComponent,
+  },
+  {
+    path: 'recuperar-contrasena',
+    component: PaginaRecuperarContrasenaComponent,
+    // canActivate: [authGuardFn],
   },
   //PRODUCTO
   {

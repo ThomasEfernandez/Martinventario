@@ -20,7 +20,8 @@ export class ModificarPedidoComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 
   pedidoService = inject(PedidoService);
@@ -35,10 +36,10 @@ export class ModificarPedidoComponent {
     id: [''],
     fecha: [
       new Date().getDate() +
-      '/' +
-      (new Date().getMonth() + 1) +
-      '/' +
-      new Date().getFullYear(),
+        '/' +
+        (new Date().getMonth() + 1) +
+        '/' +
+        new Date().getFullYear(),
     ],
     producto: [''],
     cantidad: [0],
@@ -58,9 +59,7 @@ export class ModificarPedidoComponent {
         this.formulario.controls['id'].setValue(pedido.id);
         this.formulario.controls['producto'].setValue(pedido.producto);
         this.formulario.controls['cantidad'].setValue(pedido.cantidad);
-        this.formulario.controls['proveedor'].setValue(
-          pedido.proveedor
-        );
+        this.formulario.controls['proveedor'].setValue(pedido.proveedor);
         this.formulario.controls['estado'].setValue(pedido.estado);
       },
       error: () => {

@@ -11,7 +11,6 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
   templateUrl: './listar-ingresos.component.html',
   styleUrl: './listar-ingresos.component.css',
 })
-
 export class ListarIngresosComponent {
   @Input() user: Usuario = {
     id: '',
@@ -20,7 +19,8 @@ export class ListarIngresosComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 
   ingresoService = inject(IngresoService);

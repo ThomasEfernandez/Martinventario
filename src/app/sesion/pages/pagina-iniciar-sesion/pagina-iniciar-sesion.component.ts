@@ -18,10 +18,11 @@ export class PaginaIniciarSesionComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 
   ngOnInit() {
-    console.log("PAGINA INICIAR SESION", this.user)
+    console.log('PAGINA INICIAR SESION', this.user);
   }
 }

@@ -19,9 +19,10 @@ export class ListarCategoriasComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
-  
+
   listaCategorias: Categoria[] = [];
   categoriaService = inject(CategoriaService);
 

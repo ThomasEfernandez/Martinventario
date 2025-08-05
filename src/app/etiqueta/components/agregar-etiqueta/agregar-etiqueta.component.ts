@@ -21,7 +21,8 @@ export class AgregarEtiquetaComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 
   listaCategorias: Categoria[] = [];

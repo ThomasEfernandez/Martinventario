@@ -25,6 +25,7 @@ export class AgregarPedidoComponent {
     contrasena: '',
     tipo: '',
     estado: false,
+    mail: '',
   };
 
   pedidoService = inject(PedidoService);
