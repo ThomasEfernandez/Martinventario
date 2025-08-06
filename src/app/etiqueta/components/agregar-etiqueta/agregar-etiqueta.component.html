@@ -9,7 +9,7 @@
       <input type="text" formControlName="nombreEtiqueta" />
     </div>
 
-    <div class="flex-box">
+    <!-- <div class="flex-box">
       <label>Categoría</label>
       @if(formulario.controls['nombreCategoria'].getError('required') &&
       formulario.controls['nombreCategoria'].touched){
@@ -24,7 +24,7 @@
         </option>
         } }
       </select>
-    </div>
+    </div> -->
   </div>
   <div class="botones">
     @if(etiquetaRepetida) {
@@ -33,7 +33,7 @@
     <small class="exito">Etiqueta agregada</small>
     <button type="button" id="volver" routerLink="/categorias" [state]="{user}"> Volver </button>
     } @else {
-    <button type="button" id="cancelar" routerLink="/categorias" [state]="{user}"> Cancelar </button>
+    <button type="button" id="cancelar" routerLink="/categoria/:cat" [state]="{user}"> Cancelar </button>
     <button type="submit" id="agregar"> Agregar etiqueta </button> }
   </div>
 </form>

@@ -33,6 +33,11 @@
       }
     </tbody>
   </table>
+
+  <div class="boton-volver">
+    <a class="volver" routerLink="/productos" [state]="{user}">VOLVER</a>
+  </div>
+
   <div *ngIf="mensajeExito" class="mensaje-exito">
     {{ mensajeExito }}
   </div>

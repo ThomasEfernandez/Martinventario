@@ -39,7 +39,7 @@ export class AgregarEtiquetaComponent {
   formulario = this.fb.nonNullable.group({
     id: [''],
     nombreEtiqueta: ['', Validators.required],
-    nombreCategoria: ['', Validators.required],
+    // nombreCategoria: ['', Validators.required],
     estado: [true, [Validators.required]],
   });
 
@@ -85,19 +85,19 @@ export class AgregarEtiquetaComponent {
     });
   }
 
-  listarCategorias() {
-    this.categoriaService.getCategorias().subscribe({
-      next: (categorias: Categoria[]) => {
-        this.listaCategorias = categorias;
-      },
-      error: (err: Error) => {
-        console.log(err.message);
-      },
-    });
-  }
+  // listarCategorias() {
+  //   this.categoriaService.getCategorias().subscribe({
+  //     next: (categorias: Categoria[]) => {
+  //       this.listaCategorias = categorias;
+  //     },
+  //     error: (err: Error) => {
+  //       console.log(err.message);
+  //     },
+  //   });
+  // }
 
   ngOnInit(): void {
-    this.listarCategorias();
+    // this.listarCategorias();
     document.getElementById('categoria')?.addEventListener('click', () => {
       const select = document.getElementById('categoria') as HTMLSelectElement;
       const categoria = this.listaCategorias.find(
