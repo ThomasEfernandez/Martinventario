@@ -21,6 +21,7 @@ export class ListarPedidosComponent {
     contrasena: '',
     tipo: '',
     estado: false,
+    mail: '',
   };
 
   pedidoService = inject(PedidoService);

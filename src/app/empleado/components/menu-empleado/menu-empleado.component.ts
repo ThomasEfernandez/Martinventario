@@ -6,9 +6,8 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
   selector: 'app-menu-empleado',
   imports: [RouterModule],
   templateUrl: './menu-empleado.component.html',
-  styleUrl: './menu-empleado.component.css'
+  styleUrl: './menu-empleado.component.css',
 })
-
 export class MenuEmpleadoComponent {
   @Input() user: Usuario = {
     id: '',
@@ -17,6 +16,7 @@ export class MenuEmpleadoComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 }

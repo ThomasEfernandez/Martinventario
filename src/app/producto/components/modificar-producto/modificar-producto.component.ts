@@ -27,6 +27,7 @@ export class ModificarProductoComponent {
     contrasena: '',
     tipo: '',
     estado: false,
+    mail: '',
   };
 
   listaProveedores: Proveedor[] = [];

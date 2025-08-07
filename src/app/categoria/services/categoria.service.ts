@@ -30,7 +30,7 @@ export class CategoriaService {
     return this.http.put<Categoria>(`${this.url}/${id}`, categoria);
   }
 
-  patchCategoria(id: string, categoria: Categoria): Observable<Categoria> {
+  patchCategoria(id: string|null, categoria: Categoria): Observable<Categoria> {
     return this.http.patch<Categoria>(`${this.url}/${id}`, categoria);
   }
 }

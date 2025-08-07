@@ -12,7 +12,6 @@ import { AuthService } from 'app/auth/service/auth.service';
   templateUrl: './iniciar-sesion.component.html',
   styleUrl: './iniciar-sesion.component.css',
 })
-
 export class IniciarSesionComponent {
   router = inject(Router);
 
@@ -25,6 +24,7 @@ export class IniciarSesionComponent {
     contrasena: ['', [Validators.required]],
     tipo: [''],
     estado: false,
+    mail: [''],
   });
 
   usuarioService = inject(UsuarioService);

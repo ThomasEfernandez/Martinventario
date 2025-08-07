@@ -1,0 +1,6 @@
+<form [formGroup]="formulario" (ngSubmit)="recuperarContrasena()">
+  <label for="">Usuario</label>
+  <input type="text" formControlName="usuario" />
+  <button type="button" id="cancelar" routerLink="/">Cancelar</button>
+  <button type="submit">Recuperar contraseña</button>
+</form>

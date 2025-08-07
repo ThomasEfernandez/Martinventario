@@ -9,7 +9,6 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
   templateUrl: './menu-egreso.component.html',
   styleUrl: './menu-egreso.component.css',
 })
-
 export class MenuEgresoComponent {
   @Input() user: Usuario = {
     id: '',
@@ -18,6 +17,7 @@ export class MenuEgresoComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 }

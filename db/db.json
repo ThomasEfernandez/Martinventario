@@ -16,7 +16,8 @@
       "apellido": "Rojas",
       "contrasena": "agustin",
       "tipo": "base",
-      "estado": true
+      "estado": true,
+      "mail": "agustin@gmail.com"
     },
     {
       "id": "3",
@@ -53,6 +54,15 @@
       "contrasena": "lautaro",
       "tipo": "base",
       "estado": false
+    },
+    {
+      "id": "7",
+      "nombre": "Pepe",
+      "apellido": "Pepe",
+      "usuario": "pepe",
+      "contrasena": "pepe",
+      "tipo": "base",
+      "estado": true
     }
   ],
   "productos": [
@@ -142,7 +152,7 @@
       "nombreProducto": "papitas",
       "marca": "Lays",
       "proveedor": "Agus",
-      "cantidad": 23,
+      "cantidad": 1,
       "categoria": "Alimentos",
       "etiqueta": "Galletitas"
     },
@@ -151,7 +161,7 @@
       "nombreProducto": "alimento canino",
       "marca": "Royal Canin",
       "proveedor": "Fausto",
-      "cantidad": 9,
+      "cantidad": 19,
       "categoria": "Mascotas",
       "etiqueta": "Alimento Canino"
     }
@@ -180,6 +190,14 @@
       "razonSocial": "|123",
       "cuit": "1321",
       "email": "dasd@gmail.com"
+    },
+    {
+      "id": "4",
+      "nombre": "Pepe",
+      "apellido": "Pepe",
+      "razonSocial": "Pepe",
+      "cuit": "Pepe",
+      "email": "Pepe@gmail.com"
     }
   ],
   "categorias": [
@@ -229,7 +247,7 @@
       "etiquetas": [
         {
           "id": "1",
-          "nombreEtiqueta": "Lustrador",
+          "nombreEtiqueta": "Lusatrador",
           "estado": true
         },
         {
@@ -278,6 +296,18 @@
       "nombreCategoria": "Educacion",
       "estado": true,
       "etiquetas": []
+    },
+    {
+      "id": "8",
+      "nombreCategoria": "Jueguetes",
+      "estado": true,
+      "etiquetas": [
+        {
+          "id": "1",
+          "nombreEtiqueta": "Juegos de mesa",
+          "estado": true
+        }
+      ]
     }
   ],
   "egresos": [
@@ -392,6 +422,13 @@
       "usuario": "thomas",
       "producto": "Crema de avellanas Nutella 350 g.",
       "cantidad": 1
+    },
+    {
+      "id": "17",
+      "fecha": "5/8/2025",
+      "usuario": "admin",
+      "producto": "papitas",
+      "cantidad": 72
     }
   ],
   "ingresos": [
@@ -575,6 +612,20 @@
       "usuario": "thomas",
       "producto": "Pepitos",
       "cantidad": 2
+    },
+    {
+      "id": "26",
+      "fecha": "5/8/2025",
+      "usuario": "admin",
+      "producto": "alimento canino",
+      "cantidad": 10
+    },
+    {
+      "id": "27",
+      "fecha": "5/8/2025",
+      "usuario": "agustin",
+      "producto": "papitas",
+      "cantidad": 50
     }
   ],
   "pedidos": [
@@ -608,7 +659,7 @@
       "producto": "uvas",
       "cantidad": 20,
       "proveedor": "Agustin",
-      "estado": false
+      "estado": true
     },
     {
       "id": "5",
@@ -620,9 +671,9 @@
     },
     {
       "id": "6",
-      "fecha": "1/6/2025",
+      "fecha": "5/8/2025",
       "producto": "MILANESAS",
-      "cantidad": 1,
+      "cantidad": "1",
       "proveedor": "Agustin",
       "estado": false
     },
@@ -640,6 +691,14 @@
       "producto": "asfdada",
       "cantidad": 1,
       "proveedor": "Thomas",
+      "estado": true
+    },
+    {
+      "id": "9",
+      "fecha": "5/8/2025",
+      "producto": "alimento canino",
+      "cantidad": "100",
+      "proveedor": "Fausto",
       "estado": true
     }
   ]

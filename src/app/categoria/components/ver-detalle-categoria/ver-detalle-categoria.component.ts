@@ -20,7 +20,8 @@ export class VerDetalleCategoriaComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 
   catcat = history.state.categoria;
@@ -65,7 +66,9 @@ export class VerDetalleCategoriaComponent {
   }
 
   activarEtiqueta(id: string | null) {
-    const cat = this.catArreglo.find((c) => c.nombreCategoria === this.categoria);
+    const cat = this.catArreglo.find(
+      (c) => c.nombreCategoria === this.categoria
+    );
     cat?.etiquetas.forEach((e) => {
       if (e.id === id) {
         e.estado = true;
@@ -87,7 +90,9 @@ export class VerDetalleCategoriaComponent {
   }
 
   desactivarEtiqueta(id: string | null) {
-    const cat = this.catArreglo.find((c) => c.nombreCategoria === this.categoria);
+    const cat = this.catArreglo.find(
+      (c) => c.nombreCategoria === this.categoria
+    );
     cat?.etiquetas.forEach((e) => {
       if (e.id === id) {
         e.estado = false;

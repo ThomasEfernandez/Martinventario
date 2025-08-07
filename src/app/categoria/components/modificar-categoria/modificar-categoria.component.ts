@@ -21,6 +21,7 @@ export class ModificarCategoriaComponent {
     contrasena: '',
     tipo: '',
     estado: false,
+    mail: '',
   };
 
   catcat = history.state.categoria;

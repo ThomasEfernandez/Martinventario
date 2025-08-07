@@ -19,7 +19,8 @@ export class ListarProductosComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 
   ngOnInit(): void {

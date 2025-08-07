@@ -17,6 +17,7 @@ export class MenuProveedorComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 }
