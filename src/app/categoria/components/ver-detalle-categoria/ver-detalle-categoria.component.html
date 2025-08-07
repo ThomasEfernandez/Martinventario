@@ -12,7 +12,7 @@
       <tr>
         <td>{{ etiqueta.nombreEtiqueta }}</td>
         <td>
-          <button class="modificar" [routerLink]="['/modificar-etiqueta', etiqueta.id]" [state]="{user}">Modificar
+          <button class="modificar" [routerLink]="['/modificar-etiqueta', etiqueta.id]" [state]="{user, etiqueta:etiqueta,categoria:catcat}">Modificar
           </button>
         </td>
         <td>

@@ -17,5 +17,6 @@ export class MenuEtiquetaComponent {
     contrasena: '',
     tipo: '',
     estado: false,
+    mail: '',
   };
 }

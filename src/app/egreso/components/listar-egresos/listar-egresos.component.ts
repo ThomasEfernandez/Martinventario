@@ -11,7 +11,6 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
   templateUrl: './listar-egresos.component.html',
   styleUrl: './listar-egresos.component.css',
 })
-
 export class ListarEgresosComponent {
   @Input() user: Usuario = {
     id: '',
@@ -20,7 +19,8 @@ export class ListarEgresosComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 
   egresoService = inject(EgresoService);

@@ -110,13 +110,13 @@ button {
   background-color: #0099ff;
   cursor: pointer;
 }
-#recuperar-contrasena {
+#cancelar {
   background-color: #ee4444;
 }
 button:hover {
   background-color: #00bbff;
 }
-#recuperar-contrasena {
+#cancelar {
   background-color: #ee6666;
 }
 .error {

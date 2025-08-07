@@ -11,7 +11,6 @@ import { RouterModule } from '@angular/router';
   templateUrl: './agregar-usuario.component.html',
   styleUrl: './agregar-usuario.component.css',
 })
-
 export class AgregarUsuarioComponent {
   @Input() user: Usuario = {
     id: '',
@@ -20,7 +19,8 @@ export class AgregarUsuarioComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 
   usuarioService = inject(UsuarioService);
@@ -36,6 +36,7 @@ export class AgregarUsuarioComponent {
     contrasena: ['', [Validators.required, Validators.minLength(4)]],
     tipo: [''],
     estado: [true],
+    mail: [''],
   });
 
   agregarUsuario() {

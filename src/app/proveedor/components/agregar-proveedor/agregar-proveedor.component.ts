@@ -20,7 +20,8 @@ export class AgregarProveedorComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 
   listaProveedores: Proveedor[] = [];

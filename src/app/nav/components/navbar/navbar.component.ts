@@ -17,6 +17,7 @@ export class NavbarComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 }

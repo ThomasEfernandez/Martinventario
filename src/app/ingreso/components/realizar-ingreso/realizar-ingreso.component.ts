@@ -14,7 +14,6 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
   templateUrl: './realizar-ingreso.component.html',
   styleUrl: './realizar-ingreso.component.css',
 })
-
 export class RealizarIngresoComponent {
   @Input() user: Usuario = {
     id: '',
@@ -23,7 +22,8 @@ export class RealizarIngresoComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 
   ngOnInit() {
@@ -36,11 +36,6 @@ export class RealizarIngresoComponent {
       );
     });
   }
-
-
-
-
-
 
   ingresoService = inject(IngresoService);
   productoService = inject(ProductoService);
@@ -64,10 +59,10 @@ export class RealizarIngresoComponent {
     id: [''],
     fecha: [
       new Date().getDate() +
-      '/' +
-      (new Date().getMonth() + 1) +
-      '/' +
-      new Date().getFullYear(),
+        '/' +
+        (new Date().getMonth() + 1) +
+        '/' +
+        new Date().getFullYear(),
     ],
     usuario: [''],
     producto: ['', Validators.required],
@@ -86,7 +81,7 @@ export class RealizarIngresoComponent {
           this.realizarIngresoService(ingreso);
           this.ingresoRealizado = true;
         },
-      })
+      });
       // },
       // });
     } else {

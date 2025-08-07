@@ -16,5 +16,6 @@ export class PaginaVerDetalleCategoriaComponent {
 
   ngOnInit() {
     console.log("PAGINA VER DETALLE CATEGORIA", this.user)
+   
   }
 }

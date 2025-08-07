@@ -18,7 +18,8 @@ export class ListarUsuariosComponent implements OnInit {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 
   usuarioService = inject(UsuarioService);
@@ -33,6 +34,7 @@ export class ListarUsuariosComponent implements OnInit {
     contrasena: '',
     tipo: '',
     estado: false,
+    mail: '',
   };
 
   listarUsuarios() {

@@ -14,7 +14,6 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
   templateUrl: './realizar-egreso.component.html',
   styleUrl: './realizar-egreso.component.css',
 })
-
 export class RealizarEgresoComponent {
   @Input() user: Usuario = {
     id: '',
@@ -23,7 +22,8 @@ export class RealizarEgresoComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 
   ngOnInit() {
@@ -64,10 +64,10 @@ export class RealizarEgresoComponent {
     id: [''],
     fecha: [
       new Date().getDate() +
-      '/' +
-      (new Date().getMonth() + 1) +
-      '/' +
-      new Date().getFullYear(),
+        '/' +
+        (new Date().getMonth() + 1) +
+        '/' +
+        new Date().getFullYear(),
     ],
     usuario: [''],
     producto: ['', Validators.required],
@@ -86,7 +86,7 @@ export class RealizarEgresoComponent {
           this.realizarEgresoService(egreso);
           this.egresoRealizado = true;
         },
-      })
+      });
       // },
       // });
     } else {

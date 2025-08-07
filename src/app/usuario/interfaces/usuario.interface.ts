@@ -6,4 +6,5 @@ export interface Usuario {
   contrasena: string;
   tipo: string;
   estado: boolean;
+  mail: string;
 }

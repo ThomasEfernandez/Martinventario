@@ -21,6 +21,7 @@ export class ModificarProveedorComponent {
     contrasena: '',
     tipo: '',
     estado: false,
+    mail: '',
   };
 
   proveedorService = inject(ProveedorService);

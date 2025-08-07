@@ -18,5 +18,6 @@ export class MenuPedidoComponent {
     contrasena: '',
     tipo: '',
     estado: false,
+    mail: '',
   };
 }

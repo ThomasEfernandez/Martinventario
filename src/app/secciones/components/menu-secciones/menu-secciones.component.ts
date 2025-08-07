@@ -18,5 +18,6 @@ export class MenuSeccionesComponent {
     contrasena: '',
     tipo: '',
     estado: false,
+    mail: '',
   };
 }

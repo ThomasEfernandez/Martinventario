@@ -20,7 +20,8 @@ export class ListarProveedorComponent {
     usuario: '',
     contrasena: '',
     tipo: '',
-    estado: false
+    estado: false,
+    mail: '',
   };
 
   listaProveedores: Proveedor[] = [];
@@ -46,7 +47,7 @@ export class ListarProveedorComponent {
     this.proveedorService.deleteProveedor(id).subscribe({
       next: () => {
         this.listar();
-        this.mensajeExito = "Se ha eliminado correctamente. "
+        this.mensajeExito = 'Se ha eliminado correctamente. ';
 
         setTimeout(() => {
           this.mensajeExito = null;
@@ -56,6 +57,5 @@ export class ListarProveedorComponent {
         console.error('Error al eliminar el proveedor', err);
       },
     });
-
   }
 }
