@@ -298,76 +298,56 @@ td {
   text-align: center;
 }
 
-/*Botón volver*/
 .boton-volver {
-  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.5rem 0 2rem 0;
+  padding-right: 0.5rem;
 }
 
 .volver {
-  display: block;
-  padding: 0.75rem 1rem;
-  color: #374151;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  color: #64748b;
   text-decoration: none;
   font-size: 0.875rem;
-  font-weight: 500;
-  border-radius: 0.5rem;
-  transition: all 0.2s ease;
-  position: relative;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.025em;
+  position: relative;
+  transition: all 0.3s ease;
+  border: none;
+  background: transparent;
 }
 
-.volver:hover {
-  background: #f9fafb;
-  color: #3b82f6;
-}
-
-.volver:active {
-  transform: scale(0.98);
-}
-
-.volver a::after {
+.volver::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 0;
   width: 0;
   height: 2px;
-  background: #3b82f6;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+  background: var(--primary-color);
+  transition: width 0.3s ease;
 }
 
-.volver a:hover::after {
-  width: 80%;
+.volver:hover {
+  color: var(--primary-color);
+  background: transparent;
 }
 
-.boton-volver:last-child a {
-  border: 1px solid transparent;
+.volver:hover::after {
+  width: 100%;
 }
 
-.boton-volver:last-child a::after {
-  background: #3b82f6;
-}
-
-.volver :focus {
-  outline: 2px solid #f0f1f3;
+.volver:focus {
+  outline: 2px solid var(--primary-color);
   outline-offset: 2px;
+  border-radius: 2px;
 }
 
-.boton-volver:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: -0.25rem;
-  top: 50%;
-  width: 1px;
-  height: 1rem;
-  background: #48494a;
-  transform: translateY(-50%);
-}
-
-.boton-volver {
-  position: relative;
+.volver:active {
+  transform: translateY(1px);
 }
 
 td:nth-child(4) {
