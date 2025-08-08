@@ -175,11 +175,6 @@ tbody tr {
   border-bottom: 1px solid #e2e8f0;
 }
 
-tbody tr:hover {
-  background: rgba(37, 99, 235, 0.02);
-  transform: scale(1.001);
-}
-
 tbody tr:last-child {
   border-bottom: none;
 }

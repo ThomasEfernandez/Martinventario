@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { Component, inject, Input, OnInit } from '@angular/core';
 import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 import { UsuarioService } from 'app/usuario/services/usuario.service';
@@ -5,7 +6,7 @@ import { UsuarioService } from 'app/usuario/services/usuario.service';
 @Component({
   selector: 'app-listar-usuarios',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './listar-usuarios.component.html',
   styleUrl: './listar-usuarios.component.css',
 })
