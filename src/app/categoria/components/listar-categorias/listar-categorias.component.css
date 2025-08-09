@@ -335,58 +335,6 @@ tbody tr:has(td:nth-child(4):contains("9")) {
   background: rgba(239, 68, 68, 0.02);
 }
 
-.boton-volver {
-  display: flex;
-  justify-content: flex-end;
-  margin: 1.5rem 0 2rem 0;
-  padding-right: 0.5rem;
-}
-
-.volver {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  color: #64748b;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
-  position: relative;
-  transition: all 0.3s ease;
-  border: none;
-  background: transparent;
-}
-
-.volver::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--primary-color);
-  transition: width 0.3s ease;
-}
-
-.volver:hover {
-  color: var(--primary-color);
-  background: transparent;
-}
-
-.volver:hover::after {
-  width: 100%;
-}
-
-.volver:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
-  border-radius: 2px;
-}
-
-.volver:active {
-  transform: translateY(1px);
-}
-
 td:nth-child(4) {
   position: relative;
 }

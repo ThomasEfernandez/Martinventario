@@ -64,7 +64,6 @@ button:hover {
   color: #009900;
 }*/
 
-/* Variables para consistencia */
 :root {
   --primary-color: #2563eb;
   --secondary-color: #10b981;
@@ -140,12 +139,6 @@ select:focus {
   transform: translateY(-1px);
 }
 
-input[type="text"]:hover,
-input[type="number"]:hover,
-select:hover {
-  border-color: var(--text-secondary);
-}
-
 select {
   cursor: pointer;
   appearance: none;
@@ -156,19 +149,10 @@ select {
   padding-right: 2.5rem;
 }
 
-select:focus {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%232563eb' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-}
-
-
 option {
   padding: 0.5rem;
   background: var(--surface-color);
   color: var(--text-primary);
-}
-
-option:hover {
-  background: rgba(37, 99, 235, 0.1);
 }
 
 .error {

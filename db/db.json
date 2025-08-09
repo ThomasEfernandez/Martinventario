@@ -63,6 +63,16 @@
       "contrasena": "pepe",
       "tipo": "base",
       "estado": true
+    },
+    {
+      "id": "8",
+      "nombre": "Test",
+      "apellido": "Testing",
+      "usuario": "Test",
+      "contrasena": "test",
+      "tipo": "base",
+      "estado": false,
+      "mail": ""
     }
   ],
   "productos": [
@@ -671,9 +681,9 @@
     },
     {
       "id": "6",
-      "fecha": "5/8/2025",
+      "fecha": "9/8/2025",
       "producto": "MILANESAS",
-      "cantidad": "1",
+      "cantidad": "3",
       "proveedor": "Agustin",
       "estado": false
     },

@@ -1,4 +1,4 @@
-div {
+/*div {
   padding: 1%;
   background-color: #fbcb5b;
   border: #a7a5a5;
@@ -51,4 +51,241 @@ h3 {
 }
 .columna-cantidad {
   width: 13.5%;
+}
+*/
+
+h3 {
+  background: linear-gradient(135deg, var(--header-orange), #d97706);
+  color: white;
+  margin: 0;
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  position: relative;
+}
+
+h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-50%);
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface-color);
+  margin: 0;
+}
+
+/* Headers de tabla */
+thead {
+  background: linear-gradient(135deg, var(--header-blue), #2563eb);
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: white;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th:last-child {
+  border-right: none;
+}
+
+/* Filas del cuerpo de la tabla */
+tbody tr {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:hover {
+  background: rgba(37, 99, 235, 0.02);
+  transform: scale(1.001);
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(248, 250, 252, 0.5);
+}
+
+tbody tr:nth-child(even):hover {
+  background: rgba(37, 99, 235, 0.02);
+}
+
+td {
+  padding: 1rem;
+  vertical-align: middle;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  border-right: 1px solid var(--border-color);
+}
+
+td:last-child {
+  border-right: none;
+}
+
+.columna-id {
+  width: 80px;
+  text-align: center;
+}
+
+.columna-id td {
+  font-weight: 700;
+  color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.05);
+  border-radius: var(--radius-sm);
+  margin: 0.25rem;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  min-width: 2rem;
+}
+
+.columna-fecha {
+  width: 120px;
+}
+
+.columna-fecha td {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.columna-nombre {
+  min-width: 200px;
+}
+
+.columna-nombre td {
+  font-weight: 600;
+}
+
+.columna-cantidad{
+  width: 100px;
+  text-align: center;
+}
+
+.columna-cantidad td{
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.estadisticas {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+div:has(table) {
+  animation: fadeInUp 0.4s ease-out;
+  animation-fill-mode: both;
+}
+
+div:has(table):nth-child(1) { animation-delay: 0.1s; }
+div:has(table):nth-child(2) { animation-delay: 0.2s; }
+div:has(table):nth-child(3) { animation-delay: 0.3s; }
+div:has(table):nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsividad */
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .estadisticas {
+    padding: 1rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  th,
+  td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  h3 {
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .columna-id {
+    width: 60px;
+  }
+
+  .columna-fecha {
+    width: 100px;
+  }
+
+  .columna-nombre {
+    min-width: 150px;
+  }
+
+  .columna-cantidad {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  th,
+  td {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.75rem;
+  }
+
+  h3 {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  .columna-id td {
+    padding: 0.125rem 0.25rem;
+    font-size: 0.75rem;
+  }
+
+}
+
+/* Ajustes específicos para tablas sin thead */
+table:not(:has(thead)) tr:first-child {
+  background: linear-gradient(135deg, var(--header-blue), #2563eb);
+}
+
+table:not(:has(thead)) tr:first-child th {
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
 }

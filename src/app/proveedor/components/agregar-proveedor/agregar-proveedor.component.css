@@ -135,17 +135,6 @@ input[type="email"] {
 
 input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="text"]:hover,
-input[type="email"]:hover,
-.error {
-  color: var(--danger-color);
-  font-size: 0.75rem;
-  font-weight: 500;
-  margin-top: -0.25rem;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
 
 .error::before {
   content: "⚠";
@@ -336,7 +325,7 @@ form {
   input[type="text"],
   input[type="email"],
 
-  
+
   button {
     padding: 0.75rem;
     font-size: 0.8rem;
