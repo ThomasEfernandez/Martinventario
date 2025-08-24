@@ -182,7 +182,7 @@
       "nombre": "Fausto",
       "apellido": "Gimenez",
       "razonSocial": "fausto",
-      "cuit": "12345",
+      "cuit": "1234",
       "email": "fausto@gmail.com"
     },
     {
@@ -681,9 +681,9 @@
     },
     {
       "id": "6",
-      "fecha": "9/8/2025",
+      "fecha": "20/8/2025",
       "producto": "MILANESAS",
-      "cantidad": "3",
+      "cantidad": "4",
       "proveedor": "Agustin",
       "estado": false
     },

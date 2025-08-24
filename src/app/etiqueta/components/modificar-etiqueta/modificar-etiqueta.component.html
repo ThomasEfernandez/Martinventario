@@ -13,9 +13,9 @@
   <div class="botones">
     @if(etiquetaModificada){
     <small class="exito">etiqueta modificada</small>
-    <button type="button" id="volver" routerLink="/categorias" [state]="{user}">
+    <button type="button" id="volver" routerLink="/categoria/:cat" [state]="{user}">
       Volver
-    </button>   
+    </button>
     } @else {
     <button
       type="button"

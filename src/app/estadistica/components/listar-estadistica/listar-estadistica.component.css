@@ -28,10 +28,11 @@
 }
 */
 
+/* Variables para consistencia */
 :root {
-  --primary-color: #2563eb;
+  --primary-color: #edc96c;
   --secondary-color: #10b981;
-  --tertiary-color: #f59e0b;
+  --tertiary-color: #fbbf24;
   --danger-color: #ef4444;
   --warning-color: #f97316;
   --success-color: #22c55e;
@@ -47,16 +48,27 @@
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
-  --header-orange: #f59e0b;
-  --header-blue: #3b82f6;
+  --header-orange: #fbbf24;
+  --header-blue: #edc96c;
 }
 
-/* Contenedor principal de estadísticas */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background-color);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: var(--text-primary);
+}
+
 .estadisticas {
   padding: 2rem;
   background: var(--background-color);
   min-height: 100vh;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .container {
@@ -67,8 +79,7 @@
   margin: 0 auto;
 }
 
-/* Contenedor individual de cada estadística */
-div:has(table) {
+.tabla-container {
   background: var(--surface-color);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -77,13 +88,13 @@ div:has(table) {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-div:has(table):hover {
+.tabla-container:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg), 0 20px 25px -5px rgb(0 0 0 / 0.1);
 }
 
-h3 {
-  background: linear-gradient(135deg, var(--header-orange), #d97706);
+.titulo-seccion {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
   color: white;
   margin: 0;
   padding: 1rem 1.5rem;
@@ -95,7 +106,7 @@ h3 {
   position: relative;
 }
 
-h3::after {
+.titulo-seccion::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -106,55 +117,59 @@ h3::after {
   transform: translateX(-50%);
 }
 
-table {
+.tabla {
   width: 100%;
   border-collapse: collapse;
   background: var(--surface-color);
   margin: 0;
 }
 
-thead {
-  background: linear-gradient(135deg, var(--header-blue), #2563eb);
+.tabla thead {
+  background: linear-gradient(
+    135deg,
+    rgba(237, 201, 108, 0.8),
+    rgba(212, 175, 55, 0.8)
+  );
 }
 
-th {
+.tabla th {
   padding: 1rem;
   text-align: left;
   font-weight: 600;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.025em;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-th:last-child {
+.tabla th:last-child {
   border-right: none;
 }
 
-tbody tr {
+.tabla tbody tr {
   transition: all 0.2s ease;
   border-bottom: 1px solid var(--border-color);
 }
 
-tbody tr:hover {
-  background: rgba(37, 99, 235, 0.02);
+.tabla tbody tr:hover {
+  background: rgba(237, 201, 108, 0.02);
   transform: scale(1.001);
 }
 
-tbody tr:last-child {
+.tabla tbody tr:last-child {
   border-bottom: none;
 }
 
-tbody tr:nth-child(even) {
+.tabla tbody tr:nth-child(even) {
   background: rgba(248, 250, 252, 0.5);
 }
 
-tbody tr:nth-child(even):hover {
-  background: rgba(37, 99, 235, 0.02);
+.tabla tbody tr:nth-child(even):hover {
+  background: rgba(237, 201, 108, 0.02);
 }
 
-td {
+.tabla td {
   padding: 1rem;
   vertical-align: middle;
   font-size: 0.875rem;
@@ -162,7 +177,7 @@ td {
   border-right: 1px solid var(--border-color);
 }
 
-td:last-child {
+.tabla td:last-child {
   border-right: none;
 }
 
@@ -171,22 +186,16 @@ td:last-child {
   text-align: center;
 }
 
-.columna-id td {
+.columna-id .tabla td {
   font-weight: 700;
   color: var(--primary-color);
-  background: rgba(37, 99, 235, 0.05);
-  border-radius: var(--radius-sm);
-  margin: 0.25rem;
-  display: inline-block;
-  padding: 0.25rem 0.5rem;
-  min-width: 2rem;
 }
 
 .columna-fecha {
   width: 120px;
 }
 
-.columna-fecha td {
+.columna-fecha .tabla td {
   font-weight: 600;
   color: var(--text-secondary);
 }
@@ -195,18 +204,16 @@ td:last-child {
   min-width: 200px;
 }
 
-.columna-nombre td {
+.columna-nombre .tabla td {
   font-weight: 600;
 }
 
-.columna-cantidad,
-.columan-cantidad {
+.columna-cantidad {
   width: 100px;
   text-align: center;
 }
 
-.columna-cantidad td,
-.columan-cantidad td {
+.columna-cantidad .tabla td {
   font-weight: 700;
   color: var(--secondary-color);
   font-size: 1rem;
@@ -217,38 +224,34 @@ td:last-child {
   text-align: center;
 }
 
-.columna-estado td {
-  font-weight: 600;
+.badge {
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius-md);
-  display: inline-block;
+  font-weight: 600;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.025em;
+  display: inline-block;
 }
 
-/* Estados específicos */
-td:contains("Realizado"),
-td[contains*="Realizado"] {
+.badge-realizado {
   background: rgba(34, 197, 94, 0.1);
   color: var(--success-color);
 }
 
-td:contains("No realizado"),
-td[contains*="No realizado"] {
+.badge-no-realizado {
   background: rgba(239, 68, 68, 0.1);
   color: var(--danger-color);
 }
 
-/* Estilos para tabla de usuarios */
-.columna-tipo {
-  width: 150px;
+.badge-admin {
+  background: rgba(147, 51, 234, 0.1);
+  color: #9333ea;
 }
 
-.columna-tipo td {
-  font-weight: 600;
-  color: var(--text-primary);
-  text-transform: capitalize;
+.badge-base {
+  background: rgba(237, 201, 108, 0.1);
+  color: #b8860b;
 }
 
 /* Animaciones */
@@ -267,17 +270,24 @@ td[contains*="No realizado"] {
   animation: fadeInUp 0.4s ease-out;
 }
 
-div:has(table) {
+.tabla-container {
   animation: fadeInUp 0.4s ease-out;
   animation-fill-mode: both;
 }
 
-div:has(table):nth-child(1) { animation-delay: 0.1s; }
-div:has(table):nth-child(2) { animation-delay: 0.2s; }
-div:has(table):nth-child(3) { animation-delay: 0.3s; }
-div:has(table):nth-child(4) { animation-delay: 0.4s; }
+.tabla-container:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.tabla-container:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.tabla-container:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.tabla-container:nth-child(4) {
+  animation-delay: 0.4s;
+}
 
-/* Responsividad */
 @media (max-width: 1200px) {
   .container {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -295,16 +305,16 @@ div:has(table):nth-child(4) { animation-delay: 0.4s; }
     gap: 1.5rem;
   }
 
-  table {
+  .tabla {
     font-size: 0.8rem;
   }
 
-  th,
-  td {
+  .tabla th,
+  .tabla td {
     padding: 0.75rem 0.5rem;
   }
 
-  h3 {
+  .titulo-seccion {
     padding: 0.75rem 1rem;
     font-size: 0.8rem;
   }
@@ -321,8 +331,7 @@ div:has(table):nth-child(4) { animation-delay: 0.4s; }
     min-width: 150px;
   }
 
-  .columna-cantidad,
-  .columan-cantidad {
+  .columna-cantidad {
     width: 80px;
   }
 
@@ -332,36 +341,19 @@ div:has(table):nth-child(4) { animation-delay: 0.4s; }
 }
 
 @media (max-width: 480px) {
-  th,
-  td {
+  .tabla th,
+  .tabla td {
     padding: 0.5rem 0.25rem;
     font-size: 0.75rem;
   }
 
-  h3 {
+  .titulo-seccion {
     font-size: 0.75rem;
     padding: 0.5rem;
   }
 
-  .columna-id td {
-    padding: 0.125rem 0.25rem;
-    font-size: 0.75rem;
-  }
-
-  .columna-estado td {
+  .badge {
     padding: 0.125rem 0.5rem;
     font-size: 0.65rem;
   }
-}
-
-/* Ajustes específicos para tablas sin thead */
-table:not(:has(thead)) tr:first-child {
-  background: linear-gradient(135deg, var(--header-blue), #2563eb);
-}
-
-table:not(:has(thead)) tr:first-child th {
-  color: white;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
 }
