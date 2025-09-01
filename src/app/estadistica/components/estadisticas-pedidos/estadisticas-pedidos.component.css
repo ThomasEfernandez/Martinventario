@@ -246,6 +246,17 @@ td:last-child {
   font-size: 1rem;
 }
 
+.columna-estado {
+  width: 100px;
+  text-align: center;
+}
+
+.columna-estado td {
+  font-weight: 700;
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
 .badge {
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius-md);
@@ -264,16 +275,6 @@ td:last-child {
 .badge-no-realizado {
   background: rgba(239, 68, 68, 0.1);
   color: var(--danger-color);
-}
-
-.badge-admin {
-  background: rgba(147, 51, 234, 0.1);
-  color: #9333ea;
-}
-
-.badge-base {
-  background: rgba(237, 201, 108, 0.1);
-  color: #b8860b;
 }
 
 @keyframes fadeInUp {
@@ -345,6 +346,10 @@ div:has(table):nth-child(4) { animation-delay: 0.4s; }
   }
 
   .columna-cantidad {
+    width: 80px;
+  }
+
+  .columna-estado {
     width: 80px;
   }
 }

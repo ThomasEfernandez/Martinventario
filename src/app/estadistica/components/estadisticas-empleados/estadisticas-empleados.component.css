@@ -195,12 +195,12 @@ td:last-child {
   border-right: none;
 }
 
-.columna-id {
+.columna-tipo {
   width: 80px;
   text-align: center;
 }
 
-.columna-id td {
+.columna-tipo td {
   font-weight: 700;
   color: var(--primary-color);
   background: rgba(237, 201, 108, 0.1);
@@ -209,24 +209,6 @@ td:last-child {
   display: inline-block;
   padding: 0.25rem 0.5rem;
   min-width: 2rem;
-}
-
-.columna-fecha {
-  width: 120px;
-}
-
-.columna-fecha td {
-  font-weight: 600;
-  color: var(--text-secondary);
-}
-
-.columna-nombre {
-  min-width: 200px;
-}
-
-.columna-nombre td {
-  font-weight: 600;
-  color: var(--text-primary);
 }
 
 .columna-cantidad {
@@ -250,15 +232,6 @@ td:last-child {
   display: inline-block;
 }
 
-.badge-realizado {
-  background: rgba(34, 197, 94, 0.1);
-  color: var(--success-color);
-}
-
-.badge-no-realizado {
-  background: rgba(239, 68, 68, 0.1);
-  color: var(--danger-color);
-}
 
 .badge-admin {
   background: rgba(147, 51, 234, 0.1);
@@ -326,20 +299,12 @@ div:has(table):nth-child(4) { animation-delay: 0.4s; }
     font-size: 0.8rem;
   }
 
-  .columna-id {
+  .columna-tipo {
     width: 60px;
   }
 
-  .columna-fecha {
-    width: 100px;
-  }
-
-  .columna-nombre {
-    min-width: 150px;
-  }
-
   .columna-cantidad {
-    width: 80px;
+    width: 100px;
   }
 }
 
@@ -355,7 +320,7 @@ div:has(table):nth-child(4) { animation-delay: 0.4s; }
     padding: 0.5rem;
   }
 
-  .columna-id td {
+  .columna-tipo td {
     padding: 0.125rem 0.25rem;
     font-size: 0.75rem;
   }

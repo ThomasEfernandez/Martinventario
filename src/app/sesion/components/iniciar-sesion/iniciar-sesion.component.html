@@ -1,4 +1,4 @@
-<form [formGroup]="formulario" (ngSubmit)="iniciarSesion()">
+<!--<form [formGroup]="formulario" (ngSubmit)="iniciarSesion()">
   <label for="">Usuario</label>
   <input type="text" formControlName="usuario" />
   <label for="">Contraseña</label>
@@ -11,4 +11,40 @@
     Recuperar contraseña
   </button>
   <button type="submit">Iniciar sesión</button>
-</form>
+</form>-->
+
+<div class="login-body">
+  <div class="login-container">
+    <form [formGroup]="formulario" (ngSubmit)="iniciarSesion()" class="login-form">
+      <div class="input-group">
+        <label class="login-label">Usuario</label>
+        @if(formulario.controls['usuario'].getError('required') && formulario.controls['usuario'].touched) {
+        <small class="error">Campo requerido</small>
+        }
+        <input type="text" class="login-input" formControlName="usuario" placeholder="Ingrese su usuario" />
+      </div>
+
+      <div class="input-group">
+        <label class="login-label">Contraseña</label>
+        @if(formulario.controls['contrasena'].getError('required') && formulario.controls['contrasena'].touched) {
+        <small class="error">Campo requerido</small>
+        }
+        <input type="password" class="login-input" formControlName="contrasena" placeholder="Ingrese su contraseña" />
+      </div>
+
+      <div class="error">
+        @if (mensajeError) {
+        {{mensajeError}}
+        }
+      </div>
+
+      <div class="button-group">
+        <button type="submit" class="login-button">Iniciar sesión</button>
+        <button type="button" id="recuperar-contrasena" class="login-button" routerLink="/recuperar-contrasena">
+          Recuperar contraseña
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

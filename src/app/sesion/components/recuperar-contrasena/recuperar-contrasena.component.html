@@ -1,6 +1,38 @@
-<form [formGroup]="formulario" (ngSubmit)="recuperarContrasena()">
+<!--<form [formGroup]="formulario" (ngSubmit)="recuperarContrasena()">
   <label for="">Usuario</label>
   <input type="text" formControlName="usuario" />
   <button type="button" id="cancelar" routerLink="/">Cancelar</button>
   <button type="submit">Recuperar contraseña</button>
-</form>
+</form>-->
+
+<div class="login-body">
+  <div class="recovery-container">
+    <div class="recovery-header">
+      <div class="recovery-icon"></div>
+      <h1 class="recovery-title">Recuperar contraseña</h1>
+      <p class="recovery-subtitle">Ingrese su usuario para restablecer su contraseña</p>
+    </div>
+
+    <div class="recovery-info">
+      Se enviará un correo con las instrucciones para recuperar el acceso.
+    </div>
+
+    <form [formGroup]="formulario" (ngSubmit)="recuperarContrasena()" class="recovery-form">
+      <input type="text" class="recovery-input" formControlName="usuario" placeholder="Ingrese su usuario" />
+
+      <div class="error">
+        @if (mensajeExito) {
+          {{mensajeExito}}
+        } @else {
+          {{mensajeError}}
+        }
+      </div>
+
+      <div class="recovery-button-group">
+        <button type="button" id="cancelar" class="recovery-button" routerLink="/">Cancelar</button>
+        <button type="submit" class="recovery-button">Recuperar contraseña</button>
+      </div>
+    </form>
+  </div>
+</div>
+

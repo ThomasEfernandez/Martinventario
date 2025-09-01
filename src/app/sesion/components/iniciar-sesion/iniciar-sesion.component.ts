@@ -30,15 +30,20 @@ export class IniciarSesionComponent {
   usuarioService = inject(UsuarioService);
   authService = inject(AuthService);
 
+  mensajeError: string='';
+
   iniciarSesion() {
     if (this.formulario.invalid) return;
     const sesion = this.formulario.getRawValue();
     const user = this.buscarUsuario(sesion);
     if (user) {
+      this.mensajeError = '';
       //this.authService.logIn();
       this.router.navigate(['/productos'], { state: { user } });
     } else {
       console.log('Credenciales incorrectas. Contáctese con el admin.');
+      this.mensajeError = 'Usuario o contrasena incorrecta'
+      this.formulario.controls['contrasena'].reset()
     }
   }
 

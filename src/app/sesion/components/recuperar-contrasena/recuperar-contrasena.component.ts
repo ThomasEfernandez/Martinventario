@@ -27,6 +27,9 @@ export class RecuperarContrasenaComponent {
     mail: [''],
   });
 
+  mensajeExito: string = '';
+  mensajeError: string = '';
+
   // recuperarContrasena() {
   //   if (this.formulario.invalid) return;
   //   const sesion = this.formulario.getRawValue();
@@ -65,11 +68,21 @@ export class RecuperarContrasenaComponent {
           },
           'PgrLA8Z8f560V_agx'
         )
+        .then(() => {
+          this.mensajeExito =
+            'Se envió un correo con las instrucciones para recuperar la contraseña.';
+          this.mensajeError = '';
+        })
         .catch((error) => {
           console.error('Error al enviar el correo:', error);
+          this.mensajeError =
+            'Ocurrió un error al enviar el correo. Intente nuevamente.';
+          this.mensajeExito = '';
         });
     } else {
       console.log('Usuario no encontrado');
+      this.mensajeError = 'El usuario no existe en el sistema.';
+      this.mensajeExito = '';
     }
   }
 
