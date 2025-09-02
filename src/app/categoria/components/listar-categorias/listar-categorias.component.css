@@ -81,28 +81,6 @@ button:hover {
 }
 */
 
-/* Variables para consistencia */
-:root {
-  --primary-color: #2563eb;
-  --secondary-color: #10b981;
-  --tertiary-color: #f59e0b;
-  --danger-color: #ef4444;
-  --warning-color: #f97316;
-  --success-color: #22c55e;
-  --background-color: #f8fafc;
-  --surface-color: #ffffff;
-  --border-color: #e2e8f0;
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --text-muted: #94a3b8;
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-  --radius-sm: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -150,16 +128,16 @@ td {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, var(--tertiary-color), #d97706);
+  background: linear-gradient(135deg, #b3b1ae, #b9b7b5);
   color: rgb(91, 87, 83);
   border: none;
-  border-radius: var(--radius-md);
+  border-radius: 0.5rem;
   font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   position: relative;
   overflow: hidden;
 }
@@ -172,7 +150,7 @@ td {
 .verDetalle:hover {
   background: linear-gradient(135deg, #dad8d6, #d0cecc);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
 .verDetalle:active {
@@ -180,7 +158,7 @@ td {
 }
 
 .modificar {
-  display: inline-flex;
+   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
@@ -206,7 +184,7 @@ td {
 .modificar:hover {
   background:  #e2b27b;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
 .modificar:active {
@@ -214,7 +192,7 @@ td {
 }
 
 .desactivar {
-  display: inline-flex;
+   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
@@ -272,7 +250,7 @@ td {
 .activar:hover {
   background:  #bde9b2fe;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
 .activar:active {
@@ -358,7 +336,6 @@ td:nth-child(4) {
   }
 }
 
-/* Animación tabla */
 @keyframes fadeIn {
   from {
     opacity: 0;
