@@ -1,99 +1,11 @@
-/* * {
-  box-sizing: border-box;
-}
-form {
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 1%;
-  padding: 1%;
-  background-color: #ffffff;
-  border-radius: 5px;
-}
-.form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2%;
-}
-.flex-box {
-  width: 49%;
-}
-.botones {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2%;
-  justify-content: right;
-  align-items: center;
-}
-label {
-  margin: 1%;
-  background-color: #ffffff;
-}
-input,
-select {
-  width: 100%;
-  height: 50%;
-  margin: 1% 0 3%;
-  padding: 1%;
-  background-color: #eeeeee;
-  border: 1px solid #999999;
-  border-radius: 3px;
-}
-button {
-  margin-top: 1%;
-  padding: 1.5% 2%;
-  font-weight: bold;
-  border: 1px solid #222222;
-  border-radius: 3px;
-  background-color: #0099ff;
-  cursor: pointer;
-}
-#cancelar {
-  background-color: #ee4444;
-}
-button:hover {
-  background-color: #00bbff;
-}
-#cancelar:hover {
-  background-color: #ee6666;
-}
-.error {
-  color: #ee0000;
-  font-size: x-small;
-}
-.exito {
-  color: #009900;
-}
-*/
-
-:root {
-  --primary-color: #2563eb;
-  --secondary-color: #10b981;
-  --tertiary-color: #f59e0b;
-  --danger-color: #ef4444;
-  --warning-color: #f97316;
-  --success-color: #22c55e;
-  --background-color: #f8fafc;
-  --surface-color: #ffffff;
-  --border-color: #000000;
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --text-muted: #94a3b8;
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-  --radius-sm: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-}
-
 form {
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  background: var(--surface-color);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border-color);
+  background: #ffffff;
+  border-radius: .75rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  border: 1px solid #000000;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
 }
@@ -114,7 +26,7 @@ form {
 label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: #1e293b;
   text-transform: uppercase;
   letter-spacing: 0.025em;
 }
@@ -122,10 +34,10 @@ label {
 input[type="text"] {
   padding: 0.75rem;
   border: 2px solid #858181;
-  border-radius: var(--radius-md);
+  border-radius: 0.5rem;
   font-size: 0.875rem;
-  color: var(--text-primary);
-  background: var(--surface-color);
+  color:#1e293b;
+  background: #ffffff;
   transition: all 0.2s ease;
   font-family: inherit;
 }
@@ -138,7 +50,7 @@ input[type="text"]:focus,
 }
 
 .exito {
-  color: var(--success-color);
+  color: #22c55e;
   font-size: 0.875rem;
   font-weight: 600;
   display: flex;
@@ -149,7 +61,7 @@ input[type="text"]:focus,
 
 .exito::before {
   content: "✓";
-  background: var(--success-color);
+  background: #22c55e;
   color: white;
   border-radius: 50%;
   width: 1.25rem;
@@ -167,14 +79,14 @@ input[type="text"]:focus,
   align-items: center;
   gap: 1rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid #000000;
   flex-wrap: wrap;
 }
 
 button {
   padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: var(--radius-md);
+  border-radius: 0.5rem;
   font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
@@ -191,13 +103,13 @@ button {
 #agregar {
   background: #dea15c;
   color: white;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
 #agregar:hover {
   background: #ddb17e;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 }
 
 #agregar:active {
@@ -208,13 +120,13 @@ button {
 #cancelar {
   background: #dc2626;
   color: white;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
 #cancelar:hover {
   background: linear-gradient(135deg, #dc2626, #b91c1c);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 }
 
 #cancelar:active {
@@ -223,15 +135,15 @@ button {
 
 /* Botón Volver */
 #volver {
-  background: linear-gradient(135deg, var(--text-secondary), #475569);
+  background: linear-gradient(135deg, #64748b, #475569);
   color: white;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
 #volver:hover {
   background: linear-gradient(135deg, #475569, #334155);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 }
 
 #volver:active {
@@ -239,12 +151,12 @@ button {
 }
 
 input.ng-invalid.ng-touched {
-  border-color: var(--danger-color);
+  border-color: #ef4444;
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
 input.ng-valid.ng-touched {
-  border-color: var(--success-color);
+  border-color: #22c55e;
   box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
 }
 

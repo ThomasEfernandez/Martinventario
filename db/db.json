@@ -80,8 +80,8 @@
       "id": "1",
       "nombreProducto": "Pepitos",
       "marca": "Pepitos",
-      "proveedor": "Thomas",
-      "cantidad": 19,
+      "proveedor": "Agus",
+      "cantidad": 25,
       "categoria": "Alimentos",
       "etiqueta": "Galletitas"
     },
@@ -203,11 +203,11 @@
     },
     {
       "id": "4",
-      "nombre": "Pepe",
-      "apellido": "Pepe",
-      "razonSocial": "Pepe",
-      "cuit": "Pepe",
-      "email": "Pepe@gmail.com"
+      "nombre": "Jorge",
+      "apellido": "Test",
+      "razonSocial": "Test",
+      "cuit": "159",
+      "email": "test@gmail.com"
     }
   ],
   "categorias": [
@@ -215,28 +215,7 @@
       "id": "1",
       "nombreCategoria": "Alimentos",
       "estado": true,
-      "etiquetas": [
-        {
-          "id": "1",
-          "nombreEtiqueta": "Galletitas",
-          "estado": true
-        },
-        {
-          "id": "2",
-          "nombreEtiqueta": "Verduras",
-          "estado": true
-        },
-        {
-          "id": "3",
-          "nombreEtiqueta": "Carnes",
-          "estado": true
-        },
-        {
-          "id": "4",
-          "nombreEtiqueta": "Untables",
-          "estado": true
-        }
-      ]
+      "etiquetas": []
     },
     {
       "id": "2",
@@ -318,6 +297,12 @@
           "estado": true
         }
       ]
+    },
+    {
+      "id": "9",
+      "nombreCategoria": "Test",
+      "estado": false,
+      "etiquetas": []
     }
   ],
   "egresos": [

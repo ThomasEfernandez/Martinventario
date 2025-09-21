@@ -1,18 +1,3 @@
-<!--<form [formGroup]="formulario" (ngSubmit)="iniciarSesion()">
-  <label for="">Usuario</label>
-  <input type="text" formControlName="usuario" />
-  <label for="">Contraseña</label>
-  <input type="password" formControlName="contrasena" />
-  <button
-    type="button"
-    id="recuperar-contrasena"
-    routerLink="/recuperar-contrasena"
-  >
-    Recuperar contraseña
-  </button>
-  <button type="submit">Iniciar sesión</button>
-</form>-->
-
 <div class="login-body">
   <div class="login-container">
     <form [formGroup]="formulario" (ngSubmit)="iniciarSesion()" class="login-form">
@@ -39,7 +24,8 @@
       </div>
 
       <div class="button-group">
-        <button type="submit" class="login-button">Iniciar sesión</button>
+        <button type="submit" class="login-button"  [disabled]="formulario.invalid || !formulario.get('usuario')?.value || !formulario.get('contrasena')?.value">
+          Iniciar sesión</button>
         <button type="button" id="recuperar-contrasena" class="login-button" routerLink="/recuperar-contrasena">
           Recuperar contraseña
         </button>

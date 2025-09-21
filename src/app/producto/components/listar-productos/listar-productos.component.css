@@ -1,127 +1,3 @@
-/*div {
-  padding: 1%;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-thead {
-  background-color: #0099ff;
-  color: #ffffff;
-}
-
-th,
-td {
-  padding: 0.75%;
-  border: 1px solid #dddddd;
-  text-align: left;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #e9e9e9;
-}
-
-tbody tr:hover {
-  background-color: #d3e3fc;
-}
-
-/* ADMIN
-
-.columna-id-a {
-  width: 5%;
-}
-
-.columna-producto-a {
-  width: 25%;
-}
-
-.columna-marca-a {
-  width: 10%;
-}
-
-.columna-cantidad-a {
-  width: 10%;
-}
-
-.columna-proveedor-a {
-  width: 10%;
-}
-
-.columna-categoria-a {
-  width: 10%;
-}
-
-.columna-modificar-a {
-  width: 10%;
-}
-
-/* BASE
-
-.columna-id-b {
-  width: 5%;
-}
-
-.columna-producto-b {
-  width: 35%;
-}
-
-.columna-marca-b {
-  width: 10%;
-}
-
-.columna-cantidad-b {
-  width: 10%;
-}
-
-.columna-proveedor-b {
-  width: 10%;
-}
-
-.columna-categoria-b {
-  width: 20%;
-}
-
-button {
-  font-weight: bold;
-  padding: 5%;
-  background-color: #0088ee;
-  border: 0;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.modificar {
-  background-color: #fbcb5b;
-}
-
-.activar {
-  background-color: #22aa22;
-}
-
-.desactivar {
-  background-color: #ee4444;
-}
-
-button:hover {
-  background-color: #0099ff;
-}
-
-.activar:hover {
-  background-color: #44cc44;
-}
-
-.desactivar:hover {
-  background-color: #ee6666;
-}
-
-.modificar:hover {
-  background-color: #ffdc6c;
-}
-*/
-
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -169,7 +45,7 @@ td {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, var(--tertiary-color), #d97706);
+  background: linear-gradient(135deg, #f59e0b, #d97706);
   color: rgb(242, 189, 142);
   border: none;
   border-radius: 0.5rem;
@@ -183,26 +59,6 @@ td {
   overflow: hidden;
 }
 
-:root {
-  --primary-color: #2563eb;
-  --secondary-color: #10b981;
-  --tertiary-color: #f59e0b;
-  --danger-color: #ef4444;
-  --warning-color: #f97316;
-  --success-color: #22c55e;
-  --background-color: #f8fafc;
-  --surface-color: #ffffff;
-  --border-color: #e2e8f0;
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --text-muted: #94a3b8;
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-  --radius-sm: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-}
 .modificar::before {
   content: '✏️';
   margin-right: 0.25rem;

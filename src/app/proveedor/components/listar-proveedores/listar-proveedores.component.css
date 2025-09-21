@@ -1,93 +1,3 @@
-/*iv {
-  padding: 1%;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-thead {
-  background-color: #0099ff;
-  color: #ffffff;
-}
-th,
-td {
-  padding: 0.75%;
-  border: 1px solid #dddddd;
-  text-align: left;
-}
-tbody tr:nth-child(even) {
-  background-color: #e9e9e9;
-}
-tbody tr:hover {
-  background-color: #d3e3fc;
-}
-.columna-nombre-a {
-  width: 12.5%;
-}
-.columna-apellido-a {
-  width: 12.5%;
-}
-.columna-razonSocial-a {
-  width: 15%;
-}
-.columna-cuit-a {
-  width: 10%;
-}
-.columna-email-a {
-  width: 30%;
-}
-.columna-modificar-a {
-  width: 10%;
-}
-.columna-eliminar-a {
-  width: 10%;
-}
-.columna-nombre-r {
-  width: 12.5%;
-}
-.columna-apellido-r {
-  width: 12.5%;
-}
-.columna-razonSocial-r {
-  width: 15%;
-}
-.columna-cuit-r {
-  width: 10%;
-}
-.columna-email-r {
-  width: 40%;
-}
-.columna-eliminar-r {
-  width: 10%;
-}
-button {
-  font-weight: bold;
-  padding: 5%;
-  background-color: #0088ee;
-  border: 0;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.modificar {
-  background-color: #fbcb5b;
-}
-.eliminar {
-  background-color: #ee4444;
-}
-button:hover {
-  background-color: #0099ff;
-}
-.eliminar:hover {
-  background-color: #ee6666;
-}
-.modificar:hover {
-  background-color: #ffdc6c;
-}
-
-.mensaje-exito{
-  color: rgb(102, 255, 47);
-}*/
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -118,11 +28,6 @@ th {
 tbody tr {
   transition: all 0.2s ease;
   border-bottom: 1px solid #e2e8f0;
-}
-
-tbody tr:hover {
-  background: rgba(37, 99, 235, 0.02);
-  transform: scale(1.001);
 }
 
 tbody tr:last-child {
