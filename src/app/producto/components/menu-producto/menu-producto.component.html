@@ -1,6 +1,6 @@
 <div class="contenedor">
   <ul class="lista">
-    @if (user.tipo === 'admin') {
+    @if (user.tipo == 'admin') {
     <li class="item">
       <a routerLink="/proveedores" [state]="{user}">PROVEEDORES</a>
     </li>

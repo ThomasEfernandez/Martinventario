@@ -99,7 +99,7 @@
       "nombreProducto": "Crema de avellanas Nutella 350 g.",
       "marca": "Nutella",
       "proveedor": "Agus",
-      "cantidad": 5,
+      "cantidad": 10,
       "categoria": "Alimentos",
       "etiqueta": "Untables"
     },
@@ -117,7 +117,7 @@
       "nombreProducto": "Shampoo Dove reconstruccion completa 400cc",
       "marca": "Dove",
       "proveedor": "Fausto",
-      "cantidad": 46,
+      "cantidad": 34,
       "categoria": "Higiene",
       "etiqueta": "Shampoo"
     },
@@ -424,6 +424,13 @@
       "usuario": "admin",
       "producto": "papitas",
       "cantidad": 72
+    },
+    {
+      "id": "18",
+      "fecha": "21/9/2025",
+      "usuario": "admin",
+      "producto": "Shampoo Dove reconstruccion completa 400cc",
+      "cantidad": 12
     }
   ],
   "ingresos": [
@@ -621,6 +628,13 @@
       "usuario": "agustin",
       "producto": "papitas",
       "cantidad": 50
+    },
+    {
+      "id": "28",
+      "fecha": "21/9/2025",
+      "usuario": "admin",
+      "producto": "Crema de avellanas Nutella 350 g.",
+      "cantidad": 5
     }
   ],
   "pedidos": [
@@ -695,6 +709,22 @@
       "cantidad": "100",
       "proveedor": "Fausto",
       "estado": true
+    },
+    {
+      "id": "10",
+      "fecha": "21/9/2025",
+      "producto": "milanesas",
+      "cantidad": "5",
+      "proveedor": "Fausto",
+      "estado": false
+    },
+    {
+      "id": "11",
+      "fecha": "21/8/2025",
+      "producto": "milanesas",
+      "cantidad": 1,
+      "proveedor": "Fausto",
+      "estado": false
     }
   ]
 }

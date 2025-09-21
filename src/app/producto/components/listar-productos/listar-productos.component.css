@@ -45,7 +45,7 @@ td {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, #f59e0b, #d97706);
+  /*background: linear-gradient(135deg, #f59e0b, #d97706);*/
   color: rgb(242, 189, 142);
   border: none;
   border-radius: 0.5rem;
