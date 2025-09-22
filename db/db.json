@@ -210,24 +210,77 @@
       "email": "test@gmail.com"
     }
   ],
-  "categorias": [
+   "categorias": [
     {
       "id": "1",
       "nombreCategoria": "Alimentos",
       "estado": true,
-      "etiquetas": []
+      "etiquetas": [
+        {
+          "id": "1",
+          "nombreEtiqueta": "Carnes",
+          "estado": true
+        },
+        {
+          "id": "2",
+          "nombreEtiqueta": "Galletitas",
+          "estado": true
+        },
+        {
+          "id": "3",
+          "nombreEtiqueta": "Verduras",
+          "estado": true
+        },
+        {
+          "id": "4",
+          "nombreEtiqueta": "Envasados",
+          "estado": true
+        }
+      ]
     },
     {
       "id": "2",
       "nombreCategoria": "Bebidas",
       "estado": true,
-      "etiquetas": []
+      "etiquetas": [
+        {
+          "id": "1",
+          "nombreEtiqueta": "Alcoholicas",
+          "estado": true
+        },
+        {
+          "id": "2",
+          "nombreEtiqueta": "Gaseosas",
+          "estado": true
+        },
+        {
+          "id": "3",
+          "nombreEtiqueta": "Lacteas",
+          "estado": true
+        }
+      ]
     },
     {
       "id": "3",
       "nombreCategoria": "Higiene",
       "estado": true,
-      "etiquetas": []
+      "etiquetas": [
+        {
+          "id": "1",
+          "nombreEtiqueta": "Shampoo",
+          "estado": true
+        },
+        {
+          "id": "2",
+          "nombreEtiqueta": "Cremas de enjuague",
+          "estado": true
+        },
+        {
+          "id": "1",
+          "nombreEtiqueta": "Jabones",
+          "estado": true
+        }
+      ]
     },
     {
       "id": "4",
