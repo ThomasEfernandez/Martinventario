@@ -7,6 +7,7 @@
       "usuario": "admin",
       "contrasena": "admin",
       "tipo": "admin",
+      "mail": "admin@gmail.com",
       "estado": true
     },
     {
@@ -25,6 +26,7 @@
       "nombre": "Thomas",
       "apellido": "Fernandez",
       "contrasena": "thomas",
+      "mail": "thomasfernandezit2025@gmail.com",
       "tipo": "base",
       "estado": true
     },
@@ -34,6 +36,7 @@
       "nombre": "Fausto",
       "apellido": "Gimenez",
       "contrasena": "fausto",
+      "mail": "faus@gmail.com",
       "tipo": "base",
       "estado": true
     },
@@ -43,6 +46,7 @@
       "nombre": "Agustina",
       "apellido": "Martin",
       "contrasena": "agustina",
+      "mail": "agustinaMartinventario@gmail.com",
       "tipo": "base",
       "estado": true
     },
@@ -52,6 +56,7 @@
       "nombre": "Lautaro",
       "apellido": "Hourcade",
       "contrasena": "lautaro",
+      "mail": "lautaro12julio@gmail.com",
       "tipo": "base",
       "estado": false
     },
@@ -61,18 +66,9 @@
       "apellido": "Pepe",
       "usuario": "pepe",
       "contrasena": "pepe",
+      "mail": "pepinillo@gmail.com",
       "tipo": "base",
       "estado": true
-    },
-    {
-      "id": "8",
-      "nombre": "Test",
-      "apellido": "Testing",
-      "usuario": "Test",
-      "contrasena": "test",
-      "tipo": "base",
-      "estado": false,
-      "mail": ""
     }
   ],
   "productos": [
@@ -142,11 +138,11 @@
     {
       "id": "8",
       "nombreProducto": "gaseosa 1,25",
-      "marca": "pepsi",
+      "marca": "Coca-Cola",
       "proveedor": "Agus",
       "cantidad": 5,
       "categoria": "Bebidas",
-      "etiqueta": "Gaseosa"
+      "etiqueta": "Gaseosas"
     },
     {
       "id": "9",
@@ -155,7 +151,7 @@
       "proveedor": "Agus",
       "cantidad": 7,
       "categoria": "Alimentos",
-      "etiqueta": "Galletitas"
+      "etiqueta": "Envasados"
     },
     {
       "id": "10",
@@ -174,6 +170,15 @@
       "cantidad": 19,
       "categoria": "Mascotas",
       "etiqueta": "Alimento Canino"
+    },
+    {
+      "id": "12",
+      "nombreProducto": "Manteca",
+      "marca": "Serenisima",
+      "proveedor": "Thomas",
+      "cantidad": 1500,
+      "categoria": "Alimentos",
+      "etiqueta": "Envasados"
     }
   ],
   "proveedores": [
@@ -210,7 +215,7 @@
       "email": "test@gmail.com"
     }
   ],
-   "categorias": [
+  "categorias": [
     {
       "id": "1",
       "nombreCategoria": "Alimentos",
@@ -729,7 +734,7 @@
       "producto": "uvas",
       "cantidad": 2,
       "proveedor": "Agustin",
-      "estado": false
+      "estado": true
     },
     {
       "id": "6",
@@ -737,7 +742,7 @@
       "producto": "MILANESAS",
       "cantidad": "4",
       "proveedor": "Agustin",
-      "estado": false
+      "estado": true
     },
     {
       "id": "7",
@@ -769,7 +774,7 @@
       "producto": "milanesas",
       "cantidad": "5",
       "proveedor": "Fausto",
-      "estado": false
+      "estado": true
     },
     {
       "id": "11",
@@ -777,7 +782,7 @@
       "producto": "milanesas",
       "cantidad": 1,
       "proveedor": "Fausto",
-      "estado": false
+      "estado": true
     }
   ]
 }

@@ -54,19 +54,19 @@ export class RecuperarContrasenaComponent {
     if (this.formulario.invalid) return;
     const sesion = this.formulario.getRawValue();
     const user = this.buscarUsuario(sesion);
-
+     
     if (user) {
       console.log('Enviando contraseña a:', user.mail);
-
+      console.log (user)
       emailjs
         .send(
-          'gmailnogar',
-          'template_j2lm5hg',
+          'gmailagus',
+          'template_1kgoi5y',
           {
             to_email: user.mail,
             contrasena: user.contrasena,
           },
-          'PgrLA8Z8f560V_agx'
+          'I6ksycjb-Isi-XFGU'
         )
         .then(() => {
           this.mensajeExito =
