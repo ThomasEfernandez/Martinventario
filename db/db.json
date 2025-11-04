@@ -250,6 +250,11 @@
           "id": "6",
           "nombreEtiqueta": "czczczc",
           "estado": true
+        },
+        {
+          "id": "7",
+          "nombreEtiqueta": "Test",
+          "estado": true
         }
       ]
     },
@@ -380,19 +385,19 @@
     {
       "id": "10",
       "nombreCategoria": "t",
-      "estado": true,
+      "estado": false,
       "etiquetas": []
     },
     {
       "id": "11",
       "nombreCategoria": "test2",
-      "estado": true,
+      "estado": false,
       "etiquetas": []
     },
     {
       "id": "12",
       "nombreCategoria": "ccc",
-      "estado": true,
+      "estado": false,
       "etiquetas": []
     }
   ],
