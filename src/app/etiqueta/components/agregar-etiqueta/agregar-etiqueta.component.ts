@@ -24,35 +24,35 @@ export class AgregarEtiquetaComponent {
     estado: false,
     mail: '',
   };
+  @Input() categoria: Categoria = {
+    id: '',
+    nombreCategoria: '',
+    estado: false,
+    etiquetas: [],
+  };
 
-  listaCategorias: Categoria[] = [];
   categoriaService = inject(CategoriaService);
 
-  listaEtiquetas: Etiqueta[] | undefined = [];
-
-  categoria: string | null = '';
-
   etiquetaAgregada: boolean = false;
-
   etiquetaRepetida: boolean = false;
 
   fb = inject(FormBuilder);
   formulario = this.fb.nonNullable.group({
     id: [''],
     nombreEtiqueta: ['', Validators.required],
-    // nombreCategoria: ['', Validators.required],
     estado: [true, [Validators.required]],
   });
 
   agregarEtiqueta() {
     if (this.formulario.valid) {
       const etiqueta = this.formulario.getRawValue();
-
-      this.categoriaService.getCategoriaById(this.categoria).subscribe({
+      this.categoriaService.getCategoriaById(this.categoria.id).subscribe({
         next: (categoria: Categoria) => {
-          this.listaEtiquetas = categoria.etiquetas;
-          if (this.listaEtiquetas) {
-            this.listaEtiquetas.forEach((e) => {
+          if (!categoria.etiquetas) {
+            categoria.etiquetas = [];
+          }
+          if (this.categoria.etiquetas) {
+            this.categoria.etiquetas.forEach((e) => {
               if (e.nombreEtiqueta === etiqueta.nombreEtiqueta) {
                 this.etiquetaRepetida = true;
               }
@@ -61,11 +61,10 @@ export class AgregarEtiquetaComponent {
 
           if (this.etiquetaRepetida === false) {
             let e = {
-              id: `${categoria.etiquetas.length + 1}`,
+              id: `${this.categoria.etiquetas.length + 1}`,
               nombreEtiqueta: etiqueta.nombreEtiqueta,
               estado: etiqueta.estado,
             };
-            console.log(e);
 
             categoria.etiquetas.push(e);
             this.agregarEtiquetaService(categoria);
@@ -83,30 +82,6 @@ export class AgregarEtiquetaComponent {
       error: (err: Error) => {
         console.log(err.message);
       },
-    });
-  }
-
-  // listarCategorias() {
-  //   this.categoriaService.getCategorias().subscribe({
-  //     next: (categorias: Categoria[]) => {
-  //       this.listaCategorias = categorias;
-  //     },
-  //     error: (err: Error) => {
-  //       console.log(err.message);
-  //     },
-  //   });
-  // }
-
-  ngOnInit(): void {
-    // this.listarCategorias();
-    document.getElementById('categoria')?.addEventListener('click', () => {
-      const select = document.getElementById('categoria') as HTMLSelectElement;
-      const categoria = this.listaCategorias.find(
-        (c) => c.nombreCategoria === select.value
-      );
-      if (categoria) {
-        this.categoria = categoria.id;
-      }
     });
   }
 }

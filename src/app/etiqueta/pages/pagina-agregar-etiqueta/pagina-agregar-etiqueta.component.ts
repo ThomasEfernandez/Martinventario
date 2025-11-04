@@ -9,11 +9,11 @@ import { AgregarEtiquetaComponent } from '../../components/agregar-etiqueta/agre
   templateUrl: './pagina-agregar-etiqueta.component.html',
   styleUrl: './pagina-agregar-etiqueta.component.css',
 })
-
 export class PaginaAgregarEtiquetaComponent {
   user = history.state.user;
+  categoria = history.state.categoria;
 
   ngOnInit() {
-    console.log("PAGINA AGREGAR ETIQUETA", this.user)
+    console.log('PAGINA AGREGAR ETIQUETA', this.user);
   }
 }

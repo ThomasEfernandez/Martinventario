@@ -240,6 +240,16 @@
           "id": "4",
           "nombreEtiqueta": "Envasados",
           "estado": true
+        },
+        {
+          "id": "5",
+          "nombreEtiqueta": "aaaaaaaaas",
+          "estado": true
+        },
+        {
+          "id": "6",
+          "nombreEtiqueta": "czczczc",
+          "estado": true
         }
       ]
     },
@@ -261,6 +271,11 @@
         {
           "id": "3",
           "nombreEtiqueta": "Lacteas",
+          "estado": true
+        },
+        {
+          "id": "4",
+          "nombreEtiqueta": "Jugos",
           "estado": true
         }
       ]
@@ -360,6 +375,24 @@
       "id": "9",
       "nombreCategoria": "Test",
       "estado": false,
+      "etiquetas": []
+    },
+    {
+      "id": "10",
+      "nombreCategoria": "t",
+      "estado": true,
+      "etiquetas": []
+    },
+    {
+      "id": "11",
+      "nombreCategoria": "test2",
+      "estado": true,
+      "etiquetas": []
+    },
+    {
+      "id": "12",
+      "nombreCategoria": "ccc",
+      "estado": true,
       "etiquetas": []
     }
   ],

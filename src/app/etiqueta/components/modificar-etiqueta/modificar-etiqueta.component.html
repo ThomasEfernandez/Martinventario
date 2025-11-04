@@ -13,18 +13,23 @@
   <div class="botones">
     @if(etiquetaModificada){
     <small class="exito">etiqueta modificada</small>
-    <button type="button" id="volver" routerLink="/categoria/:cat" [state]="{user}">
+    <button
+      type="button"
+      id="volver"
+      routerLink="/categoria/:cat"
+      [state]="{user}"
+    >
       Volver
     </button>
     } @else {
     <button
       type="button"
       id="cancelar"
-      routerLink="/categorias"
-      [state]="{user}"
+      [routerLink]="['/categoria', categoria.nombreCategoria]"
+      [state]="{categoria, user}"
     >
       Cancelar
     </button>
-    <button  type="submit" id="modificar">Modificar etiqueta</button>}
+    <button type="submit" id="modificar">Modificar etiqueta</button>}
   </div>
 </form>
