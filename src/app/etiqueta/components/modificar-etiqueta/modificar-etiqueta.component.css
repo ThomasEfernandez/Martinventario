@@ -1,25 +1,4 @@
 
-:root {
-  --primary-color: #2563eb;
-  --secondary-color: #10b981;
-  --tertiary-color: #f59e0b;
-  --danger-color: #ef4444;
-  --warning-color: #f97316;
-  --success-color: #22c55e;
-  --background-color: #f8fafc;
-  --surface-color: #ffffff;
-  --border-color: #000000 ;
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --text-muted: #94a3b8;
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-  --radius-sm: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-}
-
 form {
   max-width: 800px;
   margin: 2rem auto;
@@ -66,7 +45,7 @@ input[type="text"] {
 input[type="text"]:focus,
 
 .error {
-  color: #ef4444;
+ /* color: #ef4444;*/
   font-size: 0.75rem;
   font-weight: 500;
   margin-top: -0.25rem;

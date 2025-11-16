@@ -58,28 +58,28 @@
       "contrasena": "lautaro",
       "mail": "lautaro12julio@gmail.com",
       "tipo": "base",
-      "estado": false
+      "estado": true
     },
     {
       "id": "7",
-      "nombre": "Pepe",
-      "apellido": "Pepe",
-      "usuario": "pepe",
-      "contrasena": "pepe",
-      "mail": "pepinillo@gmail.com",
+      "nombre": "Pedro",
+      "apellido": "Martinez",
+      "usuario": "pedro",
+      "contrasena": "pedro",
+      "mail": "pedro@gmail.com",
       "tipo": "base",
-      "estado": true
+      "estado": false
     }
   ],
   "productos": [
     {
       "id": "1",
-      "nombreProducto": "Pepitos",
-      "marca": "Pepitos",
+      "nombreProducto": "Galletitas Oreo Rellenas con Crema Sabor Original Menos sodio 118 Gr.",
+      "marca": "Oreos",
       "proveedor": "Agus",
       "cantidad": 25,
       "categoria": "Alimentos",
-      "etiqueta": "Galletitas"
+      "etiqueta": "Galletitas y cereales"
     },
     {
       "id": "2",
@@ -119,66 +119,192 @@
     },
     {
       "id": "6",
-      "nombreProducto": "galletitas",
-      "marca": "oreo",
+      "nombreProducto": "Donuts Bonafide Chocolate Blanco 78 Gr.",
+      "marca": "Bonafide ",
       "proveedor": "Fausto",
       "cantidad": 8,
       "categoria": "Alimentos",
-      "etiqueta": "Galletitas"
+      "etiqueta": "Galletitas y cereales"
     },
     {
       "id": "7",
-      "nombreProducto": "milanesas",
-      "marca": "carrefour",
+      "nombreProducto": "Paño Microfibra Multiuso Microclean 1 Ud.",
+      "marca": "Microclean",
       "proveedor": "Fausto",
       "cantidad": 4,
-      "categoria": "Alimentos",
-      "etiqueta": "Carnes"
+      "categoria": "Limpieza",
+      "etiqueta": "Trapos y Paños"
     },
     {
       "id": "8",
-      "nombreProducto": "gaseosa 1,25",
+      "nombreProducto": "Gaseosa Coca-Cola Sabor Original 600 Ml.",
       "marca": "Coca-Cola",
-      "proveedor": "Agus",
+      "proveedor": "Jorge",
       "cantidad": 5,
       "categoria": "Bebidas",
       "etiqueta": "Gaseosas"
     },
     {
       "id": "9",
-      "nombreProducto": "bombones",
-      "marca": "Ferrero",
-      "proveedor": "Agus",
+      "nombreProducto": "Alfajor Milka Simple Mousse 42 Gr.",
+      "marca": "Milka",
+      "proveedor": "Thomas",
       "cantidad": 7,
       "categoria": "Alimentos",
-      "etiqueta": "Envasados"
+      "etiqueta": "Kiosco"
     },
     {
       "id": "10",
-      "nombreProducto": "papitas",
-      "marca": "Lays",
-      "proveedor": "Agus",
-      "cantidad": 1,
-      "categoria": "Alimentos",
-      "etiqueta": "Galletitas"
+      "nombreProducto": "Trapo Rejilla Dia Multiuso Ecoamigable 1 Ud.",
+      "marca": "Rejilla Multiuso",
+      "proveedor": "Jorge",
+      "cantidad": 9,
+      "categoria": "Limpieza",
+      "etiqueta": "Trapos y Paños"
     },
     {
       "id": "11",
-      "nombreProducto": "alimento canino",
-      "marca": "Royal Canin",
+      "nombreProducto": "Cachorro Gran Comienzo Mini & Pequeño Dog Chow x 1,5 Kg.",
+      "marca": "Dog Chow ",
       "proveedor": "Fausto",
-      "cantidad": 19,
+      "cantidad": 3,
       "categoria": "Mascotas",
-      "etiqueta": "Alimento Canino"
+      "etiqueta": "Alimento para perros"
     },
     {
       "id": "12",
-      "nombreProducto": "Manteca",
-      "marca": "Serenisima",
+      "nombreProducto": "Manteca Milkaut 100 Gr.",
+      "marca": "Milkaut",
+      "proveedor": "Jorge",
+      "cantidad": 16,
+      "categoria": "Lácteos",
+      "etiqueta": "Manteca y margarinas"
+    },
+    {
+      "id": "13",
+      "nombreProducto": "Lustramuebles Blem Brillo y Protección Madera Original Aerosol 360 Cc.",
+      "marca": "Blem",
+      "proveedor": "Jorge",
+      "cantidad": 10,
+      "categoria": "Limpieza",
+      "etiqueta": "Lustrador"
+    },
+    {
+      "id": "14",
+      "nombreProducto": "Raid Exterminador Cucarachas En Aerosol 360 Cc.",
+      "marca": "Raid",
       "proveedor": "Thomas",
-      "cantidad": 1500,
+      "cantidad": 5,
+      "categoria": "Limpieza",
+      "etiqueta": "Insecticida"
+    },
+    {
+      "id": "15",
+      "nombreProducto": "Papas Fritas Lays Clásicas X 85 Gr.",
+      "marca": "Lays",
+      "proveedor": "Fausto",
+      "cantidad": 12,
+      "categoria": "Picadas",
+      "etiqueta": "Papas Fritas"
+    },
+    {
+      "id": "16",
+      "nombreProducto": "Papas Fritas Corte Americano Dia 65 Gr.",
+      "marca": "Corte Americano",
+      "proveedor": "Fausto",
+      "cantidad": 6,
+      "categoria": "Picadas",
+      "etiqueta": "Papas Fritas"
+    },
+    {
+      "id": "17",
+      "nombreProducto": "Aceituna Verde Descarozada Castell 140 Gr.",
+      "marca": "Castell",
+      "proveedor": "Thomas",
+      "cantidad": 4,
+      "categoria": "Picadas",
+      "etiqueta": "Aceitunas"
+    },
+    {
+      "id": "18",
+      "nombreProducto": "Aceitunas Verdes Castell 180 Gr.",
+      "marca": "Castell",
+      "proveedor": "Thomas",
+      "cantidad": 7,
+      "categoria": "Picadas",
+      "etiqueta": "Aceitunas"
+    },
+    {
+      "id": "19",
+      "nombreProducto": "Manteca La Serenísima 200 Gr.",
+      "marca": "La serenisima",
+      "proveedor": "Jorge",
+      "cantidad": 20,
+      "categoria": "Lácteos",
+      "etiqueta": "Manteca y margarinas"
+    },
+    {
+      "id": "20",
+      "nombreProducto": "Yogur Natural Milkaut 180 Gr.",
+      "marca": "Milkaut",
+      "proveedor": "Jorge",
+      "cantidad": 8,
+      "categoria": "Lácteos",
+      "etiqueta": "Yogures enteros"
+    },
+    {
+      "id": "21",
+      "nombreProducto": "Yogur Firme Vainilla La Serenísima Clásico 120 Gr.",
+      "marca": "La serenisima",
+      "proveedor": "Jorge",
+      "cantidad": 11,
+      "categoria": "Lácteos",
+      "etiqueta": "Yogures enteros"
+    },
+    {
+      "id": "22",
+      "nombreProducto": "Alimento Para Gato Humedo Pavo Fancy Feast 85 Gr.",
+      "marca": "Fancy Feast",
+      "proveedor": "Fausto",
+      "cantidad": 5,
+      "categoria": "Mascotas",
+      "etiqueta": "Alimento para gatos"
+    },
+    {
+      "id": "23",
+      "nombreProducto": "Alimento para Gatos Esterilizado Cat Chow Pescado 85 Gr.",
+      "marca": "Cat Chow ",
+      "proveedor": "Fausto",
+      "cantidad": 8,
+      "categoria": "Mascotas",
+      "etiqueta": "Alimento para gatos"
+    },
+    {
+      "id": "24",
+      "nombreProducto": "Alfajor Tita 36 Gr.",
+      "marca": "Tita",
+      "proveedor": "Fausto",
+      "cantidad": 14,
       "categoria": "Alimentos",
-      "etiqueta": "Envasados"
+      "etiqueta": "Kiosco"
+    },
+    {
+      "id": "25",
+      "nombreProducto": "Huevo de Chocolate Kinder Niño 20 Gr.",
+      "marca": "Kinder ",
+      "proveedor": "Fausto",
+      "cantidad": 19,
+      "categoria": "Alimentos",
+      "etiqueta": "Kiosco"
+    },
+    {
+      "id": "26",
+      "nombreProducto": "Oblea Kitkat 4 Fingers X 41.5 Gr.",
+      "marca": "Kitkat ",
+      "proveedor": "Thomas",
+      "cantidad": 22,
+      "categoria": "Alimentos",
+      "etiqueta": "Kiosco"
     }
   ],
   "proveedores": [
@@ -228,7 +354,7 @@
         },
         {
           "id": "2",
-          "nombreEtiqueta": "Galletitas",
+          "nombreEtiqueta": "Galletitas y cereales",
           "estado": true
         },
         {
@@ -243,17 +369,22 @@
         },
         {
           "id": "5",
-          "nombreEtiqueta": "aaaaaaaaas",
-          "estado": true
+          "nombreEtiqueta": "Test",
+          "estado": false
         },
         {
           "id": "6",
           "nombreEtiqueta": "czczczc",
-          "estado": true
+          "estado": false
         },
         {
           "id": "7",
           "nombreEtiqueta": "Test",
+          "estado": false
+        },
+        {
+          "id": "8",
+          "nombreEtiqueta": "Kiosco",
           "estado": true
         }
       ]
@@ -314,12 +445,22 @@
       "etiquetas": [
         {
           "id": "1",
-          "nombreEtiqueta": "Lusatrador",
+          "nombreEtiqueta": "Lustrador",
           "estado": true
         },
         {
           "id": "2",
           "nombreEtiqueta": "Desodorante para piso",
+          "estado": true
+        },
+        {
+          "id": "3",
+          "nombreEtiqueta": "Insecticida",
+          "estado": true
+        },
+        {
+          "id": "4",
+          "nombreEtiqueta": "Trapos y Paños",
           "estado": true
         }
       ]
@@ -353,7 +494,12 @@
       "etiquetas": [
         {
           "id": "1",
-          "nombreEtiqueta": "Alimento Canino",
+          "nombreEtiqueta": "Alimento para perros",
+          "estado": true
+        },
+        {
+          "id": "2",
+          "nombreEtiqueta": "Alimento para gatos",
           "estado": true
         }
       ]
@@ -378,15 +524,32 @@
     },
     {
       "id": "9",
-      "nombreCategoria": "Test",
-      "estado": false,
-      "etiquetas": []
+      "nombreCategoria": "Picadas",
+      "estado": true,
+      "etiquetas": [
+        {
+          "id": "1",
+          "nombreEtiqueta": "Papas Fritas",
+          "estado": true
+        },
+        {
+          "id": "2",
+          "nombreEtiqueta": "Aceitunas",
+          "estado": true
+        }
+      ]
     },
     {
       "id": "10",
       "nombreCategoria": "t",
       "estado": false,
-      "etiquetas": []
+      "etiquetas": [
+        {
+          "id": "1",
+          "nombreEtiqueta": "Test2",
+          "estado": true
+        }
+      ]
     },
     {
       "id": "11",
@@ -399,6 +562,23 @@
       "nombreCategoria": "ccc",
       "estado": false,
       "etiquetas": []
+    },
+    {
+      "id": "13",
+      "nombreCategoria": "Lácteos",
+      "estado": true,
+      "etiquetas": [
+        {
+          "id": "1",
+          "nombreEtiqueta": "Manteca y margarinas",
+          "estado": true
+        },
+        {
+          "id": "2",
+          "nombreEtiqueta": "Yogures enteros",
+          "estado": true
+        }
+      ]
     }
   ],
   "egresos": [

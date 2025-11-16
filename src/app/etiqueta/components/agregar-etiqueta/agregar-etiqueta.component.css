@@ -45,7 +45,7 @@ input[type="text"] {
 input[type="text"]:focus,
 
 .error {
-  color: #ef4444;
+  /*color: #ef4444;*/
   font-size: 0.75rem;
   font-weight: 500;
   margin-top: -0.25rem;

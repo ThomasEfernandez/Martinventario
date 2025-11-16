@@ -31,16 +31,12 @@
     <small class="repetido">Etiqueta repetida</small>
     } @if(etiquetaAgregada) {
     <small class="exito">Etiqueta agregada</small>
-    <button type="button" id="volver" routerLink="/categorias" [state]="{user}">
+    <button type="button" id="volver" routerLink="/categoria/:cat" [state]="{user}">
       Volver
     </button>
     } @else {
-    <button
-      type="button"
-      id="cancelar"
-      [routerLink]="['/categoria', categoria.nombreCategoria]"
-      [state]="{categoria, user}"
-    >
+    <button type="button" id="cancelar" [routerLink]="['/categoria', categoria.nombreCategoria]"
+      [state]="{categoria, user}">
       Cancelar
     </button>
     <button type="submit" id="agregar">Agregar etiqueta</button> }
