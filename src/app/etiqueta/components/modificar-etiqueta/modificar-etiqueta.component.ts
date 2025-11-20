@@ -65,6 +65,7 @@ export class ModificarEtiquetaComponent {
                 .subscribe({
                   next: () => {
                     this.etiquetaModificada = true;
+                    
                   },
                   error: (e: Error) => {
                     console.log(e.message);

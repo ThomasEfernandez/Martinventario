@@ -41,6 +41,7 @@ export class ModificarCategoriaComponent {
   });
 
   ngOnInit(): void {
+    
     this.router.paramMap.subscribe({
       next: (params) => {
         this.buscarCategoria();
