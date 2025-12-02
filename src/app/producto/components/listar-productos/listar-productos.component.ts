@@ -30,14 +30,15 @@ export class ListarProductosComponent {
   listaProductos: Producto[] = [];
   productoService = inject(ProductoService);
 
-  listar(producto: Producto) {
-    this.listaProductos.push(producto);
-  }
+  // listar(producto: Producto) {
+  //   this.listaProductos.push(producto);
+  // }
 
   cargarListaProd() {
     this.productoService.getProductos().subscribe({
       next: (productos: Producto[]) => {
         this.listaProductos = productos;
+        this.listaProductos.sort((a, b) => Number(a.id) - Number(b.id));
       },
       error: (e: Error) => {
         console.log(e.message);

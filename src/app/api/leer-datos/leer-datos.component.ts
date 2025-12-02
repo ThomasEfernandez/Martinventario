@@ -32,10 +32,10 @@ export class LeerDatosComponent {
 
   async main() {
     console.log(await fetchProducts());
-    // const products: Productt[] | null = await fetchProducts();
-    // if (products) {
-    // } else {
-    //   console.log('No se pudieron obtener los productos.');
-    // }
+    const products: Productt[] | null = await fetchProducts();
+    if (products) {
+    } else {
+      console.log('No se pudieron obtener los productos.');
+    }
   }
 }
