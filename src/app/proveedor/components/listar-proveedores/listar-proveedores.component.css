@@ -47,7 +47,7 @@ td {
   gap: 0.5rem;
   padding: 0.5rem 1rem;
  /* background: linear-gradient(135deg, #fab845, #eb9636);*/
-  color: #96999d;
+  color: rgb(242, 189, 142);
   border: none;
   border-radius: 0.5rem;
   font-size: 0.875rem;
@@ -66,7 +66,7 @@ td {
 }
 
 .modificar:hover {
-  background: linear-gradient(135deg, #d97706, #b45309);
+  background: linear-gradient(135deg, #d88c53, #df945a);
   transform: translateY(-2px);
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }

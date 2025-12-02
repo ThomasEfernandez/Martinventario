@@ -65,7 +65,7 @@ td {
 }
 
 .modificar:hover {
-  background: linear-gradient(135deg, #d97706, #b45309);
+  background: linear-gradient(135deg, #d88c53, #df945a);
   transform: translateY(-2px);
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }

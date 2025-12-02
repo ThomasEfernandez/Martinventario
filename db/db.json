@@ -221,7 +221,7 @@
       "nombreProducto": "Aceituna Verde Descarozada Castell 140 Gr.",
       "marca": "Castell",
       "proveedor": "Thomas",
-      "cantidad": 4,
+      "cantidad": 2,
       "categoria": "Picadas",
       "etiqueta": "Aceitunas"
     },
@@ -248,7 +248,7 @@
       "nombreProducto": "Yogur Natural Milkaut 180 Gr.",
       "marca": "Milkaut",
       "proveedor": "Jorge",
-      "cantidad": 8,
+      "cantidad": 6,
       "categoria": "Lácteos",
       "etiqueta": "Yogures enteros"
     },
@@ -707,6 +707,20 @@
       "usuario": "admin",
       "producto": "Shampoo Dove reconstruccion completa 400cc",
       "cantidad": 12
+    },
+    {
+      "id": "19",
+      "fecha": "2/12/2025",
+      "usuario": "admin",
+      "producto": "Aceituna Verde Descarozada Castell 140 Gr.",
+      "cantidad": 2
+    },
+    {
+      "id": "20",
+      "fecha": "2/12/2025",
+      "usuario": "admin",
+      "producto": "Yogur Natural Milkaut 180 Gr.",
+      "cantidad": 3
     }
   ],
   "ingresos": [
@@ -911,6 +925,13 @@
       "usuario": "admin",
       "producto": "Crema de avellanas Nutella 350 g.",
       "cantidad": 5
+    },
+    {
+      "id": "29",
+      "fecha": "2/12/2025",
+      "usuario": "admin",
+      "producto": "Yogur Natural Milkaut 180 Gr.",
+      "cantidad": 1
     }
   ],
   "pedidos": [
@@ -999,6 +1020,14 @@
       "fecha": "21/8/2025",
       "producto": "milanesas",
       "cantidad": 1,
+      "proveedor": "Fausto",
+      "estado": true
+    },
+    {
+      "id": "12",
+      "fecha": "2/12/2025",
+      "producto": "Yogur Natural Milkaut 180 Gr.",
+      "cantidad": "1",
       "proveedor": "Fausto",
       "estado": true
     }
