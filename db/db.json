@@ -78,7 +78,7 @@
       "marca": "Oreos",
       "proveedor": "Agus",
       "cantidad": 25,
-      "categoria": "Alimentos",
+      "categoria": "Alimentoss",
       "etiqueta": "Galletitas y cereales"
     },
     {
@@ -96,7 +96,7 @@
       "marca": "Nutella",
       "proveedor": "Agus",
       "cantidad": 10,
-      "categoria": "Alimentos",
+      "categoria": "Alimentoss",
       "etiqueta": "Untables"
     },
     {
@@ -123,7 +123,7 @@
       "marca": "Bonafide ",
       "proveedor": "Fausto",
       "cantidad": 8,
-      "categoria": "Alimentos",
+      "categoria": "Alimentoss",
       "etiqueta": "Galletitas y cereales"
     },
     {
@@ -150,7 +150,7 @@
       "marca": "Milka",
       "proveedor": "Thomas",
       "cantidad": 7,
-      "categoria": "Alimentos",
+      "categoria": "Alimentoss",
       "etiqueta": "Kiosco"
     },
     {
@@ -285,7 +285,7 @@
       "marca": "Tita",
       "proveedor": "Fausto",
       "cantidad": 14,
-      "categoria": "Alimentos",
+      "categoria": "Alimentoss",
       "etiqueta": "Kiosco"
     },
     {
@@ -294,7 +294,7 @@
       "marca": "Kinder ",
       "proveedor": "Fausto",
       "cantidad": 19,
-      "categoria": "Alimentos",
+      "categoria": "Alimentoss",
       "etiqueta": "Kiosco"
     },
     {
@@ -303,7 +303,7 @@
       "marca": "Kitkat ",
       "proveedor": "Thomas",
       "cantidad": 22,
-      "categoria": "Alimentos",
+      "categoria": "Alimentoss",
       "etiqueta": "Kiosco"
     },
     {
@@ -578,7 +578,7 @@
   "categorias": [
     {
       "id": "1",
-      "nombreCategoria": "Alimentos",
+      "nombreCategoria": "Alimentoss",
       "estado": true,
       "etiquetas": [
         {

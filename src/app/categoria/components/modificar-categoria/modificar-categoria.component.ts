@@ -3,6 +3,9 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Categoria } from 'app/categoria/interfaces/categoria-inteface';
 import { CategoriaService } from 'app/categoria/services/categoria.service';
+import { Etiqueta } from 'app/etiqueta/interfaces/etiqueta.interface';
+import { Producto } from 'app/producto/interfaces/producto.interface';
+import { ProductoService } from 'app/producto/services/producto.service';
 import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
@@ -28,6 +31,8 @@ export class ModificarCategoriaComponent {
 
   categoriaService = inject(CategoriaService);
 
+  productoService = inject(ProductoService);
+
   router = inject(ActivatedRoute);
 
   categoriaModificada: boolean = false;
@@ -37,11 +42,10 @@ export class ModificarCategoriaComponent {
     id: [''],
     nombreCategoria: ['', Validators.required],
     estado: [false],
-    etiquetas: [[]],
+    etiquetas: this.fb.nonNullable.control<Etiqueta[]>([]),
   });
 
   ngOnInit(): void {
-    
     this.router.paramMap.subscribe({
       next: (params) => {
         this.buscarCategoria();
@@ -60,7 +64,7 @@ export class ModificarCategoriaComponent {
           aux.nombreCategoria
         );
         this.formulario.controls['estado'].setValue(aux.estado);
-        // this.formulario.controls['etiquetas'].setValue(aux.etiquetas);
+        this.formulario.controls['etiquetas'].setValue(aux.etiquetas);
       },
       error: (e: Error) => {
         console.log(e.message);
@@ -74,6 +78,24 @@ export class ModificarCategoriaComponent {
       this.categoriaService.putCategoria(categoria.id, categoria).subscribe({
         next: () => {
           this.categoriaModificada = true;
+
+          this.productoService.getProductos().subscribe({
+            next: (prods: Producto[]) => {
+              prods.forEach((p) => {
+                if (p.categoria === this.catcat.nombreCategoria) {
+                  p.categoria = categoria.nombreCategoria;
+                  this.productoService.putProducto(p.id, p).subscribe({
+                    error: (e: Error) => {
+                      console.log(e.message);
+                    },
+                  });
+                }
+              });
+            },
+            error: (e: Error) => {
+              console.log(e.message);
+            },
+          });
         },
         error: (e: Error) => {
           console.log(e.message);
