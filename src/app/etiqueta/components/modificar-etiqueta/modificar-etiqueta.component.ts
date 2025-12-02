@@ -44,6 +44,12 @@ export class ModificarEtiquetaComponent {
     this.activatedRoutes.paramMap.subscribe({
       next: (param) => {
         console.log('etiqueta ', this.etiqueta, 'categoria:', this.categoria);
+
+        if (this.etiqueta && this.etiqueta.nombreEtiqueta ) {
+          this.formulario.patchValue({
+            nombreEtiqueta: this.etiqueta.nombreEtiqueta
+          })
+        }
       },
       error: (err: Error) => {
         console.log(err.message);
@@ -65,7 +71,7 @@ export class ModificarEtiquetaComponent {
                 .subscribe({
                   next: () => {
                     this.etiquetaModificada = true;
-                    
+
                   },
                   error: (e: Error) => {
                     console.log(e.message);

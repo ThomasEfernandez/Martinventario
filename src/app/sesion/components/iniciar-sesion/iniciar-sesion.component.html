@@ -4,7 +4,7 @@
       <div class="input-group">
         <label class="login-label">Usuario</label>
         @if(formulario.controls['usuario'].getError('required') && formulario.controls['usuario'].touched) {
-        <small class="error">Campo requerido</small>
+        <small class="error">Campo Requerido</small>
         }
         <input type="text" class="login-input" formControlName="usuario" placeholder="Ingrese su usuario" />
       </div>
@@ -12,7 +12,7 @@
       <div class="input-group">
         <label class="login-label">Contraseña</label>
         @if(formulario.controls['contrasena'].getError('required') && formulario.controls['contrasena'].touched) {
-        <small class="error">Campo requerido</small>
+        <small class="error">Campo Requerido</small>
         }
         <input type="password" class="login-input" formControlName="contrasena" placeholder="Ingrese su contraseña" />
       </div>
@@ -25,9 +25,9 @@
 
       <div class="button-group">
         <button type="submit" class="login-button"  [disabled]="formulario.invalid || !formulario.get('usuario')?.value || !formulario.get('contrasena')?.value">
-          Iniciar sesión</button>
+          Iniciar Sesión</button>
         <button type="button" id="recuperar-contrasena" class="login-button" routerLink="/recuperar-contrasena">
-          Recuperar contraseña
+          Recuperar Contraseña
         </button>
       </div>
 

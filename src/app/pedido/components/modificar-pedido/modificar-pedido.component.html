@@ -16,7 +16,7 @@
     <div class="flex-box">
       <label for="">Pedido</label>
       @if (formulario.controls['cantidad'].getError('required') && formulario.controls['cantidad'].touched) {
-      <small class="error">Campo requerido.</small>
+      <small class="error">Campo Requerido.</small>
       }
       <input type="text" formControlName="cantidad" />
     </div>
@@ -24,10 +24,10 @@
 
   <div class="botones">
     @if(pedidoModificado){
-    <small class="exito">Pedido modificado</small>
+    <small class="exito">Pedido Modificado</small>
     <button type="button" id="volver" routerLink="/pedidos" [state]="{user}"> Volver </button>
     } @else {
     <button type="button" id="cancelar" routerLink="/pedidos" [state]="{user}"> Cancelar </button>
-    <button type="submit" id="agregar"> Modificar pedido </button>}
+    <button type="submit" id="agregar"> Modificar Pedido </button>}
   </div>
 </form>

@@ -4,7 +4,7 @@
       <label>Usuario</label>
       @if(formulario.controls['usuario'].getError('required') &&
       formulario.controls['usuario'].touched) {
-      <small class="error">Campo requerido</small>
+      <small class="error">Campo Requerido</small>
       } @if(formulario.controls['usuario'].getError('minlength') &&
       formulario.controls['usuario'].touched) {
       <small class="error">Requiere 4 caracteres</small>
@@ -16,7 +16,7 @@
       <label>Contraseña</label>
       @if(formulario.controls['contrasena'].getError('required') &&
       formulario.controls['contrasena'].touched) {
-      <small class="error">Campo requerido</small>
+      <small class="error">Campo Requerido</small>
       } @if(formulario.controls['contrasena'].getError('minlength') &&
       formulario.controls['contrasena'].touched) {
       <small class="error">Requiere 4 caracteres</small>
@@ -28,7 +28,7 @@
       <label>Nombre</label>
       @if(formulario.controls['nombre'].getError('required') &&
       formulario.controls['nombre'].touched) {
-      <small class="error">Campo requerido</small>
+      <small class="error">Campo Requerido</small>
       }
       <input type="text" formControlName="nombre" />
     </div>
@@ -37,14 +37,14 @@
       <label>Apellido</label>
       @if(formulario.controls['apellido'].getError('required') &&
       formulario.controls['apellido'].touched) {
-      <small class="error">Campo requerido</small>
+      <small class="error">Campo Requerido</small>
       }
       <input type="text" formControlName="apellido" />
     </div>
   </div>
   <div class="botones">
     @if(usuarioAgregado) {
-    <small class="exito">Usuario agregado</small>
+    <small class="exito">Usuario Agregado</small>
     <button type="button" id="volver" routerLink="/empleados" [state]="{user}">
       Volver
     </button>
@@ -52,6 +52,6 @@
     <button type="button" id="cancelar" routerLink="/empleados" [state]="{user}">
       Cancelar
     </button>
-    <button type="submit" id="agregar">Agregar usuario</button>}
+    <button type="submit" id="agregar">Agregar Usuario</button>}
   </div>
 </form>
