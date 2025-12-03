@@ -4,7 +4,7 @@
       <label>Producto</label>
       @if(formulario.controls['nombreProducto'].getError('required') &&
       formulario.controls['nombreProducto'].touched){
-      <small class="error">Campo requerido.</small>
+      <small class="error">Campo Requerido.</small>
       }
       <input type="text" formControlName="nombreProducto" />
     </div>
@@ -13,7 +13,7 @@
       <label>Cantidad</label>
       @if(formulario.controls['cantidad'].getError('required') &&
       formulario.controls['cantidad'].touched){
-      <small class="error">Campo requerido.</small>
+      <small class="error">Campo Requerido.</small>
       }
       <input type="number" formControlName="cantidad" />
     </div>
@@ -22,7 +22,7 @@
       <label>Marca</label>
       @if(formulario.controls['marca'].getError('required') &&
       formulario.controls['marca'].touched){
-      <small class="error">Campo requerido.</small>
+      <small class="error">Campo Requerido.</small>
       }
       <input type="text" formControlName="marca" />
     </div>
@@ -31,11 +31,11 @@
       <label>Proveedor</label>
       @if(formulario.controls['proveedor'].getError('required') &&
       formulario.controls['proveedor'].touched){
-      <small class="error">Campo requerido.</small>
+      <small class="error">Campo Requerido.</small>
       }
       <select formControlName="proveedor">
         <option value="" disabled selected hidden>
-          Selecciona un proveedor
+          Selecciona un Proveedor
         </option>
         @for (proveedor of listaProveedores; track $index) {
         <option value="{{ proveedor.nombre }}">{{ proveedor.nombre }}</option>
@@ -47,7 +47,7 @@
       <label>Categoría</label>
       @if(formulario.controls['categoria'].getError('required') &&
       formulario.controls['categoria'].touched){
-      <small class="error">Campo requerido.</small>
+      <small class="error">Campo Requerido.</small>
       }
       <select
         id="categoria"
@@ -55,7 +55,7 @@
         (change)="actualizarEtiquetas($event)"
       >
         <option value="" disabled selected hidden>
-          Selecciona una categoría
+          Selecciona una Categoría
         </option>
         @for (categoria of listaCategorias; track $index) {
         <option value="{{ categoria.nombreCategoria }}">
@@ -69,11 +69,11 @@
       <label>Etiquetas</label>
       @if(formulario.controls['etiqueta'].getError('required') &&
       formulario.controls['etiqueta'].touched){
-      <small class="error">Campo requerido.</small>
+      <small class="error">Campo Requerido.</small>
       }
       <select formControlName="etiqueta">
         <option value="" disabled selected hidden>
-          Selecciona una etiqueta
+          Selecciona una Etiqueta
         </option>
         @for (etiqueta of listaEtiquetas; track $index) {
         <option value="{{ etiqueta.nombreEtiqueta }}">
@@ -98,7 +98,7 @@
     >
       Cancelar
     </button>
-    <button type="submit" id="agregar">Actualizar producto</button>
+    <button type="submit" id="agregar">Actualizar Producto</button>
     }
   </div>
 </form>

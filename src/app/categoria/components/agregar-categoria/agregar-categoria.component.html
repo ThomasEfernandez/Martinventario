@@ -4,7 +4,7 @@
       <label>Categoria</label>
       @if(formulario.controls['nombreCategoria'].getError('required') &&
       formulario.controls['nombreCategoria'].touched){
-      <small class="error">Campo requerido.</small>
+      <small class="error">Campo Requerido.</small>
       }
       <input type="text" formControlName="nombreCategoria" />
     </div>
@@ -12,12 +12,12 @@
 
   <div class="botones">
     @if(categoriaRepetida) {
-    <small class="repetido">Categoria repetida</small>
+    <small class="repetido">Categoria Repetida</small>
     } @if(categoriaAgregada) {
-    <small class="exito">Categoria agregada</small>
+    <small class="exito">Categoria Agregada</small>
     <button type="button" id="volver" routerLink="/categorias" [state]="{user}"> Volver </button>
     } @else {
     <button type="button" id="cancelar" routerLink="/categorias" [state]="{user}"> Cancelar </button>
-    <button type="submit" id="agregar"> Agregar categoria </button>}
+    <button type="submit" id="agregar"> Agregar Categoria </button>}
   </div>
 </form>

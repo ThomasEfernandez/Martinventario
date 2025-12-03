@@ -2,10 +2,10 @@
   <label>Producto: </label>
   @if (formulario.controls['producto'].getError('required') &&
   formulario.controls['producto'].touched) {
-  <small class="error">Campo requerido</small>
+  <small class="error">Campo Requerido</small>
   }
   <select id="producto" formControlName="producto">
-    <option value="" disabled selected hidden>Selecciona un producto</option>
+    <option value="" disabled selected hidden>Selecciona un Producto</option>
     @for (producto of listaProductos; track $index) {
     <option value="{{ producto.nombreProducto }}">
       {{ producto.nombreProducto }}
@@ -16,19 +16,19 @@
   <label>Cantidad</label>
   @if (formulario.controls['cantidad'].getError('required') &&
   formulario.controls['cantidad'].touched) {
-  <small class="error">Campo requerido</small>
+  <small class="error">Campo Requerido</small>
   } @else if (formulario.controls['cantidad'].getError('min') &&
   formulario.controls['cantidad'].touched) {
-  <small class="error">Mínimo requerido</small>
+  <small class="error">Mínimo Requerido</small>
   } @else if (formulario.controls['cantidad'].getError('max') &&
   formulario.controls['cantidad'].touched) {
-  <small class="error">Stock insuficiente</small>
+  <small class="error">Stock Insuficiente</small>
   }
   <input type="number" formControlName="cantidad" />
 
   <div class="botones">
     @if(egresoRealizado) {
-    <small class="exito">Egreso realizado</small>
+    <small class="exito">Egreso Realizado</small>
     <button type="button" id="volver" routerLink="/egresos" [state]="{user}">Volver</button>
     } @else {
     <button type="button" id="cancelar" routerLink="/egresos" [state]="{user}">Cancelar</button>

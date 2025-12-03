@@ -31,12 +31,12 @@
         <td>
           @if (user.tipo === 'admin') { @if (pedido.estado == false) {
           <button class="realizar-a" (click)="pedidoRealizado(pedido.id)">
-            No realizado
+            No Realizado
           </button>
           } @else {
           <button class="noRealizar-a">Realizado</button>
           }} @else if (user.tipo === 'base') { @if (pedido.estado == false) {
-          <button class="realizar-b">No realizado</button>
+          <button class="realizar-b">No Realizado</button>
           } @else {
           <button class="noRealizar-b">Realizado</button>
           }}

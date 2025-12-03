@@ -4,11 +4,11 @@
       <label>Producto</label>
       @if(formulario.controls['producto'].getError('required') &&
       formulario.controls['producto'].touched){
-      <small class="error">Campo requerido.</small>
+      <small class="error">Campo Requerido.</small>
       }
       <select id="producto" formControlName="producto">
         <option value="" disabled selected hidden>
-          Selecciona un producto
+          Selecciona un Producto
         </option>
         @for (producto of listaProductos; track $index) {
         <option value="{{ producto.nombreProducto }}">
@@ -22,7 +22,7 @@
       <label>Cantidad</label>
       @if(formulario.controls['cantidad'].getError('required') &&
       formulario.controls['cantidad'].touched){
-      <small class="error">Campo requerido.</small>
+      <small class="error">Campo Requerido.</small>
       } @if(formulario.get('cantidad')?.hasError('min') &&
       formulario.controls['cantidad'].touched){
       <small class="error">Cantidad debe ser mayor a 0.</small>
@@ -34,11 +34,11 @@
       <label>Proveedor</label>
       @if(formulario.controls['proveedor'].getError('required') &&
       formulario.controls['proveedor'].touched){
-      <small class="error">Campo requerido.</small>
+      <small class="error">Campo Requerido.</small>
       }
       <select formControlName="proveedor">
         <option value="" disabled selected hidden>
-          Selecciona un proveedor
+          Selecciona un Proveedor
         </option>
         @for (proveedor of listaProveedores; track $index) {
         <option value="{{ proveedor.nombre }}">{{ proveedor.nombre }}</option>
@@ -49,7 +49,7 @@
 
   <div class="botones">
     @if(pedidoAgregado) {
-    <small class="exito">Pedido agregado</small>
+    <small class="exito">Pedido Agregado</small>
     <button type="button" id="volver" routerLink="/pedidos" [state]="{user}">
       Volver
     </button>
@@ -57,6 +57,6 @@
     <button type="button" id="cancelar" routerLink="/pedidos" [state]="{user}">
       Cancelar
     </button>
-    <button type="submit" id="agregar">Agregar pedido</button>}
+    <button type="submit" id="agregar">Agregar Pedido</button>}
   </div>
 </form>

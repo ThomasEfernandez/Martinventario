@@ -281,7 +281,7 @@
     },
     {
       "id": "24",
-      "nombreProducto": "Alfajor Tita 36 Gr.",
+      "nombreProducto": "Alfajor 36 Gr.",
       "marca": "Tita",
       "proveedor": "Fausto",
       "cantidad": 14,
@@ -580,48 +580,7 @@
       "id": "1",
       "nombreCategoria": "Alimentoss",
       "estado": true,
-      "etiquetas": [
-        {
-          "id": "1",
-          "nombreEtiqueta": "Carnes",
-          "estado": true
-        },
-        {
-          "id": "2",
-          "nombreEtiqueta": "Galletitas y cereales",
-          "estado": true
-        },
-        {
-          "id": "3",
-          "nombreEtiqueta": "Verduras",
-          "estado": true
-        },
-        {
-          "id": "4",
-          "nombreEtiqueta": "Envasados",
-          "estado": true
-        },
-        {
-          "id": "5",
-          "nombreEtiqueta": "Test",
-          "estado": false
-        },
-        {
-          "id": "6",
-          "nombreEtiqueta": "czczczc",
-          "estado": false
-        },
-        {
-          "id": "7",
-          "nombreEtiqueta": "Test",
-          "estado": false
-        },
-        {
-          "id": "8",
-          "nombreEtiqueta": "Kiosco",
-          "estado": true
-        }
-      ]
+      "etiquetas": []
     },
     {
       "id": "2",
