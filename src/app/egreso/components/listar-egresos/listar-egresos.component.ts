@@ -26,10 +26,15 @@ export class ListarEgresosComponent {
   egresoService = inject(EgresoService);
   listaEgresos: Egreso[] = [];
 
+  //Filtrado de Productos, variables de busqueda
+  egresosFiltrados: Egreso[] = [];
+  textoBusqueda: string = '';
+
   listarEgresos() {
     this.egresoService.getEgreso().subscribe({
       next: (egresos: Egreso[]) => {
         this.listaEgresos = [...egresos].reverse();
+        this.egresosFiltrados = this.listaEgresos;
       },
       error: (e: Error) => {
         console.log(e.message);
@@ -39,5 +44,26 @@ export class ListarEgresosComponent {
 
   ngOnInit() {
     this.listarEgresos();
+  }
+
+  /*Filtro por texto*/
+  onBusquedaChange(event: Event) {
+    const input = event.target as HTMLInputElement;
+    this.textoBusqueda = input.value;
+    this.aplicarFiltros();
+  }
+
+  aplicarFiltros() {
+    this.egresosFiltrados = this.listaEgresos.filter((egreso) => {
+
+      const cumpleTexto =
+        !this.textoBusqueda ||
+        egreso.producto
+          .toLowerCase()
+          .includes(this.textoBusqueda.toLowerCase()) ||
+        egreso.id.toString().includes(this.textoBusqueda);
+
+      return cumpleTexto;
+    });
   }
 }

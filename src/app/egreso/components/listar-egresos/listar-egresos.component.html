@@ -1,3 +1,13 @@
+<div class="contenedor-filtros">
+  <div class="barra-busqueda">
+    <div class="input-busqueda">
+      <span class="icono-busqueda">🔍</span>
+      <input type="text" (input)="onBusquedaChange($event)" placeholder="Buscar por producto..."
+        class="input-texto" />
+    </div>
+  </div>
+</div>
+
 <div>
   <table>
     <thead>
@@ -10,7 +20,14 @@
       </tr>
     </thead>
     <tbody>
-      @for (egreso of listaEgresos; track $index) {
+      @if (egresosFiltrados.length === 0) {
+      <tr>
+        <td colspan="5" class="sin-resultados">
+          No se encontraron egresos que coincidan con los filtros
+        </td>
+      </tr>
+      }
+      @for (egreso of egresosFiltrados; track $index) {
       <tr>
         <td>{{ egreso.id }}</td>
         <td>{{ egreso.fecha }}</td>
@@ -21,4 +38,8 @@
       }
     </tbody>
   </table>
+
+  <div class="info-resultados">
+    <span>Mostrando {{ egresosFiltrados.length }} de {{ listaEgresos.length }} egresos</span>
+  </div>
 </div>

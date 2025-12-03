@@ -34,8 +34,7 @@ export class ListarProductosComponent {
   productosFiltrados: Producto[] = [];
 
   textoBusqueda: string = '';
-  filtroCategoria: string = '';
-  filtroProveedor: string = '';
+
 
   listar(producto: Producto) {
     this.listaProductos.push(producto);
