@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Usuario } from 'app/usuario/interfaces/usuario.interface';
+import { LevantarApiComponent } from 'app/api/levantar-api/levantar-api.component';
 
 @Component({
   selector: 'app-menu-producto',
@@ -20,4 +21,8 @@ export class MenuProductoComponent {
     estado: false,
     mail: '',
   };
+
+  levantarApi() {
+    
+  }
 }

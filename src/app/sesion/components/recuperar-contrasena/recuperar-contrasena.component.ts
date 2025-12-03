@@ -30,26 +30,6 @@ export class RecuperarContrasenaComponent {
   mensajeExito: string = '';
   mensajeError: string = '';
 
-  // recuperarContrasena() {
-  //   if (this.formulario.invalid) return;
-  //   const sesion = this.formulario.getRawValue();
-  //   const user = this.buscarUsuario(sesion);
-
-  //   if (user) {
-  //     console.log(user.mail);
-  //     user.contrasena
-  //     /**
-  //      * ACA IRIA LO DE NOGAR
-  //      *
-  //      * LA FORMA DE CONSEGUIR EL MAIL DEL USUARIO QUE ES INGRESADO EN EL INPUT ES CON:
-  //      * user.mail
-  //      * ESTO TE DEVUELVE EL MAIL EN FORMATO STRING DEL OBJETO user DE TIPO Usuario
-  //      *
-  //      * ESTA FUNCION SE EJECUTA CUANDO SE PRESIONA EL BOTON RECUPERAR CONTRASEÑA
-  //      */
-  //   }
-  // }
-
   recuperarContrasena() {
     if (this.formulario.invalid) return;
     const sesion = this.formulario.getRawValue();

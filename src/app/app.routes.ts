@@ -37,6 +37,8 @@ import { PaginaPedidosComponent } from './pedido/pages/pagina-pedidos/pagina-ped
 import { PaginaAgregarPedidoComponent } from './pedido/pages/pagina-agregar-pedido/pagina-agregar-pedido.component';
 import { PaginaModificarPedidoComponent } from './pedido/pages/pagina-modificar-pedido/pagina-modificar-pedido.component';
 
+import { PaginaLevantarApiComponent } from './api/pagina-levantar-api/pagina-levantar-api.component';
+
 export const routes: Routes = [
   {
     path: '',
@@ -163,6 +165,11 @@ export const routes: Routes = [
   {
     path: 'modificar-pedido/:id',
     component: PaginaModificarPedidoComponent,
+    // canActivate: [authGuardFn],
+  },
+  {
+    path: 'importar-productos',
+    component: PaginaLevantarApiComponent,
     // canActivate: [authGuardFn],
   },
   //
