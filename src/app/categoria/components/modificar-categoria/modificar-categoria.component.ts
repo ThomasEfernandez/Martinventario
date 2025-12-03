@@ -78,7 +78,6 @@ export class ModificarCategoriaComponent {
       this.categoriaService.putCategoria(categoria.id, categoria).subscribe({
         next: () => {
           this.categoriaModificada = true;
-
           this.productoService.getProductos().subscribe({
             next: (prods: Producto[]) => {
               prods.forEach((p) => {

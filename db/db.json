@@ -664,11 +664,6 @@
           "id": "2",
           "nombreEtiqueta": "Cremas de enjuague",
           "estado": true
-        },
-        {
-          "id": "1",
-          "nombreEtiqueta": "Jabones",
-          "estado": true
         }
       ]
     },
@@ -689,7 +684,7 @@
         },
         {
           "id": "3",
-          "nombreEtiqueta": "Insecticida",
+          "nombreEtiqueta": "Insecticidas",
           "estado": true
         },
         {
@@ -775,30 +770,6 @@
     },
     {
       "id": "10",
-      "nombreCategoria": "t",
-      "estado": false,
-      "etiquetas": [
-        {
-          "id": "1",
-          "nombreEtiqueta": "Test2",
-          "estado": true
-        }
-      ]
-    },
-    {
-      "id": "11",
-      "nombreCategoria": "test2",
-      "estado": false,
-      "etiquetas": []
-    },
-    {
-      "id": "12",
-      "nombreCategoria": "ccc",
-      "estado": false,
-      "etiquetas": []
-    },
-    {
-      "id": "13",
       "nombreCategoria": "Lácteos",
       "estado": true,
       "etiquetas": [
