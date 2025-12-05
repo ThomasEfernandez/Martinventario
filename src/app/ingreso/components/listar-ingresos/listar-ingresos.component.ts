@@ -26,10 +26,15 @@ export class ListarIngresosComponent {
   ingresoService = inject(IngresoService);
   listaIngresos: Ingreso[] = [];
 
+  //Filtrado de Productos, variables de busqueda
+  ingresosFiltrados: Ingreso[] = [];
+  textoBusqueda: string = '';
+
   listarIngresos() {
     this.ingresoService.getIngresos().subscribe({
       next: (ingresos: Ingreso[]) => {
         this.listaIngresos = [...ingresos].reverse();
+        this.ingresosFiltrados = this.listaIngresos;
       },
       error: (e: Error) => {
         console.log(e.message);
@@ -39,5 +44,25 @@ export class ListarIngresosComponent {
 
   ngOnInit() {
     this.listarIngresos();
+  }
+
+  /*Filtro por texto*/
+  onBusquedaChange(event: Event) {
+    const input = event.target as HTMLInputElement;
+    this.textoBusqueda = input.value;
+    this.aplicarFiltros();
+  }
+
+  aplicarFiltros() {
+    this.ingresosFiltrados = this.listaIngresos.filter((ingreso) => {
+      const cumpleTexto =
+        !this.textoBusqueda ||
+        ingreso.producto
+          .toLowerCase()
+          .includes(this.textoBusqueda.toLowerCase()) ||
+        ingreso.id.toString().includes(this.textoBusqueda);
+
+      return cumpleTexto;
+    });
   }
 }

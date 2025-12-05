@@ -37,10 +37,16 @@ export class ListarUsuariosComponent implements OnInit {
     mail: '',
   };
 
+  //Filtrado de Productos, variables de busqueda
+  empleadosFiltrados: Usuario[] = [];
+  textoBusqueda: string = '';
+  filtroEstado: string = '';
+
   listarUsuarios() {
     this.usuarioService.getUsuarios().subscribe({
       next: (usuarios: Usuario[]) => {
         this.listaUsuarios = usuarios;
+        this.empleadosFiltrados = this.listaUsuarios;
       },
       error: (e: Error) => {
         console.log(e.message);
@@ -76,5 +82,45 @@ export class ListarUsuariosComponent implements OnInit {
 
   ngOnInit(): void {
     this.listarUsuarios();
+  }
+
+  /*Filtro por texto*/
+  onBusquedaChange(event: Event) {
+    const input = event.target as HTMLInputElement;
+    this.textoBusqueda = input.value;
+    this.aplicarFiltros();
+  }
+
+  /*Filtro por estado*/
+  onEstadoChange(event: Event) {
+    const select = event.target as HTMLSelectElement;
+    this.filtroEstado = select.value;
+    this.aplicarFiltros();
+  }
+
+  aplicarFiltros() {
+    this.empleadosFiltrados = this.listaUsuarios.filter((usuario) => {
+      /*Filtro por texto de búsqueda*/
+      const cumpleTexto =
+        !this.textoBusqueda ||
+        usuario.nombre
+          .toLowerCase()
+          .includes(this.textoBusqueda.toLowerCase()) ||
+        usuario.apellido
+          .toLowerCase()
+          .includes(this.textoBusqueda.toLowerCase()) ||
+        usuario.usuario
+          .toLowerCase()
+          .includes(this.textoBusqueda.toLowerCase()) ||
+        usuario.id.toString().includes(this.textoBusqueda);
+
+      /*Filtro por estado*/
+      const cumpleEstado =
+        !this.filtroEstado ||
+        (this.filtroEstado === 'desactivar' && usuario.estado === true) ||
+        (this.filtroEstado === 'activar' && usuario.estado === false);
+
+      return cumpleTexto && cumpleEstado;
+    });
   }
 }

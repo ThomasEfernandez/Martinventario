@@ -131,7 +131,7 @@
       "nombreProducto": "Paño Microfibra Multiuso Microclean 1 Ud.",
       "marca": "Microclean",
       "proveedor": "Fausto",
-      "cantidad": 4,
+      "cantidad": 6,
       "categoria": "Limpieza",
       "etiqueta": "Trapos y Paños"
     },
@@ -1096,6 +1096,13 @@
       "usuario": "admin",
       "producto": "Yogur Natural Milkaut 180 Gr.",
       "cantidad": 1
+    },
+    {
+      "id": "30",
+      "fecha": "5/12/2025",
+      "usuario": "admin",
+      "producto": "Paño Microfibra Multiuso Microclean 1 Ud.",
+      "cantidad": 2
     }
   ],
   "pedidos": [
@@ -1194,6 +1201,14 @@
       "cantidad": "1",
       "proveedor": "Fausto",
       "estado": true
+    },
+    {
+      "id": "13",
+      "fecha": "5/11/2025",
+      "producto": "Donuts Bonafide Chocolate Blanco 78 Gr.",
+      "cantidad": 5,
+      "proveedor": "Jorge",
+      "estado": false
     }
   ]
 }

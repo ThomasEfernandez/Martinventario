@@ -1,3 +1,20 @@
+<div class="contenedor-filtros">
+  <div class="barra-busqueda">
+    <div class="input-busqueda">
+      <span class="icono-busqueda">🔍</span>
+      <input type="text" (input)="onBusquedaChange($event)" placeholder="Buscar por nombre..." class="input-texto" />
+    </div>
+
+    <div class="filtros-select">
+      <select (change)="onEstadoChange($event)" class="select-filtro">
+        <option value="">Todos los estados</option>
+        <option value="activar">Activar</option>
+        <option value="desactivar">Desactivar</option>
+      </select>
+    </div>
+  </div>
+</div>
+
 <div>
   <table>
     <thead>
@@ -11,21 +28,28 @@
       </tr>
     </thead>
     <tbody>
-      @for(usuario of listaUsuarios; track $index) {
+      @if (empleadosFiltrados.length === 0) {
       <tr>
-        <td>{{ usuario.id }}</td>
-        <td>{{ usuario.usuario }}</td>
-        <td>{{ usuario.contrasena }}</td>
-        <td>{{ usuario.nombre }}</td>
-        <td>{{ usuario.apellido }}</td>
+        <td colspan="7" class="sin-resultados">
+          No se encontraron usuarios que coincidan con los filtros
+        </td>
+      </tr>
+      }
+      @for (usu of empleadosFiltrados; track $index) {
+      <tr>
+        <td>{{ usu.id }}</td>
+        <td>{{ usu.usuario }}</td>
+        <td>{{ usu.contrasena }}</td>
+        <td>{{ usu.nombre }}</td>
+        <td>{{ usu.apellido }}</td>
         <td>
-          @if (usuario.tipo === 'base') {
-          @if (usuario.estado) {
-          <button class="desactivar" (click)="desactivarUsuario(usuario.id)">
+          @if (usu.tipo === 'base') {
+          @if (usu.estado) {
+          <button class="desactivar" (click)="desactivarUsuario(usu.id)">
             Desactivar
           </button>
           } @else {
-          <button class="activar" (click)="activarUsusario(usuario.id)">
+          <button class="activar" (click)="activarUsusario(usu.id)">
             Activar
           </button>
           } }
@@ -34,4 +58,8 @@
       }
     </tbody>
   </table>
+
+  <div class="info-resultados">
+    <span>Mostrando {{ empleadosFiltrados.length }} de {{ listaUsuarios.length }} usuarios</span>
+  </div>
 </div>

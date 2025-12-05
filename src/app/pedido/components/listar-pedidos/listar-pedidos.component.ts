@@ -37,10 +37,16 @@ export class ListarPedidosComponent {
     estado: false,
   };
 
+  //Filtrado de Productos, variables de busqueda
+  pedidosFiltrados: Pedido[] = [];
+  textoBusqueda: string = '';
+  filtroEstado: string = '';
+
   listarPedidosService() {
     this.pedidoService.getPedidos().subscribe({
       next: (pedidos: Pedido[]) => {
         this.listaPedidos = [...pedidos].reverse();
+        this.pedidosFiltrados = this.listaPedidos;
       },
       error: (err: Error) => {
         console.log(err.message);
@@ -76,5 +82,39 @@ export class ListarPedidosComponent {
 
   ngOnInit(): void {
     this.listarPedidosService();
+  }
+
+  /*Filtro por texto*/
+  onBusquedaChange(event: Event) {
+    const input = event.target as HTMLInputElement;
+    this.textoBusqueda = input.value;
+    this.aplicarFiltros();
+  }
+
+  /*Filtro por estado*/
+  onEstadoChange(event: Event) {
+    const select = event.target as HTMLSelectElement;
+    this.filtroEstado = select.value;
+    this.aplicarFiltros();
+  }
+
+  aplicarFiltros() {
+    this.pedidosFiltrados = this.listaPedidos.filter((pedido) => {
+      /*Filtro por texto de búsqueda*/
+      const cumpleTexto =
+        !this.textoBusqueda ||
+        pedido.producto
+          .toLowerCase()
+          .includes(this.textoBusqueda.toLowerCase()) ||
+        pedido.id.toString().includes(this.textoBusqueda);
+
+      /*Filtro por estado*/
+      const cumpleEstado =
+        !this.filtroEstado ||
+        (this.filtroEstado === 'realizado' && pedido.estado === true) ||
+        (this.filtroEstado === 'no-realizado' && pedido.estado === false);
+
+      return cumpleTexto && cumpleEstado;
+    });
   }
 }
