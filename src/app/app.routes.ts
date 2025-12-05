@@ -52,77 +52,77 @@ export const routes: Routes = [
   {
     path: 'productos',
     component: PaginaProductosComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   {
     path: 'agregar-producto',
     component: PaginaAgregarProductoComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   {
     path: 'modificar-producto/:id',
     component: PaginaModificarProductoComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   //PROVEEDOR
   {
     path: 'proveedores',
     component: PaginaProveedoresComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   {
     path: 'agregar-proveedor',
     component: PaginaAgregarProveedorComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   {
     path: 'modificar-proveedor/:id',
     component: PaginaModificarProveedoresComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   //CATEGORIA
   {
     path: 'categorias',
     component: PaginaCategoriasComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   {
     path: 'agregar-categoria',
     component: PaginaAgregarCategoriaComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   {
     path: 'categoria/:cat',
     component: PaginaVerDetalleCategoriaComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   {
     path: 'modificar-categoria/:cat',
     component: PaginaModificarCategoriaComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   //ETIQUETA
   {
     path: 'agregar-etiqueta',
     component: PaginaAgregarEtiquetaComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   {
     path: 'modificar-etiqueta/:id',
     component: PaginaModificarEtiquetaComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   //SECCIONES
   {
     path: 'secciones',
     component: PaginaSeccionesComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   //EMPLEADOS
   {
     path: 'empleados',
     component: PaginaEmpleadosComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   {
     path: 'agregar-empleado',
@@ -132,44 +132,44 @@ export const routes: Routes = [
   {
     path: 'ingresos',
     component: PaginaIngresosComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   {
     path: 'realizar-ingreso',
     component: PaginaRealizarIngresoComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   //EGRESO
   {
     path: 'egresos',
     component: PaginaEgresosComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   {
     path: 'realizar-egreso',
     component: PaginaRealizarEgresoComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   //PEDIDO
   {
     path: 'pedidos',
     component: PaginaPedidosComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   {
     path: 'agregar-pedido',
     component: PaginaAgregarPedidoComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   {
     path: 'modificar-pedido/:id',
     component: PaginaModificarPedidoComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   {
     path: 'importar-productos',
     component: PaginaLevantarApiComponent,
-    // canActivate: [authGuardFn],
+    canActivate: [authGuardFn],
   },
   {
     path: '**',
