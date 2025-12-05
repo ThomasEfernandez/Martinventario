@@ -21,8 +21,4 @@ export class MenuProductoComponent {
     estado: false,
     mail: '',
   };
-
-  levantarApi() {
-    
-  }
 }

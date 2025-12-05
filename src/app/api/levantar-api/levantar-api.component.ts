@@ -1,20 +1,33 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { fetchProducts } from '../api';
 import { Productt } from '../types';
 import { Producto } from 'app/producto/interfaces/producto.interface';
 import { ProductoService } from 'app/producto/services/producto.service';
+import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 
 @Component({
   selector: 'app-levantar-api',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './levantar-api.component.html',
   styleUrl: './levantar-api.component.css',
 })
 export class LevantarApiComponent {
   ngOnInit() {
-    this.levantarApi();
+    //this.levantarApi();
   }
+
+  @Input() user: Usuario = {
+    id: '',
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    tipo: '',
+    estado: false,
+    mail: '',
+  };
 
   p: Producto = {
     id: '',

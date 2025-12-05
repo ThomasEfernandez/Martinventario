@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-//import { authGuardFn } from './auth/guard/auth.guard-fn';
+import { authGuardFn } from './auth/guard/auth.guard-fn';
 /* INICIAR SESION */
 import { PaginaIniciarSesionComponent } from './sesion/pages/pagina-iniciar-sesion/pagina-iniciar-sesion.component';
 /* RECUPERAR CONTRASEÑA */
@@ -47,7 +47,6 @@ export const routes: Routes = [
   {
     path: 'recuperar-contrasena',
     component: PaginaRecuperarContrasenaComponent,
-    // canActivate: [authGuardFn],
   },
   //PRODUCTO
   {
@@ -172,7 +171,6 @@ export const routes: Routes = [
     component: PaginaLevantarApiComponent,
     // canActivate: [authGuardFn],
   },
-  //
   {
     path: '**',
     redirectTo: '',

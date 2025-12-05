@@ -130,9 +130,6 @@ export class ModificarProductoComponent {
     this.productoService.putProducto(this.id, producto).subscribe({
       next: () => {
         this.mensajeExito = true;
-        // setTimeout(() => {
-        //   this.mensajeExito = false;
-        // }, 3000);
       },
       error: (e: Error) => {
         console.log(e.message);

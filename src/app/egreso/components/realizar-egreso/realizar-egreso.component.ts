@@ -77,8 +77,6 @@ export class RealizarEgresoComponent {
   realizarEgreso() {
     if (this.formulario.valid) {
       const egreso: Egreso = this.formulario.getRawValue();
-      // this.productoService.getProductoById(this.producto?.id).subscribe({
-      // next: (producto: Producto) => {
       this.egresoService.getEgreso().subscribe({
         next: (e: Egreso[]) => {
           egreso.id = `${e.length + 1}`;
@@ -87,8 +85,6 @@ export class RealizarEgresoComponent {
           this.egresoRealizado = true;
         },
       });
-      // },
-      // });
     } else {
       this.formulario.markAllAsTouched();
     }

@@ -72,8 +72,6 @@ export class RealizarIngresoComponent {
   realizarIngreso() {
     if (this.formulario.valid) {
       const ingreso: Ingreso = this.formulario.getRawValue();
-      // this.productoService.getProductoById(this.producto?.id).subscribe({
-      // next: (producto: Producto) => {
       this.ingresoService.getIngresos().subscribe({
         next: (i: Ingreso[]) => {
           ingreso.id = `${i.length + 1}`;
@@ -82,8 +80,6 @@ export class RealizarIngresoComponent {
           this.ingresoRealizado = true;
         },
       });
-      // },
-      // });
     } else {
       this.formulario.markAllAsTouched();
     }
