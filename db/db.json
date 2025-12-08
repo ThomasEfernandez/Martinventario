@@ -580,7 +580,13 @@
       "id": "1",
       "nombreCategoria": "Alimentoss",
       "estado": true,
-      "etiquetas": []
+      "etiquetas": [
+        {
+          "id": "1",
+          "nombreEtiqueta": "Carne",
+          "estado": true
+        }
+      ]
     },
     {
       "id": "2",

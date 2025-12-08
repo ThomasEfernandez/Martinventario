@@ -31,7 +31,7 @@
     <small class="repetido">Etiqueta Repetida</small>
     } @if(etiquetaAgregada) {
     <small class="exito">Etiqueta Agregada</small>
-    <button type="button" id="volver" routerLink="/categoria/:cat" [state]="{user}">
+    <button type="button" id="volver" routerLink="/categoria/:cat" [state]="{categoria,user}">
       Volver
     </button>
     } @else {
