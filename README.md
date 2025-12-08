@@ -1,27 +1,25 @@
-# TpFinal
+# MartInventario
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.7.
+La aplicación web es un sistema de inventario para un supermercado, diseñado para optimizar la gestión de productos en stock, facilitar la reposición de mercancías y mejorar la eficiencia operativa del negocio. Este sistema tiene como objetivo centralizar y automatizar las actividades de control de inventarios, permitiendo un seguimiento preciso y en tiempo real de las existencias, movimientos de productos y niveles de stock.
 
-## Development server
+## Ejecutar el servidor
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Ejecute `ng serve` para correr el servidor. Vaya a `http://localhost:4200/`. La aplicación se recargará automáticamente si modifica alguno de los archivos fuente.
 
-## Code scaffolding
+## Ejecutar la base de datos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ejecute `json-server db/db.json` para correr el servidor del json.
 
-## Build
+## Integrantes
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Agustina María Martín – Legajo Nº 605928
 
-## Running unit tests
+- Agustina Rojas – Legajo Nº 606198
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Thomas Ezequiel Fernandez – Legajo Nº 605188
 
-## Running end-to-end tests
+- Lautaro Joaquín Hourcade - Legajo N° 606199
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Valentin Salvador Nogar - Legajo N° 606018
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Fausto Gimenez Lobasso - Legajo N° 605844
