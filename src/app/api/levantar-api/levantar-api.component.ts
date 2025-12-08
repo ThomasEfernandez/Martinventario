@@ -15,7 +15,7 @@ import { Usuario } from 'app/usuario/interfaces/usuario.interface';
 })
 export class LevantarApiComponent {
   ngOnInit() {
-    //this.levantarApi();
+    this.levantarApi();
   }
 
   @Input() user: Usuario = {

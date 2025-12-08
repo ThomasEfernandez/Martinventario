@@ -40,8 +40,8 @@ export class RecuperarContrasenaComponent {
       console.log (user)
       emailjs
         .send(
-          'gmailagus',
-          'template_1kgoi5y',
+          'gmailagus', //SERVICE ID
+          'template_1kgoi5y', //TEMPLATE ID
           {
             to_email: user.mail,
             contrasena: user.contrasena,
