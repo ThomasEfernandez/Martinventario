@@ -981,6 +981,14 @@
       "cantidad": 5,
       "proveedor": "Jorge",
       "estado": false
+    },
+    {
+      "id": "14",
+      "fecha": "8/12/2025",
+      "producto": "Gaseosa lima limón Sprite 2,25 lts",
+      "cantidad": "20",
+      "proveedor": "Fausto",
+      "estado": true
     }
   ]
 }

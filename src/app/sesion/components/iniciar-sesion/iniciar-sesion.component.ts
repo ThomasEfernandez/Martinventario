@@ -37,12 +37,17 @@ export class IniciarSesionComponent {
     const sesion = this.formulario.getRawValue();
     const user = this.buscarUsuario(sesion);
     if (user) {
-      this.mensajeError = '';
-      this.authService.logIn();
-      this.router.navigate(['/productos'], { state: { user } });
+      if (user.estado) {
+        this.mensajeError = '';
+        this.authService.logIn();
+        this.router.navigate(['/productos'], { state: { user } });
+      } else {
+        console.log('Usuario desactivado. Contáctese con el admin.');
+        this.mensajeError = 'Usuario desactivado';
+      }
     } else {
       console.log('Credenciales incorrectas. Contáctese con el admin.');
-      this.mensajeError = 'Usuario o contrasena incorrecta';
+      this.mensajeError = 'Credenciales incorrectas';
       this.formulario.controls['contrasena'].reset();
     }
   }
