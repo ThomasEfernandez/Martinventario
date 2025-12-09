@@ -79,7 +79,7 @@
       "proveedor": "Agus",
       "cantidad": 25,
       "categoria": "Alimentoss",
-      "etiqueta": "Galletitas y cereales"
+      "etiqueta": "Galletitas"
     },
     {
       "id": "2",
@@ -88,7 +88,7 @@
       "proveedor": "Thomas",
       "cantidad": 51,
       "categoria": "Bebidas",
-      "etiqueta": "Gaseosa"
+      "etiqueta": "Gaseosas"
     },
     {
       "id": "3",
@@ -351,6 +351,11 @@
           "id": "1",
           "nombreEtiqueta": "Carne",
           "estado": true
+        },
+        {
+          "id": "2",
+          "nombreEtiqueta": "Galletitas",
+          "estado": true
         }
       ]
     },
@@ -515,6 +520,12 @@
           "estado": true
         }
       ]
+    },
+    {
+      "id": "11",
+      "nombreCategoria": "Galletitas",
+      "estado": false,
+      "etiquetas": []
     }
   ],
   "egresos": [
